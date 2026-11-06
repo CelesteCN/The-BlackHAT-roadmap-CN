@@ -1,0 +1,21 @@
+# --- Obsidian local config ---
+.obsidian/
+
+# Obsidian Base temp files
+*.base
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# --- Python (if you run scripts) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Local scratch ---
+*.log
+*.bak
