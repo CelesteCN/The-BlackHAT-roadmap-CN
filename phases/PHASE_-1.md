@@ -229,7 +229,7 @@ Without all these elements, the document provides no real legal protection.
 
 A bug bounty program on HackerOne or Bugcrowd with written scope is the closest thing to written authorization a freelance researcher can get without a direct contract.
 
-```
+>
 Before touching any external system:
 
 1. Confirm a VDP or bug bounty program exists with written scope
@@ -238,7 +238,7 @@ Before touching any external system:
 4. Test only what is explicitly in scope
 5. If you find something adjacent to scope: report it, do not exploit it
 6. Keep timestamped notes of everything you tested and how
-```
+>
 
 ---
 
@@ -292,7 +292,7 @@ These records are the difference between "legitimate researcher" and "criminal" 
 
 **Maigret** is the current primary tool for username presence auditing. It searches 3,000+ platforms, generates structured reports (HTML, PDF, JSON, CSV), and has significantly better false-positive filtering than its predecessors.
 
-```bash
+>bash
 # Install Maigret
 pip3 install maigret
 
@@ -307,17 +307,17 @@ maigret username1 username2 username3
 
 # Use Tor for the scan
 maigret your_username --tor-proxy socks5://127.0.0.1:9050
-```
+>
 
 Documentation: https://github.com/soxoj/maigret
 
 **Sherlock** searches approximately 300 platforms. Use as a secondary check:
-```bash
+>bash
 git clone https://github.com/sherlock-project/sherlock
 cd sherlock
 pip3 install -r requirements.txt
 python3 sherlock your_username
-```
+>
 
 **WhatsMyName** provides a web interface for quick checks without local installation: https://whatsmyname.app
 
@@ -327,7 +327,7 @@ Run all three tools against every username you have ever used. Document results 
 
 ### 4.3 Email and Identity Exposure Audit
 
-```bash
+>bash
 # Check all email addresses you have used against known breach databases
 # Website: https://haveibeenpwned.com
 # Do this over Tor Browser -- do not reveal your real IP while checking your own emails
@@ -343,7 +343,7 @@ git log --all --format="%ae %ce" | sort -u
 # Check image metadata: if you have posted images online,
 # check whether they contained GPS coordinates before you shared them
 exiftool your_image.jpg | grep -i "gps\|location\|lat\|lon"
-```
+>
 
 ---
 
@@ -446,7 +446,7 @@ Every layer of OPSEC adds friction. Tor is slow. Separate devices are inconvenie
 
 ### 5.3 Adversary Calibration Examples
 
-```
+>
 Scenario A: Bug bounty researcher on authorized HackerOne targets
 
 Realistic adversary: Platform abuse team (if you violate scope)
@@ -474,7 +474,7 @@ Realistic adversary: The organization's IR team correlating logs
 Appropriate protections: Full stack. Everything in this phase. No exceptions.
 The redirector architecture. The Monero infrastructure. The Qubes setup.
 Tor for every connection. Communication security fully implemented.
-```
+>
 
 ---
 
@@ -530,7 +530,7 @@ Signal is the gold standard for operational communications.
 
 Signal's weakness: requires a phone number to register. Use a VoIP number (JMP.chat, accepting Monero) registered over Tor, not your real number.
 
-```
+>
 Signal configuration for operational use:
 
 Settings > Privacy:
@@ -547,7 +547,7 @@ For every conversation:
 
 Settings > Notifications:
   Show: "No name or message"
-```
+>
 
 ---
 
@@ -571,7 +571,7 @@ Download: https://briarproject.org
 
 If you must use email for sensitive communication, GPG encryption is required. Not optional.
 
-```bash
+>bash
 # Generate a GPG key pair for your research identity
 gpg --full-generate-key
 # Choose: RSA and RSA, 4096 bits, 1 year expiry
@@ -594,7 +594,7 @@ gpg --sign --armor message.txt
 
 # Verify a signed message
 gpg --verify signed_message.asc
-```
+>
 
 ---
 
@@ -634,7 +634,7 @@ An IMSI catcher is a device that impersonates a cell tower. Your phone connects 
 
 GrapheneOS is a hardened Android operating system for Google Pixel devices. It is the current best option for an operational phone.
 
-```
+>
 Installation procedure:
 
 1. Buy a Google Pixel (current generation).
@@ -679,7 +679,7 @@ Key security settings after installation:
    Sensors: disable camera and microphone permissions for apps that do not need them
 
    Exploit protection: enabled by default; do not disable
-```
+>
 
 ---
 
@@ -696,7 +696,7 @@ Key security settings after installation:
 
 ### 7.5 Device Compartmentalization Rules
 
-```
+>
 Rule 1: Never carry personal phone and operational phone simultaneously
         to a sensitive location.
         Both powered on near each other: cell tower logs associate them
@@ -723,7 +723,7 @@ Rule 5: Physical camera control.
         Camera covers are cheap. Use them.
         On GrapheneOS: revoke camera and microphone permissions
         from apps that do not need them.
-```
+>
 
 ---
 
@@ -764,7 +764,7 @@ Reason: US-based or US-infrastructure presence, fast law enforcement compliance,
 
 ### 8.3 VPS Setup Procedure
 
-```
+>
 1. Purchase VPS with Monero only.
    Never use a credit card, PayPal, bank transfer, or Bitcoin directly.
 
@@ -775,21 +775,21 @@ Reason: US-based or US-infrastructure presence, fast law enforcement compliance,
    Never from your home IP. Not once. Not even "just to check something quickly."
 
 4. SSH key authentication only. No passwords.
-```
+>
 
-```bash
+>bash
 # Generate an Ed25519 SSH key pair
 # Ed25519 is preferred over RSA: smaller key, faster, equivalently secure
 ssh-keygen -t ed25519 -C "ops_key"
 # Keep the private key on an encrypted volume
 # Add the public key to VPS authorized_keys
-```
+>
 
 ---
 
 ### 8.4 VPS Hardening Script
 
-```bash
+>bash
 #!/bin/bash
 # Run as root after first login to a new VPS
 # Context: Ubuntu 24.04 LTS
@@ -842,7 +842,7 @@ SSHEOF
 
 systemctl restart sshd
 echo "Hardening complete. Log out and reconnect as operator on port ${SSH_PORT}."
-```
+>
 
 **Note on port selection:** A high random port (49152-65535) is significantly harder to discover via automated scanning than port 22 or 2222. Pick a random number in that range and use it consistently. For maximum stealth on the port, consider adding port knocking (fwknop package): the port remains completely closed until a specific sequence of UDP packets arrives, after which it opens briefly for your SSH connection.
 
@@ -850,7 +850,7 @@ echo "Hardening complete. Log out and reconnect as operator on port ${SSH_PORT}.
 
 ### 8.5 Domain Registration
 
-```
+>
 Option 1: Njalla (recommended)
   Njalla registers domains in their own name and resells access to you.
   Your identity never appears in WHOIS records.
@@ -860,11 +860,11 @@ Option 1: Njalla (recommended)
 Option 2: Epik
   Accepts crypto, provides WHOIS privacy.
   https://www.epik.com
-```
+>
 
 **Domain selection strategy for C2:**
 
-```
+>
 1. Aged domains blend better. A domain with 1+ year of history has:
    - Existing DNS history matching its claimed category
    - Less suspicious traffic patterns
@@ -883,7 +883,7 @@ Option 2: Epik
    - Bluecoat/Symantec: https://sitereview.bluecoat.com
    - Cisco Talos: https://talosintelligence.com/reputation
    - Fortinet: https://www.fortiguard.com/webfilter
-```
+>
 
 ---
 
@@ -905,7 +905,7 @@ If the redirector gets burned: rotate it. Spin up a new VPS, new domain. Teamser
 
 **Apache mod_rewrite redirector:**
 
-```bash
+>bash
 apt install -y apache2
 a2enmod rewrite proxy proxy_http ssl headers
 
@@ -933,11 +933,11 @@ EOF
 
 a2ensite redirector.conf
 systemctl reload apache2
-```
+>
 
 **Nginx redirector alternative:**
 
-```nginx
+>nginx
 server {
     listen 443 ssl;
     server_name your-c2-domain.com;
@@ -957,11 +957,11 @@ server {
         return 302 https://www.google.com/;
     }
 }
-```
+>
 
 **Let's Encrypt certificate:**
 
-```bash
+>bash
 apt install -y certbot python3-certbot-apache
 certbot --apache -d your-c2-domain.com
 
@@ -969,7 +969,7 @@ certbot --apache -d your-c2-domain.com
 echo "0 12 * * * certbot renew --quiet" | crontab -
 # Verify renewal works
 certbot renew --dry-run
-```
+>
 
 ---
 
@@ -985,7 +985,7 @@ Running your C2 teamserver as a Tor hidden service (.onion) completely eliminate
 </td></tr></table>
 </div>
 
-```bash
+>bash
 # Configure a Tor hidden service on your teamserver VPS
 # Edit /etc/tor/torrc:
 nano /etc/tor/torrc
@@ -1005,7 +1005,7 @@ cat /var/lib/tor/c2_service/hostname
 
 # Your implants connect to [something].onion:80
 # Traffic routes through Tor entirely; your VPS IP is never exposed to the target
-```
+>
 
 **Tradeoffs:**
 - Slower than clearnet redirector (Tor latency: 100-500ms per hop)
@@ -1031,7 +1031,7 @@ Purchase a TP-Link Archer A7 or similar running OpenWrt. Connect it to your home
 
 Also consider configuring a local recursive DNS resolver (unbound) on your research router to avoid DNS leaks at the router level:
 
-```bash
+>bash
 # Install unbound on OpenWrt research router
 opkg install unbound-daemon
 
@@ -1055,14 +1055,14 @@ server:
 EOF
 
 # Point your router's dnsmasq to unbound on port 5335
-```
+>
 
 **Option B: VLAN segmentation**
 Supported by enterprise-grade home routers (Ubiquiti UniFi, Netgear Orbi Pro). Create separate VLANs for personal, research, and analysis traffic.
 
 **VM networking rules (non-negotiable):**
 
-```
+>
 NAT mode: VM accesses internet through the host's network stack.
   If the host is on a VPN, VM traffic goes through the VPN.
   Use for most research VMs.
@@ -1076,13 +1076,13 @@ Host-only mode: VM can only communicate with the host. No internet.
 
 Internal network mode: VMs communicate with each other only.
   Use for: multi-machine lab scenarios (victim and attacker VMs on same network).
-```
+>
 
 ---
 
 ### 8.9 Infrastructure Hygiene Rules
 
-```
+>
 Rule 1: One operation, one VPS, one domain.
   Never reuse infrastructure across operations.
   A burned VPS in one operation does not contaminate another if they are separate.
@@ -1106,7 +1106,7 @@ Rule 6: Monitor warrant canaries for your VPS providers.
   If the canary disappears or changes wording, treat it as a signal that the provider
   has been served legal process.
   Check monthly: https://www.eff.org/pages/warrant-canary-faq
-```
+>
 
 ---
 ## 9. ANONYMIZATION STACK: VPN, TOR, AND CHAINING
@@ -1146,7 +1146,7 @@ Rule 6: Monitor warrant canaries for your VPS providers.
 
 **WireGuard configuration (recommended protocol):**
 
-```bash
+>bash
 # Install WireGuard
 apt install -y wireguard
 
@@ -1161,11 +1161,11 @@ wg-quick down wg0
 
 # Autostart on boot (for research machine)
 systemctl enable wg-quick@wg0
-```
+>
 
 **Kill switch (mandatory):**
 
-```bash
+>bash
 # Add PostUp and PreDown rules to your WireGuard config
 # to block all traffic if the VPN drops (critical: prevents IP leak on disconnect)
 
@@ -1178,7 +1178,7 @@ PreDown = iptables -D OUTPUT ! -o %i -m mark ! --mark $(wg show %i fwmark) -m ad
 
 [Peer]
 # ... rest of peer config
-```
+>
 
 **Test the kill switch:** Disconnect the VPN manually. Verify all internet traffic stops (`curl ifconfig.me` should fail or time out). If it returns your real IP, the kill switch is not working.
 
@@ -1188,7 +1188,7 @@ PreDown = iptables -D OUTPUT ! -o %i -m mark ! --mark $(wg show %i fwmark) -m ad
 
 Tor routes your traffic through at least three relays (entry, middle, exit), encrypting at each hop so no single relay knows both who you are and what you are accessing.
 
-```bash
+>bash
 # Install Tor
 apt install -y tor
 
@@ -1215,7 +1215,7 @@ proxychains4 curl https://check.torproject.org | grep Congratulations
 # DNS leak test via Tor
 proxychains4 curl https://dnsleaktest.com/json
 # No ISP DNS servers should be visible
-```
+>
 
 ---
 
@@ -1223,7 +1223,7 @@ proxychains4 curl https://dnsleaktest.com/json
 
 **VPN to Tor (recommended for most use cases):**
 
-```
+>
 Your machine --> VPN --> Tor network --> Destination
 
 Protects from: ISP knowing you use Tor (in countries where Tor use is suspicious)
@@ -1234,26 +1234,26 @@ Your ISP sees: Encrypted traffic to VPN
 VPN provider sees: Your IP + Tor traffic (if no-log: nothing retained)
 Tor entry node sees: VPN IP (not your real IP)
 Destination sees: Tor exit node IP
-```
+>
 
 **Tor to VPN (specific use cases only):**
 
-```
+>
 Your machine --> Tor --> VPN --> Destination
 
 Use case: when your destination blocks Tor exits
 Risk: the VPN provider sees the content of your traffic
       (though they still cannot see your real IP, since it arrives via Tor)
-```
+>
 
 **Proxychains with Tor (routing any tool through Tor):**
 
-```bash
+>bash
 proxychains4 nmap -sT -Pn target.example.com
 proxychains4 curl https://target.example.com
 proxychains4 python3 exploit.py
 proxychains4 sqlmap -u "https://target.example.com/?id=1"
-```
+>
 
 ---
 
@@ -1266,7 +1266,7 @@ In some environments, Tor is blocked or its use is detectable:
 
 Tor bridges are unlisted relays that are harder to block. Obfuscation protocols transform Tor traffic to look like ordinary HTTPS or other allowed traffic.
 
-```bash
+>bash
 # Get bridges from Tor Project:
 # Method 1: https://bridges.torproject.org -- request obfs4 bridges
 # Method 2: Email bridges@torproject.org from Gmail or Riseup
@@ -1287,7 +1287,7 @@ Bridge obfs4 IP:PORT FINGERPRINT cert=XXXXXX iat-mode=0
 # (replace with your actual bridge line from bridges.torproject.org)
 
 systemctl restart tor
-```
+>
 
 | Obfuscation Protocol | Evades | Limitation |
 |---|---|---|
@@ -1304,7 +1304,7 @@ For most threat models: **obfs4 bridges** are sufficient.
 
 A DNS leak occurs when DNS queries bypass your VPN or Tor tunnel and go directly to your ISP's DNS servers, revealing what domains you are visiting.
 
-```bash
+>bash
 # Test for DNS leaks (run through Tor Browser or proxychains)
 # https://dnsleaktest.com
 # https://ipleak.net
@@ -1322,13 +1322,13 @@ systemctl restart systemd-resolved
 apt install -y dnscrypt-proxy
 systemctl enable dnscrypt-proxy
 systemctl start dnscrypt-proxy
-```
+>
 
 ---
 
 ### 9.7 End-to-End Stack Verification
 
-```bash
+>bash
 # Step 1: Verify your base IP (before VPN or Tor)
 curl https://ifconfig.me
 # Record this. This is what you MUST never reveal.
@@ -1359,7 +1359,7 @@ proxychains4 curl https://check.torproject.org | grep Congratulations
 proxychains4 ssh -p YOUR_SSH_PORT operator@your-vps-domain.com
 # From the VPS: check what the SSH connection shows
 who   # shows last-hop IP (Tor exit node, not your real IP)
-```
+>
 
 ---
 
@@ -1377,7 +1377,7 @@ When your browser loads a page, JavaScript can query dozens of APIs and compile 
 
 When JavaScript calls `canvas.toDataURL()` or `canvas.getImageData()`, the browser renders text or shapes using the GPU, font rendering engine, and anti-aliasing algorithms of the specific machine. Tiny variations in GPU firmware, driver version, and OS rendering stack produce pixel-level differences that are consistent for a given machine and highly unique across machines.
 
-```javascript
+>javascript
 // What a fingerprinting script does (simplified)
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
@@ -1397,13 +1397,13 @@ ctx.fill();
 // Extract the pixel data as a hash
 const fingerprint = canvas.toDataURL();
 // This string is consistent for your machine and different from everyone else's
-```
+>
 
 **AudioContext Fingerprinting -- How It Actually Works:**
 
 The Web Audio API creates audio processing graphs. When audio is processed through an `OscillatorNode` and an `AnalyserNode`, the output waveform varies based on the host's audio hardware and OS audio stack.
 
-```javascript
+>javascript
 // What an audio fingerprinting script does (simplified)
 const audioCtx = new AudioContext();
 const oscillator = audioCtx.createOscillator();
@@ -1424,13 +1424,13 @@ analyser.getFloatFrequencyData(frequencyData);
 // Sum the values as a fingerprint
 const fingerprint = frequencyData.reduce((a, b) => a + b, 0);
 // This value is consistent for your machine and different from others
-```
+>
 
 **Font Enumeration:**
 
 JavaScript can measure the rendered dimensions of text in various fonts. If a font is installed, text in that font has different dimensions than fallback text. The complete set of installed fonts is unique per system.
 
-```javascript
+>javascript
 // What font enumeration looks like
 const testFonts = ['Arial', 'Calibri', 'Cambria', 'Comic Sans MS', 'Georgia', 'Impact', 'Palatino'];
 const installedFonts = [];
@@ -1442,7 +1442,7 @@ testFonts.forEach(font => {
     if (testWidth !== baselineWidth) installedFonts.push(font);
 });
 // The list of installed fonts is your font fingerprint
-```
+>
 
 ---
 
@@ -1480,7 +1480,7 @@ WebRTC is a browser API for real-time communications. Its ICE protocol queries y
 
 **Test immediately:** https://browserleaks.com/webrtc
 
-```
+>
 Fix per browser:
 
 Firefox:
@@ -1492,7 +1492,7 @@ Chrome/Chromium:
 
 Tor Browser: WebRTC disabled by default.
 Mullvad Browser: WebRTC disabled by default.
-```
+>
 
 ---
 
@@ -1500,7 +1500,7 @@ Mullvad Browser: WebRTC disabled by default.
 
 WebGPU is the successor to WebGL, providing lower-level GPU access from the browser. It has been widely deployed in Chrome (since late 2023), Safari, and Firefox. WebGPU fingerprinting provides a surface that is more precise than WebGL and not yet blocked by all privacy-focused browsers.
 
-```
+>
 Firefox (about:config):
   dom.webgpu.enabled = false
 
@@ -1512,13 +1512,13 @@ Tor Browser: Blocks WebGPU by default.
 Mullvad Browser: Blocks WebGPU by default.
 
 Test: https://webgpureport.org -- if it shows GPU information, WebGPU is enabled.
-```
+>
 
 ---
 
 ### 10.5 Hardened Firefox user.js Configuration
 
-```javascript
+>javascript
 // Save as: ~/.mozilla/firefox/[profile_dir]/user.js
 // Apply to your research Firefox profile only
 
@@ -1574,7 +1574,7 @@ user_pref("privacy.clearOnShutdown.cache", true);
 
 // Disable Do Not Track (rare setting: makes you stand out, not blend in)
 user_pref("privacy.donottrackheader.enabled", false);
-```
+>
 
 Comprehensive user.js maintained by the community: https://github.com/arkenfox/user.js
 
@@ -1605,7 +1605,7 @@ Create separate Firefox profiles for separate research identities. Use the user.
 
 ### 10.7 Practical Fingerprinting Rules
 
-```
+>
 Rule 1: Test your fingerprint before operating.
   https://coveryourtracks.eff.org
   Know your current exposure level.
@@ -1631,7 +1631,7 @@ Rule 7: Separate browser profiles for separate identities. Never cross-use.
 Rule 8: Do NOT enable "Do Not Track."
   The irony: DNT is so rare that enabling it makes you more unique.
   Standardize at the crowd average: leave it off.
-```
+>
 
 ---
 
@@ -1688,7 +1688,7 @@ Monero uses three cryptographic mechanisms to provide on-chain privacy:
 
 ### 11.3 Operational Monero Use
 
-```bash
+>bash
 # Install Feather Wallet (best Monero desktop wallet for 2027)
 # Download: https://featherwallet.org
 # ALWAYS verify the GPG signature before running any wallet software
@@ -1710,7 +1710,7 @@ Monero uses three cryptographic mechanisms to provide on-chain privacy:
 # Label: "1984 Hosting", "Njalla Domains", "JMP VoIP"
 # Use a fresh labeled subaddress for each vendor or purpose
 # Never reuse subaddresses between vendors
-```
+>
 
 ---
 
@@ -1718,7 +1718,7 @@ Monero uses three cryptographic mechanisms to provide on-chain privacy:
 
 Execute in order. No shortcuts.
 
-```
+>
 Day 1: Acquire Monero
 
 Step 1: Find a Bitcoin ATM that accepts cash, no ID required.
@@ -1783,7 +1783,7 @@ Step 7: Access your VPS for the first time, only through Tor.
 
   All future connections use your chosen high port and key auth:
   proxychains4 ssh -p YOUR_PORT operator@YOUR-VPS-DOMAIN.COM
-```
+>
 
 ---
 
@@ -1848,7 +1848,7 @@ Traditional stylometry uses statistical analysis (n-grams, Burrows's Delta). Thi
 
 **Practical countermeasures:**
 
-```
+>
 1. Maintain a different writing persona per identity.
    Personal: your natural writing style.
    Research: deliberately different in measurable ways.
@@ -1875,7 +1875,7 @@ Traditional stylometry uses statistical analysis (n-grams, Burrows's Delta). Thi
    Analyzes your writing and suggests changes to reduce stylometric distinctiveness.
    Run it on samples from your research identity vs personal writing
    to measure how different they actually are. Use it as a calibration tool.
-```
+>
 
 ---
 
@@ -1883,7 +1883,7 @@ Traditional stylometry uses statistical analysis (n-grams, Burrows's Delta). Thi
 
 Using a cloud-based LLM (ChatGPT, Claude, Gemini, etc.) to rewrite operational communications is a privacy problem: the cloud provider sees what you sent. Use a local LLM instead.
 
-```bash
+>bash
 # Install Ollama (local LLM runner that works offline after model download)
 # https://ollama.ai
 
@@ -1915,7 +1915,7 @@ chmod +x ~/rewrite_for_research.sh
 
 # Usage:
 echo "This is a draft message I want to send..." | ~/rewrite_for_research.sh
-```
+>
 
 **Critical rules for this tool:**
 - Use the **same style instruction every time** for the same identity (creates consistent output across messages)
@@ -1927,7 +1927,7 @@ echo "This is a draft message I want to send..." | ~/rewrite_for_research.sh
 
 ### 12.5 Creating Operational Personas
 
-```
+>
 Each operational identity needs a coherent backstory that withstands casual inspection.
 
 Persona construction:
@@ -1945,7 +1945,7 @@ What the persona must NOT include:
   Any crossover with personal identity infrastructure
   Consistent time-of-day activity that matches your real timezone
   Your real interests, hobbies, or biographical details
-```
+>
 
 ---
 
@@ -1972,7 +1972,7 @@ What the persona must NOT include:
 Tails boots from a USB drive and leaves no trace on the host machine. Every session starts clean. Tor is the only network path. When you shut it down, everything that happened in that session is gone.
 
 **Installation:**
-```bash
+>bash
 # Download Tails from https://tails.boum.org/install/
 # Verify the signature (Tails documentation includes step-by-step verification; do it)
 
@@ -1984,7 +1984,7 @@ lsblk
 sudo dd if=tails-amd64-VERSION.img of=/dev/sdX bs=16M oflag=direct status=progress
 sync
 # This takes 5-15 minutes; do not interrupt
-```
+>
 
 **Boot procedure:** Enter BIOS/UEFI (F2, F12, Del, or ESC during startup). Set USB as first boot device. At the Tails Greeter: choose language; optionally set Administration Password; click "Start Tails."
 
@@ -2004,7 +2004,7 @@ Whonix is a two-VM system: a Gateway VM (routes all traffic through Tor) and a W
 </td></tr></table>
 </div>
 
-```bash
+>bash
 # Install VirtualBox
 # Download: https://www.virtualbox.org/wiki/Downloads
 # Also install the VirtualBox Extension Pack (same page)
@@ -2035,7 +2035,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 # Take snapshots after initial setup:
 # VirtualBox > Machine > Take Snapshot > Label: "Clean baseline - DATE"
-```
+>
 
 ---
 
@@ -2051,7 +2051,7 @@ Qubes uses Xen hypervisor to create separate security domains (qubes) for differ
 
 **Qubes research setup:**
 
-```
+>
 Personal qube:       personal browsing, email, documents
 Work qube:           day job activity
 Research qube:       security research (connected through sys-whonix)
@@ -2060,13 +2060,13 @@ Untrusted qube:      opening suspicious files (use disposable VMs)
 sys-net qube:        manages network hardware
 sys-firewall qube:   controls traffic between qubes
 sys-whonix qube:     routes research traffic through Tor
-```
+>
 
 ---
 
 ### 13.5 Baseline Hardening for Any Research OS
 
-```bash
+>bash
 # Enable full disk encryption (LUKS for Linux)
 # Verify it is enabled:
 lsblk -o NAME,FSTYPE
@@ -2092,7 +2092,7 @@ gsettings set org.gnome.desktop.screensaver lock-delay 0
 # Configure automatic system updates
 apt install -y unattended-upgrades
 dpkg-reconfigure --priority=low unattended-upgrades
-```
+>
 
 ---
 
@@ -2100,7 +2100,7 @@ dpkg-reconfigure --priority=low unattended-upgrades
 
 Full disk encryption is only as strong as the passphrase used to derive the encryption key. A weak passphrase means an offline brute-force attack against the LUKS header can succeed.
 
-```
+>
 LUKS uses PBKDF2 or Argon2 (LUKS2) to derive the key from your passphrase.
 Argon2 (LUKS2) is significantly harder to brute-force due to memory hardness.
 If you created your LUKS volume with LUKS1, consider upgrading to LUKS2.
@@ -2128,7 +2128,7 @@ sudo cryptsetup convert /dev/sdX --type luks2
 # A keyfile stored on a USB drive: the drive must be present at boot
 dd if=/dev/urandom of=/path/to/keyfile bs=4096 count=1
 sudo cryptsetup luksAddKey /dev/sdX /path/to/keyfile
-```
+>
 
 ---
 
@@ -2165,7 +2165,7 @@ The digital evidence was confirmed and localized by physical evidence. This patt
 
 ### 14.2 Workspace Selection
 
-```
+>
 Ideal characteristics:
   Back to a wall or corner (no one can observe your screen from behind)
   Screen not visible to adjacent areas, street-facing windows, or cameras
@@ -2180,7 +2180,7 @@ Avoid:
   Locations that require ID or membership card
   Locations adjacent to regular law enforcement presence
   Locations where you previously operated under your real identity
-```
+>
 
 ---
 
@@ -2198,7 +2198,7 @@ This is the physical OPSEC element almost no guide addresses. Smart devices in y
 
 **Protocol for operational workspace:**
 
-```
+>
 Rule 1: No voice assistants in the operational workspace.
   Amazon Echo, Google Nest, Apple HomePod, and similar devices maintain always-on
   microphones and process audio in the cloud. A valid legal order can compel the
@@ -2224,7 +2224,7 @@ Rule 5: Printer awareness.
   printer linked to your real identity.
   Use a cash-purchased printer on a network-isolated research router.
   Alternatively: print at a business services shop with cash, not with a loyalty card.
-```
+>
 
 **Check if your printer embeds tracking dots:**
 - EFF tracking dot database: https://www.eff.org/pages/list-printers-which-do-or-do-not-print-tracking-dots
@@ -2254,7 +2254,7 @@ Know where the cameras are before you operate in a space. Pre-survey the space.
 
 If you drive to a sensitive operation location, your vehicle is logged.
 
-```
+>
 ANPR camera networks:
   Many cities have ANPR cameras on major roads, intersections, and parking garages.
   Police vehicles in some jurisdictions scan plates continuously while driving.
@@ -2270,7 +2270,7 @@ Mitigation:
 Do not:
   Park directly outside a sensitive location.
   Use a vehicle registered to your real address for sensitive operations.
-```
+>
 
 ---
 
@@ -2278,7 +2278,7 @@ Do not:
 
 Every device you buy with a traceable payment creates a record. That record can be subpoenaed from the retailer or matched to device logs.
 
-```
+>
 Purchasing hardware for research:
   Cash at a physical store (not online delivery; your address is a record)
   No loyalty or rewards cards at the point of purchase
@@ -2292,13 +2292,13 @@ Serial number and device tracking:
   Default action for any new research device: disable all telemetry
   before connecting to any network; reimage from a known clean install
   before first operational use
-```
+>
 
 ---
 
 ### 14.7 Device Security at Rest
 
-```
+>
 When you leave the device unattended (even briefly):
   Screen lock: set to 5 minutes maximum idle timeout
   Enable screen lock manually before physically walking away
@@ -2311,13 +2311,13 @@ Long-term storage:
   The encryption key exists only in RAM while the device is running
   Power off means no key in RAM means encrypted drive = unreadable ciphertext
   Sleep/hibernate leaves the key in RAM or in swap; they are weaker than full power-off
-```
+>
 
 ---
 
 ### 14.8 Travel and Border Crossings
 
-```
+>
 Border search authority by country:
 
 United States (CBP):
@@ -2355,7 +2355,7 @@ If your device is seized at a border:
   3. Note the officer's name and badge number.
   4. Consult legal counsel before the device is returned.
   5. Assume the device is compromised if returned. Reimage before further use.
-```
+>
 
 ---
 ## 15. TIMING AND PATTERN OPSEC: THE INVISIBLE FINGERPRINT
@@ -2379,7 +2379,7 @@ Combined with other data points, timing analysis can narrow a suspect pool from 
 
 ### 15.2 Timing Countermeasures
 
-```
+>
 Rule 1: Vary your operational timing window.
   Do not always operate in the same narrow UTC hour range.
   If you naturally work late, schedule sessions at different times across the week.
@@ -2404,7 +2404,7 @@ Rule 4: Think in UTC, not local time.
 Rule 5: Introduce deliberate breaks and irregularity.
   Operate for 45 minutes, stop for 30, operate for 2 hours, stop for a week.
   An irregular session pattern is harder to fingerprint than a consistent one.
-```
+>
 
 ---
 
@@ -2433,7 +2433,7 @@ Traffic correlation is the attack where an adversary who can observe both your e
 
 File creation timestamps, modification timestamps, and access timestamps can reveal your operational timezone and working hours.
 
-```bash
+>bash
 # Check timestamps on a file you are about to share
 stat document.txt
 # Shows: Access, Modify, Change timestamps with full timezone information
@@ -2449,7 +2449,7 @@ mat2 -l document.txt       # Show what metadata is present before stripping
 
 # The output file has metadata removed
 # Verify: mat2 --check document.txt
-```
+>
 
 ---
 
@@ -2473,7 +2473,7 @@ mat2 -l document.txt       # Show what metadata is present before stripping
 
 ### 16.2 Reading Metadata: exiftool
 
-```bash
+>bash
 # Install exiftool
 apt install -y libimage-exiftool-perl
 
@@ -2497,13 +2497,13 @@ exiftool -csv *.jpg > metadata_report.csv
 # Real scenario: check what is embedded in a file before you share it
 exiftool suspicious_document.docx
 # Look for: Author, Creator, Producer, Software, GPS*, Latitude, Longitude
-```
+>
 
 ---
 
 ### 16.3 Stripping Metadata: mat2 (Metadata Anonymisation Toolkit 2)
 
-```bash
+>bash
 # Install mat2
 apt install -y mat2
 # Or via pip: pip3 install mat2
@@ -2530,7 +2530,7 @@ mat2 *.jpg *.png *.docx
 # Always verify after stripping:
 mat2 --check document_cleaned.pdf
 # Should return: document_cleaned.pdf is clean
-```
+>
 
 ---
 
@@ -2538,7 +2538,7 @@ mat2 --check document_cleaned.pdf
 
 Every email contains headers that trace its path. A single improperly sent email can reveal your real IP address.
 
-```bash
+>bash
 # Read the full headers of an email:
 # In Gmail: open email > three dots > "Show original"
 # In Outlook: File > Properties > Internet headers
@@ -2560,7 +2560,7 @@ Every email contains headers that trace its path. A single improperly sent email
 # Use ProtonMail over Tor (ProtonMail strips originating IPs from headers)
 # Use Riseup.net over Tor
 # Never use Gmail, Outlook, Yahoo for operational email from a non-Tor connection
-```
+>
 
 **ProtonMail IP handling:** ProtonMail does not include your originating IP in email headers when you send from their web or app interface. This makes it usable for research identity communications when accessed over Tor.
 
@@ -2616,7 +2616,7 @@ The secure deletion approach differs fundamentally between HDDs and SSDs.
 
 Data is written to specific, addressable sectors. Overwriting those sectors with random data reliably destroys the original content. One pass of overwriting is sufficient for modern HDDs with perpendicular recording.
 
-```bash
+>bash
 # Securely delete a specific file on HDD (shred)
 shred -vzun 3 sensitive_file.txt
 # -v: verbose (shows progress)
@@ -2635,13 +2635,13 @@ dd if=/dev/zero of=/mount/point/zeros.tmp bs=1M; rm /mount/point/zeros.tmp
 apt install -y secure-delete
 srm -rfvz sensitive_file.txt   # Securely remove a file
 sfill /mount/point             # Fill free space to overwrite unlinked blocks
-```
+>
 
 **SSD (Solid State Drive) -- the critical difference:**
 
 SSDs use wear leveling: the controller distributes writes across all storage cells to extend lifespan. This means overwriting a file at a logical address may not overwrite the physical cells where the old data lived. The old data may remain in a different physical location that is not addressable by the OS.
 
-```bash
+>bash
 # On SSD, file-level shredding is unreliable.
 # The secure approaches for SSD:
 
@@ -2671,7 +2671,7 @@ nvme format /dev/nvme0n1 --ses=1  # ses=1: user data erase; ses=2: cryptographic
 # Delete the file normally. Since the volume is FDE-encrypted,
 # the remaining data is encrypted ciphertext. It is not useful to an investigator.
 # This is why FDE from day one is mandatory, not optional.
-```
+>
 
 **The bottom line on SSDs:** Full disk encryption from initial setup is the reliable solution. File-level secure deletion on an unencrypted SSD gives false confidence.
 
@@ -2703,7 +2703,7 @@ The Gutmann method (35-pass overwrite) was developed in 1996 for obsolete encodi
 
 Files opened in a running system may be cached in RAM or paged to swap space on disk. After deletion, the data may remain in RAM until overwritten, or on the swap partition indefinitely.
 
-```bash
+>bash
 # Disable swap entirely for research work (RAM must be large enough)
 swapoff -a
 # Permanent: comment out the swap line in /etc/fstab
@@ -2718,7 +2718,7 @@ echo 3 > /proc/sys/vm/drop_caches
 
 # For Tails: this is automatic -- Tails wipes RAM on shutdown
 # One of Tails' key security properties
-```
+>
 
 ---
 
@@ -2744,7 +2744,7 @@ echo 3 > /proc/sys/vm/drop_caches
 
 ### 18.2 Your Own Machine: Log Locations and Control
 
-```bash
+>bash
 # ---- BASH HISTORY ----
 # Location: ~/.bash_history (per user)
 # Bash writes history to the file on session exit, or when HISTFILE is flushed
@@ -2803,13 +2803,13 @@ grep sshd /var/log/auth.log | tail -50
 # Vim/nano swap files: /tmp/.file.swp; residual from open sessions
 # Python pip cache: ~/.cache/pip/
 # wget/curl history: not logged by default but DNS resolver caches queries
-```
+>
 
 ---
 
 ### 18.3 VPS and Remote Infrastructure Logs
 
-```bash
+>bash
 # On your VPS: know what is being logged before operating from it
 
 # View live SSH connections
@@ -2837,7 +2837,7 @@ tail -f /var/log/ufw.log
 # Forward logs to a local encrypted store rather than leaving them on the VPS
 # If your VPS is seized, you want minimal logs on it
 # Consider: logging to RAM-disk only (volatile; lost on reboot)
-```
+>
 
 ---
 
@@ -2858,7 +2858,7 @@ When you interact with a target system, you generate logs. Understanding what yo
 
 **User agent:** Every HTTP request your browser or tool sends includes a User-Agent header that identifies the tool version. Scanners like Nmap, Nikto, sqlmap, Gobuster, and Burp Suite all have identifiable default user agents. Modify them:
 
-```bash
+>bash
 # sqlmap: use a custom user agent
 sqlmap -u "http://target.com/?id=1" --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
@@ -2867,7 +2867,7 @@ gobuster dir -u http://target.com -w wordlist.txt -a "Mozilla/5.0 (compatible; G
 
 # curl: specify user agent
 curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://target.com
-```
+>
 
 ---
 
@@ -2912,7 +2912,7 @@ This section maps every significant artifact category on a research Linux machin
 
 ### 19.2 Shell History: The Most Obvious Artifact
 
-```bash
+>bash
 # Default location: ~/.bash_history (bash) or ~/.zsh_history (zsh)
 # Written on session exit
 
@@ -2944,13 +2944,13 @@ echo "test_command_to_find_later"
 # Start a new terminal session
 cat ~/.bash_history | grep test_command_to_find_later
 # Should return nothing if HISTFILE=/dev/null is set correctly
-```
+>
 
 ---
 
 ### 19.3 Editor Swap Files and Backup Files
 
-```bash
+>bash
 # Vim creates swap files for every open document:
 # If you open /home/user/notes.txt in Vim, it creates /home/user/.notes.txt.swp
 # If Vim crashes or is killed: the swap file persists
@@ -2976,7 +2976,7 @@ echo "set nobackups" >> ~/.nanorc
 
 # Find nano backup files:
 find / -name "*~" -type f 2>/dev/null | grep -v ".cache"
-```
+>
 
 ---
 
@@ -2989,7 +2989,7 @@ find / -name "*~" -type f 2>/dev/null | grep -v ".cache"
 - TLS certificates were cached
 - Sites may have written to disk cache before the browser knew to suppress it
 
-```bash
+>bash
 # Firefox: history, cache, cookies, autofill are in the profile directory
 ls -la ~/.mozilla/firefox/
 
@@ -3023,7 +3023,7 @@ bleachbit --clean firefox.history firefox.cookies firefox.cache firefox.password
 
 # For operational use: run Tor Browser which clears state on exit by default
 # For research identity Firefox: configure to clear all on close (Section 10.5 user.js)
-```
+>
 
 ---
 
@@ -3031,7 +3031,7 @@ bleachbit --clean firefox.history firefox.cookies firefox.cache firefox.password
 
 Both GNOME and KDE maintain a list of recently accessed files that appears in file managers, the "Open Recent" menu of applications, and elsewhere. This list persists and is fully readable by forensic tools.
 
-```bash
+>bash
 # Recent files list (GNOME):
 # Location: ~/.local/share/recently-used.xbel
 # Format: XML; lists every recently opened file with full path and timestamp
@@ -3065,13 +3065,13 @@ ls ~/.cache/thumbnails/
 
 # Clear thumbnail cache:
 rm -rf ~/.cache/thumbnails/*
-```
+>
 
 ---
 
 ### 19.6 SSH Known Hosts and Config Artifacts
 
-```bash
+>bash
 # ~/.ssh/known_hosts:
 # Contains the public key fingerprint of every server you have ever SSH'd to.
 # This is a log of every server you have connected to (by IP or hostname).
@@ -3093,13 +3093,13 @@ cat ~/.ssh/config
 
 # SSH auth logs on YOUR machine (if you run an SSH server yourself):
 grep sshd /var/log/auth.log
-```
+>
 
 ---
 
 ### 19.7 Git Configuration and Commit History Leakage
 
-```bash
+>bash
 # ~/.gitconfig:
 # Contains your name and email as set for git commits
 # Even if you never pushed this repo, this file identifies you
@@ -3144,13 +3144,13 @@ git filter-branch --env-filter '
         export GIT_COMMITTER_EMAIL="$NEW_EMAIL"
     fi
 ' --tag-name-filter cat -- --branches --tags
-```
+>
 
 ---
 
 ### 19.8 Python and Package Manager Artifacts
 
-```bash
+>bash
 # pip install caches downloaded packages:
 # Location: ~/.cache/pip/
 # Contains: every package you installed, with timestamps
@@ -3174,13 +3174,13 @@ cat /var/log/apt/history.log
 > /var/log/dpkg.log
 > /var/log/apt/history.log
 # Note: future installs will re-populate these files
-```
+>
 
 ---
 
 ### 19.9 Udev and Mounted Device History
 
-```bash
+>bash
 # The OS logs every USB device you plugged in:
 # Kernel log shows device identifiers when plugged in
 dmesg | grep -i "usb\|ttyUSB\|sdb\|sdc"
@@ -3197,13 +3197,13 @@ journalctl | grep "mounted\|umounted"
 # For research: use dedicated research USB drives; do not mix personal drives
 
 # For Tails: this is not a problem (amnesic; all device history wiped on shutdown)
-```
+>
 
 ---
 
 ### 19.10 Print Job History (CUPS)
 
-```bash
+>bash
 # CUPS (Common Unix Printing System) logs every print job:
 # Location: /var/log/cups/access_log
 cat /var/log/cups/access_log
@@ -3224,7 +3224,7 @@ cupsctl --no-debug-logging
 # Disable CUPS entirely if you do not need printing on the research machine:
 systemctl disable cups
 systemctl stop cups
-```
+>
 
 ---
 
@@ -3232,7 +3232,7 @@ systemctl stop cups
 
 Run before any sensitive session on a machine that will be used long-term.
 
-```bash
+>bash
 #!/bin/bash
 # Run at the start of each research session as a reminder
 # pre_session_check.sh
@@ -3261,12 +3261,12 @@ echo "[7] pip cache size:"
 du -sh ~/.cache/pip/ 2>/dev/null
 echo ""
 echo "=== END CHECK ==="
-```
+>
 
-```bash
+>bash
 chmod +x pre_session_check.sh
 ./pre_session_check.sh
-```
+>
 
 ---
 
@@ -3301,7 +3301,7 @@ DRAM (Dynamic RAM) chips retain their content for a period after power loss due 
 
 AMD processors from Zen+ (2018) onwards include Secure Memory Encryption, which encrypts all data in DRAM using a key generated by the processor at boot. This encryption is transparent to the OS. Even if an adversary extracts the DRAM chips and reads them directly, the content is encrypted.
 
-```bash
+>bash
 # Check if your AMD processor supports SME:
 dmesg | grep -i "SME\|TSME\|mem_encrypt"
 # Look for: "AMD Memory Encryption features: SME" or "AMD SME active"
@@ -3315,7 +3315,7 @@ sudo reboot
 # Verify SME is active after reboot:
 dmesg | grep -i "mem_encrypt"
 # Should show: "AMD Memory Encryption features: SME" + "mem_encrypt=on"
-```
+>
 
 Note: Intel does not have an equivalent hardware RAM encryption feature in most consumer processors. Intel TDX (Trust Domain Extensions) exists but requires specific hardware and cloud context.
 
@@ -3323,7 +3323,7 @@ Note: Intel does not have an equivalent hardware RAM encryption feature in most 
 
 Binding your LUKS FDE passphrase to the TPM (Trusted Platform Module) chip means the decryption key is only released if the system boots in its expected state (correct UEFI firmware, correct bootloader, correct kernel). This does not prevent the cold boot attack directly but closes the Evil Maid attack vector that often enables cold boot (see Section 20.2).
 
-```bash
+>bash
 # Check if your machine has a TPM:
 ls /dev/tpm* 2>/dev/null
 ls /sys/class/tpm/tpm0/ 2>/dev/null
@@ -3337,13 +3337,13 @@ sudo systemd-cryptenroll --tpm2-device=auto /dev/sdX
 
 # View current enrollment:
 sudo systemd-cryptenroll /dev/sdX
-```
+>
 
 **Mitigation 3: Operational Shutdown Procedure**
 
 The simplest and most reliable cold boot mitigation: **power off completely before any risk of seizure.**
 
-```
+>
 Procedure when seizure risk is elevated (raid suspected, leaving device in
 an uncontrolled environment, traveling through border controls):
 
@@ -3366,7 +3366,7 @@ an uncontrolled environment, traveling through border controls):
 
 Standard operational rule: when you step away from a research session
 for more than 10 minutes, shut down -- do not sleep.
-```
+>
 
 **Mitigation 4: RAM Module Removal (Extreme Scenarios)**
 
@@ -3397,7 +3397,7 @@ An adversary with brief physical access to your powered-off device installs a ma
 
 **Mitigation 1: Physical Tamper Evidence**
 
-```
+>
 Materials: Nail polish (dark, glittery -- harder to replicate exactly) or
            commercial tamper-evident seals
 
@@ -3414,7 +3414,7 @@ Procedure:
    
 4. If seals have been disturbed: DO NOT POWER ON. Treat device as compromised.
    Transfer to a clean machine via USB after forensic imaging if needed.
-```
+>
 
 **Mitigation 2: UEFI Secure Boot + TPM PCR Measurement**
 
@@ -3422,7 +3422,7 @@ When UEFI Secure Boot is enabled and the bootloader, kernel, and initramfs are s
 - UEFI Secure Boot halts the boot (unsigned modifications fail)
 - TPM refuses to release the LUKS key (measurements do not match)
 
-```bash
+>bash
 # Check UEFI Secure Boot status:
 mokutil --sb-state
 # Should return: SecureBoot enabled
@@ -3440,13 +3440,13 @@ sudo systemd-cryptenroll --tpm2-pcrs=0+7 /dev/sdX
 # PCR 0: UEFI firmware
 # PCR 7: Secure Boot state
 # Any change to firmware or Secure Boot state: TPM refuses to release key
-```
+>
 
 **Mitigation 3: BIOS/UEFI Password**
 
 A UEFI setup password prevents an adversary from disabling Secure Boot or modifying boot order without knowing the password.
 
-```
+>
 Set a UEFI setup password:
   Enter UEFI at startup (F2, F12, Del, or ESC during POST)
   Navigate to Security > Set Supervisor Password (or Administrator Password)
@@ -3458,23 +3458,23 @@ modification of UEFI settings that would allow bypassing Secure Boot
 
 This does not prevent: hardware implants installed directly on the PCB,
 UEFI firmware reflashing with custom tools (sophisticated adversaries)
-```
+>
 
 **Mitigation 4: Chassis Intrusion Detection**
 
 Some enterprise-grade laptops and desktops include a chassis intrusion detection switch that logs when the case is opened. Check your UEFI/BIOS for a "Chassis Intrusion" or "Cover Tamper Detection" setting and enable it if present.
 
-```bash
+>bash
 # Check chassis intrusion status (IPMI-equipped servers and some enterprise laptops):
 ipmitool sel list | grep -i "chassis\|intrusion"
 # Look for: "Chassis | Chassis Intrusion | Intrusion"
-```
+>
 
 **Mitigation 5: Detection Through Behavioral Anomalies**
 
 After booting a device that may have been tampered with, look for:
 
-```bash
+>bash
 # Compare UEFI firmware version to documented baseline
 # Store baseline: dmidecode -t bios > baseline_bios.txt
 dmidecode -t bios
@@ -3497,7 +3497,7 @@ ps aux | sort -k11
 # Network connections from the device after boot:
 ss -tulpn
 # Look for unexpected listeners or established connections
-```
+>
 
 ---
 
@@ -3562,7 +3562,7 @@ When you have a low-certainty indicator (unusual traffic, a slow VPN, a feeling 
 
 **Low-certainty procedure:**
 
-```
+>
 1. Do not act on the suspicious infrastructure yet.
 
 2. Establish a baseline for the anomaly:
@@ -3585,7 +3585,7 @@ When you have a low-certainty indicator (unusual traffic, a slow VPN, a feeling 
 
 6. Ask: has an associate's infrastructure or account been taken down?
    If yes: elevation to medium-certainty. Do not wait.
-```
+>
 
 ---
 
@@ -3593,7 +3593,7 @@ When you have a low-certainty indicator (unusual traffic, a slow VPN, a feeling 
 
 When a specific asset (one VPS, one domain, one identity) is confirmed or likely compromised:
 
-```
+>
 PARTIAL BURN SEQUENCE:
 
 Step 1: Immediately stop using the compromised asset.
@@ -3620,7 +3620,7 @@ Step 4: Stand up replacement infrastructure.
 Step 5: Do not reuse any of the burned infrastructure, even after the heat dies down.
         Investigators maintain logs for extended periods.
         Infrastructure that was burned once remains burned.
-```
+>
 
 ---
 
@@ -3630,7 +3630,7 @@ A full burn is executed when you have high confidence that you are under active 
 
 **This is not a drill. Execute in order.**
 
-```
+>
 FULL BURN SEQUENCE:
 
 IMMEDIATE (within 30 minutes):
@@ -3691,13 +3691,13 @@ LONGER-TERM:
     who specializes in computer crime law before speaking to anyone else,
     including law enforcement. Everything you say to law enforcement
     without counsel can and will be used against you.
-```
+>
 
 ---
 
 ### 21.6 What Not to Do When Burning
 
-```
+>
 DO NOT:
   Destroy evidence while law enforcement is watching
   (evidence destruction is often an additional charge; tampering)
@@ -3721,7 +3721,7 @@ DO NOT:
 DO NOT:
   Rush. Panic creates mistakes. Slow, deliberate execution of the burn
   sequence is better than fast and incomplete.
-```
+>
 
 ---
 
@@ -3749,7 +3749,7 @@ The security of your crew is the security of its weakest member. This is not abs
 
 You cannot verify that someone is who they claim to be online. You can evaluate their demonstrated OPSEC behavior.
 
-```
+>
 Minimum observable signals of an associate worth trusting:
 
 1. Consistent use of encrypted communications only.
@@ -3782,7 +3782,7 @@ Red flags:
   - They were recently arrested or in legal trouble (possible informant)
   - They push for operations to proceed when you think OPSEC is insufficient
   - They ask operational questions that would only matter if they were documenting for someone else
-```
+>
 
 ---
 
@@ -3800,7 +3800,7 @@ The cell structure model compartmentalizes information so that no single associa
 
 **Need-to-know principle:** Every associate knows only what they need to know to perform their specific role. Nothing more.
 
-```
+>
 Application in practice:
 
 The person doing reconnaissance does not need to know
@@ -3822,13 +3822,13 @@ Common violations of need-to-know:
   - Discussing the full operation plan in early planning stages
     (the plan changes; early participants who drop out still know the old plan)
   - Sharing target details with infrastructure people who need only to set up VPS
-```
+>
 
 ---
 
 ### 22.4 Communication Protocols for Crews
 
-```
+>
 Rule 1: One channel per relationship, not one channel for all.
   A group Signal chat that includes all associates is a single point of failure.
   Each 1:1 relationship gets its own Signal thread.
@@ -3858,13 +3858,13 @@ Rule 5: Dead drop for data sharing.
   - A password-manager-hosted secure note (Bitwarden, KeePassXC) shared via secret link
   - An encrypted file on a shared anonymous hosting service (OnionShare over Tor)
   - An agreed OnionShare address known only to both parties
-```
+>
 
 ---
 
 ### 22.5 When an Associate Is Arrested or Goes Dark
 
-```
+>
 An associate's arrest or sudden unexplained absence changes your
 threat model immediately. They may have been turned. Their infrastructure
 and communications may now be monitored or controlled by investigators.
@@ -3901,7 +3901,7 @@ Signs that an associate is operating as an informant (post-arrest):
   - They introduce new "associates" you have not vetted
   - Their OPSEC suddenly seems improved (handler support)
   - They reference operational details they should not still remember accurately
-```
+>
 
 ---
 ## 23. PHASE -1 MILESTONES CHECKLIST
@@ -4117,7 +4117,7 @@ The checklist below specifies the verification standard for each item. If a veri
 
 ### Milestone Summary
 
-```
+>
 Week 1: Counter-OSINT audit, communication security, mobile setup
 Week 2: Network anonymization, browser fingerprinting, infrastructure start
 Week 3: Cryptocurrency, anonymous VPS, identity/stylometry, secure OS
@@ -4125,11 +4125,11 @@ Week 4: Physical OPSEC, timing, metadata, secure deletion, log awareness
 Week 5: Forensic artifacts, cold boot/evil maid, burn protocol, crew OPSEC
 
 Final verification: Run the Phase -1 self-test.
-```
+>
 
 **Phase -1 Self-Test (run after all boxes are checked):**
 
-```bash
+>bash
 #!/bin/bash
 # Phase -1 Self-Test
 # Run from your research machine over VPN + Tor
@@ -4178,7 +4178,7 @@ echo ""
 
 echo "=== SELF-TEST COMPLETE ==="
 echo "Review any WARNING lines before proceeding to Phase 0."
-```
+>
 
 ---
 
@@ -4265,7 +4265,7 @@ echo "Review any WARNING lines before proceeding to Phase 0."
 
 ### 24.4 Tool Installation Quick Reference
 
-```bash
+>bash
 # --- CORE TOOLS ---
 # Install all essential tools on a fresh Debian/Ubuntu research OS
 
@@ -4302,7 +4302,7 @@ ollama pull mistral
 # Includes Extension Pack (same page)
 
 echo "Core tools installed. Verify each with --version or --help."
-```
+>
 
 ---
 
