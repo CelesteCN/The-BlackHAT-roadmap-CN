@@ -150,6 +150,7 @@ OPSEC 不是你学会入侵之后才去装的工具。它是一种在你写下�
 **他做了什么：** 作为 CIA 的软件工程师，舒尔特被指窃取了该局的 Vault 7 黑客工具（CIA 历史上最大的情报泄露），并于 2017 年交给 WikiLeaks。另外，他还因制作和持有儿童性虐待材料被定罪。
 
 **他如何落网：** 技术层面的泄露本身只被部分归因于日志分析。真正让起诉无懈可击的，是对他自己机器的取证检查。调查人员发现：
+
 - 他个人设备上的 VeraCrypt 加密容器，里面是他曾试图删除的证据
 - 尽管清理过浏览器，仍有大量浏览历史和搜索记录
 - 文件系统时间戳与他自述的时间线相互矛盾
@@ -696,12 +697,14 @@ GrapheneOS 是为 Google Pixel 设备打造的加固版 Android 系统。它是�
 ### 7.5 设备隔离规则
 
 ```
-规则 1：绝不把个人手机和作战手机同时带到敏感地点。
-        两台设备同时开机且相隔很近：基站日志会把它们关联到
-        同一个物理位置，从而把你的作战设备关联到你的真实身份。
+规则 1：绝不把个人手机和作战手机同时
+        带到敏感地点。
+        两台设备同时开机且相隔很近时：基站日志会把它们关联到
+        同一个物理位置，从而把你的作战设备
+        关联到你的真实身份。
 
-规则 2：在敏感地点，先关闭个人手机，再打开作战手机。
-        或者干脆把个人手机留在家里。
+规则 2：在敏感地点，先关闭个人手机，
+        再打开作战手机。或者干脆把个人手机留在家里。
 
 规则 3：高敏感场合使用法拉第袋。
         法拉第袋能屏蔽所有无线电信号（蜂窝、WiFi、蓝牙、GPS）。
@@ -814,7 +817,7 @@ apt update && apt install -y ufw unattended-upgrades fail2ban
 
 ufw default deny incoming
 ufw default allow outgoing
-ufw allow ${SSH_PORT}/tcp comment 'SSH 非标准端口'
+ufw allow ${SSH_PORT}/tcp comment 'SSH non-standard port'
 ufw --force enable
 
 # 自动安装安全更新
@@ -838,7 +841,7 @@ MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
 SSHEOF
 
 systemctl restart sshd
-echo "加固完成。请退出，然后用 operator 身份从 ${SSH_PORT} 端口重连。"
+echo "Hardening complete. Log out and reconnect as operator on port ${SSH_PORT}."
 ```
 
 **关于端口选择的说明：** 高端口随机值（49152-65535）比 22 或 2222 端口更难被自动化扫描发现。在这个区间里挑一个随机数并固定使用。若要在这个端口上做到最大隐蔽，可以考虑加端口敲门（fwknop 软件包）：端口默认完全关闭，直到收到一串特定的 UDP 包序列，才会短暂放行你的 SSH 连接。
@@ -1223,10 +1226,9 @@ proxychains4 curl https://dnsleaktest.com/json
 ```
 你的机器 --> VPN --> Tor 网络 --> 目标
 
-防范的对象：
-        运营商知道你用了 Tor（在 Tor 使用本身就可疑的国家里很重要）
-        Tor 入口节点知道你的真实 IP（它看到的是 VPN 的 IP）
-        VPN 服务商知道你的最终目的地
+防范的对象：运营商知道你用了 Tor（在 Tor 使用本身就可疑的国家里）
+            Tor 入口节点知道你的真实 IP（它看到的是 VPN 的 IP）
+            VPN 服务商知道你的最终目的地
 
 你的 ISP 看到：发往 VPN 的加密流量
 VPN 服务商看到：你的 IP + Tor 流量（若为无日志服务商：什么都不留）
@@ -2199,15 +2201,17 @@ sudo cryptsetup luksAddKey /dev/sdX /path/to/keyfile
 ```
 规则 1：作战工作区里不要放任何语音助手。
   Amazon Echo、Google Nest、Apple HomePod 之类的设备，麦克风长期在线，
-  且音频在云端处理。一份有效的法律命令就能迫使厂商交出录到的音频。
-  把它们从作战空间彻底移除。不是"关掉" —— 是搬走。
+  且音频在云端处理。一份有效的法律命令就能迫使
+  厂商交出录到的任何音频。把它们从作战空间
+  彻底移除。不是"关掉" —— 是搬走。
 
 规则 2：作战工作区不要放联网的智能电视。
-  智能电视用 ACR（自动内容识别）记录屏幕内容，很多还带麦克风。
-  如果确实有一台：在路由器层面断网，或拔掉网线；把麦克风遮住。
+  智能电视用 ACR（自动内容识别）记录屏幕内容
+  很多还带麦克风。如果确实有一台：在路由器
+  层面断网，或拔掉网线；把麦克风遮住。
 
 规则 3：作战空间里的物联网设备要断网。
-  智能灯、温控器、安防摄像头会产生网络流量日志，
+  智能灯、温控器、安防摄像头会产生网络流量日志
   能精确标注你在场的时间。
 
 规则 4：个人手机的位置。
@@ -2215,8 +2219,8 @@ sudo cryptsetup luksAddKey /dev/sdX /path/to/keyfile
   如果非要带：进门之前关机并放进法拉第袋。
 
 规则 5：打印机意识。
-  大多数彩色激光打印机会在每页纸上嵌入不可见的微点，
-  编码了序列号、日期和时间。不要在与你真实身份关联的
+  大多数彩色激光打印机会在每页纸上嵌入不可见的微点，编码了序列号、
+  日期和时间。不要在与你真实身份关联的
   打印机上打印作战材料。
   用现金买一台打印机，接在网络隔离的研究路由器上。
   或者：去营业性的文印店用现金打印，不要刷会员卡。
@@ -2285,8 +2289,9 @@ ANPR（车牌自动识别）摄像头网络：
   序列号会被厂商和零售商记录
   Apple 设备在激活时登记序列号
   很多固件内置的 OEM 工具会在首次启动时回传数据
-  对任何新研究设备，默认动作是：连任何网络之前先关闭全部遥测；
-  首次作战使用之前，从已知干净的镜像重新安装系统
+  对任何新研究设备，默认动作是：先关闭全部遥测
+  再连接任何网络；首次作战使用之前
+  从已知干净的镜像重新安装系统
 ```
 
 ---
@@ -3232,30 +3237,30 @@ systemctl stop cups
 # 每次研究会话开始时运行，作为自查提醒
 # pre_session_check.sh
 
-echo "=== 会话前痕迹检查 ==="
+echo "=== PRE-SESSION ARTIFACT CHECK ==="
 echo ""
-echo "[1] shell 历史记录已关闭？"
-echo "    当前 HISTFILE: ${HISTFILE:-'(使用默认值 —— 请关掉它)'}"
+echo "[1] Shell history disabled?"
+echo "    Current HISTFILE: ${HISTFILE:-'(using default -- DISABLE IT)'}"
 echo ""
-echo "[2] 交换分区已关闭？"
-swapon --show 2>/dev/null || echo "    交换分区：无（很好）"
+echo "[2] Swap disabled?"
+swapon --show 2>/dev/null || echo "    Swap: none (good)"
 echo ""
-echo "[3] 是否有 Vim/nano 残留文件？"
+echo "[3] Vim/nano swap files present?"
 find /tmp /home -name "*.swp" -o -name "*~" 2>/dev/null | head -10
 echo ""
-echo "[4] 最近访问文件列表："
+echo "[4] Recently accessed files list:"
 cat ~/.local/share/recently-used.xbel 2>/dev/null | grep "href" | head -10
 echo ""
-echo "[5] 缩略图缓存大小："
+echo "[5] Thumbnails cache size:"
 du -sh ~/.cache/thumbnails/ 2>/dev/null
 echo ""
-echo "[6] Git 配置的身份："
+echo "[6] Git config identity:"
 git config --global user.email 2>/dev/null
 echo ""
-echo "[7] pip 缓存大小："
+echo "[7] pip cache size:"
 du -sh ~/.cache/pip/ 2>/dev/null
 echo ""
-echo "=== 检查结束 ==="
+echo "=== END CHECK ==="
 ```
 
 ```bash
@@ -3339,8 +3344,8 @@ sudo systemd-cryptenroll /dev/sdX
 最简单也最可靠的冷启动缓解措施：**在任何被查扣风险之前彻底关机。**
 
 ```
-当查扣风险升高时的处置流程（怀疑被搜查、设备即将留在失控环境、
-要通过边境检查）：
+当查扣风险升高时的处置流程（怀疑被搜查、设备即将留在
+失控环境、或需要通过边境检查）：
 
 1. 把需要保留的工作成果存入加密容器或加密卷
 2. 关闭所有应用程序
@@ -3352,8 +3357,9 @@ sudo systemd-cryptenroll /dev/sdX
    只能彻底关机
 
 4. 关机后至少等 90 秒再交出设备
-   （在室温下，断电约 90 秒可显著降低内存残余电荷；
-   具体时长取决于内存类型、使用年限和温度）
+   （在室温下，断电约 90 秒可显著降低
+   内存残余电荷；具体时长取决于内存类型、
+   使用年限和温度）
 
 5. 如果对方可能动用液氮或冷凝喷雾（国家级对手场景）：
    硬件内存加密（缓解措施 1）是唯一可靠的对抗手段
@@ -3755,11 +3761,12 @@ ss -tulpn
    有五年个人发言的 Reddit 账号：说明隔离做得很差。
 
 3. 他们清楚自己在做什么。
-   能讲清自己的威胁模型吗？如果讲不清，他们的 OPSEC 就不是有原则的，
-   而是模仿来的。模仿来的 OPSEC 一旦环境变化就会失效。
+   能讲清自己的威胁模型吗？如果讲不清，他们的 OPSEC 就不是有原则的
+   —— 而是模仿来的。模仿来的 OPSEC 一旦环境变化就会失效。
 
 4. 他们有切身的利害关系。
-   一个没有任何可失去之物的同伴，在压力下最可能配合执法。
+   一个没有任何可失去之物的同伴，在压力下最可能配合
+   执法机构。
 
 5. 时间 + 观察。
    信任没有捷径。要在时间里观察行为。
@@ -3858,14 +3865,15 @@ ss -tulpn
 ### 22.5 当同伴被捕或失联
 
 ```
-同伴被捕或突然莫名失联，会立刻改变你的威胁模型。
-他可能已经被策反。他的基础设施和通讯，现在可能正被调查人员监控或操控。
+同伴被捕或突然莫名失联，会立刻改变你的
+威胁模型。他可能已经被策反。他的基础设施
+和通讯，现在可能正被调查人员监控或操控。
 
 立即行动：
 
 1. 在所有渠道上停止与他的一切通讯。
    不只是他最后用的那个渠道。是所有渠道。
-   调查人员可能会在一段时间内接管同伴的账号，
+   调查人员可能会在一段时间内接管同伴的账号
    以继续绘制关系网络（"钓线延续"）。
 
 2. 假定他已经供出了他所知道的一切。
@@ -4126,50 +4134,50 @@ ss -tulpn
 # 阶段 -1 自测
 # 在研究机上通过 VPN + Tor 运行
 
-echo "=== 阶段 -1 自测 ==="
+echo "=== PHASE -1 SELF-TEST ==="
 echo ""
 
-echo "[身份] 研究出口 IP（应为 Tor 出口节点）："
+echo "[IDENTITY] Research IP (should be Tor exit node):"
 proxychains4 curl -s https://ifconfig.me
 echo ""
 
-echo "[身份] DNS 解析（不应出现你的运营商）："
+echo "[IDENTITY] DNS resolution (should not show your ISP):"
 proxychains4 curl -s https://dnsleaktest.com/json | python3 -c "import sys,json; data=json.load(sys.stdin); [print(f'  DNS: {d[\"ip\"]} - {d[\"isp\"]}') for d in data]"
 echo ""
 
-echo "[身份] Tor 确认："
+echo "[IDENTITY] Tor confirmation:"
 proxychains4 curl -s https://check.torproject.org | grep -o "Congratulations.*Tor" | head -1
 echo ""
 
-echo "[shell 历史] HISTFILE 设置："
-echo "  HISTFILE=${HISTFILE:-未设置 —— 警告：bash 历史正在记录}"
+echo "[SHELL HISTORY] HISTFILE setting:"
+echo "  HISTFILE=${HISTFILE:-UNSET-WARNING: bash history active}"
 echo ""
 
-echo "[交换分区] 当前启用的交换："
-swapon --show 2>/dev/null && echo "  警告：交换分区已启用" || echo "  通过：无交换分区"
+echo "[SWAP] Active swap:"
+swapon --show 2>/dev/null && echo "  WARNING: Swap is active" || echo "  OK: No swap active"
 echo ""
 
-echo "[VIM] 交换文件："
+echo "[VIM] Swap files:"
 SWPCOUNT=$(find / -name "*.swp" 2>/dev/null | wc -l)
-echo "  找到 $SWPCOUNT 个交换文件 $([ $SWPCOUNT -gt 0 ] && echo '（警告：请清理）' || echo '（通过）')"
+echo "  $SWPCOUNT swap files found $([ $SWPCOUNT -gt 0 ] && echo '(WARNING: clean these up)' || echo '(OK)')"
 echo ""
 
-echo "[最近文件] 最近文件记录："
+echo "[RECENT FILES] Recent files recording:"
 RF=$(gsettings get org.gnome.privacy remember-recent-files 2>/dev/null)
-echo "  $RF $([ "$RF" = "false" ] && echo '（通过）' || echo '（警告：请关闭）')"
+echo "  $RF $([ "$RF" = "false" ] && echo '(OK)' || echo '(WARNING: disable this)')"
 echo ""
 
-echo "[时区] 系统时区："
+echo "[TIMEZONE] System timezone:"
 timedatectl | grep "Time zone"
-echo "  $([ "$(timedatectl | grep 'Time zone' | grep UTC)" ] && echo '通过：UTC' || echo '警告：不是 UTC')"
+echo "  $([ "$(timedatectl | grep 'Time zone' | grep UTC)" ] && echo 'OK: UTC' || echo 'WARNING: Not UTC')"
 echo ""
 
-echo "[GIT] Git 身份："
-echo "  $(git config --global user.email 2>/dev/null || echo '没有全局 git 配置')"
+echo "[GIT] Git identity:"
+echo "  $(git config --global user.email 2>/dev/null || echo 'No global git config')"
 echo ""
 
-echo "=== 自测完成 ==="
-echo "进入阶段 0 之前，先处理所有标为警告的项目。"
+echo "=== SELF-TEST COMPLETE ==="
+echo "Review any WARNING lines before proceeding to Phase 0."
 ```
 
 ---
@@ -4293,7 +4301,7 @@ ollama pull mistral
 # 从 https://www.virtualbox.org/wiki/Downloads 下载
 # 同一页面还有 Extension Pack
 
-echo "核心工具已安装。用 --version 或 --help 逐个验证。"
+echo "Core tools installed. Verify each with --version or --help."
 ```
 
 ---
