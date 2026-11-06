@@ -187,18 +187,18 @@ Without authorization: criminal offense in virtually every jurisdiction, regardl
 The line is not about ethics. It is not about how careful you are. It is about permission. Get it in writing. Always.
 
 ```
-Authorization document minimum elements:
+授权文件的最低要素：
 
-- Names of all parties (client, tester, company)
-- Scope: exactly which systems, IP ranges, domains are in scope
-- Out-of-scope: explicitly listed systems you may NOT touch
-- Time window: start date, end date, testing hours
-- Emergency contact: who to call if something breaks
-- Signature of someone with legal authority to grant permission
-- What data can be collected and how it must be handled
-- Rules of engagement: what attack types are permitted
+- 所有相关方姓名（客户、测试者、公司）
+- 范围：具体哪些系统、哪些 IP 段、哪些域名在授权范围内
+- 排除范围：明确列出你不得触碰的系统
+- 时间窗口：开始日期、结束日期、允许测试的时段
+- 应急联系人：出问题时该联系谁
+- 有法定授权权限的人签字
+- 可收集哪些数据，以及必须如何处理
+- 交战规则：允许使用哪些攻击类型
 
-Without all these elements, the document provides no real legal protection.
+缺少以上任何一项要素，这份文件都不具备真正的法律效力。
 ```
 
 <div align="center">
