@@ -186,7 +186,7 @@ Without authorization: criminal offense in virtually every jurisdiction, regardl
 
 The line is not about ethics. It is not about how careful you are. It is about permission. Get it in writing. Always.
 
-```
+>
 Authorization document minimum elements:
 
 - Names of all parties (client, tester, company)
@@ -199,7 +199,7 @@ Authorization document minimum elements:
 - Rules of engagement: what attack types are permitted
 
 Without all these elements, the document provides no real legal protection.
-```
+>
 
 <div align="center">
 <table><tr><td>
