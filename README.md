@@ -1,3 +1,24 @@
+---
+# 🇨🇳 The-BlackHAT-Roadmap-CN (黑帽路线图中文本地化版)
+
+> **本项目基于原作者 `SagarBiswas-MultiHAT` 的开源神作进行深度本地化重构。**
+> 🔗 **原项目地址：** [https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)
+> 📜 **开源协议：** 本项目严格遵循原作者的 CC BY-SA 4.0 协议，所有内容保持开源共享。
+
+### 💡 为什么不用浏览器自带翻译？
+（... 这一段略 ...）
+
+🚧 **当前进度：** 核心目录已翻译，图表重绘与正文精翻正在持续爆肝中。欢迎国内安全爱好者提交 PR，一起打造最适合中国极客的安全路线图！
+
+--- 
+（👆 注意这里，一定要加三个减号，代表一条分割线）
+
+<div align="center">
+< img src="assets/banner.svg" alt="The BlackHAT Roadmap V1.2.2" width="850" />
+</div>
+
+---
+
 <div align="center">
 
 <p align="center">
