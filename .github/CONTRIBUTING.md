@@ -1,37 +1,37 @@
-# Contributing to The BlackHAT Roadmap
+# 为 The BlackHAT Roadmap 贡献
 
-Thank you for your interest in contributing to The BlackHAT Roadmap. This repository maintains a high technical bar, focusing on deep, low-level engineering rather than surface-level tool tutorials.
-
----
-
-## What We Welcome
-
-- **In-Depth Technical Modules**: Comprehensive breakdowns of emerging tradecraft (e.g., hypervisor evasion, advanced ADCS coercion, eBPF rootkit mechanics, hardware bus exploitation).
-- **Practical Code Samples**: Clean, compilable, well-documented C, Rust, Assembly, or Python proof-of-concepts targeting the [payloads/](../payloads/) directory.
-- **Curriculum Corrections**: Fixes for dead external links, outdated API signatures, or factual technical discrepancies.
-- **Lab Architectures**: Automated deployment scripts (Terraform, Docker Compose, Vagrant) for reproducible research environments.
+感谢你有兴趣为 The BlackHAT Roadmap 做贡献。本仓库维持很高的技术门槛，侧重深入、底层的工程内容，而不是浅层的工具教程。
 
 ---
 
-## What We Do Not Accept
+## 我们欢迎的内容
 
-- Low-effort aggregations or generic lists of public automated scanners (e.g., standard Nmap or Metasploit cheat sheets).
-- Incomplete or non-functional code snippets copied without technical context.
-- Marketing links, commercial tool promotions, or referral redirects.
+- **深入的技术模块**：对新兴作业手法的全面拆解（例如 hypervisor 规避、高级 ADCS 强制认证、eBPF rootkit 机制、硬件总线利用）。
+- **实用的代码示例**：干净、可编译、文档完善的 C、Rust、汇编或 Python 概念验证，投放到 [payloads/](../payloads/) 目录。
+- **课程修正**：修复失效的外部链接、过时的 API 签名或技术事实错误。
+- **实验架构**：用于可复现研究环境的自动化部署脚本（Terraform、Docker Compose、Vagrant）。
 
 ---
 
-## Contribution Guidelines
+## 我们不接受的内容
 
-1. **Keep Explanations Rooted in First Principles**: Explain the underlying system mechanisms (PE headers, memory protection, kernel structures, network protocols) before showing attack implementations.
-2. **Code Standards**:
-   - C/C++ code must compile cleanly with `gcc`, `clang`, or `cl.exe`.
-   - Rust code must format via `cargo fmt` and build cleanly with `cargo build --release`.
-   - Provide clear compilation flags and target architecture notes (x86_64, ARM64).
-3. **Punctuation and Formatting**:
-   - Use standard punctuation (hyphens, commas, colons, periods). Do not use em-dashes in documentation or comments.
-   - Maintain GitHub Flavored Markdown standards.
-4. **Submitting a Pull Request**:
-   - Fork the repository and create a descriptive feature branch (`git checkout -b feature/kernel-module`).
-   - Open a pull request using the provided PR template.
-   - Summarize the specific technical enhancements and verification steps performed.
+- 低质量的聚合内容，或公开自动化扫描器的泛泛清单（例如标准的 Nmap 或 Metasploit 速查表）。
+- 缺少技术上下文、直接照抄的不完整或无法运行的代码片段。
+- 营销链接、商业工具推广或推广返利跳转。
+
+---
+
+## 贡献指南
+
+1. **让解释扎根于第一性原理**：先讲清底层系统机制（PE 头、内存保护、内核结构、网络协议），再展示攻击实现。
+2. **代码标准**：
+   - C/C++ 代码必须能用 `gcc`、`clang` 或 `cl.exe` 干净编译。
+   - Rust 代码必须通过 `cargo fmt` 格式化，并能用 `cargo build --release` 干净构建。
+   - 提供清晰的编译参数与目标架构说明（x86_64、ARM64）。
+3. **标点与格式**：
+   - 使用标准标点（连字符、逗号、冒号、句号）。文档与注释中不要使用 em-dash。
+   - 遵循 GitHub Flavored Markdown 标准。
+4. **提交拉取请求**：
+   - Fork 本仓库并创建一个描述性的功能分支（`git checkout -b feature/kernel-module`）。
+   - 使用提供的 PR 模板发起拉取请求。
+   - 概述本次具体的技术改进与已完成的验证步骤。

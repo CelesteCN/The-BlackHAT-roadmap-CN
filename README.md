@@ -42,9 +42,9 @@
   <img src="assets/banner.svg" alt="The BlackHAT Roadmap v1.2.2" width="850" />
 </p>
 
-### From Nothing to Operator. No Ceilings, No Apologies.
+### 从零到操作员。不设上限，不作退让。
 
-The definitive, zero-to-elite offensive security engineering curriculum, low-level systems syllabus, and operational security compendium built from the metal up.
+从底层硬件起步、零基础直达顶尖水准的权威进攻性安全工程课程体系、底层系统教学大纲与作战安全汇编。
 
 <p align="center">
   <a href="https://github.com/SagarBiswas-MultiHAT"><img src="https://img.shields.io/badge/Author-Sagar%20Biswas-red.svg?style=for-the-badge&logo=github" alt="Author" /></a>
@@ -68,14 +68,14 @@ The definitive, zero-to-elite offensive security engineering curriculum, low-lev
 </p>
 
 <p align="center">
-  <a href="#master-curriculum--navigation-hub">Curriculum Index</a> •
-  <a href="#visual-learning-path--progression-map">Visual Learning Path</a> •
-  <a href="#compilable-offensive-engineering-payloads">Weaponized Payloads</a> •
-  <a href="#2025-2027-operator-modules">Bleeding-Edge Modules</a> •
-  <a href=".github/TRACKER.md">Journey Tracker</a> •
-  <a href="#citation--academic-attribution">Citation</a> •
-  <a href="#legal-disclaimer">Legal Notice</a> •
-  <a href="#license--attribution">License</a>
+  <a href="#master-curriculum--navigation-hub">课程索引</a> •
+  <a href="#可视化学习路径与进阶路线图">可视化学习路径</a> •
+  <a href="#可编译的进攻性工程载荷">武器化载荷</a> •
+  <a href="#2025-2027-操作员模块">前沿模块</a> •
+  <a href=".github/TRACKER.md">进度追踪表</a> •
+  <a href="#引用与学术署名">引用</a> •
+  <a href="#法律免责声明">法律声明</a> •
+  <a href="#许可证与署名">许可证</a>
 </p>
 
 </div>
@@ -83,60 +83,60 @@ The definitive, zero-to-elite offensive security engineering curriculum, low-lev
 <div align="center">
 
 ```
-44,900+ Lines  ·  8 Phases  ·  300+ Tools  ·  200+ ATT&CK Techniques  ·  1,080+ Code Blocks  ·  150+ Diagrams  ·  325+ Lines (Payloads)
+44,900+ 行  ·  8 个阶段  ·  300+ 工具  ·  200+ ATT&CK 技术  ·  1,080+ 代码块  ·  150+ 图示  ·  325+ 行（载荷）
 ```
 
 </div>
 
-> If this curriculum has value for your offensive security journey, consider **[starring](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/stargazers)** the repository to help other researchers and operators discover it.
+> 如果这套课程对你的进攻性安全之路有价值，欢迎**[点个 Star](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/stargazers)**，帮助更多研究者和操作员发现它。
 
 ---
 
-### What Makes This Different
+### 与众不同之处
 
-- **Built from the metal up.** Every phase teaches the underlying system internals before attack techniques. No "just run this tool" shortcuts.
-- **Compilable offensive code.** Not just theory. Includes working C and Rust payloads with PEB traversal, DJB2 hashing, and in-memory loaders.
-- **OPSEC before hacking.** Phase -1 comes before Phase 0. Operational security, threat modeling, and anonymous infrastructure are prerequisites.
-- **Full MITRE ATT&CK alignment.** 200+ techniques mapped across Enterprise v15, ICS, and ATLAS. Every section ties back to the framework.
-- **Covers what others skip.** Physical red teaming, drone reconnaissance, social engineering pretexts, quantum SNDL, and post-quantum cryptography.
+- **从底层硬件起步。** 每个阶段都先讲透系统内部机制，再讲攻击技术，绝不提供“直接跑这个工具”之类的捷径。
+- **可编译的进攻性代码。** 不是纸上谈兵。附带真实可用的 C 与 Rust 载荷，涵盖 PEB 遍历、DJB2 哈希与内存加载器。
+- **先作战安全，后入侵。** 阶段 -1 排在阶段 0 之前。作战安全、威胁建模与匿名基础设施都是必修前提。
+- **全面对齐 MITRE ATT&CK。** 200+ 项技术映射至 Enterprise v15、ICS 与 ATLAS。每一节都回扣这套框架。
+- **覆盖别人跳过的内容。** 物理红队、无人机侦察、社会工程话术、量子 SNDL 与后量子密码学。
 
 ---
 
 <a id="table-of-contents"></a>
 <a id="master-curriculum--navigation-hub"></a>
 
-### Where to Start
+### 从哪里开始
 
-| Your Background | Recommended Entry Point | Modules | Estimated Time | Parallel Learning |
+| 你的背景 | 推荐起点 | 模块数 | 预计用时 | 并行学习 |
 | :--- | :--- | :---: | :---: | :--- |
-| Everyone starts here | [Phase -1: OPSEC & Infrastructure](phases/PHASE_-1.md) | 24 | 4-6 weeks | [Max Anonymity Workflow](black-bag/Max_Anonymity_Workflow.md) · [Survival Tactics](black-bag/BlackHat_Long-Term_Survival_Tactics.md) · [Mindset](field-guides/Philosophy_The_BlackHat_Mindset.md) · [FAQ](field-guides/FAQ.md) |
-| Complete beginner | [Phase 0: Foundation](phases/PHASE_0.md) | 23 | 12-16 weeks | [Lab Setup Guide](field-guides/Lab_Setup_Guide.md) |
-| Web developer / bug bounty | [Phase 1: Web Security](phases/PHASE_1.md) | 39 | 8-12 weeks | - |
-| Sysadmin / network engineer | [Phase 2: Network & Infrastructure](phases/PHASE_2.md) | 23 | 10-14 weeks | - |
-| Reverse engineer / CTF player | [Phase 3: Binary Exploitation & RE](phases/PHASE_3.md) | 21 | 12-16 weeks | [MITRE Reference](field-guides/MITRE_ATT&CK_Quick_Reference.md) · [Tools (300+)](field-guides/Tools_Inventory.md) · [Resources](field-guides/Resources_Aggregated.md) |
-| Experienced pentester | [Phase 4: Specialized Tracks (4A-4I)](phases/PHASE_4.md) | 16 | Choose your track | Pick 1 primary + 1 secondary |
-| Researcher / exploit dev | [Phase 5: GREATEST](phases/PHASE_5.md) | 22 | Ongoing | [Final Word](field-guides/Final_Word.md) |
-| Special operator | [Phase 6: Special Operations](phases/PHASE_6.md) | 39 | Ongoing | Parallel with Phase 5 · [Final Word](field-guides/Final_Word.md) |
+| 所有人都从这里开始 | [阶段 -1：作战安全与基础设施](phases/PHASE_-1.md) | 24 | 4-6 周 | [最大匿名工作流](black-bag/Max_Anonymity_Workflow.md) · [生存战术](black-bag/BlackHat_Long-Term_Survival_Tactics.md) · [思维模式](field-guides/Philosophy_The_BlackHat_Mindset.md) · [常见问题](field-guides/FAQ.md) |
+| 完全零基础 | [阶段 0：基础](phases/PHASE_0.md) | 23 | 12-16 周 | [实验环境搭建指南](field-guides/Lab_Setup_Guide.md) |
+| Web 开发者 / 漏洞赏金猎人 | [阶段 1：Web 安全](phases/PHASE_1.md) | 39 | 8-12 周 | - |
+| 系统管理员 / 网络工程师 | [阶段 2：网络与基础设施](phases/PHASE_2.md) | 23 | 10-14 周 | - |
+| 逆向工程师 / CTF 选手 | [阶段 3：二进制利用与逆向工程](phases/PHASE_3.md) | 21 | 12-16 周 | [MITRE 参考](field-guides/MITRE_ATT&CK_Quick_Reference.md) · [工具（300+）](field-guides/Tools_Inventory.md) · [资源](field-guides/Resources_Aggregated.md) |
+| 有经验的渗透测试人员 | [阶段 4：专项分支（4A-4I）](phases/PHASE_4.md) | 16 | 任选分支 | 选 1 个主修 + 1 个辅修 |
+| 研究员 / 漏洞利用开发者 | [阶段 5：GREATEST](phases/PHASE_5.md) | 22 | 长期进行 | [结语](field-guides/Final_Word.md) |
+| 特种操作员 | [阶段 6：特种作战](phases/PHASE_6.md) | 39 | 长期进行 | 与阶段 5 并行 · [结语](field-guides/Final_Word.md) |
 
-Fork the [Journey Tracker](.github/TRACKER.md) to monitor your progress across phases.
+Fork [进度追踪表](.github/TRACKER.md)，即可跟踪你在各阶段的进展情况。
 
 <details>
-<summary><strong>Reading Guide</strong></summary>
+<summary><strong>阅读指南</strong></summary>
 
 <br/>
 
-- It is recommended to use a mobile device because there are over 150 high-quality diagrams, which you can easily zoom in and out on mobile.
-- Avoid using the GitHub app on mobile; instead, access GitHub through your browser in desktop view.
-- All diagrams have been tested in light mode, so using dark mode is not advised.
-- Are you facing any problems? Is there anything difficult to understand? Do you have any suggestions? Join the conversation and drop a comment in [GitHub Discussions](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/discussions/1). Community feedback and contributions are always welcome.
-- For broken links, typos, payload errors, or bug reports, please [open an issue](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/issues).
+- 建议用手机阅读：全书 150+ 张高清图，在手机上可以轻松放大缩小。
+- 手机端不要用 GitHub App，请改用浏览器并以桌面模式访问 GitHub。
+- 所有图表均按浅色模式测试，因此不建议使用深色模式。
+- 遇到问题？有哪里看不懂？有建议想提？欢迎到 [GitHub Discussions](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/discussions/1) 参与讨论、留言。始终欢迎社区的反馈与贡献。
+- 发现失效链接、错别字、载荷错误或 Bug，请[提交 issue](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/issues)。
 
 </details>
 
 ---
 
 <a id="curricular-progression-map"></a>
-## Visual Learning Path & Progression Map
+## 可视化学习路径与进阶路线图
 
 <div align="center">
 <table><tr><td>
@@ -148,768 +148,768 @@ Fork the [Journey Tracker](.github/TRACKER.md) to monitor your progress across p
 
 ---
 
-## Table of Contents
+## 目录
 
 <a id="phase--1"></a>
-#### [Phase -1: Hardened OPSEC & Anonymous Infrastructure](phases/PHASE_-1.md)
+#### [阶段 -1：强化作战安全与匿名基础设施](phases/PHASE_-1.md)
 
 <details>
-<summary><strong>Explore Phase -1 Syllabus (24 Modules)</strong></summary>
+<summary><strong>展开阶段 -1 教学大纲（24 个模块）</strong></summary>
 
 <br/>
 
-1. [Why This Comes Before Everything Else](phases/PHASE_-1.md#1-why-this-comes-before-everything-else)
-2. [Real Operators. Real Failures. Real Lessons.](phases/PHASE_-1.md#2-real-operators-real-failures-real-lessons)
-3. [The Legal Framework: Read This First](phases/PHASE_-1.md#3-the-legal-framework-read-this-first)
-4. [Counter-OSINT: Know Your Exposure Before You Start](phases/PHASE_-1.md#4-counter-osint-know-your-exposure-before-you-start)
-5. [Threat Modeling: Think Before You Act](phases/PHASE_-1.md#5-threat-modeling-think-before-you-act)
-6. [Communication Security: The Number One Arrest Vector](phases/PHASE_-1.md#6-communication-security-the-number-one-arrest-vector)
-7. [Phone and Mobile OPSEC](phases/PHASE_-1.md#7-phone-and-mobile-opsec)
-8. [Anonymous Infrastructure Setup](phases/PHASE_-1.md#8-anonymous-infrastructure-setup)
-9. [Anonymization Stack: VPN, Tor, and Chaining](phases/PHASE_-1.md#9-anonymization-stack-vpn-tor-and-chaining)
-10. [Browser Fingerprinting: You Are Being Identified](phases/PHASE_-1.md#10-browser-fingerprinting-you-are-being-identified)
-11. [Cryptocurrency: Why Monero and How It Actually Works](phases/PHASE_-1.md#11-cryptocurrency-why-monero-and-how-it-actually-works)
-12. [Identity Compartmentalization and Stylometry](phases/PHASE_-1.md#12-identity-compartmentalization-and-stylometry)
-13. [Secure Research OS](phases/PHASE_-1.md#13-secure-research-os)
-14. [Physical OPSEC: The Layer Most Guides Ignore](phases/PHASE_-1.md#14-physical-opsec-the-layer-most-guides-ignore)
-15. [Timing and Pattern OPSEC: The Invisible Fingerprint](phases/PHASE_-1.md#15-timing-and-pattern-opsec-the-invisible-fingerprint)
-16. [Metadata: The Silent Killer](phases/PHASE_-1.md#16-metadata-the-silent-killer)
-17. [Secure Deletion: Leaving Nothing Behind](phases/PHASE_-1.md#17-secure-deletion-leaving-nothing-behind)
-18. [What Logs Exist on Every System You Touch](phases/PHASE_-1.md#18-what-logs-exist-on-every-system-you-touch)
-19. [Forensic Artifacts on Your Own Machine](phases/PHASE_-1.md#19-forensic-artifacts-on-your-own-machine) *(New in v5.5)*
-20. [Cold Boot and Evil Maid: Concrete Mitigations](phases/PHASE_-1.md#20-cold-boot-and-evil-maid-concrete-mitigations) *(Expanded in v5.5)*
-21. [When Things Go Wrong: The Burn Protocol](phases/PHASE_-1.md#21-when-things-go-wrong-the-burn-protocol) *(New in v5.5)*
-22. [Crew OPSEC and Cell Structure](phases/PHASE_-1.md#22-crew-opsec-and-cell-structure) *(New in v5.5)*
-23. [Phase -1 Milestones Checklist](phases/PHASE_-1.md#23-phase--1-milestones-checklist)
-24. [Resources](phases/PHASE_-1.md#24-resources)
+1. [为什么它排在一切之前](phases/PHASE_-1.md#1-为什么这一阶段必须放在最前面)
+2. [真实的操作员、真实的失败、真实的教训](phases/PHASE_-1.md#2-真实操作者真实失败真实教训)
+3. [法律框架：先读这一节](phases/PHASE_-1.md#3-法律框架先读这一节)
+4. [反 OSINT：动手前先摸清自己的暴露面](phases/PHASE_-1.md#4-反-osint动手之前先弄清自己的暴露面)
+5. [威胁建模：行动前先思考](phases/PHASE_-1.md#5-威胁建模想清楚再动手)
+6. [通信安全：头号被捕风险点](phases/PHASE_-1.md#6-通讯安全最常见的被捕原因)
+7. [手机与移动端作战安全](phases/PHASE_-1.md#7-手机与移动端-opsec)
+8. [匿名基础设施搭建](phases/PHASE_-1.md#8-匿名基础设施搭建)
+9. [匿名化栈：VPN、Tor 与链式串联](phases/PHASE_-1.md#9-匿名化链路vpntor-与层层串联)
+10. [浏览器指纹：你正在被识别](phases/PHASE_-1.md#10-浏览器指纹你正在被识别)
+11. [加密货币：为何选 Monero，以及它真实的运作方式](phases/PHASE_-1.md#11-加密货币为什么用-monero它是怎么运作的)
+12. [身份隔离与文体计量分析](phases/PHASE_-1.md#12-身份隔离与文体学)
+13. [安全研究操作系统](phases/PHASE_-1.md#13-安全研究操作系统)
+14. [物理作战安全：多数指南忽略的一层](phases/PHASE_-1.md#14-物理-opsec大多数指南忽略的一层)
+15. [时间与行为模式作战安全：隐形指纹](phases/PHASE_-1.md#15-时间与行为模式-opsec看不见的指纹)
+16. [元数据：无声的杀手](phases/PHASE_-1.md#16-元数据无声的杀手)
+17. [安全删除：不留任何痕迹](phases/PHASE_-1.md#17-安全删除不留痕迹)
+18. [你接触的每套系统上都有哪些日志](phases/PHASE_-1.md#18-你碰过的每个系统上都有哪些日志)
+19. [自己机器上的取证痕迹](phases/PHASE_-1.md#19-你自己机器上的取证痕迹) *（v5.5 新增）*
+20. [冷启动攻击与 Evil Maid：具体缓解措施](phases/PHASE_-1.md#20-冷启动与邪恶女佣具体缓解措施) *（v5.5 扩充）*
+21. [出事之后：焚毁协议](phases/PHASE_-1.md#21-出了事怎么办燃烧协议) *（v5.5 新增）*
+22. [团队作战安全与小组结构](phases/PHASE_-1.md#22-小组-opsec-与细胞结构) *（v5.5 新增）*
+23. [阶段 -1 里程碑清单](phases/PHASE_-1.md#23-阶段--1-里程碑清单)
+24. [资源](phases/PHASE_-1.md#24-资源)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="phase-0"></a>
-#### [Phase 0: Low-Level Foundations & Systems Internals](phases/PHASE_0.md)
+#### [阶段 0：底层基础与系统内部机制](phases/PHASE_0.md)
 
 <details>
-<summary><strong>Explore Phase 0 Syllabus (23 Modules)</strong></summary>
+<summary><strong>展开阶段 0 教学大纲（23 个模块）</strong></summary>
 
 <br/>
 
-1. [Goal and Philosophy](phases/PHASE_0.md#1-goal-and-philosophy)
-2. [How to Use This Phase](phases/PHASE_0.md#2-how-to-use-this-phase)
-3. [Prerequisites](phases/PHASE_0.md#3-prerequisites)
-4. [Checkpoint: What You Must Know by the End](phases/PHASE_0.md#4-checkpoint-what-you-must-know-by-the-end)
-5. [Timeline and Parallel Track Architecture](phases/PHASE_0.md#5-timeline-and-parallel-track-architecture)
-6. [Section 1: Operating Systems Fundamentals](phases/PHASE_0.md#6-section-1-operating-systems-fundamentals)
-7. [Section 1B: Bash Scripting Essentials](phases/PHASE_0.md#7-section-1b-bash-scripting-essentials)
-8. [Section 2: C Programming](phases/PHASE_0.md#8-section-2-c-programming)
-9. [Section 3: Python Scripting](phases/PHASE_0.md#9-section-3-python-scripting)
-10. [Section 4: Networking Fundamentals](phases/PHASE_0.md#10-section-4-networking-fundamentals)
-11. [Section 5: x86-64 Assembly](phases/PHASE_0.md#11-section-5-x86-64-assembly)
-12. [Section 6: Reverse Engineering Basics](phases/PHASE_0.md#12-section-6-reverse-engineering-basics)
-13. [Section 7: Cryptography Primer](phases/PHASE_0.md#13-section-7-cryptography-primer)
-14. [Section 8: ARM64 Architecture Awareness](phases/PHASE_0.md#14-section-8-arm64-architecture-awareness)
-15. [Section 9: glibc Internals Primer](phases/PHASE_0.md#15-section-9-glibc-internals-primer)
-16. [Milestone Projects: Full Spec Cards](phases/PHASE_0.md#16-milestone-projects-full-spec-cards)
-17. [Lab Setup](phases/PHASE_0.md#17-lab-setup)
-18. [GDB Setup and Command Reference](phases/PHASE_0.md#18-gdb-setup-and-command-reference)
-19. [CTF Platform Guide](phases/PHASE_0.md#19-ctf-platform-guide)
-20. [Common Failure Points and Fixes](phases/PHASE_0.md#20-common-failure-points-and-fixes)
-21. [Phase 0 Master Checklist](phases/PHASE_0.md#21-phase-0-master-checklist)
-22. [What Comes Next](phases/PHASE_0.md#22-what-comes-next)
-23. [Resources Aggregated](phases/PHASE_0.md#23-resources-aggregated)
+1. [目标与理念](phases/PHASE_0.md#1-目标与理念)
+2. [如何使用这一阶段](phases/PHASE_0.md#2-如何使用这一阶段)
+3. [前置要求](phases/PHASE_0.md#3-前置要求)
+4. [检查点：结束时你必须掌握什么](phases/PHASE_0.md#4-检查点结束时你必须掌握的内容)
+5. [时间轴与并行轨道架构](phases/PHASE_0.md#5-时间线与并行轨道架构)
+6. [第 1 节：操作系统基础](phases/PHASE_0.md#6-第1节操作系统基础)
+7. [第 1B 节：Bash 脚本基础](phases/PHASE_0.md#7-第1b节bash-脚本基础)
+8. [第 2 节：C 语言编程](phases/PHASE_0.md#8-第2节c-编程)
+9. [第 3 节：Python 脚本编程](phases/PHASE_0.md#9-第3节python-脚本)
+10. [第 4 节：网络基础](phases/PHASE_0.md#10-第4节网络基础)
+11. [第 5 节：x86-64 汇编](phases/PHASE_0.md#11-第5节x86-64-汇编)
+12. [第 6 节：逆向工程基础](phases/PHASE_0.md#12-第6节逆向工程基础)
+13. [第 7 节：密码学入门](phases/PHASE_0.md#13-第7节密码学入门)
+14. [第 8 节：ARM64 体系结构认知](phases/PHASE_0.md#14-第8节arm64-架构认知)
+15. [第 9 节：glibc 内部机制入门](phases/PHASE_0.md#15-第9节glibc-内部机制入门)
+16. [里程碑项目：完整规格卡](phases/PHASE_0.md#16-里程碑项目完整规格卡)
+17. [实验环境搭建](phases/PHASE_0.md#17-实验室搭建)
+18. [GDB 配置与命令速查](phases/PHASE_0.md#18-gdb-设置与命令参考)
+19. [CTF 平台指南](phases/PHASE_0.md#19-ctf-平台指南)
+20. [常见失败点与修复方法](phases/PHASE_0.md#20-常见失败点与修复)
+21. [阶段 0 总清单](phases/PHASE_0.md#21-阶段-0-总清单)
+22. [接下来做什么](phases/PHASE_0.md#22-接下来是什么)
+23. [资源汇总](phases/PHASE_0.md#23-资源汇总)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <details>
-<summary><strong>Parallel Learning Alongside Phase 0: Operational OPSEC, Mindset & FAQ (4 Master Guides)</strong></summary>
+<summary><strong>与阶段 0 并行的学习：作战安全、思维模式与常见问题（4 本主指南）</strong></summary>
 
 <br/>
 
 <a id="blackhat-long-term-survival-tactics"></a>
-#### [BlackHat Long-Term Survival Tactics](black-bag/BlackHat_Long-Term_Survival_Tactics.md)
+#### [BlackHat 长期生存战术](black-bag/BlackHat_Long-Term_Survival_Tactics.md)
 
-1. [For the Beginner: Start Here](black-bag/BlackHat_Long-Term_Survival_Tactics.md#for-the-beginner-start-here)
-2. [Threat Modeling Framework](black-bag/BlackHat_Long-Term_Survival_Tactics.md#threat-modeling-framework)
-3. [Section 1: Digital Identity and Persona Architecture](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-1-digital-identity-and-persona-architecture)
-4. [Section 2: Device Security - OS and Hardware](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-2-device-security---os-and-hardware)
-5. [Section 3: Network-Level OPSEC](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-3-network-level-opsec)
-6. [Section 4: Communications Security](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-4-communications-security)
-7. [Section 5: Cryptocurrency and Financial Security](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-5-cryptocurrency-and-financial-security)
-8. [Section 6: Physical Location Security](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-6-physical-location-security)
-9. [Section 7: Physical Appearance and Counter-Surveillance](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-7-physical-appearance-and-counter-surveillance)
-10. [Section 8: Social Engineering Defense (Self-Protection)](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-8-social-engineering-defense-self-protection)
-11. [Section 9: AI-Powered Surveillance Evasion (2027)](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-9-ai-powered-surveillance-evasion-2027)
-12. [Section 10: Blockchain Forensics Threat Model (2027)](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-10-blockchain-forensics-threat-model-2027)
-13. [Section 11: Darknet Operational Security](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-11-darknet-operational-security)
-14. [Section 12: Legal Counter-Intelligence](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-12-legal-counter-intelligence)
-15. [Section 13: Long-Term Survival Planning](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-13-long-term-survival-planning)
-16. [Section 14: Emergency Exfil Protocol](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-14-emergency-exfil-protocol)
-17. [Section 15: Counter-LE Awareness](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-15-counter-le-awareness)
-18. [Section 16: International Jurisdictions 2027](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-16-international-jurisdictions-2027)
-19. [Section 17: OPSEC Golden Rules](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-17-opsec-golden-rules)
-20. [Section 18: Case Studies](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-18-case-studies)
-21. [Section 19: Advanced Hardware Attack Resistance](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-19-advanced-hardware-attack-resistance)
-22. [Section 20: In-Memory Forensics and Cold Boot Defense](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-20-in-memory-forensics-and-cold-boot-defense)
-23. [Section 21: Server-Side Detection and eBPF Awareness](black-bag/BlackHat_Long-Term_Survival_Tactics.md#section-21-server-side-detection-and-ebpf-awareness)
-24. [Quick Reference Operational Checklist](black-bag/BlackHat_Long-Term_Survival_Tactics.md#quick-reference-operational-checklist)
+1. [写给初学者：从这里开始](black-bag/BlackHat_Long-Term_Survival_Tactics.md#写给初学者从这里开始)
+2. [威胁建模框架](black-bag/BlackHat_Long-Term_Survival_Tactics.md#威胁建模框架)
+3. [第 1 节：数字身份与人设架构](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-1-节数字身份与人设架构)
+4. [第 2 节：设备安全 - 操作系统与硬件](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-2-节设备安全---操作系统与硬件)
+5. [第 3 节：网络层作战安全](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-3-节网络层作战安全)
+6. [第 4 节：通信安全](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-4-节通信安全)
+7. [第 5 节：加密货币与资金安全](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-5-节加密货币与资金安全)
+8. [第 6 节：物理位置安全](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-6-节物理位置安全)
+9. [第 7 节：外貌伪装与反监视](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-7-节外貌与反监视)
+10. [第 8 节：社会工程防御（自我保护）](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-8-节社会工程防御自我保护)
+11. [第 9 节：AI 驱动的监视规避（2027）](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-9-节ai-驱动的监视规避2027)
+12. [第 10 节：区块链取证威胁模型（2027）](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-10-节区块链取证威胁建模2027)
+13. [第 11 节：暗网作战安全](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-11-节暗网作战安全)
+14. [第 12 节：法律层面的反情报](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-12-节法律反情报)
+15. [第 13 节：长期生存规划](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-13-节长期生存规划)
+16. [第 14 节：紧急撤离协议](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-14-节紧急撤离预案)
+17. [第 15 节：反执法（Counter-LE）意识](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-15-节反执法le意识)
+18. [第 16 节：2027 年国际司法辖区](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-16-节2027-年国际司法辖区)
+19. [第 17 节：作战安全黄金法则](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-17-节作战安全黄金法则)
+20. [第 18 节：案例研究](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-18-节案例研究)
+21. [第 19 节：高级硬件攻击抗性](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-19-节高级硬件攻击防护)
+22. [第 20 节：内存取证与冷启动防御](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-20-节内存取证与冷启动防御)
+23. [第 21 节：服务端检测与 eBPF 认知](black-bag/BlackHat_Long-Term_Survival_Tactics.md#第-21-节服务端检测与-ebpf-意识)
+24. [作战速查清单](black-bag/BlackHat_Long-Term_Survival_Tactics.md#快速参考行动清单)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="maximum-anonymity-workflow"></a>
-#### [Maximum Anonymity Workflow](black-bag/Max_Anonymity_Workflow.md)
+#### [最大匿名工作流](black-bag/Max_Anonymity_Workflow.md)
 
-1. [The Core Chain: Local Machine to Target](black-bag/Max_Anonymity_Workflow.md#1-the-core-chain-local-machine-to-target)
-2. [What Each Adversary Sees](black-bag/Max_Anonymity_Workflow.md#2-what-each-adversary-sees)
-3. [The OPSEC Failure Pyramid: Why the Chain Is Not Enough](black-bag/Max_Anonymity_Workflow.md#3-the-opsec-failure-pyramid-why-the-chain-is-not-enough)
-4. [The Seven Layers of Maximum Anonymity](black-bag/Max_Anonymity_Workflow.md#4-the-seven-layers-of-maximum-anonymity)
-5. [The Three-Identity Model](black-bag/Max_Anonymity_Workflow.md#5-the-three-identity-model)
-6. [Whonix: The Architectural Leak-Proof Guarantee](black-bag/Max_Anonymity_Workflow.md#6-whonix-the-architectural-leak-proof-guarantee)
-7. [Threat Model Tiers: Calibrate Your Stack](black-bag/Max_Anonymity_Workflow.md#7-threat-model-tiers-calibrate-your-stack)
-8. [Stack Verification Checklist](black-bag/Max_Anonymity_Workflow.md#8-stack-verification-checklist)
-9. [Common Mistakes That Break the Chain](black-bag/Max_Anonymity_Workflow.md#9-common-mistakes-that-break-the-chain)
-10. [Where to Go Next](black-bag/Max_Anonymity_Workflow.md#10-where-to-go-next)
+1. [核心链路：从本机到目标](black-bag/Max_Anonymity_Workflow.md#1-核心链路从本地机器到目标)
+2. [每类对手各自看到什么](black-bag/Max_Anonymity_Workflow.md#2-每个对手能看到什么)
+3. [作战安全失效金字塔：为什么光有链路还不够](black-bag/Max_Anonymity_Workflow.md#3-作战安全失效金字塔为什么只有链路还不够)
+4. [最大匿名的七层结构](black-bag/Max_Anonymity_Workflow.md#4-最大匿名的七层结构)
+5. [三重身份模型](black-bag/Max_Anonymity_Workflow.md#5-三身份模型)
+6. [Whonix：架构级的防泄漏保障](black-bag/Max_Anonymity_Workflow.md#6-whonix架构级的防泄漏保证)
+7. [威胁模型分级：校准你的技术栈](black-bag/Max_Anonymity_Workflow.md#7-威胁模型分级校准你的技术栈)
+8. [技术栈验证清单](black-bag/Max_Anonymity_Workflow.md#8-技术栈验证清单)
+9. [会击穿链路的常见错误](black-bag/Max_Anonymity_Workflow.md#9-会让链路断裂的常见错误)
+10. [下一步往哪走](black-bag/Max_Anonymity_Workflow.md#10-接下来去哪里)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="philosophy-the-blackhat-mindset"></a>
-#### [Philosophy: The BlackHat Mindset](field-guides/Philosophy_The_BlackHat_Mindset.md)
+#### [理念：BlackHat 思维模式](field-guides/Philosophy_The_BlackHat_Mindset.md)
 
-1. [What This Is Not](field-guides/Philosophy_The_BlackHat_Mindset.md#1-what-this-is-not)
-2. [What a BlackHat Actually Is](field-guides/Philosophy_The_BlackHat_Mindset.md#2-what-a-blackhat-actually-is)
-3. [The Cognitive Progression](field-guides/Philosophy_The_BlackHat_Mindset.md#3-the-cognitive-progression)
-4. [The Separation That Matters: Student, Operator, Researcher](field-guides/Philosophy_The_BlackHat_Mindset.md#4-the-separation-that-matters)
-5. [GREATEST vs Good - The 2027 Edition](field-guides/Philosophy_The_BlackHat_Mindset.md#5-greatest-vs-good-the-2027-edition)
-6. [The Seven Pillars of the BlackHat Mindset](field-guides/Philosophy_The_BlackHat_Mindset.md#6-the-seven-pillars-of-the-blackhat-mindset)
-   - [Pillar I: Adversarial Assumption Hunting](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-i-adversarial-assumption-hunting)
-   - [Pillar II: Understand the Defender Before You Attack](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-ii-understand-the-defender-before-you-attack)
-   - [Pillar III: Primitive Thinking Over Tool Thinking](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-iii-primitive-thinking-over-tool-thinking)
-   - [Pillar IV: Patience and Operational Silence](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-iv-patience-and-operational-silence)
-   - [Pillar V: Fail Silently](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-v-fail-silently)
-   - [Pillar VI: Ego Is an OpSec Failure](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-vi-ego-is-an-opsec-failure)
-   - [Pillar VII: The Research Posture](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-vii-the-research-posture)
-7. [The 2027 Landscape Reality](field-guides/Philosophy_The_BlackHat_Mindset.md#7-the-2027-landscape-reality)
-8. [The Psychological Framework](field-guides/Philosophy_The_BlackHat_Mindset.md#8-the-psychological-framework)
-9. [Reality Check - Updated 2027](field-guides/Philosophy_The_BlackHat_Mindset.md#9-reality-check-updated-2027)
-10. [The Closing Truth](field-guides/Philosophy_The_BlackHat_Mindset.md#10-the-closing-truth)
+1. [这不是什么](field-guides/Philosophy_The_BlackHat_Mindset.md#1-what-this-is-not)
+2. [BlackHat 究竟是什么](field-guides/Philosophy_The_BlackHat_Mindset.md#2-what-a-blackhat-actually-is)
+3. [认知进阶路径](field-guides/Philosophy_The_BlackHat_Mindset.md#3-the-cognitive-progression)
+4. [真正重要的区分：学生、操作员、研究员](field-guides/Philosophy_The_BlackHat_Mindset.md#4-真正重要的分野)
+5. [GREATEST 与「好」- 2027 版](field-guides/Philosophy_The_BlackHat_Mindset.md#5-greatest-vs-good-the-2027-edition)
+6. [BlackHat 思维模式的七大支柱](field-guides/Philosophy_The_BlackHat_Mindset.md#6-the-seven-pillars-of-the-blackhat-mindset)
+   - [支柱一：猎捕对抗性假设](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-i-adversarial-assumption-hunting)
+   - [支柱二：先理解防御方，再发起攻击](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-ii-understand-the-defender-before-you-attack)
+   - [支柱三：原语思维重于工具思维](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-iii-primitive-thinking-over-tool-thinking)
+   - [支柱四：耐心与行动静默](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-iv-patience-and-operational-silence)
+   - [支柱五：无声地失败](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-v-fail-silently)
+   - [支柱六：自负就是作战安全失误](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-vi-ego-is-an-opsec-failure)
+   - [支柱七：研究姿态](field-guides/Philosophy_The_BlackHat_Mindset.md#pillar-vii-the-research-posture)
+7. [2027 年的格局现实](field-guides/Philosophy_The_BlackHat_Mindset.md#7-the-2027-landscape-reality)
+8. [心理框架](field-guides/Philosophy_The_BlackHat_Mindset.md#8-the-psychological-framework)
+9. [现实校准 - 2027 更新](field-guides/Philosophy_The_BlackHat_Mindset.md#9-reality-check-updated-2027)
+10. [最后的真相](field-guides/Philosophy_The_BlackHat_Mindset.md#10-the-closing-truth)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="faq"></a>
-#### [Comprehensive FAQ](field-guides/FAQ.md)
+#### [常见问题全解](field-guides/FAQ.md)
 
-1. [Getting Started](field-guides/FAQ.md#part-1-getting-started)
-2. [Hardware, OS, and Environment](field-guides/FAQ.md#part-2-hardware-os-and-environment)
-3. [Learning Path and Methodology](field-guides/FAQ.md#part-3-learning-path-and-methodology)
-4. [Certifications and Courses](field-guides/FAQ.md#part-4-certifications-and-courses)
-5. [Technical Questions](field-guides/FAQ.md#part-5-technical-questions)
-6. [AI, Tools, and the 2027 Landscape](field-guides/FAQ.md#part-6-ai-tools-and-the-2027-landscape)
-7. [Bug Bounty and Real-World Practice](field-guides/FAQ.md#part-7-bug-bounty-and-real-world-practice)
-8. [Mindset, Burn-Out, and Staying Operational](field-guides/FAQ.md#part-8-mindset-burn-out-and-staying-operational)
-9. [Authorization, OPSEC, and Legal Reality](field-guides/FAQ.md#part-9-authorization-opsec-and-legal-reality)
-10. [Questions Nobody Asks But Should](field-guides/FAQ.md#part-10-questions-nobody-asks-but-should)
-11. [2027 Special Operations and Horizons FAQ](field-guides/FAQ.md#part-11-2027-special-operations-and-horizons-faq)
+1. [入门](field-guides/FAQ.md#第一部分入门)
+2. [硬件、操作系统与环境](field-guides/FAQ.md#第二部分硬件操作系统与环境)
+3. [学习路径与方法论](field-guides/FAQ.md#第三部分学习路径与方法)
+4. [认证与课程](field-guides/FAQ.md#第四部分认证与课程)
+5. [技术问题](field-guides/FAQ.md#第五部分技术问题)
+6. [AI、工具与 2027 年格局](field-guides/FAQ.md#第六部分ai工具与-2027-年的格局)
+7. [漏洞赏金与实战练习](field-guides/FAQ.md#第七部分漏洞赏金与真实世界实践)
+8. [心态、倦怠与保持作战状态](field-guides/FAQ.md#第八部分心态倦怠与保持作战状态)
+9. [授权、作战安全与法律现实](field-guides/FAQ.md#第九部分授权opsec-与法律现实)
+10. [没人问但该问的问题](field-guides/FAQ.md#第十部分没人问但该问的问题)
+11. [2027 特种作战与前沿问题](field-guides/FAQ.md#第十一部分2027-特种作战与研究前沿问答)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 </details>
 
 ---
 
 <a id="phase-1"></a>
-#### [Phase 1: Modern Web & API Attack Surface](phases/PHASE_1.md)
+#### [阶段 1：现代 Web 与 API 攻击面](phases/PHASE_1.md)
 
 <details>
-<summary><strong>Explore Phase 1 Syllabus (39 Modules)</strong></summary>
+<summary><strong>展开阶段 1 教学大纲（39 个模块）</strong></summary>
 
 <br/>
 
-1. [How To Use This Phase](phases/PHASE_1.md#how-to-use-this-phase)
-2. [Difficulty Map](phases/PHASE_1.md#difficulty-map)
-3. [The Developer Mindset](phases/PHASE_1.md#the-developer-mindset)
-4. [Week-by-Week Spine](phases/PHASE_1.md#week-by-week-spine)
-5. [When You Are Stuck](phases/PHASE_1.md#when-you-are-stuck)
-6. [Section 0: Lab Environment Setup](phases/PHASE_1.md#section-0-lab-environment-setup)
-7. [Section 1: HTTP Fundamentals](phases/PHASE_1.md#section-1-http-fundamentals)
-8. [Section 2: Reconnaissance and Target Mapping](phases/PHASE_1.md#section-2-reconnaissance-and-target-mapping)
-9. [Section 3: SQL Injection](phases/PHASE_1.md#section-3-sql-injection)
-10. [Section 3.5: Command Injection](phases/PHASE_1.md#section-35-command-injection)
-11. [Section 4: Cross-Site Scripting (XSS)](phases/PHASE_1.md#section-4-cross-site-scripting-xss)
-12. [Section 5: CSRF and CORS Misconfiguration](phases/PHASE_1.md#section-5-csrf-and-cors-misconfiguration)
-13. [Section 6: Server-Side Request Forgery (SSRF)](phases/PHASE_1.md#section-6-server-side-request-forgery-ssrf)
-14. [Section 7: XML External Entity Injection (XXE)](phases/PHASE_1.md#section-7-xml-external-entity-injection-xxe)
-15. [Section 8: Authentication Attacks](phases/PHASE_1.md#section-8-authentication-attacks)
-16. [Section 8.5: NoSQL Injection](phases/PHASE_1.md#section-85-nosql-injection)
-17. [Section 9: Access Control and IDOR](phases/PHASE_1.md#section-9-access-control-and-idor)
-18. [Section 10: Business Logic Flaws](phases/PHASE_1.md#section-10-business-logic-flaws)
-19. [Section 11: Path Traversal / LFI / RFI](phases/PHASE_1.md#section-11-path-traversal--lfi--rfi)
-20. [Section 12: File Upload Vulnerabilities](phases/PHASE_1.md#section-12-file-upload-vulnerabilities)
-21. [Section 13: Server-Side Template Injection (SSTI)](phases/PHASE_1.md#section-13-server-side-template-injection-ssti)
-22. [Section 14: HTTP Request Smuggling and H2C Attacks](phases/PHASE_1.md#section-14-http-request-smuggling-and-h2c-attacks)
-23. [Section 15: Race Conditions](phases/PHASE_1.md#section-15-race-conditions)
-24. [Section 16: WebSocket Attacks](phases/PHASE_1.md#section-16-websocket-attacks)
-25. [Section 17: GraphQL Attacks](phases/PHASE_1.md#section-17-graphql-attacks)
-26. [Section 18: API Security (OWASP API Top 10: 2023)](phases/PHASE_1.md#section-18-api-security-owasp-api-top-10-2023)
-27. [Section 19: Prototype Pollution](phases/PHASE_1.md#section-19-prototype-pollution)
-28. [Section 20: Web Cache Poisoning and Deception](phases/PHASE_1.md#section-20-web-cache-poisoning-and-deception)
-29. [Section 21: OAuth2 and OIDC Attacks](phases/PHASE_1.md#section-21-oauth2-and-oidc-attacks)
-30. [Section 22: Deserialization Attacks](phases/PHASE_1.md#section-22-deserialization-attacks)
-31. [Section 23: Clickjacking](phases/PHASE_1.md#section-23-clickjacking)
-32. [Section 24: Modern SPA and Framework Attacks](phases/PHASE_1.md#section-24-modern-spa-and-framework-attacks)
-33. [Section 25: LLM Integration Attack Surface](phases/PHASE_1.md#section-25-llm-integration-attack-surface)
-34. [Section 26: Chaining Vulnerabilities](phases/PHASE_1.md#section-26-chaining-vulnerabilities)
-35. [Milestone Projects](phases/PHASE_1.md#milestone-projects)
-36. [Tools Reference and Decision Tree](phases/PHASE_1.md#tools-reference-and-decision-tree)
-37. [Web Testing Methodology Framework](phases/PHASE_1.md#web-testing-methodology-framework)
-38. [Phase 1 Final Milestones Checklist](phases/PHASE_1.md#phase-1-final-milestones-checklist)
-39. [Resources Aggregated](phases/PHASE_1.md#resources-aggregated)
+1. [如何使用这一阶段](phases/PHASE_1.md#如何使用本阶段)
+2. [难度地图](phases/PHASE_1.md#难度地图)
+3. [开发者思维](phases/PHASE_1.md#开发者思维模式)
+4. [逐周主线](phases/PHASE_1.md#逐周主线)
+5. [卡住的时候怎么办](phases/PHASE_1.md#卡住的时候怎么办)
+6. [第 0 节：实验环境搭建](phases/PHASE_1.md#第-0-节实验环境搭建)
+7. [第 1 节：HTTP 基础](phases/PHASE_1.md#第-1-节http-基础)
+8. [第 2 节：侦察与目标测绘](phases/PHASE_1.md#第-2-节信息收集与目标测绘)
+9. [第 3 节：SQL 注入](phases/PHASE_1.md#第-3-节sql-注入)
+10. [第 3.5 节：命令注入](phases/PHASE_1.md#第-35-节命令注入)
+11. [第 4 节：跨站脚本（XSS）](phases/PHASE_1.md#第-4-节跨站脚本xss)
+12. [第 5 节：CSRF 与 CORS 配置错误](phases/PHASE_1.md#第-5-节csrf-与-cors-配置错误)
+13. [第 6 节：服务端请求伪造（SSRF）](phases/PHASE_1.md#第-6-节服务端请求伪造ssrf)
+14. [第 7 节：XML 外部实体注入（XXE）](phases/PHASE_1.md#第-7-节xml-外部实体注入xxe)
+15. [第 8 节：身份认证攻击](phases/PHASE_1.md#第-8-节身份认证攻击)
+16. [第 8.5 节：NoSQL 注入](phases/PHASE_1.md#第-85-节nosql-注入)
+17. [第 9 节：访问控制与 IDOR](phases/PHASE_1.md#第-9-节访问控制与-idor)
+18. [第 10 节：业务逻辑缺陷](phases/PHASE_1.md#第-10-节业务逻辑漏洞)
+19. [第 11 节：路径遍历 / LFI / RFI](phases/PHASE_1.md#第-11-节路径穿越--lfi--rfi)
+20. [第 12 节：文件上传漏洞](phases/PHASE_1.md#第-12-节文件上传漏洞)
+21. [第 13 节：服务端模板注入（SSTI）](phases/PHASE_1.md#第-13-节服务端模板注入ssti)
+22. [第 14 节：HTTP 请求走私与 H2C 攻击](phases/PHASE_1.md#第-14-节http-请求走私与-h2c-攻击)
+23. [第 15 节：竞争条件](phases/PHASE_1.md#第-15-节竞态条件)
+24. [第 16 节：WebSocket 攻击](phases/PHASE_1.md#第-16-节websocket-攻击)
+25. [第 17 节：GraphQL 攻击](phases/PHASE_1.md#第-17-节graphql-攻击)
+26. [第 18 节：API 安全（OWASP API Top 10：2023）](phases/PHASE_1.md#第-18-节api-安全owasp-api-top-102023)
+27. [第 19 节：原型链污染](phases/PHASE_1.md#第-19-节原型污染)
+28. [第 20 节：Web 缓存投毒与欺骗](phases/PHASE_1.md#第-20-节web-缓存投毒与欺骗)
+29. [第 21 节：OAuth2 与 OIDC 攻击](phases/PHASE_1.md#第-21-节oauth2-与-oidc-攻击)
+30. [第 22 节：反序列化攻击](phases/PHASE_1.md#第-22-节反序列化攻击)
+31. [第 23 节：点击劫持](phases/PHASE_1.md#第-23-节点击劫持)
+32. [第 24 节：现代 SPA 与框架攻击](phases/PHASE_1.md#第-24-节现代-spa-与框架攻击)
+33. [第 25 节：LLM 集成攻击面](phases/PHASE_1.md#第-25-节llm-集成攻击面)
+34. [第 26 节：漏洞链式组合](phases/PHASE_1.md#第-26-节漏洞串联)
+35. [里程碑项目](phases/PHASE_1.md#里程碑项目)
+36. [工具参考与决策树](phases/PHASE_1.md#工具参考与决策树)
+37. [Web 测试方法论框架](phases/PHASE_1.md#web-测试方法论框架)
+38. [阶段 1 终期里程碑清单](phases/PHASE_1.md#阶段-1-最终里程碑清单)
+39. [资源汇总](phases/PHASE_1.md#资源汇总)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <details>
-<summary><strong>Parallel Learning Alongside Phase 1: Enterprise Attack Labs (1 Master Guide)</strong></summary>
+<summary><strong>与阶段 1 并行的学习：企业级攻击实验（1 本主指南）</strong></summary>
 
 <br/>
 
 <a id="lab-setup-guide"></a>
-#### [Lab Setup Guide](field-guides/Lab_Setup_Guide.md)
+#### [实验环境搭建指南](field-guides/Lab_Setup_Guide.md)
 
-1. [Overview and Philosophy](field-guides/Lab_Setup_Guide.md#1-overview-and-philosophy)
-2. [Hardware Requirements](field-guides/Lab_Setup_Guide.md#2-hardware-requirements)
-3. [Hypervisor Selection](field-guides/Lab_Setup_Guide.md#3-hypervisor-selection)
-4. [Lab Network Architecture](field-guides/Lab_Setup_Guide.md#4-lab-network-architecture)
-5. [Core VM Library](field-guides/Lab_Setup_Guide.md#5-core-vm-library)
-6. [Attacker VM: Kali Linux 2024+](field-guides/Lab_Setup_Guide.md#6-attacker-vm-kali-linux-2024)
-7. [Development VM: Ubuntu 22.04 LTS](field-guides/Lab_Setup_Guide.md#7-development-vm-ubuntu-2204-lts)
-8. [Windows Target and Implant Dev VM](field-guides/Lab_Setup_Guide.md#8-windows-target-and-implant-dev-vm)
-9. [Active Directory Lab: GOAD](field-guides/Lab_Setup_Guide.md#9-active-directory-lab-goad)
-10. [Malware Analysis Environment](field-guides/Lab_Setup_Guide.md#10-malware-analysis-environment)
-11. [Kernel Debugging Environment](field-guides/Lab_Setup_Guide.md#11-kernel-debugging-environment)
-12. [Container Attack Lab](field-guides/Lab_Setup_Guide.md#12-container-attack-lab)
-13. [Cloud Lab Alternative](field-guides/Lab_Setup_Guide.md#13-cloud-lab-alternative)
-14. [OPSEC Layer: Whonix + Qubes](field-guides/Lab_Setup_Guide.md#14-opsec-layer-whonix--qubes)
-15. [Detection Visibility Layer: DetectionLab](field-guides/Lab_Setup_Guide.md#15-detection-visibility-layer-detectionlab)
-16. [ICS/SCADA Lab](field-guides/Lab_Setup_Guide.md#16-icsscada-lab)
-17. [Hardware Hacking Lab](field-guides/Lab_Setup_Guide.md#17-hardware-hacking-lab)
-18. [Vulnerability Research & Fuzzing Lab (Phase 5: GREATEST)](field-guides/Lab_Setup_Guide.md#18-vulnerability-research--fuzzing-lab-phase-5-greatest)
-19. [Special Operations Lab: Physical, SE & Quantum (Phase 6)](field-guides/Lab_Setup_Guide.md#19-special-operations-lab-physical-se--quantum-phase-6)
-20. [Snapshot Discipline](field-guides/Lab_Setup_Guide.md#20-snapshot-discipline)
-21. [Phase-by-Phase Lab Evolution](field-guides/Lab_Setup_Guide.md#21-phase-by-phase-lab-evolution)
-22. [Environment Verification Checklist](field-guides/Lab_Setup_Guide.md#22-environment-verification-checklist)
-23. [Maintenance Schedule](field-guides/Lab_Setup_Guide.md#23-maintenance-schedule)
+1. [概述与理念](field-guides/Lab_Setup_Guide.md#1-概述与理念)
+2. [硬件要求](field-guides/Lab_Setup_Guide.md#2-硬件需求)
+3. [虚拟机管理程序选型](field-guides/Lab_Setup_Guide.md#3-虚拟化层选择)
+4. [实验网络架构](field-guides/Lab_Setup_Guide.md#4-实验网络架构)
+5. [核心虚拟机库](field-guides/Lab_Setup_Guide.md#5-核心虚拟机库)
+6. [攻击机：Kali Linux 2024+](field-guides/Lab_Setup_Guide.md#6-攻击机kali-linux-2024)
+7. [开发机：Ubuntu 22.04 LTS](field-guides/Lab_Setup_Guide.md#7-开发机ubuntu-2204-lts)
+8. [Windows 目标机与植入体开发机](field-guides/Lab_Setup_Guide.md#8-windows-目标机与植入物开发机)
+9. [Active Directory 实验环境：GOAD](field-guides/Lab_Setup_Guide.md#9-active-directory-实验环境goad)
+10. [恶意软件分析环境](field-guides/Lab_Setup_Guide.md#10-恶意软件分析环境)
+11. [内核调试环境](field-guides/Lab_Setup_Guide.md#11-内核调试环境)
+12. [容器攻击实验](field-guides/Lab_Setup_Guide.md#12-容器攻击实验环境)
+13. [云上实验替代方案](field-guides/Lab_Setup_Guide.md#13-云端实验环境替代方案)
+14. [作战安全层：Whonix + Qubes](field-guides/Lab_Setup_Guide.md#14-作战安全层whonix--qubes)
+15. [检测可见性层：DetectionLab](field-guides/Lab_Setup_Guide.md#15-检测可见性层detectionlab)
+16. [ICS/SCADA 实验](field-guides/Lab_Setup_Guide.md#16-icsscada-实验环境)
+17. [硬件破解实验](field-guides/Lab_Setup_Guide.md#17-硬件破解实验环境)
+18. [漏洞研究与模糊测试实验（阶段 5：GREATEST）](field-guides/Lab_Setup_Guide.md#18-漏洞研究与模糊测试实验环境阶段-5greatest)
+19. [特种作战实验：物理、社会工程与量子（阶段 6）](field-guides/Lab_Setup_Guide.md#19-特种作战实验环境物理社会工程与量子阶段-6)
+20. [快照纪律](field-guides/Lab_Setup_Guide.md#20-快照纪律)
+21. [逐阶段实验环境演进](field-guides/Lab_Setup_Guide.md#21-逐阶段实验环境演进)
+22. [环境验证清单](field-guides/Lab_Setup_Guide.md#22-环境验证清单)
+23. [维护计划](field-guides/Lab_Setup_Guide.md#23-维护计划)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 </details>
 
 ---
 
 <a id="phase-2"></a>
-#### [Phase 2: Network Pivoting & Active Directory Mastery](phases/PHASE_2.md)
+#### [阶段 2：网络跳板与 Active Directory 精通](phases/PHASE_2.md)
 
 <details>
-<summary><strong>Explore Phase 2 Syllabus (23 Modules)</strong></summary>
+<summary><strong>展开阶段 2 教学大纲（23 个模块）</strong></summary>
 
 <br/>
 
-1. [What This Phase Builds](phases/PHASE_2.md#1-what-this-phase-builds)
-2. [Prerequisites Check](phases/PHASE_2.md#2-prerequisites-check)
-3. [Phase 2 Kill Chain](phases/PHASE_2.md#3-phase-2-kill-chain)
-4. [Lab Topology](phases/PHASE_2.md#4-lab-topology)
-5. [Timeline Overview](phases/PHASE_2.md#5-timeline-overview)
-6. [How to Use This Phase](phases/PHASE_2.md#6-how-to-use-this-phase)
-7. [Section 1: Reconnaissance and OSINT](phases/PHASE_2.md#section-1-reconnaissance-and-osint)
-8. [Section 2: Service Exploitation](phases/PHASE_2.md#section-2-service-exploitation)
-9. [Section 3: Privilege Escalation - Linux](phases/PHASE_2.md#section-3-privilege-escalation---linux)
-10. [Section 4: Privilege Escalation - Windows](phases/PHASE_2.md#section-4-privilege-escalation---windows)
-11. [Section 5: Credential Poisoning and Relay Attacks](phases/PHASE_2.md#section-5-credential-poisoning-and-relay-attacks)
-12. [Section 6: Post-Exploitation and Lateral Movement](phases/PHASE_2.md#section-6-post-exploitation-and-lateral-movement)
-13. [Section 6.6: Active Directory - Enumeration and Attacks](phases/PHASE_2.md#section-66-active-directory-enumeration-and-attacks)
-14. [Section 7: Network Pivoting and Tunneling](phases/PHASE_2.md#section-7-network-pivoting-and-tunneling)
-15. [Section 8: Wireless Attacks](phases/PHASE_2.md#section-8-wireless-attacks)
-16. [Section 9: Password Attacks Methodology](phases/PHASE_2.md#section-9-password-attacks-methodology)
-17. [Section 10: AV/EDR Evasion and Payload Delivery](phases/PHASE_2.md#section-10-avedr-evasion-and-payload-delivery)
-18. [Section 11: C2 Framework Operations](phases/PHASE_2.md#section-11-c2-framework-operations)
-19. [Section 12: OPSEC Within Phase 2](phases/PHASE_2.md#section-12-opsec-within-phase-2)
-20. [Milestone Projects](phases/PHASE_2.md#milestone-projects)
-21. [Phase 2 Completion Checklist](phases/PHASE_2.md#phase-2-completion-checklist)
-22. [CTF Labs and Practice Targets](phases/PHASE_2.md#ctf-labs-and-practice-targets)
-23. [Phase 2 to Phase 3 Bridge](phases/PHASE_2.md#phase-2-to-phase-3-bridge)
+1. [这一阶段要建立什么](phases/PHASE_2.md#1-本阶段建立什么)
+2. [前置条件检查](phases/PHASE_2.md#2-先修要求检查)
+3. [阶段 2 杀伤链](phases/PHASE_2.md#3-阶段-2-攻击链)
+4. [实验拓扑](phases/PHASE_2.md#4-实验环境拓扑)
+5. [时间轴概览](phases/PHASE_2.md#5-时间线概览)
+6. [如何使用这一阶段](phases/PHASE_2.md#6-如何使用本阶段)
+7. [第 1 节：侦察与 OSINT](phases/PHASE_2.md#第-1-节侦察与-osint)
+8. [第 2 节：服务漏洞利用](phases/PHASE_2.md#第-2-节服务漏洞利用)
+9. [第 3 节：提权 - Linux](phases/PHASE_2.md#第-3-节权限提升---linux)
+10. [第 4 节：提权 - Windows](phases/PHASE_2.md#第-4-节权限提升---windows)
+11. [第 5 节：凭据投毒与中继攻击](phases/PHASE_2.md#第-5-节凭据投毒与中继攻击)
+12. [第 6 节：后渗透与横向移动](phases/PHASE_2.md#第-6-节后渗透与横向移动)
+13. [第 6.6 节：Active Directory - 枚举与攻击](phases/PHASE_2.md#第-66-节active-directory-枚举与攻击)
+14. [第 7 节：网络跳板与隧道](phases/PHASE_2.md#第-7-节网络跳板与隧道)
+15. [第 8 节：无线攻击](phases/PHASE_2.md#第-8-节无线攻击)
+16. [第 9 节：口令攻击方法论](phases/PHASE_2.md#第-9-节密码攻击方法论)
+17. [第 10 节：AV/EDR 规避与载荷投递](phases/PHASE_2.md#第-10-节avedr-规避与载荷投递)
+18. [第 11 节：C2 框架操作](phases/PHASE_2.md#第-11-节c2-框架操作)
+19. [第 12 节：阶段 2 内部的作战安全](phases/PHASE_2.md#第-12-节阶段-2-中的-opsec)
+20. [里程碑项目](phases/PHASE_2.md#里程碑项目)
+21. [阶段 2 完成清单](phases/PHASE_2.md#阶段-2-完成检查清单)
+22. [CTF 实验与练习靶场](phases/PHASE_2.md#ctf-靶场与练习目标)
+23. [阶段 2 到阶段 3 的衔接](phases/PHASE_2.md#阶段-2-到阶段-3-的衔接)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="phase-3"></a>
-#### [Phase 3: System & Kernel Exploitation](phases/PHASE_3.md)
+#### [阶段 3：系统与内核漏洞利用](phases/PHASE_3.md)
 
 <details>
-<summary><strong>Explore Phase 3 Syllabus (21 Modules)</strong></summary>
+<summary><strong>展开阶段 3 教学大纲（21 个模块）</strong></summary>
 
 <br/>
 
-1. [Who This Phase Is For](phases/PHASE_3.md#who-this-phase-is-for)
-2. [Phase 3 Architecture Map](phases/PHASE_3.md#phase-3-architecture-map)
-3. [Timeline](phases/PHASE_3.md#timeline)
-4. [Goal and Checkpoints](phases/PHASE_3.md#goal-and-checkpoints)
-5. [Milestone Projects](phases/PHASE_3.md#milestone-projects)
-6. [Block 0: Environment Setup](phases/PHASE_3.md#block-0-environment-setup)
-7. [Block 1: Binary Exploitation Fundamentals](phases/PHASE_3.md#block-1-binary-exploitation-fundamentals)
-8. [Block 2: Shellcode Writing](phases/PHASE_3.md#block-2-shellcode-writing)
-9. [Block 3: Exploit Mitigations and Bypass](phases/PHASE_3.md#block-3-exploit-mitigations-and-bypass)
-10. [Block 4: Format String Vulnerabilities](phases/PHASE_3.md#block-4-format-string-vulnerabilities)
-11. [Block 5: Heap Exploitation -- Linux glibc Modern](phases/PHASE_3.md#block-5-heap-exploitation----linux-glibc-modern)
-12. [Block 6: Windows Heap Exploitation](phases/PHASE_3.md#block-6-windows-heap-exploitation)
-13. [Block 7: Linux Kernel Exploitation](phases/PHASE_3.md#block-7-linux-kernel-exploitation)
-14. [Block 8: Linux Kernel SLUB/Slab Exploitation](phases/PHASE_3.md#block-8-linux-kernel-slubslab-exploitation)
-15. [Block 9: Windows Kernel Exploitation](phases/PHASE_3.md#block-9-windows-kernel-exploitation)
-16. [Block 10: ARM64 Exploitation + PAC Bypass](phases/PHASE_3.md#block-10-arm64-exploitation--pac-bypass)
-17. [Block 11: Control Flow Guard Bypass](phases/PHASE_3.md#block-11-control-flow-guard-bypass)
-18. [Block 12: Linux eBPF Rootkits + Anti-Detection](phases/PHASE_3.md#block-12-linux-ebpf-rootkits--anti-detection)
-19. [Block 13: HVCI, VBS and Kernel Security 2026-2027](phases/PHASE_3.md#block-13-hvci-vbs-and-kernel-security-2026-2027)
-20. [Block 14: Mobile Security -- Android and iOS](phases/PHASE_3.md#block-14-mobile-security----android-and-ios)
-21. [CTF Progression and Lab Resources](phases/PHASE_3.md#ctf-progression-and-lab-resources)
+1. [这一阶段适合谁](phases/PHASE_3.md#本阶段适合谁)
+2. [阶段 3 架构图](phases/PHASE_3.md#阶段-3-架构图)
+3. [时间轴](phases/PHASE_3.md#时间线)
+4. [目标与检查点](phases/PHASE_3.md#目标与检查点)
+5. [里程碑项目](phases/PHASE_3.md#里程碑项目)
+6. [模块 0：环境搭建](phases/PHASE_3.md#区块-0环境搭建)
+7. [模块 1：二进制利用基础](phases/PHASE_3.md#区块-1二进制漏洞利用基础)
+8. [模块 2：shellcode 编写](phases/PHASE_3.md#区块-2shellcode-编写)
+9. [模块 3：利用缓解机制与绕过](phases/PHASE_3.md#区块-3漏洞利用缓解与绕过)
+10. [模块 4：格式化字符串漏洞](phases/PHASE_3.md#区块-4格式化字符串漏洞)
+11. [模块 5：堆利用 -- Linux glibc 现代篇](phases/PHASE_3.md#区块-5堆利用----linux-glibc-现代)
+12. [模块 6：Windows 堆利用](phases/PHASE_3.md#区块-6windows-堆利用)
+13. [模块 7：Linux 内核漏洞利用](phases/PHASE_3.md#区块-7linux-内核利用)
+14. [模块 8：Linux 内核 SLUB/Slab 利用](phases/PHASE_3.md#区块-8linux-内核-slubslab-利用)
+15. [模块 9：Windows 内核漏洞利用](phases/PHASE_3.md#区块-9windows-内核利用)
+16. [模块 10：ARM64 利用 + PAC 绕过](phases/PHASE_3.md#区块-10arm64-利用--pac-绕过)
+17. [模块 11：控制流保护（CFG）绕过](phases/PHASE_3.md#区块-11控制流保护cfg绕过)
+18. [模块 12：Linux eBPF rootkit + 反检测](phases/PHASE_3.md#区块-12linux-ebpf-后门--反检测)
+19. [模块 13：HVCI、VBS 与内核安全 2026-2027](phases/PHASE_3.md#区块-13hvcivbs-与-2026-2027-内核安全)
+20. [模块 14：移动安全 -- Android 与 iOS](phases/PHASE_3.md#区块-14移动安全----android-与-ios)
+21. [CTF 进阶与实验资源](phases/PHASE_3.md#ctf-进阶与实验资源)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="phase-4"></a>
-#### [Phase 4: Specialized Operator Tracks (4A-4I)](phases/PHASE_4.md)
+#### [阶段 4：专项操作员分支（4A-4I）](phases/PHASE_4.md)
 
 <details>
-<summary><strong>Explore Phase 4 Operator Tracks & Curriculums (16 Sections)</strong></summary>
+<summary><strong>展开阶段 4 操作员分支与课程（16 个小节）</strong></summary>
 
 <br/>
 
-| Section | Topic | Difficulty | Time Estimate |
+| 小节 | 主题 | 难度 | 预计用时 |
 |---------|-------|------------|---------------|
-| [Phase 4 Intro](phases/PHASE_4.md#phase-4-advanced-tradecraft) | How to read, pairings, bridge checklist, architecture map | - | 2 hrs |
-| [4A](phases/PHASE_4.md#4a-implant--malware-development) | Implant and Malware Development | Expert | 8-12 weeks |
-| [4B](phases/PHASE_4.md#4b-c2-framework-development) | C2 Framework Development | Expert | 6-10 weeks |
-| [4C](phases/PHASE_4.md#4c-edr-evasion--defense-bypass) | EDR Evasion and Defense Bypass | Expert | 6-8 weeks |
-| [4D](phases/PHASE_4.md#4d-vulnerability-research-and-0-day-development) | Vulnerability Research and 0-Day Development | Expert+ | 12-20 weeks |
-| [4E](phases/PHASE_4.md#4e-apt-persistence-rootkits-and-anti-forensics) | APT Persistence, Rootkits, Anti-Forensics | Expert | 8-12 weeks |
-| [4F](phases/PHASE_4.md#4f-cloud-aitm-phishing-and-advanced-web) | Cloud, AiTM Phishing, and Advanced Web | Expert | 6-10 weeks |
-| [4G](phases/PHASE_4.md#4g-hardware-firmware-and-silicon) | Hardware, Firmware, and Silicon | Expert | 8-16 weeks |
-| [4H](phases/PHASE_4.md#4h-supply-chain-and-ecosystem-attacks) | Supply Chain and Ecosystem Attacks | Expert | 4-8 weeks |
-| [4I](phases/PHASE_4.md#4i-active-directory-and-identity-tradecraft) | Active Directory and Identity Tradecraft | Expert | 8-12 weeks |
-| [4J](phases/PHASE_4.md#4j-macos-and-linux-offensive-tradecraft) | macOS and Linux Offensive Tradecraft | Advanced | 4-8 weeks |
-| [4X](phases/PHASE_4.md#4x-physical-red-team-field-tradecraft) | Physical Red Team (Field Tradecraft) | Advanced | 4-8 weeks |
-| [MITRE Reference](phases/PHASE_4.md#phase-4-mitre-attck-quick-reference) | ATT&CK technique mapping for all Phase 4 sections | - | Reference |
-| [Tools Master List](phases/PHASE_4.md#phase-4-tools-master-list) | All tools organized by specialization | - | Reference |
-| [Completion Gates](phases/PHASE_4.md#phase-4-completion-gates) | 12 binary gates to verify Phase 4 depth | - | Checkpoints |
-| [What Comes After](phases/PHASE_4.md#what-comes-after-phase-4) | Path from Phase 4 to top 0.0001% | - | Reference |
+| [阶段 4 导言](phases/PHASE_4.md#第4阶段高级实战技巧) | 阅读方式、配对关系、衔接清单、架构图 | - | 2 小时 |
+| [4A](phases/PHASE_4.md#4a-植入体与恶意软件开发) | 植入体与恶意软件开发 | 专家级 | 8-12 周 |
+| [4B](phases/PHASE_4.md#4b-c2-框架开发) | C2 框架开发 | 专家级 | 6-10 周 |
+| [4C](phases/PHASE_4.md#4c-edr-规避与防御绕过) | EDR 规避与防御绕过 | 专家级 | 6-8 周 |
+| [4D](phases/PHASE_4.md#4d-漏洞研究与-0-day-开发) | 漏洞研究与 0-Day 开发 | 专家级+ | 12-20 周 |
+| [4E](phases/PHASE_4.md#4e-apt-持久化rootkit-与反取证) | APT 持久化、rootkit 与反取证 | 专家级 | 8-12 周 |
+| [4F](phases/PHASE_4.md#4f-云aitm-钓鱼与高级-web) | 云、AiTM 钓鱼与高级 Web | 专家级 | 6-10 周 |
+| [4G](phases/PHASE_4.md#4g-硬件固件与芯片) | 硬件、固件与芯片 | 专家级 | 8-16 周 |
+| [4H](phases/PHASE_4.md#4h-供应链与生态系统攻击) | 供应链与生态攻击 | 专家级 | 4-8 周 |
+| [4I](phases/PHASE_4.md#4i-active-directory-与身份实战技巧) | Active Directory 与身份作业手法 | 专家级 | 8-12 周 |
+| [4J](phases/PHASE_4.md#4j-macos-与-linux-攻防实战技巧) | macOS 与 Linux 进攻性作业手法 | 进阶 | 4-8 周 |
+| [4X](phases/PHASE_4.md#4x-物理红队现场实战技巧) | 物理红队（野外作业手法） | 进阶 | 4-8 周 |
+| [MITRE 参考](phases/PHASE_4.md#第4阶段-mitre-attck-快速参考) | 阶段 4 全部小节的 ATT&CK 技术映射 | - | 参考 |
+| [工具总表](phases/PHASE_4.md#第4阶段工具总表) | 按专项分类整理的全部工具 | - | 参考 |
+| [完成关卡](phases/PHASE_4.md#第4阶段完成门槛) | 12 道二选一关卡，用于验证阶段 4 掌握的深度 | - | 检查点 |
+| [之后往哪走](phases/PHASE_4.md#第4阶段之后是什么) | 从阶段 4 通往前 0.0001% 的路径 | - | 参考 |
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <details>
-<summary><strong>Parallel Learning Alongside Phase 4: Tactical Matrices, Tooling & Literature (3 Master Guides)</strong></summary>
+<summary><strong>与阶段 4 并行的学习：战术矩阵、工具与文献（3 本主指南）</strong></summary>
 
 <br/>
 
 <a id="mitre-attck-quick-reference"></a>
-#### [MITRE ATT&CK Quick Reference](field-guides/MITRE_ATT&CK_Quick_Reference.md)
+#### [MITRE ATT&CK 速查手册](field-guides/MITRE_ATT&CK_Quick_Reference.md)
 
-1. [Enterprise Tactic Overview](field-guides/MITRE_ATT&CK_Quick_Reference.md#1-enterprise-tactic-overview)
-2. [TA0043: Reconnaissance](field-guides/MITRE_ATT&CK_Quick_Reference.md#2-ta0043-reconnaissance)
-3. [TA0042: Resource Development](field-guides/MITRE_ATT&CK_Quick_Reference.md#3-ta0042-resource-development)
-4. [TA0001: Initial Access](field-guides/MITRE_ATT&CK_Quick_Reference.md#4-ta0001-initial-access)
-5. [TA0002: Execution](field-guides/MITRE_ATT&CK_Quick_Reference.md#5-ta0002-execution)
-6. [TA0003: Persistence](field-guides/MITRE_ATT&CK_Quick_Reference.md#6-ta0003-persistence)
-7. [TA0004: Privilege Escalation](field-guides/MITRE_ATT&CK_Quick_Reference.md#7-ta0004-privilege-escalation)
-8. [TA0005: Defense Evasion](field-guides/MITRE_ATT&CK_Quick_Reference.md#8-ta0005-defense-evasion)
-9. [TA0006: Credential Access](field-guides/MITRE_ATT&CK_Quick_Reference.md#9-ta0006-credential-access)
-10. [TA0007: Discovery](field-guides/MITRE_ATT&CK_Quick_Reference.md#10-ta0007-discovery)
-11. [TA0008: Lateral Movement](field-guides/MITRE_ATT&CK_Quick_Reference.md#11-ta0008-lateral-movement)
-12. [TA0009: Collection](field-guides/MITRE_ATT&CK_Quick_Reference.md#12-ta0009-collection)
-13. [TA0011: Command and Control](field-guides/MITRE_ATT&CK_Quick_Reference.md#13-ta0011-command-and-control)
-14. [TA0010: Exfiltration](field-guides/MITRE_ATT&CK_Quick_Reference.md#14-ta0010-exfiltration)
-15. [TA0040: Impact](field-guides/MITRE_ATT&CK_Quick_Reference.md#15-ta0040-impact)
-16. [Roadmap Phase to Technique Mapping](field-guides/MITRE_ATT&CK_Quick_Reference.md#16-roadmap-phase-to-technique-mapping)
-17. [Critical Attack Chain Diagrams](field-guides/MITRE_ATT&CK_Quick_Reference.md#17-critical-attack-chain-diagrams)
-18. [Tool to Technique Mapping](field-guides/MITRE_ATT&CK_Quick_Reference.md#18-tool-to-technique-mapping)
-19. [MITRE ATLAS: AI/ML Attack Techniques](field-guides/MITRE_ATT&CK_Quick_Reference.md#19-mitre-atlas-aiml-attack-techniques)
-20. [ICS ATT&CK Quick Reference](field-guides/MITRE_ATT&CK_Quick_Reference.md#20-ics-attck-quick-reference)
-21. [Detection Signal Index](field-guides/MITRE_ATT&CK_Quick_Reference.md#21-detection-signal-index)
+1. [企业战术概览](field-guides/MITRE_ATT&CK_Quick_Reference.md#1-enterprise-tactic-overview)
+2. [TA0043：侦察](field-guides/MITRE_ATT&CK_Quick_Reference.md#2-ta0043-reconnaissance)
+3. [TA0042：资源开发](field-guides/MITRE_ATT&CK_Quick_Reference.md#3-ta0042-resource-development)
+4. [TA0001：初始访问](field-guides/MITRE_ATT&CK_Quick_Reference.md#4-ta0001-initial-access)
+5. [TA0002：执行](field-guides/MITRE_ATT&CK_Quick_Reference.md#5-ta0002-execution)
+6. [TA0003：持久化](field-guides/MITRE_ATT&CK_Quick_Reference.md#6-ta0003-persistence)
+7. [TA0004：提权](field-guides/MITRE_ATT&CK_Quick_Reference.md#7-ta0004-privilege-escalation)
+8. [TA0005：防御规避](field-guides/MITRE_ATT&CK_Quick_Reference.md#8-ta0005-defense-evasion)
+9. [TA0006：凭据访问](field-guides/MITRE_ATT&CK_Quick_Reference.md#9-ta0006-credential-access)
+10. [TA0007：发现](field-guides/MITRE_ATT&CK_Quick_Reference.md#10-ta0007-discovery)
+11. [TA0008：横向移动](field-guides/MITRE_ATT&CK_Quick_Reference.md#11-ta0008-lateral-movement)
+12. [TA0009：收集](field-guides/MITRE_ATT&CK_Quick_Reference.md#12-ta0009-collection)
+13. [TA0011：命令与控制](field-guides/MITRE_ATT&CK_Quick_Reference.md#13-ta0011-command-and-control)
+14. [TA0010：数据外传](field-guides/MITRE_ATT&CK_Quick_Reference.md#14-ta0010-exfiltration)
+15. [TA0040：影响](field-guides/MITRE_ATT&CK_Quick_Reference.md#15-ta0040-impact)
+16. [路线图阶段与技术映射](field-guides/MITRE_ATT&CK_Quick_Reference.md#16-roadmap-phase-to-technique-mapping)
+17. [关键攻击链图示](field-guides/MITRE_ATT&CK_Quick_Reference.md#17-critical-attack-chain-diagrams)
+18. [工具与技术映射](field-guides/MITRE_ATT&CK_Quick_Reference.md#18-tool-to-technique-mapping)
+19. [MITRE ATLAS：AI/ML 攻击技术](field-guides/MITRE_ATT&CK_Quick_Reference.md#19-mitre-atlas-aiml-attack-techniques)
+20. [ICS ATT&CK 速查](field-guides/MITRE_ATT&CK_Quick_Reference.md#20-ics-attck-quick-reference)
+21. [检测信号索引](field-guides/MITRE_ATT&CK_Quick_Reference.md#21-detection-signal-index)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="tools-inventory"></a>
-#### [Tools Inventory](field-guides/Tools_Inventory.md)
+#### [工具清单](field-guides/Tools_Inventory.md)
 
-1. [How to Read This Inventory](field-guides/Tools_Inventory.md#how-to-read-this-inventory)
-2. [Phase -1: OPSEC & Anonymization](field-guides/Tools_Inventory.md#phase-neg1-opsec)
-3. [Phase 0: Foundation Environment](field-guides/Tools_Inventory.md#phase-0-foundation)
-4. [Phase 1: Web Application Security](field-guides/Tools_Inventory.md#phase-1-web)
-5. [Phase 2: Recon, Network & Infrastructure](field-guides/Tools_Inventory.md#phase-2-recon)
-6. [Phase 3: Binary & System Exploitation](field-guides/Tools_Inventory.md#phase-3-binary)
-7. [Phase 4A/B: Implant, C2 & Loader Development](field-guides/Tools_Inventory.md#phase-4ab-implant)
-8. [Phase 4C: EDR / AV Evasion](field-guides/Tools_Inventory.md#phase-4c-edr)
-9. [Phase 4D: Vulnerability Research & 0-Day](field-guides/Tools_Inventory.md#phase-4d-vr)
-10. [Phase 4E: APT Persistence, Rootkits & Anti-Forensics](field-guides/Tools_Inventory.md#phase-4e-apt)
-11. [Phase 4F: Cloud, AiTM & Advanced Web](field-guides/Tools_Inventory.md#phase-4f-cloud)
-12. [Phase 4G: Hardware, SDR & Embedded](field-guides/Tools_Inventory.md#phase-4g-hardware)
-13. [Phase 4H: Supply Chain](field-guides/Tools_Inventory.md#phase-4h-supply-chain)
-14. [Phase 4I: Active Directory & Identity](field-guides/Tools_Inventory.md#phase-4i-ad)
-15. [AI / LLM Attack Surface](field-guides/Tools_Inventory.md#ai-llm-attack-surface)
-16. [Phase 5: GREATEST - Vulnerability Research & 0-Day Discovery](field-guides/Tools_Inventory.md#phase-5-greatest)
-17. [Phase 6: Special Operations - Physical, Social & Quantum](field-guides/Tools_Inventory.md#phase-6-special-operations)
-18. [Practice Platforms](field-guides/Tools_Inventory.md#practice-platforms)
-19. [Essential Resources](field-guides/Tools_Inventory.md#essential-resources)
-20. [❌ Deprecated Stack - Do Not Use](field-guides/Tools_Inventory.md#deprecated-stack)
+1. [如何阅读这份清单](field-guides/Tools_Inventory.md#如何阅读本清单)
+2. [阶段 -1：作战安全与匿名化](field-guides/Tools_Inventory.md#phase-neg1-opsec)
+3. [阶段 0：基础环境](field-guides/Tools_Inventory.md#phase-0-foundation)
+4. [阶段 1：Web 应用安全](field-guides/Tools_Inventory.md#phase-1-web)
+5. [阶段 2：侦察、网络与基础设施](field-guides/Tools_Inventory.md#phase-2-recon)
+6. [阶段 3：二进制与系统漏洞利用](field-guides/Tools_Inventory.md#phase-3-binary)
+7. [阶段 4A/B：植入体、C2 与加载器开发](field-guides/Tools_Inventory.md#phase-4ab-implant)
+8. [阶段 4C：EDR / AV 规避](field-guides/Tools_Inventory.md#phase-4c-edr)
+9. [阶段 4D：漏洞研究与 0-Day](field-guides/Tools_Inventory.md#phase-4d-vr)
+10. [阶段 4E：APT 持久化、rootkit 与反取证](field-guides/Tools_Inventory.md#phase-4e-apt)
+11. [阶段 4F：云、AiTM 与高级 Web](field-guides/Tools_Inventory.md#phase-4f-cloud)
+12. [阶段 4G：硬件、SDR 与嵌入式](field-guides/Tools_Inventory.md#phase-4g-hardware)
+13. [阶段 4H：供应链](field-guides/Tools_Inventory.md#phase-4h-supply-chain)
+14. [阶段 4I：Active Directory 与身份](field-guides/Tools_Inventory.md#phase-4i-ad)
+15. [AI / LLM 攻击面](field-guides/Tools_Inventory.md#ai-llm-attack-surface)
+16. [阶段 5：GREATEST - 漏洞研究与 0-Day 挖掘](field-guides/Tools_Inventory.md#phase-5-greatest)
+17. [阶段 6：特种作战 - 物理、社会与量子](field-guides/Tools_Inventory.md#phase-6-special-operations)
+18. [练习平台](field-guides/Tools_Inventory.md#practice-platforms)
+19. [必备资源](field-guides/Tools_Inventory.md#essential-resources)
+20. [❌ 已废弃工具栈 - 请勿使用](field-guides/Tools_Inventory.md#deprecated-stack)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="resources_aggregated"></a>
-#### [Resources Aggregated](field-guides/Resources_Aggregated.md)
+#### [资源汇总](field-guides/Resources_Aggregated.md)
 
-1. [How to Use This Section](field-guides/Resources_Aggregated.md#1-how-to-use-this-section)
-2. [Phase-to-Resource Navigator](field-guides/Resources_Aggregated.md#2-phase-to-resource-navigator)
-3. [Reference Databases](field-guides/Resources_Aggregated.md#3-reference-databases)
-4. [YouTube Channels - Active 2027](field-guides/Resources_Aggregated.md#4-youtube-channels-active-2027)
-5. [Essential Books - Phase Ordered](field-guides/Resources_Aggregated.md#5-essential-books-phase-ordered)
-6. [Courses - 2027 Pricing and Timing](field-guides/Resources_Aggregated.md#6-courses-2027-pricing-and-timing)
-7. [Practice Platforms](field-guides/Resources_Aggregated.md#7-practice-platforms)
-8. [Blogs and Research Sources](field-guides/Resources_Aggregated.md#8-blogs-and-research-sources)
-9. [Malware Sample Repositories and Sandboxes](field-guides/Resources_Aggregated.md#9-malware-sample-repositories-and-sandboxes)
-10. [Vulnerability Databases and Exploit Sources](field-guides/Resources_Aggregated.md#10-vulnerability-databases-and-exploit-sources)
-11. [AI and LLM Security Resources](field-guides/Resources_Aggregated.md#11-ai-and-llm-security-resources)
-12. [Nation-State and APT Research](field-guides/Resources_Aggregated.md#12-nation-state-and-apt-research)
-13. [Community and Networking](field-guides/Resources_Aggregated.md#13-community-and-networking)
-14. [Deprecated Stack - Do Not Use](field-guides/Resources_Aggregated.md#14-deprecated-stack-do-not-use)
-15. [MITRE ATT&CK Reference - 2027](field-guides/Resources_Aggregated.md#15-mitre-attck-reference-2027)
-16. [Lab Setup Guide](field-guides/Resources_Aggregated.md#16-lab-setup-guide)
-17. [Phase 5: GREATEST - Vulnerability Research & 0-Day Resources](field-guides/Resources_Aggregated.md#17-phase-5-greatest-resources)
-18. [Phase 6: Special Operations Resources](field-guides/Resources_Aggregated.md#18-phase-6-special-operations-resources)
-19. [Resource-by-Phase Matrix](field-guides/Resources_Aggregated.md#19-resource-by-phase-matrix)
+1. [如何使用这一节](field-guides/Resources_Aggregated.md#1-how-to-use-this-section)
+2. [阶段到资源的导航](field-guides/Resources_Aggregated.md#2-phase-to-resource-navigator)
+3. [参考数据库](field-guides/Resources_Aggregated.md#3-reference-databases)
+4. [YouTube 频道 - 2027 年仍在更新](field-guides/Resources_Aggregated.md#4-youtube-channels-active-2027)
+5. [必读书单 - 按阶段排序](field-guides/Resources_Aggregated.md#5-essential-books-phase-ordered)
+6. [课程 - 2027 年价格与时间](field-guides/Resources_Aggregated.md#6-courses-2027-pricing-and-timing)
+7. [练习平台](field-guides/Resources_Aggregated.md#7-practice-platforms)
+8. [博客与研究来源](field-guides/Resources_Aggregated.md#8-blogs-and-research-sources)
+9. [恶意软件样本库与沙箱](field-guides/Resources_Aggregated.md#9-malware-sample-repositories-and-sandboxes)
+10. [漏洞数据库与利用代码来源](field-guides/Resources_Aggregated.md#10-vulnerability-databases-and-exploit-sources)
+11. [AI 与 LLM 安全资源](field-guides/Resources_Aggregated.md#11-ai-and-llm-security-resources)
+12. [国家级行为体与 APT 研究](field-guides/Resources_Aggregated.md#12-nation-state-and-apt-research)
+13. [社区与人脉网络](field-guides/Resources_Aggregated.md#13-community-and-networking)
+14. [已废弃工具栈 - 请勿使用](field-guides/Resources_Aggregated.md#14-deprecated-stack-do-not-use)
+15. [MITRE ATT&CK 参考 - 2027](field-guides/Resources_Aggregated.md#15-mitre-attck-reference-2027)
+16. [实验环境搭建指南](field-guides/Resources_Aggregated.md#16-lab-setup-guide)
+17. [阶段 5：GREATEST - 漏洞研究与 0-Day 资源](field-guides/Resources_Aggregated.md#17-phase-5-greatest-resources)
+18. [阶段 6：特种作战资源](field-guides/Resources_Aggregated.md#18-phase-6-special-operations-resources)
+19. [按阶段分类的资源矩阵](field-guides/Resources_Aggregated.md#19-resource-by-phase-matrix)
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 </details>
 
 ---
 
 <a id="phase-5"></a>
-#### [Phase 5: GREATEST (Apex Research & 0-Day)](phases/PHASE_5.md)
+#### [阶段 5：GREATEST（顶尖漏洞研究与 0-Day）](phases/PHASE_5.md)
 
 <details>
-<summary><strong>Explore Phase 5 Syllabus (22 Modules)</strong></summary>
+<summary><strong>展开阶段 5 教学大纲（22 个模块）</strong></summary>
 
 <br/>
 
-1. [What GREATEST Actually Is](phases/PHASE_5.md#1-what-greatest-actually-is)
-2. [The Decision to Go Further](phases/PHASE_5.md#2-the-decision-to-go-further)
-3. [What GREATEST Is NOT](phases/PHASE_5.md#3-what-greatest-is-not)
-4. [The Real Markers of GREATEST](phases/PHASE_5.md#4-the-real-markers-of-greatest)
-5. [What You Must Bring From Phase 4](phases/PHASE_5.md#5-what-you-must-bring-from-phase-4)
-6. [Your Research Environment: Setup From Scratch](phases/PHASE_5.md#6-your-research-environment-setup-from-scratch)
-7. [Your First 30 Days in Phase 5](phases/PHASE_5.md#7-your-first-30-days-in-phase-5)
-8. [The Research Loop: How GREATEST Actually Finds 0-Days](phases/PHASE_5.md#8-the-research-loop-how-greatest-actually-finds-0-days)
-9. [Patch Diffing: The Most Teachable Path Into Research](phases/PHASE_5.md#9-patch-diffing-the-most-teachable-path-into-research)
-10. [Fuzzing for Research: Not Just Crashing, But Finding](phases/PHASE_5.md#10-fuzzing-for-research-not-just-crashing-but-finding)
-11. [Triage: From Crash to Confirmed Vulnerability](phases/PHASE_5.md#11-triage-from-crash-to-confirmed-vulnerability)
-12. [Exploit Development Standards: What a Real PoC Looks Like](phases/PHASE_5.md#12-exploit-development-standards-what-a-real-poc-looks-like)
-13. [Research Domain Deep-Dives (2026 to 2027 Frontiers)](phases/PHASE_5.md#13-research-domain-deep-dives-2026-to-2027-frontiers)
-14. [The Exploit Market: The BlackHAT Path](phases/PHASE_5.md#14-the-exploit-market-the-blackhat-path)
-15. [The Publication Path: If You Choose Disclosure](phases/PHASE_5.md#15-the-publication-path-if-you-choose-disclosure)
-16. [The Community: Getting Into the Right Rooms](phases/PHASE_5.md#16-the-community-getting-into-the-right-rooms)
-17. [The Complete Reading List: Surface and Underground](phases/PHASE_5.md#17-the-complete-reading-list-surface-and-underground)
-18. [The Mindset Gap: From Phase 4 Operator to GREATEST Researcher](phases/PHASE_5.md#18-the-mindset-gap-from-phase-4-operator-to-greatest-researcher)
-19. [Measuring Your Progress](phases/PHASE_5.md#19-measuring-your-progress)
-20. [Extended Failure: When Nothing Is Happening](phases/PHASE_5.md#20-extended-failure-when-nothing-is-happening)
-21. [Legal Risk: The GREATEST Operator's Landscape](phases/PHASE_5.md#21-legal-risk-the-greatest-operators-landscape)
-22. [The Algorithm](phases/PHASE_5.md#22-the-algorithm)
+1. [GREATEST 究竟是什么](phases/PHASE_5.md#1-greatest-究竟是什么)
+2. [决定是否继续深入](phases/PHASE_5.md#2-继续前行的决定)
+3. [GREATEST 不是什么](phases/PHASE_5.md#3-greatest-不是什么)
+4. [GREATEST 的真正标志](phases/PHASE_5.md#4-greatest-的真正标志)
+5. [你必须从阶段 4 带来的东西](phases/PHASE_5.md#5-你必须从阶段-4-带来的东西)
+6. [你的研究环境：从零搭建](phases/PHASE_5.md#6-你的研究环境从零搭建)
+7. [阶段 5 的头 30 天](phases/PHASE_5.md#7-阶段-5-的第一个-30-天)
+8. [研究闭环：GREATEST 究竟如何找出 0-Day](phases/PHASE_5.md#8-研究循环greatest-究竟如何发现-0-day)
+9. [补丁比对：最可教的研究入门路径](phases/PHASE_5.md#9-补丁对比进入研究最易上手的路径)
+10. [面向研究的模糊测试：不只是崩溃，而是发现](phases/PHASE_5.md#10-为研究而模糊测试不只是崩溃而是发现)
+11. [分诊：从崩溃到确认漏洞](phases/PHASE_5.md#11-分类处置从崩溃到确认漏洞)
+12. [漏洞利用开发标准：真正的 PoC 长什么样](phases/PHASE_5.md#12-漏洞利用开发标准真正的-poc-长什么样)
+13. [研究领域深度剖析（2026 至 2027 前沿）](phases/PHASE_5.md#13-研究领域深入2026-至-2027-前沿)
+14. [漏洞利用市场：BlackHAT 的路径](phases/PHASE_5.md#14-漏洞利用市场blackhat-之路)
+15. [公开路径：如果你选择披露](phases/PHASE_5.md#15-发表路径如果你选择披露)
+16. [圈子：进入正确的房间](phases/PHASE_5.md#16-社群进入正确的圈子)
+17. [完整书单：地上与地下](phases/PHASE_5.md#17-完整阅读清单地表与地下)
+18. [思维差距：从阶段 4 操作员到 GREATEST 研究员](phases/PHASE_5.md#18-思维差距从阶段-4-操作者到-greatest-研究者)
+19. [衡量你的进展](phases/PHASE_5.md#19-衡量你的进展)
+20. [长期停滞：当一切毫无动静](phases/PHASE_5.md#20-长期失败当一切毫无进展)
+21. [法律风险：GREATEST 操作员所处的环境](phases/PHASE_5.md#21-法律风险greatest-操作者的全景)
+22. [算法](phases/PHASE_5.md#22-算法)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="phase-6-parallel-learning-alongside-phase-5"></a>
-#### [Phase 6: Special Operations & Adversary Simulation](phases/PHASE_6.md) *(Parallel learning alongside Phase 5)*
+#### [阶段 6：特种作战与对手模拟](phases/PHASE_6.md) *（与阶段 5 并行学习）*
 
 <details>
-<summary><strong>Explore Phase 6 Syllabus (39 Modules & Sub-disciplines)</strong></summary>
+<summary><strong>展开阶段 6 教学大纲（39 个模块与子学科）</strong></summary>
 
 <br/>
 
-1. [Why Phase 6 Exists](phases/PHASE_6.md#why-phase-6-exists)
-2. [Section 1: Physical Red Team](phases/PHASE_6.md#section-1-physical-red-team)
-   - [1.1 Lockpicking: The Foundational Skill](phases/PHASE_6.md#11-lockpicking-the-foundational-skill)
-   - [1.2 Bump Keys and Impressioning](phases/PHASE_6.md#12-bump-keys-and-impressioning)
-   - [1.3 Bypass Tools: Faster Than Picking](phases/PHASE_6.md#13-bypass-tools-faster-than-picking)
-   - [1.4 Electronic Access Control Bypass (Wiegand + OSDP)](phases/PHASE_6.md#14-electronic-access-control-bypass)
-   - [1.5 Camera Bypass and Visual Surveillance Defeat](phases/PHASE_6.md#15-camera-bypass-and-visual-surveillance-defeat)
-   - [1.6 RFID / HID Cloning (Legacy + Modern Readers)](phases/PHASE_6.md#16-rfid--hid-cloning-legacy--modern-readers)
-   - [1.7 Badge Visual Cloning](phases/PHASE_6.md#17-badge-visual-cloning)
-   - [1.8 Hardware Implants: LAN Turtle + EDR-Evasive Callbacks](phases/PHASE_6.md#18-hardware-implants-lan-turtle--edr-evasive-callbacks)
-   - [1.9 Tailgating and Pretext Entry](phases/PHASE_6.md#19-tailgating-and-pretext-entry)
-   - [1.10 Drone Recon: Full Curriculum (Optical + Thermal)](phases/PHASE_6.md#110-drone-recon-full-curriculum-optical--thermal)
-3. [Section 2: Social Engineering](phases/PHASE_6.md#section-2-social-engineering-the-human-attack-surface)
-   - [2.1 The Psychology Framework: Six Principles of Influence](phases/PHASE_6.md#21-the-psychology-framework-six-principles-of-influence)
-   - [2.2 Elicitation Techniques](phases/PHASE_6.md#22-elicitation-techniques)
-   - [2.3 Vishing: Voice Phishing (Full Scripts + Objection Handling)](phases/PHASE_6.md#23-vishing-voice-phishing-full-scripts--objection-handling)
-   - [2.4 Email Phishing Construction](phases/PHASE_6.md#24-email-phishing-construction)
-   - [2.5 USB Drop Attacks](phases/PHASE_6.md#25-usb-drop-attacks)
-   - [2.6 In-Person SE: Non-Verbal and Body Language](phases/PHASE_6.md#26-in-person-social-engineering-non-verbal-and-body-language)
-   - [2.7 Pretext Abort Signals and Recovery](phases/PHASE_6.md#27-pretext-abort-signals-and-recovery)
-   - [2.8 Persona Development and Identity Legends](phases/PHASE_6.md#28-persona-development-and-identity-legends)
-   - [2.9 SE Campaign Planning and Metrics](phases/PHASE_6.md#29-se-campaign-planning-and-metrics)
-4. [Section 3: Quantum Computing 2027](phases/PHASE_6.md#section-3-quantum-computing-2027)
-   - [3.1 The Threat Model](phases/PHASE_6.md#31-the-threat-model)
-   - [3.2 SNDL Collection Infrastructure](phases/PHASE_6.md#32-sndl-collection-infrastructure)
-   - [3.3 PQC Migration Attack: Downgrade](phases/PHASE_6.md#33-pqc-migration-attack-downgrade)
-   - [3.4 ML-KEM Timing Side-Channel Analysis](phases/PHASE_6.md#34-ml-kem-timing-side-channel-analysis)
-   - [3.5 Cryptographic Inventory Audit Script](phases/PHASE_6.md#35-cryptographic-inventory-audit-script)
-   - [3.6 Operator PQC OPSEC](phases/PHASE_6.md#36-operator-pqc-opsec)
-   - [3.7 Lab Path for Beginners](phases/PHASE_6.md#37-lab-path-for-beginners-5-week-structure)
-5. [Section 4: Red Team Operations](phases/PHASE_6.md#section-4-red-team-operations)
-   - [4.1 Pre-Engagement Scoping Questionnaire](phases/PHASE_6.md#41-pre-engagement-scoping-questionnaire)
-   - [4.2 Rules of Engagement](phases/PHASE_6.md#42-rules-of-engagement-document)
-   - [4.3 Report Structure and Writing](phases/PHASE_6.md#43-report-structure-and-writing)
-   - [4.4 Debrief Methodology](phases/PHASE_6.md#44-debrief-methodology)
-   - [4.5 Purple Team and Re-Test](phases/PHASE_6.md#45-purple-team-and-re-test)
-   - [4.6 Threat-Intelligence-Led Testing: TIBER-EU and CBEST](phases/PHASE_6.md#46-threat-intelligence-led-testing-tiber-eu-and-cbest)
-6. [Section 5: Post-Engagement Cleanup](phases/PHASE_6.md#section-5-post-engagement-cleanup)
-   - [5.1 Digital Footprint Removal (Windows + Sysmon)](phases/PHASE_6.md#51-digital-footprint-removal)
-   - [5.2 Active Directory Cleanup](phases/PHASE_6.md#52-active-directory-cleanup)
-   - [5.3 Physical Cleanup Checklist](phases/PHASE_6.md#53-physical-cleanup-checklist)
-   - [5.4 Log Clearing Decision Tree](phases/PHASE_6.md#54-log-clearing-decision-tree)
-7. [Section 6: TSCM: Finding Bugs to Plant Them](phases/PHASE_6.md#section-6-tscm-finding-bugs-to-plant-them)
-   - [6.1 Surveillance Device Types and Signatures](phases/PHASE_6.md#61-surveillance-device-types-and-signatures)
-   - [6.2 Detection Methodology: Step by Step](phases/PHASE_6.md#62-detection-methodology-step-by-step)
-   - [6.3 RF Explorer Practical Walkthrough](phases/PHASE_6.md#63-rf-explorer-practical-walkthrough)
-   - [6.4 Lab Exercise](phases/PHASE_6.md#64-lab-exercise-build-and-detect)
-   - [6.5 Offensive Planting Principles](phases/PHASE_6.md#65-offensive-planting-principles)
-8. [Section 7: ADCS Attack Paths](phases/PHASE_6.md#section-7-adcs-attack-paths)
-   - [7.1 What ADCS Is and Why It Matters](phases/PHASE_6.md#71-what-adcs-is-and-why-it-matters)
-   - [7.2 ESC1: Misconfigured Certificate Template](phases/PHASE_6.md#72-esc1-misconfigured-certificate-template)
-   - [7.3 ESC4: Template Write Permission Abuse](phases/PHASE_6.md#73-certipy-full-workflow-esc1--esc4--esc8)
-   - [7.4 ESC8: NTLM Relay to ADCS HTTP Endpoint](phases/PHASE_6.md#73-certipy-full-workflow-esc1--esc4--esc8)
-   - [7.5 Certipy Full Workflow](phases/PHASE_6.md#73-certipy-full-workflow-esc1--esc4--esc8)
-9. [Section 8: Full Operational Scenario: Operation Silent Ledger v2](phases/PHASE_6.md#section-8-operation-silent-ledger-v2)
-10. [Phase 6 Resource Reference](phases/PHASE_6.md#phase-6-resource-reference)
-11. [Phase 6 Competency Checklist](phases/PHASE_6.md#phase-6-competency-checklist)
+1. [为什么要有阶段 6](phases/PHASE_6.md#为什么存在第-6-阶段)
+2. [第 1 节：物理红队](phases/PHASE_6.md#第-1-部分物理红队)
+   - [1.1 开锁：基础技能](phases/PHASE_6.md#11-开锁基础技能)
+   - [1.2 撞匙与印模开锁](phases/PHASE_6.md#12-撞匙与压印开锁)
+   - [1.3 绕过工具：比开锁更快](phases/PHASE_6.md#13-绕过工具比开锁更快)
+   - [1.4 电子门禁绕过（Wiegand + OSDP）](phases/PHASE_6.md#14-电子门禁绕过)
+   - [1.5 摄像头绕过与视觉监视反制](phases/PHASE_6.md#15-摄像头绕过与视觉监控反制)
+   - [1.6 RFID / HID 克隆（老式 + 现代读卡器）](phases/PHASE_6.md#16-rfid--hid-克隆旧式与现代读卡器)
+   - [1.7 证件卡外观克隆](phases/PHASE_6.md#17-证件视觉克隆)
+   - [1.8 硬件植入：LAN Turtle + 规避 EDR 的回连](phases/PHASE_6.md#18-硬件植入lan-turtle--规避-edr-的回连)
+   - [1.9 尾随进入与话术进入](phases/PHASE_6.md#19-尾随进入与托词进入)
+   - [1.10 无人机侦察：完整课程（光学 + 热成像）](phases/PHASE_6.md#110-无人机侦察完整课程光学--热成像)
+3. [第 2 节：社会工程](phases/PHASE_6.md#第-2-部分社会工程人的攻击面)
+   - [2.1 心理学框架：影响力的六大原则](phases/PHASE_6.md#21-心理学框架影响力的六大原则)
+   - [2.2 套话技巧](phases/PHASE_6.md#22-套话技巧)
+   - [2.3 语音钓鱼 Vishing（完整话术 + 异议应对）](phases/PHASE_6.md#23-语音钓鱼完整话术--异议处理)
+   - [2.4 钓鱼邮件的构造](phases/PHASE_6.md#24-邮件钓鱼构造)
+   - [2.5 USB 投放攻击](phases/PHASE_6.md#25-usb-投放攻击)
+   - [2.6 面对面社会工程：非语言与肢体语言](phases/PHASE_6.md#26-面对面社会工程非语言与肢体语言)
+   - [2.7 话术中止信号与补救](phases/PHASE_6.md#27-托词中止信号与恢复)
+   - [2.8 人设构建与身份履历编造](phases/PHASE_6.md#28-人设构建与身份故事)
+   - [2.9 社会工程行动规划与度量](phases/PHASE_6.md#29-社会工程行动规划与度量)
+4. [第 3 节：2027 年的量子计算](phases/PHASE_6.md#第-3-部分2027-年量子计算)
+   - [3.1 威胁模型](phases/PHASE_6.md#31-威胁模型)
+   - [3.2 SNDL 收集基础设施](phases/PHASE_6.md#32-sndl-收集基础设施)
+   - [3.3 PQC 迁移攻击：降级](phases/PHASE_6.md#33-pqc-迁移攻击降级)
+   - [3.4 ML-KEM 时序侧信道分析](phases/PHASE_6.md#34-ml-kem-时序侧信道分析)
+   - [3.5 密码资产清点审计脚本](phases/PHASE_6.md#35-密码学资产清点审计脚本)
+   - [3.6 操作员的后量子作战安全](phases/PHASE_6.md#36-操作员的-pqc-opsec)
+   - [3.7 初学者实验路径](phases/PHASE_6.md#37-初学者实验路径5-周结构)
+5. [第 4 节：红队行动](phases/PHASE_6.md#第-4-部分红队行动)
+   - [4.1 接单前的范围界定问卷](phases/PHASE_6.md#41-行动前范围界定问卷)
+   - [4.2 交战规则](phases/PHASE_6.md#42-交战规则文件)
+   - [4.3 报告结构与撰写](phases/PHASE_6.md#43-报告结构与撰写)
+   - [4.4 复盘方法论](phases/PHASE_6.md#44-复盘方法论)
+   - [4.5 紫队与复测](phases/PHASE_6.md#45-紫队与复测)
+   - [4.6 威胁情报驱动的测试：TIBER-EU 与 CBEST](phases/PHASE_6.md#46-威胁情报驱动的测试tiber-eu-与-cbest)
+6. [第 5 节：收尾清理](phases/PHASE_6.md#第-5-部分行动后清理)
+   - [5.1 数字足迹清除（Windows + Sysmon）](phases/PHASE_6.md#51-数字足迹清除)
+   - [5.2 Active Directory 清理](phases/PHASE_6.md#52-active-directory-清理)
+   - [5.3 物理清理清单](phases/PHASE_6.md#53-物理清理清单)
+   - [5.4 日志清除决策树](phases/PHASE_6.md#54-日志清除决策树)
+7. [第 6 节：TSCM：找出窃听器，也是为了安放窃听器](phases/PHASE_6.md#第-6-部分tscm发现窃听器以植入窃听器)
+   - [6.1 监视设备的类型与特征信号](phases/PHASE_6.md#61-监控设备类型与特征)
+   - [6.2 检测方法论：一步一步来](phases/PHASE_6.md#62-检测方法论分步指南)
+   - [6.3 RF Explorer 实操演练](phases/PHASE_6.md#63-rf-explorer-实操演练)
+   - [6.4 实验练习](phases/PHASE_6.md#64-实验练习搭建与检测)
+   - [6.5 进攻性安放原则](phases/PHASE_6.md#65-攻击性植入原则)
+8. [第 7 节：ADCS 攻击路径](phases/PHASE_6.md#第-7-部分adcs-攻击路径)
+   - [7.1 ADCS 是什么，为何重要](phases/PHASE_6.md#71-adcs-是什么以及为何重要)
+   - [7.2 ESC1：配置错误的证书模板](phases/PHASE_6.md#72-esc1配置错误的证书模板)
+   - [7.3 ESC4：模板写权限滥用](phases/PHASE_6.md#73-certipy-完整工作流esc1--esc4--esc8)
+   - [7.4 ESC8：将 NTLM 中继到 ADCS HTTP 端点](phases/PHASE_6.md#73-certipy-完整工作流esc1--esc4--esc8)
+   - [7.5 Certipy 完整工作流](phases/PHASE_6.md#73-certipy-完整工作流esc1--esc4--esc8)
+9. [第 8 节：完整作战场景：静默账本行动 v2](phases/PHASE_6.md#第-8-部分寂静账本行动-v2)
+10. [阶段 6 资源参考](phases/PHASE_6.md#第-6-阶段资源参考)
+11. [阶段 6 能力清单](phases/PHASE_6.md#第-6-阶段能力清单)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
 <a id="final-word"></a>
-#### [Final Word: Capstone & Horizon Roadmap](field-guides/Final_Word.md)
+#### [结语：毕业项目与前沿路线图](field-guides/Final_Word.md)
 
 <details>
-<summary><strong>Explore Final Word Sections (Capstone & Verification)</strong></summary>
+<summary><strong>展开结语各节（毕业项目与验证）</strong></summary>
 
 <br/>
 
-1. [Document Statistics - Verified 2027](field-guides/Final_Word.md#document-statistics----verified-2027)
-2. [Master Curriculum and Companion Directory](field-guides/Final_Word.md#master-curriculum-and-companion-directory)
-3. [The Roadmap at a Glance](field-guides/Final_Word.md#the-roadmap-at-a-glance)
-4. [Researcher Attribution Index](field-guides/Final_Word.md#the-researchers-who-built-the-techniques-in-this-document)
-5. [What This Document Cannot Give You](field-guides/Final_Word.md#what-this-document-cannot-give-you)
-6. [What GREATEST Looks Like in Practice](field-guides/Final_Word.md#what-greatest-looks-like-in-practice)
-7. [The Emerging Frontier: Beyond v6.0 / Research Horizons (2027-2028)](field-guides/Final_Word.md#the-emerging-frontier-beyond-v60--research-horizons-2027-2028)
-8. [Author and Version](field-guides/Final_Word.md#author-and-version)
+1. [文档统计 - 2027 年核实](field-guides/Final_Word.md#文档统计2027-年核验)
+2. [主课程与配套目录](field-guides/Final_Word.md#主课程与配套指南目录)
+3. [路线图速览](field-guides/Final_Word.md#路线图一览)
+4. [研究者署名索引](field-guides/Final_Word.md#构建本文档技术的那些研究者)
+5. [本文件给不了你的东西](field-guides/Final_Word.md#本文档给不了你的东西)
+6. [GREATEST 在实战中是什么样](field-guides/Final_Word.md#greatest-在实战中是什么样子)
+7. [新兴前沿：v6.0 之外 / 研究视野（2027-2028）](field-guides/Final_Word.md#新兴前沿超越-v60--研究视野2027-2028)
+8. [作者与版本](field-guides/Final_Word.md#结语)
 
 </details>
 
-<div align="right"><a href="#table-of-contents">↑ Return to TOC</a></div>
+<div align="right"><a href="#table-of-contents">↑ 返回目录</a></div>
 
 ---
 
-## Executive Summary
+## 执行摘要
 
-The cybersecurity industry is saturated with surface-level certification guides, multiple-choice cheat sheets, and automated tool tutorials that fail the moment modern defensive telemetry is encountered.
+网络安全行业充斥着流于表面的认证指南、选择题小抄和自动化工具教程，一旦撞上现代防御遥测，它们立刻失效。
 
-**The BlackHAT Roadmap v1.2.2 · GREATEST Edition** is engineered on a fundamentally different principle: **understanding systems completely from the metal up.**
+**The BlackHAT Roadmap v1.2.2 · GREATEST 版** 建立在一条根本不同的原则上：**从硬件底层开始，彻底理解系统。**
 
-This repository contains over **44,900 lines** of battle-tested technical documentation, weaponized code architectures, evasion mechanics, and operational security doctrines across 16 master modules. It bridges the gap between running automated point-and-click tools and operating as a tier-one security researcher, red team engineer, or exploit developer.
+本仓库包含 **44,900 多行** 经受过实战检验的技术文档、武器化代码架构、规避机制与作战安全信条，横跨 16 个主模块。它填补了「只会跑自动化一键工具」与「能像一线安全研究员、红队工程师或漏洞利用开发者那样作业」之间的鸿沟。
 
 ```
 +-----------------------------------------------------------------------------+
-| REPOSITORY AT A GLANCE (v1.2.2 · 2027 EDITION)                              |
+| 仓库一览（v1.2.2 · 2027 版）                                                |
 +-----------------------------------------------------------------------------+
-| Total Content Volume : 44,900+ lines of dense offensive engineering         |
-| Total Documentation  : ~1.80 MB source markdown across 16 master modules    |
-| Progression Depth    : 8 Core Phases (Phase -1 through Phase 6)             |
-| Section Count        : 440+ Major Sections (H2), 1,120+ Subsections (H3)    |
-| Code Implementation  : 1,080+ Verified Code Blocks across 13+ Languages     |
-| Offensive Tooling    : 300+ Unique offensive tools cataloged                |
-| MITRE Alignment      : 200+ ATT&CK Techniques (Enterprise, ICS, ATLAS)      |
-| Compilable Labs      : Native C API Resolver & Offensive Rust In-Memory Dev |
-| Special Operations   : Physical Red Team, SE, Drone Recon, Quantum / SNDL   |
+| 总内容量             : 44,900+ 行高密度攻防工程内容                         |
+| 文档总量             : 约 1.80 MB Markdown 源文件，横跨 16 个主模块         |
+| 进阶深度             : 8 个核心阶段（阶段 -1 至阶段 6）                     |
+| 章节数量             : 440+ 个主章节（H2）、1,120+ 个小节（H3）             |
+| 代码实现             : 1,080+ 个已验证代码块，覆盖 13+ 种语言               |
+| 攻击工具             : 收录 300+ 款独有攻击性工具                           |
+| MITRE 对齐           : 200+ 项 ATT&CK 技术（Enterprise、ICS、ATLAS）        |
+| 可编译实验           : 原生 C API 解析器与进攻性 Rust 内存加载开发          |
+| 特种作战             : 物理红队、社会工程、无人机侦察、量子 / SNDL          |
 +-----------------------------------------------------------------------------+
 ```
 
 ---
 
-## Why This Repository Exists
+## 这个仓库为什么存在
 
-Most educational resources teach how software is *supposed* to work. Real offensive security requires understanding how software *actually* works when subjected to edge cases, flawed assumptions, and memory corruption.
+大多数教学资源讲的是软件*理应*如何工作。而真正的进攻性安全，要求你理解软件在遭遇边界情况、错误假设和内存破坏时*实际*是如何工作的。
 
-### The Contrast
+### 对比
 
-| Category | Standard InfoSec Curriculums | The BlackHAT Roadmap v1.2.2 |
+| 维度 | 常规信息安全课程 | The BlackHAT Roadmap v1.2.2 |
 | :--- | :--- | :--- |
-| **Core Objective** | Passing multiple-choice exams (CEH, PenTest+) | Engineering original capabilities from scratch |
-| **Tooling Approach** | Running public scanners (Nmap, Metasploit, Nikto) | Writing custom implants, loaders, and C2 agents |
-| **Defense Evasion** | Basic payload encoding and obfuscation | Ekko/Foliage sleep obfuscation, indirect syscalls, stack spoofing |
-| **Active Directory** | Basic password spraying and simple bloodhound | ADCS ESC1-15, Auth Coercion, Shadow Credentials, Entra ID PRT theft |
-| **Binary Exploitation** | Classical stack overflows in outdated Linux VMs | Modern Windows heap exploitation, ROP chains, V8 browser exploitation |
-| **Special Operations** | Not covered or treated as separate domains | Physical covert entry, drone recon, SE pretexts, quantum SNDL |
-| **Persistence & Kernel**| Scheduled tasks and standard registry run keys | eBPF rootkits, COM hijacking, HVCI bypasses, hypervisor ring -1 |
-| **Operational Security**| "Turn on a commercial VPN service" | Hardware stripping, Tails/Whonix chains, Monero loops, RAM sanitization |
+| **核心目标** | 通过选择题考试（CEH、PenTest+） | 从零打造原创能力 |
+| **工具路线** | 运行公开扫描器（Nmap、Metasploit、Nikto） | 自己编写植入体、加载器与 C2 代理 |
+| **防御规避** | 基础的载荷编码与混淆 | Ekko/Foliage 休眠混淆、间接系统调用、栈伪造 |
+| **Active Directory** | 基础口令喷洒与简单的 BloodHound 采集 | ADCS ESC1-15、认证强制、影子凭据、Entra ID PRT 窃取 |
+| **二进制利用** | 在过时的 Linux 虚拟机里做经典栈溢出 | 现代 Windows 堆利用、ROP 链、V8 浏览器利用 |
+| **特种作战** | 不涉及，或拆成独立领域 | 物理隐蔽潜入、无人机侦察、社会工程话术、量子 SNDL |
+| **持久化与内核**| 计划任务与常规注册表 Run 键 | eBPF rootkit、COM 劫持、HVCI 绕过、hypervisor ring -1 |
+| **作战安全**| “打开某个商业 VPN 服务” | 硬件剥离、Tails/Whonix 链路、Monero 循环、内存擦洗 |
 
 ---
 
-## Master Repository Architecture
+## 主仓库架构
 
 ```text
 The-BlackHAT-roadmap/
-├── .github/                      <- Project metadata, issue templates, PR template & tracker
+├── .github/                      <- 项目元数据、议题模板、PR 模板与进度追踪表
 ├── assets/
-│   ├── README.md                 <- Visual asset inventory & CC BY-SA 4.0 notice
-│   ├── banner.svg                <- Cybernetic HUD SVG banner (v1.2.2)
-│   └── diagrams/                 <- Modularized Mermaid diagrams & high-res renders
-├── black-bag/                    <- Covert operational tradecraft & survival payload
-│   ├── BlackHat_Long-Term_Survival_Tactics.md <- 3,000+ line master OPSEC & counter-surveillance manual
-│   └── Max_Anonymity_Workflow.md <- Quick-reference anonymity architecture & 7-layer verification blueprint
-├── field-guides/                 <- Operational manuals, tactical matrices & infrastructure
-│   ├── FAQ.md                    <- Career realities & operational transitions FAQ
-│   ├── Final_Word.md             <- Verification statistics, attributions & 2027-2028 roadmap
-│   ├── Lab_Setup_Guide.md        <- Multi-tier enterprise AD & hypervisor blueprints
-│   ├── MITRE_ATT&CK_Quick_Reference.md <- Enterprise v15, ICS & ATLAS tactical matrix
-│   ├── Philosophy_The_BlackHat_Mindset.md <- Cognitive doctrine & primitive mental models
-│   ├── Resources_Aggregated.md   <- Canonical literature, whitepapers & archives
-│   └── Tools_Inventory.md        <- 300+ phase-aligned offensive tool directory
-├── payloads/                     <- Compilable weaponized source implementations
-│   ├── README.md                 <- Master payload index, toolchains & lab prerequisites
-│   ├── 01_dynamic_api_resolver/  <- In-memory PEB traversal & DJB2 export hashing in C
-│   └── 02_offensive_rust_loader/ <- RW -> RX memory state flipping & binary hardening in Rust
-├── phases/                       <- STRICTLY the 8 chronological curriculum phases
-│   ├── PHASE_-1.md               <- Hardened OPSEC & Anonymous Infrastructure
-│   ├── PHASE_0.md                <- Low-Level Foundations & Systems Internals
-│   ├── PHASE_1.md                <- Modern Web & API Attack Surface
-│   ├── PHASE_2.md                <- Network Pivoting & Active Directory Mastery
-│   ├── PHASE_3.md                <- System & Kernel Exploitation
-│   ├── PHASE_4.md                <- Specialized Operator Tracks (4A-4I)
-│   ├── PHASE_5.md                <- GREATEST (Apex Vulnerability Research & 0-Day)
-│   └── PHASE_6.md                <- Special Operations & Adversary Simulation
-├── CHANGELOG.md                  <- Version history and public release notes
-├── CITATION.cff                  <- Native GitHub Citation metadata
-├── LICENSE                       <- MIT License (source code & payloads)
-├── LICENSE-DOCS                  <- CC BY-SA 4.0 License (curriculum & diagrams)
-└── README.md                     <- Master curriculum hub & navigation launchpad
+│   ├── README.md                 <- 视觉素材清单与 CC BY-SA 4.0 声明
+│   ├── banner.svg                <- 赛博 HUD 风格 SVG 横幅（v1.2.2）
+│   └── diagrams/                 <- 模块化 Mermaid 图表与高分辨率渲染图
+├── black-bag/                    <- 隐蔽行动作业手法与生存载荷
+│   ├── BlackHat_Long-Term_Survival_Tactics.md <- 3,000+ 行的作战安全与反监视主手册
+│   └── Max_Anonymity_Workflow.md <- 匿名架构速查与 7 层验证蓝图
+├── field-guides/                 <- 作战手册、战术矩阵与基础设施
+│   ├── FAQ.md                    <- 职业现实与转型作战常见问题
+│   ├── Final_Word.md             <- 验证统计、署名信息与 2027-2028 路线图
+│   ├── Lab_Setup_Guide.md        <- 多层企业 AD 与虚拟机管理程序蓝图
+│   ├── MITRE_ATT&CK_Quick_Reference.md <- Enterprise v15、ICS 与 ATLAS 战术矩阵
+│   ├── Philosophy_The_BlackHat_Mindset.md <- 认知信条与原语思维模型
+│   ├── Resources_Aggregated.md   <- 权威文献、白皮书与存档
+│   └── Tools_Inventory.md        <- 300+ 款按阶段编排的进攻工具目录
+├── payloads/                     <- 可编译的武器化源码实现
+│   ├── README.md                 <- 载荷总索引、工具链与实验前置条件
+│   ├── 01_dynamic_api_resolver/  <- C 语言实现的内存 PEB 遍历与 DJB2 导出表哈希
+│   └── 02_offensive_rust_loader/ <- Rust 实现的内存 RW -> RX 状态翻转与二进制加固
+├── phases/                       <- 严格按时间顺序排列的 8 个课程阶段
+│   ├── PHASE_-1.md               <- 强化作战安全与匿名基础设施
+│   ├── PHASE_0.md                <- 底层基础与系统内部机制
+│   ├── PHASE_1.md                <- 现代 Web 与 API 攻击面
+│   ├── PHASE_2.md                <- 网络跳板与 Active Directory 精通
+│   ├── PHASE_3.md                <- 系统与内核漏洞利用
+│   ├── PHASE_4.md                <- 专项操作员分支（4A-4I）
+│   ├── PHASE_5.md                <- GREATEST（顶尖漏洞研究与 0-Day）
+│   └── PHASE_6.md                <- 特种作战与对手模拟
+├── CHANGELOG.md                  <- 版本历史与公开发布说明
+├── CITATION.cff                  <- GitHub 原生引用元数据
+├── LICENSE                       <- MIT 许可证（源代码与载荷）
+├── LICENSE-DOCS                  <- CC BY-SA 4.0 许可证（课程与图表）
+└── README.md                     <- 主课程中枢与导航起点
 ```
 
 ---
 
-## Compilable Offensive Engineering Payloads
+## 可编译的进攻性工程载荷
 
-To bridge the gap between theoretical comprehension and binary execution, the repository includes ready-to-compile, weaponized codebases in [payloads/](payloads/):
+为了填平「理论理解」与「二进制执行」之间的鸿沟，仓库在 [payloads/](payloads/) 中提供了可直接编译的武器化代码库：
 
 ```
 payloads/
-|-- README.md                  # Master payload index, toolchains & lab prerequisites
-|-- 01_dynamic_api_resolver/   # Windows PEB traversal, In-Memory API export hashing in C (DJB2)
-`-- 02_offensive_rust_loader/  # Memory protection flips (RW -> RX), Native API wrapping in Rust
+|-- README.md                  # 载荷总索引、工具链与实验前置条件
+|-- 01_dynamic_api_resolver/   # Windows PEB 遍历、C 语言实现的内存 API 导出表哈希（DJB2）
+`-- 02_offensive_rust_loader/  # 内存保护属性翻转（RW -> RX）、Rust 实现的原生 API 封装
 ```
 
-- **[Payload 01: Dynamic API Resolver in C](payloads/01_dynamic_api_resolver/)**: Demonstrates resolving Windows API functions purely in memory by traversing the Process Environment Block (PEB) and hashing export table strings, defeating static Import Address Table (IAT) analysis.
-- **[Payload 02: Offensive Rust In-Memory Loader](payloads/02_offensive_rust_loader/)**: Demonstrates staging encrypted shellcode in memory, avoiding direct RWX allocation flags, and flipping memory permissions to executable (`PAGE_EXECUTE_READ`) immediately prior to thread dispatch.
+- **[载荷 01：C 语言动态 API 解析器](payloads/01_dynamic_api_resolver/)**：演示如何完全在内存中解析 Windows API 函数——遍历进程环境块（PEB）并对导出表字符串做哈希，从而击破对导入地址表（IAT）的静态分析。
+- **[载荷 02：进攻性 Rust 内存加载器](payloads/02_offensive_rust_loader/)**：演示如何在内存中暂存加密的 shellcode，避免直接使用 RWX 分配标志，并在派发线程前一刻把内存权限翻转为可执行（`PAGE_EXECUTE_READ`）。
 
 ---
 
-## 2025-2027 Operator Modules
+## 2025-2027 操作员模块
 
-The curriculum integrates the newest offensive paradigms required to defeat modern security stacks:
+课程整合了击穿现代安全栈所需的最新进攻范式：
 
-### 1. Modern EDR Evasion & Sleep Obfuscation
-Defeating memory scanners (Moneta, Hunt-Sleeping-Beacons, Pe-sieve) through asynchronous timer-based memory protection flips.
-- **Ekko, Foliage, and Cronos implementations:** ROP chain encryption via `NtContinue`, `CreateTimerQueueTimer`, and stack frame wiping.
-- **Call Stack Spoofing:** Synthetic stack frame generation (SilentMoonwalk, Unwinder) to pass return address validation.
-- **Indirect Syscalls:** Resolving SSNs dynamically and executing syscall instructions from within legitimate `ntdll.dll` memory space to bypass user-mode hooks.
+### 1. 现代 EDR 规避与休眠混淆
+通过基于异步定时器的内存保护属性翻转，击破内存扫描器（Moneta、Hunt-Sleeping-Beacons、Pe-sieve）。
+- **Ekko、Foliage 与 Cronos 实现：** 通过 `NtContinue`、`CreateTimerQueueTimer` 加密 ROP 链，并擦除栈帧。
+- **调用栈伪造：** 合成栈帧（SilentMoonwalk、Unwinder），以通过返回地址校验。
+- **间接系统调用：** 动态解析 SSN，并在合法的 `ntdll.dll` 内存空间内执行 syscall 指令，绕过用户态钩子。
 
-### 2. Enterprise Active Directory & Hybrid Identity
-- **ADCS Exploitation:** Abuse of Enterprise Certificate Authority misconfigurations across ESC1 through ESC15.
-- **Authentication Coercion:** Forcing NTLM authentication via PetitPotam (MS-EFSR), DFSCoerce (MS-DFSNM), and Shadow Credentials.
-- **Entra ID (Azure AD):** Primary Refresh Token (PRT) extraction, Conditional Access bypasses, Device Code phishing, and Azure Arc lateral movement.
+### 2. 企业级 Active Directory 与混合身份
+- **ADCS 利用：** 滥用企业证书颁发机构在 ESC1 至 ESC15 上的配置错误。
+- **认证强制：** 通过 PetitPotam（MS-EFSR）、DFSCoerce（MS-DFSNM）与影子凭据强制发起 NTLM 认证。
+- **Entra ID（Azure AD）：** 主刷新令牌（PRT）提取、条件访问绕过、设备代码钓鱼与 Azure Arc 横向移动。
 
-### 3. Offensive Rust Engineering
-Replacing legacy C/C++ loaders with high-performance, statically compiled Rust:
-- Dynamic API resolution via hashed PE exports.
-- Direct invocation of Windows Native APIs using safe wrappers.
-- In-memory shellcode execution without RWX allocation artifacts.
+### 3. 进攻性 Rust 工程
+用高性能、静态编译的 Rust 取代传统的 C/C++ 加载器：
+- 通过哈希化 PE 导出表实现动态 API 解析。
+- 使用安全封装直接调用 Windows 原生 API。
+- 在内存中执行 shellcode，不留下 RWX 分配的痕迹。
 
-### 4. AI / ML Exploitation & Automated Weaponization
-- Exploitation of LLM-integrated enterprise applications: Indirect prompt injections, Retrieval-Augmented Generation (RAG) poisoning, and agent jailbreaking.
-- Local offensive LLM pipelines: Fine-tuned local models for automated vulnerability triaging, decompilation analysis, and exploit script generation.
+### 4. AI / ML 利用与自动化武器化
+- 对集成 LLM 的企业应用发起利用：间接提示注入、检索增强生成（RAG）投毒与智能体越狱。
+- 本地进攻性 LLM 流水线：用微调后的本地模型自动完成漏洞分诊、反编译分析与利用脚本生成。
 
-### 5. Quantum Computing & SNDL Threat Modeling (Phase 6)
-- **Store Now, Decrypt Later (SNDL):** Harvesting encrypted enterprise traffic ahead of Cryptanalytically Relevant Quantum Computers (CRQCs).
-- **Post-Quantum Cryptography (PQC) Downgrades:** Forcing hybrid key exchange negotiation fallbacks to classical ciphers during migration windows.
+### 5. 量子计算与 SNDL 威胁建模（阶段 6）
+- **先存储、后解密（SNDL）：** 在密码分析相关量子计算机（CRQC）可用之前，提前囤积企业加密流量。
+- **后量子密码学（PQC）降级：** 在迁移窗口期强制混合密钥交换协商回退到经典密码算法。
 
-### 6. Covert Physical Entry & Aerial Reconnaissance (Phase 6)
-- Non-destructive entry: pin tumbler lockpicking, bypass tools, latch slips, and under-door tools.
-- Electronic access control: Wiegand protocol interception, OSDP auditing, and RFID/NFC badge cloning.
-- Drone reconnaissance: optical patrol mapping and thermal HVAC/server room heat profile analysis.
-
----
-
-## Lab Architecture & Prerequisites
-
-To execute the practical exercises in this curriculum, the recommended self-hosted lab setup includes:
-
-1. **Virtualization Hypervisor:** Proxmox VE, VMware ESXi, or VMware Workstation Pro.
-2. **Active Directory Range:** Dual Windows Server Domain Controllers (2019/2022) with Active Directory Certificate Services (ADCS) installed, and 2-3 joined Windows 10/11 enterprise workstations.
-3. **Malware Analysis Sandbox:** Isolated FlareVM (Windows) and REMnux (Linux) nodes configured with non-routed virtual host-only adapters.
-4. **Tooling Environment:** Dedicated Kali Linux or Debian instance equipped with Docker, Rust toolchain, MinGW-w64, Clang/LLVM, and Ghidra.
-5. **Hardware Security Kit (Phase 4G & Phase 6):** RTL-SDR blog V4, HackRF One, SouthOrd/Sparrows lockpick set, Proxmark3 RDV4 / Flipper Zero, Hak5 LAN Turtle, and CAN bus transceiver module.
+### 6. 隐蔽物理潜入与空中侦察（阶段 6）
+- 非破坏性进入：弹子锁开锁、绕过工具、锁舌拨片与门底工具。
+- 电子门禁：Wiegand 协议拦截、OSDP 审计与 RFID/NFC 证件卡克隆。
+- 无人机侦察：光学巡逻路线测绘，以及暖通空调/机房热分布图分析。
 
 ---
 
-## Topics
+## 实验架构与前置条件
+
+要完成本课程中的实操练习，推荐的自建实验环境包括：
+
+1. **虚拟化平台：** Proxmox VE、VMware ESXi 或 VMware Workstation Pro。
+2. **Active Directory 靶场：** 两台 Windows Server 域控制器（2019/2022），已安装 Active Directory 证书服务（ADCS），外加 2-3 台已加域的 Windows 10/11 企业工作站。
+3. **恶意软件分析沙箱：** 相互隔离的 FlareVM（Windows）与 REMnux（Linux）节点，使用不接路由的仅主机虚拟网卡。
+4. **工具环境：** 一台专用的 Kali Linux 或 Debian 实例，装好 Docker、Rust 工具链、MinGW-w64、Clang/LLVM 与 Ghidra。
+5. **硬件安全套件（阶段 4G 与阶段 6）：** RTL-SDR blog V4、HackRF One、SouthOrd/Sparrows 开锁工具套装、Proxmark3 RDV4 / Flipper Zero、Hak5 LAN Turtle 以及 CAN 总线收发模块。
+
+---
+
+## 主题标签
 
 `roadmap` · `blackhat-roadmap` · `greatest-roadmap` · `penetration-testing-roadmap` · `cybersecurity-roadmap` · `AI-ML-Jailbreak` · `security` · `cybersecurity` · `reverse-engineering` · `security-tools` · `hacking` · `pentesting` · `osint` · `penetration-testing` · `network-security` · `ctf` · `infosec` · `malware` · `ethical-hacking` · `red-team` · `kali-linux` · `malware-analysis` · `active-directory` · `web-security` · `mitre-attack` · `bug-bounty`
 
 ---
 
-## Star History
+## Star 历史曲线
 
-If this curriculum provides value to your research or career, consider starring the repository to help other researchers find it:
+如果这套课程对你的研究或职业有价值，欢迎给仓库点 Star，帮助更多研究者发现它：
 
 <div align="center">
 
@@ -925,20 +925,20 @@ If this curriculum provides value to your research or career, consider starring 
 
 ---
 
-## Contributing
+## 参与贡献
 
-Contributions that raise the technical bar are welcome. Whether it is a new payload, a deeper module, or a dead link fix, real contributions from the community make this curriculum stronger.
+欢迎能抬高技术门槛的贡献。无论是一个新载荷、一个写得更深的模块，还是修掉一个失效链接，来自社区的真实贡献都让这套课程更强。
 
-- **Getting Started:** Check out the [Contributing Guidelines](.github/CONTRIBUTING.md) and look for issues tagged [`good first issue`](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/labels/good%20first%20issue) for approachable entry points.
-- **Quality Threshold:** PRs adding generic tool lists or introductory material will not be merged. We prioritize depth over breadth.
-- **Code Standards:** Code samples must be functional, accompanied by technical rationale, and compiled against modern toolchains. Check out the [Weaponized Payloads](payloads/) directory.
-- **Formatting Rule:** Adhere strictly to clean markdown standards. Do not include em-dashes anywhere in text or documentation.
+- **如何开始：** 先看[贡献指南](.github/CONTRIBUTING.md)，再找带 [`good first issue`](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/labels/good%20first%20issue) 标签的议题，作为容易上手的切入点。
+- **质量门槛：** 只加通用工具清单或入门材料的 PR 不予合并。我们优先看深度，而不是广度。
+- **代码标准：** 代码示例必须可用、附带技术原理说明，并且是针对现代工具链编译通过的。请看[武器化载荷](payloads/)目录。
+- **格式规则：** 严格遵守干净的 markdown 规范。正文与文档中任何位置都不得出现长破折号（em-dash）。
 
 ---
 
-## Citation & Academic Attribution
+## 引用与学术署名
 
-If you utilize this curriculum, offensive engineering architectures, or lab implementations in your academic research, technical whitepapers, or institutional courses, please cite this work as follows:
+如果你在学术研究、技术白皮书或机构课程中使用了本课程、其中的进攻性工程架构或实验实现，请按如下方式引用本作品：
 
 ```bibtex
 @misc{biswas2026blackhat,
@@ -951,59 +951,59 @@ If you utilize this curriculum, offensive engineering architectures, or lab impl
 }
 ```
 
-Or reference the native [CITATION.cff](CITATION.cff) file via GitHub's "Cite this repository" interface.
+也可以通过 GitHub 的“Cite this repository”界面引用仓库自带的 [CITATION.cff](CITATION.cff) 文件。
 
 ---
 
-## Legal Disclaimer
+## 法律免责声明
 
 > [!CAUTION]
-> **Strictly For Authorized Educational, Research, and Defensive Purposes Only.**
+> **仅限获得授权的教学、研究与防御用途。**
 > 
-> The materials, methodologies, code snippets, and operational guidance provided in this repository are designed solely for authorized cybersecurity professionals, penetration testers, red team engineers, and academic researchers operating under explicit, formal written authorization.
+> 本仓库提供的材料、方法论、代码片段与作战指引，仅面向获得明确、正式书面授权的网络安全专业人员、渗透测试人员、红队工程师与学术研究者。
 > 
-> Unauthorized testing, access, or exploitation against networks, servers, or endpoints without explicit permission is illegal under local, national, and international laws (including the US Computer Fraud and Abuse Act, UK Computer Misuse Act, and equivalent statutes).
+> 未经明确许可而对网络、服务器或终端进行测试、访问或利用，依据当地、本国及国际法律（包括美国《计算机欺诈与滥用法》、英国《计算机滥用法》及同等法规）均属违法。
 > 
-> The author assumes no liability and is not responsible for any misuse, damage, or legal consequences resulting from the application of the information contained herein. Learn responsibly. Refer to [SECURITY.md](.github/SECURITY.md) for scope and reporting.
+> 作者不承担任何责任，也不对因应用本文所含信息而导致的任何滥用、损害或法律后果负责。请负责任地学习。范围界定与漏洞报告请参见 [SECURITY.md](.github/SECURITY.md)。
 
 ---
 
-## License & Attribution
+## 许可证与署名
 
-This repository is dual-licensed to protect both the written curriculum and the executable lab code:
+本仓库采用双许可证，以同时保护文字课程与可执行实验代码：
 
-1. **Curriculum, Documentation & Architectural Diagrams (`*.md`, Volume I, Volume II, Trackers):**
-   Licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) (see [`LICENSE-DOCS`](LICENSE-DOCS)).
-   You are free to share and adapt this material for any purpose, provided that you give appropriate credit to **Sagar Biswas (@SagarBiswas-MultiHAT)**, include a direct link back to this original repository, and distribute any derivative works under the same CC BY-SA 4.0 license.
+1. **课程、文档与架构图（`*.md`、Volume I、Volume II、Trackers）：**
+   依据 [知识共享 署名-相同方式共享 4.0 国际许可证（CC BY-SA 4.0）](https://creativecommons.org/licenses/by-sa/4.0/) 授权（见 [`LICENSE-DOCS`](LICENSE-DOCS)）。
+   你可以出于任何目的自由共享与改编本材料，但必须适当署名 **Sagar Biswas（@SagarBiswas-MultiHAT）**、附上指向本原始仓库的直接链接，并以相同的 CC BY-SA 4.0 许可证分发任何演绎作品。
 
-2. **Source Code, Labs & Payloads (`payloads/` directory, C, C++, Rust, Assembly, Python scripts):**
-   Licensed under the [MIT License](LICENSE).
+2. **源代码、实验与载荷（`payloads/` 目录，C、C++、Rust、汇编、Python 脚本）：**
+   依据 [MIT 许可证](LICENSE) 授权。
 
-Removing author attribution, stripping license files, or re-uploading this repository as your own work is a direct violation of copyright law and will result in a formal GitHub DMCA Takedown request.
+删除作者署名、剥离许可证文件，或把本仓库当作自己的作品重新上传，均直接违反著作权法，将招致正式的 GitHub DMCA 下架请求。
 
 ---
 
-## Author & Contact
+## 作者与联系方式
 
 **Sagar Biswas**
-- **GitHub:** [@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)
-- **Agency:** [MultiHAT Dev](https://multihat.dev/)
-- **Projects:** [Portfolio & Engineering Projects](https://sagarbiswas-multihat.github.io/projects/)
-- **Notebooks:** [Technical Research Notebooks](https://sagarbiswas-multihat.github.io/notebooks/)
-- **Articles & Blog:** [Security Analysis & Writeups](https://sagarbiswas-multihat.github.io/blogs/)
+- **GitHub 账号：** [@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)
+- **机构：** [MultiHAT Dev](https://multihat.dev/)
+- **项目：** [作品集与工程项目](https://sagarbiswas-multihat.github.io/projects/)
+- **笔记：** [技术研究笔记](https://sagarbiswas-multihat.github.io/notebooks/)
+- **文章与博客：** [安全分析与实战复盘](https://sagarbiswas-multihat.github.io/blogs/)
 
-### Related Roadmaps & Curated Ecosystem
+### 相关路线图与精选生态
 
-- [**Penetration Testing Roadmap**](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap): Practical workflows, methodologies, and toolchains for real-world offensive assessments.
-- [**Awesome Cybersecurity Paths**](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths): Structured learning paths across defensive, offensive, and research specializations.
-- [**Awesome Cybersecurity Books**](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books): Essential foundational and advanced literature for security researchers and practitioners.
+- [**渗透测试路线图**](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap)：面向真实进攻性评估的实操流程、方法论与工具链。
+- [**Awesome Cybersecurity Paths**](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths)：覆盖防御、进攻与研究专项的结构化学习路径。
+- [**Awesome Cybersecurity Books**](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)：面向安全研究者与从业者的必备基础与进阶文献。
 
 ---
 
 <div align="right">
 
-*Built for those who demand mastery from the silicon up.*  
-*Maintained with discipline. No filler. No shortcuts. No apologies.*
+*为那些要求从硅片底层开始彻底掌握的人而写。*  
+*以纪律维护。没有注水，没有捷径，不作退让。*
 
 </div>
 

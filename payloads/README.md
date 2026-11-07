@@ -1,47 +1,47 @@
-# Offensive Engineering Payloads
+# 进攻工程载荷
 
-## Operational Overview
+## 作战概览
 
-This directory houses ready-to-compile, weaponized source implementations designed for low-level research, authorized red team operations, and defensive telemetry verification.
+本目录收录可直接编译的武器化源码实现，面向底层研究、获授权的红队行动与防御性遥测验证。
 
-Rather than relying on public automated tools that trigger static signatures, these codebases demonstrate primitive engineering from first principles: direct Native API dispatching, memory protection state flips, and Process Environment Block (PEB) traversal.
+这些代码库不依赖会触发静态特征的公开自动化工具，而是从第一性原理出发演示原语工程：直接分发原生 API、翻转内存保护状态，以及遍历进程环境块（PEB）。
 
 ---
 
-## Payload Index
+## 载荷索引
 
-| Identifier | Focus | Language | Key Mechanics |
+| 标识 | 重点 | 语言 | 关键机制 |
 | :---: | :--- | :---: | :--- |
-| **[01_dynamic_api_resolver](01_dynamic_api_resolver/)** | In-Memory Dynamic API Resolution | C | PEB traversal via `GS:[0x60]`, EAT parsing, DJB2 function hashing, decoupling from static IAT |
-| **[02_offensive_rust_loader](02_offensive_rust_loader/)** | EDR-Evading Memory Loader | Rust | Memory state flipping (`PAGE_READWRITE` to `PAGE_EXECUTE_READ`), zero RWX allocation flags, binary stripping |
+| **[01_dynamic_api_resolver](01_dynamic_api_resolver/)** | 内存内动态 API 解析 | C | 通过 `GS:[0x60]` 遍历 PEB、解析 EAT、DJB2 函数哈希、与静态 IAT 解耦 |
+| **[02_offensive_rust_loader](02_offensive_rust_loader/)** | 规避 EDR 的内存加载器 | Rust | 内存状态翻转（`PAGE_READWRITE` 到 `PAGE_EXECUTE_READ`）、不使用 RWX 分配标志、二进制剥离 |
 
 ---
 
-## Infrastructure & Lab Prerequisites
+## 基础设施与实验环境前置条件
 
-> 📖 **Virtualization & Range Setup**:  
-> For full hypervisor architecture (Proxmox / ESXi), multi-tier Active Directory topologies (GOAD), and isolated malware analysis sandboxes (FlareVM / REMnux), refer to the **[Lab Setup Guide](../field-guides/Lab_Setup_Guide.md)**.
+> 📖 **虚拟化与靶场搭建**：  
+> 完整的 hypervisor 架构（Proxmox / ESXi）、多层 Active Directory 拓扑（GOAD）与隔离的恶意软件分析沙箱（FlareVM / REMnux），请参阅**[实验环境搭建指南](../field-guides/Lab_Setup_Guide.md)**。
 
-### Toolchain Requirements
+### 工具链要求
 
-- **C / C++ Toolchains**:
-  - Linux/WSL cross-compilation: `x86_64-w64-mingw32-gcc` (MinGW-w64)
-  - Windows native: Microsoft Visual C++ Build Tools (`cl.exe`) or Clang/LLVM
-- **Rust Toolchains**:
-  - `rustup` with target `x86_64-pc-windows-msvc`
-  - Cargo profile optimizations (`opt-level = "z"`, `lto = true`, `strip = true`)
-
----
-
-## Legal & Safety Notice
-
-All payload code is strictly for authorized educational research and explicit penetration testing engagements. Test only inside isolated virtualized sandboxes.
+- **C / C++ 工具链**：
+  - Linux/WSL 交叉编译：`x86_64-w64-mingw32-gcc`（MinGW-w64）
+  - Windows 原生：Microsoft Visual C++ Build Tools（`cl.exe`）或 Clang/LLVM
+- **Rust 工具链**：
+  - 带 `x86_64-pc-windows-msvc` target 的 `rustup`
+  - Cargo profile 优化（`opt-level = "z"`、`lto = true`、`strip = true`）
 
 ---
 
-## License
+## 法律与安全声明
 
-All executable source code, loaders, harnesses, and build manifests within this directory are licensed under the [MIT License](../LICENSE).
+所有载荷代码仅限用于获授权的教育研究，以及明确授权的渗透测试项目。只可在隔离的虚拟化沙箱中测试。
 
-- **Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))
-- **Repository:** [https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)
+---
+
+## 许可
+
+本目录内所有可执行源代码、加载器、harness 与构建清单均依据 [MIT License](../LICENSE) 授权。
+
+- **作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))
+- **仓库：** [https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)

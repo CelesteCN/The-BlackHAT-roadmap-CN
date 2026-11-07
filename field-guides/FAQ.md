@@ -1,801 +1,801 @@
-# FAQ
+# 常见问题
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** v1.0.0 · 2027 Edition<br/>
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**规范仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**许可协议：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** v1.0.0 · 2027 版<br/>
 
 <div align="right">
 
-**Every question a beginner asks, and every question they should have asked but didn't.**
+**新手会问的每一个问题，以及他们本该问、却没有问的每一个问题。**
 
 </div>
 
 ---
 
->**Companion Roadmap Documents:**
-> * **[The BlackHAT Roadmap (Canonical Repo)](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)**: Master curriculum, issue discussions, and live roadmap updates.
-> * **[Master Curriculum (Phases -1 to 6)](../phases/PHASE_-1.md)**: Zero-to-elite offensive engineering syllabus from foundational metal to apex operations.
-> * **[BlackHat Long-Term Survival Tactics](../black-bag/BlackHat_Long-Term_Survival_Tactics.md)**: The authoritative operational security, physical tradecraft, and digital persona architecture manual.
-> * **[Maximum Anonymity Workflow](../black-bag/Max_Anonymity_Workflow.md)**: Architectural blueprint for the complete anonymity stack -- 7 layers, Whonix, and pre-op verification.
-> * **[Philosophy: The BlackHat Mindset](Philosophy_The_BlackHat_Mindset.md)**: Cognitive doctrine, adversarial assumption hunting, and primitive thinking mental models.
-> * **[MITRE ATT&CK Quick Reference](MITRE_ATT&CK_Quick_Reference.md)**: Enterprise, ICS, and ATLAS technique mapping, detection signals, and attack chain blueprints.
-> * **[Tools Inventory](Tools_Inventory.md)**: Canonical, phase-aligned 300+ tool directory covering primitive-to-tool realization.
-> * **[Resources Aggregated](Resources_Aggregated.md)**: Curated books, research whitepapers, conference talk archives, and hands-on platforms.
-> * **[Lab Setup Guide](Lab_Setup_Guide.md)**: Multi-tier hardware specifications and isolated enterprise/kernel lab blueprints.
-> * **[Final Word](Final_Word.md)**: Document verification statistics, researcher attributions, and horizon research roadmap.
+>**配套路线图文档：**
+> * **[The BlackHAT Roadmap（规范仓库）](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)**：主课程、议题讨论与路线图实时更新。
+> * **[主课程（Phase -1 至 6）](../phases/PHASE_-1.md)**：从裸机底层到顶级作战的零基础到精英进攻工程教学大纲。
+> * **[黑帽长期生存战术](../black-bag/BlackHat_Long-Term_Survival_Tactics.md)**：权威的作战安全、物理作业手法与数字身份架构手册。
+> * **[极致匿名工作流](../black-bag/Max_Anonymity_Workflow.md)**：完整匿名技术栈的架构蓝图——7 层结构、Whonix 与行动前验证。
+> * **[理念：黑帽思维](Philosophy_The_BlackHat_Mindset.md)**：认知学说、对抗性假设挖掘与底层思维心智模型。
+> * **[MITRE ATT&CK 速查手册](MITRE_ATT&CK_Quick_Reference.md)**：企业、ICS 与 ATLAS 技术映射、检测信号与攻击链蓝图。
+> * **[工具清单](Tools_Inventory.md)**：按阶段编排的权威 300+ 工具目录，覆盖从原语到工具的落地实现。
+> * **[资源汇总](Resources_Aggregated.md)**：精选书籍、研究白皮书、会议演讲存档与动手平台。
+> * **[实验环境搭建指南](Lab_Setup_Guide.md)**：多层硬件规格与隔离的企业/内核实验环境蓝图。
+> * **[结语](Final_Word.md)**：文档核验统计、研究者署名与前沿研究路线图。
 
-> **Recommended Curated Roadmap Resources:**
-> * **[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths)**: Curated pathways for penetration testers, red teamers, blue teamers, and security researchers.
-> * **[Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap)**: Practical assessment workflows, tooling matrices, and engagement methodologies.
-> * **[Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)**: Curated offensive security and low-level systems literature.
-
----
-
-## TABLE OF CONTENTS
-
-1. [Getting Started](#part-1-getting-started)
-2. [Hardware, OS, and Environment](#part-2-hardware-os-and-environment)
-3. [Learning Path and Methodology](#part-3-learning-path-and-methodology)
-4. [Certifications and Courses](#part-4-certifications-and-courses)
-5. [Technical Questions](#part-5-technical-questions)
-6. [AI, Tools, and the 2027 Landscape](#part-6-ai-tools-and-the-2027-landscape)
-7. [Bug Bounty and Real-World Practice](#part-7-bug-bounty-and-real-world-practice)
-8. [Mindset, Burn-Out, and Staying Operational](#part-8-mindset-burn-out-and-staying-operational)
-9. [Authorization, OPSEC, and Legal Reality](#part-9-authorization-opsec-and-legal-reality)
-10. [Questions Nobody Asks But Should](#part-10-questions-nobody-asks-but-should)
-11. [2027 Special Operations and Horizons FAQ](#part-11-2027-special-operations-and-horizons-faq)
+> **推荐的精选路线图资源：**
+> * **[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths)**：为渗透测试人员、红队成员、蓝队成员和安全研究者精选的成长路径。
+> * **[Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap)**：实战评估工作流、工具矩阵与项目方法论。
+> * **[Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)**：精选的进攻安全与底层系统文献。
 
 ---
 
-## PART 1: GETTING STARTED
+## 目录
+
+1. [入门](#第一部分入门)
+2. [硬件、操作系统与环境](#第二部分硬件操作系统与环境)
+3. [学习路径与方法](#第三部分学习路径与方法)
+4. [认证与课程](#第四部分认证与课程)
+5. [技术问题](#第五部分技术问题)
+6. [AI、工具与 2027 年的格局](#第六部分ai工具与-2027-年的格局)
+7. [漏洞赏金与真实世界实践](#第七部分漏洞赏金与真实世界实践)
+8. [心态、倦怠与保持作战状态](#第八部分心态倦怠与保持作战状态)
+9. [授权、OPSEC 与法律现实](#第九部分授权opsec-与法律现实)
+10. [没人问、但该问的问题](#第十部分没人问但该问的问题)
+11. [2027 特种作战与研究前沿问答](#第十一部分2027-特种作战与研究前沿问答)
 
 ---
 
-**Q: Do I need a Computer Science degree?**
-
-A: No. Self-taught operators reach GREATEST. Many of the best operators in the world have no formal degree. That said, a CS degree accelerates Phase 0 significantly because it builds the theoretical foundations -- algorithms, data structures, computer architecture, operating system theory -- that you will otherwise spend months teaching yourself. The degree does not give you operational skill. Practice gives you that. If you have a CS background, use it to compress Phase 0 and Phase 3 theory. If you don't, spend extra time on the fundamentals sections and accept that Phase 0 will take longer. Everything from Phase 1 forward is built entirely from practice, not from a classroom.
+## 第一部分：入门
 
 ---
 
-**Q: Where do I even start if I know absolutely nothing?**
+**问：我需要计算机科学（CS）学位吗？**
 
-A: In this order, with no skipping:
-
-1. Learn to use Linux. Not Kali yet -- Ubuntu or any standard distro. Navigate the filesystem, use the terminal, write a basic bash script. Two weeks of daily use.
-2. Learn Python basics. Variables, loops, functions, file I/O, making HTTP requests. Write ten small programs. Do not proceed until you can read Python code written by someone else and understand it line by line.
-3. Read The C Programming Language by Kernighan and Ritchie. All of it. Do the exercises.
-4. Set up a virtual machine lab (VirtualBox or VMware, both free). Get Kali Linux running as a VM.
-5. Start Phase 0 of this roadmap.
-
-If you are not willing to do those five steps in sequence, this roadmap is not for you yet. Come back when you are.
+答：不需要。自学出身的操作员同样能走到 GREATEST。世界上最顶尖的操作员里，很多人并没有正式学位。话虽如此，CS 学位能显著加速 Phase 0，因为它打下理论基础——算法、数据结构、计算机体系结构、操作系统理论——否则你要花好几个月自学这些内容。学位本身不会给你作战技能，技能来自实践。如果你有 CS 背景，就用它压缩 Phase 0 和 Phase 3 的理论部分；如果没有，就在基础章节多花时间，并接受 Phase 0 会更长。从 Phase 1 往后的所有内容，全部建立在实践之上，而非课堂之上。
 
 ---
 
-**Q: How old do I need to be to start?**
+**问：如果我完全零基础，该从哪里开始？**
 
-A: There is no minimum. Technical ability develops at any age. The constraint is patience, not youth. Some of the most capable operators started as teenagers. Others started in their thirties. The path takes 5 to 8 years of consistent effort regardless of when you begin. Start now.
+答：按下面的顺序来，一步都不要跳：
 
----
+1. 先学会用 Linux。暂时不要用 Kali——用 Ubuntu 或任意标准发行版。熟悉文件系统、使用终端、写一个简单的 bash 脚本。每天用，坚持两周。
+2. 学 Python 基础。变量、循环、函数、文件 I/O、发起 HTTP 请求。写十个小程序。在你能读懂别人写的 Python 代码并逐行理解之前，不要往下走。
+3. 读 Kernighan 和 Ritchie 的 The C Programming Language。整本读完，做完习题。
+4. 搭建虚拟机实验环境（VirtualBox 或 VMware，两者都免费）。把 Kali Linux 跑在虚拟机里。
+5. 开始本路线图的 Phase 0。
 
-**Q: Is this only for people who want to work in security professionally?**
-
-A: No. The roadmap builds skills. What you do with those skills is your choice. Some people build careers in red team operations, penetration testing, or vulnerability research. Some build tools. Some compete in CTFs. Some do it because they want to understand how systems work at the deepest level. The roadmap does not assume a professional destination. It assumes curiosity and willingness to do hard work for years.
-
----
-
-## PART 2: HARDWARE, OS, AND ENVIRONMENT
+如果你不愿意按顺序做完这五步，那这条路图现在还不适合你。等你愿意了再回来。
 
 ---
 
-**Q: What laptop or computer do I need?**
+**问：开始学习有年龄下限吗？**
 
-A: Minimum and recommended specifications:
+答：没有下限。技术能力在任何年龄都能发展。真正的限制是耐心，而不是年轻。有些最有能力的操作员从十几岁就开始，另一些人三十多岁才起步。无论何时开始，这条路都需要 5 到 8 年的持续投入。现在就开始。
 
-| Component | Minimum | Recommended | Phase 4+ |
+---
+
+**问：这份路线图只面向想从事安全行业的人吗？**
+
+答：不是。路线图负责构建技能，技能拿来做什么由你决定。有人借此进入红队作战、渗透测试或漏洞研究领域；有人做工具；有人打 CTF；也有人只是想在最底层理解系统如何运转。路线图不预设职业终点，它预设的是好奇心和多年苦干的意愿。
+
+---
+
+## 第二部分：硬件、操作系统与环境
+
+---
+
+**问：我需要什么样的笔记本电脑或电脑？**
+
+答：最低配置与推荐配置：
+
+| 组件 | 最低配置 | 推荐配置 | Phase 4+ |
 |-----------|---------|-------------|---------|
-| CPU | 4 cores, any modern i5 / Ryzen 5 | 8 cores, i7 / Ryzen 7 | 8+ cores with nested virtualization support |
-| RAM | 8 GB (painful) | 16 GB (Phase 0-2 comfortable) | 32-64 GB for full AD lab |
-| Storage | 256 GB SSD | 512 GB NVMe SSD | 1 TB+ NVMe |
-| GPU | Not required | Not required | Not required for most tracks |
+| CPU | 4 核，任意现代 i5 / Ryzen 5 | 8 核，i7 / Ryzen 7 | 8 核以上并支持嵌套虚拟化 |
+| 内存 | 8 GB（会很痛苦） | 16 GB（Phase 0-2 较舒适） | 32-64 GB，用于完整 AD 实验环境 |
+| 存储 | 256 GB SSD | 512 GB NVMe SSD | 1 TB+ NVMe |
+| GPU | 不需要 | 不需要 | 大多数方向不需要 |
 
-For Phase 0 through Phase 2, any modern laptop with 8 GB of RAM and an SSD runs Kali in a VM and connects to cloud labs (TryHackMe, HackTheBox). Phase 3 and beyond requires more RAM to run multiple VMs simultaneously. Do not wait for perfect hardware. Start with what you have. Upgrade when your lab requirements outgrow it.
+Phase 0 到 Phase 2 阶段，任何一台配备 8 GB 内存和 SSD 的现代笔记本都能在虚拟机里跑 Kali，并连接云实验平台（TryHackMe、HackTheBox）。Phase 3 及以后需要更多内存来同时运行多台虚拟机。不要等完美硬件，用手上的设备开始，等实验环境的需求超出它的能力时再升级。
 
 ---
 
-**Q: Which Linux distribution should I use? Kali, Parrot, or something else?**
+**问：我该用哪个 Linux 发行版？Kali、Parrot，还是别的？**
 
-A: Start with Kali Linux 2024+. It is the industry standard, pre-loaded with the tools you will use, and has the most community support. When something breaks, the fix is one search away.
+答：从 Kali Linux 2024+ 开始。它是行业标准，预装了你将用到的工具，社区支持也最广。出问题时，搜索一下就能找到解决方案。
 
-Comparison:
+对比：
 
-| Distro | Pros | Cons | Recommendation |
+| 发行版 | 优点 | 缺点 | 建议 |
 |--------|------|------|----------------|
-| Kali Linux | Tools pre-installed, massive community, industry standard | Heavy, some bloat | Start here |
-| Parrot OS | Lighter, privacy-focused, good for lower-RAM machines | Smaller community | Good alternative if RAM is tight |
-| BlackArch | Enormous tool repository | Complex, not beginner-friendly | Phase 3+ only |
-| Custom Ubuntu/Arch | Full control, understand every package | Significant setup time | Phase 4+ when you know what you need |
+| Kali Linux | 工具预装、社区庞大、行业标准 | 体积大、有些冗余组件 | 从这里开始 |
+| Parrot OS | 更轻量、注重隐私、适合低内存机器 | 社区较小 | 内存紧张时是不错的替代 |
+| BlackArch | 工具仓库极大 | 复杂，不适合新手 | 仅 Phase 3+ |
+| 自定义 Ubuntu/Arch | 完全可控，能弄清每个软件包 | 搭建耗时明显 | 到 Phase 4+ 知道自己需要什么时再做 |
 
-The reason operators eventually build custom environments is not because Kali is bad -- it is because at Phase 4 you want to know exactly what is installed and why. That understanding comes from using Kali first, learning what the tools are, and then making deliberate choices about your environment. Do not build a custom setup before you understand the defaults.
-
----
-
-**Q: Virtual machines or real hardware for my lab?**
-
-A: Virtual machines for almost everything. Real hardware for specific cases.
-
-Use VMs for: all Phase 0 through Phase 3 work, web application testing, Active Directory labs, network exploitation, malware analysis (isolated VM), C2 framework practice.
-
-Use real hardware for: kernel driver debugging when VM limitations matter, DMA attack research (Direct Memory Access requires physical PCIe slots), JTAG extraction and hardware teardown, SDR (Software-Defined Radio) work (USB SDR devices connected to physical host), wireless attack practice with real adapters.
-
-The snapshot capability of VMs is critical for learning. You can break a machine completely, revert to a clean snapshot, and try again in 30 seconds. That feedback loop is what accelerates skill development. Real hardware does not offer this.
+操作员最终会自建环境，原因不是 Kali 不好——而是到了 Phase 4，你会希望确切知道自己装了什么、为什么装。这种理解来自先使用 Kali、弄清这些工具是什么，然后对自己的环境做出有意识的选择。在理解默认配置之前，不要自建环境。
 
 ---
 
-**Q: Which hypervisor should I use?**
+**问：实验环境用虚拟机还是真机？**
 
-A: Depends on your phase and host OS.
+答：几乎所有场景都用虚拟机，特定场景才用真机。
 
-| Hypervisor | Cost | Platform | Best For |
+以下场景用虚拟机：Phase 0 到 Phase 3 的全部工作、Web 应用测试、Active Directory 实验、网络漏洞利用、恶意软件分析（隔离虚拟机）、C2 框架练习。
+
+以下场景用真机：虚拟机限制会造成影响的场景下的内核驱动调试、DMA 攻击研究（直接内存访问需要物理 PCIe 插槽）、JTAG 提取与硬件拆解、SDR（软件定义无线电）工作（USB SDR 设备接在物理主机上）、使用真实网卡的无线攻击练习。
+
+虚拟机的快照能力对学习至关重要。你可以把一台机器彻底搞坏，回滚到干净快照，30 秒后重新开始。正是这个反馈循环加速了技能成长，真机做不到这一点。
+
+---
+
+**问：我该用哪个虚拟机管理程序（hypervisor）？**
+
+答：取决于你所处的阶段和宿主操作系统。
+
+| 虚拟机管理程序 | 费用 | 平台 | 最适合 |
 |------------|------|----------|---------|
-| VMware Workstation Pro | Free (personal use since 2024 Broadcom change) | Windows / Linux | Best performance, most stable. Current primary recommendation. |
-| VirtualBox | Free | Windows / Linux / macOS | Good for beginners. Slightly lower performance than VMware. |
-| Proxmox VE | Free | Bare metal Linux | Phase 4+ operators running full enterprise lab simulations. Web-based management. Handles 5-8+ concurrent VMs efficiently. |
-| QEMU/KVM | Free | Linux only | Best raw performance on Linux hosts. More complex setup. |
+| VMware Workstation Pro | 免费（2024 年 Broadcom 变更后个人使用免费） | Windows / Linux | 性能最佳、最稳定。当前首选推荐。 |
+| VirtualBox | 免费 | Windows / Linux / macOS | 适合新手。性能略低于 VMware。 |
+| Proxmox VE | 免费 | 裸机 Linux | 运行完整企业实验仿真的 Phase 4+ 操作员。基于 Web 的管理。可高效承载 5-8 台以上并发虚拟机。 |
+| QEMU/KVM | 免费 | 仅 Linux | Linux 宿主机上原始性能最佳。配置更复杂。 |
 
-Phase 4+ note: when you are running a Domain Controller, two workstations, a Kali attacker, an Ubuntu dev box, and a vulnerable target simultaneously, VMware and VirtualBox hit memory and CPU overhead limits. Proxmox on bare metal changes the efficiency of your lab dramatically. Consider the migration at Phase 3-4 transition.
-
----
-
-**Q: Do I need a dedicated machine for my lab or can I use my main computer?**
-
-A: You can start on your main machine with VMs. At Phase 4, consider a dedicated lab machine or bare-metal Proxmox install. The main risk of using your daily driver is accidental network misconfiguration -- your malware lab VM should never be able to reach your production network. Use VirtualBox or VMware's Host-Only or Internal network modes for all lab VMs. Your Kali attacker gets NAT for internet access; all targets get Internal network only.
+Phase 4+ 提示：当你同时运行一台域控制器、两台工作站、一台 Kali 攻击机、一台 Ubuntu 开发机和一台易受攻击目标时，VMware 和 VirtualBox 会撞上内存与 CPU 开销的上限。裸机上的 Proxmox 会显著改变实验环境的效率。建议在 Phase 3 到 Phase 4 的过渡期考虑迁移。
 
 ---
 
-**Q: What specialized hardware do I need for Phase 4G (Hardware/Embedded) and Phase 6 (Special Operations)?**
+**问：我需要为实验环境专门配一台机器，还是可以用主力电脑？**
 
-A: Beyond a virtualization host, specialized tracks require targeted physical equipment. Do not buy everything upfront; purchase gear only when entering the corresponding phase:
+答：可以从主力电脑上的虚拟机开始。到 Phase 4 时，考虑一台专用实验机或裸机安装 Proxmox。使用日常主力机的最大风险是网络误配置——你的恶意软件实验虚拟机绝不应该能访问生产网络。所有实验虚拟机都使用 VirtualBox 或 VMware 的 Host-Only 或 Internal 网络模式。Kali 攻击机用 NAT 获得互联网访问，所有目标只用 Internal 网络。
 
-| Phase | Specialized Hardware Kit | Approximate Cost | Practical Purpose |
+---
+
+**问：Phase 4G（硬件/嵌入式）和 Phase 6（特种作战）需要什么专用硬件？**
+
+答：除虚拟化主机之外，专业方向还需要针对性的物理设备。不要一次性全买；只在进入相应阶段时采购：
+
+| Phase | 专用硬件套件 | 大致费用 | 实际用途 |
 |---|---|---|---|
-| **Phase 4G** | Raspberry Pi 4 / 5, USB-to-UART serial adapter (FTDI FT232RL), multimeter | ~$60-90 | Hardware console discovery, UART pinout identification, basic embedded reverse engineering |
-| **Phase 4G** | JTAG/SWD Debugger (J-Link EDU Base / Tigard), SOIC8 test clip | ~$70-120 | EEPROM dumping, in-circuit firmware extraction, micro-controller memory inspection |
-| **Phase 4G** | RTL-SDR v4 + HackRF One + Portapack H2 | ~$40-250 | Software-defined radio sniffing, signal replay attacks (sub-GHz, GPS, ADS-B, ISM band) |
-| **Phase 4G** | CANable 2.0 (or Macchina M2) + OBD-II breakout cable | ~$40-80 | Automotive bus fuzzing, CAN packet injection, vehicle diagnostics exploitation |
-| **Phase 6** | SouthOrd PXS-14 / Sparrows lockpick set, practice acrylic locks, bump keys | ~$45-75 | Mechanical pin tumbler picking, bypass tools, impressioning |
-| **Phase 6** | Proxmark3 RDV4 (or Flipper Zero) | ~$170-300 | 125 kHz / 13.56 MHz RFID/NFC badge interrogation, replay, and brute-force simulation |
-| **Phase 6** | Hak5 LAN Turtle, USB Rubber Ducky, WiFi Pineapple | ~$100-300 | Physical network implants, covert out-of-band reverse shells, rogue AP deployment |
-| **Phase 6** | DJI Mini 4 Pro or commercial thermal drone (e.g., DJI Mavic 3T) | ~$800-4,500 | Aerial reconnaissance, physical perimeter inspection, thermal HVAC/server room mapping |
+| **Phase 4G** | Raspberry Pi 4 / 5、USB 转 UART 串口适配器（FTDI FT232RL）、万用表 | 约 60-90 美元 | 硬件控制台发现、UART 针脚定义识别、基础嵌入式逆向 |
+| **Phase 4G** | JTAG/SWD 调试器（J-Link EDU Base / Tigard）、SOIC8 测试夹 | 约 70-120 美元 | EEPROM 转储、在线固件提取、微控制器内存检查 |
+| **Phase 4G** | RTL-SDR v4 + HackRF One + Portapack H2 | 约 40-250 美元 | 软件定义无线电嗅探、信号重放攻击（sub-GHz、GPS、ADS-B、ISM 频段） |
+| **Phase 4G** | CANable 2.0（或 Macchina M2）+ OBD-II 转接电缆 | 约 40-80 美元 | 车载总线模糊测试、CAN 数据包注入、车辆诊断利用 |
+| **Phase 6** | SouthOrd PXS-14 / Sparrows 开锁工具套装、练习用亚克力锁、撞匙 | 约 45-75 美元 | 机械弹子锁开启、旁路工具、印模开锁 |
+| **Phase 6** | Proxmark3 RDV4（或 Flipper Zero） | 约 170-300 美元 | 125 kHz / 13.56 MHz RFID/NFC 门禁卡读取、重放与暴力模拟 |
+| **Phase 6** | Hak5 LAN Turtle、USB Rubber Ducky、WiFi Pineapple | 约 100-300 美元 | 物理网络植入、隐蔽带外反弹 shell、流氓 AP 部署 |
+| **Phase 6** | DJI Mini 4 Pro 或商用热成像无人机（如 DJI Mavic 3T） | 约 800-4,500 美元 | 空中侦察、物理周界检查、暖通空调与机房热分布测绘 |
 
-Start with low-cost components (serial adapters, RTL-SDR, basic lockpicks) before investing in dedicated RF or drone hardware. For detailed specifications and topologies, reference the [Lab Setup Guide](Lab_Setup_Guide.md).
-
----
-
-## PART 3: LEARNING PATH AND METHODOLOGY
+先从小成本组件（串口适配器、RTL-SDR、基础开锁工具）入手，再考虑投入专用射频或无人机硬件。详细规格与拓扑请参考[实验环境搭建指南](Lab_Setup_Guide.md)。
 
 ---
 
-**Q: What is the correct programming language priority?**
+## 第三部分：学习路径与方法
 
-A: C first, always.
+---
 
-| Priority | Language | Why | When You Need It |
+**问：编程语言的正确优先级是什么？**
+
+答：C 永远排第一。
+
+| 优先级 | 语言 | 原因 | 何时需要 |
 |----------|----------|-----|-----------------|
-| 1 | C | Memory management, pointers, stack and heap behavior are the foundation of exploitation. You cannot understand buffer overflows, use-after-free, or format string vulnerabilities without C. | Phase 0, Phase 3 |
-| 2 | Python | Scripting, automation, pwntools for binary exploitation, custom tooling, rapid prototyping. | Phase 1 onward |
-| 3 | x86-64 Assembly | Read it fluently. Write it for shellcode. You will be reading disassembly in IDA and Ghidra -- you must understand it. | Phase 3 |
-| 4 | C++ | Windows implant development, driver development, custom C2 components. | Phase 4A-4E |
-| 5 | PowerShell | Active Directory attacks, Windows post-exploitation, living-off-the-land scripting. | Phase 2-4I |
-| 6 | Go or Rust | Production tool development. Go for C2 servers and tooling. Rust for performance-critical components. | Phase 4+ |
-| 7 | Bash | Everything. Write it from day one, refine it forever. | Phase 0 onward |
+| 1 | C | 内存管理、指针、栈与堆的行为是漏洞利用的基础。不懂 C 就无法理解缓冲区溢出、use-after-free 或格式化字符串漏洞。 | Phase 0、Phase 3 |
+| 2 | Python | 脚本、自动化、用于二进制利用的 pwntools、自定义工具、快速原型开发。 | Phase 1 起 |
+| 3 | x86-64 汇编 | 能流畅阅读，为编写 shellcode 而会写。你将在 IDA 和 Ghidra 中阅读反汇编——必须理解它。 | Phase 3 |
+| 4 | C++ | Windows 植入体开发、驱动开发、自定义 C2 组件。 | Phase 4A-4E |
+| 5 | PowerShell | Active Directory 攻击、Windows 后渗透、living-off-the-land 脚本。 | Phase 2-4I |
+| 6 | Go 或 Rust | 生产级工具开发。C2 服务器和工具用 Go，性能关键组件用 Rust。 | Phase 4+ |
+| 7 | Bash | 一切。第一天就开始写，永远打磨。 | Phase 0 起 |
 
-Do not start with Go or Rust. Do not start with JavaScript. Do not start with C++ before C. The order matters because each language builds on the mental model from the one before it.
-
----
-
-**Q: Windows or Linux focus?**
-
-A: Both. You do not get to choose.
-
-Corporate targets run Windows Active Directory. Most servers run Linux. Binaries you will analyze run on both. Implants you will write are Windows-primary. Exploitation environments and tooling are Linux-primary.
-
-The sequence: start with Linux for Phase 0 through 2. You need Linux comfort before anything else because your attack platform is Linux, your scripting is Linux, and your binary exploitation environment is Linux. Add deep Windows knowledge in Phase 2 through Phase 4I. By Phase 4, your Windows internals depth should match your Linux depth.
-
-macOS: add in Phase 4 if your targets include Apple platforms. macOS requires Phase 4E+ skills to attack meaningfully because of the TCC framework, SIP (System Integrity Protection), and Apple Silicon's PAC (Pointer Authentication Codes). Do not prioritize macOS over Windows at any point before Phase 4.
+不要从 Go 或 Rust 开始，不要从 JavaScript 开始，也不要在学 C 之前学 C++。顺序很重要，因为每门语言都建立在前一门语言的心智模型之上。
 
 ---
 
-**Q: How long does it take to become dangerous?**
+**问：主攻 Windows 还是 Linux？**
 
-A: Depends heavily on your starting point. These timelines assume consistent effort of 20-30 hours per week:
+答：两者都要。你没得选。
 
-| Starting Background | Phase 0 Complete | Phase 2 Complete | Phase 3 Complete | Phase 4 Depth | GREATEST |
+企业目标运行 Windows Active Directory，大多数服务器运行 Linux。你要分析的二进制在两者上都有。你要编写的植入体以 Windows 为主，漏洞利用环境与工具链以 Linux 为主。
+
+顺序：Phase 0 到 2 先用 Linux。你必须先熟悉 Linux，因为你的攻击平台是 Linux，脚本环境是 Linux，二进制利用环境也是 Linux。Phase 2 到 Phase 4I 期间补上深入的 Windows 知识。到 Phase 4 时，你的 Windows 内部原理深度应与 Linux 相当。
+
+macOS：如果目标包含 Apple 平台，在 Phase 4 补上。要有效地攻击 macOS，需要 Phase 4E+ 的技能，因为存在 TCC 框架、SIP（System Integrity Protection）和 Apple Silicon 的 PAC（Pointer Authentication Codes）。在 Phase 4 之前，任何时候都不要把 macOS 的优先级排在 Windows 之上。
+
+---
+
+**问：要变得“有威胁”需要多久？**
+
+答：很大程度上取决于你的起点。以下时间线假设你每周持续投入 20-30 小时：
+
+| 起点背景 | Phase 0 完成 | Phase 2 完成 | Phase 3 完成 | Phase 4 深度 | GREATEST |
 |--------------------|-----------------|-----------------|-----------------|---------------|---------|
-| Complete beginner (no code, no Linux) | 4-8 months | 18-30 months | 30-42 months | 48-72 months | 7-10 years |
-| Some coding, no security | 2-4 months | 12-20 months | 24-36 months | 36-54 months | 5-8 years |
-| CS graduate, no security | 1-2 months | 8-14 months | 18-28 months | 30-48 months | 4-7 years |
-| Security adjacent (IT, sysadmin) | 1-3 months | 8-15 months | 20-30 months | 36-54 months | 5-8 years |
+| 完全零基础（不会编程、没用过 Linux） | 4-8 个月 | 18-30 个月 | 30-42 个月 | 48-72 个月 | 7-10 年 |
+| 有一些编程基础，无安全经验 | 2-4 个月 | 12-20 个月 | 24-36 个月 | 36-54 个月 | 5-8 年 |
+| CS 科班毕业，无安全经验 | 1-2 个月 | 8-14 个月 | 18-28 个月 | 30-48 个月 | 4-7 年 |
+| 与安全相邻（IT、系统管理） | 1-3 个月 | 8-15 个月 | 20-30 个月 | 36-54 个月 | 5-8 年 |
 
-What "dangerous" means by phase:
-- Phase 2 complete: You can compromise most unpatched or misconfigured enterprise networks given access. You are a real threat to organizations that have not invested in hardening.
-- Phase 3 complete: You can exploit services, develop working exploits from advisories, and adapt when standard tools fail. You are dangerous to most organizations.
-- Phase 4 depth: You are a threat to hardened environments with EDR, modern AD hardening, and a security team. You are in the top 5% of practitioners.
-- Phase 5 / GREATEST: You discover new vulnerabilities. You build techniques others use. You are in the top 0.0001%. This requires years of Phase 4 residency and original research.
+各阶段的“有威胁”意味着什么：
+- Phase 2 完成：只要获得访问权限，你就能攻陷大多数未打补丁或配置错误的企业网络。对没有在加固上投入的组织而言，你是真正的威胁。
+- Phase 3 完成：你能利用服务漏洞，能根据安全公告开发出可用的利用程序，并在标准工具失效时随机应变。你对大多数组织都有威胁。
+- Phase 4 深度：你能威胁到部署了 EDR、完成现代 AD 加固并拥有安全团队的强化环境。你属于从业者中的前 5%。
+- Phase 5 / GREATEST：你发现新的漏洞。你创造的技法被别人使用。你属于前 0.0001%。这需要多年深耕 Phase 4 并开展原创研究。
 
-The timelines compress if you obsess. They expand if you are casual about it. There is no shortcut, but there is an accelerant: build something every single day. The gap between people who reach Phase 4 and people who stall at Phase 2 is almost entirely explained by whether they are building or just reading.
-
----
-
-**Q: Do CTFs matter?**
-
-A: Yes, through Phase 3. Required, not optional.
-
-CTFs train precision. Every challenge has a defined solution and verifiable flag. You know when you have it and when you don't. Real-world environments give you no such feedback -- you can spend a week on a path that leads nowhere. CTFs build the problem-solving discipline and tool fluency you need before facing that ambiguity.
-
-How to use CTFs correctly:
-- Compete live when possible (CTFtime.org lists upcoming events)
-- After the competition, read every write-up for challenges you couldn't solve. This is where most learning happens.
-- At Phase 0-1: PicoCTF, TryHackMe CTF rooms
-- At Phase 2: HackTheBox, TryHackMe hard rooms, basic CTF competitions
-- At Phase 3: HackTheBox challenges, pwnable.kr, pwnable.tw, Google CTF
-- At Phase 4: Flare-On (reverse engineering), high-difficulty CTF challenges, Pwn2Own adjacent research
-
-After Phase 3, CTFs become a supplement rather than the primary training vehicle. Real-world complexity and ambiguity, which CTFs cannot replicate, becomes the primary training ground.
+如果你痴迷投入，时间线会压缩；如果你三天打鱼，时间线会拉长。没有捷径，但有一个加速器：每天都动手造点东西。能走到 Phase 4 的人和卡在 Phase 2 的人，差距几乎完全在于他们是在动手构建，还是只是在阅读。
 
 ---
 
-**Q: How do I know when I am ready to move to the next phase?**
+**问：打 CTF 有用吗？**
 
-A: Use this decision process before every phase transition:
+答：有用，直到 Phase 3 为止。是必需项，不是可选项。
+
+CTF 训练精确性。每道题都有确定的解法和可验证的 flag。你清楚自己解出来没有。真实环境不会给你这种反馈——你可能花一周走在一条死路上。CTF 能培养你在面对这种模糊性之前所需的解题纪律和工具熟练度。
+
+正确使用 CTF 的方式：
+- 尽量参加实时比赛（CTFtime.org 列出即将举行的赛事）
+- 比赛结束后，读完你没能解出的每道题的 writeup。大部分学习发生在这里。
+- Phase 0-1：PicoCTF、TryHackMe 的 CTF rooms
+- Phase 2：HackTheBox、TryHackMe 的 hard rooms、基础 CTF 赛事
+- 在阶段 3：HackTheBox challenges、pwnable.kr、pwnable.tw、Google CTF
+- Phase 4：Flare-On（逆向工程）、高难度 CTF 题目、Pwn2Own 相关研究
+
+Phase 3 之后，CTF 变成补充手段，而非主要训练途径。真实世界的复杂性与模糊性——这是 CTF 无法复制的——会成为主要训练场。
+
+---
+
+**问：我怎么知道何时可以进入下一阶段？**
+
+答：在每次阶段转换前，用下面这套决策流程：
 
 <div align="center">
 <table><tr><td>
 
-<img src="../assets/diagrams/FAQ/1._How_do_I_know_when_I_am_ready_to_move_to_the_next_phase.png" alt="Q: How do I know when I am ready to move to the next phase?" width="500"/>
+<img src="../assets/diagrams/FAQ/1._How_do_I_know_when_I_am_ready_to_move_to_the_next_phase.png" alt="问：我怎么知道何时可以进入下一阶段？" width="500"/>
 
 </td></tr></table>
 </div>
 
-The most common mistake is treating a phase as complete when you have read through it but not built anything with it. Reading is not the same as knowing. Knowing is demonstrated by building and breaking without assistance.
+最常见的错误，是把“读完了”当成“阶段完成”，却没有用它做出任何东西。读过不等于掌握。掌握要通过在无人帮助下构建和破坏来证明。
 
 ---
 
-**Q: How do I document my learning?**
+**问：我该如何记录学习过程？**
 
-A: Documentation is not optional. It is the mechanism that converts experience into retrievable knowledge. Operators who do not write things down re-learn the same things repeatedly.
+答：文档记录不是可选项。它是把经验转化为可检索知识的机制。不把东西写下来的操作员，会一遍又一遍地重学同样的内容。
 
-Recommended system:
+推荐体系：
 
-- Keep a private technical wiki. Obsidian (free, offline, markdown-based) is the standard choice. Notion works if you prefer cloud-based. Plain markdown files in a git repository work fine.
-- Write up every machine and challenge you solve, even if you never publish it. Include: the vulnerability, why it existed, the exploit chain, what tools you used, what failed before it worked, and what you would do differently.
-- Keep a commands reference file. As you discover commands and flags that solve real problems, add them with context. "Why did I run this" is more valuable than "what does this flag do."
-- Track your tool inventory. What you have installed, what it does, and when you last used it.
-- Optional public blog. Writing for an audience forces clarity of thinking. If you can explain a technique clearly to someone who has never seen it, you understand it. The community rewards quality writeups with connections and opportunities.
-
----
-
-**Q: How do I stay current with the field when it moves this fast?**
-
-A: Sustainable current-awareness system, not information overload:
-
-Daily (5-10 minutes): Check CISA advisories and NVD for critical CVEs. These arrive as email alerts -- subscribe at nvd.nist.gov.
-
-Weekly (30-60 minutes): Read Tier 1 blogs (Project Zero, Trail of Bits, SpecterOps, PortSwigger Research). Subscribe to their RSS feeds. One good technical post per week is enough to stay ahead of most practitioners.
-
-Monthly (2-4 hours): Watch DEF CON and Black Hat talks published in the previous month on YouTube. Read Mandiant M-Trends or CrowdStrike GTR when they publish annually.
-
-Continuously: Compete in CTFs (CTFtime.org). Practice produces current awareness as a side effect because CTF challenges often reference recent techniques and CVEs.
-
-Do not try to read everything. The field is too large. Depth in your specialty plus breadth awareness in adjacent areas is the sustainable pattern. Pick your specialization direction at Phase 3 and invest deeper there.
+- 维护一个私人的技术 wiki。Obsidian（免费、离线、基于 markdown）是标准选择。喜欢云端就用 Notion。放在 git 仓库里的普通 markdown 文件也完全可行。
+- 每攻陷一台机器、每解出一道题都写下来，哪怕从不公开。内容包括：漏洞是什么、为何存在、利用链、用了哪些工具、成功前失败过什么、以及你会怎样做得不同。
+- 维护一份命令速查文件。当你发现能解决真实问题的命令和参数时，连同上下文一起记下。“我为什么跑这条命令”比“这个参数是干什么的”更有价值。
+- 追踪你的工具清单：装了什么、做什么用、上次使用是什么时候。
+- 可选的公开博客。写给读者看会迫使你理清思路。如果你能向从未见过某项技术的人讲清楚它，你就真正理解了它。社区会用连接与机会回报高质量的 writeup。
 
 ---
 
-**Q: Should I specialize or stay generalist?**
+**问：这个领域变化这么快，我该怎么跟上？**
 
-A: Both, in sequence. Generalist first. Specialist second.
+答：建立可持续的信息更新体系，而不是信息过载：
+
+每天（5-10 分钟）：查看 CISA 公告和 NVD 上的高危 CVE。这些以邮件告警形式送达——在 nvd.nist.gov 订阅。
+
+每周（30-60 分钟）：读 Tier 1 博客（Project Zero、Trail of Bits、SpecterOps、PortSwigger Research）。订阅它们的 RSS。每周一篇优质技术文章，就足以领先大多数从业者。
+
+每月（2-4 小时）：在 YouTube 上看上个月发布的 DEF CON 和 Black Hat 演讲。每年读一次 Mandiant M-Trends 或 CrowdStrike GTR 的年度报告。
+
+持续进行：参加 CTF（CTFtime.org）。练习会顺带产生信息更新，因为 CTF 题目经常引用近期技术与 CVE。
+
+不要试图读完所有内容，这个领域太大了。在自己的专长上求深，在相邻领域保持广度认知，才是可持续的模式。在 Phase 3 选定专精方向，并在那里投入更深。
+
+---
+
+**问：我该专精，还是保持通才？**
+
+答：两者都要，但分先后。先通才，后专精。
 
 <div align="center">
 <table><tr><td>
 
-<img src="../assets/diagrams/FAQ/2._Should_I_specialize_or_stay_generalist.png" alt="Q: Should I specialize or stay generalist?" width="1400"/>
+<img src="../assets/diagrams/FAQ/2._Should_I_specialize_or_stay_generalist.png" alt="问：我该专精，还是保持通才？" width="1400"/>
 
 </td></tr></table>
 </div>
 
-The operator who specializes too early becomes brittle. A rootkit developer who has never done a web engagement cannot pivot when a target's only accessible surface is a web application. A web tester who has never touched binary analysis cannot adapt when a CVE requires custom exploit development. Build the generalist foundation through Phase 3 without compromise.
+过早专精的操作员会变得脆弱。一个从没做过 Web 项目的 rootkit 开发者，当目标唯一可触达的表面是 Web 应用时，就无法转向。一个从没碰过二进制分析的 Web 测试员，当某个 CVE 需要自行开发利用程序时，就无法适应。在 Phase 3 之前，不折不扣地打好通才基础。
 
 ---
 
-**Q: What is the biggest mistake beginners make?**
+**问：新手犯的最大错误是什么？**
 
-A: Tool dependency without understanding. Running sqlmap without understanding SQL injection. Running Metasploit without understanding what the exploit does. Using BloodHound without understanding the AD paths it draws. Tools are accelerators for people who already understand the technique. They are a trap for people who use them as a substitute for understanding.
+答：依赖工具却不理解原理。不懂 SQL 注入就用 sqlmap；不懂利用程序在做什么就用 Metasploit；不懂它画出的 AD 路径就用 BloodHound。对已经理解技术的人，工具是加速器；把工具当作理解替代品的人，工具就是陷阱。
 
-The sign you are making this mistake: when a tool fails or a target is not vulnerable to the standard tool chain, you have nothing to try next. The operator who understands the technique manually has infinite ways forward. The operator who only knows the tool has one.
+你正在犯这个错误的信号是：当工具失效，或目标对标准工具链不敏感时，你没有任何下一步可试。理解技术原理的操作员有无数条前进路径；只会用工具的操作员只有一条。
 
-Other major mistakes:
-- Skipping phases because something in Phase 4 looks exciting
-- Using cloud labs exclusively and never building a local lab (cloud labs reset, your local lab accumulates knowledge)
-- Treating certification as the goal instead of skill as the goal
-- Staying in "learning mode" (consuming content) instead of "building mode" (making things and breaking things)
-- Not reading writeups after CTF challenges -- this is where most Phase 0-3 learning is lost
-
----
-
-## PART 4: CERTIFICATIONS AND COURSES
+其他重大错误：
+- 因为 Phase 4 的某些内容看起来很酷就跳过前面的阶段
+- 只做云实验平台，从不搭建本地实验环境（云平台会重置，本地环境会沉淀知识）
+- 把拿证当目标，而不是把技能当目标
+- 停留在“学习模式”（消费内容），而不是“构建模式”（动手造东西、拆东西）
+- CTF 题目结束后不读 writeup——Phase 0-3 的大部分学习就流失在这里
 
 ---
 
-**Q: Which certification should I get first?**
+## 第四部分：认证与课程
 
-A: The correct certification timeline based on your phase:
+---
+
+**问：我应该先考哪个认证？**
+
+答：基于你所处阶段的正确认证时间线：
 
 <div align="center">
 <table><tr><td>
 
-<img src="../assets/diagrams/FAQ/3._Which_certification_should_I_get_first.png" alt="Q: Which certification should I get first?" width="1200"/>
+<img src="../assets/diagrams/FAQ/3._Which_certification_should_I_get_first.png" alt="问：我应该先考哪个认证？" width="1200"/>
 
 </td></tr></table>
 </div>
 
-Correct sequence: OSCP first (it is the entry-level professional gate), then CRTO or CRTE depending on your specialization direction (red team operations vs. AD depth), then OSED if you are going toward binary exploitation, then OSEP for hardened enterprise environments.
+正确顺序：先 OSCP（它是入门级职业门槛），然后根据专精方向选 CRTO 或 CRTE（红队作战 vs. AD 深度），若走二进制利用方向再考 OSED，面向强化企业环境则考 OSEP。
 
-Do not take OSCP before Phase 2 completion. You will waste $1,499 on a course that requires skills you have not built. The course is not where you learn -- the course is where you validate.
-
----
-
-**Q: Should I get CompTIA Security+ or eJPT before OSCP?**
-
-A: Security+: No, if GREATEST is your goal. Security+ tests broad conceptual knowledge useful for corporate compliance roles. It does not build offensive skill. It does not accelerate your path to OSCP. If you need it for employment while building skills, get it. If you are on the pure technical development path, skip it.
-
-eJPT (INE Junior Penetration Tester): Optional. It is a legitimate confidence check after Phase 1, costs under $200, and covers basic pentesting methodology. It does not substitute for OSCP and does not replace Phase 2 work. Take it if you want a milestone validation at Phase 1-2 transition. Skip it if you are comfortable with your own assessment of your Phase 1 completion.
-
-The rule: Certifications test what you already know. Build the skill first. The cert follows. Never chase a cert to learn the skill.
+不要在完成 Phase 2 之前考 OSCP。你会为一门要求你尚未具备的技能课程白白花掉 1,499 美元。课程不是学习的地方——课程是验证的地方。
 
 ---
 
-**Q: Is the OSCP worth it?**
+**问：在 OSCP 之前，我该先考 CompTIA Security+ 或 eJPT 吗？**
 
-A: For professional penetration testing work, yes. It is the most recognized entry-level offensive security certification. Most corporate red team and pentesting positions list it as required or strongly preferred. The lab network and 24-hour hands-on exam are genuine skill validators -- this is not a multiple choice test.
+答：Security+：如果目标是 GREATEST，不必。Security+ 考查的是对企业合规岗位有用的宽泛概念知识，不构建进攻技能，也不会加速你通往 OSCP 的进程。如果你需要用它在构建技能期间就业，那就考；如果你走纯技术成长路线，就跳过。
 
-For pure skill development as a GREATEST track operator, it is valuable but not the most efficient use of $1,499 in isolation. The CRTO and Maldev Academy courses provide higher density of current techniques per dollar. Take OSCP when: you have completed Phase 2, you are targeting professional employment, and you have the budget.
+eJPT（INE Junior Penetration Tester）：可选。它是 Phase 1 之后一次合理的信心检验，费用不到 200 美元，覆盖基础渗透测试方法论。它不能替代 OSCP，也不能取代 Phase 2 的工作。如果你想在 Phase 1-2 过渡期要一个里程碑验证，可以考；如果你对自己判断 Phase 1 是否完成有把握，就跳过。
 
----
-
-## PART 5: TECHNICAL QUESTIONS
+原则：认证考查的是你已经会的东西。先练技能，证书随后。永远不要为了学技能去追证书。
 
 ---
 
-**Q: How do I find vulnerabilities in real software?**
+**问：OSCP 值不值？**
 
-A: This is Phase 4D territory. The short answer:
+答：对职业渗透测试工作而言，值。它是最受认可的入门级进攻安全认证。大多数企业红队与渗透测试岗位都把它列为必需或强烈优先。实验网络和 24 小时实操考试是真正的技能验证——这不是选择题考试。
 
-Start with open source software because you have the source code. Code audit with grep and semgrep for known vulnerability patterns. Pair code audit with fuzzing: AFL++ is the standard fuzzer for binary targets. LibFuzzer for library-level targets. For web applications, Burp Suite's active scan combined with manual code review.
-
-The full methodology:
-
-1. Define the attack surface (what inputs can you control? what does the software parse?)
-2. Static analysis: read the code looking for memory safety issues (C/C++), injection points (any language), deserialization (Java, Python, PHP), format string issues (C/C++)
-3. Dynamic analysis: run the software with sanitizers enabled (AddressSanitizer, UndefinedBehaviorSanitizer), fuzz every input
-4. Differential analysis: compare behavior between versions to understand what changed in security-relevant code paths
-
-Move to closed source when your reverse engineering skills are strong enough to reconstruct program logic from assembly. Closed source fuzzing uses binary instrumentation (QEMU mode in AFL++, DynamoRIO, Intel PIN) instead of source-level instrumentation.
-
-The practical starting point: download an open source project (SQLite, libpng, libxml2, or any C library that processes external input), build it with sanitizers, write a fuzzer harness, run AFL++, and read the crash output when it finds something. That loop -- fuzz, crash, triage, understand -- is the foundation of vulnerability research.
+对以 GREATEST 为目标的纯技能发展而言，它有价值，但单独看并不是 1,499 美元最高效的用法。CRTO 和 Maldev Academy 的课程每美元带来的当前技术密度更高。适合考 OSCP 的时机：已完成 Phase 2、目标是职业就业、且预算允许。
 
 ---
 
-**Q: How does Active Directory exploitation work at a high level?**
+## 第五部分：技术问题
 
-A: Active Directory is the identity and access management system in most enterprise networks. Attacking it is Phase 2-4I depth, but the concept is simple: AD trusts Kerberos tickets for authentication. If you can forge, steal, or coerce those tickets, you move through the network as any user you choose.
+---
+
+**问：我如何在真实软件中找漏洞？**
+
+答：这属于 Phase 4D 的范畴。简短回答：
+
+从开源软件入手，因为你有源码。用 grep 和 semgrep 审计代码中的已知漏洞模式。把代码审计与模糊测试结合：AFL++ 是二进制目标的标准模糊测试器，库级目标用 LibFuzzer。对 Web 应用，用 Burp Suite 的主动扫描结合人工代码审查。
+
+完整方法论：
+
+1. 界定攻击面（你能控制哪些输入？软件解析什么？）
+2. 静态分析：阅读代码，寻找内存安全问题（C/C++）、注入点（任何语言）、反序列化（Java、Python、PHP）、格式化字符串问题（C/C++）
+3. 动态分析：在启用 sanitizer 的情况下运行软件（AddressSanitizer、UndefinedBehaviorSanitizer），对每个输入做模糊测试
+4. 差分分析：比较不同版本间的行为，弄清安全相关代码路径改了什么
+
+当你的逆向能力足够强，能从汇编还原程序逻辑时，再转向闭源软件。闭源模糊测试使用二进制插桩（AFL++ 的 QEMU 模式、DynamoRIO、Intel PIN），而非源码级插桩。
+
+实用的起点：下载一个开源项目（SQLite、libpng、libxml2，或任何处理外部输入的 C 库），用 sanitizer 构建，写一个模糊测试 harness，运行 AFL++，在它发现问题后阅读崩溃输出。那个循环——模糊测试、崩溃、分类、理解——是漏洞研究的基础。
+
+---
+
+**问：Active Directory 漏洞利用在高层面上是怎么运作的？**
+
+答：Active Directory 是大多数企业网络中的身份与访问管理系统。攻击它属于 Phase 2-4I 的深度，但概念很简单：AD 信任 Kerberos 票据来完成认证。如果你能伪造、窃取或胁迫这些票据，你就能以任意你选定的用户身份在网络中穿行。
 
 <div align="center">
 <table><tr><td>
 
-<img src="../assets/diagrams/FAQ/4._How_does_Active_Directory_exploitation_work_at_a_high_level.png" alt="Q: How does Active Directory exploitation work at a high level?" width="1200"/>
+<img src="../assets/diagrams/FAQ/4._How_does_Active_Directory_exploitation_work_at_a_high_level.png" alt="问：Active Directory 漏洞利用在高层面上是怎么运作的？" width="1200"/>
 
 </td></tr></table>
 </div>
 
-The depth is in the details of each technique, but the concept is: find a misconfiguration or weak credential, use it to escalate, repeat until you control the domain.
+深度在每种技术的细节里，但概念是：找到一个错误配置或弱凭据，用它提权，如此重复，直到你控制整个域。
 
 ---
 
-**Q: What is the difference between red team, penetration test, and CTF?**
+**问：红队、渗透测试和 CTF 有什么区别？**
 
-A: These are different activities that share some skills but have different goals, rules, and outputs.
+答：它们是不同的活动，共享部分技能，但目标、规则和产出各不相同。
 
-| Activity | Goal | Rules of Engagement | Output | Timescale |
+| 活动 | 目标 | 交战规则 | 产出 | 时间尺度 |
 |----------|------|--------------------|---------|----|
-| CTF | Capture a flag (solve a defined challenge) | Defined problem, clear solution exists | Score, skill development | Hours to days |
-| Penetration test | Find and document vulnerabilities in a defined scope | Defined scope, rules of engagement, no disruption | Written report with findings and remediation | Days to weeks |
-| Red team | Test detection and response capability | Minimal restrictions, black team does not know timeline | Report on detection gaps, response time, path to objective | Weeks to months |
-| Bug bounty | Find real vulnerabilities in live systems within a defined program scope | Program-specific scope, responsible disclosure required | Monetary reward, CVE credit | Ongoing, self-directed |
+| CTF | 夺取 flag（解出一道既定题目） | 问题已定义，存在明确解法 | 得分、技能成长 | 数小时到数天 |
+| 渗透测试 | 在既定范围内发现并记录漏洞 | 范围明确、有交战规则、不得造成破坏 | 含发现与修复建议的书面报告 | 数天到数周 |
+| 红队 | 检验检测与响应能力 | 限制极少，蓝队不知道时间线 | 关于检测盲区、响应时间、通往目标的路径的报告 | 数周到数月 |
+| 漏洞赏金 | 在既定项目范围内发现真实系统上的真实漏洞 | 项目特定范围，须负责任披露 | 金钱奖励、CVE 署名 | 长期、自主安排 |
 
-For GREATEST development: CTFs build precision. Bug bounty builds web breadth and real-world patience. Penetration testing builds professionalism and report-writing. Red team builds operational thinking. You want experience across all four over the course of the roadmap.
-
----
-
-**Q: What do I do when I am completely stuck?**
-
-A: Stuck is a normal state. The response to it determines whether you improve or stall.
-
-In order:
-
-1. Walk away for at least 30 minutes. Make coffee. Go outside. Your subconscious continues working on the problem when you step away. Most breakthroughs happen in the 30 minutes after you stop staring.
-2. Write out what you know. Force yourself to write every fact you have established: what the service is, what version, what you have tried, what the error messages say. Writing surfaces gaps you could not see while thinking.
-3. Read the manual. Not a tutorial -- the actual documentation for the tool or protocol. Tutorials skip edge cases. Documentation does not.
-4. Search for exactly the error message you are seeing. Not a paraphrase -- the exact string. Many problems have been solved by someone else whose exact error is indexed.
-5. Try the adjacent thing. If port 80 is not responding to your payload, what about the API endpoint? If this injection point is sanitized, what about the export function?
-6. After the CTF or challenge closes, read every writeup. Do not read writeups while the challenge is live unless you have spent at least 4-6 hours genuinely trying. The pain of being stuck is the learning.
-
-If you are stuck on a concept rather than a specific challenge, step back one phase. The prerequisite you are missing is usually one level back from where the confusion starts.
+对 GREATEST 成长而言：CTF 锻炼精确性；漏洞赏金锻炼 Web 广度与真实世界的耐心；渗透测试锻炼职业素养与报告写作；红队锻炼作战思维。在设计路线的整个过程中，你需要在四者上都积累经验。
 
 ---
 
-**Q: How do I budget for this path?**
+**问：完全卡住时我该怎么办？**
 
-A: Approximate costs by phase (2026-2027 prices):
+答：卡住是常态。如何应对，决定你是进步还是停滞。
 
-| Phase | Primary Cost | Monthly | Notes |
+按顺序：
+
+1. 至少离开 30 分钟。去煮杯咖啡，出门走走。当你抽身时，潜意识仍在处理问题。大多数突破发生在你停止死盯之后的 30 分钟里。
+2. 把已知的东西写出来。强迫自己写下已确认的每一个事实：服务是什么、什么版本、试过什么、报错信息说了什么。书写会暴露你思考时看不到的缺口。
+3. 读手册。不是教程，而是工具或协议的正式文档。教程会跳过边缘情况，文档不会。
+4. 精确搜索你看到的报错信息。不要转述，用那个确切的字符串。很多问题别人已经解决过，而他们的报错原文已被索引。
+5. 试相邻的东西。如果 80 端口对你的载荷没有响应，那 API 端点呢？如果这个注入点被过滤了，那导出功能呢？
+6. 在 CTF 或题目关闭后，读完每一篇 writeup。题目还在进行时不要看 writeup，除非你已经认真尝试了至少 4-6 小时。卡住的痛苦本身就是学习。
+
+如果你卡在概念而非具体题目上，就退回一个阶段。你缺失的前置知识，通常就在困惑开始的那一层前面。
+
+---
+
+**问：这条路线的预算该怎么规划？**
+
+答：按阶段估算的费用（2026-2027 年价格）：
+
+| 阶段 | 主要费用 | 每月 | 备注 |
 |-------|-------------|---------|-------|
-| Phase 0-1 | TryHackMe subscription | ~$14/month | PortSwigger is free. Books from library or free PDFs. |
-| Phase 2 | HackTheBox Pro | ~$14/month | OSCP at end: $1,499 one-time |
-| Phase 3 | HackTheBox + books | ~$14-30/month | Books: Practical Binary Analysis (free PDF), Shellcoder's Handbook (~$50) |
-| Phase 4 start | Sektor7 Maldev Essentials | ~$150 one-time | Best single investment at Phase 4 start |
-| Phase 4A-4C | Maldev Academy | ~$500/year | Or Sektor7 courses: ~$350 total for both |
-| Phase 4B | CRTO | ~$500 one-time | ZeroPointSecurity |
-| Phase 4I | CRTE | ~$400 one-time | Altered Security |
-| Phase 4+ | HTB Pro Labs | ~$490 per 3-month lab access | Offshore, RastaLabs |
-| Phase 4+ certs | OSEP | ~$1,499 one-time | Take after OSCP |
-| Phase 4+ certs | OSED | ~$1,499 one-time | Windows exploit dev track |
-| Phase 5 | OSEE | ~$5,000 one-time | When you are ready for it |
-| Lab hardware | One-time | $500-1,500 | Upgrade at Phase 3-4 transition |
+| Phase 0-1 | TryHackMe 订阅 | 约 14 美元/月 | PortSwigger 免费。书可以从图书馆借或找免费 PDF。 |
+| Phase 2 | HackTheBox Pro | 约 14 美元/月 | 期末 OSCP：一次性 1,499 美元 |
+| Phase 3 | HackTheBox + 书籍 | 约 14-30 美元/月 | 书：Practical Binary Analysis（免费 PDF）、Shellcoder's Handbook（约 50 美元） |
+| Phase 4 起步 | Sektor7 Maldev Essentials | 约 150 美元一次性 | Phase 4 起步阶段性价比最高的单项投入 |
+| Phase 4A-4C | Maldev Academy | 约 500 美元/年 | 或 Sektor7 课程：两门合计约 350 美元 |
+| Phase 4B | CRTO | 约 500 美元一次性 | ZeroPointSecurity |
+| Phase 4I | CRTE | 约 400 美元一次性 | Altered Security |
+| Phase 4+ | HTB Pro Labs | 每 3 个月实验权限约 490 美元 | Offshore、RastaLabs |
+| Phase 4+ 认证 | OSEP | 约 1,499 美元一次性 | 在 OSCP 之后考 |
+| Phase 4+ 认证 | OSED | 约 1,499 美元一次性 | Windows 漏洞利用开发方向 |
+| Phase 5 | OSEE | 约 5,000 美元一次性 | 等你准备好再考 |
+| 实验硬件 | 一次性 | 500-1,500 美元 | 在 Phase 3-4 过渡期升级 |
 
-Realistic 3-year total investment: $3,000 to $6,000 across everything. This sounds like a lot. Compare it to one semester of college tuition. The field pays well when you are competent enough to work in it.
-
----
-
-## PART 6: AI, TOOLS, AND THE 2027 LANDSCAPE
+现实的三年的总投入：各项合计 3,000 到 6,000 美元。听起来不少。但把它和大学一个学期的学费比一比。当你的能力足以在这个行业工作时，它的回报很好。
 
 ---
 
-**Q: Does traditional hacking still matter now that AI is everywhere?**
-
-A: More than ever. AI systems run on the same infrastructure as everything else: servers with operating systems, web applications with APIs, network services with authentication layers. AI adds a completely new attack surface on top of the existing one, not instead of it. The Phase 0-4 curriculum in this roadmap applies to attacking AI infrastructure the same way it applies to attacking any other infrastructure.
-
-What changes: the attack surfaces specific to AI systems (model inference endpoints, prompt injection vectors, training pipeline access, vector databases, model files themselves) require new techniques in addition to the existing ones. What does not change: the underlying host, the network, the authentication systems, and the application layer beneath the AI component are still the same systems you learn to attack in Phase 1 through 4.
+## 第六部分：AI、工具与 2027 年的格局
 
 ---
 
-**Q: Can I use AI to skip phases?**
+**问：AI 无处不在的今天，传统黑客技术还有意义吗？**
 
-A: No. You can use AI to accelerate every phase. Those are different things.
+答：比以往更有意义。AI 系统运行在和别的一切相同的基础设施上：带操作系统的服务器、带 API 的 Web 应用、带认证层的网络服务。AI 是在既有攻击面之上新增了一个全新的攻击面，而不是取代它。本路线图的 Phase 0-4 课程，用于攻击 AI 基础设施时同样适用，就像用于攻击任何其他基础设施一样。
 
-AI accelerates by: explaining concepts you are struggling with, debugging code you wrote, generating boilerplate, answering "how does this work" questions faster than documentation. These are all genuine accelerants.
-
-AI does not replace: the experience of failing at something for six hours and then finally understanding why it failed. The muscle memory of having built a working exploit from scratch. The intuition that develops from examining a thousand error messages and learning what each one means. The ability to adapt when the tool chain fails and you have nothing to fall back on except your own understanding.
-
-Blind AI-generated exploit code fails constantly in real environments. Real targets have non-standard configurations, patched versions, custom mitigations, and edge cases that no AI was trained on. The operator who understands the technique manually adapts in real time. The operator who copied the output cannot.
+变化的是：AI 系统特有的攻击面（模型推理端点、提示注入向量、训练流水线访问、向量数据库、模型文件本身）需要新的技术作为补充。不变的是：AI 组件之下的宿主、网络、认证系统和应用层，仍然是你在 Phase 1 到 4 中学习攻击的那些系统。
 
 ---
 
-**Q: What is the highest-leverage skill to develop specifically for 2027?**
+**问：我能用 AI 跳过某些阶段吗？**
 
-A: AI agent exploitation. The attack surface that is most underdefended and fastest growing.
+答：不能。但你可以用 AI 加速每一个阶段。这是两回事。
 
-Every major organization is deploying AI agents: systems that use an LLM to take actions (reading email, querying databases, writing code, browsing the web, making API calls) on behalf of users. These systems have a fundamental vulnerability: they cannot reliably distinguish between instructions from legitimate users and instructions embedded in external data the agent reads.
+AI 能加速的地方：解释你苦思不解的概念、调试你写的代码、生成样板代码、以比文档更快的速度回答“这是怎么工作的”问题。这些都是真正的加速器。
 
-The attack pattern is called indirect prompt injection. You inject malicious instructions into content the agent will process (an email, a document, a web page, a database record, a code file). The agent reads it and executes your instructions as if they came from the authorized user. No vulnerability in the model required. No exploit code required. The attack surface is any external data the agent touches.
+AI 不能替代的：在某件事上失败六小时后终于明白为什么失败的那种体验；从零构建出可用利用程序所形成的肌肉记忆；检视上千条报错信息并弄清每一条含义后形成的直觉；以及当工具链失效、除了自己的理解别无退路时随机应变的能力。
 
-This attack class is at Phase 4F in the roadmap. Get there. The first operators who master agentic exploitation will have a significant window before defenses catch up.
-
----
-
-**Q: How do I think about modern EDR evasion without tool dependency?**
-
-A: Understand what EDR products are measuring. Modern EDR monitors:
-
-- API call sequences and call stacks (who called VirtualAlloc, who called CreateRemoteThread, what is the call depth)
-- Memory regions marked RWX (read-write-execute simultaneously)
-- Known shellcode patterns via signature scanning and entropy analysis
-- Behavioral sequences that match known attack patterns
-- Network connections from unusual processes
-
-Evasion at Phase 4C is not about finding a magic bypass. It is about understanding each detection mechanism and removing each observable. Direct syscalls bypass user-mode API hooks. Sleep obfuscation (Ekko, SilentMoonwalk, Cronos) hides the beacon in encrypted memory between callback intervals. Stack spoofing hides the implant from call stack analysis. BYOVD removes kernel-level protections. BOF (Beacon Object Files) execute without spawning a new process.
-
-Each technique is a response to a specific detection capability. Know what you are evading before you try to evade it.
+盲信 AI 生成的利用代码在真实环境中会不断失败。真实目标有非标准配置、已打补丁的版本、自定义缓解措施，以及 AI 从未训练过的边缘情况。理解技术原理的操作员能实时调整；复制输出的操作员做不到。
 
 ---
 
-**Q: What is Store Now, Decrypt Later (SNDL) and Post-Quantum Cryptography (PQC) in 2027?**
+**问：针对 2027 年，最值得投入的高杠杆技能是什么？**
 
-A: SNDL is an active threat model where adversaries intercept and archive encrypted communications traffic today that they cannot currently decrypt, expecting that cryptanalytically relevant quantum computers (CRQCs) will break classical asymmetric keys (RSA, ECC, Diffie-Hellman) within 5 to 10 years.
+答：AI 智能体（agent）利用。这是防御最薄弱、增长最快的攻击面。
 
-In 2027, the operational focus shifts to the hybrid migration window:
-- **Migration vulnerabilities:** Organizations transitioning from RSA/ECC to NIST PQC standards (ML-KEM/Kyber, ML-DSA/Dilithium) implement hybrid key-exchange mechanisms. Misconfigured cipher suites permit downgrade attacks forcing clients back to legacy algorithms.
-- **Side-channel flaws:** Novel C and assembly implementations of lattice-based schemes frequently introduce timing side-channels and power analysis vulnerabilities during polynomial multiplication.
-- **Operator OPSEC:** Operators must upgrade their own infrastructure (Tor, SSH, WireGuard, PGP) to hybrid or post-quantum safe ciphers to prevent their historical operational telemetry from future decryption. Phase 6 Section 3 provides the complete offensive audit and downgrade curriculum.
+每个大型组织都在部署 AI 智能体：用 LLM 代表用户采取行动的系统（读邮件、查数据库、写代码、浏览网页、发起 API 调用）。这些系统有一个根本性缺陷：它们无法可靠区分来自合法用户的指令，与嵌入在智能体所读取外部数据中的指令。
 
----
+这种攻击模式叫间接提示注入（indirect prompt injection）。你把恶意指令注入智能体将要处理的内容（一封邮件、一份文档、一个网页、一条数据库记录、一个代码文件）。智能体读取后，就会把你的指令当作授权用户的指令来执行。不需要模型存在漏洞，不需要利用代码。攻击面就是智能体接触的任何外部数据。
 
-## PART 7: BUG BOUNTY AND REAL-WORLD PRACTICE
+这类攻击在本路线图中位于 Phase 4F。走到那里。最早掌握智能体利用的操作员，将在防御跟上之前拥有一段可观的窗口期。
 
 ---
 
-**Q: Is bug bounty a viable path to GREATEST?**
+**问：如何在不依赖工具的情况下思考现代 EDR 规避？**
 
-A: Partially viable, with a ceiling.
+答：理解 EDR 产品在测量什么。现代 EDR 监控：
 
-Bug bounty is excellent for: web application security depth, API security, recon methodology, learning to read JavaScript and identify client-side logic flaws, understanding real-world application architecture.
+- API 调用序列与调用栈（谁调用了 VirtualAlloc、谁调用了 CreateRemoteThread、调用深度是多少）
+- 被标记为 RWX（同时可读可写可执行）的内存区域
+- 通过特征扫描和熵分析识别的已知 shellcode 模式
+- 与已知攻击模式匹配的行为序列
+- 来自异常进程的网络连接
 
-Bug bounty does not teach: C2 development, implant development, EDR evasion, Active Directory attacks, rootkit development, binary exploitation of compiled programs, kernel research.
+Phase 4C 的规避，不是找一个万能绕过，而是理解每一种检测机制，并逐一消除可观测点。直接系统调用绕过用户态 API 钩子。睡眠混淆（Ekko、SilentMoonwalk、Cronos）在回调间隔期间把 beacon 藏在加密内存中。调用栈伪造让植入体躲过调用栈分析。BYOVD 移除内核级保护。BOF（Beacon Object Files）无需创建新进程即可执行。
 
-The ceiling on bug bounty as a primary path is around Phase 2 depth in web tracks. Beyond that, bug bounty programs do not provide the attack surface for the techniques that define Phase 4 and beyond. Use bug bounty for Phase 1 and 2 practice, as a supplement to the roadmap, and as a source of income while building skills. Do not let it replace the full path.
-
-The operators who successfully combine bug bounty with the full roadmap use it tactically: when you have completed a phase and want real-world practice before moving to the next one, a few weeks of focused bug hunting validates the skills and pays for the next course.
-
----
-
-**Q: Where do I practice if I cannot afford a lab or subscriptions?**
-
-A: Starting list of zero-cost resources:
-
-- TryHackMe free tier: limited rooms, but enough for Phase 0-1
-- HackTheBox free tier: access to retired machines (free after VIP hold period expires), some challenges
-- PortSwigger Web Academy: completely free, no account required for labs
-- pwn.college: completely free, ASU-backed binary exploitation curriculum
-- VulnHub: free downloadable VMs. Run locally in VirtualBox
-- PicoCTF: completely free
-- CTF competitions: free to compete (CTFtime.org)
-- VirtualBox: free. Kali Linux: free download. You can build a full Phase 0-2 lab for $0 in software costs
-- Google Project Zero, Trail of Bits, SpecterOps blog: free to read
-
-The only phase where free resources hit significant limits is Phase 4B (C2 operations), where CRTO and Maldev Academy are the primary learning paths and both cost money. By that point, you should have the skills to do bug bounty for supplemental income.
+每种技术都是对某项具体检测能力的回应。在你尝试规避之前，先弄清楚自己在规避什么。
 
 ---
 
-**Q: How do I practice offensive techniques without breaking the law?**
+**问：2027 年的“先存储、后解密”（SNDL）和后量子密码学（PQC）是什么？**
 
-A: Three categories of authorized practice:
+答：SNDL 是一种活跃的威胁模型：对手如今拦截并归档他们暂时无法解密的加密通信流量，预期具备密码分析能力的量子计算机（CRQC）会在 5 到 10 年内攻破经典非对称密钥（RSA、ECC、Diffie-Hellman）。
 
-1. Your own lab: anything you own, you can attack. Build VMs and break them. No authorization required for systems you control.
-2. Platforms designed for it: HackTheBox, TryHackMe, pwn.college, VulnHub, PortSwigger Web Academy. These are explicitly authorized practice environments.
-3. Bug bounty programs with defined scope: read the scope carefully. In-scope systems are explicitly authorized. Out-of-scope means do not touch it, regardless of what you find.
-
-No fourth category exists. Public networks, random websites, company systems you work at but are not authorized to test, your neighbor's Wi-Fi -- none of these are authorized practice environments regardless of your intent.
-
----
-
-## PART 8: MINDSET, BURN-OUT, AND STAYING OPERATIONAL
+在 2027 年，作战重心转向混合迁移窗口期：
+- **迁移期漏洞：** 从 RSA/ECC 迁移到 NIST PQC 标准（ML-KEM/Kyber、ML-DSA/Dilithium）的组织会实现混合密钥交换机制。错误配置的密码套件会允许降级攻击，迫使客户端退回传统算法。
+- **侧信道缺陷：** 基于格的方案的 C 与汇编实现经常在多项式乘法阶段引入时序侧信道和功耗分析漏洞。
+- **操作员 OPSEC：** 操作员必须把自身基础设施（Tor、SSH、WireGuard、PGP）升级为混合或后量子安全的密码，以免历史作战遥测被未来的解密能力还原。Phase 6 第 3 节提供了完整的进攻性审计与降级课程。
 
 ---
 
-**Q: How do I maintain motivation over a 5-8 year journey?**
-
-A: You will not maintain continuous motivation. Motivation is not reliable over 5-8 years. Discipline and systems are.
-
-What works for long-path development:
-
-- Measure output, not time. "I will build something today" is a better commitment than "I will study for 2 hours today." Building produces evidence of progress. Time produces the illusion of progress.
-- Set 90-day milestones instead of 5-year goals. A 5-year destination is too abstract to stay energized about. A 90-day milestone (complete Phase 2, get OSCP, finish Maldev Academy) is concrete and achievable.
-- Build publicly when you can. A blog post, a GitHub repo, a writeup. Public commitment creates accountability. The community responds, which reinforces continuation.
-- Track your own history. Re-read your own writeups from 6 months ago. The contrast between where you were and where you are is the most reliable motivational source available.
-- Accept the slow periods. Every operator who has reached Phase 4 has had months where nothing clicked. The ones who reached Phase 5 are the ones who came back after those months.
+## 第七部分：漏洞赏金与真实世界实践
 
 ---
 
-**Q: What do I do when I hit burn-out?**
+**问：漏洞赏金是通往 GREATEST 的可行路径吗？**
 
-A: Take a break without guilt. Forcing through burn-out does not produce learning. It produces errors, frustration, and longer burn-out.
+答：部分可行，但有天花板。
 
-Practical burn-out response:
+漏洞赏金非常适合：Web 应用安全的深度、API 安全、侦察方法论、学习阅读 JavaScript 并识别客户端逻辑缺陷、理解真实应用架构。
 
-- Take 1-2 weeks completely away from the material. Not "I'll just do a little," -- complete stop.
-- When you return, start with something small that you already know you can complete. A beginner challenge. A tool you have used before. A writeup of a machine you already solved. Rebuilding momentum from a small win is faster than trying to force yourself back into hard material.
-- Switch areas. If you have been grinding binary exploitation for weeks, do some web. If you have been building an implant for a month, do some network practice. The technical skills are not isolated -- time in a different area often produces insights in the area you left.
-- Build something creative. Not a challenge, not a course -- something you actually want to exist. A tool that solves a problem you have. A script that automates something annoying. Creative building is different in quality from grinding exercises.
+漏洞赏金教不了：C2 开发、植入体开发、EDR 规避、Active Directory 攻击、rootkit 开发、编译程序的二进制利用、内核研究。
 
----
+以漏洞赏金作为主路径，天花板大约在 Web 方向的 Phase 2 深度。再往上，赏金项目无法提供定义 Phase 4 及以后所需技术的攻击面。把漏洞赏金用于 Phase 1 和 2 的练习、作为路线图的补充、以及构建技能期间的收入来源。不要让它取代完整路径。
 
-**Q: What separates the 0.0001% from everyone else?**
-
-A: Not knowledge. Not even skill. The refusal to accept incomplete understanding.
-
-The 0.0001% operator does not stop at "the exploit works." They ask why it works, what assumptions the target made that allowed it to work, what would have to change for it to stop working, and what adjacent systems might have the same assumption. They then go find those adjacent systems.
-
-When a tool fails, they do not try a different tool. They ask what the tool was trying to do and do it manually. When a technique is defended against, they understand the defense well enough to route around it. When they read a CVE advisory, they do not read the CVSS score -- they read the root cause and start thinking about what else has the same root cause.
-
-The practical translation of this: build a habit of going one level deeper on every technique you learn. Understanding a buffer overflow is Phase 3. Understanding why the compiler did not protect against it, what mitigation would have stopped it, and whether the same pattern exists in the adjacent library is Phase 4. Discovering that pattern independently, before anyone has documented it, is Phase 5.
+成功把漏洞赏金与完整路线图结合起来的操作员，会把它当作战术手段：完成一个阶段后、想在下个阶段前做点真实世界练习时，几周专注的漏洞挖掘既能验证技能，也能支付下一门课程的费用。
 
 ---
 
-## PART 9: AUTHORIZATION, OPSEC, AND LEGAL REALITY
+**问：如果我负担不起实验环境或订阅，去哪里练习？**
+
+答：零成本资源起步清单：
+
+- TryHackMe 免费层：房间有限，但足够 Phase 0-1
+- HackTheBox 免费层：可访问退役机器（VIP 保留期结束后免费），以及部分挑战
+- PortSwigger Web Academy：完全免费，做实验无需账号
+- pwn.college：完全免费，ASU 支持的二进制利用课程
+- VulnHub：免费可下载的虚拟机，用 VirtualBox 在本地运行
+- PicoCTF：完全免费
+- CTF 赛事：参赛免费（CTFtime.org）
+- VirtualBox：免费。Kali Linux：免费下载。软件成本 0 美元就能搭出完整的 Phase 0-2 实验环境
+- Google Project Zero、Trail of Bits、SpecterOps 博客：免费阅读
+
+免费资源明显吃紧的阶段只有 Phase 4B（C2 作战），那里 CRTO 和 Maldev Academy 是主要学习路径，两者都要花钱。到那个时候，你应该已经具备靠漏洞赏金赚取补充收入的技能。
 
 ---
 
-**Q: Where is the line between security research and criminal activity?**
+**问：如何在不违法的情况下练习进攻技术？**
 
-A: Authorization. That is the entire answer, and it is not complicated.
+答：三类获得授权的练习：
 
-Written, signed, explicit authorization from the owner of the system changes the legal status of every technique in this document. Without it, you are on the wrong side of computer fraud law regardless of your intent, your technical skill, or whether you found anything harmful.
+1. 你自己的实验环境：你拥有的一切，你都可以攻击。搭虚拟机，然后打坏它们。对你自己控制的系统无需授权。
+2. 专为此设计的平台：HackTheBox、TryHackMe、pwn.college、VulnHub、PortSwigger Web Academy。这些都是明确授权的练习环境。
+3. 范围明确的漏洞赏金项目：仔细阅读范围。范围内的系统是明确授权的。范围外意味着不要碰，无论你发现了什么。
 
-Authorization means: a document, signed by someone with legal authority over the system, that explicitly authorizes you to test the defined scope, with defined start and end dates, and defined permitted techniques. Verbal authorization is not authorization. "They probably wouldn't mind" is not authorization. Working at a company does not authorize you to test their systems without a written scope.
-
-Bug bounty program scope is explicit authorization for the assets listed in the program. Read the scope carefully. Out-of-scope means no.
-
-This is not about ethics. It is about staying operational. Operators who get arrested do not reach Phase 5.
+不存在第四类。公共网络、随机网站、你所在公司但你无权测试的系统、邻居的 Wi-Fi——无论你的意图如何，这些都不是获得授权的练习环境。
 
 ---
 
-**Q: Can I practice techniques on systems I find on the internet without permission?**
-
-A: No. Full stop.
-
-"I found it open on Shodan" is not authorization. "It looks like a honeypot" is not authorization. "I'm just testing, not doing anything harmful" is not authorization. "It was already compromised when I found it" is not authorization.
-
-Unauthorized access to computer systems is a criminal offense in essentially every jurisdiction that matters. The technical legality varies by country, but the practical reality is that activity against systems you do not own and have not been authorized to test can result in prosecution regardless of intent.
-
-Your practice environments: your own VMs, authorized platforms (HTB, TryHackMe, pwn.college, VulnHub), and in-scope bug bounty targets. Nothing else.
+## 第八部分：心态、倦怠与保持作战状态
 
 ---
 
-**Q: What do I do if I accidentally find a real vulnerability in a system I was not targeting?**
+**问：如何在 5-8 年的旅程中保持动力？**
 
-A: Stop immediately. Document what you found and how you found it. Do not exploit further. Do not share the vulnerability before reporting.
+答：你不可能一直保持动力。动力在 5-8 年的尺度上并不可靠，可靠的是纪律和体系。
 
-Then:
+对长周期成长有效的方法：
 
-1. Check if the organization has a bug bounty program (HackerOne, Bugcrowd) or a responsible disclosure policy (usually at security.company.com or in a security.txt file at the domain root).
-2. If a program exists, report through the program. Include technical detail, reproduction steps, and the impact. Do not include working exploit code in the initial report -- offer to provide it after confirmation.
-3. If no program exists: contact the organization directly at security@company.com or abuse@company.com. If you get no response within 2 weeks, CERT/CC (cert.org) can facilitate disclosure for organizations that are unresponsive.
-4. Standard disclosure timeline: 90 days from initial report (the Google Project Zero standard). Disclose after 90 days regardless of whether the vulnerability has been fixed, unless there is an active exploitation concern where early disclosure would cause harm.
-
-The above process protects you legally and builds the kind of reputation that leads to legitimate opportunities. Researchers who disclose responsibly get invited to private bug bounty programs, consulting work, and conference speaking slots. Researchers who weaponize what they find accidentally get prosecuted.
-
----
-
-**Q: Why does Phase -1 (OPSEC) come before everything else in the roadmap?**
-
-A: Because opsec failures are not recoverable the way technical failures are.
-
-If you build a bad exploit at Phase 3, you learn, rebuild, and move forward. The failure is internal. If you make an opsec mistake at Phase 2 -- use your real IP for a scan, log into a platform from your home connection while doing something you should not be doing, leave metadata in a file -- the failure is external and permanent. Logs exist. Forensics finds things years later.
-
-Phase -1 is first not because it is the most technically interesting phase (it is not) but because the habits you build at the start become the habits you keep. An operator who builds opsec hygiene from day one never has to retrofit it onto established workflows. An operator who skips it and adds it later always has gaps.
-
-The minimum opsec posture for anyone doing serious lab work: separate identities for security research vs. personal life, VPN or Tor for anything leaving your lab network, no real personal identifiers in research accounts, understanding of what you are logging and where those logs go.
+- 衡量产出，而非时间。“今天我要做出点东西”比“今天我要学 2 小时”是更好的承诺。构建会产生进步的实证，时间只会产生进步的错觉。
+- 设 90 天里程碑，而不是 5 年目标。5 年后的终点太抽象，难以持续激发热情。90 天里程碑（完成 Phase 2、拿到 OSCP、学完 Maldev Academy）具体且可达成。
+- 尽可能公开构建。一篇博客、一个 GitHub 仓库、一篇 writeup。公开承诺会形成问责，社区会回应，从而强化你继续下去。
+- 记录自己的历史。重读你 6 个月前的 writeup。过去的你与现在的你之间的反差，是最可靠的动力来源。
+- 接受低谷期。每个走到 Phase 4 的操作员都经历过什么都开不了窍的几个月。走到 Phase 5 的人，是那些在低谷之后回来的人。
 
 ---
 
-## PART 10: QUESTIONS NOBODY ASKS BUT SHOULD
+**问：陷入倦怠时我该怎么办？**
+
+答：休息，不必愧疚。硬扛倦怠不会产生学习，只会产生错误、挫败和更长的倦怠。
+
+实用的倦怠应对：
+
+- 完全离开这些材料 1-2 周。不是“我就少看一点”，而是彻底停下。
+- 回来时，从你确定能完成的小事开始。一道新手题、一个用过的工具、一篇你已经攻陷过的机器的 writeup。从小胜利重建势头，比强迫自己回到困难材料里要快。
+- 换领域。如果你已经连续几周死磕二进制利用，就去做点 Web；如果你已经写了一个月植入体，就去做点网络练习。技术技能并非彼此孤立——在别的领域花时间，往往会在你离开的领域带来洞见。
+- 做点有创造性的东西。不是题目，不是课程——而是你真心希望存在的东西。一个解决你自己问题的工具，一个把烦人流程自动化的脚本。创造性构建与刷题在质量上是不同的。
 
 ---
 
-**Q: How do I actually think like a threat actor instead of a script kiddie?**
+**问：0.0001% 的人和其他人差在哪里？**
 
-A: A threat actor thinks about objectives first and techniques second. A script kiddie thinks about techniques first and never asks what they are trying to achieve.
+答：不是知识，甚至也不是技能。是拒绝接受不完整的理解。
 
-Threat actor thinking pattern:
+0.0001% 的操作员不会停在“利用跑通了”。他们会追问它为什么能成功、目标做了哪些让它成功的假设、要改变什么才会让它失效、以及哪些相邻系统可能有同样的假设。然后他们去找那些相邻系统。
 
-1. What is the objective? (credentials, data exfiltration, persistence, disruption)
-2. What is the minimal path to that objective from my current position?
-3. What is the detection risk of each step on that path?
-4. What is my fallback if I am detected?
-5. What does cleanup look like?
+当工具失效时，他们不是换一个工具，而是问这个工具本来要做什么，然后手工去做。当某项技术被防御住时，他们理解这项防御到足以绕开它的程度。当他们读 CVE 公告时，不看 CVSS 评分——而是看根因，并开始思考还有什么具有同样的根因。
 
-The technique choice is the last decision, not the first. Every technique in the roadmap exists to serve an objective. When you are practicing, practice with an objective in mind, not just "let's see what this tool finds."
+落实到行动上：养成对学到的每项技术再深挖一层的习惯。理解缓冲区溢出是 Phase 3；理解编译器为何没有防护它、什么缓解措施本可以阻止它、以及相邻库里是否存在同样模式，是 Phase 4；在任何人记录之前独立发现那个模式，是 Phase 5。
 
 ---
 
-**Q: Why do operators who understand defenses become better attackers?**
-
-A: Because you are always trying to be invisible to something. If you do not know what that something detects, you cannot be invisible to it.
-
-The best offensive operators have spent meaningful time on the defensive side. They know what Splunk alerts on. They know what EDR call stack analysis looks for. They know which AD events trigger SIEM rules and which ones are ignored. That knowledge shapes every tactical choice in an engagement: what to touch, what to avoid, how long to wait, how to clean up.
-
-CyberDefenders (cyberdefenders.org) is in the platform list for this reason. Working through blue team scenarios teaches you what you leave behind. That knowledge becomes offensive skill when you use it to leave less behind.
+## 第九部分：授权、OPSEC 与法律现实
 
 ---
 
-**Q: When should I start building my own tools instead of using existing ones?**
+**问：安全研究与犯罪活动之间的界线在哪里？**
 
-A: When understanding requires it, not when ego demands it.
+答：授权。这就是全部答案，而且并不复杂。
 
-For Phase 0 through 2: use existing tools. The goal is to understand what they are doing, not to reinvent them. Run nmap, understand what each flag does and why, read the output, understand what the response means.
+由系统所有者签署的书面、明确授权，会改变本文档中每一种技术的法律性质。没有它，无论你的意图如何、技术多强、是否发现了有害内容，你都站在计算机欺诈法的错误一侧。
 
-For Phase 3: start writing tool components. Write a port scanner from raw sockets in Python. Write a simple fuzzer. Write a basic shellcode injector. Not because nmap is bad -- because writing these things forces you to understand the protocol layer that nmap abstracts away.
+授权意味着：一份由对系统拥有法定权限的人签署的文件，明确授权你在规定的起止日期内、使用规定的允许技术，测试规定的范围。口头授权不算授权。“他们大概不会介意”不算授权。在公司上班，并不授权你在没有书面范围的情况下测试他们的系统。
 
-For Phase 4: you will build custom tools because existing tools are detected. The moment you are doing serious implant development, C2 infrastructure, or EDR evasion, you are writing custom code because signatures have been written for everything else. This is not optional at Phase 4C.
+漏洞赏金项目的范围，就是对项目所列资产的明确授权。仔细读范围。范围外就是不行。
 
-The rule: use existing tools to learn the technique. Build custom tools when existing tools are insufficient for the objective or when building is the fastest path to understanding.
-
----
-
-**Q: How do I build a reputation in the security community without compromising my identity?**
-
-A: With a research pseudonym.
-
-Create a separate identity for all security research: pseudonymous accounts on GitHub, Twitter/X, Mastodon, Discord. Use this identity consistently for research-related activity. Never link it to your real name in any searchable way.
-
-Publish under this identity: writeups, tools, CVE credits, conference talks (if you choose to speak, you can use a handle at most conferences). The handle builds a reputation that is searchable and verifiable based on its own output.
-
-The research community does not care about your real name. It cares about the quality of your output. A handle with three excellent public CVEs, well-written technique posts, and a notable CTF track record will attract more legitimate opportunities than a real name with no output.
-
-When transitioning to professional work, you can link your pseudonymous output to your professional identity during a job application process under NDA. Most reputable employers in this field understand the opsec motivation.
+这与道德无关，与能否继续作战有关。被抓的操作员走不到 Phase 5。
 
 ---
 
-## PART 11: 2027 SPECIAL OPERATIONS AND HORIZONS FAQ
+**问：我可以在未经许可的情况下，对互联网上找到的系统练习技术吗？**
+
+答：不可以。到此为止。
+
+“我在 Shodan 上发现它是开放的”不是授权。“它看起来像蜜罐”不是授权。“我只是测试，不会造成危害”不是授权。“我发现它时它已经被攻陷了”也不是授权。
+
+未经授权访问计算机系统，在几乎所有重要司法辖区都是刑事犯罪。具体的法律定性因国家而异，但现实是：针对你不拥有、也未获授权测试的系统开展活动，无论意图如何，都可能导致起诉。
+
+你的练习环境：你自己的虚拟机、获授权的平台（HTB、TryHackMe、pwn.college、VulnHub），以及范围内的漏洞赏金目标。除此之外，没有别的。
 
 ---
 
-**Q: How does Phase 6 (Special Operations) run in parallel with Phase 5 (GREATEST)?**
+**问：如果我意外发现了并非我攻击目标的系统上的真实漏洞，该怎么办？**
 
-A: Phase 5 and Phase 6 represent two distinct pinnacles of offensive engineering:
-- **Phase 5 (GREATEST)** is the apex vulnerability research and software capability tier: discovering original zero-days, authoring world-class offensive tooling, engineering hypervisor escapes, and defeating silicon-level mitigations.
-- **Phase 6 (Special Operations)** is the apex adversary simulation and multi-domain execution tier: orchestrating physical covert entry, non-verbal social engineering, aerial drone reconnaissance, out-of-band hardware implants, quantum transition attacks (SNDL/PQC downgrade), and complex red team operations.
+答：立即停止。记录你发现了什么、如何发现的。不要继续利用，不要在报告前分享该漏洞。
 
-They branch concurrently from Phase 4 mastery. An operator may focus purely on Phase 5 as a dedicated exploit researcher or purely on Phase 6 as an elite red team lead. The rarest operators, the top 0.0001%, combine both: capable of picking a physical high-security lock to deploy an implant running their own custom kernel rootkit and 0-day exploit payload.
+然后：
 
----
+1. 查该组织是否有漏洞赏金项目（HackerOne、Bugcrowd）或负责任披露政策（通常位于 security.company.com，或域名根目录下的 security.txt 文件）。
+2. 如果存在项目，通过项目报告。附上技术细节、复现步骤和影响。初次报告中不要包含可用的利用代码——可以在确认后提出提供。
+3. 如果没有项目：直接联系该组织的 security@company.com 或 abuse@company.com。如果 2 周内没有回应，CERT/CC（cert.org）可以为无人响应的组织协助披露。
+4. 标准披露时间线：自初次报告起 90 天（Google Project Zero 的标准）。90 天后无论漏洞是否修复都应披露，除非存在活跃利用的担忧、过早披露会造成危害。
 
-**Q: What is the difference between an exploit developer (Phase 4D/5) and a full-scope operator (Phase 6)?**
-
-A: An exploit developer operates primarily in the digital and binary abstraction: disassemblers, debuggers, memory allocators, compilers, and fuzzer pools. Their measure of success is achieving reliable arbitrary execution or privilege escalation against hardened software targets.
-
-A full-scope operator operates across physical, human, and multi-cloud environments. Their measure of success is achieving the strategic engagement objective (such as extracting intellectual property, demonstrating control over critical industrial controllers, or proving domain compromise) using whatever path offers the highest success probability and lowest detection exposure. If a facility has an unmonitored roof hatch or an employee susceptible to pretext vishing, the Phase 6 operator bypasses the entire multi-million-dollar EDR defensive perimeter without writing a single line of binary shellcode.
+上述流程在法律上保护你，也会建立通向正当机会的声誉。负责任披露的研究者会被邀请参加私有赏金项目、咨询工作和会议演讲；把意外发现武器化的研究者会被起诉。
 
 ---
 
-**Q: How should an operator prepare for the Post-Quantum Cryptography (PQC) transition in 2027?**
+**问：为什么 Phase -1（OPSEC）在路线图中排在最前面？**
 
-A: The transition to quantum-resilient algorithms (FIPS 203 ML-KEM, FIPS 204 ML-DSA, FIPS 205 SLH-DSA) is the largest cryptographic shift in internet history. To stay ahead:
-1. **Understand hybrid key exchange:** Most enterprise deployments combine classical X25519/ECDH with ML-KEM-768. Identify fallback negotiation flaws that allow stripping quantum parameters.
-2. **Audit implementation libraries:** Mathematical hardness does not prevent buffer overflows, side-channel leaks, or timing discrepancies in reference C implementations.
-3. **Master Store Now, Decrypt Later (SNDL):** Archive high-value encrypted captures from long-lived certificates, state-sponsored communications, and critical infrastructure protocols.
-4. **Harden your own persona:** Ensure all research persona communication channels (GrapheneOS, Tor, Signal, Haveno, SSH) enforce post-quantum hybrid handshakes.
+答：因为 OPSEC 失误不像技术失误那样可以挽回。
 
----
+如果你在 Phase 3 写了个糟糕的利用程序，你学习、重写、继续前进，这种失败是内部的。如果你在 Phase 2 犯了 OPSEC 错误——用真实 IP 扫描、在家里网络登录平台去做不该做的事、在文件里留下元数据——这种失败是外部的、永久的。日志存在，取证会在多年后发现问题。
 
-**Q: How do physical security, covert entry, and drone recon integrate into cyber C2 operations?**
+Phase -1 排第一，不是因为它技术上最有趣（它并不是），而是因为你在起点养成的习惯会成为你长期保留的习惯。从第一天就建立 OPSEC 卫生的操作员，永远不需要把它硬补到既有工作流上；跳过它、以后再补的操作员，总会留下缺口。
 
-A: Modern enterprise defensive architectures enforce zero trust, strict external perimeter firewalls, and managed SOC monitoring that make remote initial access expensive and noisy. Physical red teaming and drone reconnaissance fundamentally compress the initial access attack surface:
-- **Aerial drone recon:** High-resolution optical and thermal cameras map guard patrol patterns, physical access badges, badge reader models (Wiegand vs. OSDP), HVAC airflow exhaust, and rooftop entry points before boots touch the ground.
-- **Physical covert entry:** Non-destructive entry (under-door tools, latch slips, REX sensor thermal bypasses, mechanical lock bumping) places the operator directly inside the physical security perimeter.
-- **Hardware implant drops:** Plugging an out-of-band implant (LAN Turtle, Packet Squirrel, Raspberry Pi CM4) into an unmonitored VoIP phone port or printer switch provides an immediate, wired internal network pivot. The implant tunnels out over 4G/5G cellular, completely circumventing corporate edge firewalls, web proxies, and perimeter DLP telemetry.
+任何认真做实验的人都应具备的最低 OPSEC 姿态：安全研究与个人生活使用分离身份；离开实验网络的流量一律走 VPN 或 Tor；研究账号中不含真实个人标识；了解你在记录什么日志，以及这些日志去向何处。
 
 ---
 
-**Q: How should an operator handle detection during an active red team engagement?**
-
-A: Detection is not failure. Detection is operational telemetry.
-
-In real engagements:
-1. **Never panic:** Do not burn remaining infrastructure in a frantic scramble. Freeze activity on the flagged beacon or IP address immediately.
-2. **Assess detection depth:** Was the binary signatured on disk, was the network callback IP blocked by firewall heuristics, or did EDR detect memory injection? A blocked IP requires rotating C2 listeners; an alerted endpoint requires falling back to dormant backup channels.
-3. **Maintain compartmentalized C2 channels:** Always maintain at least three separate C2 channels: interactive (short sleep, operator commands), staging (medium sleep, file delivery), and long-haul (sleep measured in hours or days, completely isolated domains and protocols). If your interactive beacon is killed, your long-haul beacon remains active.
-4. **Document everything:** Record the exact timestamp, process ID, command executed, and defensive reaction. In professional red teaming, a comprehensive timeline of what defenders detected and what they missed provides the primary value to the client.
+## 第十部分：没人问、但该问的问题
 
 ---
 
-**Q: How do you transition from executing known public techniques to discovering novel attack classes?**
+**问：我如何真正像威胁行为体那样思考，而不是像脚本小子？**
 
-A: By systematically cataloging and testing assumptions.
+答：威胁行为体先想目标，再想技术。脚本小子先想技术，从不问自己到底想达成什么。
 
-Every public offensive tool (mimikatz, BloodHound, PetitPotam, SilentMoonwalk) was born because an operator stopped asking "how do I run this tool" and started asking "what assumption does this system make that is not provably true?"
-- **Look at boundaries:** Where two different systems, protocols, or privilege domains meet (such as browser renderer to IPC broker, Linux kernel to hypervisor, OAuth identity provider to backend API, or LLM agent to tool execution runtime), assumptions are always broken.
-- **Analyze patches:** Do not just read CVE advisories. Diff the source code or binary patches of recent security updates. Vendors often fix the specific reported input while leaving the broader architectural assumption intact.
-- **Tolerate extended dead ends:** Finding novel techniques requires spending weeks testing hypotheses that produce nothing. The willingness to sustain rigorous technical exploration through failure is the sole filter between an operator and a researcher.
+威胁行为体的思考模式：
+
+1. 目标是什么？（凭据、数据外泄、持久化、破坏）
+2. 从我当前位置到该目标的最短路径是什么？
+3. 这条路径上每一步的检测风险如何？
+4. 如果被检测到，我的退路是什么？
+5. 清理工作是什么样子？
+
+技术选择是最后一个决策，而不是第一个。路线图中的每项技术都为某个目标服务。练习时，带着目标去练，而不是“看看这个工具能发现什么”。
+
+---
+
+**问：为什么理解防御的操作员会成为更好的攻击者？**
+
+答：因为你始终在试图对某种东西隐身。如果你不知道那个东西在检测什么，你就无法对它隐身。
+
+最好的进攻操作员都在防守方投入过相当长的时间。他们知道 Splunk 会对什么告警，知道 EDR 的调用栈分析在找什么，知道哪些 AD 事件会触发 SIEM 规则、哪些会被忽略。这些知识塑造了行动中的每一个战术选择：碰什么、避开什么、等多久、怎么清理。
+
+CyberDefenders（cyberdefenders.org）被列入平台清单，正是这个原因。做蓝队场景会教你留下了什么痕迹。当你用这些知识减少留下的痕迹时，它就变成了进攻技能。
+
+---
+
+**问：我该在什么时候开始自建工具，而不是用现成的？**
+
+答：当理解需要它时，而不是当自尊心需要它时。
+
+Phase 0 到 2：用现成工具。目标是理解它们在做什么，而不是重新发明它们。运行 nmap，弄懂每个参数做什么、为什么，读输出，理解响应意味着什么。
+
+Phase 3：开始写工具组件。用 Python 的原始套接字写一个端口扫描器。写一个简单的模糊测试器。写一个基础的 shellcode 注入器。不是因为 nmap 不好——而是因为写这些东西会迫使你理解 nmap 抽象掉的协议层。
+
+Phase 4：你会自建工具，因为现成工具会被检测。一旦进入正经的植入体开发、C2 基础设施或 EDR 规避，你就得自己写代码，因为其他一切都已经有特征了。在 Phase 4C，这不是可选项。
+
+原则：用现成工具学习技术。当现成工具不足以达成目标，或自建是通往理解的最快路径时，才自建工具。
+
+---
+
+**问：如何在不暴露身份的前提下，在安全社区建立声誉？**
+
+答：用一个研究化名。
+
+为所有安全研究创建一个独立身份：在 GitHub、Twitter/X、Mastodon、Discord 上使用化名账号。始终用这个身份进行与研究相关的活动，绝不以任何可被搜索到的方式把它与真实姓名关联。
+
+用这个身份发布：writeup、工具、CVE 署名、会议演讲（如果你选择演讲，大多数会议允许使用化名）。化名凭借自身的产出，建立起可搜索、可验证的声誉。
+
+研究社区不在乎你的真名，它在乎你产出的质量。一个拥有三个优秀公开 CVE、写得一手好技术文章、并有显著 CTF 战绩的化名，会比一个毫无产出的真名吸引更多正当机会。
+
+转向职业工作时，你可以在求职流程中、在保密协议下，把化名产出与职业身份关联起来。这个领域大多数有信誉的雇主都理解这种 OPSEC 动机。
+
+---
+
+## 第十一部分：2027 特种作战与研究前沿问答
+
+---
+
+**问：Phase 6（特种作战）如何与 Phase 5（GREATEST）并行推进？**
+
+答：Phase 5 和 Phase 6 代表进攻工程的两个不同巅峰：
+- **Phase 5（GREATEST）** 是漏洞研究与软件能力的顶尖层级：发现原创零日、编写世界级进攻工具、实现 hypervisor 逃逸、攻破芯片级缓解措施。
+- **Phase 6（特种作战）** 是对手模拟与多域执行的顶尖层级：统筹物理潜入、非语言社会工程、无人机空中侦察、带外硬件植入、量子迁移攻击（SNDL/PQC 降级）以及复杂的红队行动。
+
+两者都从 Phase 4 的精通处分岔并行。操作员可以纯粹专注于 Phase 5，成为专职漏洞利用研究员；也可以纯粹专注于 Phase 6，成为精英红队负责人。最稀有的操作员——前 0.0001%——两者兼具：既能撬开物理高安全锁，投放运行自研内核 rootkit 与 0-day 利用载荷的植入体。
+
+---
+
+**问：漏洞利用开发者（Phase 4D/5）与全谱操作员（Phase 6）有什么区别？**
+
+答：漏洞利用开发者主要在数字与二进制抽象层中工作：反汇编器、调试器、内存分配器、编译器和模糊测试器集群。他们的成功标准是：针对强化过的软件目标，实现可靠的任意执行或提权。
+
+全谱操作员在物理、人因和多云环境中工作。他们的成功标准是：以成功概率最高、检测暴露最低的路径，达成战略行动目标（例如窃取知识产权、证明对关键工业控制器的控制，或证明域已被攻陷）。如果某处设施有一个无人监控的屋顶舱口，或有一名员工容易中招电话钓鱼话术，那么 Phase 6 操作员无需写一行二进制 shellcode，就能绕过整套耗资数百万美元的 EDR 防御边界。
+
+---
+
+**问：操作员应如何为 2027 年的后量子密码学（PQC）迁移做准备？**
+
+答：向抗量子算法（FIPS 203 ML-KEM、FIPS 204 ML-DSA、FIPS 205 SLH-DSA）的迁移，是互联网历史上最大的密码学转型。要保持领先：
+1. **理解混合密钥交换：** 大多数企业部署会把经典 X25519/ECDH 与 ML-KEM-768 结合。找出允许剥离量子参数的降级协商缺陷。
+2. **审计实现库：** 数学上的困难性并不能防止参考 C 实现中的缓冲区溢出、侧信道泄漏或时序偏差。
+3. **掌握“先存储、后解密”（SNDL）：** 归档来自长期证书、国家支持的通信以及关键基础设施协议的高价值加密抓包。
+4. **加固自己的身份：** 确保研究身份的所有通信渠道（GrapheneOS、Tor、Signal、Haveno、SSH）都强制使用后量子混合握手。
+
+---
+
+**问：物理安全、隐蔽潜入和无人机侦察如何融入网络 C2 作战？**
+
+答：现代企业防御架构实施零信任、严格的外围防火墙和托管 SOC 监控，使远程初始访问代价高昂且噪声很大。物理红队与无人机侦察从根本上压缩了初始访问的攻击面：
+- **无人机空中侦察：** 高分辨率光学与热成像相机在人员落地之前，先测绘警卫巡逻规律、物理门禁卡、读卡器型号（Wiegand 还是 OSDP）、暖通空调气流排风以及屋顶入口。
+- **物理隐蔽潜入：** 非破坏性进入（门底工具、锁舌拨片、REX 传感器热欺骗、机械锁撞匙）把操作员直接送进物理安全边界内部。
+- **硬件植入投放：** 把带外植入体（LAN Turtle、Packet Squirrel、Raspberry Pi CM4）插进无人监控的 VoIP 电话端口或打印机交换机，就能获得立即可用的有线内网跳板。植入体通过 4G/5G 蜂窝网络向外隧道，完全绕过企业边界防火墙、Web 代理和外围 DLP 遥测。
+
+---
+
+**问：在红队行动进行中，操作员应如何处理被发现的情况？**
+
+答：被发现不是失败，被发现是作战遥测。
+
+在真实行动中：
+1. **绝不惊慌：** 不要手忙脚乱地烧掉剩余基础设施。立即冻结被标记的 beacon 或 IP 上的活动。
+2. **评估检测深度：** 是磁盘上的二进制被打了特征，是网络回连 IP 被防火墙启发式规则封了，还是 EDR 检测到内存注入？IP 被封需要轮换 C2 监听器；端点告警则需要退回到休眠的备用通道。
+3. **保持分隔的 C2 通道：** 始终维持至少三条独立 C2 通道：交互式（短睡眠、操作员指令）、投递式（中等睡眠、文件传输）和长周期（以小时或天计的睡眠，完全隔离的域名与协议）。如果交互式 beacon 被打掉，长周期 beacon 仍在活动。
+4. **记录一切：** 记录精确时间戳、进程 ID、执行的命令和防御方反应。在职业红队工作中，一份完整的“防御方检测到什么、漏掉了什么”的时间线，是提供给客户的核心价值。
+
+---
+
+**问：如何从执行已知的公开技术，过渡到发现新的攻击类别？**
+
+答：系统地编目并检验假设。
+
+每个公开的进攻工具（mimikatz、BloodHound、PetitPotam、SilentMoonwalk）的诞生，都源于某个操作员不再问“我怎么运行这个工具”，而开始问“这个系统做了哪个无法被证明为真的假设？”
+- **看边界：** 两个不同系统、协议或权限域交界的地方（例如浏览器渲染进程到 IPC broker、Linux 内核到 hypervisor、OAuth 身份提供方到后端 API、LLM 智能体到工具执行运行时），假设总是被打破。
+- **分析补丁：** 不要只读 CVE 公告。对近期安全更新的源码或二进制补丁做差分。厂商常常只修了被报告的具体输入，而留下更宏观的架构假设。
+- **容忍漫长的死路：** 发现新技术需要花数周检验毫无结果的假设。愿意在失败中坚持严谨的技术探索，是操作员与研究者之间唯一的筛选器。
 
 ---
 
 <div align="right">
 
-*FAQ -- The BlackHAT Roadmap v1.2.2*<br/>
-*2027 Edition -- Comprehensive. No gaps. No outdated answers. No hedging.*<br/>
-*Author: Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)) · Canonical Repository: https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
-*Curated Ecosystem: [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
-*Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)*
+*常见问题——The BlackHAT Roadmap v1.2.2*<br/>
+*2027 版——全面。没有缺口。没有过时的答案。不含糊其辞。*<br/>
+*作者：Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)) · 规范仓库：https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
+*精选生态：[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
+*依据 Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）许可发布*
 
 </div>
 

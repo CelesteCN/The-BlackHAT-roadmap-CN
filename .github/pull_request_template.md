@@ -1,16 +1,16 @@
-## Summary of Changes
+## 变更摘要
 
-A concise technical description of the proposed updates or additions.
+对拟议的更新或新增内容作简洁的技术描述。
 
-## Type of Change
+## 变更类型
 
-- [ ] New technical curriculum section or deep-dive module
-- [ ] Compilable payload code or proof-of-concept (`payloads/`)
-- [ ] Correction of technical error, broken link, or outdated API
-- [ ] Lab deployment automation or diagram improvement
+- [ ] 新增技术课程章节或深度专题
+- [ ] 可编译的载荷代码或概念验证（`payloads/`）
+- [ ] 修正技术错误、失效链接或过时 API
+- [ ] 实验环境部署自动化或示意图改进
 
-## Technical Validation
+## 技术验证
 
-- [ ] Code samples have been compiled and verified against target architectures (e.g., Windows 10/11 x64, Linux kernel 6.x).
-- [ ] All external URLs and references are verified and functional.
-- [ ] Adheres to clean markdown standards with standard punctuation (no em-dashes).
+- [ ] 代码示例已编译，并已针对目标架构验证（例如 Windows 10/11 x64、Linux 内核 6.x）。
+- [ ] 所有外部 URL 与引用均已验证有效。
+- [ ] 遵循简洁的 markdown 规范与标准标点（不使用 em-dash）。

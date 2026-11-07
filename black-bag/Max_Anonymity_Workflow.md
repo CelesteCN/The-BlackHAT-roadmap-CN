@@ -1,87 +1,87 @@
-# Maximum Anonymity Workflow
+# 最大匿名工作流
 
-**The Quick-Reference Anonymity Architecture Guide - 2027 Edition**
+**速查版匿名架构指南 —— 2027 版**
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** v1.0.0 · 2027 Edition
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**主仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**许可：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** v1.0.0 · 2027 版
 
 <div align="right">
 
-**The chain is only as strong as the weakest layer. Most operators only build one layer.**
+**一条链的强度，取决于它最弱的那一层。大多数操作者只造了一层。**
 
 </div>
 
-> 📚 **Companion Roadmap Documents:**
-> * **[The BlackHAT Roadmap (Canonical Repo)](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)**: Master curriculum, issue discussions, and live roadmap updates.
-> * **[Phase -1: OPSEC and Infrastructure](../phases/PHASE_-1.md)**: The complete OPSEC foundation -- every technical detail behind the anonymity stack in this document.
-> * **[BlackHat Long-Term Survival Tactics](BlackHat_Long-Term_Survival_Tactics.md)**: The authoritative operational security, physical tradecraft, and digital persona architecture manual.
-> * **[Philosophy: The BlackHat Mindset](../field-guides/Philosophy_The_BlackHat_Mindset.md)**: Cognitive doctrine, adversarial assumption hunting, and primitive thinking mental models.
-> * **[FAQ](../field-guides/FAQ.md)**: Comprehensive operational and career transitions FAQ.
-> * **[Lab Setup Guide](../field-guides/Lab_Setup_Guide.md)**: Multi-tier hardware specifications and isolated enterprise/kernel lab blueprints.
+> 📚 **配套路线图文档：**
+> * **[The BlackHAT Roadmap（主仓库）](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)**：主课程、议题讨论与路线图的实时更新。
+> * **[阶段 -1：作战安全与基础设施](../phases/PHASE_-1.md)**：完整的作战安全地基——本文匿名技术栈背后的一切技术细节。
+> * **[BlackHat 长期生存战术](BlackHat_Long-Term_Survival_Tactics.md)**：权威的作战安全、物理作业手法与数字身份架构手册。
+> * **[黑客心态](../field-guides/Philosophy_The_BlackHat_Mindset.md)**：认知信条、对抗性假设狩猎与原语思维的心智模型。
+> * **[FAQ](../field-guides/FAQ.md)**：运维与职业转型的全面问答。
+> * **[实验环境搭建指南](../field-guides/Lab_Setup_Guide.md)**：多层硬件规格与隔离的企业/内核实验蓝图。
 
-> **Recommended Curated Roadmap Resources:**
-> * **[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths)**: Curated pathways for penetration testers, red teamers, blue teamers, and security researchers.
-> * **[Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap)**: Practical assessment workflows, tooling matrices, and engagement methodologies.
-> * **[Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)**: Curated offensive security and low-level systems literature.
-
----
-
-> *"Most guides explain how to install Tor. This document explains why Tor alone is not enough, what the complete chain looks like, and what breaks when you skip a layer."*
+> **推荐的精选路线图资源：**
+> * **[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths)**：面向渗透测试人员、红队、蓝队与安全研究者的精选学习路径。
+> * **[Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap)**：实战评估流程、工具矩阵与项目方法论。
+> * **[Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)**：精选的攻击安全与底层系统文献。
 
 ---
 
-## WHY THIS DOCUMENT EXISTS
-
-[Phase -1](../phases/PHASE_-1.md) is the definitive, exhaustive OPSEC reference -- over 4,000 lines covering every facet of anonymity, infrastructure, forensics, and operational discipline. [BlackHat Long-Term Survival Tactics](BlackHat_Long-Term_Survival_Tactics.md) extends that into 3,000+ lines of advanced tradecraft.
-
-Both are essential reading. Both are dense.
-
-This document exists for a different purpose: to give beginners and intermediate operators a **single, clear, end-to-end picture** of how the anonymity architecture actually works -- the full chain from your local machine to the target, what each layer does, what each layer does not do, and how they stack together.
-
-Think of this as the architectural blueprint. Phase -1 and the Survival Tactics manual are the complete construction specifications. Read the blueprint first. Then build from the specifications.
-
-**What this document covers:**
-1. The complete traffic chain (Local Machine to Target)
-2. What every adversary sees at every hop
-3. The seven operational layers beyond just the network chain
-4. How to calibrate your stack to your actual threat model
-5. The verification checklist to confirm it all works
-
-**What this document does not cover:**
-- Step-by-step tool installation (see [Phase -1, Sections 8-9](../phases/PHASE_-1.md))
-- Deep VPS hardening (see [Phase -1, Section 8](../phases/PHASE_-1.md))
-- Cryptocurrency acquisition chains (see [Phase -1, Section 11](../phases/PHASE_-1.md))
-- Communication platform security comparison (see [Phase -1, Section 6](../phases/PHASE_-1.md))
-- Physical counter-surveillance (see [Survival Tactics, Sections 6-7](BlackHat_Long-Term_Survival_Tactics.md))
+> *“大多数指南只讲怎么安装 Tor。本文要讲的是：为什么光有 Tor 不够，完整的链路长什么样，以及当你跳过某一层时，哪里会崩。”*
 
 ---
 
-## TABLE OF CONTENTS
+## 本文为什么存在
 
-1. [The Core Chain: Local Machine to Target](#1-the-core-chain-local-machine-to-target)
-2. [What Each Adversary Sees](#2-what-each-adversary-sees)
-3. [The OPSEC Failure Pyramid: Why the Chain Is Not Enough](#3-the-opsec-failure-pyramid-why-the-chain-is-not-enough)
-4. [The Seven Layers of Maximum Anonymity](#4-the-seven-layers-of-maximum-anonymity)
-5. [The Three-Identity Model](#5-the-three-identity-model)
-6. [Whonix: The Architectural Leak-Proof Guarantee](#6-whonix-the-architectural-leak-proof-guarantee)
-7. [Threat Model Tiers: Calibrate Your Stack](#7-threat-model-tiers-calibrate-your-stack)
-8. [Stack Verification Checklist](#8-stack-verification-checklist)
-9. [Common Mistakes That Break the Chain](#9-common-mistakes-that-break-the-chain)
-10. [Where to Go Next](#10-where-to-go-next)
+[阶段 -1](../phases/PHASE_-1.md) 是权威而详尽的作战安全参考——四千多行，覆盖匿名、基础设施、取证与作战纪律的每一个侧面。[BlackHat 长期生存战术](BlackHat_Long-Term_Survival_Tactics.md) 把它延伸到三千多行的高级作业手法。
+
+两篇都是必读。两篇都很厚。
+
+本文的目的不同：给初学者和中级操作者一张**单一、清晰、端到端的总图**，说明匿名架构实际是怎么运转的——从你的本地机器到目标之间的完整链路，每一层做什么、每一层不做什么，以及它们如何叠加在一起。
+
+把它当成架构蓝图。阶段 -1 和《长期生存战术》是完整的施工规范。先读蓝图，再照规范施工。
+
+**本文覆盖：**
+1. 完整的流量链路（从本地机器到目标）
+2. 链路上每一跳，各类对手分别能看到什么
+3. 网络链路之外的七层作战要素
+4. 如何按你真实的威胁模型校准技术栈
+5. 用来确认整套配置确实生效的验证清单
+
+**本文不覆盖：**
+- 工具的分步安装（见[阶段 -1，第 8-9 节](../phases/PHASE_-1.md)）
+- VPS 深度加固（见[阶段 -1，第 8 节](../phases/PHASE_-1.md)）
+- 加密货币的获取链路（见[阶段 -1，第 11 节](../phases/PHASE_-1.md)）
+- 通信平台的安全性对比（见[阶段 -1，第 6 节](../phases/PHASE_-1.md)）
+- 物理反监视（见[长期生存战术，第 6-7 节](BlackHat_Long-Term_Survival_Tactics.md)）
 
 ---
 
-## 1. THE CORE CHAIN: LOCAL MACHINE TO TARGET
+## 目录
 
-The recommended configuration for maximum anonymity (VPN-to-Tor):
+1. [核心链路：从本地机器到目标](#1-核心链路从本地机器到目标)
+2. [每个对手能看到什么](#2-每个对手能看到什么)
+3. [作战安全失效金字塔：为什么只有链路还不够](#3-作战安全失效金字塔为什么只有链路还不够)
+4. [最大匿名的七层结构](#4-最大匿名的七层结构)
+5. [三身份模型](#5-三身份模型)
+6. [Whonix：架构级的防泄漏保证](#6-whonix架构级的防泄漏保证)
+7. [威胁模型分级：校准你的技术栈](#7-威胁模型分级校准你的技术栈)
+8. [技术栈验证清单](#8-技术栈验证清单)
+9. [会让链路断裂的常见错误](#9-会让链路断裂的常见错误)
+10. [接下来去哪里](#10-接下来去哪里)
+
+---
+
+## 1. 核心链路：从本地机器到目标
+
+追求最大匿名时的推荐配置（VPN 到 Tor）：
 
 ```
-Your machine --> VPN (self-hosted) --> Tor network --> Destination
+你的机器 --> VPN（自建）--> Tor 网络 --> 目标
 ```
 
-The Layering Model from the [Survival Tactics manual (Section 3.1)](BlackHat_Long-Term_Survival_Tactics.md) defines the operational chain:
+[《长期生存战术》第 3.1 节](BlackHat_Long-Term_Survival_Tactics.md) 里的分层模型定义了这条作战链路：
 
 <div align="center">
 <table><tr><td>
@@ -91,15 +91,15 @@ The Layering Model from the [Survival Tactics manual (Section 3.1)](BlackHat_Lon
 </td></tr></table>
 </div>
 
-The expanded operational chain, with physical discipline included:
+展开后的作战链路，把物理纪律也算了进来：
 
 ```
-Physical Location (public WiFi or mobile hotspot -- never home ISP)
-  --> MAC-spoofed adapter + randomized hostname
-    --> Dedicated hardware (Qubes OS + Whonix VMs)
-      --> VPN-1 (WireGuard on Monero-paid VPS, non-14-Eyes jurisdiction)
-        --> Tor with obfs4 bridges (Entry --> Middle --> Exit)
-          --> Target
+物理位置（公共 WiFi 或移动热点——绝不用家里的宽带）
+  --> 伪造 MAC 的网卡 + 随机化的主机名
+    --> 专用硬件（Qubes OS + Whonix 虚拟机）
+      --> VPN-1（门罗币支付、非十四眼辖区的 VPS 上的 WireGuard）
+        --> 带 obfs4 网桥的 Tor（入口 --> 中间 --> 出口）
+          --> 目标
 ```
 
 <div align="center">
@@ -110,42 +110,42 @@ Physical Location (public WiFi or mobile hotspot -- never home ISP)
 </td></tr></table>
 </div>
 
-When the target blocks Tor exit nodes, a second configuration applies (Tor-to-VPN):
+当目标封禁 Tor 出口节点时，改用第二套配置（Tor 到 VPN）：
 
 ```
-Your machine --> Tor --> VPN-2 (different provider, different jurisdiction) --> Target
+你的机器 --> Tor --> VPN-2（换一家服务商、换一个辖区）--> 目标
 ```
 
-This variant hides the Tor exit IP from the target. The tradeoff: the VPN-2 provider can see the content of your traffic (though not your real IP, since it arrives via Tor).
+这种变体对目标隐藏 Tor 出口 IP。代价是：VPN-2 服务商能看到你的流量内容（但看不到你的真实 IP，因为流量是经 Tor 抵达它的）。
 
-**The critical rule on VPN selection:**
+**关于 VPN 选择的关键规则：**
 
-Do NOT use commercial VPN chains (ExpressVPN, NordVPN, or similar). The [Survival Tactics manual](BlackHat_Long-Term_Survival_Tactics.md) documents why:
-- Multiple cooperation cases with law enforcement (2017-2025)
-- Metadata logging despite "no-log" marketing claims (confirmed in court cases)
-- Many operate from Five-Eyes-adjacent jurisdictions
-- Paying with credit card = your identity is their first record
+不要使用商业 VPN 链（ExpressVPN、NordVPN 之类）。[《长期生存战术》](BlackHat_Long-Term_Survival_Tactics.md) 记录了原因：
+- 2017-2025 年间多起与执法部门合作的案例
+- 尽管宣传“无日志”，仍然记录元数据（已在庭审中得到确认）
+- 不少服务商所在的辖区与五眼联盟关系密切
+- 用信用卡付款 = 你的身份就是他们的第一条记录
 
-The correct approach: self-hosted WireGuard on an anonymous VPS.
+正确做法：在匿名 VPS 上自建 WireGuard。
 
 ```
-VPS requirements:
-- Provider accepts Monero (XMR) -- no KYC required
-- Recommended: Njalla, 1984 Hosting, FlokiNET, Alexhost, SporeStack
-- Jurisdiction priority: Iceland > Moldova > Romania > Netherlands
-- Avoid: UK, US, Australia, Canada, NZ (Five-Eyes)
-- Avoid: Germany (strong LE cooperation), France (ANSSI/DGSI active)
-- All management access via Tor only -- VPS never sees your real IP
-- Zero logging enforced (cron job wipes logs every 30 minutes)
+VPS 要求：
+- 服务商接受门罗币（XMR）——不要求 KYC
+- 推荐：Njalla、1984 Hosting、FlokiNET、Alexhost、SporeStack
+- 辖区优先级：冰岛 > 摩尔多瓦 > 罗马尼亚 > 荷兰
+- 避开：英国、美国、澳大利亚、加拿大、新西兰（五眼）
+- 避开：德国（与执法部门合作力度大）、法国（ANSSI/DGSI 活跃）
+- 所有管理访问只经 Tor——VPS 永远看不到你的真实 IP
+- 强制零日志（cron 任务每 30 分钟清一次日志）
 ```
 
-> **Source:** [Phase -1, Section 9](../phases/PHASE_-1.md) · [Survival Tactics, Section 3.2](BlackHat_Long-Term_Survival_Tactics.md)
+> **来源：** [阶段 -1，第 9 节](../phases/PHASE_-1.md) · [长期生存战术，第 3.2 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-## 2. WHAT EACH ADVERSARY SEES
+## 2. 每个对手能看到什么
 
-Understanding what each participant in the chain can and cannot see is the foundation of evaluating whether the chain actually works.
+弄清链路上每个参与者能看到什么、看不到什么，是判断这条链是否真的有效的基础。
 
 <div align="center">
 <table><tr><td>
@@ -155,30 +155,30 @@ Understanding what each participant in the chain can and cannot see is the found
 </td></tr></table>
 </div>
 
-| Adversary | What They See | What They Cannot See |
+| 对手 | 能看到什么 | 看不到什么 |
 |---|---|---|
-| **Your ISP** | Encrypted traffic to VPN server | That you use Tor; your destination; your content |
-| **VPN Provider** | Your IP + Tor traffic | Your final destination (if no-log policy holds: nothing retained) |
-| **Tor Entry Node** | VPN IP (not your real IP) | Your destination; your content |
-| **Tor Exit Node** | Traffic to destination | Your real IP; your VPN IP |
-| **Destination** | Tor exit node IP only | Your real IP; any trace back to you |
+| **你的 ISP** | 发往 VPN 服务器的加密流量 | 你在用 Tor；你的目的地；你的内容 |
+| **VPN 服务商** | 你的 IP + Tor 流量 | 你的最终目的地（若无日志政策成立：什么都不留） |
+| **Tor 入口节点** | VPN 的 IP（不是你的真实 IP） | 你的目的地；你的内容 |
+| **Tor 出口节点** | 发往目的地的流量 | 你的真实 IP；你的 VPN IP |
+| **目标** | 仅 Tor 出口节点 IP | 你的真实 IP；任何能回溯到你的线索 |
 
-**Why VPN before Tor (and not just Tor alone):**
+**为什么先 VPN 再 Tor（而不是只用 Tor）：**
 
-1. Hides Tor usage from your ISP. In many countries and corporate environments, Tor usage itself is flagged as suspicious. The VPN makes your traffic look like ordinary encrypted VPN traffic.
-2. Hides your real IP from the Tor entry node. Without the VPN layer, the Tor entry guard knows your real IP address.
-3. The VPN provider cannot see your final destination because your traffic enters the Tor network after the VPN.
-4. No single point in the chain knows both who you are and where you are going.
+1. 对你的 ISP 隐藏你在用 Tor。在很多国家和企业环境里，使用 Tor 本身就会被标记为可疑。VPN 让你的流量看起来只是普通的加密 VPN 流量。
+2. 对 Tor 入口节点隐藏你的真实 IP。没有 VPN 这一层，Tor 的入口守卫就知道你的真实 IP。
+3. VPN 服务商看不到你的最终目的地，因为流量是在经过 VPN 之后才进入 Tor 网络的。
+4. 链路上没有任何单一节点同时知道“你是谁”和“你要去哪”。
 
-> **Source:** [Phase -1, Section 9.4, Lines 1218-1243](../phases/PHASE_-1.md)
+> **来源：** [阶段 -1，第 9.4 节，第 1218-1243 行](../phases/PHASE_-1.md)
 
 ---
 
-## 3. THE OPSEC FAILURE PYRAMID: WHY THE CHAIN IS NOT ENOUGH
+## 3. 作战安全失效金字塔：为什么只有链路还不够
 
-This is the most important concept in this document.
+这是本文最重要的概念。
 
-The traffic chain (VPN --> Tor --> Target) is the network layer. **Network anonymity is only the middle layer.** The layers that actually lead to arrests are above and below it.
+流量链路（VPN --> Tor --> 目标）属于网络层。**网络匿名只是中间那一层。**真正导致被抓的层，在它的上面和下面。
 
 <div align="center">
 <table><tr><td>
@@ -188,24 +188,24 @@ The traffic chain (VPN --> Tor --> Target) is the network layer. **Network anony
 </td></tr></table>
 </div>
 
-| Layer | What It Covers | How Often It Causes Arrests |
+| 层 | 涵盖什么 | 导致被抓的频率 |
 |---|---|---|
-| **Human Layer** | Reused usernames, bragging, trust failures, communication mistakes, social engineering | Top cause (~40% of arrests from bragging alone) |
-| **Network Layer** | VPN, Tor, anonymized infrastructure, encrypted communications | ~20% of arrests from technical mistakes |
-| **Physical Layer** | Facial recognition, ANPR, device forensics, workspace surveillance, hardware trails | Often overlooked; enables parallel construction |
-| **Forensic Layer** | Log artifacts on your own machine, RAM forensics, deleted file recovery, metadata in files | Almost never taught; your own device becomes the strongest evidence against you |
+| **人的层** | 复用用户名、炫耀、信任崩塌、通信失误、社会工程 | 最常见原因（仅“炫耀”一项就占被捕案例的约 40%） |
+| **网络层** | VPN、Tor、匿名化基础设施、加密通信 | 约 20% 的被捕源于技术失误 |
+| **物理层** | 人脸识别、车牌识别、设备取证、工作场所监控、硬件轨迹 | 常被忽视；可用于“平行构造”证据 |
+| **取证层** | 你自己机器上的日志痕迹、内存取证、已删除文件恢复、文件中的元数据 | 几乎从不被教；你自己的设备会成为指控你最强的证据 |
 
-From [Phase -1](../phases/PHASE_-1.md):
+出自[阶段 -1](../phases/PHASE_-1.md)：
 
-> *"Most operators think about network anonymity first. Network anonymity is the middle layer. The layers that actually kill careers are above and below it."*
+> *“大多数操作者首先想到的是网络匿名。网络匿名只是中间那一层。真正断送职业生涯的层，在它的上面和下面。”*
 
-The network chain described in Section 1 is necessary. It is not sufficient. The remaining sections of this document cover the layers that make the chain actually hold.
+第 1 节讲的网络链路是必要的，但不充分。本文余下的部分，讲的是让这条链真正立得住的那几层。
 
 ---
 
-## 4. THE SEVEN LAYERS OF MAXIMUM ANONYMITY
+## 4. 最大匿名的七层结构
 
-Maximum anonymity requires all seven layers to hold simultaneously. A failure in any single layer can unravel the entire chain.
+最大匿名要求七层同时成立。任何单独一层失效，都可能把整条链路拆掉。
 
 <div align="center">
 <table><tr><td>
@@ -217,201 +217,201 @@ Maximum anonymity requires all seven layers to hold simultaneously. A failure in
 
 ---
 
-### Layer 0: Physical Discipline
+### 第 0 层：物理纪律
 
-Your physical presence must not correlate with your digital activity.
+你的物理存在不能与你的数字活动产生关联。
 
-| Requirement | Detail |
+| 要求 | 细节 |
 |---|---|
-| **Network source** | Public WiFi or mobile hotspot. Never your home ISP for operational activity. |
-| **Location rotation** | Never use the same public WiFi location twice consecutively. |
-| **Session time limit** | 20-25 minutes maximum per physical location. |
-| **Personal phone** | Leave at home or in a Faraday bag. Never co-locate personal and operational devices. |
-| **CCTV awareness** | Face away from cameras. Wear non-distinctive clothing. No identifiable accessories. |
+| **网络来源** | 公共 WiFi 或移动热点。作战活动绝不用家里的宽带。 |
+| **地点轮换** | 同一个公共 WiFi 地点不要连续使用两次。 |
+| **单次时长上限** | 每个物理地点最多 20-25 分钟。 |
+| **个人手机** | 留在家里或放进法拉第袋。个人设备与作战设备绝不放在一起。 |
+| **摄像头意识** | 背对摄像头。穿不起眼的衣服。不要佩戴可识别的饰物。 |
 
-> **Deep dive:** [Survival Tactics, Sections 6-7](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [长期生存战术，第 6-7 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-### Layer 1: Hardware and Operating System
+### 第 1 层：硬件与操作系统
 
-Your device must not betray you, even if seized.
+即使被查获，你的设备也不能出卖你。
 
-| Requirement | Detail |
+| 要求 | 细节 |
 |---|---|
-| **Dedicated device** | Separate laptop per persona (ideal). At minimum, strict VM compartmentalization. |
-| **Recommended hardware** | Librebooted ThinkPad X230/T430 (budget, proven) or Coreboot ThinkPad T480 (modern balance). |
-| **Purchase method** | Cash only, physical store, no traceable payment. |
-| **MAC spoofing** | Randomize MAC address before every session. |
-| **Hostname** | Randomize before every session. |
-| **Webcam / Mic / Bluetooth** | Physically disabled or hardware kill-switched. |
-| **Disk encryption** | LUKS full disk encryption. Non-negotiable. |
-| **Serial numbers** | Remove all stickers. Replace via Coreboot if possible. |
+| **专用设备** | 每个身份一台独立笔记本（理想情况）。至少要做到严格的虚拟机区隔。 |
+| **推荐硬件** | 刷了 Libreboot 的 ThinkPad X230/T430（预算方案，久经检验），或刷了 Coreboot 的 ThinkPad T480（现代与均衡）。 |
+| **购买方式** | 只用现金，实体店购买，不留可追溯的支付记录。 |
+| **MAC 地址伪造** | 每次会话前随机化 MAC 地址。 |
+| **主机名** | 每次会话前随机化。 |
+| **摄像头 / 麦克风 / 蓝牙** | 物理断开，或用硬件熔断开关。 |
+| **磁盘加密** | LUKS 全盘加密。没有商量余地。 |
+| **序列号** | 撕掉所有贴纸。条件允许时通过 Coreboot 替换。 |
 
-**OS selection by skill level:**
+**按技能水平选择操作系统：**
 
 ```
-Beginner:      Tails OS (USB boot)
-               - Amnesiac: wipes everything on shutdown
-               - Tor by default: all traffic routed through Tor automatically
-               - Zero trace on host hardware
-               - Best for: single operations, maximum leave-no-trace sessions
+初学者：        Tails OS（U 盘启动）
+               - 失忆式：关机即清空一切
+               - 默认走 Tor：所有流量自动经 Tor 路由
+               - 在宿主硬件上不留痕迹
+               - 适合：单次行动、最大程度的不留痕会话
 
-Intermediate:  Qubes OS
-               - Compartmentalization built into the OS architecture
-               - Different VM per persona / task
-               - dom0 (management domain) has no network access
-               - Best for: multi-persona operations, daily research
+中级：          Qubes OS
+               - 区隔内建在操作系统架构里
+               - 每个身份 / 任务一个独立虚拟机
+               - dom0（管理域）没有网络访问
+               - 适合：多身份行动、日常研究
 
-Advanced:      Qubes OS + Whonix VMs (gold standard, 2027)
-               - Qubes handles compartmentalization
-               - Whonix Gateway VM forces ALL traffic through Tor
-               - Even if Workstation VM is compromised, real IP cannot leak
-               - Best for: sustained high-security operations
+高级：          Qubes OS + Whonix 虚拟机（2027 年的黄金标准）
+               - Qubes 负责区隔
+               - Whonix 网关虚拟机强制所有流量走 Tor
+               - 即使工作站虚拟机被攻陷，真实 IP 也无法泄漏
+               - 适合：持续的高安全等级行动
 ```
 
-> **Deep dive:** [Phase -1, Section 13](../phases/PHASE_-1.md) · [Survival Tactics, Section 2](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 13 节](../phases/PHASE_-1.md) · [长期生存战术，第 2 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-### Layer 2: Network Chain
+### 第 2 层：网络链路
 
-This is the traffic chain from Section 1 of this document.
-
-```
-Your machine --> VPN-1 (self-hosted WireGuard) --> Tor (3-hop) --> Target
-```
-
-Key implementation details:
+这就是本文第 1 节里的流量链路。
 
 ```
-VPN:
-- Self-hosted WireGuard on anonymous VPS (Monero-paid, non-14-Eyes)
-- Kill switch mandatory (PostUp/PreDown iptables rules)
-- If VPN drops, ALL traffic must stop -- not fall back to your real IP
+你的机器 --> VPN-1（自建 WireGuard）--> Tor（三跳）--> 目标
+```
 
-Tor:
-- Use obfs4 bridges if Tor usage is suspicious in your jurisdiction
-- Exclude Five-Eyes exit nodes in torrc:
+关键实现细节：
+
+```
+VPN：
+- 匿名 VPS 上自建 WireGuard（门罗币支付、非十四眼辖区）
+- 熔断开关强制开启（PostUp/PreDown 的 iptables 规则）
+- VPN 一旦断开，所有流量必须停止——绝不能回落到你的真实 IP
+
+Tor：
+- 如果你所在辖区对 Tor 的使用敏感，就走 obfs4 网桥
+- 在 torrc 中排除五眼出口节点：
     ExcludeExitNodes {US},{GB},{AU},{CA},{NZ}
     StrictNodes 1
-- Enable stream isolation:
+- 启用流隔离：
     IsolateDestAddr 1
     IsolateDestPort 1
 
-Leak prevention:
-- DNS: must resolve through Tor or VPN only
-- WebRTC: disabled in all browsers (media.peerconnection.enabled = false)
-- WebGPU: disabled in all browsers (dom.webgpu.enabled = false)
-- Test: dnsleaktest.com, browserleaks.com, ipleak.net (all via Tor Browser)
+泄漏防护：
+- DNS：必须只经 Tor 或 VPN 解析
+- WebRTC：在所有浏览器中禁用（media.peerconnection.enabled = false）
+- WebGPU：在所有浏览器中禁用（dom.webgpu.enabled = false）
+- 测试：dnsleaktest.com、browserleaks.com、ipleak.net（全部通过 Tor Browser 访问）
 ```
 
-> **Deep dive:** [Phase -1, Section 9](../phases/PHASE_-1.md) · [Survival Tactics, Section 3](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 9 节](../phases/PHASE_-1.md) · [长期生存战术，第 3 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-### Layer 3: Whonix (Leak-Proof Enforcement)
+### 第 3 层：Whonix（防泄漏强制）
 
-Whonix provides an architectural guarantee that goes beyond configuration. See Section 6 of this document for the full explanation.
-
----
-
-### Layer 4: Identity Compartmentalization
-
-Three identities. Absolute separation between each. See Section 5 of this document for the full model.
+Whonix 提供的是一种超出配置层面的架构保证。完整解释见本文第 6 节。
 
 ---
 
-### Layer 5: Financial OPSEC
+### 第 4 层：身份区隔
 
-Your payment trail must not lead back to you.
-
-```
-Rules:
-- All research-related purchases: Monero (XMR) only
-- Acquisition chain: Fiat --> Bitcoin (P2P or ATM) --> Atomic swap to Monero
-- Never use personal credit cards, bank accounts, or KYC exchanges
-- Never reuse wallet addresses
-- One wallet per persona
-- Recommended wallet: Feather Wallet (https://featherwallet.org)
-- Exchanges: Haveno (Monero-native DEX), Bisq (Bitcoin/XMR DEX)
-```
-
-> **Deep dive:** [Phase -1, Section 11](../phases/PHASE_-1.md) · [Survival Tactics, Section 5](BlackHat_Long-Term_Survival_Tactics.md)
+三个身份。彼此之间绝对分离。完整模型见本文第 5 节。
 
 ---
 
-### Layer 6: Communications
+### 第 5 层：财务作战安全
 
-Your communication channel is the number one arrest vector. More operators have been caught through communication records than through any technical failure.
+你的支付轨迹不能指回你本人。
 
 ```
-For maximum anonymity (2027):
-- SimpleX Chat: no user IDs, no phone numbers, no usernames, fully decentralized
-  Servers cannot correlate senders to receivers even in metadata
+规则：
+- 所有与研究相关的采购：只用门罗币（XMR）
+- 获取链路：法币 --> 比特币（P2P 或 ATM）--> 原子交换成门罗币
+- 绝不使用个人信用卡、银行账户或 KYC 交易所
+- 绝不重复使用钱包地址
+- 每个身份一个钱包
+- 推荐钱包：Feather Wallet (https://featherwallet.org)
+- 交易所：Haveno（门罗币原生 DEX）、Bisq（比特币/XMR DEX）
+```
+
+> **深入阅读：** [阶段 -1，第 11 节](../phases/PHASE_-1.md) · [长期生存战术，第 5 节](BlackHat_Long-Term_Survival_Tactics.md)
+
+---
+
+### 第 6 层：通信
+
+你的通信渠道是第一号被捕诱因。因通信记录被抓的操作者，比因任何技术失误被抓的更多。
+
+```
+追求最大匿名（2027）：
+- SimpleX Chat：没有用户 ID、没有手机号、没有用户名，完全去中心化
+  即使在元数据里，服务器也无法把发送方与接收方关联起来
   https://simplex.chat
 
-Acceptable (gold standard E2E encryption, but weaker on anonymity):
-- Signal: Signal Protocol (the strongest E2E encryption protocol available)
-  Sealed sender, disappearing messages (1 hour max for operational comms)
-  Weakness: requires phone number (use prepaid SIM via VoIP/JMP.chat over Tor)
-  Weakness: Signal servers see who you communicate with (metadata)
-  Verdict: acceptable for comms not requiring full anonymity;
-           SimpleX preferred for anonymity-critical comms
+可接受（端到端加密的黄金标准，但匿名性较弱）：
+- Signal：Signal 协议（目前可用的最强端到端加密协议）
+  密封发送方、阅后即焚（作战通信最长 1 小时）
+  弱点：需要手机号（用经 Tor 的 VoIP/JMP.chat 获取预付费 SIM 号）
+  弱点：Signal 服务器能看到你在和谁通信（元数据）
+  结论：适合不要求完全匿名的通信；
+           匿名关键的通信优先用 SimpleX
 
-Decentralized fallback:
-- Session: no phone number required, Lokinet overlay
-- Briar: peer-to-peer, Tor-routed, works offline via Bluetooth/WiFi mesh
+去中心化备选：
+- Session：不需要手机号，Lokinet 覆盖网络
+- Briar：点对点，经 Tor 路由，可通过蓝牙/WiFi 网状网离线工作
 
-HARD PROHIBITION (2027):
-- Telegram: cooperates with LE since August 2024 (Durov arrest)
-  All standard/group chats stored in readable form on Telegram servers
-- Discord: extensive logs, very cooperative with LE
-- WhatsApp: E2E content but extensive metadata logging
-- SMS: no encryption at carrier level, extensive logs
+硬性禁止（2027）：
+- Telegram：自 2024 年 8 月起与执法部门合作（Durov 被捕）
+  所有普通/群组聊天都以可读形式存储在 Telegram 服务器上
+- Discord：日志详尽，与执法部门合作非常积极
+- WhatsApp：端到端加密内容，但记录大量元数据
+- SMS：运营商层面没有加密，日志详尽
 ```
 
-> **Deep dive:** [Phase -1, Section 6](../phases/PHASE_-1.md) · [Survival Tactics, Section 4](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 6 节](../phases/PHASE_-1.md) · [长期生存战术，第 4 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-### Layer 7: Behavioral Discipline
+### 第 7 层：行为纪律
 
-The most difficult layer. Technical controls can be automated. Behavior must be maintained by willpower.
+最难的一层。技术控制可以自动化，行为只能靠意志力维持。
 
 ```
-Time-zone masking:
-- Post and operate at randomized times, not your real timezone
-- A consistent posting pattern reveals your geographic region
+时区掩蔽：
+- 在随机时段发帖与操作，不要按你的真实时区来
+- 固定的发帖规律会暴露你所在的地理区域
 
-Linguistic OPSEC:
-- Avoid distinctive writing patterns (stylometry analysis can identify authors)
-- Vary sentence length, vocabulary, punctuation habits between personas
-- Use different personas for different contexts -- never mix styles
+语言作战安全：
+- 避免有辨识度的写作习惯（文体计量分析可以识别作者）
+- 在不同身份之间变换句长、词汇和标点习惯
+- 不同语境用不同身份——绝不混用风格
 
-Metadata scrubbing:
-- ExifTool for images (GPS coordinates, camera model, timestamps)
-- mat2 for documents (author name, software version, revision history)
-- Strip ALL metadata before ANY upload, every time
+元数据清洗：
+- 图片用 ExifTool（GPS 坐标、相机型号、时间戳）
+- 文档用 mat2（作者名、软件版本、修订历史）
+- 任何一次上传之前都清除所有元数据，每一次都要
 
-Session hygiene:
-- Run session-start script before every operation:
-  1. Spoof MAC address (both interfaces)
-  2. Randomize hostname
-  3. Set privacy-respecting DNS
-  4. Flush DNS cache
-  5. Verify IP (confirm VPN + Tor working)
-  6. Verify no DNS leaks
-  7. Verify no WebRTC leaks
+会话卫生：
+- 每次行动前运行会话启动脚本：
+  1. 伪造 MAC 地址（两块网卡都要）
+  2. 随机化主机名
+  3. 设置尊重隐私的 DNS
+  4. 清空 DNS 缓存
+  5. 验证 IP（确认 VPN + Tor 正常工作）
+  6. 验证没有 DNS 泄漏
+  7. 验证没有 WebRTC 泄漏
 ```
 
-> **Deep dive:** [Phase -1, Sections 12, 15-16](../phases/PHASE_-1.md) · [Survival Tactics, Section 3.5](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 12、15-16 节](../phases/PHASE_-1.md) · [长期生存战术，第 3.5 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-## 5. THE THREE-IDENTITY MODEL
+## 5. 三身份模型
 
-Maximum anonymity requires absolute separation between three identities. No shared device, IP, email, username, or account between any of them.
+最大匿名要求三个身份之间绝对分离。它们之间不共用任何设备、IP、邮箱、用户名或账户。
 
 <div align="center">
 <table><tr><td>
@@ -421,21 +421,21 @@ Maximum anonymity requires absolute separation between three identities. No shar
 </td></tr></table>
 </div>
 
-| Identity | Purpose | Infrastructure | Rules |
+| 身份 | 用途 | 基础设施 | 规则 |
 |---|---|---|---|
-| **Personal** | Real name, real devices, real accounts. Personal email, banking, social media. | Your normal devices and network. | Never touches research or operations. Ever. |
-| **Research** | Pseudonym, throwaway email over Tor. CTFs, GitHub security repos, bug bounty, forums, conference registrations. | Dedicated research device or VM. VPN + Tor. | Never crosses into operational activity. |
-| **Operational** | Fresh infrastructure per operation. No reuse of IPs, domains, or usernames. Destroyed completely after each operation. | Disposable VMs (Tails or Qubes DispVM). Entirely fresh infrastructure. | No crossover with research identity. No crossover with personal identity. Burned after use. |
+| **个人** | 真实姓名、真实设备、真实账户。个人邮箱、银行、社交媒体。 | 你日常的设备和网络。 | 绝不接触研究或行动。永远。 |
+| **研究** | 化名，经 Tor 使用一次性邮箱。CTF、GitHub 安全仓库、漏洞赏金、论坛、会议注册。 | 专用研究设备或虚拟机。VPN + Tor。 | 绝不越界进入作战活动。 |
+| **作战** | 每次行动都用全新基础设施。不复用 IP、域名或用户名。每次行动结束后彻底销毁。 | 一次性虚拟机（Tails 或 Qubes DispVM）。完全全新的基础设施。 | 不与研究身份交叉。不与个人身份交叉。用过即焚。 |
 
-The most common mistake beginners make: using their research identity for operational activity. One account, one email, one GitHub handle linked across both contexts creates a chain an investigator can follow from one to the other.
+初学者最常犯的错误：拿研究身份去做作战活动。一个账户、一个邮箱、一个 GitHub 账号同时挂在两种语境上，调查者就可以从一头追到另一头。
 
-> **Deep dive:** [Phase -1, Section 12](../phases/PHASE_-1.md) · [Survival Tactics, Section 1](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 12 节](../phases/PHASE_-1.md) · [长期生存战术，第 1 节](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-## 6. WHONIX: THE ARCHITECTURAL LEAK-PROOF GUARANTEE
+## 6. Whonix：架构级的防泄漏保证
 
-Why does the roadmap recommend Whonix in addition to the VPN + Tor chain? Because Whonix provides something configuration cannot: an architectural guarantee against IP leaks.
+路线图为什么在 VPN + Tor 链路之外还推荐 Whonix？因为 Whonix 提供了配置给不了的东西：针对 IP 泄漏的架构级保证。
 
 <div align="center">
 <table><tr><td>
@@ -445,58 +445,58 @@ Why does the roadmap recommend Whonix in addition to the VPN + Tor chain? Becaus
 </td></tr></table>
 </div>
 
-Whonix is a two-VM system:
+Whonix 是一个双虚拟机系统：
 
-| Component | Role | Network Access |
+| 组件 | 角色 | 网络访问 |
 |---|---|---|
-| **Workstation VM** | Where you do all your work. | No direct network access whatsoever. All traffic routed through Gateway. |
-| **Gateway VM** | Routes all traffic through Tor. Network isolation enforcer. | NAT to real internet (Adapter 1) + Internal Network to Workstation (Adapter 2). |
+| **工作站虚拟机** | 你所有的工作都在这里做。 | 没有任何直接网络访问。所有流量经网关路由。 |
+| **网关虚拟机** | 把所有流量经 Tor 路由。网络隔离的执行者。 | 到真实互联网的 NAT（网卡 1）+ 到工作站的内网（网卡 2）。 |
 
-**Why this matters:**
+**为什么这很重要：**
 
-Even if malware fully compromises the Workstation VM, it cannot discover your real IP address. The Workstation has no network interface to the real internet. It physically cannot reach the outside world except through the Gateway's Tor circuit. This is not a configuration that can be bypassed by software -- it is an architectural boundary enforced by the hypervisor.
+即使恶意软件完全攻陷了工作站虚拟机，它也无法发现你的真实 IP。工作站没有通往真实互联网的网络接口。除了经网关的 Tor 链路，它在物理上就无法触达外部世界。这不是一个可以被软件绕过的配置——它是由 hypervisor 强制执行的架构边界。
 
-Compare this to just running Tor Browser on your host OS: a single misconfigured application, a WebRTC leak, or a DNS query outside the Tor tunnel reveals your real IP. Whonix eliminates that entire class of failure.
+对比一下只在宿主操作系统上跑 Tor Browser：一个配置错误的应用程序、一次 WebRTC 泄漏、或者一条绕开 Tor 隧道的 DNS 查询，就暴露了你的真实 IP。Whonix 消灭了这一整类失败。
 
 ```
-QubesOS integration (gold standard):
-- sys-whonix qube acts as the Tor gateway
-- Research AppVM routes all traffic through sys-whonix:
+QubesOS 集成（黄金标准）：
+- sys-whonix qube 充当 Tor 网关
+- 研究 AppVM 的所有流量经 sys-whonix 路由：
     qvm-prefs ResearchVM netvm sys-whonix
-- dom0 (management domain) has no network access at all
-- Disposable VMs for one-shot tasks auto-destroy on close
+- dom0（管理域）完全没有网络访问
+- 一次性任务的 DispVM 在关闭时自动销毁
 ```
 
-> **Deep dive:** [Phase -1, Section 13.3](../phases/PHASE_-1.md)
+> **深入阅读：** [阶段 -1，第 13.3 节](../phases/PHASE_-1.md)
 
 ---
 
-## 7. THREAT MODEL TIERS: CALIBRATE YOUR STACK
+## 7. 威胁模型分级：校准你的技术栈
 
-Not every scenario requires the full stack. Match your adversary to your posture. Under-preparing is dangerous. Over-preparing creates friction you will skip under pressure.
+不是每个场景都需要全套技术栈。让你的姿态匹配你的对手。准备不足很危险；过度准备会带来摩擦，而摩擦在压力之下会被你跳过。
 
-The following tiers synthesize the adversary calibration guidance from [Phase -1, Section 5](../phases/PHASE_-1.md) and the [Survival Tactics Threat Modeling Framework](BlackHat_Long-Term_Survival_Tactics.md) into a graduated defense model:
+下面这些分级，把[阶段 -1 第 5 节](../phases/PHASE_-1.md)的对手校准指导，与[《长期生存战术》的威胁建模框架](BlackHat_Long-Term_Survival_Tactics.md)综合成一个渐进式防御模型：
 
-| Tier | Adversary | Required Anonymity Posture |
+| 级别 | 对手 | 所需的匿名姿态 |
 |---|---|---|
-| **1** | Script kiddies, casual doxxers, platform abuse teams | Basic VPN, separate research accounts, no personal info in research profiles |
-| **2** | Corporate security teams (SOC, IR), local law enforcement | Full VPN --> Tor chain, Whonix, Monero for purchases, separate devices, encrypted comms |
-| **3** | National intelligence (Five Eyes, equivalent agencies) | All of Tier 2 + physical location discipline, Qubes OS, hardware isolation, burner devices, counter-OSINT audit |
-| **4** | State-level persistent adversary (APT-level counter-operations) | All of Tier 3 + Faraday discipline, dead drops, air-gapped systems, multi-country infrastructure rotation, exit strategy |
+| **1** | 脚本小子、随手的开盒者、平台滥用处置团队 | 基础 VPN、独立研究账户、研究资料里不放个人信息 |
+| **2** | 企业安全团队（SOC、IR）、当地执法部门 | 完整的 VPN --> Tor 链路、Whonix、门罗币采购、独立设备、加密通信 |
+| **3** | 国家级情报机构（五眼及其同级机构） | 级别 2 的全部，加上物理位置纪律、Qubes OS、硬件隔离、一次性设备、反 OSINT 审计 |
+| **4** | 国家级的持久化对手（APT 级反制行动） | 级别 3 的全部，加上法拉第纪律、死信箱、气隙系统、多国基础设施轮换、退出策略 |
 
-**The most important calibration advice from [Phase -1](../phases/PHASE_-1.md):**
+**来自[阶段 -1](../phases/PHASE_-1.md)的最重要校准建议：**
 
-> *"Every layer of OPSEC adds friction. Tor is slow. Separate devices are inconvenient. Monero transactions take time. The friction you are not willing to accept will be the layer you skip under pressure. Be honest about your limits and design your OPSEC around them. An imperfect system you use consistently beats a perfect system you abandon when inconvenient."*
+> *“每一层作战安全都会增加摩擦。Tor 慢。独立设备不方便。门罗币交易要花时间。你不愿意接受的摩擦，就会成为你在压力之下跳过的那一层。诚实地面对自己的限度，并围绕这些限度来设计作战安全。一个你能一直坚持用的不完美系统，胜过一个一不方便就被你抛弃的完美系统。”*
 
-Most security researchers' realistic adversary: **platform abuse teams** and **corporate security teams**. Not NSA. Calibrating to the right adversary determines what protection you actually need. Paranoia about NSA-level adversaries when you face Tier 1 threats wastes time and creates friction that leads to shortcuts.
+大多数安全研究者现实中的对手是：**平台滥用处置团队**和**企业安全团队**，不是 NSA。对准正确的对手，决定了你实际需要什么保护。当你面对的是级别 1 的威胁，却对 NSA 级对手疑神疑鬼，既浪费时间，也会制造出导致走捷径的摩擦。
 
-> **Deep dive:** [Phase -1, Section 5](../phases/PHASE_-1.md) · [Survival Tactics, Threat Modeling Framework](BlackHat_Long-Term_Survival_Tactics.md)
+> **深入阅读：** [阶段 -1，第 5 节](../phases/PHASE_-1.md) · [长期生存战术，威胁建模框架](BlackHat_Long-Term_Survival_Tactics.md)
 
 ---
 
-## 8. STACK VERIFICATION CHECKLIST
+## 8. 技术栈验证清单
 
-Before any operational session, verify the entire stack end-to-end. Do not assume it works because it worked last time.
+任何一次作战会话之前，端到端验证整套技术栈。不要因为上次能用就假定这次也能用。
 
 <div align="center">
 <table><tr><td>
@@ -507,99 +507,99 @@ Before any operational session, verify the entire stack end-to-end. Do not assum
 </div>
 
 ```bash
-# Step 1: Record your base IP (this must NEVER be exposed during operations)
+# 第 1 步：记录你的基础 IP（作战期间绝不能被暴露）
 curl https://ifconfig.me
-# Record this number. Memorize what it starts with.
+# 记下这个数字。记住它的开头。
 
-# Step 2: Connect VPN. Verify IP changes.
+# 第 2 步：连接 VPN。验证 IP 变化。
 wg-quick up wg0
 curl https://ifconfig.me
-# Must show VPN server IP, NOT your real IP
+# 必须显示 VPN 服务器 IP，而不是你的真实 IP
 
-# Step 3: Route through Tor. Verify.
+# 第 3 步：经 Tor 路由。验证。
 systemctl start tor
 proxychains4 curl https://ifconfig.me
-# Must show a Tor exit node IP (different from VPN IP)
+# 必须显示一个 Tor 出口节点 IP（与 VPN IP 不同）
 
-# Step 4: DNS leak test through Tor
+# 第 4 步：经 Tor 做 DNS 泄漏测试
 proxychains4 curl -s https://dnsleaktest.com/json | python3 -m json.tool
-# No ISP DNS servers should appear in the output
+# 输出中不应出现任何 ISP 的 DNS 服务器
 
-# Step 5: WebRTC leak test (browser-based)
-# Open Tor Browser --> visit https://browserleaks.com/webrtc
-# Must show no IP leak
+# 第 5 步：WebRTC 泄漏测试（基于浏览器）
+# 打开 Tor Browser --> 访问 https://browserleaks.com/webrtc
+# 必须显示无 IP 泄漏
 
-# Step 6: Full Tor confirmation
+# 第 6 步：确认确实走的是 Tor
 proxychains4 curl https://check.torproject.org | grep Congratulations
-# Must return: "Congratulations. This browser is configured to use Tor."
+# 必须返回："Congratulations. This browser is configured to use Tor."
 
-# Step 7: VPS access chain verification
+# 第 7 步：验证 VPS 访问链路
 proxychains4 ssh -p YOUR_SSH_PORT operator@your-vps-domain.com
-# From the VPS, run: who
-# Must show Tor exit node IP as the connecting address, not your real IP
+# 在 VPS 上执行：who
+# 必须显示 Tor 出口节点 IP 作为连接来源地址，而不是你的真实 IP
 ```
 
-**If any step fails, do not proceed. Fix the leak first.**
+**任何一步失败，都不要继续。先把泄漏修好。**
 
-> **Source:** [Phase -1, Section 9.7](../phases/PHASE_-1.md)
+> **来源：** [阶段 -1，第 9.7 节](../phases/PHASE_-1.md)
 
 ---
 
-## 9. COMMON MISTAKES THAT BREAK THE CHAIN
+## 9. 会让链路断裂的常见错误
 
-These are the errors that appear repeatedly in documented arrest cases and forensic post-mortems. Every one of them is a single point of failure that collapses the entire anonymity architecture.
+这些是在已记录的抓捕案例和取证复盘中反复出现的错误。每一条都是单点故障，一旦发生，整座匿名架构就塌了。
 
-| Mistake | Why It Breaks the Chain | Fix |
+| 错误 | 为什么会让链路断裂 | 修正 |
 |---|---|---|
-| Using home WiFi for operational activity | ISP logs your connection to the VPN server. Timestamps correlate with activity. | Public WiFi with MAC spoofing. Rotate locations. |
-| Forgetting to spoof MAC address | MAC addresses are logged by WiFi access points and can be subpoenaed. | Session-start script that auto-spoofs before network comes up. |
-| Logging into personal accounts on operational device | Instant identity link. One login = entire chain burned. | Strict identity separation. No exceptions. |
-| Reusing a username across personas | OSINT tools (Maigret, Sherlock) cross-reference usernames across 3,000+ platforms. | Unique username per persona. Never reuse. |
-| Skipping the VPN kill switch | If VPN drops, your real IP leaks to the Tor entry node (or directly to the target). | Mandatory iptables rules in WireGuard config. Test by manually disconnecting VPN. |
-| Using commercial VPN with credit card | Credit card = real identity = subpoena = arrest. | Self-hosted WireGuard on Monero-paid VPS. |
-| Not scrubbing file metadata before upload | Images contain GPS coordinates. Documents contain author names and revision history. | ExifTool + mat2 on every file before every upload. |
-| Using Telegram for operational communications | Telegram cooperates with LE since 2024. All standard chats are readable by Telegram. | SimpleX Chat or Signal with prepaid SIM. |
-| Same timezone pattern across personas | Consistent posting times reveal your geographic region. | Randomize activity times per persona. |
-| Carrying personal phone near operational location | Cell tower triangulation places your real identity at the operational location. | Leave personal phone at home. Use Faraday bag if you must carry it. |
+| 用家里的 WiFi 做作战活动 | ISP 会记录你到 VPN 服务器的连接，时间戳与活动可以对齐。 | 用公共 WiFi 并伪造 MAC。轮换地点。 |
+| 忘记伪造 MAC 地址 | MAC 地址会被 WiFi 接入点记录，且可被调取。 | 用会话启动脚本，在网络起来之前自动伪造。 |
+| 在作战设备上登录个人账户 | 瞬间建立身份关联。一次登录 = 整条链路作废。 | 严格的身份隔离。没有例外。 |
+| 在不同身份间复用用户名 | OSINT 工具（Maigret、Sherlock）会在 3000+ 平台上交叉比对用户名。 | 每个身份一个唯一用户名。绝不复用。 |
+| 跳过 VPN 熔断开关 | VPN 一断，你的真实 IP 就泄漏给 Tor 入口节点（或直接泄漏给目标）。 | 在 WireGuard 配置里写死 iptables 规则。手动断开 VPN 来测试。 |
+| 用信用卡买商业 VPN | 信用卡 = 真实身份 = 传票 = 被捕。 | 在门罗币支付的 VPS 上自建 WireGuard。 |
+| 上传前不清洗文件元数据 | 图片里有 GPS 坐标，文档里有作者名和修订历史。 | 每次上传前对每个文件跑 ExifTool + mat2。 |
+| 用 Telegram 做作战通信 | Telegram 自 2024 年起与执法部门合作，所有普通聊天都可被 Telegram 读取。 | 用 SimpleX Chat，或用预付费 SIM 的 Signal。 |
+| 各身份使用相同的时区规律 | 固定的发帖时间会暴露你所在的地理区域。 | 每个身份随机化活动时间。 |
+| 把个人手机带到作战地点附近 | 基站三角定位会把你的真实身份定位到作战地点。 | 个人手机留在家里。必须带就用法拉第袋。 |
 
 ---
 
-## 10. WHERE TO GO NEXT
+## 10. 接下来去哪里
 
-This document provides the architectural overview. The full implementation details live in the companion documents:
+本文提供架构总览。完整的实现细节在配套文档里：
 
-| What You Need | Where To Find It |
+| 你需要什么 | 去哪里找 |
 |---|---|
-| Complete OPSEC foundation (all 24 sections) | [Phase -1: OPSEC and Infrastructure](../phases/PHASE_-1.md) |
-| Advanced tradecraft and long-term survival | [BlackHat Long-Term Survival Tactics](BlackHat_Long-Term_Survival_Tactics.md) |
-| VPN setup, Tor configuration, chaining details | [Phase -1, Sections 8-9](../phases/PHASE_-1.md) |
-| Browser fingerprinting defense | [Phase -1, Section 10](../phases/PHASE_-1.md) |
-| Cryptocurrency and Monero workflows | [Phase -1, Section 11](../phases/PHASE_-1.md) |
-| Identity compartmentalization and stylometry | [Phase -1, Section 12](../phases/PHASE_-1.md) |
-| Secure research OS setup (Tails, Whonix, Qubes) | [Phase -1, Section 13](../phases/PHASE_-1.md) |
-| Physical OPSEC and counter-surveillance | [Phase -1, Section 14](../phases/PHASE_-1.md) |
-| Forensic artifacts on your own machine | [Phase -1, Section 19](../phases/PHASE_-1.md) |
-| Cold boot attacks and hardware defense | [Phase -1, Section 20](../phases/PHASE_-1.md) |
-| Burn protocol (when things go wrong) | [Phase -1, Section 21](../phases/PHASE_-1.md) |
-| Persona architecture and aging | [Survival Tactics, Section 1](BlackHat_Long-Term_Survival_Tactics.md) |
-| Emergency exfil and exit strategy | [Survival Tactics, Sections 13-14](BlackHat_Long-Term_Survival_Tactics.md) |
-| Lab setup for practice | [Lab Setup Guide](../field-guides/Lab_Setup_Guide.md) |
+| 完整的作战安全地基（全部 24 节） | [阶段 -1：作战安全与基础设施](../phases/PHASE_-1.md) |
+| 高级作业手法与长期生存 | [BlackHat 长期生存战术](BlackHat_Long-Term_Survival_Tactics.md) |
+| VPN 搭建、Tor 配置、链路细节 | [阶段 -1，第 8-9 节](../phases/PHASE_-1.md) |
+| 浏览器指纹防御 | [阶段 -1，第 10 节](../phases/PHASE_-1.md) |
+| 加密货币与门罗币工作流 | [阶段 -1，第 11 节](../phases/PHASE_-1.md) |
+| 身份区隔与文体计量 | [阶段 -1，第 12 节](../phases/PHASE_-1.md) |
+| 安全研究操作系统搭建（Tails、Whonix、Qubes） | [阶段 -1，第 13 节](../phases/PHASE_-1.md) |
+| 物理作战安全与反监视 | [阶段 -1，第 14 节](../phases/PHASE_-1.md) |
+| 你自己机器上的取证痕迹 | [阶段 -1，第 19 节](../phases/PHASE_-1.md) |
+| 冷启动攻击与硬件防御 | [阶段 -1，第 20 节](../phases/PHASE_-1.md) |
+| 焚烧协议（出事时怎么办） | [阶段 -1，第 21 节](../phases/PHASE_-1.md) |
+| 身份架构与养号 | [长期生存战术，第 1 节](BlackHat_Long-Term_Survival_Tactics.md) |
+| 紧急外逃与退出策略 | [长期生存战术，第 13-14 节](BlackHat_Long-Term_Survival_Tactics.md) |
+| 用于练习的实验环境 | [实验环境搭建指南](../field-guides/Lab_Setup_Guide.md) |
 
 ---
 
-**Read this document for the blueprint. Read Phase -1 and Survival Tactics for the full specifications. Build the stack. Verify the stack. Then verify it again.**
+**把本文当作蓝图来读。把阶段 -1 与《长期生存战术》当作完整规范来读。搭起技术栈。验证技术栈。然后再验证一次。**
 
-The operators who get caught are not caught because they lacked knowledge. They are caught because they skipped a layer, got comfortable, or let one identity bleed into another. The chain works when every layer holds. Build every layer.
+被抓的操作者，不是因为知识不够被抓的。他们被抓，是因为跳过了某一层、因为松懈了、或者让一个身份渗进了另一个身份。每一层都立住，链路才成立。把每一层都造出来。
 
 ---
 
 <div align="right">
 
-*Maximum Anonymity Workflow -- The BlackHAT Roadmap v1.2.2*<br/>
-*2027 Edition -- Architectural blueprint for the complete anonymity stack.*<br/>
-*Author: Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)) · Canonical Repository: https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
-*Curated Ecosystem: [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
-*Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)*
+*最大匿名工作流 —— The BlackHAT Roadmap v1.2.2*<br/>
+*2027 版 —— 完整匿名技术栈的架构蓝图。*<br/>
+*作者：Sagar Biswas（[@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)） · 主仓库：https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
+*精选生态：[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
+*依据 Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）许可发布*
 
 </div>
 

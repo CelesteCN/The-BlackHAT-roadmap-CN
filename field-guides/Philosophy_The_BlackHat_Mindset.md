@@ -1,94 +1,94 @@
-# Philosophy: The BlackHat Mindset
+# 黑客心态的哲学
 
-**Author:** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
-**Canonical Repository:** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
-**License:** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
-**Version:** 1.0.0 · 2027 Edition<br/>
+**作者：** Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT))<br/>
+**主仓库：** [The BlackHAT Roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)<br/>
+**许可：** [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS)<br/>
+**版本：** 1.0.0 · 2027 版<br/>
 
 <div align="right">
 
-**The map is complete. The territory is yours.**
+**地图已经画完。疆域归你。**
 
 </div>
 
 ---
 
-## TABLE OF CONTENTS
+## 目录
 
-1. [What This Is Not](#1-what-this-is-not)
-2. [What a BlackHat Actually Is](#2-what-a-blackhat-actually-is)
-3. [The Cognitive Progression](#3-the-cognitive-progression)
-4. [The Separation That Matters: Student, Operator, Researcher](#4-the-separation-that-matters)
-5. [GREATEST vs Good - The 2027 Edition](#5-greatest-vs-good-the-2027-edition)
-6. [The Seven Pillars of the BlackHat Mindset](#6-the-seven-pillars-of-the-blackhat-mindset)
-   - [Pillar I: Adversarial Assumption Hunting](#pillar-i-adversarial-assumption-hunting)
-   - [Pillar II: Understand the Defender Before You Attack](#pillar-ii-understand-the-defender-before-you-attack)
-   - [Pillar III: Primitive Thinking Over Tool Thinking](#pillar-iii-primitive-thinking-over-tool-thinking)
-   - [Pillar IV: Patience and Operational Silence](#pillar-iv-patience-and-operational-silence)
-   - [Pillar V: Fail Silently](#pillar-v-fail-silently)
-   - [Pillar VI: Ego Is an OpSec Failure](#pillar-vi-ego-is-an-opsec-failure)
-   - [Pillar VII: The Research Posture](#pillar-vii-the-research-posture)
-7. [The 2027 Landscape Reality](#7-the-2027-landscape-reality)
-8. [The Psychological Framework](#8-the-psychological-framework)
-9. [Reality Check - Updated 2027](#9-reality-check-updated-2027)
-10. [The Closing Truth](#10-the-closing-truth)
+1. [这里不是什么](#1-这里不是什么)
+2. [黑客到底是什么](#2-黑客到底是什么)
+3. [认知进阶](#3-认知进阶)
+4. [真正重要的分野：学生、操作者、研究者](#4-真正重要的分野)
+5. [GREATEST 与优秀：2027 版](#5-greatest-与优秀2027-版)
+6. [黑客心态的七根支柱](#6-黑客心态的七根支柱)
+   - [支柱一：对抗性假设狩猎](#支柱一对抗性假设狩猎)
+   - [支柱二：先理解防守方，再发起攻击](#支柱二先理解防守方再发起攻击)
+   - [支柱三：原语思维高于工具思维](#支柱三原语思维高于工具思维)
+   - [支柱四：耐心与作战静默](#支柱四耐心与作战静默)
+   - [支柱五：静默失败](#支柱五静默失败)
+   - [支柱六：自负就是作战安全失败](#支柱六自负就是作战安全失败)
+   - [支柱七：研究姿态](#支柱七研究姿态)
+7. [2027 年的现实图景](#7-2027-年的现实图景)
+8. [心理框架](#8-心理框架)
+9. [现实检验：2027 年更新](#9-现实检验2027-年更新)
+10. [最后的真相](#10-最后的真相)
 
 ---
 
 <a id="1-what-this-is-not"></a>
-## 1. What This Is Not
+## 1. 这里不是什么
 
-This is not a training course.
+这不是一门培训课程。
 
->**Companion Roadmap Documents:**
-> * **[Master Curriculum (Phases -1 to 6)](../phases/PHASE_-1.md)**: Zero-to-elite offensive engineering syllabus from foundational metal to apex operations.
-> * **[BlackHat Long-Term Survival Tactics](../black-bag/BlackHat_Long-Term_Survival_Tactics.md)**: The authoritative operational security, physical tradecraft, and digital persona architecture manual.
-> * **[MITRE ATT&CK Quick Reference](MITRE_ATT&CK_Quick_Reference.md)**: Enterprise, ICS, and ATLAS technique mapping, detection signals, and attack chain blueprints.
-> * **[Tools Inventory](Tools_Inventory.md)**: Canonical, phase-aligned 300+ tool directory covering primitive-to-tool realization.
-> * **[Lab Setup Guide](Lab_Setup_Guide.md)**: Multi-tier hardware specifications and isolated enterprise/kernel lab blueprints.
-> * **[Resources Aggregated](Resources_Aggregated.md)**: Canonical literature, academic security proceedings, and vulnerability research archives.
-> * **[FAQ](FAQ.md)**: Comprehensive operational and career transitions FAQ.
-> * **[Final Word](Final_Word.md)**: Document verification statistics, researcher attributions, and horizon research roadmap.
+>**配套路线图文档：**
+> * **[主课程（阶段 -1 至 6）](../phases/PHASE_-1.md)**：从底层金属到顶层作战的零基础到顶尖攻击工程教学大纲。
+> * **[BlackHat 长期生存战术](../black-bag/BlackHat_Long-Term_Survival_Tactics.md)**：权威的作战安全、物理作业手法与数字身份架构手册。
+> * **[MITRE ATT&CK 速查](MITRE_ATT&CK_Quick_Reference.md)**：Enterprise、ICS 与 ATLAS 的技术映射、检测信号与攻击链蓝图。
+> * **[工具清单](Tools_Inventory.md)**：按阶段对齐的 300+ 工具权威目录，覆盖从原语到工具的落地。
+> * **[实验环境搭建指南](Lab_Setup_Guide.md)**：多层硬件规格与隔离的企业/内核实验蓝图。
+> * **[资源汇总](Resources_Aggregated.md)**：权威文献、学术安全论文集与漏洞研究档案。
+> * **[FAQ](FAQ.md)**：运维与职业转型的全面问答。
+> * **[最后的话](Final_Word.md)**：文档校验统计、研究者署名与前瞻研究路线图。
 
-It is not a certification path. It does not have a completion badge. It does not prepare you for a job description. No employer wrote its requirements. No compliance framework shaped its scope. No legal jurisdiction reviewed its contents.
+它也不是认证路径。它没有结业徽章。它不为你应聘某个岗位做准备。没有任何雇主写过它的要求，没有任何合规框架塑造过它的范围，也没有任何司法辖区审阅过它的内容。
 
-It does not care about your background. It does not care whether you have a degree, a bootcamp certificate, or nothing at all except time and a machine that runs Linux. It does not care what you do with what you learn.
+它不在乎你的出身。它不在乎你有没有学位、有没有训练营证书，还是除了一点时间和一台能跑 Linux 的机器之外一无所有。它也不在乎你拿学到的东西去做什么。
 
-What it cares about: depth. Specifically, the kind of depth that cannot be faked, cannot be certificated into existence, and cannot be compressed into a weekend course. The kind of depth that only comes from building things, breaking things, watching them fail, understanding why they failed at the instruction level, rebuilding them, and doing that a few thousand times across a few years in a few different domains.
+它在乎的是深度。具体来说，是那种装不出来的、发不出证来的、也没法压缩成一个周末课程的深度。这种深度只来自：动手造东西，把东西弄坏，看着它们失败，在指令级别弄清它们为什么失败，重新造一遍，然后在几年时间里、在几个不同领域里，把这一套重复上千次。
 
-This document is the philosophy that makes all of that possible. Not the tools. Not the labs. Not the techniques. The mindset that turns technique into craft, craft into research, and research into the ability to shape the field itself.
+这份文档讲的正是让这一切成为可能的哲学。不是工具，不是实验环境，也不是技术。是那种把技术变成手艺、把手艺变成研究、再把研究变成“塑造整个领域”的能力的心态。
 
-Read it first. Come back to it when you are stuck. Come back to it when you think you are done.
+先读它。卡住的时候回来读。觉得自己已经学成的时候，回来读。
 
 ---
 
 <a id="2-what-a-blackhat-actually-is"></a>
-## 2. What a BlackHat Actually Is
+## 2. 黑客到底是什么
 
-A BlackHat is defined by one thing: **understanding systems completely, from the metal up.**
+黑客只由一件事定义：**从金属层往上，完整地理解系统。**
 
-Not understanding how to use tools someone else built. Not understanding in theory. Not understanding well enough to pass a test or answer an interview question. Understanding at the level where you can build the tool, break the tool, hide the tool, find the flaw in the tool's design that the author never intended, and then delete the evidence that the tool ever existed.
+不是理解怎么用别人造好的工具，不是理论上的理解，也不是“能通过考试、能回答面试题”那种程度的理解。而是理解到这种程度：你能造出这个工具，能把它拆坏，能把它藏起来，能发现作者从未设想过的设计缺陷，然后还能把“这个工具存在过”的痕迹抹干净。
 
-"From the metal up" is not a metaphor. It means:
+“从金属层往上”不是比喻。它的意思是：
 
-- When you trigger a vulnerability in a web application, you understand what happens at the kernel level when that HTTP request is parsed, what memory allocations occur, which system calls fire, and what the CPU actually executes.
-- When your shellcode runs, you know exactly which registers hold what values, why the stack is aligned, what the calling convention expects, and why your NOP sled is the length it is.
-- When your C2 beacon calls home, you understand the network stack from the TLS handshake down to the TCP segment structure, why your timing jitter matters to a network detection engineer, and what a PCAP of your traffic looks like to someone running Zeek with custom scripts.
+- 当你在 Web 应用里触发一个漏洞时，你清楚那条 HTTP 请求被解析时内核层发生了什么、发生了哪些内存分配、触发了哪些系统调用、CPU 实际执行了什么。
+- 当你的 shellcode 跑起来时，你确切知道哪些寄存器装着什么值、栈为什么这样对齐、调用约定期待什么，以及你的 NOP sled 为什么是这个长度。
+- 当你的 C2 beacon 回连时，你理解从 TLS 握手一直到 TCP 段结构的整条网络栈，理解你的时间抖动为什么对网络检测工程师有意义，也理解在跑着自定义脚本的 Zeek 眼里，你这段流量的 PCAP 长什么样。
 
-Most people who call themselves hackers understand one layer. They understand the web application layer, or the network layer, or the binary exploitation layer. They operate at the layer they understand and call everything else "out of scope."
+大多数自称黑客的人只懂一层。他们懂 Web 应用层，或者网络层，或者二进制利用层。他们在自己懂的那一层上干活，把其他一切都叫“范围之外”。
 
-GREATEST operators understand every layer and choose which one to attack based on which produces the cleanest result, not based on which one they happen to know.
+GREATEST 级操作者每一层都懂，并且根据“哪种打法结果最干净”来选择攻击哪一层，而不是根据“自己碰巧会哪一层”。
 
-The skills in this document are neutral. Electricity does not ask what you will power. A compiler does not ask what the program will do. A network does not ask who is transmitting. Learn what is here. What you build with it is yours.
+这份文档里的技能是中性的。电不会问你要拿它点亮什么，编译器不会问程序要干什么，网络不会问是谁在传输。学这里的东西。你用它造出什么，那是你的事。
 
 ---
 
 <a id="3-the-cognitive-progression"></a>
-## 3. The Cognitive Progression
+## 3. 认知进阶
 
-Most people imagine the path from beginner to elite as a straight line. More knowledge, more skill, more tools, more experience. A line.
+大多数人把从入门到顶尖的路想象成一条直线：更多知识、更多技能、更多工具、更多经验。一条线。
 
-The actual progression is not a line. It is a series of cognitive phase transitions, each one requiring not just more knowledge but a fundamentally different way of thinking about systems. You cannot skip a transition by studying harder. You have to go through it.
+真实的进阶不是直线。它是一连串认知上的相变，每一次都不仅要求更多知识，还要求一种根本上不同的系统思考方式。你没法靠更用功来跳过某次相变，你只能穿过去。
 
 <div align="center">
 <table><tr><td>
@@ -98,36 +98,36 @@ The actual progression is not a line. It is a series of cognitive phase transiti
 </td></tr></table>
 </div>
 
-Each transition has a specific marker. You cannot buy the transition. You cannot shortcut it. You will know which stage you are at because the stages have specific failure modes:
+每一次相变都有明确的标志。相变买不来，也抄不了近路。你会知道自己处在哪一级，因为每一级都有特定的失败模式：
 
-| Stage | Specific Failure Mode |
+| 阶段 | 特定的失败模式 |
 |---|---|
-| Script Kiddie | The tool breaks, you are stuck. You cannot debug what you cannot read. |
-| Competent User | You can use the tool but you cannot explain exactly why the exploit works at the CPU level. |
-| Operator | You can build the tool but you operate within known technique classes. You execute others' research. |
-| Builder | You specialize deeply but your cross-domain awareness is shallow. You miss attack paths that cross domains. |
-| Researcher | You produce original work but within an existing framing. You find new vulnerabilities in known classes. |
-| GREATEST | None yet. You are defining the new class. |
+| 脚本小子 | 工具一坏，你就卡住了。读不懂的东西，你调不了。 |
+| 熟练用户 | 你能用这个工具，但说不清这个漏洞利用在 CPU 层面为什么成立。 |
+| 操作者 | 你能造出工具，但仍在已知的技术类别里打转。你执行的是别人的研究。 |
+| 构建者 | 你在一个方向上扎得很深，但跨领域的感知很浅。你会漏掉跨领域的攻击路径。 |
+| 研究者 | 你能产出原创工作，但仍在既有的框架之内。你在已知类别里发现新漏洞。 |
+| GREATEST | 暂时没有。你就是那个正在定义新类别的人。 |
 
-The failure mode is the diagnosis. Know which one describes you right now. That is your current layer. The work is getting to the next transition, not pretending you have already made it.
+失败模式就是诊断书。认清此刻哪一条说的是你，那就是你当前所在的层。要做的是走向下一次相变，而不是假装自己已经过去了。
 
 ---
 
-## 4. The Separation That Matters
+## 4. 真正重要的分野
 
-### Student vs Operator vs Researcher
+### 学生、操作者与研究者
 
-The window between "student" and "operator" is not knowledge. It is mindset.
+“学生”和“操作者”之间的那道坎，不是知识，是心态。
 
-**Students** learn how things are supposed to work. They study the RFC to understand the protocol. They read the man page to understand the tool. They follow the tutorial to understand the technique. This is not wrong. It is necessary. But it is not sufficient.
+**学生**学的是“事情按理应该怎么运转”。他们读 RFC 来理解协议，读 man page 来理解工具，跟着教程来理解技术。这没有错，而且必需。但这不够。
 
-**Operators** learn how things actually work. They study the RFC and then read the actual implementation to find where the implementation diverges from the spec, because that divergence is where vulnerabilities live. They read the man page and then read the source code to understand what the man page got wrong or left out. They follow the tutorial and then immediately break the tutorial's assumptions to see what happens when the environment does not match the author's expectations.
+**操作者**学的是“事情实际怎么运转”。他们读完 RFC，再去读真正的实现，找出实现与规范分道扬镳的地方——因为漏洞就住在那些分岔里。他们读完 man page，再去读源码，看 man page 哪里写错了、哪里漏了。他们跟完教程，马上就去打破教程里的假设，看看当环境不符合作者预期时会发生什么。
 
-The cognitive shift from student to operator is specific: you stop trusting documentation and start trusting instrumented behavior. Documentation describes intent. Behavior describes reality. Reality is where you work.
+从学生到操作者的认知转变很具体：你不再相信文档，开始相信被观测到的行为。文档描述的是意图，行为描述的是现实。而现实才是你干活的地方。
 
-**Researchers** go one level further. They do not just find where implementations diverge from specs. They find the class of assumption that causes a whole category of implementations to diverge in similar ways. They do not find the SQL injection in this application. They find the pattern that causes SQL injection to appear in applications that use this type of ORM, under this type of configuration, when developers make this specific type of assumption about input sanitization.
+**研究者**再往下一层。他们不只找“实现偏离规范”的地方，而是找出那一类假设——正是这类假设，让一整类实现以相似的方式偏离。他们不满足于发现这个应用里的 SQL 注入，他们要找出那种模式：为什么使用这类 ORM、在这种配置下、当开发者对输入清洗做了这种特定假设时，SQL 注入就会冒出来。
 
-The researcher's leverage is asymmetric. The operator finds one vulnerability. The researcher publishes a technique and hands every operator in the field the pattern to find thousands of vulnerabilities across thousands of applications.
+研究者的杠杆是不对称的。操作者找到一个漏洞；研究者发表一种技术，然后把“去哪里找上千个漏洞”的模式，交到这一行里每一个操作者手上。
 
 <div align="center">
 <table><tr><td>
@@ -137,59 +137,59 @@ The researcher's leverage is asymmetric. The operator finds one vulnerability. T
 </td></tr></table>
 </div>
 
-Both transitions are mindset shifts, not knowledge accumulations. You can have ten years of knowledge and never make transition one. You can have two years of knowledge and make both transitions in rapid succession. The transitions are not correlated with time. They are correlated with the specific cognitive habit of questioning the layer below whatever you are currently looking at.
+两次转变都是心态的切换，而不是知识的累加。你可能积累了十年知识，却一次转变都没完成；也可能只有两年知识，却接连完成两次。转变和时间不相关，它只和一种具体的认知习惯相关：对你正在看的东西，永远去追问它下面那一层。
 
 ---
 
 <a id="5-greatest-vs-good-the-2027-edition"></a>
-## 5. GREATEST vs Good - The 2027 Edition
+## 5. GREATEST 与优秀：2027 版
 
-This comparison is not aspirational. It is a description of what actually separates the top percentile from the tier below it, as of 2027. These are observable differences in capability and output.
+这个对比不是励志。它描述的是截至 2027 年，真正把最顶尖的千分之一与下面一档分开的东西。这些都是能力与产出上可以观察到的差异。
 
-| Dimension | Good (Top 5%) | GREATEST (Top 0.0001%) |
+| 维度 | 优秀（前 5%） | GREATEST（前 0.0001%） |
 |---|---|---|
-| **Vulnerability Discovery** | Finds the CVE. Files the report. | Wrote the PoC before the vendor knew the vulnerability class existed. |
-| **Detection Evasion** | Evades signature-based EDR. Knows the YARA rule won't match. | Understands the ML feature space the behavioral detection model classifies against. Designs operations that sit outside the model's training distribution. Not just signature evasion. Distribution evasion. |
-| **Tool Relationship** | Uses the framework effectively. Extends it with custom BOFs and modules. | Wrote the framework. Knows exactly what telemetry each action in the framework generates and why. Built the detection bypass into the architecture before shipping. |
-| **Log Presence** | Cleans up after operations. Removes obvious artifacts. | Was never in the logs. The operation was designed from the first packet to be indistinguishable from legitimate traffic at every sensor layer. |
-| **Lateral Movement** | Can pivot through a network. Understands pass-the-hash, pass-the-ticket, DCSync. | Owns the identity infrastructure. Forges the tokens. Does not need to pivot because there is no perimeter from their position. |
-| **Persistence** | Installs persistence that survives reboots. Knows common detection rules. | Persistence at a layer below the OS. UEFI firmware implants that survive reimaging. Supply chain persistence that survives hardware replacement. |
-| **Defense Awareness** | Knows what the EDR vendor's marketing page says their product detects. | Has read the EDR's driver source code (or reverse engineered it), understands its callback registration model, knows which ETW providers it subscribes to, and has mapped exactly which of its behavioral heuristics fire on which operation sequences. |
-| **Research Output** | Publishes writeups of existing vulnerabilities. Files CVEs. Wins CTF challenges. | Publishes vulnerability classes. Techniques that change how every operator in the field works for the next two to three years. Work that shows up in MITRE ATT&CK as new entries. |
-| **Cross-Domain Awareness** | Specialists. Deep in one domain (web, binary, AD, cloud, hardware). | Sees the attack chain that crosses domains because they understand all of them well enough. Web application gives initial access, AD misconfiguration gives lateral movement, cloud misconfiguration gives data access, hardware implant gives persistence. One operator. One chain. No handoff. |
-| **AI and ML Surface (2027)** | Knows prompt injection exists. Can run basic attacks. | Understands the attention mechanism well enough to design injection payloads that exploit specific tokenization behaviors. Can extract model weights through black-box API queries. Designs RAG poisoning campaigns against specific embedding models. |
-| **Physical Presence (Phase 6)** | Conducts digital attacks remotely. Stays in the terminal. | Walks in through the front door before the first packet is sent. Picks the lock, clones the badge, plugs in the hardware implant, and is gone before the coffee gets cold. Understands that the strongest firewall in the world is defeated by a person who holds the door open. Combines physical access with digital exploitation in a single chained operation. |
+| **漏洞发现** | 找到 CVE，提交报告。 | 在厂商还不知道这个漏洞类别存在之前，PoC 就已经写好了。 |
+| **检测规避** | 能绕过基于特征的 EDR。知道 YARA 规则匹配不上。 | 理解行为检测模型所分类的 ML 特征空间。设计的行动落在模型训练分布之外。不只是特征规避，是分布规避。 |
+| **与工具的关系** | 能高效使用框架，用自定义 BOF 和模块扩展它。 | 写出了那个框架。清楚框架里每个动作会产生什么遥测、为什么。在发布之前就把检测绕过做进了架构里。 |
+| **日志存在感** | 行动之后做清理，删掉明显的痕迹。 | 从来没进过日志。这次行动从第一个数据包起就被设计成：在每一层传感器眼里都与合法流量无法区分。 |
+| **横向移动** | 能在网络里跳转。懂哈希传递、票据传递、DCSync。 | 掌握身份基础设施本身。伪造令牌。不需要跳转，因为从他的位置看根本不存在边界。 |
+| **持久化** | 装上能扛住重启的持久化，知道常见的检测规则。 | 把持久化放在操作系统之下的一层。能扛住重装系统的 UEFI 固件植入。能扛住更换硬件的供应链持久化。 |
+| **对防御的认知** | 知道 EDR 厂商宣传页上写着能检测什么。 | 读过（或逆向过）EDR 的驱动源码，理解它的回调注册模型，知道它订阅了哪些 ETW 提供程序，并且精确测绘出它的哪些行为启发式会在哪些操作序列上触发。 |
+| **研究产出** | 发表已有漏洞的分析文章，提交 CVE，赢下 CTF。 | 发表漏洞类别。发表的技术会改变这一行里每个操作者未来两三年的工作方式。成果会以新条目的形式出现在 MITRE ATT&CK 里。 |
+| **跨领域感知** | 专才。在某一领域（Web、二进制、AD、云、硬件）很深。 | 因为每一层都懂到足够深，所以能看见跨领域的攻击链。Web 应用给初始访问，AD 配置错误给横向移动，云配置错误给数据访问，硬件植入给持久化。一个操作者，一条链，不需要交接。 |
+| **AI 与 ML 攻击面（2027）** | 知道存在提示注入，能跑基础攻击。 | 理解注意力机制到这种程度：能设计出利用特定分词行为的注入载荷。能通过黑盒 API 查询提取模型权重。能针对特定嵌入模型设计 RAG 投毒行动。 |
+| **物理存在（阶段 6）** | 远程实施数字攻击，待在终端里。 | 在第一个数据包发出之前，已经从前门走了进去。撬锁、克隆门禁卡、插上硬件植入体，在咖啡变凉之前离开。明白世界上再强的防火墙，也挡不住一个帮你把门扶着的人。把物理访问与数字利用串成一次行动。 |
 
-The difference is not talent. The difference is the cumulative effect of staying one layer below whatever everyone else is looking at, sustained over years, without stopping.
+差别不在天赋。差别在于：长期把自己放在“别人正在看的那一层之下”，年复一年，不停，累积出来的效果。
 
 ---
 
 <a id="6-the-seven-pillars-of-the-blackhat-mindset"></a>
-## 6. The Seven Pillars of the BlackHat Mindset
+## 6. 黑客心态的七根支柱
 
-These are not tips. They are not heuristics. They are the cognitive operating principles of every operator who has reached Phase 4 depth or beyond. Internalize them before Phase 0. They will determine whether your technical knowledge accumulates into craft or remains a collection of disconnected techniques.
+这些不是技巧，也不是经验法则。它们是每一个达到阶段 4 深度或更深层次的操作者的认知操作原则。在阶段 0 之前就把它们内化。它们会决定你的技术知识最终是沉淀成手艺，还是始终只是一堆彼此不相干的技术。
 
 ---
 
 <a id="pillar-i-adversarial-assumption-hunting"></a>
-### Pillar I: Adversarial Assumption Hunting
+### 支柱一：对抗性假设狩猎
 
-Every system is built on assumptions. Not some systems. Every system. Without exception.
+每一个系统都建立在假设之上。不是某些系统，是每一个系统，毫无例外。
 
-The TCP/IP stack assumes that sequence numbers are hard to predict. SSL/TLS assumes that certificate authorities are trustworthy. An authentication system assumes that the token it issues cannot be forged. A browser assumes that JavaScript from one origin cannot read the DOM of another origin. An allocator assumes that a freed chunk will not be written to before it is reallocated.
+TCP/IP 栈假设序列号难以预测。SSL/TLS 假设证书颁发机构值得信任。认证系统假设它签发的令牌无法伪造。浏览器假设一个源的 JavaScript 读不到另一个源的 DOM。分配器假设已释放的内存块在被重新分配之前不会有人写入。
 
-Each of those assumptions is also a vulnerability. BEAST, CRIME, POODLE, and LUCKY13 were attacks on TLS assumptions. SOP bypass techniques are attacks on browser origin assumptions. Use-after-free is an attack on allocator assumptions. BGP hijacking is an attack on routing trust assumptions.
+上面每一条假设同时也都是一个漏洞。BEAST、CRIME、POODLE、LUCKY13 攻击的是 TLS 的假设；SOP 绕过攻击的是浏览器同源策略的假设；use-after-free 攻击的是分配器的假设；BGP 劫持攻击的是路由信任的假设。
 
-The pattern is always the same:
+模式永远一样：
 
-1. Someone builds a system.
-2. The system encodes assumptions about how it will be used and what its environment guarantees.
-3. Those assumptions hold in the expected environment.
-4. An adversary creates an unexpected environment.
-5. The assumption fails.
-6. The system breaks in a way the builder never anticipated.
+1. 有人造出一个系统。
+2. 系统里写入了关于“它将如何被使用”“它的环境会保证什么”的假设。
+3. 这些假设在预期环境中成立。
+4. 攻击者造出一个非预期环境。
+5. 假设失效。
+6. 系统以建造者从未预料的方式崩坏。
 
-The GREATEST operator's primary cognitive habit is assumption enumeration. Before touching a single tool, before running a single scan, the question is: what does this system have to believe is true for it to function correctly? Then, methodically: which of those beliefs can I falsify?
+GREATEST 级操作者最主要的认知习惯，是枚举假设。在碰任何工具之前，在跑任何扫描之前，先问：这个系统必须相信哪些事情为真，才能正常运转？然后有条不紊地问：这些信念里，哪一条可以被证伪？
 
 <div align="center">
 <table><tr><td>
@@ -199,20 +199,20 @@ The GREATEST operator's primary cognitive habit is assumption enumeration. Befor
 </td></tr></table>
 </div>
 
-Train yourself to enumerate assumptions before you enumerate vulnerabilities. The assumption map tells you where to look. Vulnerability scanners tell you what has already been found and documented. The assumptions tell you where the undocumented vulnerabilities live.
+训练自己在枚举漏洞之前先枚举假设。假设地图告诉你该往哪里看；漏洞扫描器告诉你的，是已经被发现、被记录过的东西。而未被记录的漏洞，就住在假设里。
 
-Practically: before every engagement, before every CTF, before every research session, write down the assumptions of the target system. Not the attack surface. The assumptions. Then attack the assumptions.
+落到操作上：每一次行动前，每一场 CTF 前，每一次研究开始前，把目标系统的假设写下来。不是攻击面，是假设。然后去攻击这些假设。
 
 ---
 
 <a id="pillar-ii-understand-the-defender-before-you-attack"></a>
-### Pillar II: Understand the Defender Before You Attack
+### 支柱二：先理解防守方，再发起攻击
 
-You cannot consistently bypass a detection system you do not understand. You can get lucky once. You cannot build a reliable, repeatable evasion methodology against a system whose internals are opaque to you.
+你无法稳定绕过一套你不理解的检测系统。运气好可以得手一次，但你没法针对一个内部对你完全不透明的系统，建立起可靠、可复用的规避方法论。
 
-This is the most consistently skipped pillar among intermediate operators. They focus entirely on offensive technique and treat detection as an obstacle to work around rather than a system to model and understand. The result is evasion that works until the defender makes a minor adjustment, then fails completely.
+这是中级操作者最常跳过的一根支柱。他们把全部注意力放在攻击技术上，把检测当成需要绕开的障碍，而不是一个需要建模、需要理解的系统。结果就是：这种规避一直有效，直到防守方做了一点小调整，然后彻底失效。
 
-The GREATEST operator's approach is different: before designing an attack technique, understand the detection architecture it will face.
+GREATEST 级操作者的做法不同：在设计一种攻击技术之前，先理解它将面对的那套检测架构。
 
 <div align="center">
 <table><tr><td>
@@ -222,36 +222,36 @@ The GREATEST operator's approach is different: before designing an attack techni
 </td></tr></table>
 </div>
 
-The operational implication of this pillar: spend time in blue team tooling. Understand how Elastic SIEM ingests and correlates events. Understand how a Zeek sensor processes network traffic. Understand how a CrowdStrike kernel driver registers callbacks. Understand how Azure Sentinel's detection rules are structured and what they query.
+这根支柱在操作上的含义是：花时间泡在蓝队工具里。理解 Elastic SIEM 如何摄取和关联事件，理解 Zeek 传感器如何解析网络流量，理解 CrowdStrike 的内核驱动如何注册回调，理解 Azure Sentinel 的检测规则是怎么组织的、查询的是什么。
 
-Not so you can write detection rules. So you can understand exactly what your techniques look like to the defender and engineer your techniques to be invisible at the sensor layer, not just invisible to the signature database.
+不是为了让你去写检测规则，而是为了让你确切知道：你的技术在防守方眼里长什么样，从而把技术设计成在传感器层面不可见，而不只是在特征库层面不可见。
 
-**The 2027 Addition: ML-Based Detection**
+**2027 年新增：基于 ML 的检测**
 
-Traditional detection operates on rules. Rules have known structure. Bypassing them is often a matter of minor technique variation.
+传统检测运行在规则之上。规则有已知的结构，绕过它往往只是稍作变体。
 
-ML-based behavioral detection is different. It operates on features extracted from behavior streams and classifies those feature vectors against a model trained on known-malicious and known-benign behavior. Bypassing it requires understanding:
+基于 ML 的行为检测不同。它运行在从行为流中提取出来的特征上，并用一个在已知恶意与已知良性行为上训练过的模型，对这些特征向量做分类。绕过它需要理解三件事：
 
-- What features the model extracts (process lineage, API call sequences, memory access patterns, network connection timing)
-- What the training data looks like (what does benign behavior in the target environment produce in feature space)
-- How to operate such that your feature vector falls inside the benign distribution
+- 模型提取了哪些特征（进程血缘、API 调用序列、内存访问模式、网络连接时序）
+- 训练数据长什么样（目标环境里的良性行为在特征空间里会呈现为什么样）
+- 如何操作，才能让你的特征向量落进良性分布之内
 
-This is not a future problem. EDR vendors deployed ML-based behavioral engines at scale in 2024 and 2025. By 2027, signature evasion alone is insufficient. You need distribution evasion: operations that look, at the feature level, like normal enterprise behavior.
+这不是未来的问题。EDR 厂商在 2024 和 2025 年就已经大规模部署了基于 ML 的行为引擎。到 2027 年，只做特征规避已经不够了。你需要分布规避：让行动在特征层面看起来就像正常的企业行为。
 
-The GREATEST operator in 2027 does not just ask "does this bypass the signature?" They ask "does this sit inside the benign distribution of the ML model protecting this target?"
+2027 年的 GREATEST 级操作者不只问“这能不能绕过特征”，他们还会问：“这落在保护该目标的 ML 模型的良性分布之内吗？”
 
 ---
 
 <a id="pillar-iii-primitive-thinking-over-tool-thinking"></a>
-### Pillar III: Primitive Thinking Over Tool Thinking
+### 支柱三：原语思维高于工具思维
 
-There are two ways to think about a buffer overflow:
+关于缓冲区溢出，有两种思考方式：
 
-**Tool thinking:** "I use pwntools. I set up the exploit script. I send the payload. If it does not work, I adjust the offset and try again."
+**工具思维：**“我用 pwntools，把利用脚本搭起来，把载荷发出去。要是不成功，就调一下偏移量再试一次。”
 
-**Primitive thinking:** "I need to overwrite the return address on the stack. The return address is 4 bytes on x86 or 8 bytes on x86-64. It sits at a specific offset from the start of my controlled buffer, determined by the function's stack frame layout. I need to know: where is the buffer, how large is it, how is it allocated, is the stack executable or do I need ROP, is ASLR enabled and if so how do I leak a useful address, is there a canary and if so how do I bypass it or leak it. The tool is just Python that automates the sending of the payload I have already reasoned about from first principles."
+**原语思维：**“我需要覆盖栈上的返回地址。返回地址在 x86 上是 4 字节，在 x86-64 上是 8 字节。它相对我可控缓冲区的起始位置有一个确定的偏移，这个偏移由函数的栈帧布局决定。我需要知道：缓冲区在哪、多大、怎么分配的；栈可不可执行，不可执行的话我是不是需要 ROP；ASLR 开没开，开了的话我怎么泄漏一个有用的地址；有没有 canary，有的话我怎么绕过或泄漏它。工具只是用 Python 把我已经按第一性原理推演过的载荷发送出去而已。”
 
-The tool executes your understanding. The understanding is not the tool.
+工具执行的是你的理解。理解不是工具。
 
 <div align="center">
 <table><tr><td>
@@ -261,24 +261,24 @@ The tool executes your understanding. The understanding is not the tool.
 </td></tr></table>
 </div>
 
-Practically, this means: for every technique you learn, find the primitive underneath it. Then find the implementation decisions that sit between the primitive and the specific tool you are using. Then ask: if I changed those implementation decisions while keeping the primitive, what would the result look like to a detection engine?
+落到操作上就是：每学一种技术，找出它底下那个原语；再找出介于原语和你手上这个具体工具之间的那些实现决策；然后问：如果保留原语、改掉这些实现决策，结果在检测引擎眼里会是什么样？
 
-The answer is almost always: it would look like nothing. Because detection engines are trained on implementations, not primitives. The primitive is too general to detect. The implementation is specific enough to be signatured.
+答案几乎总是：什么都看不出来。因为检测引擎是在实现上训练的，不是在原语上训练的。原语太一般，无从检测；实现则足够具体，值得为它写一条特征。
 
-GREATEST operators build from primitives. Everyone else uses tools and waits for the tool to be bypassed.
+GREATEST 级操作者从原语出发。其他人用工具，然后等着工具被绕过。
 
 ---
 
 <a id="pillar-iv-patience-and-operational-silence"></a>
-### Pillar IV: Patience and Operational Silence
+### 支柱四：耐心与作战静默
 
-Speed is not a virtue in offensive security operations. Speed is a noise source.
+在攻击性安全行动里，快不是美德。快是噪声源。
 
-A beginner who finds a foothold moves immediately. They run enumeration scripts, try privilege escalation techniques, drop tooling, generate dozens of process creations, dozens of network connections, dozens of file operations. They accomplish their technical objective in two hours and leave a trail that a competent incident responder can reconstruct completely.
+一个刚找到立足点的新手会立刻动手。跑枚举脚本，试各种提权技术，投放工具，制造几十次进程创建、几十条网络连接、几十次文件操作。他两小时就完成了技术目标，同时留下一条线索，一个称职的事件响应人员可以完整复原。
 
-A GREATEST operator who finds the same foothold may do nothing for 24 hours. They are reading. Studying the environment. Understanding what normal traffic looks like, what processes run, what accounts exist, what the normal rate of authentication events is. They are building a model of the environment before they do anything that might generate a log entry.
+同样找到这个立足点的 GREATEST 级操作者，可能 24 小时什么都不做。他在读，在研究环境，在弄清正常流量长什么样、哪些进程在跑、存在哪些账户、认证事件的正常频率是多少。在做任何可能产生日志条目的动作之前，他先为这个环境建好一个模型。
 
-Then they act. Once. Cleanly. The action is designed to look like a specific type of normal activity. It generates the minimum necessary telemetry. It achieves the objective. Then nothing again.
+然后他行动。只一次，干净利落。这个动作被设计成看起来像某一类正常活动，只产生最低限度的必要遥测，达成目标，然后再次归于安静。
 
 <div align="center">
 <table><tr><td>
@@ -288,99 +288,99 @@ Then they act. Once. Cleanly. The action is designed to look like a specific typ
 </td></tr></table>
 </div>
 
-The patience principle extends to tool selection: always prefer the technique that requires the fewest external binaries dropped to disk, the fewest network connections, the fewest registry writes, the fewest log entries. Not because these things are impossible to do cleanly, but because each one is a surface area for detection. Minimum surface area, maximum patience, single clean action. That is the operational model.
+耐心原则也延伸到工具选择：永远优先选那种需要落到磁盘的外部二进制最少、网络连接最少、注册表写入最少、日志条目最少的技术。不是因为这些事情做不到干净，而是因为每一样都是一块检测面。最小的检测面，最大的耐心，单次干净的动作——这就是行动模型。
 
-Silence is not passivity. Silence is the active, disciplined suppression of unnecessary action. It is one of the hardest operational skills to develop because the instinct -- especially under time pressure -- is to act, to probe, to try things. Resisting that instinct is skill. Operational silence under pressure is the mark of a mature operator.
+静默不是消极。静默是对不必要动作的主动、自律的抑制。它是最难养成的作战技能之一，因为本能——尤其在时间压力下——是动手，是试探，是试这试那。压住这个本能才是本事。压力之下仍然保持作战静默，是成熟操作者的标志。
 
 ---
 
 <a id="pillar-v-fail-silently"></a>
-### Pillar V: Fail Silently
+### 支柱五：静默失败
 
-Operations fail. Techniques fail. Payloads crash. Exploits produce the wrong behavior. This is not exceptional. This is the normal operating condition.
+行动会失败。技术会失败。载荷会崩溃。利用程序会跑出错误的行为。这不是例外，这就是常态。
 
-The distinction that separates skill levels is not whether operations fail. It is how they fail.
+区分技能水平的，不是行动会不会失败，而是它如何失败。
 
-**A failure that is loud:** The exploit crashes the target process. The crash generates a Windows Error Reporting event. The WER event is forwarded to the SIEM. The SIEM correlates the crash event with the anomalous process that was running before the crash. An alert fires.
+**失败的响声很大：**利用程序让目标进程崩溃。崩溃产生一个 Windows 错误报告（WER）事件。WER 事件被转发到 SIEM。SIEM 把这条崩溃事件与崩溃前运行的那个异常进程关联起来。告警响起。
 
-**A failure that is silent:** The exploit attempts to trigger the vulnerability. The condition is not met -- perhaps the heap layout does not match expectations, or a race condition resolves incorrectly. The code detects this condition before it produces a crash, aborts cleanly, leaves no artifact, and signals to the operator: condition not met, retry with adjusted parameters.
+**失败的静默版：**利用程序尝试触发漏洞，但条件不满足——也许是堆布局不符合预期，也许是一个竞态以错误的方式解析。代码在产生崩溃之前就检测到这个条件，干净地中止，不留痕迹，并向操作者报告：条件不满足，请调整参数后重试。
 
-Fail silently means: every operation, every payload, every technique must have an abort path. The abort path must be instrumented and tested. It must execute without producing a log entry, a crash, a hung process, or any other artifact that could indicate an attempted operation.
+静默失败意味着：每一次行动、每一个载荷、每一种技术，都必须有一条中止路径。这条中止路径必须被埋点、被测试，必须在执行时不产生日志条目、不崩溃、不挂起进程，也不留下任何可能提示“有人尝试过”的痕迹。
 
-The fail-silent principle in code:
+静默失败原则在代码里长这样：
 
 ```
-Attempt operation:
-  Pre-check: Can I reach the precondition?
-    No -> abort cleanly, no artifact, return failure code
-    Yes -> proceed
-  Execute:
-    Success -> continue
-    Failure -> abort cleanly, no artifact, return failure code
-  Post-check: Did I leave any detectable artifact?
-    Yes -> clean up before returning
-    No -> return
+尝试执行操作：
+  预检：能到达前置条件吗？
+    否 -> 干净中止，不留痕迹，返回失败码
+    是 -> 继续
+  执行：
+    成功 -> 继续
+    失败 -> 干净中止，不留痕迹，返回失败码
+  后检：我留下了可检测的痕迹吗？
+    是 -> 返回前清理
+    否 -> 返回
 ```
 
-Every phase of every operation is wrapped in this logic. Pre-checks are not optional. They are the difference between a clean miss and a detectable incident.
+每一次行动的每一个阶段都包裹在这套逻辑里。预检不是可选项。它们决定了你留下的是一次干净的未遂，还是一起可被检测到的事件。
 
-Practically, this means: before you exploit, verify the preconditions are met. Before you inject, verify the target process is in the expected state. Before you exfiltrate, verify the channel is clean. If any precondition fails, do not proceed. Return cleanly. The operation failed silently. That is acceptable. A loud failure is not.
+落到操作上：利用之前，先确认前置条件满足；注入之前，先确认目标进程处在预期状态；外泄之前，先确认信道是干净的。任何前置条件不满足，就不要继续，干净地返回。这次行动静默地失败了，可以接受；一次响声很大的失败，不可以。
 
-The psychological corollary: learn to be comfortable with a mission that produces no result. A skilled operator who attempts three approaches and aborts all three cleanly has produced no result and left no evidence. That is a success. The instinct to push through when preconditions are not met is the instinct that gets operators caught.
+心理层面的推论：学会适应“一次没有结果的行动”。一个熟练操作者尝试了三种打法、三次都干净地中止，没有结果，也没有留下证据——这就是成功。前置条件不满足时硬要往前推的本能，正是让操作者被抓的本能。
 
 ---
 
 <a id="pillar-vi-ego-is-an-opsec-failure"></a>
-### Pillar VI: Ego Is an OpSec Failure
+### 支柱六：自负就是作战安全失败
 
-Ego is the most consistent threat to operational security. More consistent than technical mistakes. More consistent than tool failures. More consistent than vendor patches.
+自负是作战安全最持续的威胁。比技术失误更持续，比工具故障更持续，比厂商补丁更持续。
 
-Ego produces specific, identifiable OpSec failures:
+自负会产生具体、可辨识的作战安全失败：
 
-**Signature ego:** Leaving a recognizable pattern across operations because it functions as a calling card. "Groups" that leave the same C2 infrastructure patterns, the same compilation timestamps, the same PE section names across years of operations. This is the operational equivalent of signing your work. Every pattern you repeat is a correlation opportunity.
+**签名型自负：**在多次行动中留下一个可辨认的模式，因为它像一枚签名章。“某个组织”在数年行动里留下相同的 C2 基础设施特征、相同的编译时间戳、相同的 PE 节区名。这是把自己干的活署上名的操作版。你重复的每一个模式，都是一次可被关联的机会。
 
-**Speed ego:** Moving fast because you can, not because the operation requires it. Fast operations are noisy operations. Noise is detection surface. The ego that wants to demonstrate capability produces the speed that produces the log entry that produces the investigation.
+**速度型自负：**因为“我能快”而快，不是因为行动需要快。快的行动就是吵的行动，噪声就是检测面。想展示能力的自负，制造出速度；速度制造出日志条目；日志条目制造出调查。
 
-**Complexity ego:** Using sophisticated techniques when simple ones would work because sophisticated techniques feel more impressive. Every unnecessary layer of complexity is an additional failure surface. The GREATEST operators consistently use the simplest technique that achieves the objective cleanly. They save sophisticated techniques for the specific situations where simple techniques fail.
+**复杂度型自负：**简单办法能成的时候偏要用复杂技术，因为复杂技术显得更厉害。每一层不必要的复杂度，都是一个额外的失效面。GREATEST 级操作者一贯使用能干净达成目标的最简单技术，把复杂技术留到简单技术失效的那种特定场合。
 
-**Recognition ego:** Talking. Discussing operations. Sharing details with people who do not need them. Every piece of information shared about an operation is a link in a chain that can eventually reach people you did not intend to reach.
+**认同型自负：**开口说话。谈论行动。把细节分享给不需要知道的人。任何一条关于行动的信息被分享出去，都是链条上的一环，最终可能到达你并不想让它到达的人那里。
 
-**Correction ego:** Refusing to abort when the operation is not going as planned because aborting feels like failure. The operation is the objective, not the execution path. If the path is compromised, change the path. If the path cannot be changed cleanly, abort. Continuing a compromised operation to avoid the ego hit of aborting is how operators get caught.
+**纠正型自负：**行动不如预期时拒绝中止，因为中止感觉像失败。目标是行动本身，不是执行路径。路径被污染，就换路径；路径无法干净地更换，就中止。为了不承受中止带来的自负打击而把已被污染的行动继续做下去，正是操作者被抓的方式。
 
-The operational discipline required by this pillar: treat your operations as engineering problems, not performances. The audience for an operation is exactly one person: yourself, verifying that the objective was achieved. No one else. The moment you are thinking about how the operation will be perceived, read, or discussed, you have already introduced ego into the process.
+这根支柱要求的作战纪律是：把你的行动当成工程问题，而不是表演。一次行动的观众恰好只有一个人——你自己，用来确认目标是否达成。没有别人。当你开始想“这次行动会被怎么看、被怎么读、被怎么谈论”的那一刻，你就已经把自负带进了流程。
 
-Remove the audience. Work in silence. Leave no signature. The only validation that matters is the objective state of the target system after the operation.
+撤掉观众。在静默中工作。不留签名。唯一有意义的验收标准，是行动之后目标系统的客观状态。
 
 ---
 
 <a id="pillar-vii-the-research-posture"></a>
-### Pillar VII: The Research Posture
+### 支柱七：研究姿态
 
-The techniques in this document will be outdated.
+这份文档里的技术会过时。
 
-Not eventually. Soon. Some of them are outdated between the time this version is written and the time you read it. Security research is not a static field. Vendors patch. Defenders adapt. Detection improves. The technique that worked in Q1 may be signatured by Q3.
+不是“终将”，是“很快”。其中一些，在这版写完到你读到之间就已经过时了。安全研究不是一个静态领域。厂商打补丁，防守方适应，检测在进步。第一季度还能用的技术，第三季度可能就有特征了。
 
-This is not a problem with the document. It is the nature of the field. The correct response is not to find a more up-to-date document. The correct response is to develop the ability to generate current techniques from first principles, rather than consuming current techniques from documentation.
+这不是文档的问题，这是这个领域的性质。正确的应对不是去找一份更新的文档，而是培养“从第一性原理生成当前技术”的能力，而不是“从文档里消费当前技术”。
 
-The research posture is the cognitive stance that makes this possible. It has three components:
+研究姿态就是让这件事成为可能的认知立场。它由三部分组成：
 
-**Component 1: Treat published techniques as starting points, not endpoints.**
+**要素一：把已发表的技术当作起点，而不是终点。**
 
-When you read about a technique, the first question is not "how do I use this?" The first question is: "what assumption does this technique exploit, what is the current state of detection for this assumption exploitation, and what is the next-generation version of this technique that the detection has not yet caught up to?"
+读到一种技术时，第一个问题不是“我怎么用它”，而是：“这种技术利用的是什么假设？针对这种假设利用，当前的检测到了什么程度？下一代版本长什么样，而检测还没追上它？”
 
-SilentMoonwalk was built because the detection caught up to Ekko. The next sleep obfuscation technique will be built because the detection catches up to SilentMoonwalk. The researcher who builds that technique is not reading a document about what the next technique should be. They are reading the EDR's detection logic for SilentMoonwalk and finding what the detection assumed that the next technique can falsify.
+SilentMoonwalk 之所以被造出来，是因为检测追上了 Ekko。下一种休眠混淆技术会被造出来，是因为检测会追上 SilentMoonwalk。造出那种技术的研究者，不是去读一篇“下一种技术应该是什么”的文档；他去读 EDR 针对 SilentMoonwalk 的检测逻辑，找出这套检测假设了什么——而下一个技术正好可以证伪它。
 
-**Component 2: Read primary sources.**
+**要素二：读一手资料。**
 
-Patch diffs, not blog posts. CVE database entries and the actual advisory, not the article about the article. Vendor security research blogs, not the summary. Conference papers, not the social media thread.
+读补丁 diff，不读博客文章；读 CVE 数据库条目和原始公告，不读“关于那篇文章的文章”；读厂商安全研究博客原文，不读摘要；读会议论文，不读社交媒体上的串。
 
-Primary sources contain the exact technical detail that tells you what assumption is being exploited and what constraint the fix imposes. Secondary sources lose that detail in translation.
+一手资料里有精确的技术细节，正是这些细节告诉你：被利用的是哪个假设，修复又施加了什么约束。二手资料会在转述中丢掉这些细节。
 
-**Component 3: Build, not just read.**
+**要素三：动手造，而不只是读。**
 
-Reading is not understanding. Reading about a buffer overflow is not the same as exploiting one. Reading about sleep obfuscation is not the same as implementing one, running it against an EDR, watching it get caught, and finding the specific API call that triggered the detection.
+读不等于懂。读一篇讲缓冲区溢出的文章，和真的去利用一个缓冲区溢出，不是一回事。读一篇讲休眠混淆的文章，和真的实现一个、拿它去打 EDR、看着它被抓、再找出触发检测的那个具体 API 调用，不是一回事。
 
-The research posture requires lab work as a mandatory component. Every technique you read about, you implement. Every implementation you run, you test against real detection. Every detection you hit, you analyze and work around. The cycle is: read, implement, test, analyze, iterate. The document is the starting point. The lab is where the understanding becomes yours.
+研究姿态要求把实验台当作强制环节。读到的每一种技术，你都要实现；每一个实现，你都要拿真实检测去测；每一次被检测到，你都要分析并绕过。循环是：读、实现、测试、分析、迭代。文档是起点，实验台才是理解真正归你的地方。
 
 <div align="center">
 <table><tr><td>
@@ -390,84 +390,84 @@ The research posture requires lab work as a mandatory component. Every technique
 </td></tr></table>
 </div>
 
-The research posture is what separates operators who become outdated from operators who remain relevant across years and across multiple generations of defensive tooling. The operators who rely on documented techniques become obsolete when the documentation becomes obsolete. The operators with the research posture generate the next documentation.
+研究姿态区分了两类操作者：一类会过时，一类能在多年、多代防御工具之间始终保持相关。依赖已记录技术的操作者，会在文档过时的时候一起过时；具备研究姿态的操作者，则产出下一份文档。
 
 ---
 
 <a id="7-the-2027-landscape-reality"></a>
-## 7. The 2027 Landscape Reality
+## 7. 2027 年的现实图景
 
-The threat and defense landscape in 2027 is materially different from the landscape that produced the foundational offensive security literature. Understanding these shifts is not optional context. It is the operating environment.
+2027 年的威胁与防御格局，与孕育了奠基性攻击安全文献的那个格局，已经有实质不同。理解这些转变不是可选的背景知识，它就是你的作战环境。
 
-### The ML-Based Detection Shift
+### 基于 ML 的检测转向
 
-Traditional detection was rule-based. Rules have known structure, known bypass patterns, and known limitations. The evasion methodology for rule-based detection is well understood: study the rule, find the specific condition it matches, modify the technique to not match that condition.
+传统检测是基于规则的。规则有已知的结构、已知的绕过套路、已知的局限。针对规则检测的规避方法论已经很清楚：研究规则，找出它匹配的那个具体条件，改造技术让它不匹配。
 
-ML-based behavioral detection does not operate on rules. It operates on feature vectors extracted from continuous behavioral streams. The model classifies feature vectors as benign or malicious based on training data. The bypass methodology is entirely different:
+基于 ML 的行为检测不运行在规则上。它运行在从连续行为流中提取的特征向量上。模型根据训练数据把特征向量分类为良性或恶意。绕过方法论完全不同：
 
-- You need to understand what features the model extracts.
-- You need to understand what the benign distribution looks like in the target environment.
-- You need to operate such that your feature vector falls within the benign distribution.
+- 你需要理解模型提取了哪些特征。
+- 你需要理解目标环境里的良性分布长什么样。
+- 你需要让自己的特征向量落在良性分布之内。
 
-This is a fundamental shift in the evasion problem. Signature evasion asks: "does my technique match the known-malicious pattern?" Distribution evasion asks: "does my technique look like known-benign behavior at the feature level?"
+这是规避问题的一次根本转向。特征规避问的是：“我的技术是否匹配已知恶意模式？”分布规避问的是：“我的技术在特征层面是否看起来像已知良性行为？”
 
-By 2027, GREATEST-level operators are solving distribution evasion problems, not signature evasion problems.
+到 2027 年，GREATEST 级操作者解决的是分布规避问题，而不是特征规避问题。
 
-### The Identity Perimeter
+### 身份边界
 
-The network perimeter is gone. Most enterprise organizations in 2027 operate on zero-trust architectures where identity is the primary security boundary, not network location.
+网络边界已经消失。2027 年的大多数企业运行在零信任架构上，身份才是主要的安全边界，而不是网络位置。
 
-This shifts the primary attack surface. The most impactful attacks in 2027 are identity attacks: token theft, device code phishing, Primary Refresh Token extraction, Conditional Access policy bypass, and OAuth confused deputy attacks. Network penetration is often less valuable than a single valid identity token with the right privilege scope.
+这让主要攻击面发生了转移。2027 年影响最大的攻击是身份攻击：令牌窃取、设备码钓鱼、主刷新令牌（PRT）提取、条件访问策略绕过、OAuth 混淆代理攻击。网络渗透的价值，往往不如一个权限范围合适的有效身份令牌。
 
-GREATEST operators in 2027 think identity-first. The question is not "how do I get from the DMZ to the internal network?" The question is "which identity allows me to access the target data, how is that identity authenticated, and what does the authentication flow look like when I replicate it?"
+2027 年的 GREATEST 级操作者以身份为先。问题不是“我怎么从 DMZ 进到内网”，而是“哪个身份能让我访问目标数据，这个身份是怎么认证的，我复现认证流程时它长什么样”。
 
-### The Cloud-Native Attack Surface
+### 云原生攻击面
 
-Enterprise infrastructure in 2027 is primarily cloud-hosted. The attack surface is:
+2027 年的企业基础设施主要托管在云上。攻击面是：
 
-- IAM configurations and over-permissioned role chains
-- Instance metadata services and the credentials they expose
-- CI/CD pipelines and the secrets they contain
-- Serverless functions and their environment variables
-- Managed identity abuse in Azure, GCP, and AWS
+- IAM 配置与权限过大的角色链
+- 实例元数据服务以及它暴露的凭据
+- CI/CD 流水线以及其中存放的机密
+- 无服务器函数及其环境变量
+- Azure、GCP、AWS 中的托管身份滥用
 
-Traditional network attacks reach this surface only indirectly. The GREATEST operator understands cloud IAM at the depth that traditional operators understand Active Directory.
+传统网络攻击只能间接摸到这块攻击面。GREATEST 级操作者对云 IAM 的理解深度，就像传统操作者对 Active Directory 的理解深度一样。
 
-### Offensive AI as an Operational Capability (2027)
+### 作为作战能力的攻击性 AI（2027）
 
-AI-augmented offensive operations are no longer research. They are operational.
+AI 增强的攻击性行动不再是研究课题，它们已经进入实战。
 
-In 2027, GREATEST operators use local LLM inference for:
-- Real-time code review and modification of payloads to evade specific detection signatures
-- Automated variant generation for fuzzing campaigns
-- Analysis of large binary datasets (firmware, memory dumps) that exceed human review capacity
-- Target research and OSINT synthesis at scale
-- Social engineering content generation tuned to specific targets
+2027 年，GREATEST 级操作者用本地 LLM 推理来做这些事：
+- 实时审查并改写载荷，以规避特定检测特征
+- 为模糊测试活动自动生成变体
+- 分析超出人工审查能力的大型二进制数据集（固件、内存转储）
+- 大规模做目标调研与 OSINT 综合
+- 生成针对特定目标调校的社会工程内容
 
-The operators who understand AI at the model level -- not just as a tool to prompt but as an architecture to manipulate -- have access to additional attack surfaces: model extraction, training data poisoning, inference-time manipulation, and agentic AI hijacking chains. These are not theoretical. They are active research with published PoC work in 2025 and 2026.
+那些在模型层面理解 AI 的操作者——不只是把它当工具来提示，而是把它当架构来操纵——还能摸到额外的攻击面：模型提取、训练数据投毒、推理时操纵、以及智能体 AI 劫持链。这些都不是理论。它们在 2025 和 2026 年就已经是有 PoC 的活跃研究。
 
-### The Full-Scope Operator and the Physical Attack Surface (Phase 6)
+### 全范围操作者与物理攻击面（阶段 6）
 
-The dominant assumption in offensive security is that attacks happen through a network. Phase 6 exists to break that assumption.
+攻击性安全里的主流假设是：攻击经由网络发生。阶段 6 的存在就是为了打破这个假设。
 
-Every digital defense assumes the attacker is remote. Firewalls, EDR, SIEM, zero-trust network architecture -- every layer of the modern defense stack is designed to stop a remote attacker who must traverse a network to reach the target. That assumption is the attack surface.
+每一层数字防御都假设攻击者在远端。防火墙、EDR、SIEM、零信任网络架构——现代防御栈的每一层，都是为了拦住一个必须穿越网络才能抵达目标的远程攻击者。而这条假设，就是攻击面。
 
-The full-scope operator does not traverse the network from outside. They walk through the front door. They pick the lock, clone the badge, or tailgate through the access control point using a pretext that took three hours to build. They sit down at a machine that nobody watches because it is inside the physical perimeter and the physical perimeter was assumed to be impenetrable. They plug in a hardware implant that beacons over HTTPS through Cloudflare to a C2 server that looks like legitimate CDN traffic. They leave before the coffee gets cold.
+全范围操作者不从外部穿越网络。他从正门走进去。他撬锁、克隆门禁卡，或者用一套花了三小时打磨的话术，从门禁点尾随而入。他在一台没人盯着的机器前坐下——因为那台机器在物理边界之内，而物理边界被认为不可突破。他插上一个硬件植入体，让它在 HTTPS 上经由 Cloudflare 回连到一台看起来像正常 CDN 流量的 C2 服务器。他在咖啡变凉之前离开。
 
-At that point, the entire digital defense stack is looking at the wrong problem.
+到这一刻，整座数字防御栈都在盯错误的问题。
 
-The mindset shift Phase 6 demands is specific: **the attack surface is the full human and physical environment, not just the network topology.** This requires the same assumption-enumeration discipline applied in Pillar I, but extended to physical systems:
+阶段 6 要求的心态转变很具体：**攻击面是完整的人与物理环境，而不只是网络拓扑。**这需要把支柱一里那套假设枚举的纪律，延伸到物理系统上：
 
-- What does this organization assume about who can enter the building?
-- What does a security guard assume about a person in a suit carrying a laptop bag?
-- What does the access control system assume about the credential it is reading?
-- What does the receptionist assume about a caller who knows three internal names and references a meeting that happened last Tuesday?
+- 这个组织对“谁可以进入大楼”做了什么假设？
+- 一名保安对“一个提着笔记本电脑包的西装人士”做了什么假设？
+- 门禁系统对它正在读取的那张凭证做了什么假设？
+- 前台对“一个知道三个内部名字、还提到上周二某场会议的来电者”做了什么假设？
 
-Each of those assumptions is an attack surface. Each can be falsified with preparation, patience, and the right pretext.
+上面每一条假设都是一个攻击面。每一条都可以用准备、耐心和恰当的话术去证伪。
 
-The GREATEST operator in 2027 does not choose between digital and physical attack vectors. They chain them. Physical access gives hardware implant placement. The implant gives persistent internal network presence. Internal network presence gives ADCS ESC1 exploitation. ADCS gives domain admin. Domain admin gives cloud lateral movement. The chain starts with a lockpick and ends with the crown jewels. One operator. No handoff. No assumption left intact.
+2027 年的 GREATEST 级操作者不在数字与物理攻击向量之间二选一，他把它们串起来。物理访问带来硬件植入体的布设；植入体带来持续的内网存在；内网存在带来 ADCS ESC1 利用；ADCS 带来域管理员；域管理员带来云上横向移动。这条链从一把撬锁工具开始，到核心资产结束。一个操作者，不需要交接，不留任何未被动摇的假设。
 
-Phase 6 is not a specialization. It is the completion of the full attack surface model.
+阶段 6 不是一种专精方向，它是完整攻击面模型的收官。
 
 <div align="center">
 <table><tr><td>
@@ -480,107 +480,107 @@ Phase 6 is not a specialization. It is the completion of the full attack surface
 ---
 
 <a id="8-the-psychological-framework"></a>
-## 8. The Psychological Framework
+## 8. 心理框架
 
-Technical skill decays without maintenance. Knowledge accumulates. Attention is finite. The physical and cognitive demands of operating at Phase 4 depth across multiple specializations for years are real and must be acknowledged.
+技术技能不维护就会衰减。知识会累积。注意力是有限的。在多个专精方向上、以阶段 4 的深度持续多年作战，对体力和认知的要求是真实的，必须被承认。
 
-### Compartmentalization
+### 区隔
 
-Compartmentalization in the operational sense means: what you know and what you do remain separated in your mind and in your infrastructure. This is covered in Phase -1 as technical OpSec. Its psychological dimension is equally important.
+作战意义上的区隔指的是：你知道的东西和你做的事情，在你的头脑里、在你的基础设施里，保持分离。这一点在阶段 -1 已作为技术性作战安全讲过，它的心理维度同样重要。
 
-The ability to work on sensitive research or operations without carrying that context into unrelated areas of life is a learnable skill. It requires deliberate practice: defined start and end points for work sessions, physical or digital separation of work environments, and the discipline not to think about active operations in contexts where the thinking is unproductive.
+能够处理敏感研究或行动，而不把那份上下文带进生活的其他区域，是一种可以习得的技能。它需要刻意练习：为工作时段设定明确的起止点，对工作环境做物理或数字上的隔离，以及一种纪律——不在思考没有产出的场合去想正在进行的行动。
 
-Operators who cannot compartmentalize exhibit predictable failure modes: distraction during high-stakes operations, residual anxiety that degrades performance, and the specific error of thinking about active operations in insecure contexts.
+做不到区隔的操作者，会表现出可预测的失败模式：高风险行动中分心，残留的焦虑拉低表现，以及那种特定的错误——在不安全的场合思考正在进行的行动。
 
-### Burnout Recognition and Management
+### 倦怠的识别与管理
 
-Phase 4 work requires sustained deep focus over months and years. Burnout in this context does not look like exhaustion. It looks like reduced pattern recognition -- you stop seeing the connections between techniques. It looks like shallow reading -- you read but do not absorb. It looks like tool dependency -- you reach for the framework instead of reasoning from primitives because reasoning from primitives requires depth you cannot currently access.
+阶段 4 的工作需要在数月、数年间保持持续的深度专注。在这个语境里，倦怠看起来不像精疲力竭。它看起来像模式识别能力下降——你不再看见技术之间的联系；像浅层阅读——你读了，但没吸收；像工具依赖——你伸手去拿框架，而不是从原语推理，因为从原语推理需要你当前够不到的深度。
 
-These are not character flaws. They are physiological states. Sustained cognitive load depletes the specific mental resources required for the type of creative, adversarial thinking that offensive research demands.
+这些不是性格缺陷，是生理状态。持续的认知负荷会耗尽那种创造性、对抗性思考所需要的特定心智资源，而攻击性研究恰恰依赖这种思考。
 
-Manage this deliberately:
-- Structured rest periods between intensive research phases are not wasted time. They are recovery that enables the next phase.
-- Vary the type of work: alternating between deep research and applying known techniques gives the research-mode cognition recovery time.
-- Physical state affects cognitive performance at this level of work. Sleep quality, specifically, is directly correlated with the creative reasoning that produces original research.
+有意识地管理它：
+- 密集研究阶段之间的结构化休息不是浪费时间，那是让你能进入下一阶段的恢复。
+- 变换工作类型：在深度研究与运用已知技术之间交替，能给“研究模式”的认知留出恢复时间。
+- 在这个工作强度上，身体状态会影响认知表现。尤其是睡眠质量，它与产出原创研究的那种创造性推理直接相关。
 
-### The Long Plateau
+### 漫长的平台期
 
-Between Phase 3 and Phase 4 there is a plateau. Not a brief one. An extended period where the rate of apparent progress slows dramatically. You are learning but the learning does not produce visible results at the rate that earlier phases did.
+阶段 3 和阶段 4 之间有一段平台期。不是短暂的一段，而是一段相当长的时期：表面上的进步速度急剧下降。你在学，但学习不再像早期阶段那样以同样的速度产出可见的成果。
 
-This plateau is the accumulation of prerequisite depth for original work. Original work requires a large substrate of connected knowledge. Building that substrate takes time and does not produce visible output. The plateau is not a failure of learning. It is the normal shape of expertise accumulation at deep technical levels.
+这段平台期是在为原创工作积累必要的前置深度。原创工作需要一大片彼此连通的知识作为基底。搭建这个基底要花时间，而且不产出可见成果。平台期不是学习的失败，它是深度技术层面上专长积累的正常形状。
 
-Expect the plateau. Do not interpret it as evidence that you have reached your ceiling. The plateau ends when the substrate is sufficiently dense to support original connections. It always ends. The duration is determined by how consistently you work during it.
+预期它会来。不要把它当成“我已经到顶了”的证据。当基底足够致密、足以支撑原创性的连接时，平台期就会结束。它总会结束。持续时间取决于你在这期间工作得有多稳定。
 
 ---
 
 <a id="9-reality-check-updated-2027"></a>
-## 9. Reality Check - Updated 2027
+## 9. 现实检验：2027 年更新
 
-These numbers reflect the actual distribution of people who begin a serious study of offensive security in 2027, based on observed patterns across public educational platforms, CTF participation data, and community research output.
+这些数字反映的是 2027 年开始认真学习攻击性安全的人群的真实分布，依据的是公开教育平台、CTF 参与数据和社区研究产出中观察到的模式。
 
-| Phase | Completion Rate | Primary Exit Reason |
+| 阶段 | 完成率 | 主要退出原因 |
 |---|---|---|
-| Phase -1 (OPSEC Setup) | ~90% complete | Low barrier; mostly setup work |
-| Phase 0 (Foundation) | ~65% complete | Assembly and C. The first real filter. The majority who exit here found that systems-level programming was harder than expected. |
-| Phase 1 (Web Security) | ~75% of remaining | Immediate feedback loop. Web has the most accessible learning resources and the fastest path from study to visible results. Retains more people than the phases before and after. |
-| Phase 2 (Network and Infrastructure) | ~55% of remaining | The combination of networking depth and real-environment complexity filters significantly. |
-| Phase 3 (System and Kernel Exploitation) | ~18% of remaining | The hardest filter. Binary exploitation at depth requires sustained engagement with material that has almost no fast feedback loop. Most people who enter Phase 3 do not reach Phase 3 competency. |
-| Phase 4 (Advanced Tradecraft, any specialization) | ~5% of Phase 3 completers | Reaching depth in any single Phase 4 specialization requires original research and sustained engagement beyond documented techniques. |
-| Phase 5 (GREATEST: original research) | 0.0001% of everyone who starts | The 0.0001% is not a goal. It is a description of where the field currently is and who is in it. |
-| Phase 6 (Special Operations: Multi-Domain Red Teaming) | <0.01% of advanced operators | Requires physical presence, real-time social manipulation, hardware/RF mastery, and legal/regulatory discipline beyond digital environments. Operators fail due to lack of physical nerve, lack of social calibration, or inability to unify physical and digital domains. |
+| 阶段 -1（作战安全搭建） | 约 90% 完成 | 门槛低；主要是搭建工作 |
+| 阶段 0（基础） | 约 65% 完成 | 汇编与 C。第一道真正的筛子。在这里退出的人，大多发现系统级编程比想象中难。 |
+| 阶段 1（Web 安全） | 剩余人群的约 75% | 反馈回路即时。Web 拥有最易获取的学习资源，从学习到可见成果的路径最短，因此留存率高于前后两个阶段。 |
+| 阶段 2（网络与基础设施） | 剩余人群的约 55% | 网络深度与真实环境复杂度叠加，筛掉了相当一部分人。 |
+| 阶段 3（系统与内核利用） | 剩余人群的约 18% | 最难的筛子。深度的二进制利用要求持续投入几乎没有任何快速反馈的材料。进入阶段 3 的人，大多数达不到阶段 3 的能力水平。 |
+| 阶段 4（高级作业手法，任一专精） | 阶段 3 完成者的约 5% | 在任何一个阶段 4 专精方向上达到深度，都需要超出已记录技术的原创研究与持续投入。 |
+| 阶段 5（GREATEST：原创研究） | 所有起步者的 0.0001% | 0.0001% 不是一个目标，它描述的是这个领域当前的位置，以及谁在里面。 |
+| 阶段 6（特种作战：多域红队） | 高级操作者的 <0.01% | 要求物理存在、实时社会操纵、硬件/射频精通，以及超出数字环境的法律/监管纪律。操作者失败的原因通常是：缺少物理胆量、缺少社交校准，或无法把物理域与数字域统一起来。 |
 
-The completion rates are not motivational statistics. They are calibration data. They tell you that the primary filter at each phase is not intelligence -- it is sustained engagement with material that is difficult, poorly documented in places, and slow to produce visible results.
+这些完成率不是励志数据，是校准数据。它们告诉你：每个阶段的主要筛子不是智力，而是对困难、局部文档稀烂、且迟迟不产出可见成果的材料能否持续投入。
 
-The people who reach Phase 5 are not the most talented people who started the process. They are the people who remained engaged during the phases where most people exit. Persistence across the filters is the primary variable. Not talent.
+走到阶段 5 的人，不是起步时最有天赋的人，而是在大多数人退出的那些阶段里仍然留在场上的人。穿越筛子的持久性才是主要变量，不是天赋。
 
 ---
 
 <a id="10-the-closing-truth"></a>
-## 10. The Closing Truth
+## 10. 最后的真相
 
-There is a specific moment that every operator who reaches Phase 4 depth describes in some form.
+有一个特定的瞬间，每一个到达阶段 4 深度的操作者都会以某种方式描述它。
 
-You have been working on a technique for weeks. You have read everything written about it. You have implemented it, run it, watched it fail, analyzed the failure, redesigned, and run it again. You have consumed all the documentation that exists. You are now at the edge of what has been publicly described.
+你已经在一种技术上做了几周。关于它的一切文字你都读过。你实现过、运行过、看着它失败过、分析过失败、重新设计、再跑一遍。现有的文档你全都消化完了。此刻你站在“公开描述过的范围”的边缘。
 
-And then, for the first time, you are working in territory that has not been mapped. You are looking at behavior that the documentation does not explain. You are reasoning from what you understand about the underlying system -- not from what someone else wrote about it -- to a hypothesis about why the behavior occurs. You test the hypothesis. It is correct. You now know something that is not in any document.
+然后，你第一次在尚未被测绘的疆域里工作。你面对的是文档无法解释的行为。你从自己对底层系统的理解出发——而不是从别人写的东西出发——推出一个关于“为什么会出现这种行为”的假设。你验证它。它成立。你现在知道了一件不在任何文档里的事。
 
-That moment is what this entire roadmap is building toward.
+那个瞬间，正是整条路线图一路搭建所要抵达的地方。
 
-Not the moment of exploitation. Not the moment of access. The moment of original understanding. The moment when your knowledge of the system is deep enough that you can extend it beyond what was previously known.
+不是利用成功的瞬间，不是拿下访问权限的瞬间，而是产生原创理解的瞬间——你对系统的理解深到足以把它推到此前已知的范围之外。
 
-That moment cannot be manufactured by documentation. It can only be enabled by it.
+那个瞬间无法由文档制造，只能由文档使能。
 
-This roadmap is the map. The territory is what you discover when the map runs out.
+这份路线图是地图。疆域，是当地图用尽时你去发现的东西。
 
-GREATEST is not a level you reach. It is a practice. The practice of staying at the edge of the map, working in the territory that is not yet documented, and producing the documentation that extends the map for everyone who comes after.
+GREATEST 不是一个你抵达的等级，而是一种实践：待在地图的边缘，在尚未被记录的疆域里工作，并产出为后来者延伸地图的记录。
 
-The field does not stop when you reach Phase 5. The field continues. The defenders continue. The vendors continue. The techniques that are GREATEST today will be Phase 2 content in five years.
+你到达阶段 5，领域并不会就此停下。领域在继续，防守方在继续，厂商在继续。今天属于 GREATEST 的技术，五年后会是阶段 2 的内容。
 
-Build the mindset that generates the next techniques. Not the mindset that executes the current ones.
+去建立那种能生成下一代技术的心态，而不是执行当前这一代技术的心态。
 
-**What separates GREATEST from good:**
-- Good knows what the vulnerability is. GREATEST wrote the PoC before the vendor knew the vulnerability class existed.
-- Good can exploit a box. GREATEST was never in the logs.
-- Good uses the framework. GREATEST wrote the framework and designed the detection bypass into its architecture.
-- Good evades signature-based detection. GREATEST evades ML-based behavioral detection by operating inside the benign distribution.
-- Good can pivot through a network. GREATEST owns the identity infrastructure and has no need to pivot.
-- Good understands one domain deeply. GREATEST sees the cross-domain chain that no single-domain specialist can construct.
-- Good reads the research. GREATEST produces the research that good operators will read two years from now.
+**把 GREATEST 与“优秀”分开的东西：**
+- 优秀知道漏洞是什么。GREATEST 在厂商还不知道这个漏洞类别存在之前就写出了 PoC。
+- 优秀能打下一台机器。GREATEST 从来没进过日志。
+- 优秀会使用框架。GREATEST 写了那个框架，并把检测绕过设计进了它的架构。
+- 优秀能绕过基于特征的检测。GREATEST 通过落在良性分布之内来绕过基于 ML 的行为检测。
+- 优秀能在网络里跳转。GREATEST 掌握身份基础设施，根本不需要跳转。
+- 优秀深谙一个领域。GREATEST 能看见任何单领域专家都拼不出来的跨领域链条。
+- 优秀读研究。GREATEST 产出研究，供两年后的优秀操作者阅读。
 
-The skills here are neutral. A compiler does not ask what the program will do. A network does not ask who is transmitting. A vulnerability does not ask who finds it.
+这里的技能是中性的。编译器不会问程序要干什么，网络不会问是谁在传输，漏洞不会问是谁发现了它。
 
-Learn what is here.
+学这里的东西。
 
-What you build with it is yours.
+你用它们造出什么，那是你的事。
 
 ---
 
 <div align="right">
 
-*Philosophy: The BlackHat Mindset | The BlackHAT Roadmap v1.2.2 -- 2027 Edition*<br/>
-*Author: Sagar Biswas ([@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)) · Canonical Repository: https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
-*Curated Ecosystem: [Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
-*Licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)*
+*哲学：黑客心态 | The BlackHAT Roadmap v1.2.2 —— 2027 版*<br/>
+*作者：Sagar Biswas（[@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)） · 主仓库：https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap*<br/>
+*精选生态：[Awesome Cybersecurity Paths](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-paths) · [Penetration Testing Roadmap](https://github.com/SagarBiswas-MultiHAT/penetration-testing-roadmap) · [Awesome Cybersecurity Books](https://github.com/SagarBiswas-MultiHAT/awesome-cybersecurity-books)*<br/>
+*依据 Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）许可发布*
 
 </div>
 

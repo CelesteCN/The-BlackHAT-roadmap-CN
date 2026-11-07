@@ -1,22 +1,22 @@
-# Security Policy & Responsible Disclosure
+# 安全策略与负责任披露
 
-## Purpose and Scope
+## 目的与范围
 
-The BlackHAT Roadmap is an educational and technical research curriculum dedicated to low-level systems engineering, defensive analysis, and authorized penetration testing. All methodologies, architectural breakdowns, and code demonstrations provided within this repository are intended exclusively for:
+The BlackHAT Roadmap 是一门教育与技术研究课程，专注于底层系统工程、防御性分析与获授权的渗透测试。本仓库提供的所有方法论、架构拆解与代码演示，仅用于：
 
-1. Authorized red team operations conducted under explicit, written rules of engagement.
-2. Defensive security engineers, security researchers, and detection engineers seeking to understand adversarial tradecraft to build robust detections.
-3. Controlled laboratory environments and academic research.
+1. 在明确书面交战规则下开展的获授权红队行动。
+2. 希望理解对手作业手法、以构建稳健检测的防御安全工程师、安全研究者与检测工程师。
+3. 受控实验环境与学术研究。
 
-Unauthorized exploitation of information systems is illegal and violates local, federal, and international law.
+未经授权利用信息系统属违法行为，且违反地方、国家与国际法律。
 
 ---
 
-## Reporting Vulnerabilities in This Repository
+## 报告本仓库中的漏洞
 
-If you discover a technical vulnerability, unintended exploitable asset, or sensitive data leak within this repository, please report it responsibly:
+如果你在本仓库中发现技术漏洞、非预期的可利用资产或敏感数据泄漏，请负责任地报告：
 
-- **Contact**: Reach out directly via GitHub: [@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)
-- **Response Timeline**: Acknowledgment within 48 hours, followed by prompt remediation.
+- **联系方式**：通过 GitHub 直接联系：[@SagarBiswas-MultiHAT](https://github.com/SagarBiswas-MultiHAT)
+- **响应时间**：48 小时内确认，随后尽快修复。
 
-Please do not open public issues detailing active zero-day vulnerabilities or private research material prior to vendor coordination.
+请在厂商协调完成之前，不要公开提交详述活跃零日漏洞或私人研究材料的议题。
