@@ -1,23 +1,40 @@
----
-# 🇨🇳 The-BlackHAT-Roadmap-CN (黑帽路线图中文本地化版)
+# The-BlackHAT-Roadmap-CN (黑帽路线图中文本地化版)
 
 > **本项目基于原作者 `SagarBiswas-MultiHAT` 的开源神作进行深度本地化重构。**
 > 🔗 **原项目地址：** [https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap)
-> 📜 **开源协议：** 本项目严格遵循原作者的 CC BY-SA 4.0 协议，所有内容保持开源共享。
-
-### 💡 为什么不用浏览器自带翻译？
-（... 这一段略 ...）
-
-🚧 **当前进度：** 核心目录已翻译，图表重绘与正文精翻正在持续爆肝中。欢迎国内安全爱好者提交 PR，一起打造最适合中国极客的安全路线图！
-
---- 
-（👆 注意这里，一定要加三个减号，代表一条分割线）
-
-<div align="center">
-< img src="assets/banner.svg" alt="The BlackHAT Roadmap V1.2.2" width="850" />
-</div>
+> 📜 **开源协议：** 本项目严格遵循原作者的 [CC BY-SA 4.0](https://github.com/SagarBiswas-MultiHAT/The-BlackHAT-roadmap/blob/main/LICENSE-DOCS) 协议，所有内容保持开源共享。
 
 ---
+
+### 💡 为什么不用浏览器自带翻译？（本项目存在的意义）
+
+因为原版 4 万多行的硬核文档里，包含了大量网络安全专业术语（如 OPSEC、IoC、C2、ANPR 等），机翻不仅词不达意，更致命的是**无法处理文档内数百张英文架构图与流程图**。
+
+本项目致力于提供：
+1. **图表全量汉化重绘**：将原版全英文的流程图、金字塔图，用 PPT/Draw.io 重新绘制为纯中文高清版，彻底打通阅读障碍。
+2. **国内网络环境优化（规划中）**：针对原版中因 GFW 导致无法访问的链接、无法拉取的镜像，提供国内平替方案或加速渠道指引。
+
+---
+
+### 🚧 当前汉化进度与共建指南
+
+*   **当前进度：** 核心目录已翻译，图表重绘与正文精翻正在持续爆肝中...
+*   **需要帮忙？** 项目还剩下100多张英文图表需要重绘。如果你精通 PPT/Draw.io，或者想帮忙校对机翻术语，欢迎加入！
+*   **如何提交 PR：** 
+    1. Fork 本仓库。
+    2. 新建你的分支(`git checkout -b feature/你的名字`)
+    3. 提交你的修改`(git commit -m '汉化：翻译了XX章节')`
+    4. 推送(`git push origin feature/你的名字`)
+    5. 在本仓库发起 Pull Request。
+
+🤝 **欢迎国内安全爱好者一起建设，打造最适合中国极客的安全路线图！**
+
+---
+（以下保留原作者原本的内容与致谢）
+
+<div align="center">
+</div>
+
 
 <div align="center">
 
